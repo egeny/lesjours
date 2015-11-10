@@ -75,7 +75,7 @@ gulp.task('default', [
 	'build:css',
 	'build:js',
 	'build:img',
-	//'build:svg'
+	'build:svg'
 ]);
 
 gulp.task('build', ['build:html', 'build:css', 'build:js', 'build:img', 'build:svg']);
@@ -189,7 +189,7 @@ gulp.task('build:svg', function() {
 			if (file.isDirectory()) {
 				var name = file.relative + '.svg';
 				return gulp.src(file.path + '/*.svg')
-					.pipe(spriter())
+					//.pipe(spriter())
 					.pipe(worker());
 			}
 		});
