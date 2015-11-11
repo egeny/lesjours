@@ -167,14 +167,14 @@ gulp.task('build:js', ['lint:js'], function() {
 });
 
 gulp.task('build:css:img', function() {
-	return gulp.src(paths.css.img.input + "*.{gif,jpg,png}")
+	return gulp.src(paths.css.img.input + "/*.{gif,jpg,png}")
 		.pipe(image())
 		.pipe(gulp.dest(paths.css.img.output))
 		.pipe(livereload());
 });
 
 gulp.task('build:img', function() {
-	return gulp.src(paths.img.input + "*.{gif,jpg,png}")
+	return gulp.src(paths.img.input + "/*.{gif,jpg,png}")
 		.pipe(image())
 		.pipe(gulp.dest(paths.img.output))
 		.pipe(livereload());
@@ -201,7 +201,6 @@ gulp.task('build:css:svg', function() {
 		.pipe(worker());
 });
 
-
 gulp.task('build:svg', function() {
 	var worker = lazypipe()
 		.pipe(gulp.dest, paths.svg.output)
@@ -212,7 +211,7 @@ gulp.task('build:svg', function() {
 			if (file.isDirectory()) {
 				var name = file.relative + '.svg';
 				return gulp.src(file.path + '/*.svg')
-					//.pipe(spriter())
+					//.pipe(spriter({ "mode": { view: true } }))
 					.pipe(worker());
 			}
 		});
