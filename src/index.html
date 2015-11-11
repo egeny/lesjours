@@ -1,48 +1,43 @@
+{% set page = { title: "LesJours" } %}
 {% extends "partials/layout.html" %}
 
-{% block body %}
-	<header id="header">
-		<h1>LesJours</h1>
-		<button type="button">Menu</button>
-	</header><!-- end of #header -->
-	<div id="content">
-		<div class="carousel-container">
-			<ul class="carousel">
-				<li class="obsession-1">
-					<img src="img/1.jpg" alt="" />
-					<div>
-						<div class="title">
-							{% include "partials/snake.svg" %}
-							<h2>La mauvaise herbe<br/>de Provence</h2>
-							<span>Magna aliqua Ut enim</span>
-						</div>
+{% block content %}
+	<div class="carousel-container">
+		<ul class="carousel">
+			<li class="obsession-1">
+				<img src="img/1.jpg" alt="" />
+				<div>
+					<div class="title">
+						{% include "partials/snake.svg" %}
+						<h2>La mauvaise herbe<br/>de Provence</h2>
+						<span>Magna aliqua Ut enim</span>
 					</div>
-				</li>
-				<li class="obsession-2">
-					<img src="img/2.jpg" alt="" />
-					<div>
-						<div class="title">
-							{% include "partials/snake.svg" %}
-							<h2>Good Com’<br/>bad COP</h2>
-							<span>Magna aliqua Ut enim</span>
-						</div>
+				</div>
+			</li>
+			<li class="obsession-2">
+				<img src="img/2.jpg" alt="" />
+				<div>
+					<div class="title">
+						{% include "partials/snake.svg" %}
+						<h2>Good Com’<br/>bad COP</h2>
+						<span>Magna aliqua Ut enim</span>
 					</div>
-				</li>
-				<li class="obsession-3">
-					<img src="img/3.jpg" alt="" />
-					<div>
-						<div class="title">
-							{% include "partials/snake.svg" %}
-							<h2>Les années<br/>Collège</h2>
-							<span>Un an en 3<sup>e</sup>B à Aubervilliers</span>
-						</div>
+				</div>
+			</li>
+			<li class="obsession-3">
+				<img src="img/3.jpg" alt="" />
+				<div>
+					<div class="title">
+						{% include "partials/snake.svg" %}
+						<h2>Les années<br/>Collège</h2>
+						<span>Un an en 3<sup>e</sup>B à Aubervilliers</span>
 					</div>
-				</li>
-			</ul>
-			<div class="carousel-controls">
-				<button class="toggle" data-direction="backward">Prev</button>
-				<button class="toggle">Next</button>
-			</div>
+				</div>
+			</li>
+		</ul>
+		<div class="carousel-controls">
+			<button class="toggle" data-direction="backward">Prev</button>
+			<button class="toggle">Next</button>
 		</div>
-	</div><!-- end of #content -->
+	</div>
 {% endblock %}
