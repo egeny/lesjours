@@ -1,5 +1,13 @@
 $("body").addClass("js");
 
+$("#toggle-menu").click(function() {
+	var
+		first  = $("#menu").hasClass("opened") ? "close" : "burger",
+		second = $("#menu").hasClass("opened") ? "burger" : "close";
+	this.firstChild.src = this.firstChild.src.replace(first, second);
+	$("#menu").toggleClass("opened");
+});
+
 (function() {
 	// TODO: check with multiple carousel (might occurs?)
 	// TODO: swipe
