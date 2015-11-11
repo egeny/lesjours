@@ -73,6 +73,8 @@ gulp.task('default', [
 	'clean',
 	'build:html',
 	'build:css',
+	'build:css:img',
+	'build:css:svg',
 	'build:js',
 	'build:img',
 	'build:svg'
@@ -164,25 +166,24 @@ gulp.task('build:js', ['lint:js'], function() {
 		.pipe(worker());
 });
 
-gulp.task('build:img', function() {
-	gulp.src(paths.css.img.input + "*.{gif,jpg,png}")
+gulp.task('build:css:img', function() {
+	return gulp.src(paths.css.img.input + "*.{gif,jpg,png}")
 		.pipe(image())
 		.pipe(gulp.dest(paths.css.img.output))
 		.pipe(livereload());
+});
 
-	gulp.src(paths.img.input + "*.{gif,jpg,png}")
+gulp.task('build:img', function() {
+	return gulp.src(paths.img.input + "*.{gif,jpg,png}")
 		.pipe(image())
 		.pipe(gulp.dest(paths.img.output))
 		.pipe(livereload());
 });
 
-gulp.task('build:svg', function() {
-	var
-		input  = paths.css.svg.input + "*",
-		output = paths.css.svg.output,
-		worker = lazypipe()
-			.pipe(gulp.dest, output)
-			.pipe(livereload);
+gulp.task('build:css:svg', function() {
+	var worker = lazypipe()
+		.pipe(gulp.dest, paths.css.svg.output)
+		.pipe(livereload);
 
 	function filter() {
 		return tap(function(file) {
@@ -195,25 +196,40 @@ gulp.task('build:svg', function() {
 		});
 	}
 
-	gulp.src(input + '*')
+	return gulp.src(paths.css.svg.input + '*')
 		.pipe(filter())
 		.pipe(worker());
+});
 
-	input  = paths.svg.input + "*";
-	output = paths.svg.output;
 
-	gulp.src(input + '*')
+gulp.task('build:svg', function() {
+	var worker = lazypipe()
+		.pipe(gulp.dest, paths.svg.output)
+		.pipe(livereload);
+
+	function filter() {
+		return tap(function(file) {
+			if (file.isDirectory()) {
+				var name = file.relative + '.svg';
+				return gulp.src(file.path + '/*.svg')
+					//.pipe(spriter())
+					.pipe(worker());
+			}
+		});
+	}
+
+	return gulp.src(paths.svg.input + '*')
 		.pipe(filter())
 		.pipe(worker());
 });
 
 gulp.task('watch', ['default'], function() {
 	livereload.listen();
-	gulp.watch(paths.html.input    + '*', ['build:html']);
-	gulp.watch(paths.css.input     + '*', ['build:css']);
-	gulp.watch(paths.css.img.input + '*', ['build:img']);
-	gulp.watch(paths.css.svg.input + '*', ['build:svg']);
-	gulp.watch(paths.img.input     + '*', ['build:img']);
-	gulp.watch(paths.svg.input     + '*', ['build:svg']);
-	gulp.watch(paths.js.input      + '*', ['build:js']);
+	gulp.watch(paths.html.input    + '**/*', ['build:html']);
+	gulp.watch(paths.css.input     + '**/*', ['build:css']);
+	gulp.watch(paths.css.img.input + '**/*', ['build:css:img']);
+	gulp.watch(paths.css.svg.input + '**/*', ['build:css:svg']);
+	gulp.watch(paths.img.input     + '**/*', ['build:img']);
+	gulp.watch(paths.svg.input     + '**/*', ['build:svg']);
+	gulp.watch(paths.js.input      + '**/*', ['build:js']);
 });
