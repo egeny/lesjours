@@ -1,0 +1,90 @@
+/* Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com */
+
+html { font-size: 18px; }
+body {
+	margin: 0;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5;
+}
+ul, h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+/* Remove text-shadow in selection highlight */
+::selection {
+	background: #B3D4FC; /* TODO */
+	text-shadow: none;
+}
+
+/* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
+audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+
+/* Remove default fieldset styles */
+fieldset {
+	padding: 0;
+	border:  0;
+	margin:  0;
+}
+
+/* Allow only vertical resizing of textareas */
+textarea { resize: vertical; }
+
+#header {
+	background: #FFF;
+	padding: 0 40px;
+	text-align: center;
+}
+
+#header h1 {
+	margin: 13px 0;
+	display: inline-block;
+}
+
+#header > button {
+	margin-top: 20px;
+	float: left;
+}
+
+#profile {
+	margin-top: 20px;
+	float: right; }
+
+#menu {
+background: #FFF;
+position: absolute;
+left: 0;
+right: 0;
+z-index: 1000;
+visibility: hidden;
+opacity: 0;
+transition: opacity 0.3s, visibility 0s 0.3s;
+}
+
+#menu.opened {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.3s, visibility 0s;
+}
+
+#content .carousel-container {
+	width: 720px;
+	margin: 0 auto; }
+
+.carousel li { position: relative; }
+
+.carousel li > div {
+	background-image: url(img/pattern.svg), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);
+	background-size: 2px 4px, 100% 100%;
+	position: absolute;
+	top:    0;
+	right:  0;
+	bottom: 0;
+	left:   0;
+}
+
+.carousel .title {
+	position: absolute;
+	top:  90px;
+	left: 90px;
+	color: #FFF;
+	font-size: 2em;
+}

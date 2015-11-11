@@ -1,0 +1,38 @@
+/* @group .carousel */
+/* Thanks to Nick Walsh for the idea (http://madewithenvy.com/ecosystem/articles/2015/exploring-order-flexbox-carousel/) */
+    .carousel-container { overflow: auto; }
+.js .carousel-container { overflow: hidden; }
+
+	/* This carousel might be tricky to understand (good luck) */
+	.carousel {
+		padding: 0;
+		margin:  0;
+
+		display: flex;
+
+		transform: none;
+		transition: transform 0.5s;
+
+		list-style: none;
+	}
+
+	.js .carousel {
+		position: relative;
+		left: -100%;
+	}
+
+	.carousel.hold {
+		transform:  translateX(100%);
+		transition: transform 0s;
+	}
+
+	.carousel.hold.reverse { transform: translateX(-100%); }
+
+		.carousel li {
+			flex: 1 0 100%;
+			order: 2;
+		}
+
+		/* The last item have to be set as first */
+		.js .carousel li:last-child { order: 1; }
+/* @end of .carousel */
