@@ -81,26 +81,18 @@ var
 		}
 	};
 
-gulp.task('default', [
-	'clean',
-	'build:html',
-	'build:css',
-	'build:css:img',
-	'build:css:svg',
-	'build:js',
-	'build:img',
-	'build:svg'
-]);
+nunjucks.nunjucks.configure([paths.html.input, paths.html.output], { watch: false });
 
-gulp.task('build', ['build:html', 'build:css', 'build:js', 'build:img', 'build:svg']);
-gulp.task('lint',  ['lint:sass',  'lint:css',  'lint:js']);
+gulp.task('default', ['clean', 'build']);
+
+gulp.task('build', ['build:css', 'build:css:img', 'build:css:svg', 'build:js', 'build:img', 'build:svg', 'build:html']);
+gulp.task('lint',  ['lint:sass', 'lint:css', 'lint:js']);
 
 gulp.task('clean', function() {
 	del.sync(paths.dist);
 });
 
 gulp.task('build:html', function() {
-	nunjucks.nunjucks.configure([paths.html.input], { watch: false });
 	return gulp.src(paths.html.input + '*.html')
 		.pipe(nunjucks())
 		.pipe(gulp.dest(paths.html.output))
@@ -115,7 +107,7 @@ gulp.task('lint:sass', function() {
 
 gulp.task('lint:css', function() {
 	return gulp.src(paths.css.input + '**/*.css')
-		.pipe(csslint())
+		.pipe(csslint()) // TODO: configure
 		.pipe(csslint.reporter());
 });
 
@@ -132,23 +124,24 @@ gulp.task('build:css', ['lint:sass', 'lint:css'], function() {
 
 	function filter() {
 		return tap(function(file) {
+			if (['.css', '.scss', '.sass'].indexOf(path.extname(file.path)) > -1) {
+				return t.through(worker);
+			}
+
 			if (file.isDirectory()) {
-				var name = file.relative + '.css';
 				return gulp.src(file.path + '/*.css') // FIXME: File order might break things
-					.pipe(concat(name))
+					.pipe(concat(file.relative + '.css'))
 					.pipe(worker());
 			}
 		});
 	}
 
-	return gulp.src(paths.css.input + '*')
-		.pipe(filter())
-		.pipe(worker());
+	return gulp.src(paths.css.input + '*').pipe(filter());
 });
 
 gulp.task('lint:js', function() {
 	return gulp.src(paths.js.input + '**/*.js')
-		.pipe(eslint())
+		.pipe(eslint()) // TODO: configure
 		.pipe(eslint.format());
 });
 
@@ -163,30 +156,31 @@ gulp.task('build:js', ['lint:js'], function() {
 		.pipe(livereload);
 
 	function filter() {
-		return tap(function(file) {
+		return tap(function(file, t) {
+			if (path.extname(file.path) === '.js') {
+				return t.through(worker);
+			}
+
 			if (file.isDirectory()) {
-				var name = file.relative + '.js';
 				return gulp.src(file.path + '/*.js')
-					.pipe(concat(name))
+					.pipe(concat(file.relative + '.js'))
 					.pipe(worker());
 			}
 		});
 	}
 
-	return gulp.src(paths.js.input + '*')
-		.pipe(filter())
-		.pipe(worker());
+	return gulp.src(paths.js.input + '*').pipe(filter());
 });
 
 gulp.task('build:css:img', function() {
-	return gulp.src(paths.css.img.input + "/*.{gif,jpg,png}")
+	return gulp.src(paths.css.img.input + "/**/*.{gif,jpg,png}")
 		.pipe(image())
 		.pipe(gulp.dest(paths.css.img.output))
 		.pipe(livereload());
 });
 
 gulp.task('build:img', function() {
-	return gulp.src(paths.img.input + "/*.{gif,jpg,png}")
+	return gulp.src(paths.img.input + "/**/*.{gif,jpg,png}")
 		.pipe(image())
 		.pipe(gulp.dest(paths.img.output))
 		.pipe(livereload());
@@ -238,13 +232,19 @@ gulp.task('build:svg', function() {
 	return gulp.src(paths.svg.input + '*').pipe(filter());
 });
 
-gulp.task('watch', ['default'], function() {
-	livereload.listen();
-	gulp.watch(paths.html.input    + '**/*', ['build:html']);
-	gulp.watch(paths.css.input     + '**/*', ['build:css']);
-	gulp.watch(paths.css.img.input + '**/*', ['build:css:img']);
-	gulp.watch(paths.css.svg.input + '**/*', ['build:css:svg']);
-	gulp.watch(paths.img.input     + '**/*', ['build:img']);
-	gulp.watch(paths.svg.input     + '**/*', ['build:svg']);
-	gulp.watch(paths.js.input      + '**/*', ['build:js']);
+gulp.task('watch', function() {
+	gulp.start('clean');
+	gulp.start('build:svg');
+	setTimeout(function() {
+		gulp.start('build');
+		livereload.listen();
+
+		gulp.watch(paths.css.input     + '**/*.{css,scss,sass}', ['build:css']);
+		gulp.watch(paths.css.img.input + '**/*.{gif,jpg,png}',   ['build:css:img']);
+		gulp.watch(paths.css.svg.input + '**/*.svg',             ['build:css:svg']);
+		gulp.watch(paths.img.input     + '**/*.{gif,jpg,png}',   ['build:img']);
+		gulp.watch(paths.svg.input     + '**/*.svg',             ['build:svg']);
+		gulp.watch(paths.js.input      + '**/*.js',              ['build:js']);
+		gulp.watch(paths.html.input    + '**/*.html',            ['build:html']);
+	}, 1000);
 });
