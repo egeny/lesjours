@@ -75,54 +75,12 @@ font-family: ProximaNova;
 	transition: opacity 0.3s, visibility 0s;
 }
 
-.carousel li {
-	height: 890px;
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
 .carousel-container { margin-bottom: 100px;}
 
-.carousel li > div {
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAN6CAYAAAHTKKiDAAABNUlEQVRYw+3Y8UcDYRzH8e/drSxJkSSRRBKJRCLTf3P/aCaRJEpSUqn+ip6nRc97u9tdu10zK5/PD1+v3d1ze57t6zmbmZmPO8VUVAYXU7+oVG+V9J8sxsWh733Zy6HKR4FyZ0dzokLpWVHSKVF3baYoE5jUQrO+SxOgN/SKXtAzekKP6AHdozt0i27QNbpCl+gCnaMzdIra6MTCXneMWugIHaIDtI/20C7aQdtoC22iDbSO1tAqWkHLaAktogU0j+bQLJpBTTSNplCCYhRZ5gkhSZIk5fW1UabsnYLw9+Es/AvUC2uEpgcVRnV/ajbKkXkL13fEjxFujMMzK/UDhrsRTKP/a6pyZ0aFI778Yl/vM6w3sV8iLpx8piGH6t6fLqafk+9nRsGoxHKJTFEURVEURamVTyWFshnL1mQ2AAAAAElFTkSuQmCC) repeat-x;
 
-	/* Another solution will be to use a multiple background with the pattern as SVG and a CSS linear-gradient */
-	/*background-image: url(img/pattern.svg), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);*/
-	/*background-size: 2px 4px, 100% 100%;*/
-
-	/* The SVG pattern could also be embed using a data-URI (to avoid another HTTP request) */
-	/* But the auto-prefixer will duplicate this line (since linear-gradient still need to be prefixed for webkit) */
-	/*background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDQiPgoJPHJlY3QgeD0iMSIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgLz4KCTxyZWN0IHg9IjAiIHk9IjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIC8+Cjwvc3ZnPg==), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);*/
-	/*background-size: 2px 4px, 100% 100%;*/
-
-	position: absolute;
-	top:    0;
-	right:  0;
-	bottom: 0;
-	left:   0;
 }
 
-.carousel .title {
-	margin-top: 80px;
-	color: #FFF;
 }
 
-.carousel .title h2 {
-	font-family: "brandon-grotesque", sans-serif;
-	font-size: 70px;
-	font-style: normal;
-	font-weight: 900;
-	line-height: 1;
-	margin-bottom: .125em;
 }
 
-.carousel .title span {
-	font-family: "Archer SSm A", "Archer SSm B";
-	font-style: normal;
-	font-weight: 700;
-	font-size: 30px;
-	line-height: 40px;
-	line-height: 1;
-}
