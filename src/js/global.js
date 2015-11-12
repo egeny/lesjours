@@ -1,10 +1,20 @@
 $("body").addClass("js");
 
+$(".wall .title .btn-rounded").click(function() {
+	console.log($(this));
+	console.log($(this).parents(".wall"));
+	$(this).parents(".wall").toggleClass("expanded");
+});
+
 $("#toggle-menu").click(function() {
 	var
 		first  = $("#menu").hasClass("opened") ? "close" : "burger",
 		second = $("#menu").hasClass("opened") ? "burger" : "close";
-	this.firstChild.src = this.firstChild.src.replace(first, second);
+		console.log($(this).find("use").eq(0));
+
+	var use = $(this).find("use");
+
+	use.attr("xlink:href", use.attr("xlink:href").replace(first, second));
 	$("#menu").toggleClass("opened");
 });
 

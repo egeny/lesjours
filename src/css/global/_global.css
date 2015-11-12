@@ -4,10 +4,15 @@ html { font-size: 18px; }
 body {
 	margin: 0;
 	font-family: "Archer", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 14px;
+	font-size: 18px;
 	line-height: 1.5;
 }
 ul, h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+p {
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
 
 /* Remove text-shadow in selection highlight */
 ::selection {
@@ -30,7 +35,7 @@ textarea { resize: vertical; }
 
 #header {
 	background: #FFF;
-	padding: 0 40px;
+	/*padding: 0 40px;*/
 	text-align: center;
 }
 
@@ -78,9 +83,22 @@ font-family: ProximaNova;
 .carousel-container { margin-bottom: 100px;}
 
 
+.btn,
+.btn-rounded {
+	background: none;
+	padding: 0;
+	border:  0;
 }
 
+.btn-rounded {
+	width:  3em;
+	height: 3em;
+	border-radius: 50%;
 }
 
+.btn-primary {
+	background: #FFF;
+	color: #C83E2C;
 }
+
 

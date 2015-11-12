@@ -1,7 +1,8 @@
 /* @group .snake */
 .snake {
 	width: 220px;
-	height: calc(100% + 25px + 50px);
+	/*height: calc(100% + 25px + 50px);*/
+	height: 300px;
 	position: absolute;
 	top:  -24px;
 	left: -24px;
@@ -9,10 +10,11 @@
 
 	.snake path {
 		animation: snake 1.5s forwards;
+		transition: stroke .3s;
 
 		fill: none;
 		stroke: currentColor;
-		stroke-width: 4px;
+		stroke-width: 8px;
 		stroke-dasharray:  1000 1000;
 		stroke-dashoffset: 1000;
 		shape-rendering: optimizeSpeed;      /* Prevent stroke's anti-aliasing */
