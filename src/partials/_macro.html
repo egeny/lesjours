@@ -1,0 +1,7 @@
+{% macro icon(name, title) %}
+<svg class="ui-{{ name }}" role="image" aria-labeledby="ui-{{ name }}-title">
+	<use xlink:href="#{{ name }}" />
+	<image src="img/ui/{{ name }}.png" />
+	<title id="ui-{{ name }}-title">{{ title }}</title>
+</svg>
+{% endmacro %}

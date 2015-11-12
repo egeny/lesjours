@@ -1,3 +1,4 @@
+{% include "partials/_macro.html" %}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -17,6 +18,7 @@
 	{% block css %}{% endblock %}
 </head>
 <body class="has-flex">
+	{% include "img/ui.svg" %}
 	{% include "partials/header.html" %}
 	{% block content %}{% endblock %}
 
