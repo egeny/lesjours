@@ -5,6 +5,7 @@
 var
 	del        = require('del'),
 	lazypipe   = require('lazypipe'),
+	path       = require('path'),
 	gulp       = require('gulp'),
 	concat     = require('gulp-concat'),
 	header     = require('gulp-header'),
@@ -35,6 +36,17 @@ var
 	banner  = '/*! <%= package.name %> v<%= package.version %> */\n',
 	context = { package: require('./package.json') },
 
+	// The spriter configuration
+	config = {
+		mode: {
+			symbol: {
+				inline: true,
+				dest:   '.',
+				sprite: '' // Will be changed when needed (just here as a reminder)
+			}
+		}
+	},
+
 	paths = {
 		src:  'src/**/*',
 		dist: 'dist/',
@@ -60,7 +72,7 @@ var
 			output: 'dist/img/'
 		},
 		svg: {
-			input:  'src/img/*',
+			input:  'src/img/',
 			output: 'dist/img/'
 		},
 		js: {
@@ -186,19 +198,21 @@ gulp.task('build:css:svg', function() {
 		.pipe(livereload);
 
 	function filter() {
-		return tap(function(file) {
+		return tap(function(file, t) {
+			if (path.extname(file.path) === '.svg') {
+				return t.through(worker);
+			}
+
 			if (file.isDirectory()) {
-				var name = file.relative + '.svg';
+				config.mode.symbol.sprite = file.relative + '.svg';
 				return gulp.src(file.path + '/*.svg')
-					//.pipe(spriter())
+					.pipe(spriter(config))
 					.pipe(worker());
 			}
 		});
 	}
 
-	return gulp.src(paths.css.svg.input + '*')
-		.pipe(filter())
-		.pipe(worker());
+	return gulp.src(paths.css.svg.input + '*').pipe(filter());
 });
 
 gulp.task('build:svg', function() {
@@ -207,19 +221,21 @@ gulp.task('build:svg', function() {
 		.pipe(livereload);
 
 	function filter() {
-		return tap(function(file) {
+		return tap(function(file, t) {
+			if (path.extname(file.path) === '.svg') {
+				return t.through(worker);
+			}
+
 			if (file.isDirectory()) {
-				var name = file.relative + '.svg';
+				config.mode.symbol.sprite = file.relative + '.svg';
 				return gulp.src(file.path + '/*.svg')
-					//.pipe(spriter({ "mode": { view: true } }))
+					.pipe(spriter(config))
 					.pipe(worker());
 			}
 		});
 	}
 
-	return gulp.src(paths.svg.input + '*')
-		.pipe(filter())
-		.pipe(worker());
+	return gulp.src(paths.svg.input + '*').pipe(filter());
 });
 
 gulp.task('watch', ['default'], function() {
