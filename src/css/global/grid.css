@@ -20,6 +20,7 @@
 .has-flex .row {
 	display: flex;
 	flex-wrap: wrap;
+	align-content: flex-start;
 }
 
 /* Clearfix — see http://nicolasgallagher.com/micro-clearfix-hack/ */
@@ -64,7 +65,7 @@
 .has-flex .col-md-1, .has-flex .col-md-2, .has-flex .col-md-3, .has-flex .col-md-4, .has-flex .col-md-5, .has-flex .col-md-6, .has-flex .col-md-7, .has-flex .col-md-8,
 .has-flex .col-lg-1, .has-flex .col-lg-2, .has-flex .col-lg-3, .has-flex .col-lg-4, .has-flex .col-lg-5, .has-flex .col-lg-6, .has-flex .col-lg-7, .has-flex .col-lg-8, .has-flex .col-lg-9, .has-flex .col-lg-10, .has-flex .col-lg-11, .has-flex .col-lg-12 {
 	width: auto;
-	float: left;
+	float: none;
 	flex: 0 0 100%;
 }
 
