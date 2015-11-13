@@ -1,21 +1,19 @@
 $("body").addClass("js");
 
 $(".wall .title .btn-rounded").click(function() {
-	console.log($(this));
-	console.log($(this).parents(".wall"));
 	$(this).parents(".wall").toggleClass("expanded");
 });
 
 $("#toggle-menu").click(function() {
 	var
-		first  = $("#menu").hasClass("opened") ? "close" : "burger",
-		second = $("#menu").hasClass("opened") ? "burger" : "close";
-		console.log($(this).find("use").eq(0));
+		menu   = $("#menu"),
+		first  = menu.hasClass("opened") ? "close" : "burger",
+		second = menu.hasClass("opened") ? "burger" : "close";
 
 	var use = $(this).find("use");
 
 	use.attr("xlink:href", use.attr("xlink:href").replace(first, second));
-	$("#menu").toggleClass("opened");
+	menu.toggleClass("opened");
 });
 
 (function() {
@@ -50,7 +48,7 @@ $("#toggle-menu").click(function() {
 		selected = selected.length ? selected : $items.first();
 
 		// Find the new selected item
-		selected.removeClass("selected");
+		selected.removeClass("selected expanded");
 		selected = direction === "forward" ? next(selected) : previous(selected);
 		selected.addClass("selected");
 

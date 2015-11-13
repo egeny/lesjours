@@ -1,6 +1,6 @@
 /* @group .wall */
 .wall {
-	background-position: center center;
+	background-position: 50% 0;
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -8,10 +8,8 @@
 	position: relative;
 
 	font-family: "Archer SSm A", "Archer SSm B";
-	font-size: 0.999994rem;
 	font-style: normal;
 	font-weight: 700;
-	line-height: 1.5;
 
 overflow: hidden;
 	color: #FFF;
@@ -25,6 +23,12 @@ overflow: hidden;
 	bottom: 0;
 	left:   0;
 }
+
+.wall .title { margin-bottom: 130px; }
+
+.obsession-1 .snake { color: #A889AD; }
+.obsession-2 .snake { color: #7F8E68; }
+.obsession-3 .snake { color: #679EA7; }
 
 .obsession-1 .overlay-color { background: rgba(168, 137, 173, .9); }
 .obsession-2 .overlay-color { background: rgba(137, 151, 117, .9); }
@@ -51,18 +55,20 @@ overflow: hidden;
 }
 
 .wall .row   { position: relative; }
-.wall .title { margin: 80px 0 135px; }
+/*.wall .title { margin: 80px 0 135px; }*/
 
 .wall.expanded .snake path { stroke: #FFF; }
 
 .wall .title h2 {
 	font-family: "brandon-grotesque", sans-serif;
-	font-size: 3.888889rem;
+	font-size: 4.375rem;
 	font-style: normal;
 	font-weight: 900;
 	line-height: 1;
-	margin-bottom: .125em;
+	margin-bottom: 0.5rem;
 }
+
+.wall .title span { line-height: 1.333333; }
 
 .wall.selected .title h2,
 .wall.selected .title span,
@@ -100,7 +106,7 @@ overflow: hidden;
 
 .wall .title span {
 	display: block;
-	font-size: 1.444444rem;
+	font-size: 1.5rem;
 }
 
 .wall .title .btn-rounded {
@@ -110,6 +116,8 @@ overflow: hidden;
 }
 
 .wall .title .btn-rounded svg {
+	width: 1.375em;
+	height: 1.375em;
 	animation: bounce ease-out .5s alternate-reverse infinite;
 }
 
