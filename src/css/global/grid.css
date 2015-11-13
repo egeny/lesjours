@@ -79,10 +79,25 @@
 .has-flex .col-sm-3 { flex: 0 0 75%;  }
 .has-flex .col-sm-4 { flex: 0 0 100%; }
 
-.col-sm-offset-1 { margin-left: 25%;  }
-.col-sm-offset-2 { margin-left: 50%;  }
-.col-sm-offset-3 { margin-left: 75%;  }
-.col-sm-offset-4 { margin-left: 100%; }
+.col-sm-top-1 { margin-top: 25%;  }
+.col-sm-top-2 { margin-top: 50%;  }
+.col-sm-top-3 { margin-top: 75%;  }
+.col-sm-top-4 { margin-top: 100%; }
+
+.col-sm-right-1 { margin-right: 25%;  }
+.col-sm-right-2 { margin-right: 50%;  }
+.col-sm-right-3 { margin-right: 75%;  }
+.col-sm-right-4 { margin-right: 100%; }
+
+.col-sm-bottom-1 { margin-bottom: 25%;  }
+.col-sm-bottom-2 { margin-bottom: 50%;  }
+.col-sm-bottom-3 { margin-bottom: 75%;  }
+.col-sm-bottom-4 { margin-bottom: 100%; }
+
+.col-sm-left-1 { margin-left: 25%;  }
+.col-sm-left-2 { margin-left: 50%;  }
+.col-sm-left-3 { margin-left: 75%;  }
+.col-sm-left-4 { margin-left: 100%; }
 
 .col-sm-first  { order: -1; }
 .col-sm-last   { order:  1; }
@@ -139,14 +154,41 @@
 	.has-flex .col-md-7  { flex: 0 0 87.5%; }
 	.has-flex .col-md-8  { flex: 0 0 100%;  }
 
-	.col-md-offset-1 { margin-left: 12.5%; }
-	.col-md-offset-2 { margin-left: 25%;   }
-	.col-md-offset-3 { margin-left: 37.5%; }
-	.col-md-offset-4 { margin-left: 50%;   }
-	.col-md-offset-5 { margin-left: 62.5%; }
-	.col-md-offset-6 { margin-left: 75%;   }
-	.col-md-offset-7 { margin-left: 87.5%; }
-	.col-md-offset-8 { margin-left: 100%;  }
+	.col-md-top-1 { margin-top: 12.5%; }
+	.col-md-top-2 { margin-top: 25%;   }
+	.col-md-top-3 { margin-top: 37.5%; }
+	.col-md-top-4 { margin-top: 50%;   }
+	.col-md-top-5 { margin-top: 62.5%; }
+	.col-md-top-6 { margin-top: 75%;   }
+	.col-md-top-7 { margin-top: 87.5%; }
+	.col-md-top-8 { margin-top: 100%;  }
+
+	.col-md-right-1 { margin-right: 12.5%; }
+	.col-md-right-2 { margin-right: 25%;   }
+	.col-md-right-3 { margin-right: 37.5%; }
+	.col-md-right-4 { margin-right: 50%;   }
+	.col-md-right-5 { margin-right: 62.5%; }
+	.col-md-right-6 { margin-right: 75%;   }
+	.col-md-right-7 { margin-right: 87.5%; }
+	.col-md-right-8 { margin-right: 100%;  }
+
+	.col-md-bottom-1 { margin-bottom: 12.5%; }
+	.col-md-bottom-2 { margin-bottom: 25%;   }
+	.col-md-bottom-3 { margin-bottom: 37.5%; }
+	.col-md-bottom-4 { margin-bottom: 50%;   }
+	.col-md-bottom-5 { margin-bottom: 62.5%; }
+	.col-md-bottom-6 { margin-bottom: 75%;   }
+	.col-md-bottom-7 { margin-bottom: 87.5%; }
+	.col-md-bottom-8 { margin-bottom: 100%;  }
+
+	.col-md-left-1 { margin-left: 12.5%; }
+	.col-md-left-2 { margin-left: 25%;   }
+	.col-md-left-3 { margin-left: 37.5%; }
+	.col-md-left-4 { margin-left: 50%;   }
+	.col-md-left-5 { margin-left: 62.5%; }
+	.col-md-left-6 { margin-left: 75%;   }
+	.col-md-left-7 { margin-left: 87.5%; }
+	.col-md-left-8 { margin-left: 100%;  }
 
 	.col-md-first  { order: -1; }
 	.col-md-last   { order:  1; }
@@ -201,19 +243,61 @@
 	.has-flex .col-lg-11 { flex: 0 0 91.666667%; }
 	.has-flex .col-lg-12 { flex: 0 0 100%;       }
 
-	.col-lg-offset-0  { margin-left: 0;          }
-	.col-lg-offset-1  { margin-left: 8.333333%;  }
-	.col-lg-offset-2  { margin-left: 16.666667%; }
-	.col-lg-offset-3  { margin-left: 25%;        }
-	.col-lg-offset-4  { margin-left: 33.333333%; }
-	.col-lg-offset-5  { margin-left: 41.666667%; }
-	.col-lg-offset-6  { margin-left: 50%;        }
-	.col-lg-offset-7  { margin-left: 58.333333%; }
-	.col-lg-offset-8  { margin-left: 66.666667%; }
-	.col-lg-offset-9  { margin-left: 75%;        }
-	.col-lg-offset-10 { margin-left: 83.333333%; }
-	.col-lg-offset-11 { margin-left: 91.666667%; }
-	.col-lg-offset-12 { margin-left: 100%;       }
+	.col-lg-top-0  { margin-top: 0;          }
+	.col-lg-top-1  { margin-top: 8.333333%;  }
+	.col-lg-top-2  { margin-top: 16.666667%; }
+	.col-lg-top-3  { margin-top: 25%;        }
+	.col-lg-top-4  { margin-top: 33.333333%; }
+	.col-lg-top-5  { margin-top: 41.666667%; }
+	.col-lg-top-6  { margin-top: 50%;        }
+	.col-lg-top-7  { margin-top: 58.333333%; }
+	.col-lg-top-8  { margin-top: 66.666667%; }
+	.col-lg-top-9  { margin-top: 75%;        }
+	.col-lg-top-10 { margin-top: 83.333333%; }
+	.col-lg-top-11 { margin-top: 91.666667%; }
+	.col-lg-top-12 { margin-top: 100%;       }
+
+	.col-lg-right-0  { margin-right: 0;          }
+	.col-lg-right-1  { margin-right: 8.333333%;  }
+	.col-lg-right-2  { margin-right: 16.666667%; }
+	.col-lg-right-3  { margin-right: 25%;        }
+	.col-lg-right-4  { margin-right: 33.333333%; }
+	.col-lg-right-5  { margin-right: 41.666667%; }
+	.col-lg-right-6  { margin-right: 50%;        }
+	.col-lg-right-7  { margin-right: 58.333333%; }
+	.col-lg-right-8  { margin-right: 66.666667%; }
+	.col-lg-right-9  { margin-right: 75%;        }
+	.col-lg-right-10 { margin-right: 83.333333%; }
+	.col-lg-right-11 { margin-right: 91.666667%; }
+	.col-lg-right-12 { margin-right: 100%;       }
+
+	.col-lg-bottom-0  { margin-bottom: 0;          }
+	.col-lg-bottom-1  { margin-bottom: 8.333333%;  }
+	.col-lg-bottom-2  { margin-bottom: 16.666667%; }
+	.col-lg-bottom-3  { margin-bottom: 25%;        }
+	.col-lg-bottom-4  { margin-bottom: 33.333333%; }
+	.col-lg-bottom-5  { margin-bottom: 41.666667%; }
+	.col-lg-bottom-6  { margin-bottom: 50%;        }
+	.col-lg-bottom-7  { margin-bottom: 58.333333%; }
+	.col-lg-bottom-8  { margin-bottom: 66.666667%; }
+	.col-lg-bottom-9  { margin-bottom: 75%;        }
+	.col-lg-bottom-10 { margin-bottom: 83.333333%; }
+	.col-lg-bottom-11 { margin-bottom: 91.666667%; }
+	.col-lg-bottom-12 { margin-bottom: 100%;       }
+
+	.col-lg-left-0  { margin-left: 0;          }
+	.col-lg-left-1  { margin-left: 8.333333%;  }
+	.col-lg-left-2  { margin-left: 16.666667%; }
+	.col-lg-left-3  { margin-left: 25%;        }
+	.col-lg-left-4  { margin-left: 33.333333%; }
+	.col-lg-left-5  { margin-left: 41.666667%; }
+	.col-lg-left-6  { margin-left: 50%;        }
+	.col-lg-left-7  { margin-left: 58.333333%; }
+	.col-lg-left-8  { margin-left: 66.666667%; }
+	.col-lg-left-9  { margin-left: 75%;        }
+	.col-lg-left-10 { margin-left: 83.333333%; }
+	.col-lg-left-11 { margin-left: 91.666667%; }
+	.col-lg-left-12 { margin-left: 100%;       }
 
 	.col-lg-first  { order: -1; }
 	.col-lg-last   { order:  1; }
