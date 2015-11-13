@@ -1,31 +1,21 @@
 /* @group .snake */
 .snake {
-	width: 220px;
-	/*height: calc(100% + 25px + 50px);*/
-	height: 300px;
+	width:  220px;
+	height: 160%;
+
+	overflow: visible; /* Allow to overflow, the path's stroke may overflow */
 	position: absolute;
-	top:  -24px;
-	left: -24px;
+	top:  -25px;
+	left: -20px;
 }
 
 	.snake path {
-		animation: snake 1.5s forwards;
-		transition: stroke .3s;
+		transition: stroke .5s, stroke-dashoffset 1.5s;
 
 		fill: none;
 		stroke: currentColor;
-		stroke-width: 8px;
-		stroke-dasharray:  1000 1000;
-		stroke-dashoffset: 1000;
+		stroke-dasharray: 1000 1000;
 		shape-rendering: optimizeSpeed;      /* Prevent stroke's anti-aliasing */
 		vector-effect:   non-scaling-stroke; /* Do not scale the stroke's width (only the path have to be scaled) */
-	}
-
-	.obsession-1 .snake path { stroke: #A889AD; }
-	.obsession-2 .snake path { stroke: #7F8E68; }
-	.obsession-3 .snake path { stroke: #679EA7; }
-
-	@keyframes snake {
-		to { stroke-dashoffset: 0; }
 	}
 /* @end .snake */
