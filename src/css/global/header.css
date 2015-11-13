@@ -1,0 +1,114 @@
+/* @group #header */
+/*csslint ids:false */
+#header {
+	background: #FFF;
+	text-align: center;
+	color: #C83E2C;
+}
+
+#header h1,
+#header h1 a { display: inline-block; }
+#header h1 a { padding: 13px; }
+
+#header > .btn { margin-top: 18px; }
+
+#header .pull-left  { padding: 0.5625em; }
+#header .pull-right { padding: 2.5px; }
+
+#menu {
+	background: #FFF;
+	padding: 1.5em;
+
+	z-index: 1000;
+	position: absolute;
+	right: 0;
+	left:  0;
+
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity 0.3s, visibility 0s 0.3s;
+
+	text-align: left;
+
+	font-family: "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+
+	color: #414141;
+}
+
+#menu.opened {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.3s, visibility 0s;
+}
+
+#menu a {
+	background: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg'><circle fill='#C83E2C' cx='24' cy='24' r='24' /><path fill='none' stroke='#FFF' stroke-width='2' d='M22 18l7 6-7 7' /></svg>") no-repeat;
+	background-size: 1.5em 1.5em;
+	padding-left: 2.25em;
+	margin: 0.75em 0;
+
+	display: inline-block;
+	transition: background-position .15s;
+
+	line-height: 1.5em;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: currentColor;
+}
+
+#menu a:hover,
+#menu a:focus {
+	background-position: 3px 0;
+	text-decoration: underline;
+}
+
+#menu span {
+	margin: 0.454545em 0;
+
+	display: block;
+
+	line-height: 1.09091;
+	font-size: 1.375em;
+	font-weight: 300;
+}
+
+#menu ul {
+	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 24'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0zM1 4h1v1H1zM0 6h1v1H0zM1 8h1v1H1zM0 10h1v1H0zM1 12h1v1H1zM0 14h1v1H0zM1 16h1v1H1zM0 18h1v1H0zM1 20h1v1H1zM0 22h1v1H0z'/></svg>") repeat-x 0 100%;
+	background-size: 2px 24px;
+	padding-left: 0;
+	padding-bottom: 3em;
+	margin-bottom:  1.5em;
+}
+
+#menu .list-inline,
+#menu .list-inline a {
+	background: none;
+	padding: 0;
+	margin:  0;
+}
+
+#menu .list-inline a {
+	background: #C83E2C;
+	padding: 1em;
+	border-radius: 50%;
+
+	transition: transform .3s;
+
+	color: #FFF;
+}
+
+	#menu .list-inline a svg {
+		width:  1em;
+		height: 1em;
+		display: block;
+		transition: transform .3s;
+	}
+
+#menu .list-inline a:hover,
+#menu .list-inline a:focus { transform: scale(0.833333); }
+#menu .list-inline a:hover svg,
+#menu .list-inline a:focus svg { transform: scale(1.2); }
+/* @end #header */

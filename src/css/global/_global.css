@@ -32,14 +32,6 @@ fieldset {
 /* Allow only vertical resizing of textareas */
 textarea { resize: vertical; }
 
-#header {
-	background: #FFF;
-	/*padding: 0 40px;*/
-	text-align: center;
-}
-
-#header h1 {
-	margin: 13px 0;
 /* List utility classes */
 .list-unstyled    { list-style: none; }
 .list-inline > li { display: inline-block; }
@@ -55,41 +47,6 @@ textarea { resize: vertical; }
 	display: inline-block;
 }
 
-#header > button {
-	margin-top: 20px;
-	float: left;
-}
-
-#profile {
-	margin-top: 20px;
-	float: right; }
-
-#toggle-menu {
-	background: none;
-	border: none;
-	color: red;
-}
-
-/* FIXME: BOUH! */
-#toggle-menu:focus { outline: 0; }
-
-#menu {
-background: #FFF;
-position: absolute;
-left: 0;
-right: 0;
-z-index: 1000;
-visibility: hidden;
-opacity: 0;
-transition: opacity 0.3s, visibility 0s 0.3s;
-font-family: ProximaNova;
-}
-
-#menu.opened {
-	visibility: visible;
-	opacity: 1;
-	transition: opacity 0.3s, visibility 0s;
-}
 
 .carousel-container { margin-bottom: 100px;}
 
