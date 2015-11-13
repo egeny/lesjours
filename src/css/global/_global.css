@@ -1,18 +1,17 @@
 /* Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com */
 
-html { font-size: 18px; }
-body {
-	margin: 0;
+html {
 	font-family: "Archer", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	font-size:   16px;
 	line-height: 1.5;
 }
-ul, h1, h2, h3, h4, h5, h6 { margin: 0; }
 
-p {
-	margin-top: 0;
-	margin-bottom: 1.5em;
-}
+/* Remove some default margins */
+body, p, ul,
+h1, h2, h3, h4, h5, h6 { margin: 0; }
+
+/* Now, set some default margins */
+p { margin-bottom: 1.5em; }
 
 /* Remove text-shadow in selection highlight */
 ::selection {
@@ -41,6 +40,18 @@ textarea { resize: vertical; }
 
 #header h1 {
 	margin: 13px 0;
+/* List utility classes */
+.list-unstyled    { list-style: none; }
+.list-inline > li { display: inline-block; }
+
+/* Quick float */
+.pull-left  { float: left;  }
+.pull-right { float: right; }
+
+/* Default style for UI elements */
+[class^=ui-] {
+	width:  2em;
+	height: 2em;
 	display: inline-block;
 }
 
