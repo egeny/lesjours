@@ -1,20 +1,21 @@
 /* @group Grid */
 /* Inspired by Bootstrap 4 — http://getbootstrap.com */
+/*csslint box-sizing:false */
 .container,
 .container-fixed {
 	box-sizing: border-box;
 
 	/* Container's margins */
-	padding-right: 0.444444rem;
-	padding-left:  0.444444rem;
+	padding-right: 0.5rem;
+	padding-left:  0.5rem;
 
 	margin-right: auto;
 	margin-left:  auto;
 }
 
 /*.row {
-	margin-right: -0.444444rem;
-	margin-left:  -0.444444rem;
+	margin-right: -0.5rem;
+	margin-left:  -0.5rem;
 }*/
 
 .has-flex .row {
@@ -57,8 +58,8 @@
 	min-height: 1px;
 
 	/* Gutters */
-	padding-right: 0.444444rem;
-	padding-left:  0.444444rem;
+	padding-right: 0.5rem;
+	padding-left:  0.5rem;
 }
 
 .has-flex .col-sm-1, .has-flex .col-sm-2, .has-flex .col-sm-3, .has-flex .col-sm-4,
@@ -117,13 +118,13 @@
 	.container,
 	.container-fixed {
 		/* Container's margins */
-		padding-right: 0.666667rem;
-		padding-left:  0.666667rem;
+		padding-right: 0.75rem;
+		padding-left:  0.75rem;
 	}
 
 	/*.row {
-		margin-right: -0.666667rem;
-		margin-left:  -0.666667rem;
+		margin-right: -0.75rem;
+		margin-left:  -0.75rem;
 	}*/
 
 	.row-md-top    { align-items: flex-start; }
@@ -132,8 +133,8 @@
 
 	.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8 {
 		/* Gutters */
-		padding-right: 0.666667rem;
-		padding-left:  0.666667rem;
+		padding-right: 0.75rem;
+		padding-left:  0.75rem;
 	}
 
 	.col-md-1 { width: 12.5%; }
@@ -203,8 +204,8 @@
 	.container,
 	.container-fixed {
 		/* Container's margins */
-		padding-right: 1.333333rem;
-		padding-left:  1.333333rem;
+		padding-right: 1.5rem;
+		padding-left:  1.5rem;
 	}
 
 	.row-lg-top    { align-items: flex-start; }
@@ -213,8 +214,8 @@
 
 	.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
 		/* Gutters */
-		padding-right: 1.333333rem;
-		padding-left:  1.333333rem;
+		padding-right: 1.5rem;
+		padding-left:  1.5rem;
 	}
 
 	.col-lg-1  { width: 8.333333%;  }
