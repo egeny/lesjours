@@ -114,7 +114,17 @@ gulp.task('lint:css', function() {
 		.pipe(csslint.reporter());
 });
 
-gulp.task('build:css', ['lint:sass', 'lint:css'], function() {
+gulp.task('build:css', function() {
+	return gulp.src(paths.css.input + 'global.scss')
+		.pipe(sass({ outputStyle: 'expanded' }))
+		.pipe(autoprefixer())
+		.pipe(header(banner, context))
+		.pipe(gulp.dest(paths.css.output))
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(minify())
+		.pipe(gulp.dest(paths.css.output))
+		.pipe(livereload());
+
 	var worker = lazypipe()
 		.pipe(sass, { outputStyle: "expanded" })
 		.pipe(autoprefixer)

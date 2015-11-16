@@ -1,0 +1,17 @@
+.btn,
+.btn-rounded {
+	background: none;
+	padding: 0;
+	border:  0;
+}
+
+.btn-rounded {
+	width:  3em;
+	height: 3em;
+	border-radius: 50%;
+}
+
+.btn-primary {
+	background: #FFF;
+	color: #C83E2C;
+}

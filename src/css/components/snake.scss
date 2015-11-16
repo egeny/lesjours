@@ -1,6 +1,6 @@
 /* @group .snake */
 /*csslint known-properties:false */
-.snake {
+svg.snake {
 	width:  220px;
 	height: 160%;
 
@@ -10,7 +10,7 @@
 	left: -20px;
 }
 
-	.snake path {
+	svg.snake path {
 		transition: stroke .5s, stroke-dashoffset 1.5s;
 
 		fill: none;

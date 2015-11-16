@@ -1,0 +1,161 @@
+/* @group Grid */
+// Inspired by Bootstrap 4 — http://getbootstrap.com
+.container,
+.container-fixed {
+	@include clearfix();
+	box-sizing: border-box;
+
+	margin-right: auto;
+	margin-left:  auto;
+}
+
+.row,
+.row-full { @include clearfix(); }
+
+.has-flex .row {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+// Use a mixin since these rules might be used in a @media
+@mixin row-top()    { align-items: flex-start; }
+@mixin row-center() { align-items: center;     }
+@mixin row-bottom() { align-items: flex-end;   }
+
+.row-top    { @include row-top;    }
+.row-center { @include row-center; }
+.row-bottom { @include row-bottom; }
+
+.col {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 1px;
+
+	float: left;
+	position: relative;
+}
+
+.has-flex .col {
+	width: auto;
+	float: none;
+	flex: 0 0 100%;
+}
+
+// Use a mixin since these rules might be used in a @media
+@mixin col-first()  { order: -1; }
+@mixin col-last()   { order:  1; }
+@mixin col-top()    { align-self: flex-start; }
+@mixin col-center() { align-self: center;     }
+@mixin col-bottom() { align-self: flex-end;   }
+
+.col-first  { @include col-first;  }
+.col-last   { @include col-last;   }
+.col-top    { @include col-top;    }
+.col-center { @include col-center; }
+.col-bottom { @include col-bottom; }
+
+@mixin breakpoint($breakpoint) {
+	@if $breakpoint {
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Prepare a mixin to easily add some custom rules depending on breakpoint
+@mixin media-md {
+	@media (min-width: map-get(map-get($grids, "md"), "breakpoint")) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media (min-width: map-get(map-get($grids, "lg"), "breakpoint")) {
+		@content;
+	}
+}
+
+@each $name, $grid in $grids {
+	$breakpoint: map-get($grid, "breakpoint");
+	$columns:    map-get($grid, "columns");
+	$margin:     map-get($grid, "margin");
+	$gutter:     map-get($grid, "gutter");
+
+	@include breakpoint($breakpoint) {
+		.container,
+		.container-fixed {
+			/* Container's margins */
+			padding-right: $margin;
+			padding-left:  $margin;
+		}
+
+		@if $breakpoint {
+			.container-fixed { max-width: $breakpoint; }
+			.row {
+				margin-right: -($margin);
+				margin-left:  -($margin);
+			}
+		}
+
+
+		@if not map-get($grid, "no-gutter-margin") {
+			// Add some special .gutter-top-X and .gutter-bottom-X for special margin
+			@for $i from 1 through 12 {
+				.gutter-top-#{$i}    { margin-top:    $gutter * $i; }
+				.gutter-bottom-#{$i} { margin-bottom: $gutter * $i; }
+			}
+		}
+
+		%gutter-#{$name} {
+			/* Gutters */
+			padding-right: $gutter;
+			padding-left:  $gutter;
+		}
+
+		@for $i from 1 through $columns {
+			$width: (100% / $columns) * $i;
+
+			.col-#{$name}-#{$i} {
+				@extend .col;
+				@extend %gutter-#{$name};
+				width: $width;
+			}
+
+			.has-flex .col-#{$name}-#{$i} {
+				@extend .has-flex.col;
+				flex: 0 0 $width;
+			}
+
+			.col-#{$name}-top-#{$i}    { margin-top:    $width; }
+			.col-#{$name}-right-#{$i}  { margin-right:  $width; }
+			.col-#{$name}-bottom-#{$i} { margin-bottom: $width; }
+			.col-#{$name}-left-#{$i}   { margin-left:   $width; }
+		}
+
+		@if $breakpoint {
+			.row-#{$name}-top    { @include row-top;    }
+			.row-#{$name}-center { @include row-center; }
+			.row-#{$name}-bottom { @include row-bottom; }
+
+			.col-#{$name}-first  { @include col-first;  }
+			.col-#{$name}-last   { @include col-last;   }
+			.col-#{$name}-top    { @include col-top;    }
+			.col-#{$name}-center { @include col-center; }
+			.col-#{$name}-bottom { @include col-bottom; }
+		} @else {
+			.row-#{$name}-top    { @extend .row-top;    }
+			.row-#{$name}-center { @extend .row-center; }
+			.row-#{$name}-bottom { @extend .row-bottom; }
+
+			.col-#{$name}-first  { @extend .col-first;  }
+			.col-#{$name}-last   { @extend .col-last;   }
+			.col-#{$name}-top    { @extend .col-top;    }
+			.col-#{$name}-center { @extend .col-center; }
+			.col-#{$name}-bottom { @extend .col-bottom; }
+		}
+	}
+}
+/* @end of Grid */

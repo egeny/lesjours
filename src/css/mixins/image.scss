@@ -1,0 +1,10 @@
+@mixin image-responsive() {
+	max-width: 100%;
+	height:    auto;
+
+	.has-flex & {
+		max-width: none;
+		width:  100%;
+		height: 100%; // We have to set the height with flex
+	}
+}

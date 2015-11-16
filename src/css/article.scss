@@ -1,0 +1,147 @@
+/* @group Article */
+article a {
+	background-image: linear-gradient(to bottom, rgba($color-brand, .5), rgba($color-brand, .5));
+	background-position: 0 1.0625em;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: .125em 0;
+
+	transition: background-position .15s;
+	font-weight: 800;
+	text-decoration: none;
+	color: currentColor;
+}
+
+article a:hover,
+article a:focus { background-position: 0 0; }
+
+article header { position: relative; }
+article header img { @include image-responsive; }
+article header .snake {
+	width: 62.5%;
+	border: 4px solid $color-brand;
+
+	position: absolute;
+	top: 65px;
+	bottom: 0;
+}
+
+article .content { font-size: 1.125rem; }
+
+article .lettrine {
+	background: $color-brand;
+
+	width: 1.6em;
+	line-height: 1.6em;
+	border-radius: 50%;
+	margin: -.25em .15em 0 0;
+
+	float: left;
+	display: inline-block;
+
+	@include font-brandon;
+	@include weight-regular;
+	font-size: 3.75rem;
+
+	text-align: center;
+
+	color: #FFF;
+}
+
+@include media-md {
+	article .lettrine { margin-left: -.5em; }
+}
+
+article aside {
+	@extend .h1;
+	font-size: 1.666667em;
+}
+
+article aside span {
+	font-size: 1.4em;
+	@include weight-bold;
+}
+
+
+
+article figure { margin-right: 0; margin-left: 0; }
+article figure img,
+article figure video { width: 100%; }
+
+article blockquote p {
+	font-family: "brandon-grotesque", sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 2em;
+	position: relative;
+}
+
+article blockquote p { margin-bottom: 0; }
+article blockquote .author {
+	font-family: "proxima-nova", sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 13px;
+	color: #717171;
+}
+
+article blockquote p:first-of-type:before {
+	background: #679EA7;
+	width: 1.6em;
+	line-height: 1.6em;
+	border-radius: 50%;
+
+	content: "«";
+	display: inline-block;
+	position: absolute;
+	top: -.25em;
+	left: -1em;
+	z-index: -1;
+
+	text-align: center;
+
+	color: #FFF;
+}
+
+article blockquote p:last-of-type:after { content: " »"; }
+
+article figure.pull-left {
+	margin-right: .5em;
+}
+
+
+
+
+article footer {
+	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+	background-size: 2px 4px;
+}
+
+article footer div { background: #FFF; }
+
+article footer div:last-child {
+	margin-top: 24px;
+}
+
+@each $color in $colors-obsessions {
+	$i: index($colors-obsessions, $color);
+	article.obsession-#{$i} a          { background-image: linear-gradient(to bottom, rgba($color, .5), rgba($color, .5)); }
+	article.obsession-#{$i} .snake     { border-color: $color; }
+	article.obsession-#{$i} .lettrine  { background:   $color; }
+	article.obsession-#{$i} aside span { color:        $color; }
+}
+/* @end Article */
+
+article header p:first-child a,
+article header ul a {
+	text-transform: uppercase;
+	color: #414141;
+}
+
+article header time {
+	display: inline-block;
+}
+
+article header ul li:after            { content: " • "; }
+article header ul li:last-child:after { content: "";    }
+

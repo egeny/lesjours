@@ -1,0 +1,70 @@
+@import "_variables";
+@import "mixins/mixins";
+
+// Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com
+
+html {
+	background: #FFF;
+
+	font-family: "Archer SSm A", "Archer SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.5;
+
+	color: $color-main;
+}
+
+/* Remove some default margins */
+body, p, ul,
+h1, h2, h3, h4, h5, h6 { margin: 0; } /* TODO */
+
+/* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
+audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+
+/* Disable the default italic for address */
+address { font-style: inherit; }
+
+/* Remove default fieldset styles */
+fieldset {
+	padding: 0;
+	border:  0;
+	margin:  0;
+}
+
+/* Now, set some default margins */
+p { margin-bottom: 1.5em; }
+
+q:before { content: open-quote " ";  }
+q:after  { content: " " close-quote; }
+
+/* Allow only vertical resizing of textareas */
+textarea { resize: vertical; }
+
+ul, ol { padding: 0; }
+
+/* Remove text-shadow in selection highlight */
+::selection {
+	background: #B3D4FC; /* TODO */
+	text-shadow: none;
+}
+
+/* Default style for UI elements */
+[class^=ui-] {
+	width:  2em;
+	height: 2em;
+	display: inline-block;
+}
+
+@import "_grid";
+@import "_typography";
+@import "_utility";
+
+@import "components/buttons";
+
+@import "header";
+@import "components/carousel";
+@import "components/snake";
+@import "wall";
+
+@import "article";

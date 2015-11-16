@@ -1,0 +1,45 @@
+/* @group Utility */
+.clearfix { @include clearfix; }
+
+.fade {
+	opacity: 0;
+	transition: opacity .3s linear;
+
+	&.in { opacity: 1; }
+}
+
+/* List utility classes */
+.list-unstyled    { list-style: none; }
+.list-inline > li { display: inline-block; }
+
+/* Quick float */
+.pull-left  { float: left;  }
+.pull-right { float: right; }
+
+.responsive { @include image-responsive; }
+
+/* Screen reader only — see http://a11yproject.com/posts/how-to-hide-content/ */
+.sr,
+.sr-focusable {
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	border: 0;
+	margin: -1px;
+
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+}
+
+.sr-focusable:active,
+.sr-focusable:focus {
+	width: auto;
+	height: auto;
+	margin: 0;
+
+	overflow: visible;
+	position: static;
+	clip: auto;
+}
+/* @group Utility */

@@ -1,0 +1,26 @@
+$color-brand: #C83E2C;
+$color-main:  #414141;
+$color-a:     #717171;
+
+$colors-obsessions: (#A889AD, #7F8E68, #679EA7);
+
+$grids: (
+	sm: (
+		columns: 4,
+		margin:  1rem,
+		gutter:  0.5rem
+	),
+	md: (
+		breakpoint: 480px,
+		columns:    8,
+		margin:     1.5rem,
+		gutter:     0.75rem
+	),
+	lg: (
+		breakpoint: 840px,
+		columns:    12,
+		margin:     1.5rem,
+		gutter:     0.75rem,
+		no-gutter-margin: true
+	)
+);
