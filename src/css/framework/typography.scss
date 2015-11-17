@@ -1,34 +1,44 @@
+@mixin font-archer() {
+	font-family: "Archer SSm A", "Archer SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+}
+
 @mixin font-brandon() {
-	font-family: "brandon-grotesque", sans-serif;
+	font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
 }
 
 @mixin font-proxima() {
-	font-family: "proxima-nova", sans-serif;
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
 }
 
-@mixin weight-thin($font: "")        { font-weight: 100; }
-@mixin weight-extra-light($font: "") { font-weight: 200; }
-@mixin weight-light($font: "")       { font-weight: if($font == "archer", 400, 300); }
-@mixin weight-regular($font: "")     { font-weight: if($font == "archer", 500, 400); }
-@mixin weight-medium($font: "")      { font-weight: if($font == "archer", 600, 500); }
-@mixin weight-semi-bold($font: "")   { font-weight: if($font == "archer", 700, 600); }
-@mixin weight-bold($font: "")        { font-weight: if($font == "archer", 800, 700); }
-@mixin weight-extra-bold($font: "")  { font-weight: 800; }
-@mixin weight-black($font: "")       { font-weight: 900; }
+@mixin font-weight-thin($font: "")        { font-weight: 100; }
+@mixin font-weight-extra-light($font: "") { font-weight: 200; }
+@mixin font-weight-light($font: "")       { font-weight: if($font == "archer", 400, 300); }
+@mixin font-weight-regular($font: "")     { font-weight: if($font == "archer", 500, 400); }
+@mixin font-weight-medium($font: "")      { font-weight: if($font == "archer", 600, 500); }
+@mixin font-weight-semi-bold($font: "")   { font-weight: if($font == "archer", 700, 600); }
+@mixin font-weight-bold($font: "")        { font-weight: if($font == "archer", 800, 700); }
+@mixin font-weight-extra-bold($font: "")  { font-weight: 800; }
+@mixin font-weight-black($font: "")       { font-weight: 900; }
 
-.h1 {
+.h2, .h3, .h4, .h5, .h6 {
 	@include font-brandon;
-	@include weight-black;
-	font-size: 4.375rem;
+	@include font-weight-black;
 	line-height: 1;
 	margin-bottom: .5em;
 }
 
+.h2 { font-size: 4.375em;  }
+.h3 { font-size: 3.5em;    }
+.h4 { font-size: 2.6875em; }
+.h5 { font-size: 1.8125em; }
+.h6 { font-size: 1em;      }
+
 .style-1 {
 	@include font-proxima;
-	@include weight-semi-bold;
+	@include font-weight-semi-bold;
 	font-size: 0.8125em;
-	color: $color-a;
+	color: $color-dark;
 }
