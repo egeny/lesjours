@@ -1,4 +1,4 @@
-@import "_variables";
+@import "variables";
 @import "mixins/mixins";
 
 // Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com
@@ -56,9 +56,9 @@ ul, ol { padding: 0; }
 	display: inline-block;
 }
 
-@import "_grid";
-@import "_typography";
-@import "_utility";
+@import "framework/grid";
+@import "framework/typography";
+@import "framework/utility";
 
 @import "components/buttons";
 

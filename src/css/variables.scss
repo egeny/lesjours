@@ -4,23 +4,23 @@ $color-a:     #717171;
 
 $colors-obsessions: (#A889AD, #7F8E68, #679EA7);
 
+// Makes sure to go from the smallest device to the largest
 $grids: (
 	sm: (
 		columns: 4,
 		margin:  1rem,
-		gutter:  0.5rem
+		gutter:  1rem
 	),
 	md: (
 		breakpoint: 480px,
 		columns:    8,
 		margin:     1.5rem,
-		gutter:     0.75rem
+		gutter:     1.5rem
 	),
 	lg: (
 		breakpoint: 840px,
 		columns:    12,
 		margin:     1.5rem,
-		gutter:     0.75rem,
-		no-gutter-margin: true
+		gutter:     1.5rem
 	)
 );

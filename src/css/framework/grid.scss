@@ -1,0 +1,190 @@
+/* @group Grid */
+// Inspired by Bootstrap 4 — http://getbootstrap.com
+.container,
+.container-fixed {
+	@include clearfix();
+	box-sizing: border-box;
+}
+
+.container-fixed {
+	margin-right: auto;
+	margin-left:  auto;
+}
+
+.row { @include clearfix(); }
+
+.has-flex .row {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+}
+
+// Use a mixin since these rules might be used in a @media
+@mixin row-top()    { align-items: flex-start; }
+@mixin row-center() { align-items: center;     }
+@mixin row-bottom() { align-items: flex-end;   }
+
+.row-top    { @include row-top;    }
+.row-center { @include row-center; }
+.row-bottom { @include row-bottom; }
+
+.col {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 1px;
+
+	float: left;
+	position: relative;
+}
+
+.has-flex .col {
+	width: auto;
+	float: none;
+	flex: 0 0 100%;
+}
+
+// Use a mixin since these rules might be used in a @media
+@mixin col-first()  { order: -1; }
+@mixin col-last()   { order:  1; }
+@mixin col-top()    { align-self: flex-start; }
+@mixin col-center() { align-self: center;     }
+@mixin col-bottom() { align-self: flex-end;   }
+
+.col-first  { @include col-first;  }
+.col-last   { @include col-last;   }
+.col-top    { @include col-top;    }
+.col-center { @include col-center; }
+.col-bottom { @include col-bottom; }
+
+@mixin breakpoint($breakpoint) {
+	@if $breakpoint {
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	} @else {
+		@content;
+	}
+}
+
+// Prepare a mixin to easily add some custom rules depending on breakpoint
+@mixin media-md {
+	@media (min-width: map-get(map-get($grids, "md"), "breakpoint")) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media (min-width: map-get(map-get($grids, "lg"), "breakpoint")) {
+		@content;
+	}
+}
+
+@function grid-margin($device) {
+	@return map-get(map-get($grids, $device), "margin");
+}
+
+@function grid-gutter($device) {
+	@return map-get(map-get($grids, $device), "gutter");
+}
+
+$last-margin: null;
+$last-gutter: null;
+
+@each $device, $grid in $grids {
+	$breakpoint: map-get($grid, "breakpoint");
+	$columns:    map-get($grid, "columns");
+	$margin:     map-get($grid, "margin");
+	$gutter:     map-get($grid, "gutter") / 2;
+
+	@include breakpoint($breakpoint) {
+		@if $margin != $last-margin {
+			.container,
+			.container-fixed {
+				/* Container's margins */
+				padding-right: $margin;
+				padding-left:  $margin;
+			}
+		}
+
+		@if $breakpoint {
+			.container-fixed { max-width: $breakpoint; }
+		}
+
+		@if $margin != $last-margin {
+			.row {
+				/* Offset the row to avoid margin + gutter (first and last) */
+				margin-right: -($margin);
+				margin-left:  -($margin);
+			}
+		}
+
+		@if $breakpoint {
+			.row-#{$device}-top    { @include row-top;    }
+			.row-#{$device}-center { @include row-center; }
+			.row-#{$device}-bottom { @include row-bottom; }
+		} @else {
+			.row-#{$device}-top    { @extend .row-top;    }
+			.row-#{$device}-center { @extend .row-center; }
+			.row-#{$device}-bottom { @extend .row-bottom; }
+		}
+
+		%gutter-#{$device} {
+			/* Gutters */
+			padding-right: $gutter;
+			padding-left:  $gutter;
+		}
+
+		// Generate .col-sm-*, .col-md-* and .col-lg-*
+		@for $i from 1 through $columns {
+			$width: (100% / $columns) * $i;
+
+			.col-#{$device}-#{$i} {
+				@extend .col;
+				width: $width;
+
+				@if $gutter != $last-gutter {
+					@extend %gutter-#{$device};
+				}
+			}
+
+			.has-flex .col-#{$device}-#{$i} {
+				@extend .has-flex.col;
+				flex-basis: $width;
+			}
+
+			.col-#{$device}-top-#{$i}    { margin-top:    $width; }
+			.col-#{$device}-right-#{$i}  { margin-right:  $width; }
+			.col-#{$device}-bottom-#{$i} { margin-bottom: $width; }
+			.col-#{$device}-left-#{$i}   { margin-left:   $width; }
+		}
+
+		@if $breakpoint {
+			.col-#{$device}-first  { @include col-first;  }
+			.col-#{$device}-last   { @include col-last;   }
+			.col-#{$device}-top    { @include col-top;    }
+			.col-#{$device}-center { @include col-center; }
+			.col-#{$device}-bottom { @include col-bottom; }
+		} @else {
+			.col-#{$device}-first  { @extend .col-first;  }
+			.col-#{$device}-last   { @extend .col-last;   }
+			.col-#{$device}-top    { @extend .col-top;    }
+			.col-#{$device}-center { @extend .col-center; }
+			.col-#{$device}-bottom { @extend .col-bottom; }
+		}
+
+		// Add some special .gutter-top-X and .gutter-bottom-X for special margin
+		@for $i from 1 through 12 {
+			@if $gutter != $last-gutter {
+				.gutter-top-#{$i}    { margin-top:    $gutter * $i; }
+				.gutter-bottom-#{$i} { margin-bottom: $gutter * $i; }
+			}
+
+			.gutter-#{$device}-top-#{$i}    { margin-top:    $gutter * $i; }
+			.gutter-#{$device}-bottom-#{$i} { margin-bottom: $gutter * $i; }
+		}
+	}
+
+	$last-margin: $margin;
+	$last-gutter: $gutter;
+}
+/* @end of Grid */
