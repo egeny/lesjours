@@ -1,7 +1,10 @@
 @import "variables";
 @import "mixins/mixins";
+
 @import "framework/functions";
+@import "framework/grid";
 @import "framework/typography";
+@import "framework/utility";
 
 // Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com
 
@@ -10,15 +13,21 @@ html {
 
 	@include font-archer;
 	@include font-weight-medium("archer");
-	font-size: $base-font-size;
+	font-size:   $base-font-size;
 	line-height: 1.5;
 
 	color: $color-main;
 }
 
+body { font-size: 0.875em; }
+
+@include media-md {
+	body { font-size: inherit; }
+}
+
 /* Remove some default margins */
 body, p, ul,
-h1, h2, h3, h4, h5, h6 { margin: 0; } /* TODO */
+h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 /* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
 audio, canvas, iframe, img, svg, video { vertical-align: middle; }
@@ -32,6 +41,8 @@ fieldset {
 	border:  0;
 	margin:  0;
 }
+
+h1 { font-size: 1em; }
 
 /* Now, set some default margins */
 p { margin-bottom: 1.5em; }
@@ -57,14 +68,10 @@ ul, ol { padding: 0; }
 	display: inline-block;
 }
 
-@import "framework/grid";
-@import "framework/utility";
-
 @import "components/buttons";
-
-@import "header";
 @import "components/carousel";
 @import "components/snake";
-@import "wall";
 
+@import "header";
+@import "wall";
 @import "article";
