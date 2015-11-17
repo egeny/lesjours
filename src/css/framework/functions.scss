@@ -1,0 +1,7 @@
+@function rem-to-px($em) {
+	@return (length($em) * $base-font-size);
+}
+
+@function em-to-px($em, $base) {
+	@return (length($em) * $base);
+}

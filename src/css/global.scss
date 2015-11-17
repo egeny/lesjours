@@ -1,15 +1,16 @@
 @import "variables";
 @import "mixins/mixins";
+@import "framework/functions";
+@import "framework/typography";
 
 // Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com
 
 html {
 	background: #FFF;
 
-	font-family: "Archer SSm A", "Archer SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 600;
+	@include font-archer;
+	@include font-weight-medium("archer");
+	font-size: $base-font-size;
 	line-height: 1.5;
 
 	color: $color-main;
@@ -57,7 +58,6 @@ ul, ol { padding: 0; }
 }
 
 @import "framework/grid";
-@import "framework/typography";
 @import "framework/utility";
 
 @import "components/buttons";
