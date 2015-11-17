@@ -28,16 +28,6 @@ article header .snake {
 	left:  rem-to-px(grid-gutter("sm")) - 4px;
 }
 
-@include media-md {
-	article header .snake {
-		width: 62.5%;
-		right: auto;
-		left: -4px; // Offset the border
-	}
-}
-
-article > .container { font-size: 1.125rem; }
-
 article .lettrine {
 	background: $color-brand;
 
@@ -133,11 +123,20 @@ article footer div:last-child {
 	margin-top: 24px;
 }
 
+@include media-md {
+	article header .snake {
+		width: 62.5%;
+		right: auto;
+		left: -4px; // Offset the border
+	}
+}
+
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
-	article.obsession-#{$i} .snake     { border-color: $color; }
-	article.obsession-#{$i} .lettrine  { background:   $color; }
-	article.obsession-#{$i} aside span { color:        $color; }
+	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+	article.obsession-#{$i} .snake      { border-color: $color; }
+	article.obsession-#{$i} .lettrine   { background:   $color; }
+	article.obsession-#{$i} aside span  { color:        $color; }
 	article.obsession-#{$i} blockquote p:first-of-type:before { background: $color; }
 }
 article .tags a { background-image: linear-gradient(to bottom, $color-action-contextual, $color-action-contextual); }
