@@ -116,6 +116,16 @@ $last-gutter: null;
 				margin-right: -($margin);
 				margin-left:  -($margin);
 			}
+
+			.row-full {
+				margin-right: 0;
+				margin-left:  0;
+			}
+		}
+
+		.row-#{$device}-full {
+			margin-right: 0;
+			margin-left:  0;
 		}
 
 		@if $breakpoint {

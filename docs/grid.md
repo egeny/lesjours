@@ -37,6 +37,8 @@ It will set the grid's margins and, if you use `container-fixed`, set a `max-wid
 Use a row (`.row`) to host column(s). A row should only host column(s).  
 It will set its display as `flex` (when an ancestor have a `has-flex` class) and set some negative margins (to avoid the grid's margin + column's gutter).
 
+To avoid the negative margins, use `.row-full`, `.row-sm-full`, `.row-md-full` and/or `.row-lg-full` in **addition** of `.row`.
+
 ### Example
 ```html
 <div class="container">
