@@ -25,6 +25,14 @@ Note there is no `.h1` because the `<h1>` is reserved for the brand's name and l
 
 These classes will also set a `font-size`:
 
+* `.h2` will set to **3em** (42px)
+* `.h3` will set to **2.5em** (35px)
+* `.h4` will set to **2em** (28px)
+* `.h5` will set to **1.5em** (21px)
+* `.h6` will set to **1em** (14px)
+
+Starting with medium devices, these classes have a bigger `font-size`:
+
 * `.h2` will set to **4.374em** (70px)
 * `.h3` will set to **3.5em** (56px)
 * `.h4` will set to **2.6875em** (43px)
