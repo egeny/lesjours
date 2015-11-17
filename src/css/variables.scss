@@ -1,8 +1,44 @@
+// Main colors
 $color-brand: #C83E2C;
 $color-main:  #414141;
-$color-a:     #717171;
+$color-black: #000;
+$color-white: #FFF;
 
+// Fonts color
+$color-darker: #333;
+$color-dark:   #717171;
+$color-light:  #D7D7D7;
+
+// Actions colors
+$color-action:             #F3DF93;
+$color-action-in-progress: #9B7C08;
+$color-action-contextual:  #E49287;
+
+// Obsessions colors
 $colors-obsessions: (#A889AD, #7F8E68, #679EA7);
+
+$colors: (
+	brand: $color-brand,
+	main:  $color-main,
+	black: $color-black,
+	white: $color-white,
+
+	darker: $color-darker,
+	dark:   $color-dark,
+	light:  $color-light,
+
+	action:             $color-action,
+	action-in-progress: $color-action-in-progress,
+	action-contextual:  $color-action-contextual
+);
+
+@each $name, $color in $colors {
+	.color-#{$name} { color: $color; }
+	.bg-#{$name}    { background-color: $color; }
+}
+
+// The base font-size, used for some calculations
+$base-font-size: 16px;
 
 // Makes sure to go from the smallest device to the largest
 $grids: (
