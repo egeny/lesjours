@@ -25,8 +25,8 @@ article header .snake {
 	position: absolute;
 	top: grid-margin("sm");
 	bottom: 0;
-	right: rem-to-px(grid-margin("sm")) - 4px;
-	left:  rem-to-px(grid-margin("sm")) - 4px;
+	right: 1rem;
+	left:  1rem;
 }
 
 article .lettrine {
@@ -128,9 +128,9 @@ article footer div:last-child {
 	article header .snake {
 		width: 62.5%;
 		margin-top: 12.5%;
-		top: 0;
-		right: auto;
-		left: -4px; // Offset the border
+		top:   0;
+		right: 0;
+		left:  -4px; // Offset the border
 	}
 }
 
