@@ -11,6 +11,9 @@
 	margin-left:  auto;
 }
 
+.container-no-margin {
+	padding-right: 0 !important;
+	padding-left:  0 !important;
 }
 
 .row { @include clearfix(); }
@@ -114,6 +117,9 @@ $last-gutter: null;
 			.container-fixed { max-width: $breakpoint; }
 		}
 
+		.container-#{$device}-no-margin {
+			padding-right: 0;
+			padding-left:  0;
 		}
 
 		@if $breakpoint {
