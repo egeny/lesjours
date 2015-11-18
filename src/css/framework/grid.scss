@@ -177,14 +177,26 @@ $last-gutter: null;
 		}
 
 		// Add some special .gutter-top-X and .gutter-bottom-X for special margin
-		@for $i from 1 through 12 {
+		@for $i from 0 through 12 {
 			@if $gutter != $last-gutter {
 				.gutter-top-#{$i}    { margin-top:    $gutter * $i; }
+				.gutter-right-#{$i}  { padding-right: $gutter * $i; }
 				.gutter-bottom-#{$i} { margin-bottom: $gutter * $i; }
+				.gutter-left-#{$i}   { padding-left:  $gutter * $i; }
+				.gutter-#{$i} {
+					padding-right: $gutter * $i;
+					padding-left:  $gutter * $i;
+				}
 			}
 
 			.gutter-#{$device}-top-#{$i}    { margin-top:    $gutter * $i; }
+			.gutter-#{$device}-right-#{$i}  { padding-right: $gutter * $i; }
 			.gutter-#{$device}-bottom-#{$i} { margin-bottom: $gutter * $i; }
+			.gutter-#{$device}-left-#{$i}   { padding-left:  $gutter * $i; }
+			.gutter-#{$device}-#{$i} {
+				padding-right: $gutter * $i;
+				padding-left:  $gutter * $i;
+			}
 		}
 	}
 
