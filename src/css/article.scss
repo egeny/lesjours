@@ -23,10 +23,10 @@ article header .snake {
 	border: 4px solid $color-brand;
 
 	position: absolute;
-	top: grid-margin("sm");
+	top:    grid-margin("sm");
+	right:  grid-margin("sm");
 	bottom: 0;
-	right: 1rem;
-	left:  1rem;
+	left:   grid-margin("sm");
 }
 
 article .lettrine {
