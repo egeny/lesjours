@@ -1,31 +1,33 @@
 <header id="header" class="container">
-	<h1><a href="/"><img width="55" height="42" src="img/logo.svg" alt="LesJours" /></a></h1>
-	<button class="pull-left btn" id="toggle-menu" type="button">{{ icon("burger", "menu") }}</button>
-	<button class="pull-right btn" id="toggle-profile" type="button"><img src="img/profile.png" alt="John" /></button>
+	<div class="col">
+		<h1><a href="/"><img width="55" height="42" src="img/logo.svg" alt="LesJours" /></a></h1>
+		<button class="pull-left btn" id="toggle-menu" type="button">{{ icon("burger", "menu") }}</button>
+		<button class="pull-right btn" id="toggle-profile" type="button"><img src="img/profile.png" alt="John" /></button>
+	</div>
 
-	<nav id="menu" class="row row-sm-full">
-		<div class="col-md-left-1 col-md-7">
-			<a href="#">À la une</a>
+	<nav id="menu" class="container opened">
+		<div class="col col-md-left-1 col-md-7">
+			<a href="#"><i>{{ icon("chevron-right") }}</i> À la une</a>
 			<span>Les obsessions :</span>
 			<ul class="list-unstyled">
-				<li><a href="#">Les années collège</a></li>
-				<li><a href="#">Good Com’ bad COP</a></li>
-				<li><a href="#">FN : la mauvaise herbe de Provence</a></li>
-				<li><a href="#">Toutes les obsessions</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Les années collège</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Good Com’ bad COP</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> FN : la mauvaise herbe de Provence</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Toutes les obsessions</a></li>
 			</ul>
 			<ul class="list-unstyled">
-				<li><a href="#">Le projet</a></li>
-				<li><a href="#">Le tuto des jours</a></li>
-				<li><a href="#">Qui sommes-nous ?</a></li>
-				<li><a href="#">Abonnement</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a href="#">Mentions légales</a></li>
-				<li><a href="#">Conditions d’utilisation</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Le projet</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Le tuto des jours</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Qui sommes-nous ?</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Abonnement</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Contact</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Mentions légales</a></li>
+				<li><a href="#"><i>{{ icon("chevron-right") }}</i> Conditions d’utilisation</a></li>
 			</ul>
 			<ul class="list-inline">
-				<li class="col-md-1"><a href="#">{{ icon("twitter", "Twitter") }}</a></li>
-				<li class="col-md-1"><a href="#">{{ icon("facebook", "Facebook") }}</a></li>
-				<li class="col-md-1"><a href="#">{{ icon("instagram", "Instagram") }}</a></li>
+				<li class="col col-md-1"><a href="#"><i>{{ icon("twitter", "Twitter") }}</i></a></li>
+				<li class="col col-md-1"><a href="#"><i>{{ icon("facebook", "Facebook") }}</i></a></li>
+				<li class="col col-md-1"><a href="#"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
 			</ul>
 		</div>
 	</nav>
