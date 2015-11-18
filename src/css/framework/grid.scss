@@ -13,6 +13,11 @@
 
 .row { @include clearfix(); }
 
+.row.row-full {
+	margin-right: 0;
+	margin-left:  0;
+}
+
 .has-flex .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -116,17 +121,9 @@ $last-gutter: null;
 				margin-right: -($margin);
 				margin-left:  -($margin);
 			}
-
-			.row-full {
-				margin-right: 0;
-				margin-left:  0;
-			}
 		}
 
-		.row-#{$device}-full {
-			margin-right: 0;
-			margin-left:  0;
-		}
+		.row.row-#{$device}-full { @extend .row.row-full; }
 
 		@if $breakpoint {
 			.row-#{$device}-top    { @include row-top;    }
