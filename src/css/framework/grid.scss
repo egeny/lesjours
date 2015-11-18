@@ -11,12 +11,9 @@
 	margin-left:  auto;
 }
 
-.row { @include clearfix(); }
-
-.row.row-full {
-	margin-right: 0;
-	margin-left:  0;
 }
+
+.row { @include clearfix(); }
 
 .has-flex .row {
 	display: flex;
@@ -33,7 +30,8 @@
 .row-center { @include row-center; }
 .row-bottom { @include row-bottom; }
 
-.col {
+.col,
+%col {
 	box-sizing: border-box;
 	width: 100%;
 	min-height: 1px;
@@ -42,7 +40,8 @@
 	position: relative;
 }
 
-.has-flex .col {
+.has-flex .col,
+%col-flex {
 	width: auto;
 	float: none;
 	flex: 0 0 100%;
@@ -98,8 +97,8 @@ $last-gutter: null;
 @each $device, $grid in $grids {
 	$breakpoint: map-get($grid, "breakpoint");
 	$columns:    map-get($grid, "columns");
-	$margin:     map-get($grid, "margin");
 	$gutter:     map-get($grid, "gutter") / 2;
+	$margin:     map-get($grid, "margin") - $gutter;
 
 	@include breakpoint($breakpoint) {
 		@if $margin != $last-margin {
@@ -115,15 +114,7 @@ $last-gutter: null;
 			.container-fixed { max-width: $breakpoint; }
 		}
 
-		@if $margin != $last-margin {
-			.row {
-				/* Offset the row to avoid margin + gutter (first and last) */
-				margin-right: -($margin);
-				margin-left:  -($margin);
-			}
 		}
-
-		.row.row-#{$device}-full { @extend .row.row-full; }
 
 		@if $breakpoint {
 			.row-#{$device}-top    { @include row-top;    }
@@ -135,10 +126,13 @@ $last-gutter: null;
 			.row-#{$device}-bottom { @extend .row-bottom; }
 		}
 
-		%gutter-#{$device} {
-			/* Gutters */
-			padding-right: $gutter;
-			padding-left:  $gutter;
+		.col,
+		%col-#{$gutter} {
+			@if $gutter != $last-gutter {
+				/* Gutters */
+				padding-right: $gutter;
+				padding-left:  $gutter;
+			}
 		}
 
 		// Generate .col-sm-*, .col-md-* and .col-lg-*
@@ -146,16 +140,13 @@ $last-gutter: null;
 			$width: (100% / $columns) * $i;
 
 			.col-#{$device}-#{$i} {
-				@extend .col;
+				@extend %col;
+				@extend %col-#{$gutter};
 				width: $width;
-
-				@if $gutter != $last-gutter {
-					@extend %gutter-#{$device};
-				}
 			}
 
 			.has-flex .col-#{$device}-#{$i} {
-				@extend .has-flex.col;
+				@extend %col-flex;
 				flex-basis: $width;
 			}
 
