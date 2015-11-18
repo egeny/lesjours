@@ -32,12 +32,12 @@ It will set the grid's margins and, if you use `container-fixed`, set a `max-wid
 <div class="container-fixed">…</div>
 ```
 
+If you want to get rid of the margins, use the `.container-no-margin`, `.container-sm-no-margin`, `.container-md-no-margin` and `.container-lg-no-margin` classes (in **addition** of `.container` or `.container-fixed`).
+
 ## Rows
 
 Use a row (`.row`) to host column(s). A row should only host column(s).  
 It will set its display as `flex` (when an ancestor have a `has-flex` class) and set some negative margins (to avoid the grid's margin + column's gutter).
-
-To avoid the negative margins, use `.row-full`, `.row-sm-full`, `.row-md-full` and/or `.row-lg-full` in **addition** of `.row`.
 
 ### Example
 ```html
@@ -230,12 +230,15 @@ You can also use the following classes to quickly offset a column based on the g
 
 * `.gutter-top-*` — Add a margin top of the value of the gutter
 * `.gutter-bottom-*` — Add a margin bottom of the value of the gutter
+* `.gutter-right-*` — Add a **padding** right of the value of the gutter
+* `.gutter-left-*` — Add a **padding** left of the value of the gutter
+* `.gutter-*` — Add a padding right **and** left of the value of the gutter (used to reset the gutters)
 
 All the classes are **also** prefixed to target specific devices:
 
-* Small devices: `.gutter-sm-top-1` to `.gutter-sm-top-12`
-* Medium devices: `.gutter-md-top-1` to `.gutter-md-top-12`
-* Large devices: `.gutter-lg-top-1` to `.gutter-lg-top-12`
+* Small devices: `.gutter-sm-top-0` to `.gutter-sm-top-12`
+* Medium devices: `.gutter-md-top-0` to `.gutter-md-top-12`
+* Large devices: `.gutter-lg-top-0` to `.gutter-lg-top-12`
 
 Please note the gutter size is **half** of the configured gutter size (`gutter-sm-top-1` will add a `margin-top` of **0.5rem** and not **1rem**). This is because in the configuration the `$gutter` variable represent the **full gutter** ; but in CSS the gutter are applied to each sides of a column so they are divided by 2.
 
