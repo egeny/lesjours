@@ -1,10 +1,11 @@
 /* @group Article */
 article a {
 	background-image: linear-gradient(to bottom, $color-action, $color-action);
-	background-position: 0 1.0625em;
+	/*background-position: 0 1.0625em;*/
+	background-position: 0 0.961538em;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	padding: .125em 0;
+	/*padding: .125em 0;*/
 
 	transition: background-position .15s;
 
