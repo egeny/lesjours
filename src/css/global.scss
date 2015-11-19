@@ -27,7 +27,8 @@ body { font-size: 0.875em; }
 }
 
 /* Remove some default margins */
-body, p, ul,
+body,
+blockquote, figure, p, ul, ol,
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 /* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
@@ -43,13 +44,24 @@ fieldset {
 	margin:  0;
 }
 
+/* By default, center figures */
+figure { margin: 1.5em auto; }
+
+/* Set figure's content as responsive */
+figure audio,
+figure canvas,
+figure iframe,
+figure img,
+figure picture,
+figure svg,
+figure table,
+figure video { @include image-responsive; }
+
+/* The <h1> is reserved for the page's title */
 h1 { font-size: 1em; }
 
-/* Now, set some default margins */
+/* Set a default margin for <p> */
 p { margin-bottom: 1.5em; }
-
-q:before { content: open-quote " ";  }
-q:after  { content: " " close-quote; }
 
 /* Allow only vertical resizing of textareas */
 textarea { resize: vertical; }

@@ -1,24 +1,7 @@
 /* @group Article */
-article a {
-	background-image: linear-gradient(to bottom, $color-action, $color-action);
-	/*background-position: 0 1.0625em;*/
-	background-position: 0 0.961538em;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	/*padding: .125em 0;*/
-
-	transition: background-position .15s;
-
-	@include font-weight-bold("archer");
-	text-decoration: none;
-	color: currentColor;
-}
-
-article a:hover,
-article a:focus { background-position: 0 0; }
-
-article header { position: relative; }
-article header img { @include image-responsive; }
+article header      { position: relative; }
+article header img  { @include image-responsive; }
+article header time { display: inline-block; }
 article header .snake {
 	border: 4px solid $color-brand;
 
@@ -28,6 +11,147 @@ article header .snake {
 	bottom: 0;
 	left:   grid-margin("sm");
 }
+
+article header .list-inline li:after            { content: " • "; }
+article header .list-inline li:last-child:after { content: "";    }
+
+article a {
+	background-image: linear-gradient(to bottom, $color-action, $color-action);
+	background-position: 0 0.961538em;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+
+	transition: background-position .15s;
+
+	@include font-weight-bold("archer");
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $color-main;
+}
+
+article a:hover,
+article a:focus { background-position: 0 0; }
+
+article .content a { text-transform: inherit; }
+
+article abbr {
+	border-bottom: 1px dotted;
+	cursor: help;
+}
+
+article aside {
+	@extend .h2;
+	@include font-weight-bold;
+	font-size: 1.875em;
+}
+
+article aside span { font-size: 1.4em; }
+
+// Archer's bold is actually bolder than the default "bold" (its font-weights seems wrong)
+article b,
+article strong { @include font-weight-bold("archer"); }
+
+article blockquote {
+	padding-left: 1.75em;
+	margin: 2em 0 1.25em;
+
+	position: relative;
+
+	@include font-brandon;
+	@include font-weight-light;
+	line-height: 1.15;
+
+	font-size: 1.85em;
+}
+
+	article blockquote:before {
+		// Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox)
+		background: $color-brand url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>") no-repeat 50% 50%;
+		background-size: 0.7em 0.7em;
+
+		width:  2.5em;
+		height: 2.5em;
+		border-radius: 50%;
+
+		content: "";
+
+		z-index: -1;
+		position: absolute;
+		top:  -.75em;
+		left: -.25em;
+	}
+
+	article blockquote p { margin-bottom: .25em; }
+	article blockquote p:last-of-type:after { content: " »"; }
+
+	article blockquote footer {
+		@extend .style-1;
+		@include font-weight-semi-bold;
+		font-size: 0.538461em;
+	}
+
+%todo { background: red; }
+%todo-media { border: 2px dashed blue; }
+
+article dl,
+article dt,
+article dfn,
+article dd { @extend %todo; }
+
+article figure {}
+article figcaption {
+	@extend .style-1;
+	margin-top: .5em;
+	color: inherit;
+}
+
+article figure img   { @extend %todo-media; }
+article figure audio { @extend %todo-media; }
+article figure video { @extend %todo-media; }
+
+article h3,
+article h4,
+article h5,
+article h6 {
+	@extend %todo;
+	margin-bottom: 0.5em;
+}
+
+article i,
+article em { font-style: italic; }
+
+article .content p {}
+
+article q:before { content: open-quote " ";  }
+article q:after  { content: " " close-quote; }
+
+article sup,
+article sub { @extend %todo; }
+
+article table { @extend %todo; }
+	article caption { @extend %todo; }
+	article thead { @extend %todo; }
+	article tfoot { @extend %todo; }
+	article tbody { @extend %todo; }
+		article tr { @extend %todo; }
+			article th { @extend %todo; }
+			article td { @extend %todo; }
+
+article li { margin-bottom: 1em; }
+
+article .content ul,
+article .content ol { @extend %todo; }
+article .content li { @extend %todo; }
+
+article .dialogue { @extend %todo; }
+	article .dialogue p:before { content: "— "; }
+
+article .notes { @extend %todo; }
+	article .notes :target { background: yellow; }
+
+article .interview { @extend %todo; }
+	article .question { @extend %todo; }
+	article .answer { @extend %todo; }
 
 article .lettrine {
 	background: $color-brand;
@@ -49,79 +173,28 @@ article .lettrine {
 	color: #FFF;
 }
 
-@include media-md {
-	article .lettrine { margin-left: -.5em; }
-}
-
-article aside {
-	@extend .h1;
-	font-size: 1.666667em;
-}
-
-article aside span {
-	font-size: 1.4em;
-	@include font-weight-bold("archer");
-}
-
-
-
-article figure { margin-right: 0; margin-left: 0; }
-article figure img,
-article figure video { width: 100%; }
-
-article blockquote p {
-	font-family: "brandon-grotesque", sans-serif;
-	font-style: normal;
-	font-weight: 300;
-	font-size: 2em;
-	position: relative;
-}
-
-article blockquote p { margin-bottom: 0; }
-article blockquote .author {
-	font-family: "proxima-nova", sans-serif;
-	font-style: normal;
-	font-weight: 700;
-	font-size: 13px;
-	color: #717171;
-}
-
-article blockquote p:first-of-type:before {
-	background: $color-brand;
-	width: 1.6em;
-	line-height: 1.6em;
-	border-radius: 50%;
-
-	content: "«";
-	display: inline-block;
-	position: absolute;
-	top: -.25em;
-	left: -1em;
-	z-index: -1;
-
-	text-align: center;
-
-	color: #FFF;
-}
-
-article blockquote p:last-of-type:after { content: " »"; }
-
-article figure.pull-left {
-	margin-right: .5em;
-}
-
-
-
-
-article footer {
+article > footer {
 	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
 	background-size: 2px 4px;
 }
 
-article footer div { background: #FFF; }
+article > footer .container {
+	padding-right: grid-margin("sm");
+	padding-left:  grid-margin("sm");
+}
 
-article footer div:last-child {
-	margin-top: 24px;
+article > footer .row { background: $color-white; }
+
+article .tags a { background-image: linear-gradient(to bottom, $color-action-contextual, $color-action-contextual); }
+
+@each $color in $colors-obsessions {
+	$i: index($colors-obsessions, $color);
+	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+	article.obsession-#{$i} .snake      { border-color: $color; }
+	article.obsession-#{$i} .lettrine   { background:   $color; }
+	article.obsession-#{$i} aside span  { color:        $color; }
+	article.obsession-#{$i} blockquote:before { background-color: $color; }
+	article.obsession-#{$i} blockquote p:first-of-type:before { background: $color; }
 }
 
 @include media-md {
@@ -132,29 +205,12 @@ article footer div:last-child {
 		right: 0;
 		left:  -4px; // Offset the border
 	}
-}
 
-@each $color in $colors-obsessions {
-	$i: index($colors-obsessions, $color);
-	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $color, $color); }
-	article.obsession-#{$i} .snake      { border-color: $color; }
-	article.obsession-#{$i} .lettrine   { background:   $color; }
-	article.obsession-#{$i} aside span  { color:        $color; }
-	article.obsession-#{$i} blockquote p:first-of-type:before { background: $color; }
+	article .lettrine { margin-left: -.5em; }
+
+	article > footer .container {
+		padding-right: grid-margin("md");
+		padding-left:  grid-margin("md");
+	}
 }
-article .tags a { background-image: linear-gradient(to bottom, $color-action-contextual, $color-action-contextual); }
 /* @end Article */
-
-article header p:first-child a,
-article header ul a {
-	text-transform: uppercase;
-	color: #414141;
-}
-
-article header time {
-	display: inline-block;
-}
-
-article header ul li:after            { content: " • "; }
-article header ul li:last-child:after { content: "";    }
-
