@@ -51,6 +51,7 @@ var
 		src:  'src/**/*',
 		dist: 'dist/',
 
+		assets: ['src/episode/**/*'],
 		html: {
 			input:  'src/',
 			output: 'dist/'
@@ -85,11 +86,16 @@ nunjucks.nunjucks.configure([paths.html.input, paths.html.output], { watch: fals
 
 gulp.task('default', ['clean', 'build']);
 
-gulp.task('build', ['build:css', 'build:css:img', 'build:css:svg', 'build:js', 'build:img', 'build:svg', 'build:html']);
+gulp.task('build', ['assets', 'build:css', 'build:css:img', 'build:css:svg', 'build:js', 'build:img', 'build:svg', 'build:html']);
 gulp.task('lint',  ['lint:sass', 'lint:css', 'lint:js']);
 
 gulp.task('clean', function() {
 	del.sync(paths.dist);
+});
+
+gulp.task('assets', function() {
+	return gulp.src(paths.assets, { base: 'src' })
+		.pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('build:html', function() {
