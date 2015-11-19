@@ -42,16 +42,8 @@ overflow: hidden;
 .wall.expanded .overlay-color { transform: none; }
 
 .overlay-pattern {
-	background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAN6CAYAAAHTKKiDAAABNUlEQVRYw+3Y8UcDYRzH8e/drSxJkSSRRBKJRCLTf3P/aCaRJEpSUqn+ip6nRc97u9tdu10zK5/PD1+v3d1ze57t6zmbmZmPO8VUVAYXU7+oVG+V9J8sxsWh733Zy6HKR4FyZ0dzokLpWVHSKVF3baYoE5jUQrO+SxOgN/SKXtAzekKP6AHdozt0i27QNbpCl+gCnaMzdIra6MTCXneMWugIHaIDtI/20C7aQdtoC22iDbSO1tAqWkHLaAktogU0j+bQLJpBTTSNplCCYhRZ5gkhSZIk5fW1UabsnYLw9+Es/AvUC2uEpgcVRnV/ajbKkXkL13fEjxFujMMzK/UDhrsRTKP/a6pyZ0aFI778Yl/vM6w3sV8iLpx8piGH6t6fLqafk+9nRsGoxHKJTFEURVEURamVTyWFshnL1mQ2AAAAAElFTkSuQmCC) repeat-x;
-
-	/* Another solution will be to use a multiple background with the pattern as SVG and a CSS linear-gradient */
-	/*background-image: url(img/pattern.svg), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);*/
-	/*background-size: 2px 4px, 100% 100%;*/
-
-	/* The SVG pattern could also be embed using a data-URI (to avoid another HTTP request) */
-	/* But the auto-prefixer will duplicate this line (since linear-gradient still need to be prefixed for webkit) */
-	/*background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyIDQiPgoJPHJlY3QgeD0iMSIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgLz4KCTxyZWN0IHg9IjAiIHk9IjIiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIC8+Cjwvc3ZnPg==), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);*/
-	/*background-size: 2px 4px, 100% 100%;*/
+	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>"), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);
+	background-size: 2px 4px, 100% 100%;
 }
 
 .wall .row   { position: relative; }
