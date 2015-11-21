@@ -125,6 +125,9 @@ article h6 { margin-bottom: 0.5em; }
 article i,
 article em { font-style: italic; }
 
+article q:before { content: "« "; }
+article q:after  { content: " »"; }
+
 article table {}
 	article caption {}
 	article thead {}
@@ -134,19 +137,25 @@ article table {}
 			article th {}
 			article td {}
 
-
-article q:before { content: open-quote " ";  }
-article q:after  { content: " " close-quote; }
 article .dialogue {}
 	article .dialogue p:before     { content: "— "; }
+	article .dialogue p:last-child { margin-bottom: 0; }
 
 article .notes {}
 	article .notes :target { background: yellow; }
 
-article li { margin-bottom: 1em; }
 article .interview {}
+	article .interview p { margin-bottom: 1em; }
 
+	article .question {
+		@include font-weight-bold("archer");
+		font-variant: small-caps;
+	}
 
+	article .question:before {
+		content: "• ";
+		color: $color-brand;
+	}
 
 	article .answer {}
 
