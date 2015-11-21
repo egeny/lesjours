@@ -1,4 +1,12 @@
 /* @group Article */
+%quote {
+		// Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox)
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>");
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 0.7em 0.7em;
+}
+
 article header      { position: relative; }
 article header img  { @include image-responsive; }
 article header time { display: inline-block; }
@@ -51,9 +59,8 @@ article strong { @include font-weight-bold("archer"); }
 article blockquote { position: relative; }
 
 	article blockquote:before {
-		// Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox)
-		background: $color-brand url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>") no-repeat 50% 50%;
-		background-size: 0.7em 0.7em;
+		background-color: $color-brand;
+		@extend %quote;
 
 		width:  2.5em;
 		height: 2.5em;
@@ -170,6 +177,22 @@ article .lettrine {
 	text-align: center;
 
 	color: #FFF;
+
+article .lettrine.with-quote {
+	@extend %quote;
+	background-size: .25em .25em;
+	background-position: .1875em 50%;
+}
+
+article .lettrine.with-quote-alt:before {
+	@extend %quote;
+	background-size: .25em .25em;
+	content: "";
+	display: inline-block;
+	width: .5em;
+	height: .5em;
+	margin-left: -.5em;
+	margin-bottom: .125em;
 }
 
 // Consider every child of .article-container as a column
