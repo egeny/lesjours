@@ -24,15 +24,11 @@ overflow: hidden;
 	left:   0;
 }
 
-.wall .title { margin-bottom: 130px; }
-
-.obsession-1 .snake { color: #A889AD; }
-.obsession-2 .snake { color: #7F8E68; }
-.obsession-3 .snake { color: #679EA7; }
-
-.obsession-1 .overlay-color { background: rgba(168, 137, 173, .9); }
-.obsession-2 .overlay-color { background: rgba(137, 151, 117, .9); }
-.obsession-3 .overlay-color { background: rgba(118, 168, 176, .9); }
+@each $color in $colors-obsessions {
+	$i: index($colors-obsessions, $color);
+	.obsession-#{$i} .snake         { color: $color; }
+	.obsession-#{$i} .overlay-color { background: rgba($color, .9) }
+}
 
 .wall .overlay-color {
 	transform:  translateY(100%);
