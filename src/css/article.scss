@@ -24,7 +24,7 @@ article header .list-inline li:after            { content: " • "; }
 article header .list-inline li:last-child:after { content: "";    }
 
 article a {
-	background-image: linear-gradient(to bottom, $color-action, $color-action);
+	background-image: linear-gradient(to bottom, $color-media, $color-media);
 	background-position: 0 1em;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
@@ -161,7 +161,7 @@ article .interview {}
 	article .answer {}
 
 article .lettrine {
-	background-color: rgba($color-brand, .75);
+	background-color: $color-brand;
 
 	width: 1.6em;
 	line-height: 1.6em;
@@ -250,15 +250,15 @@ article > footer {
 
 	article > footer .row { background: $color-white; }
 	article > footer li   { margin-bottom: 1em; }
-	article .tags a { background-image: linear-gradient(to bottom, $color-action-contextual, $color-action-contextual); }
+	article .tags a { background-image: linear-gradient(to bottom, $color-external, $color-external); }
 
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
 	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $color, $color); }
 	article.obsession-#{$i} .snake      { border-color: $color; }
 
-	article.obsession-#{$i} blockquote:before { background-color: $color; }
-	article.obsession-#{$i} .lettrine         { background-color: rgba($color, .75); }
+	article.obsession-#{$i} blockquote:before { background-color: rgba($color, .75); }
+	article.obsession-#{$i} .lettrine         { background-color: $color; }
 
 	article.obsession-#{$i} aside span,
 	article.obsession-#{$i} .question:before { color: $color; }

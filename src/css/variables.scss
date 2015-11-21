@@ -9,10 +9,9 @@ $color-darker: #333;
 $color-dark:   #717171;
 $color-light:  #D7D7D7;
 
-// Actions colors
-$color-action:             #F3DF93;
-$color-action-in-progress: #9B7C08;
-$color-action-contextual:  #E49287;
+// Links colors
+$color-media:    #F3DF93;
+$color-external: #E49287;
 
 // Obsessions colors
 $colors-obsessions: (#A889AD, #7F8E68, #679EA7);
@@ -27,9 +26,8 @@ $colors: (
 	dark:   $color-dark,
 	light:  $color-light,
 
-	action:             $color-action,
-	action-in-progress: $color-action-in-progress,
-	action-contextual:  $color-action-contextual
+	media:    $color-media,
+	external: $color-external
 );
 
 @each $name, $color in $colors {

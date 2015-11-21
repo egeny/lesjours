@@ -67,23 +67,16 @@ These colors might be used for some fonts:
 	<div class="sample" style="background: #D7D7D7; color: #414141">Light<br/>#D7D7D7</div>
 </div>
 
-## Actions
+## Links
 
 These colors are to use for links and interactive elements.
 
 <div class="container">
-	<div class="sample" style="background: #F3DF93; color: #414141">Action<br/>#F3DF93</div>
-	<div class="sample" style="background: #9B7C08">In progress<br/>#9B7C08</div>
-	<div class="sample" style="background: #E49287">Contextual action<br/>#E49287</div>
+	<div class="sample" style="background: #F3DF93; color: #414141">Media<br/>#F3DF93</div>
+	<div class="sample" style="background: #E49287">External<br/>#E49287</div>
 </div>
 
 In some cases, these colors may be replace with `brand` or an `obsession` color.
-
-Since these colors' names are longer, use these variables and classes:
-
-* `$color-action-in-progress` and `$color-action-contextual`
-* `.color-action-in-progress` and `.color-action-contextual`
-* `.bg-action-in-progress` and `.bg-action-contextual`
 
 ## Obsessions
 
