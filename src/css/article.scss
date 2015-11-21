@@ -93,12 +93,10 @@ article blockquote { position: relative; }
 		@extend .style-1;
 	}
 
-%todo { background: red; }
-
 article dl,
 article dt,
 article dfn,
-article dd { @extend %todo; }
+article dd {}
 
 article figure {}
 	article figure .snake {
@@ -122,45 +120,38 @@ article figure {}
 article h3,
 article h4,
 article h5,
-article h6 {
-	@extend %todo;
-	margin-bottom: 0.5em;
-}
+article h6 { margin-bottom: 0.5em; }
 
 article i,
 article em { font-style: italic; }
 
-article .content p {}
+article table {}
+	article caption {}
+	article thead {}
+	article tfoot {}
+	article tbody {}
+		article tr {}
+			article th {}
+			article td {}
+
 
 article q:before { content: open-quote " ";  }
 article q:after  { content: " " close-quote; }
+article .dialogue {}
+	article .dialogue p:before     { content: "— "; }
 
-article sup,
-article sub { @extend %todo; }
-
-article table { @extend %todo; }
-	article caption { @extend %todo; }
-	article thead { @extend %todo; }
-	article tfoot { @extend %todo; }
-	article tbody { @extend %todo; }
-		article tr { @extend %todo; }
-			article th { @extend %todo; }
-			article td { @extend %todo; }
-
-article li { margin-bottom: 1em; }
-
-article .dialogue { @extend %todo; }
-	article .dialogue p:before { content: "— "; }
-
-article .notes { @extend %todo; }
+article .notes {}
 	article .notes :target { background: yellow; }
 
-article .interview { @extend %todo; }
-	article .question { @extend %todo; }
-	article .answer { @extend %todo; }
+article li { margin-bottom: 1em; }
+article .interview {}
+
+
+
+	article .answer {}
 
 article .lettrine {
-	background: $color-brand;
+	background-color: rgba($color-brand, .75);
 
 	width: 1.6em;
 	line-height: 1.6em;
@@ -176,7 +167,8 @@ article .lettrine {
 
 	text-align: center;
 
-	color: #FFF;
+	color: $color-white;
+}
 
 article .lettrine.with-quote {
 	@extend %quote;
