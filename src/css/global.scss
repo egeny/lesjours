@@ -25,11 +25,11 @@ body {
 	font-size: 0.875em;
 }
 
-@include media-md {
+@include media("md") {
 	body { font-size: inherit; }
 }
 
-@include breakpoint(1440px) {
+@media (min-width: 1440px) {
 	body { max-width: 1440px; }
 }
 

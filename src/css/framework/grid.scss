@@ -1,10 +1,10 @@
 /* @group Grid */
 // Inspired by Bootstrap 4 — http://getbootstrap.com
 .container,
-.container-fixed {
-	@include clearfix();
-	box-sizing: border-box;
-}
+.container-fixed {}
+
+.no-flex .container,
+.no-flex .container-fixed { @include clearfix; }
 
 .container-fixed {
 	margin-right: auto;
@@ -16,71 +16,71 @@
 	padding-left:  0 !important;
 }
 
-.row { @include clearfix(); }
-
-.has-flex .row {
+.row {
 	display: flex;
 	flex-wrap: wrap;
-	align-content: flex-start;
+	align-content: flex-start; /* Prevent from stretching since we need the content's height for margins */
 }
 
-// Use a mixin since these rules might be used in a @media
-@mixin row-top()    { align-items: flex-start; }
-@mixin row-center() { align-items: center;     }
-@mixin row-bottom() { align-items: flex-end;   }
+.no-flex .row {
+	@include clearfix;
+	display: block;
+}
 
-.row-top    { @include row-top;    }
-.row-center { @include row-center; }
-.row-bottom { @include row-bottom; }
+.row-top     { align-items: flex-start;     }
+.row-center  { align-items: center;         }
+.row-bottom  { align-items: flex-end;       }
+.row-reverse { flex-direction: row-reverse; }
 
 .col {
 	box-sizing: border-box;
 	width: 100%;
-	min-height: 1px;
+	flex-shrink: 0;
 
-	float: left;
 	position: relative;
 }
 
-.has-flex .col {
-	width: auto;
-	float: none;
-	flex: 0 0 100%;
+.no-flex .col {
+	min-height: 1px;
+	float: left;
 }
 
-// Use a mixin since these rules might be used in a @media
-@mixin col-first()  { order: -1; }
-@mixin col-last()   { order:  1; }
-@mixin col-top()    { align-self: flex-start; }
-@mixin col-center() { align-self: center;     }
-@mixin col-bottom() { align-self: flex-end;   }
+.col-auto { width: auto; }
 
-.col-first  { @include col-first;  }
-.col-last   { @include col-last;   }
-.col-top    { @include col-top;    }
-.col-center { @include col-center; }
-.col-bottom { @include col-bottom; }
-
-@mixin breakpoint($breakpoint) {
-	@if $breakpoint {
-		@media (min-width: $breakpoint) {
-			@content;
-		}
-	} @else {
-		@content;
-	}
-}
+.col-first  { order: -1; }
+.col-last   { order:  1; }
+.col-top    { align-self: flex-start; }
+.col-center { align-self: center;     }
+.col-bottom { align-self: flex-end;   }
 
 // Prepare a mixin to easily add some custom rules depending on breakpoint
-@mixin media-md {
-	@media (min-width: map-get(map-get($grids, "md"), "breakpoint")) {
-		@content;
-	}
-}
+@mixin media($name, $only: false) {
+	$sm: map-get($grids, "sm");
+	$md: map-get($grids, "md");
+	$lg: map-get($grids, "lg");
 
-@mixin media-lg {
-	@media (min-width: map-get(map-get($grids, "lg"), "breakpoint")) {
-		@content;
+	@if $name == "sm" {
+		@if $only {
+			@media (max-width: map-get($md, "breakpoint")) {
+				@content;
+			}
+		} @else {
+			@content
+		}
+	}	@else if $name == "md" {
+		@if $only {
+			@media (min-width: map-get($md, "breakpoint")) and (max-width: map-get($lg, "breakpoint")) {
+				@content;
+			}
+		} @else {
+			@media (min-width: map-get($md, "breakpoint")) {
+				@content;
+			}
+		}
+	}	@else if $name == "lg" {
+		@media (min-width: map-get($lg, "breakpoint")) {
+			@content;
+		}
 	}
 }
 
@@ -92,8 +92,10 @@
 	@return map-get(map-get($grids, $device), "gutter");
 }
 
-$last-margin: null;
-$last-gutter: null;
+$last-breakpoint: null;
+$last-columns:    null;
+$last-margin:     null;
+$last-gutter:     null;
 
 @each $device, $grid in $grids {
 	$breakpoint: map-get($grid, "breakpoint");
@@ -101,7 +103,8 @@ $last-gutter: null;
 	$gutter:     map-get($grid, "gutter") / 2;
 	$margin:     map-get($grid, "margin") - $gutter;
 
-	@include breakpoint($breakpoint) {
+	// Set these rules for this device and larger
+	@include media($device) {
 		@if $margin != $last-margin {
 			.container,
 			.container-fixed {
@@ -120,16 +123,6 @@ $last-gutter: null;
 			padding-left:  0;
 		}
 
-		@if $breakpoint {
-			.row-#{$device}-top    { @include row-top;    }
-			.row-#{$device}-center { @include row-center; }
-			.row-#{$device}-bottom { @include row-bottom; }
-		} @else {
-			.row-#{$device}-top    { @extend .row-top;    }
-			.row-#{$device}-center { @extend .row-center; }
-			.row-#{$device}-bottom { @extend .row-bottom; }
-		}
-
 		@if $gutter != $last-gutter {
 			.col {
 				/* Gutters */
@@ -138,81 +131,46 @@ $last-gutter: null;
 			}
 		}
 
-		          .col-#{$device}-auto { width: auto; }
-		.has-flex .col-#{$device}-auto { flex-basis: auto; }
+		.col-#{$device}-auto { width: auto; }
 
 		.col-#{$device}-top-0    { margin-top:    0; }
 		.col-#{$device}-right-0  { margin-right:  0; }
 		.col-#{$device}-bottom-0 { margin-bottom: 0; }
 		.col-#{$device}-left-0   { margin-left:   0; }
 
+		.col-#{$device}-v-0 {
+			@extend .col-#{$device}-top-0;
+			@extend .col-#{$device}-bottom-0;
+		}
+
+		.col-#{$device}-h-0 {
+			@extend .col-#{$device}-right-0;
+			@extend .col-#{$device}-left-0;
+		}
+
 		// Generate .col-sm-*, .col-md-* and .col-lg-*
 		@for $i from 1 through $columns {
 			$width: (100% / $columns) * $i;
-			.col-#{$device}-#{$i},
-			%col-#{$device}-#{$i} { width: $width; }
-
-			.has-flex .col-#{$device}-#{$i},
-			     %flex-col-#{$device}-#{$i} { flex-basis: $width; }
+			.col-#{$device}-#{$i} { width: $width; }
 
 			.col-#{$device}-top-#{$i}    { margin-top:    $width; }
 			.col-#{$device}-right-#{$i}  { margin-right:  $width; }
 			.col-#{$device}-bottom-#{$i} { margin-bottom: $width; }
 			.col-#{$device}-left-#{$i}   { margin-left:   $width; }
-		}
 
-		@if $breakpoint {
-			.col-#{$device}-first  { @include col-first;  }
-			.col-#{$device}-last   { @include col-last;   }
-			.col-#{$device}-top    { @include col-top;    }
-			.col-#{$device}-center { @include col-center; }
-			.col-#{$device}-bottom { @include col-bottom; }
-		} @else {
-			.col-#{$device}-first  { @extend .col-first;  }
-			.col-#{$device}-last   { @extend .col-last;   }
-			.col-#{$device}-top    { @extend .col-top;    }
-			.col-#{$device}-center { @extend .col-center; }
-			.col-#{$device}-bottom { @extend .col-bottom; }
-		}
+			.col-#{$device}-v-#{$i} {
+				@extend .col-#{$device}-top-#{$i};
+				@extend .col-#{$device}-bottom-#{$i};
+			}
 
-		// Add some special .gutter-top-0 and .gutter-bottom-0 for special margin
-		// Trust me, you don't want to refactor what you will find below
-		%gutter-top-no-#{$gutter} {
-			@if $gutter != $last-gutter { margin-top: 0; }
-		}
-
-		%gutter-right-no-#{$gutter} {
-			@if $gutter != $last-gutter { padding-right: 0; }
-		}
-
-		%gutter-bottom-no-#{$gutter} {
-			@if $gutter != $last-gutter { margin-bottom: 0; }
-		}
-
-		%gutter-left-no-#{$gutter} {
-			@if $gutter != $last-gutter { padding-left: 0; }
-		}
-
-		%gutter-no-#{$gutter} {
-			@if $gutter != $last-gutter {
-				padding-right: 0;
-				padding-left:  0;
+			.col-#{$device}-h-#{$i} {
+				@extend .col-#{$device}-right-#{$i};
+				@extend .col-#{$device}-left-#{$i};
 			}
 		}
 
-		.gutter-top-0    { @extend %gutter-top-no-#{$gutter};    }
-		.gutter-right-0  { @extend %gutter-right-no-#{$gutter};  }
-		.gutter-bottom-0 { @extend %gutter-bottom-no-#{$gutter}; }
-		.gutter-left-0   { @extend %gutter-left-no-#{$gutter};   }
-		.gutter-0        { @extend %gutter-no-#{$gutter};        }
-
-		.gutter-#{$device}-top-0    { @extend %gutter-top-no-#{$gutter};    }
-		.gutter-#{$device}-right-0  { @extend %gutter-right-no-#{$gutter};  }
-		.gutter-#{$device}-bottom-0 { @extend %gutter-bottom-no-#{$gutter}; }
-		.gutter-#{$device}-left-0   { @extend %gutter-left-no-#{$gutter};   }
-		.gutter-#{$device}-0        { @extend %gutter-no-#{$gutter};        }
-
 		// Add some special .gutter-top-X and .gutter-bottom-X for special margin
+		// Trust me, you don't want to refactor what you will find below
 		@for $i from 1 through 12 {
 			%gutter-top-#{$gutter}-#{$i} {
 				@if $gutter != $last-gutter { margin-top: $gutter * $i; }
@@ -237,6 +195,7 @@ $last-gutter: null;
 				}
 			}
 
+			// Do not "merge" these selectors
 			.gutter-top-#{$i}    { @extend %gutter-top-#{$gutter}-#{$i};    }
 			.gutter-right-#{$i}  { @extend %gutter-right-#{$gutter}-#{$i};  }
 			.gutter-bottom-#{$i} { @extend %gutter-bottom-#{$gutter}-#{$i}; }
@@ -251,7 +210,23 @@ $last-gutter: null;
 		}
 	}
 
-	$last-margin: $margin;
-	$last-gutter: $gutter;
+	// Set these rules for this device only
+	@include media($device, true) {
+		.row-#{$device}-top     { align-items: flex-start;     }
+		.row-#{$device}-center  { align-items: center;         }
+		.row-#{$device}-bottom  { align-items: flex-end;       }
+		.row-#{$device}-reverse { flex-direction: row-reverse; }
+
+		.col-#{$device}-first  { order: -1; }
+		.col-#{$device}-last   { order:  1; }
+		.col-#{$device}-top    { align-self: flex-start; }
+		.col-#{$device}-center { align-self: center;     }
+		.col-#{$device}-bottom { align-self: flex-end;   }
+	}
+
+	$last-breakpoint: $breakpoint;
+	$last-columns:    $columns;
+	$last-margin:     $margin;
+	$last-gutter:     $gutter;
 }
 /* @end of Grid */

@@ -16,7 +16,7 @@
 
 #header .pull-left { padding: 0.5625em; }
 
-@include media-md {
+@include media("md") {
 	#header h1 img {
 		width: auto;
 		height: 60px;

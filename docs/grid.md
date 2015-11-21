@@ -2,7 +2,7 @@
 
 The framework is inspired by [Twitter's Bootstrap's grid system](http://getbootstrap.com/css/#grid).
 
-The grid is fluid which means a column (`.col`) size is never fixed but is a percentage of its parent (usually a `.row`). It use [flexbox](http://caniuse.com/#feat=flexbox) (recommended) when a `.has-flex` class is present on an ancestor, otherwise the layout is based on `float`.
+The grid is fluid which means a column (`.col`) size is never fixed but is a percentage of its parent (usually a `.row`). By default, the layout is based on [flexbox](http://caniuse.com/#feat=flexbox) and can be changed to `float` using a `.no-flex` class on an ancestor.
 
 Here is a summary of the grid's configuration:
 
@@ -37,7 +37,7 @@ If you want to get rid of the margins, use the `.container-no-margin`, `.contain
 ## Rows
 
 Use a row (`.row`) to host column(s). A row should only host column(s).  
-It will set its display as `flex` (when an ancestor have a `has-flex` class) and set some negative margins (to avoid the grid's margin + column's gutter).
+It will set its display as `flex`.
 
 ### Example
 ```html
@@ -56,15 +56,15 @@ You can use the following utility classes to align **vertically** the rows in it
 
 You can also use prefixed classes to target specific devices:
 
-* Small devices
+* Small devices only
 	* `.row-sm-top`
 	* `.row-sm-center`
 	* `.row-sm-bottom`
-* Medium devices
+* Medium devices only
 	* `.row-md-top`
 	* `.row-md-center`
 	* `.row-md-bottom`
-* Large devices
+* Large devices only
 	* `.row-lg-top`
 	* `.row-lg-center`
 	* `.row-lg-bottom`
@@ -92,10 +92,10 @@ You can also use prefixed classes to target specific devices:
 
 ## Columns
 
-Use a column (`.col`) to host the content.
-It will set its `width` at 100% (`flex-basis` with flexbox) and its `box-sizing` to **`border-box`**. In `float` mode, its `float` property will be set at `left`.
+Use a column (`.col`) to host the content.  
+It will set the gutters, its `width` at 100 and its `box-sizing` to **`border-box`**. In `float` mode, its `float` property will be set at `left`.
 
-Usually, you will **not** use the `.col` class but use a specific column size class (see below).
+Use this class first since the column size classes **does not** extend `.col`.
 
 ### Example
 ```html
@@ -109,13 +109,15 @@ Usually, you will **not** use the `.col` class but use a specific column size cl
 ## Columns size
 
 Use a **column size class** to quickly and easily set the width of a column.  
-It will simply set its `width` (`flex-basis` with flexbox) and its gutters.
+It will simply set its `width`.
 
 All the classes are prefixed to target specific devices:
 
 * Small devices: `.col-sm-1` to `.col-sm-4`
 * Medium devices: `.col-md-1` to `.col-md-8`
 * Large devices: `.col-lg-1` to `.col-lg-12`
+
+Note that with these classes, the width **won't be resetted** when a breakpoint is reached ; which means that setting `.col-sm-1` will set a width of 25% ((100% / 4) * 1) even on medium and large devices. You will have to manually define the width for other devices.
 
 ### Example
 ```html
@@ -126,6 +128,10 @@ All the classes are prefixed to target specific devices:
 		<!-- 2 columns on a medium device ((100% / 8)  * 2 = 25%) -->
 		<!-- 3 columns on a large device  ((100% / 12) * 3 = 25%) -->
 		<div class="col-sm-1 col-md-2 col-lg-3">Hello</div>
+
+		<!-- Which could also be written that way -->
+		<!-- (although, it is not recommended for maintenance reasons) -->
+		<div class="col-sm-1">Hello</div>
 	</div>
 </div>
 ```
@@ -160,13 +166,13 @@ You can also use prefixed classes to target specific devices:
 		<!-- Align the column on top on all devices -->
 		<div class="col col-top">
 
-		<!-- Align only small devices -->
+		<!-- Align only on small devices -->
 		<div class="col col-sm-top">…</div>
 
-		<!-- Align only medium devices -->
+		<!-- Align only on medium devices -->
 		<div class="col col-md-top">…</div>
 
-		<!-- Align only large devices -->
+		<!-- Align only on large devices -->
 		<div class="col col-lg-top">…</div>
 
 		<!-- You can align in different ways regarding the device -->
@@ -207,7 +213,7 @@ You can also use prefixed classes to target specific devices:
 ```
 
 The columns will be displayed in that order: 3, 2, 1.  
-In this case, using `flex-direction: row-reverse` would have done the same thing.
+In this case, using `.row-reverse` (on the row) would have done the same thing.
 
 ## Offsetting columns
 
@@ -217,20 +223,22 @@ You can use the following classes to quickly offset a column:
 * `.col-*-right-*` — Add a margin right of the width of a column
 * `.col-*-bottom-*` — Add a margin bottom of the width of a column
 * `.col-*-left-*` — Add a margin left of the width of a column
+* `.col-*-v-*` — Add a margin top and bottom of the width of a column
+* `.col-*-h-*` — Add a margin right and left of the width of a column
 
 All the classes are prefixed to target specific devices:
 
-* Small devices: `.col-sm-top-1` to `.col-sm-top-4`
-* Medium devices: `.col-md-top-1` to `.col-md-top-8`
-* Large devices: `.col-lg-top-1` to `.col-lg-top-12`
+* Small devices: `.col-sm-top-0` to `.col-sm-top-4`
+* Medium devices: `.col-md-top-0` to `.col-md-top-8`
+* Large devices: `.col-lg-top-0` to `.col-lg-top-12`
 
-For example, using `.col-sm-top-2` will add a `margin-top` having the value of 2 columns, but only on small devices.
+For example, using `.col-sm-top-2` will add a `margin-top` having the value of 2 columns, starting with small devices (same behavior as the column size classes).
 
 You can also use the following classes to quickly offset a column based on the gutter size:
 
-* `.gutter-top-*` — Add a margin top of the value of the gutter
-* `.gutter-bottom-*` — Add a margin bottom of the value of the gutter
+* `.gutter-top-*` — Add a **margin** top of the value of the gutter
 * `.gutter-right-*` — Add a **padding** right of the value of the gutter
+* `.gutter-bottom-*` — Add a **margin** bottom of the value of the gutter
 * `.gutter-left-*` — Add a **padding** left of the value of the gutter
 * `.gutter-*` — Add a padding right **and** left of the value of the gutter (used to reset the gutters)
 
@@ -265,29 +273,29 @@ Please note the gutter size is **half** of the configured gutter size (`gutter-s
 
 The grid framework includes some mixins to ease the device targeting:
 
-### Add a media query for medium devices
+### Add a media query for a specific device
 
 ```sass
-@include media-md {
+@include media("md") {
 	.foo { background: red; }
 }
 ```
-The `background: red` will be applied on medium and large devices (the media query include only a `min-width`).
 
-### Add a media query for large devices
+The `background: red` will be applied on medium **and** large devices (the media query include only a `min-width`).
+
+To restrict some rules to a specific device, add a `true` as second parameter:
 
 ```sass
-@include media-lg {
-	.foo { background: green; }
+@include media("md", true) {
+	.foo { background: red; }
 }
 ```
-The `background: green` will be applied on large devices.
 
-There is **no** media query for small devices since it should be the **default**.
+The `background: red` will now be applied only on medium devices.
 
 ## Sass functions
 
-The grid framework includes some function to ease some calculations:
+The grid framework includes some functions to ease some calculations:
 
 ### Retrieve the gutter for a specific device
 
@@ -301,4 +309,4 @@ The `margin-bottom` will have a value of 2 **full gutters** (this function retur
 ```
 The `margin` will have a value of `0 1rem` (this function return the margin value from the configuration).
 
-Most of the time, you will have to use these functions with the mixins since the margins and gutters are differents from a small device to a medium device.
+Most of the time, you will have to use these functions with the `media` mixin since the margins and gutters are differents from a small device to a medium device.
