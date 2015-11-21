@@ -2,6 +2,7 @@
 /*csslint ids:false */
 #header {
 	background: $color-white;
+	position: relative;
 	text-align: center;
 	color: $color-brand;
 }
@@ -30,6 +31,7 @@
 
 	z-index: 1000;
 	position: absolute;
+	top:   100%;
 	right: 0;
 	left:  0;
 

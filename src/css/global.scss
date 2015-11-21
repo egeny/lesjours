@@ -20,19 +20,27 @@ html {
 	color: $color-main;
 }
 
-body { font-size: 0.875em; }
+body {
+	margin: 0 auto;
+	font-size: 0.875em;
+}
 
 @include media-md {
 	body { font-size: inherit; }
 }
 
+@include breakpoint(1440px) {
+	body { max-width: 1440px; }
+}
+
 /* Remove some default margins */
-body,
 blockquote, figure, p, ul, ol,
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 /* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
 audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+
+abbr { cursor: help; }
 
 /* Disable the default italic for address */
 address { font-style: inherit; }
@@ -43,9 +51,6 @@ fieldset {
 	border:  0;
 	margin:  0;
 }
-
-/* By default, center figures */
-figure { margin: 1.5em auto; }
 
 /* Set figure's content as responsive */
 figure audio,
