@@ -32,37 +32,23 @@ article a {
 article a:hover,
 article a:focus { background-position: 0 0; }
 
-article .content a { text-transform: inherit; }
+article abbr {}
+article aside {}
 
-article abbr {
-	border-bottom: 1px dotted;
-	cursor: help;
-}
+	article aside p {
+		@extend .h2;
+		@include font-weight-bold;
+		font-size: 1.875em;
+		margin: 0;
+	}
 
-article aside {
-	@extend .h2;
-	@include font-weight-bold;
-	font-size: 1.875em;
-}
-
-article aside span { font-size: 1.4em; }
+	article aside span { font-size: 1.4em; }
 
 // Archer's bold is actually bolder than the default "bold" (its font-weights seems wrong)
 article b,
 article strong { @include font-weight-bold("archer"); }
 
-article blockquote {
-	padding-left: 1.75em;
-	margin: 2em 0 1.25em;
-
-	position: relative;
-
-	@include font-brandon;
-	@include font-weight-light;
-	line-height: 1.15;
-
-	font-size: 1.85em;
-}
+article blockquote { position: relative; }
 
 	article blockquote:before {
 		// Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox)
@@ -78,20 +64,29 @@ article blockquote {
 		z-index: -1;
 		position: absolute;
 		top:  -.75em;
-		left: -.25em;
+		left: -(grid-margin("sm") / 2);
+
+		font-size: 1.85em;
 	}
 
-	article blockquote p { margin-bottom: .25em; }
+	article blockquote p {
+		padding-left: 1.25em;
+		margin-bottom: .125em;
+
+		@include font-brandon;
+		@include font-weight-light;
+		font-size: 1.85em;
+		line-height: 1.15;
+	}
+
 	article blockquote p:last-of-type:after { content: " »"; }
 
 	article blockquote footer {
+		padding-left: 3em;
 		@extend .style-1;
-		@include font-weight-semi-bold;
-		font-size: 0.538461em;
 	}
 
 %todo { background: red; }
-%todo-media { border: 2px dashed blue; }
 
 article dl,
 article dt,
@@ -104,10 +99,6 @@ article figcaption {
 	margin-top: .5em;
 	color: inherit;
 }
-
-article figure img   { @extend %todo-media; }
-article figure audio { @extend %todo-media; }
-article figure video { @extend %todo-media; }
 
 article h3,
 article h4,
@@ -139,10 +130,6 @@ article table { @extend %todo; }
 
 article li { margin-bottom: 1em; }
 
-article .content ul,
-article .content ol { @extend %todo; }
-article .content li { @extend %todo; }
-
 article .dialogue { @extend %todo; }
 	article .dialogue p:before { content: "— "; }
 
@@ -173,19 +160,83 @@ article .lettrine {
 	color: #FFF;
 }
 
+// Consider every child of .article-container as a column
+.article-container > * { @extend .col; }
+
+.article-container a { text-transform: inherit; }
+
+.article-container > aside,
+.article-container > blockquote,
+.article-container > figure,
+.article-container > p {
+	margin-top:    1.5em;
+	margin-bottom: 1.5em;
+}
+
+.article-container ul,
+.article-container ol { @extend %todo; }
+.article-container li { @extend %todo; }
+
+@include media-md {
+	.article-container > * { @extend .col-md-left-1; }
+
+	          .article-container > * { @extend %col-md-5; }
+	.has-flex .article-container > * { @extend %flex-col-md-5; }
+
+	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
+	          .article-container .col-md-left-0,
+	.has-flex .article-container .col-md-left-0 { @extend .col-md-left-0; }
+
+	// We don't need to go through all the columns, we can stop before the "default" size
+	@for $i from 1 through 4 {
+		          .article-container .col-md-#{$i} { @extend %col-md-#{$i}; }
+		.has-flex .article-container .col-md-#{$i} { @extend %flex-col-md-#{$i}; }
+	}
+
+	// For columns having the "full" class, remove the margin and expand
+	          .article-container .full { @extend .col-md-left-0; }
+	          .article-container .full { @extend %col-md-8; }
+	.has-flex .article-container .full { @extend %flex-col-md-8; }
+	.article-container .full figcaption { @extend .col-md-left-1; }
+}
+
+@include media-lg {
+	.article-container > * { @extend .col-lg-left-2; }
+
+	          .article-container > * { @extend %col-lg-6; }
+	.has-flex .article-container > * { @extend %flex-col-lg-6; }
+
+	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
+	@for $i from 0 through 1 {
+		          .article-container .col-lg-left-#{$i},
+		.has-flex .article-container .col-lg-left-#{$i} { @extend .col-lg-left-#{$i}; }
+	}
+
+	// We don't need to go through all the columns, we can stop before the "default" size
+	@for $i from 1 through 5 {
+		          .article-container .col-lg-#{$i} { @extend %col-lg-#{$i}; }
+		.has-flex .article-container .col-lg-#{$i} { @extend %flex-col-lg-#{$i}; }
+	}
+
+	// For columns having the "full" class, remove the margin and expand
+	          .article-container .full { @extend .col-lg-left-0; }
+	          .article-container .full { @extend %col-lg-12; }
+	.has-flex .article-container .full { @extend %flex-col-lg-12; }
+	.article-container .full figcaption { @extend .col-lg-left-2; }
+}
+
 article > footer {
 	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
 	background-size: 2px 4px;
 }
 
-article > footer .container {
-	padding-right: grid-margin("sm");
-	padding-left:  grid-margin("sm");
-}
+	article > footer .container {
+		padding-right: grid-margin("sm");
+		padding-left:  grid-margin("sm");
+	}
 
-article > footer .row { background: $color-white; }
-
-article .tags a { background-image: linear-gradient(to bottom, $color-action-contextual, $color-action-contextual); }
+	article > footer .row { background: $color-white; }
+	article .tags a { background-image: linear-gradient(to bottom, $color-action-contextual, $color-action-contextual); }
 
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
@@ -194,19 +245,17 @@ article .tags a { background-image: linear-gradient(to bottom, $color-action-con
 	article.obsession-#{$i} .lettrine   { background:   $color; }
 	article.obsession-#{$i} aside span  { color:        $color; }
 	article.obsession-#{$i} blockquote:before { background-color: $color; }
-	article.obsession-#{$i} blockquote p:first-of-type:before { background: $color; }
 }
 
 @include media-md {
 	article header .snake {
-		width: 62.5%;
-		margin-top: 12.5%;
 		top:   0;
 		right: 0;
 		left:  -4px; // Offset the border
 	}
 
-	article .lettrine { margin-left: -.5em; }
+	article blockquote:before { left: -(grid-margin("md") / 2); }
+	article .lettrine         { margin-left: -.5em; }
 
 	article > footer .container {
 		padding-right: grid-margin("md");
