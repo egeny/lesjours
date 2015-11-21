@@ -33,8 +33,7 @@
 .row-center { @include row-center; }
 .row-bottom { @include row-bottom; }
 
-.col,
-%col {
+.col {
 	box-sizing: border-box;
 	width: 100%;
 	min-height: 1px;
@@ -43,8 +42,7 @@
 	position: relative;
 }
 
-.has-flex .col,
-%col-flex {
+.has-flex .col {
 	width: auto;
 	float: none;
 	flex: 0 0 100%;
@@ -132,9 +130,8 @@ $last-gutter: null;
 			.row-#{$device}-bottom { @extend .row-bottom; }
 		}
 
-		.col,
-		%col-#{$gutter} {
-			@if $gutter != $last-gutter {
+		@if $gutter != $last-gutter {
+			.col {
 				/* Gutters */
 				padding-right: $gutter;
 				padding-left:  $gutter;
@@ -144,17 +141,11 @@ $last-gutter: null;
 		// Generate .col-sm-*, .col-md-* and .col-lg-*
 		@for $i from 1 through $columns {
 			$width: (100% / $columns) * $i;
+			.col-#{$device}-#{$i},
+			%col-#{$device}-#{$i} { width: $width; }
 
-			.col-#{$device}-#{$i} {
-				@extend %col;
-				@extend %col-#{$gutter};
-				width: $width;
-			}
-
-			.has-flex .col-#{$device}-#{$i} {
-				@extend %col-flex;
-				flex-basis: $width;
-			}
+			.has-flex .col-#{$device}-#{$i},
+			     %flex-col-#{$device}-#{$i} { flex-basis: $width; }
 
 			.col-#{$device}-top-#{$i}    { margin-top:    $width; }
 			.col-#{$device}-right-#{$i}  { margin-right:  $width; }
