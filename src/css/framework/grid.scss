@@ -175,27 +175,79 @@ $last-gutter: null;
 			.col-#{$device}-bottom { @extend .col-bottom; }
 		}
 
-		// Add some special .gutter-top-X and .gutter-bottom-X for special margin
-		@for $i from 0 through 12 {
+		// Add some special .gutter-top-0 and .gutter-bottom-0 for special margin
+		// Trust me, you don't want to refactor what you will find below
+		%gutter-top-no-#{$gutter} {
+			@if $gutter != $last-gutter { margin-top: 0; }
+		}
+
+		%gutter-right-no-#{$gutter} {
+			@if $gutter != $last-gutter { padding-right: 0; }
+		}
+
+		%gutter-bottom-no-#{$gutter} {
+			@if $gutter != $last-gutter { margin-bottom: 0; }
+		}
+
+		%gutter-left-no-#{$gutter} {
+			@if $gutter != $last-gutter { padding-left: 0; }
+		}
+
+		%gutter-no-#{$gutter} {
 			@if $gutter != $last-gutter {
-				.gutter-top-#{$i}    { margin-top:    $gutter * $i; }
-				.gutter-right-#{$i}  { padding-right: $gutter * $i; }
-				.gutter-bottom-#{$i} { margin-bottom: $gutter * $i; }
-				.gutter-left-#{$i}   { padding-left:  $gutter * $i; }
-				.gutter-#{$i} {
+				padding-right: 0;
+				padding-left:  0;
+			}
+		}
+
+		.gutter-top-0    { @extend %gutter-top-no-#{$gutter};    }
+		.gutter-right-0  { @extend %gutter-right-no-#{$gutter};  }
+		.gutter-bottom-0 { @extend %gutter-bottom-no-#{$gutter}; }
+		.gutter-left-0   { @extend %gutter-left-no-#{$gutter};   }
+		.gutter-0        { @extend %gutter-no-#{$gutter};        }
+
+		.gutter-#{$device}-top-0    { @extend %gutter-top-no-#{$gutter};    }
+		.gutter-#{$device}-right-0  { @extend %gutter-right-no-#{$gutter};  }
+		.gutter-#{$device}-bottom-0 { @extend %gutter-bottom-no-#{$gutter}; }
+		.gutter-#{$device}-left-0   { @extend %gutter-left-no-#{$gutter};   }
+		.gutter-#{$device}-0        { @extend %gutter-no-#{$gutter};        }
+
+		// Add some special .gutter-top-X and .gutter-bottom-X for special margin
+		@for $i from 1 through 12 {
+			%gutter-top-#{$gutter}-#{$i} {
+				@if $gutter != $last-gutter { margin-top: $gutter * $i; }
+			}
+
+			%gutter-right-#{$gutter}-#{$i} {
+				@if $gutter != $last-gutter { padding-right: $gutter * $i; }
+			}
+
+			%gutter-bottom-#{$gutter}-#{$i} {
+				@if $gutter != $last-gutter { margin-bottom: $gutter * $i; }
+			}
+
+			%gutter-left-#{$gutter}-#{$i} {
+				@if $gutter != $last-gutter { padding-left: $gutter * $i; }
+			}
+
+			%gutter-#{$gutter}-#{$i} {
+				@if $gutter != $last-gutter {
 					padding-right: $gutter * $i;
 					padding-left:  $gutter * $i;
 				}
 			}
 
-			.gutter-#{$device}-top-#{$i}    { margin-top:    $gutter * $i; }
-			.gutter-#{$device}-right-#{$i}  { padding-right: $gutter * $i; }
-			.gutter-#{$device}-bottom-#{$i} { margin-bottom: $gutter * $i; }
-			.gutter-#{$device}-left-#{$i}   { padding-left:  $gutter * $i; }
-			.gutter-#{$device}-#{$i} {
-				padding-right: $gutter * $i;
-				padding-left:  $gutter * $i;
-			}
+			.gutter-top-#{$i}    { @extend %gutter-top-#{$gutter}-#{$i};    }
+			.gutter-right-#{$i}  { @extend %gutter-right-#{$gutter}-#{$i};  }
+			.gutter-bottom-#{$i} { @extend %gutter-bottom-#{$gutter}-#{$i}; }
+			.gutter-left-#{$i}   { @extend %gutter-left-#{$gutter}-#{$i};   }
+			.gutter-#{$i}        { @extend %gutter-#{$gutter}-#{$i};        }
+
+			.gutter-#{$device}-top-#{$i}    { @extend %gutter-top-#{$gutter}-#{$i};    }
+			.gutter-#{$device}-right-#{$i}  { @extend %gutter-right-#{$gutter}-#{$i};  }
+			.gutter-#{$device}-bottom-#{$i} { @extend %gutter-bottom-#{$gutter}-#{$i}; }
+			.gutter-#{$device}-left-#{$i}   { @extend %gutter-left-#{$gutter}-#{$i};   }
+			.gutter-#{$device}-#{$i}        { @extend %gutter-#{$gutter}-#{$i};        }
 		}
 	}
 
