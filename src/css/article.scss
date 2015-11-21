@@ -194,63 +194,20 @@ article .lettrine.with-quote-alt:before {
 
 .article-container > aside,
 .article-container > blockquote,
+.article-container > div,
+.article-container > dl,
 .article-container > figure,
-.article-container > p {
+.article-container > table,
+.article-container > ol,
+.article-container > p,
+.article-container > ul {
 	margin-top:    1.5em;
 	margin-bottom: 1.5em;
 }
 
 .article-container ul,
-.article-container ol { @extend %todo; }
-.article-container li { @extend %todo; }
-
-@include media-md {
-	.article-container > * { @extend .col-md-left-1; }
-
-	          .article-container > * { @extend %col-md-5; }
-	.has-flex .article-container > * { @extend %flex-col-md-5; }
-
-	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
-	          .article-container .col-md-left-0,
-	.has-flex .article-container .col-md-left-0 { @extend .col-md-left-0; }
-
-	// We don't need to go through all the columns, we can stop before the "default" size
-	@for $i from 1 through 4 {
-		          .article-container .col-md-#{$i} { @extend %col-md-#{$i}; }
-		.has-flex .article-container .col-md-#{$i} { @extend %flex-col-md-#{$i}; }
-	}
-
-	// For columns having the "full" class, remove the margin and expand
-	          .article-container .full { @extend .col-md-left-0; }
-	          .article-container .full { @extend %col-md-8; }
-	.has-flex .article-container .full { @extend %flex-col-md-8; }
-	.article-container .full figcaption { @extend .col-md-left-1; }
-}
-
-@include media-lg {
-	.article-container > * { @extend .col-lg-left-2; }
-
-	          .article-container > * { @extend %col-lg-6; }
-	.has-flex .article-container > * { @extend %flex-col-lg-6; }
-
-	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
-	@for $i from 0 through 1 {
-		          .article-container .col-lg-left-#{$i},
-		.has-flex .article-container .col-lg-left-#{$i} { @extend .col-lg-left-#{$i}; }
-	}
-
-	// We don't need to go through all the columns, we can stop before the "default" size
-	@for $i from 1 through 5 {
-		          .article-container .col-lg-#{$i} { @extend %col-lg-#{$i}; }
-		.has-flex .article-container .col-lg-#{$i} { @extend %flex-col-lg-#{$i}; }
-	}
-
-	// For columns having the "full" class, remove the margin and expand
-	          .article-container .full { @extend .col-lg-left-0; }
-	          .article-container .full { @extend %col-lg-12; }
-	.has-flex .article-container .full { @extend %flex-col-lg-12; }
-	.article-container .full figcaption { @extend .col-lg-left-2; }
-}
+.article-container ol {}
+.article-container li {}
 
 article > footer {
 	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
@@ -263,18 +220,22 @@ article > footer {
 	}
 
 	article > footer .row { background: $color-white; }
+	article > footer li   { margin-bottom: 1em; }
 	article .tags a { background-image: linear-gradient(to bottom, $color-action-contextual, $color-action-contextual); }
 
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
 	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $color, $color); }
 	article.obsession-#{$i} .snake      { border-color: $color; }
-	article.obsession-#{$i} .lettrine   { background:   $color; }
-	article.obsession-#{$i} aside span  { color:        $color; }
+
 	article.obsession-#{$i} blockquote:before { background-color: $color; }
+	article.obsession-#{$i} .lettrine         { background-color: rgba($color, .75); }
+
+	article.obsession-#{$i} aside span,
+	article.obsession-#{$i} .question:before { color: $color; }
 }
 
-@include media-md {
+@include media("md") {
 	article header .snake {
 		top:   0;
 		right: 0;
@@ -285,9 +246,55 @@ article > footer {
 	article figure .snake     { left: -(grid-gutter("md")); }
 	article .lettrine         { margin-left: -.5em; }
 
+	.article-container > * { @extend .col-md-left-1; }
+	.article-container > * { @extend .col-md-5; }
+
+	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
+	.article-container .col-md-left-0 { @extend .col-md-left-0; }
+
+	// We don't need to go through all the columns, we can stop before the "default" size
+	@for $i from 1 through 4 {
+		.article-container .col-md-#{$i} { @extend .col-md-#{$i}; }
+	}
+
+	// For columns having the "full" class, remove the margin and expand
+	.article-container .full { @extend .col-md-left-0; }
+	.article-container .full { @extend .col-md-8; }
+	.article-container .full .snake,
+	.article-container .full figcaption { @extend .col-md-left-1; }
+
 	article > footer .container {
 		padding-right: grid-margin("md");
 		padding-left:  grid-margin("md");
+	}
+}
+
+@include media("lg") {
+	article blockquote:before { left: -(grid-margin("lg") / 2); }
+	article figure .snake     { left: -(grid-gutter("lg")); }
+
+	.article-container > * { @extend .col-lg-left-2; }
+	.article-container > * { @extend .col-lg-6; }
+
+	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
+	@for $i from 0 through 1 {
+		.article-container .col-lg-left-#{$i} { @extend .col-lg-left-#{$i}; }
+	}
+
+	// We don't need to go through all the columns, we can stop before the "default" size
+	@for $i from 1 through 5 {
+		.article-container .col-lg-#{$i} { @extend .col-lg-#{$i}; }
+	}
+
+	// For columns having the "full" class, remove the margin and expand
+	.article-container .full { @extend .col-lg-left-0; }
+	.article-container .full { @extend .col-lg-12; }
+	.article-container .full .snake,
+	.article-container .full figcaption { @extend .col-lg-left-2; }
+
+	article > footer .container {
+		padding-right: grid-margin("lg");
+		padding-left:  grid-margin("lg");
 	}
 }
 /* @end Article */
