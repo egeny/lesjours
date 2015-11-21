@@ -138,6 +138,14 @@ $last-gutter: null;
 			}
 		}
 
+		          .col-#{$device}-auto { width: auto; }
+		.has-flex .col-#{$device}-auto { flex-basis: auto; }
+
+		.col-#{$device}-top-0    { margin-top:    0; }
+		.col-#{$device}-right-0  { margin-right:  0; }
+		.col-#{$device}-bottom-0 { margin-bottom: 0; }
+		.col-#{$device}-left-0   { margin-left:   0; }
+
 		// Generate .col-sm-*, .col-md-* and .col-lg-*
 		@for $i from 1 through $columns {
 			$width: (100% / $columns) * $i;
