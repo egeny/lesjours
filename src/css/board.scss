@@ -1,0 +1,65 @@
+.mosaic { list-style: none; }
+.mosaic li {
+	padding-top: grid-gutter("sm") / 2;
+	padding-bottom: grid-gutter("sm") / 2;
+}
+
+@include media("md") {
+	.mosaic li {
+		padding-top: grid-gutter("md") / 2;
+		padding-bottom: grid-gutter("md") / 2;
+	}
+}
+
+@include media("lg") {
+	.mosaic li {
+		padding-top: grid-gutter("lg") / 2;
+		padding-bottom: grid-gutter("lg") / 2;
+	}
+}
+
+.mosaic a {
+	position: relative;
+	display: inline-block;
+}
+
+.mosaic a:hover div,
+.mosaic a:focus div {
+	opacity: 1;
+}
+
+.mosaic img { width: 100%; }
+
+.mosaic a > div {
+	background: rgba($color-media, .9) url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+	background-size: 2px 4px;
+
+	opacity: 0;
+	transition: opacity .3s;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	color: $color-main;
+}
+
+.mosaic .with-snake {
+	margin-top:  60px;
+	margin-left: 60px;
+}
+
+.snake-content,
+.snake-wrapper {
+	background-position: -60px -60px;
+	background-size: calc(100% + 60px);
+}
+
+/* Same as the overlay */
+.snake-wrapper {
+	background-color: rgba(243, 223, 147, .9);
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+	background-size: 2px 4px;
+}
