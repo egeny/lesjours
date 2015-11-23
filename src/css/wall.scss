@@ -56,6 +56,22 @@ overflow: hidden;
 	margin-bottom: 0.5rem;
 }
 
+.wall .title {
+	margin-bottom: calc(25px + 70px + #{(grid-gutter("sm") * 2)});
+}
+
+@include media("md") {
+	.wall .title {
+		margin-bottom: calc(25px + 70px + #{(grid-gutter("md") * 2)});
+	}
+}
+
+@include media("lg") {
+	.wall .title {
+		margin-bottom: calc(25px + 70px + #{(grid-gutter("lg") * 2)});
+	}
+}
+
 .wall .title span { line-height: 1.333333; }
 
 .wall.selected .title h2,
