@@ -23,6 +23,8 @@ article header .snake {
 	left:   $margin;
 }
 
+article header h2 { margin-bottom: .25em; }
+
 article header .list-inline li:after            { content: " • "; }
 article header .list-inline li:last-child:after { content: "";    }
 
@@ -38,6 +40,7 @@ article a {
 	@include font-weight-bold("archer");
 	text-decoration: none;
 	text-transform: uppercase;
+	line-height: 1.5;
 	color: $color-main;
 }
 

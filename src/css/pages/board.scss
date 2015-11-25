@@ -19,21 +19,10 @@ $gutter: grid-gutter("sm");
 
 			.mosaic img { @extend .responsive; }
 
-			.mosaic .overlay {
-				visibility: hidden; /* Set as invisible in order to "simulate" hover on mobile */
-				opacity: 0;
-				transition: opacity .3s, visibility .3s 0s; /* Make invisible after the opacity transition is done */
-			}
+			.mosaic .overlay { @extend %fadable; }
 
 			.mosaic a:hover .overlay,
-			.mosaic a:focus .overlay {
-				visibility: visible;
-				opacity: 1;
-				transition: opacity .3s, visibility 0s; /* Make visible before the opacity transisition */
-			}
-
-
-
+			.mosaic a:focus .overlay { @extend %fadable-active }
 
 			.mosaic .title {
 				@extend %font-brandon;
