@@ -1,14 +1,14 @@
-@mixin font-archer() {
+%font-archer {
 	font-family: "Archer SSm A", "Archer SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
 }
 
-@mixin font-brandon() {
+%font-brandon {
 	font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
 }
 
-@mixin font-proxima() {
+%font-proxima {
 	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
 }
@@ -23,30 +23,67 @@
 @mixin font-weight-extra-bold($font: "")  { font-weight: 800; }
 @mixin font-weight-black($font: "")       { font-weight: 900; }
 
+/* Headings */
 .h2, .h3, .h4, .h5, .h6 {
-	@include font-brandon;
+	@extend %font-brandon;
 	@include font-weight-black;
 	line-height: 1;
-	margin-bottom: .5em;
 }
 
-.h2 { font-size: 3em;   }
-.h3 { font-size: 2.5em; }
-.h4 { font-size: 2em;   }
-.h5 { font-size: 1.5em; }
-.h6 { font-size: 1em;   }
+.h2 { font-size: 2rem;     }
+.h3 { font-size: 1.75rem;  }
+.h4 { font-size: 1.5rem;   }
+.h5 { font-size: 1.125rem; }
+.h6 { font-size: .8125rem; }
+
+.h5 { line-height: 1.25; }
+.h6 { line-height: 1.5;  }
+
+.h6 { @include font-weight-medium; }
+
+/* Body */
+.p {
+	@extend %font-archer;
+	@include font-weight-medium("archer");
+	line-height: 1.5;
+}
+
+.p-larger {
+	@extend %font-archer;
+	@include font-weight-semi-bold("archer");
+	font-size:   1.071428em; // Roughly +1px (don't ask why)
+	line-height: 1.333333;
+}
+
+/* Meta */
+.style-meta {
+	@extend %font-proxima;
+	@include font-weight-bold;
+	font-size: .8125em;
+	line-height: 2;
+	color: $color-dark;
+}
+
+.style-meta-large {
+	@extend %font-proxima;
+	@include font-weight-regular;
+	font-size: 1.5em;
+	line-height: 1.75;
+}
+
+.style-meta-larger {
+	@extend %font-proxima;
+	@include font-weight-light;
+	font-size: 2em;
+	line-height: 1.166667;
+}
 
 @include media("md") {
-	.h2 { font-size: 4.375em;  }
-	.h3 { font-size: 3.5em;    }
-	.h4 { font-size: 2.6875em; }
-	.h5 { font-size: 1.8125em; }
-	.h6 { font-size: 1em;      }
-}
+	.h2 { font-size: 4.375rem; }
+	.h3 { font-size: 3.125rem; }
+	.h4 { font-size: 2.25rem;  }
+	.h5 { font-size: 1.5rem;   }
+	.h6 { font-size: .875rem;  }
 
-.style-1 {
-	@include font-proxima;
-	@include font-weight-semi-bold;
-	font-size: 0.8125em;
-	color: $color-dark;
+	.p-larger { font-size: 1.875em; }
 }
