@@ -1,17 +1,60 @@
+/* @group Buttons */
 .btn,
-.btn-rounded {
+.btn-blank {
 	background: none;
 	padding: 0;
 	border:  0;
 }
 
-.btn-rounded {
-	width:  3em;
-	height: 3em;
-	border-radius: 50%;
+.btn {
+	width:       3.5em;
+	line-height: 3.5em;
+
+	display: inline-block;
+	position: relative;
+
+	@extend %font-proxima;
+	@include font-weight-bold;
+	font-size: 0.8125rem; // Always 13px (1rem = 16px)
+
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: $color-white;
 }
 
-.btn-primary {
-	background: #FFF;
-	color: #C83E2C;
-}
+	.btn:before {
+		background: $color-brand;
+
+		width:  100%;
+		height: 100%;
+		border-radius: 50%;
+
+		display: block;
+		content: "";
+		position: absolute;
+
+		transition: transform .3s;
+	}
+
+	.btn:hover:before,
+	.btn:focus:before { transform: scale(0.833333); }
+
+	.btn i {
+		position: relative;
+		font-style: normal;
+	}
+
+		.btn i svg {
+			width:  1.5em;
+			height: 1.5em;
+		}
+
+.btn-reverse            { color:      $color-brand; }
+.btn-reverse:before     { background: $color-white; }
+.btn-primary            { color:      $color-main;  }
+.btn-primary:before     { background: $color-white; }
+.btn-transparent        { color:      currentColor; }
+.btn-transparent:before { background: transparent;  }
+/* @end Buttons */
