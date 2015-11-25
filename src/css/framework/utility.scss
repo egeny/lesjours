@@ -1,22 +1,30 @@
 /* @group Utility */
-.clearfix { @include clearfix; }
-
-.fade {
-	opacity: 0;
-	transition: opacity .3s linear;
-
-	&.in { opacity: 1; }
-}
+// Mixins
+.clearfix   { @include clearfix; }
+.responsive { @include responsive; }
 
 /* List utility classes */
 .list-unstyled    { list-style: none; }
 .list-inline > li { display: inline-block; }
 
+/* Quick overlay */
+.overlay {
+	position: absolute;
+	top:    0;
+	right:  0;
+	bottom: 0;
+	left:   0;
+}
+
+/* Patterns */
+.pattern-1 {
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+	background-size: 2px 4px;
+}
+
 /* Quick float */
 .pull-left  { float: left;  }
 .pull-right { float: right; }
-
-.responsive { @include image-responsive; }
 
 /* Screen reader only — see http://a11yproject.com/posts/how-to-hide-content/ */
 .sr,
@@ -42,4 +50,8 @@
 	position: static;
 	clip: auto;
 }
-/* @group Utility */
+
+.text-left   { text-align: left;   }
+.text-center { text-align: center; }
+.text-right  { text-align: right;  }
+/* @end Utility */

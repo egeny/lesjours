@@ -41,7 +41,7 @@
 
 	text-align: left;
 
-	@include font-proxima;
+	@extend  %font-proxima;
 	@include font-weight-bold;
 
 	color: $color-main;

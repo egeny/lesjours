@@ -1,18 +1,13 @@
 @import "variables";
 @import "mixins/mixins";
-
-@import "framework/reset";
-@import "framework/functions";
-@import "framework/grid";
-@import "framework/typography";
-@import "framework/utility";
+@import "framework/framework";
 
 // Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com
 
 html {
-	background: #FFF;
+	background: $color-white;
 
-	@include font-archer;
+	@extend %font-archer;
 	@include font-weight-medium("archer");
 	font-size:   $base-font-size;
 	line-height: 1.5;
@@ -29,8 +24,8 @@ body {
 	body { font-size: inherit; }
 }
 
-@media (min-width: 1440px) {
-	body { max-width: 1440px; }
+@media (min-width: $max-width) {
+	body { max-width: $max-width; }
 }
 
 /* Remove some default margins */
@@ -40,6 +35,7 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 /* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
 audio, canvas, iframe, img, svg, video { vertical-align: middle; }
 
+/* Add a nice cursor for abbreviations */
 abbr { cursor: help; }
 
 /* Disable the default italic for address */
@@ -60,7 +56,7 @@ figure img,
 figure picture,
 figure svg,
 figure table,
-figure video { @include image-responsive; }
+figure video { @include responsive; }
 
 /* The <h1> is reserved for the page's title */
 h1 { font-size: 1em; }
@@ -71,11 +67,12 @@ p { margin-bottom: 1.5em; }
 /* Allow only vertical resizing of textareas */
 textarea { resize: vertical; }
 
+/* Remove default padding for lists */
 ul, ol { padding: 0; }
 
 /* Remove text-shadow in selection highlight */
 ::selection {
-	background: #B3D4FC; /* TODO */
+	background: $color-external;
 	text-shadow: none;
 }
 
@@ -86,11 +83,9 @@ ul, ol { padding: 0; }
 	display: inline-block;
 }
 
-@import "components/buttons";
-@import "components/carousel";
-@import "components/snake";
-
+@import "components/components";
 @import "header";
+
 @import "wall";
 @import "article";
 @import "board";

@@ -1,4 +1,6 @@
 /* @group .wall */
+$gutter: grid-gutter("sm");
+
 .wall {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
@@ -7,12 +9,8 @@
 	height: 890px;
 	position: relative;
 
-	font-family: "Archer SSm A", "Archer SSm B";
-	font-style: normal;
-	font-weight: 700;
-
-overflow: hidden;
-	color: #FFF;
+	overflow: hidden;
+	color: $color-white;
 }
 
 .wall .overlay-color,
@@ -45,42 +43,21 @@ overflow: hidden;
 .wall .row   { position: relative; }
 /*.wall .title { margin: 80px 0 135px; }*/
 
-.wall.expanded .snake path { stroke: #FFF; }
+.wall.expanded .snake path { stroke: $color-white; }
 
-.wall .title h2 {
-	font-family: "brandon-grotesque", sans-serif;
-	font-size: 4.375rem;
-	font-style: normal;
-	font-weight: 900;
-	line-height: 1;
-	margin-bottom: 0.5rem;
-}
+.wall .title h2 { margin-bottom: 0.5rem; }
 
-.wall .title {
-	margin-bottom: calc(25px + 70px + #{(grid-gutter("sm") * 2)});
-}
-
-@include media("md") {
-	.wall .title {
-		margin-bottom: calc(25px + 70px + #{(grid-gutter("md") * 2)});
-	}
-}
-
-@include media("lg") {
-	.wall .title {
-		margin-bottom: calc(25px + 70px + #{(grid-gutter("lg") * 2)});
-	}
-}
+.wall .title { margin-bottom: calc(25px + 70px + #{$gutter * 2}); }
 
 .wall .title span { line-height: 1.333333; }
 
 .wall.selected .title h2,
 .wall.selected .title span,
-.wall.selected .title .btn-rounded {
+.wall.selected .title .btn {
 	animation: fade-h2 3s;
 }
 .wall.selected .title span { animation-name: fade-span; }
-.wall.selected .title .btn-rounded { animation-name: fade-btn; }
+.wall.selected .title .btn { animation-name: fade-btn; }
 
 .wall.selected .title .snake path {
 	animation: move-snake 1.5s forwards;
@@ -113,13 +90,13 @@ overflow: hidden;
 	font-size: 1.5rem;
 }
 
-.wall .title .btn-rounded {
+.wall .title .btn {
 	position: absolute;
 	left:   -5px;
 	bottom: -3em;
 }
 
-.wall .title .btn-rounded svg {
+.wall .title .btn svg {
 	width: 1.375em;
 	height: 1.375em;
 	animation: bounce ease-out .5s alternate-reverse infinite;
@@ -141,5 +118,20 @@ overflow: hidden;
 	transform: none;
 }
 
-.wall.expanded .title .btn-rounded { display: none; }
+.wall.expanded .title .btn { display: none; }
+
+
+@include media("md") {
+	$gutter: grid-gutter("md");
+	@if $gutter != grid-gutter("sm") {
+		.wall .title { margin-bottom: calc(25px + 70px + #{$gutter * 2}); }
+	}
+}
+
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+	@if $gutter != grid-gutter("md") {
+		.wall .title { margin-bottom: calc(25px + 70px + #{$gutter * 2}); }
+	}
+}
 /* @end .wall */

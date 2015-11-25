@@ -1,6 +1,6 @@
 $("body").addClass("js");
 
-$(".wall .title .btn-rounded").click(function() {
+$(".wall .title .btn").click(function() {
 	$(this).parents(".wall").toggleClass("expanded");
 });
 
