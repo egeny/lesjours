@@ -17,13 +17,14 @@
 			left:   0;
 		}
 
-		.snake-3 span {
+		.snake-3 .snake-container,
+		.snake-3 .snake-wrapper {
 			background-position: -50px -60px; /* Same as the parent's offset */
 			background-size: calc(100% + 50px + 45px); /* 100% + parent's offset */
 		}
 
 		/* Same as the overlay */
-		.snake-3 span span {
+		.snake-3 .snake-wrapper {
 			background-color: rgba(243, 223, 147, .9);
 			background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
 			background-size: 2px 4px;
@@ -32,12 +33,12 @@
 	<div class="container" style="padding-top: 100px">
 		<div class="row col-md-bottom-1">
 			<div class="col col-md-left-1 col-md-6 col-lg-left-2 col-lg-8">
-				<h1 class="with-snake snake-1"><span class="snake-content">Livre</span></h1>
+				<h1 class="snake-1"><span class="snake-container">Livre</span></h1>
 			</div>
 		</div>
 		<div class="row col-md-bottom-1">
 			<div class="col col-md-left-1 col-md-6 col-lg-left-2 col-lg-8">
-				<h1 class="with-snake snake-2"><span class="snake-content">Des élèves</span></h1>
+				<h1 class="snake-2"><span class="snake-container">Des élèves</span></h1>
 			</div>
 		</div>
 
@@ -46,7 +47,8 @@
 				<div style="position: relative">
 					<img style="width: 100%" src="img/board/2.jpg" alt="" />
 					<div class="overlay">
-						<h1 class="with-snake snake-3"><span class="snake-content" style="background-image: url(img/board/2.jpg)"><span class="snake-wrapper">Judith</span></span></h1>
+						<h1 class="snake-3">
+							<span class="snake-container" style="background-image: url(img/board/2.jpg)"><span class="snake-wrapper">Judith</span></span></h1>
 					</div>
 				</div>
 			</div>

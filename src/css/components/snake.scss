@@ -1,5 +1,7 @@
 /* @group .snake */
 /*csslint known-properties:false */
+$gutter: grid-gutter("sm");
+
 svg.snake {
 	width:  220px;
 	height: calc(100% + 25px + 70px + 25px); // 100% + snake's top + snake's bottom + margin between text and snake's bottom
@@ -20,15 +22,19 @@ svg.snake {
 		vector-effect:   non-scaling-stroke; /* Do not scale the stroke's width (only the path have to be scaled) */
 	}
 
-.with-snake { position: relative; }
+.snake-1,
+.snake-2,
+.snake-3 { position: relative; }
 
-	.with-snake:before {
+	.snake-1:before,
+	.snake-2:before,
+	.snake-3:before {
 		border: 4px solid $color-brand;
 		content: "";
 		position: absolute;
 	}
 
-	.snake-content {
+	.snake-container {
 		background: $color-white;
 		display: block;
 		position: relative;
@@ -41,38 +47,49 @@ svg.snake {
 		bottom: calc(.25em + 4px);
 	}
 
-	.snake-1 .snake-content {
+	.snake-1 .snake-container {
 		padding-left: .25em;
 		margin-left: -.25em;
 	}
 
-	.snake-2:before,
-	.snake-3:before {
+	.snake-2:before {
 		width:  3em;
 		height: 150%;
 		min-height: 3em;
-		left:   calc(-#{grid-gutter("sm")} - 4px);
+		left:   calc(-#{$gutter} - 4px);
 		bottom: -.75em;
 	}
 
-	.snake-3 span span { display: block; }
+	.snake-3:before {
+		width:  55px;
+		top:    -14px;
+		bottom: -14px;
+		left:   calc(-#{$gutter} - 4px);
+	}
+
+	.snake-3 .snake-wrapper { display: block; }
 
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
-	.obsession-#{$i} .with-snake:before { border-color: $color; }
+	.obsession-#{$i} .snake-1:before,
+	.obsession-#{$i} .snake-2:before,
+	.obsession-#{$i} .snake-3:before { border-color: $color; }
 }
 
 @include media("md") {
-	@if grid-gutter("md") != grid-gutter("sm") {
+	$gutter: grid-gutter("md");
+
+	@if $gutter != grid-gutter("sm") {
 		.snake-2:before,
-		.snake-3:before { left: calc(-#{grid-gutter("md")} - 4px); }
+		.snake-3:before { left: calc(-#{$gutter} - 4px); }
 	}
 }
 
 @include media("lg") {
-	@if grid-gutter("lg") != grid-gutter("md") {
+	$gutter: grid-gutter("lg");
+	@if $gutter != grid-gutter("md") {
 		.snake-2:before,
-		.snake-3:before { left: calc(-#{grid-gutter("lg")} - 4px); }
+		.snake-3:before { left: calc(-#{$gutter} - 4px); }
 	}
 }
 /* @end .snake */
