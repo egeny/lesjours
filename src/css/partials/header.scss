@@ -16,16 +16,6 @@
 
 #header .pull-left { padding: 0.5625em; }
 
-@include media("md") {
-	#header h1 img {
-		width: auto;
-		height: 60px;
-	}
-
-	#header .pull-left,
-	#header .pull-right { margin-top: 1em; }
-}
-
 #menu {
 	background: $color-white;
 
@@ -35,23 +25,16 @@
 	right: 0;
 	left:  0;
 
-	visibility: hidden;
-	opacity: 0;
-	transition: opacity 0.3s, visibility 0s 0.3s;
-
-	text-align: left;
+	@extend %fadable;
 
 	@extend  %font-proxima;
 	@include font-weight-bold;
+	text-align: left;
 
 	color: $color-main;
 }
 
-#menu.opened {
-	visibility: visible;
-	opacity: 1;
-	transition: opacity 0.3s, visibility 0s;
-}
+#menu.opened { @extend %fadable-active; }
 
 	#menu a {
 		margin: 0.75em 0;
@@ -129,4 +112,14 @@
 			width:  1em;
 			height: 1em;
 		}
+
+@include media("md") {
+	#header h1 img {
+		width: auto;
+		height: 60px;
+	}
+
+	#header .pull-left,
+	#header .pull-right { margin-top: 1em; }
+}
 /* @end #header */
