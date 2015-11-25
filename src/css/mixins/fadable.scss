@@ -1,0 +1,11 @@
+@mixin fadable($duration: 0.3) {
+	visibility: hidden; /* Set as invisible in order to "simulate" hover on mobile */
+	opacity: 0;
+	transition: opacity #{$duration}s, visibility 0s #{$duration}s; /* Make invisible after the opacity transition is done */
+}
+
+@mixin fadable-active($duration: 0.3) {
+	visibility: visible;
+	opacity: 1;
+	transition: opacity #{$duration}s, visibility 0s; /* Make visible before the opacity transisition */
+}

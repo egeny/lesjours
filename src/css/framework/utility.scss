@@ -1,6 +1,11 @@
 /* @group Utility */
 // Mixins
-.clearfix   { @include clearfix; }
+.clearfix { @include clearfix; }
+.fadable,
+%fadable { @include fadable; }
+.fadable:hover,
+.fadable:focus,
+%fadable-active { @include fadable-active; }
 .responsive { @include responsive; }
 
 /* List utility classes */
