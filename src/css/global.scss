@@ -84,8 +84,8 @@ ul, ol { padding: 0; }
 }
 
 @import "components/components";
-@import "header";
+@import "partials/header";
 
-@import "wall";
-@import "article";
-@import "board";
+@import "pages/wall";
+@import "pages/article";
+@import "pages/board";
