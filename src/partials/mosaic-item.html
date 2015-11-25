@@ -1,0 +1,21 @@
+<li>
+	<a href="{{ item.href|default("#") }}">
+		<img src="{{ item.img }}" alt="" />
+		<div class="overlay pattern-1">
+			<div class="snake-3">
+				<div class="snake-container" style="background-image: url({{ item.img }})">
+					<div class="snake-wrapper pattern-1">
+						<h4 class="title">{{ item.title }}</h4>
+						<span class="subtitle">{{ item.subtitle }}</span>
+					</div>
+				</div>
+			</div>
+			{% if item.desc %}
+				<p class="desc">{{ item.desc }}</p>
+			{% endif %}
+			<div class="more">
+				<span class="btn btn-primary"><i>Lire</i></span>
+			</div>
+		</div>
+	</a>
+</li>

@@ -25,274 +25,162 @@
 				<section id="personnages" class="tab">
 					<h3>Les personnages</h3>
 					<ul class="mosaic">
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<div class="with-snake snake-3">
-										<div class="snake-content"  style="background-image: url(img/board/big-1.jpg)">
-											<div class="snake-wrapper">
-												<h4>Judith Cohen Solal</h4>
-												<span>Psychanalyste</span>
-											</div>
-										</div>
-									</div>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-1.jpg" alt="" />
-								<div>
-									<div class="with-snake snake-3">
-										<div class="snake-content"  style="background-image: url(img/board/big-3.jpg)">
-											<div class="snake-wrapper">
-												<h4>Judith Cohen Solal</h4>
-												<span>Psychanalyste</span>
-											</div>
-										</div>
-									</div>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-1.jpg" alt="" />
-								<div>
-									<h4>Judith Cohen Solal</h4>
-									<span>Psychanalyste</span>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-2.jpg" alt="" />
-								<div>
-									<h4>Judith Cohen Solal</h4>
-									<span>Psychanalyste</span>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-1.jpg" alt="" />
-								<div>
-									<h4>Judith Cohen Solal</h4>
-									<span>Psychanalyste</span>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-2.jpg" alt="" />
-								<div>
-									<h4>Judith Cohen Solal</h4>
-									<span>Psychanalyste</span>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/big-2.jpg" alt="" />
-								<div>
-									<h4>Judith Cohen Solal</h4>
-									<span>Psychanalyste</span>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-1.jpg" alt="" />
-								<div>
-									<h4>Judith Cohen Solal</h4>
-									<span>Psychanalyste</span>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-2.jpg" alt="" />
-								<div>
-									<h4>Judith Cohen Solal</h4>
-									<span>Psychanalyste</span>
-									<span class="btn">Lire</span>
-								</div>
-							</a>
-						</li>
+						{%
+							set items = [
+								{
+									img:      "img/board/person-1.jpg",
+									title:    "Judith Cohen Solal",
+									subtitle: "Psychanalyste"
+								},
+								{
+									img:      "img/board/person-3.jpg",
+									title:    "Kevina",
+									subtitle: "Élève en 6<sup>ème</sup> techno"
+								},
+								{
+									img:      "img/board/person-4.jpg",
+									title:    "Kevin O’long Dupont",
+									subtitle: "Élève en 3<sup>ème</sup> B"
+								},
+								{
+									img:      "img/board/person-5.jpg",
+									title:    "Jules-Édouard",
+									subtitle: "Surveillant"
+								},
+								{
+									img:      "img/board/person-3.jpg",
+									title:    "Kevina",
+									subtitle: "Élève en 6<sup>ème</sup> techno"
+								},
+								{
+									img:      "img/board/person-2.jpg",
+									title:    "D<sup>r</sup> Robert Oppenheimer",
+									subtitle: "Doctorant en physique nucléaire"
+								},
+								{
+									img:      "img/board/person-4.jpg",
+									title:    "Kevin O’long Dupont",
+									subtitle: "Élève en 3<sup>ème</sup> B"
+								},
+								{
+									img:      "img/board/person-4.jpg",
+									title:    "Kevin O’long Dupont",
+									subtitle: "Élève en 3<sup>ème</sup> B"
+								},
+								{
+									img:      "img/board/person-4.jpg",
+									title:    "Kevin O’long Dupont",
+									subtitle: "Élève en 3<sup>ème</sup> B"
+								},
+								{
+									img:      "img/board/person-4.jpg",
+									title:    "Kevin O’long Dupont",
+									subtitle: "Élève en 3<sup>ème</sup> B"
+								},
+								{
+									img:      "img/board/person-5.jpg",
+									title:    "Jules-Édouard",
+									subtitle: "Surveillant"
+								},
+								{
+									img:      "img/board/person-1.jpg",
+									title:    "Judith Cohen Solal",
+									subtitle: "Psychanalyste"
+								}
+							]
+						%}
+						{% for item in items %}
+							{% include "partials/mosaic-item.html" %}
+						{% endfor %}
 					</ul>
 				</section><!-- end of #personnages -->
 
 				<section id="images" class="tab">
 					<h3>Les images</h3>
 					<ul class="mosaic">
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<div class="snake"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-1.jpg" alt="" />
-								<div>
-									<div class="snake"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-2.jpg" alt="" />
-								<div>
-									<div class="snake"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-1.jpg" alt="" />
-								<div>
-									<div class="snake"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-2.jpg" alt="" />
-								<div>
-									<div class="snake"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/big-2.jpg" alt="" />
-								<div>
-									<div class="snake"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-1.jpg" alt="" />
-								<div>
-									<div class="snake"></div>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/small-2.jpg" alt="" />
-								<div>
-									<div class="snake"></div>
-								</div>
-							</a>
-						</li>
+						{%
+							set items = []
+						%}
+						{% for item in items %}
+							{% include "partials/mosaic-item.html" %}
+						{% endfor %}
 					</ul>
 				</section><!-- end of #images -->
 
 				<section id="data" class="tab">
 					<h3>Les data</h3>
 					<ul class="mosaic">
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<h4>Datavisualisation</h4>
-									<span>Sous-titre</span>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<span class="btn">Voir</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<h4>Datavisualisation</h4>
-									<span>Sous-titre</span>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<span class="btn">Voir</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<h4>Datavisualisation</h4>
-									<span>Sous-titre</span>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<span class="btn">Voir</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<h4>Datavisualisation</h4>
-									<span>Sous-titre</span>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-									<span class="btn">Voir</span>
-								</div>
-							</a>
-						</li>
+						{%
+							set items = [
+								{
+									img:      "img/board/data-1.jpg",
+									title:    "Datavisualisation",
+									subtitle: "Sous-titre",
+									desc:     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+								},
+								{
+									img:      "img/board/data-2.jpg",
+									title:    "Datavisualisation",
+									subtitle: "Sous-titre"
+								},
+								{
+									img:      "img/board/data-3.jpg",
+									title:    "Datavisualisation",
+									subtitle: "Sous-titre"
+								},
+								{
+									img:      "img/board/data-1.jpg",
+									title:    "Datavisualisation",
+									subtitle: "Sous-titre"
+								},
+								{
+									img:      "img/board/data-4.jpg",
+									title:    "Datavisualisation",
+									subtitle: "Sous-titre"
+								},
+								{
+									img:      "img/board/data-5.jpg",
+									title:    "Datavisualisation",
+									subtitle: "Sous-titre"
+								}
+							]
+						%}
+						{% for item in items %}
+							{% include "partials/mosaic-item.html" %}
+						{% endfor %}
 					</ul>
 				</section><!-- end of #data -->
 
 				<section id="lieux" class="tab">
 					<h3>Les lieux</h3>
 					<ul class="mosaic">
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<h4>Nom premier lieu</h4>
-									<span>Sous-titre</span>
-									<span class="btn">Voir</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<h4>Nom premier lieu</h4>
-									<span>Sous-titre</span>
-									<span class="btn">Voir</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<h4>Nom premier lieu</h4>
-									<span>Sous-titre</span>
-									<span class="btn">Voir</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								<img src="img/board/big-1.jpg" alt="" />
-								<div>
-									<h4>Nom premier lieu</h4>
-									<span>Sous-titre</span>
-									<span class="btn">Voir</span>
-								</div>
-							</a>
-						</li>
+						{%
+							set items = [
+								{
+									img:      "img/board/geo-1.jpg",
+									title:    "Nom premier lieu",
+									subtitle: "Sous-titre"
+								},
+								{
+									img:      "img/board/geo-2.jpg",
+									title:    "Nom premier lieu",
+									subtitle: "Sous-titre"
+								},
+								{
+									img:      "img/board/geo-3.jpg",
+									title:    "Nom premier lieu",
+									subtitle: "Sous-titre"
+								},
+								{
+									img:      "img/board/geo-3.jpg",
+									title:    "Nom premier lieu",
+									subtitle: "Sous-titre"
+								}
+							]
+						%}
+						{% for item in items %}
+							{% include "partials/mosaic-item.html" %}
+						{% endfor %}
 					</ul>
 				</section><!-- end of #lieux -->
 
