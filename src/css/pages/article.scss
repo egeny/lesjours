@@ -189,21 +189,12 @@ article .lettrine {
 	color: $color-white;
 }
 
+article .lettrine::selection { background: transparent; }
+
 article .lettrine.with-quote {
 	@extend %quote;
 	background-size: .25em .25em;
 	background-position: .1875em 50%;
-}
-
-article .lettrine.with-quote-alt:before {
-	@extend %quote;
-	background-size: .25em .25em;
-	content: "";
-	display: inline-block;
-	width: .5em;
-	height: .5em;
-	margin-left: -.5em;
-	margin-bottom: .125em;
 }
 
 // Consider every child of .article-container as a column
