@@ -5,6 +5,7 @@ $gutter: grid-gutter("sm");
 svg.snake {
 	width:  220px;
 	height: calc(100% + 25px + 70px + 25px); // 100% + snake's top + snake's bottom + margin between text and snake's bottom
+	border: 0;
 
 	overflow: visible; /* Allow to overflow, the path's stroke may overflow */
 	position: absolute;
