@@ -106,23 +106,21 @@ article dfn,
 article dd {}
 
 article figure {}
-	article figure .snake {
-		width:  64px;
-		height: 80px;
-		border: 4px solid $color-brand;
-
-		position: absolute;
-		bottom: -10px;
-		left:   #{-$gutter};
-	}
 
 	article figcaption {
-		background: $color-white;
-		margin-top: .75em;
-		position: relative;
+		@extend .snake-2;
 		@extend .style-meta;
+		margin-top: .75em;
 		color: inherit;
+		line-height: inherit;
 	}
+
+	article figcaption:before {
+		height: auto;
+		top: -30px;
+	}
+
+	article figcaption > span { @extend .snake-container; }
 
 article h3 { @extend .h3; }
 article h4 { @extend .h4; }
@@ -299,11 +297,9 @@ article > footer {
 	}
 
 	// For columns having the "full" class, remove the margin and expand
-	.article-container .full { @extend .col-md-left-0; }
-	.article-container .full { @extend .col-md-8; }
-	.article-container .full .snake,
-	.article-container .full figcaption { @extend .col-md-left-1; }
-
+	.article-container > .full { @extend .col-md-left-0; }
+	.article-container > .full { @extend .col-md-8; }
+	.article-container > .full figcaption { @extend .col-md-left-1; }
 
 	@if $margin != grid-margin("sm") {
 		article blockquote:before { left: #{-$margin / 2}; }
@@ -337,10 +333,9 @@ article > footer {
 	}
 
 	// For columns having the "full" class, remove the margin and expand
-	.article-container .full { @extend .col-lg-left-0; }
-	.article-container .full { @extend .col-lg-12; }
-	.article-container .full .snake,
-	.article-container .full figcaption { @extend .col-lg-left-2; }
+	.article-container > .full { @extend .col-lg-left-0; }
+	.article-container > .full { @extend .col-lg-12; }
+	.article-container > .full figcaption { @extend .col-lg-left-2; }
 
 	@if $margin != grid-margin("md") {
 		article blockquote:before { left: #{-$margin / 2}; }
