@@ -152,10 +152,23 @@ article .dialogue {}
 	article .dialogue p:last-child { margin-bottom: 0; }
 
 article .notes {}
-	article .notes :target { background: yellow; }
 
 article .interview {}
 	article .interview p { margin-bottom: 1em; }
+	article .notes h3 { font-size: inherit;   }
+	article .notes ol { counter-reset: notes; }
+
+	article .notes ol li {
+		margin-bottom: 1em;
+		counter-increment: notes;
+	}
+
+	article .notes :target { background: $color-media; }
+
+	article .notes ol li:before {
+		@include font-weight-bold("archer");
+		content: "[" counter(notes) "] ";
+	}
 
 	article .question {
 		@include font-weight-bold("archer");
@@ -278,6 +291,9 @@ article > footer {
 
 	.article-container > * { @extend .col-md-left-1; }
 	.article-container > * { @extend .col-md-5; }
+
+	.article-container > .glossary,
+	.article-container > .notes { font-size: 0.8125em; }
 
 	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
 	.article-container .col-md-left-0 { @extend .col-md-left-0; }
