@@ -147,9 +147,14 @@ article table {}
 			article th {}
 			article td {}
 
-article .dialogue {}
-	article .dialogue p:before     { content: "— "; }
-	article .dialogue p:last-child { margin-bottom: 0; }
+article .dialogue {
+	margin-top:    1.5em;
+	margin-bottom: .75em;
+}
+
+	article .dialogue p        { margin-bottom: .75em; }
+	article .dialogue p:before { content: "— "; }
+
 article .glossary {}
 
 	article .glossary h3  { font-size:  inherit; }
