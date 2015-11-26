@@ -185,8 +185,6 @@ article .glossary {}
 
 article .notes {}
 
-article .interview {}
-	article .interview p { margin-bottom: 1em; }
 	article .notes h3 { font-size: inherit;   }
 	article .notes ol { counter-reset: notes; }
 
@@ -202,9 +200,15 @@ article .interview {}
 		content: "[" counter(notes) "] ";
 	}
 
+article .interview {
+	margin-top:    .5em;
+	margin-bottom: .75em;
+}
+
 	article .question {
 		@include font-weight-bold("archer");
 		font-variant: small-caps;
+		margin: 1.5em 0 .75em;
 	}
 
 	article .question:before {
@@ -212,7 +216,7 @@ article .interview {}
 		color: $color-brand;
 	}
 
-	article .answer {}
+	article .answer { margin-bottom: .75em; }
 
 article .lettrine {
 	background-color: $color-brand;
