@@ -14,7 +14,7 @@
 	position: relative;
 
 	@extend %font-proxima;
-	@include font-weight-bold;
+	@include font-weight-bold("proxima");
 	font-size: 0.8125rem; // Always 13px (1rem = 16px)
 
 	text-align: center;

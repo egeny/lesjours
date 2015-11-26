@@ -52,8 +52,8 @@ article aside {}
 
 	article aside p {
 		@extend .h2;
-		@include font-weight-bold;
 		font-size: 1.875em;
+		@include font-weight-bold("brandon");
 		margin: 0;
 	}
 
@@ -88,7 +88,7 @@ article blockquote { position: relative; }
 		margin-bottom: .125em;
 
 		@extend %font-brandon;
-		@include font-weight-light;
+		@include font-weight-light("brandon");
 		font-size: 1.85em;
 		line-height: 1.15;
 	}
@@ -183,8 +183,8 @@ article .lettrine {
 	display: inline-block;
 
 	@extend %font-brandon;
-	@include font-weight-regular;
 	font-size: 3.75rem;
+	@include font-weight-regular("brandon");
 
 	text-align: center;
 

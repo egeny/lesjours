@@ -26,14 +26,14 @@ $gutter: grid-gutter("sm");
 
 			.mosaic .title {
 				@extend %font-brandon;
-				@include font-weight-black;
+				@include font-weight-black("brandon");
 				font-size: 1.5em;
 				line-height: 1.25;
 			}
 
 			.mosaic .subtitle {
 				@extend %font-brandon;
-				@include font-weight-medium;
+				@include font-weight-medium("brandon");
 				font-size: 0.875em;
 				text-transform: uppercase;
 			}
@@ -41,7 +41,7 @@ $gutter: grid-gutter("sm");
 			.mosaic .desc {
 				margin-right: $gutter;
 				@extend %font-proxima;
-				@include font-weight-semi-bold;
+				@include font-weight-semi-bold("brandon");
 			}
 
 			.mosaic .more {

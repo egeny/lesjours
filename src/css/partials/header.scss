@@ -28,7 +28,7 @@
 	@extend %fadable;
 
 	@extend  %font-proxima;
-	@include font-weight-bold;
+	@include font-weight-bold("proxima");
 	text-align: left;
 
 	color: $color-main;
@@ -87,7 +87,7 @@
 
 		line-height: 1;
 		font-size: 1.375em;
-		@include font-weight-light;
+		@include font-weight-light("proxima");
 	}
 
 	#menu ul {
