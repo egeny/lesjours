@@ -8,9 +8,36 @@
 %fadable-active { @include fadable-active; }
 .responsive { @include responsive; }
 
+.link,
+%link {
+	background-image: linear-gradient(to bottom, $color-media, $color-media);
+	background-position: 0 1em;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	padding: 0.125em 0;
+
+	// Don't use display: inline-block since it might cause issues with long links
+	transition: background-position .15s;
+
+	font-weight: bold; // Don't use the font-weight-* mixin here since we don't know which font will be used
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: $color-main;
+}
+
+.link:hover,
+.link:focus,
+%link-active { background-position: 0 0; }
+
 /* List utility classes */
-.list-unstyled    { list-style: none; }
-.list-inline > li { display: inline-block; }
+.list-unstyled { list-style: none; }
+
+.list-inline > li,
+.list-inline-dotted > li { display: inline-block; }
+
+.list-inline-dotted li:after            { content: " • "; }
+.list-inline-dotted li:last-child:after { content: "";    }
 
 /* Quick overlay */
 .overlay {
@@ -22,6 +49,7 @@
 }
 
 /* Patterns */
+// Two dots with 0.2 opacity
 .pattern-1 {
 	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
 	background-size: 2px 4px;
