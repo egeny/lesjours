@@ -150,6 +150,38 @@ article table {}
 article .dialogue {}
 	article .dialogue p:before     { content: "— "; }
 	article .dialogue p:last-child { margin-bottom: 0; }
+article .glossary {}
+
+	article .glossary h3  { font-size:  inherit; }
+	article .glossary dfn { font-style: inherit; }
+
+	article .glossary dt,
+	article .glossary dd {
+		margin-bottom: 1em; // FIXME: not working since display is inline
+		display: inline;
+	}
+
+	article .glossary dt { @include font-weight-bold("archer"); }
+
+	article .glossary dt:before {
+		content: "";
+		display: table;
+	}
+
+	article .glossary dfn:before { content: "• ";  }
+	article .glossary dfn:after  { content: " : "; }
+
+	article .glossary ol li {
+		margin-bottom: 1em;
+		counter-increment: notes;
+	}
+
+	article .glossary :target { background: $color-media; }
+
+	article .glossary ol li:before {
+		@include font-weight-bold("archer");
+		content: "[" counter(notes) "] ";
+	}
 
 article .notes {}
 
@@ -242,7 +274,9 @@ article .lettrine.with-quote {
 .article-container > table,
 .article-container > ol,
 .article-container > p,
-.article-container > ul {
+.article-container > ul,
+.article-container > .glossary,
+.article-container > .notes {
 	margin-top:    1.5em;
 	margin-bottom: 1.5em;
 }
