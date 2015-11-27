@@ -2,114 +2,152 @@
 $gutter: grid-gutter("sm");
 
 .wall {
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	height: 890px;
 	position: relative;
-
 	overflow: hidden;
 	color: $color-white;
 }
 
-.wall .overlay-color {
-	transform:  translateY(100%);
-	transition: transform .5s;
-}
+	.wall img { @extend .responsive; }
 
-.overlay-pattern {
-	// This is almost .pattern-1 except for the path's color and the linear-gradient
-	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>"), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);
-	background-size: 2px 4px, 100% 100%;
-}
+	.wall .overlay-color {
+		transform:  translateY(100%);
+		transition: transform .5s;
+	}
 
-.wall .title h2 { margin-bottom: 0.25em; }
+	.wall .overlay-pattern {
+		// This is almost .pattern-1 except for the path's color and the linear-gradient
+		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>"), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);
+		background-size: 2px 4px, 100% 100%;
+	}
 
-.wall .title { margin-bottom: calc(25px + 70px + #{$gutter * 2}); }
+		.wall .title {
+			margin-bottom: calc(#{$gutter / 2} + 40px + #{$gutter * 2}); // margin between text and snake's bottom + 40px + 2 full gutters
+			position: relative;
+		}
 
-.wall.selected .title h2,
-.wall.selected .title span,
-.wall.selected .title .btn {
-	animation: fade-h2 3s;
-}
-.wall.selected .title span { animation-name: fade-span; }
-.wall.selected .title .btn { animation-name: fade-btn; }
+			.wall .snake {
+				width:  calc(100px + #{$gutter * 2});
+				height: calc(100% + #{$gutter} + #{$gutter / 2} + 40px); // 100% + snake's top + margin between text and snake's bottom + snake's bottom
+				border: 0;
 
-.wall.selected .title .snake path {
-	animation: move-snake 1.5s forwards;
-}
+				overflow: visible; /* Allow to overflow, the path's stroke may overflow */
+				top:  #{-$gutter};
+				left: #{$gutter};
+			}
 
-@keyframes move-snake {
-	0%   { stroke-dashoffset: 1000; }
-	100% { stroke-dashoffset: 0; }
-}
+				.wall .snake path {
+					transition: stroke .5s, stroke-dashoffset 1.5s;
+					stroke-dasharray: 1000 1000;
+					shape-rendering: optimizeSpeed;      /* Prevent stroke's anti-aliasing */
+					vector-effect:   non-scaling-stroke; /* Do not scale the stroke's width (only the path have to be scaled) */
+				}
 
-@keyframes fade-h2 {
-	0%   { opacity: 0; }
-	20%  { opacity: 0; }
-	100% { opacity: 1; }
-}
+			.wall .title .p-larger { display: block; }
 
-@keyframes fade-span {
-	0%   { opacity: 0; }
-	30%  { opacity: 0; }
-	100% { opacity: 1; }
-}
-@keyframes fade-btn {
-	0%   { opacity: 0; }
-	40%  { opacity: 0; }
-	100% { opacity: 1; }
-}
+			.wall .title .btn {
+				position: absolute;
+				left: calc(#{$gutter} + 4px);
+			}
 
-.wall .title .btn {
-	position: absolute;
-	left:   -5px;
-	bottom: -3em;
-}
+				.wall .title .btn i { animation: bounce ease-in-out .5s alternate-reverse infinite; }
 
-.wall .title .btn svg {
-	width: 1.375em;
-	height: 1.375em;
-	animation: bounce ease-out .5s alternate-reverse infinite;
-}
+				@keyframes bounce {
+					to { transform: translateY(.75em); }
+				}
 
-@keyframes bounce {
-	to { transform: translateY(10px); }
-}
+		.wall .intro {
+			position: relative; // Fix a weird bug with Chrome where the content isn't clear after a transition
+			opacity: 0;
+			transform: translateY(-1em);
+			transition: opacity .5s, transform .3s;
+		}
 
-.wall .intro {
-	opacity: 0;
-	transform: translateY(-10px);
-	transition: opacity .5s, transform .3s;
-	transition-delay: .5s;
-}
+		.wall .more {
+			opacity: 0;
+			transition: opacity .3s;
+		}
+
+//.wall .intro {
+//	opacity: 0;
+//	transform: translateY(-10px);
+//	transition: opacity .5s, transform .3s;
+//	transition-delay: .5s;
+//}
+
+//.wall.selected .title h2,
+//.wall.selected .title span,
+//.wall.selected .title .btn {
+//	animation: fade-h2 3s;
+//}
+//.wall.selected .title span { animation-name: fade-span; }
+//.wall.selected .title .btn { animation-name: fade-btn; }
+//
+//.wall.selected .title .snake path {
+//	animation: move-snake 1.5s forwards;
+//}
+//
+//@keyframes move-snake {
+//	0%   { stroke-dashoffset: 1000; }
+//	100% { stroke-dashoffset: 0; }
+//}
+//
+//@keyframes fade-h2 {
+//	0%   { opacity: 0; }
+//	20%  { opacity: 0; }
+//	100% { opacity: 1; }
+//}
+//
+//@keyframes fade-span {
+//	0%   { opacity: 0; }
+//	30%  { opacity: 0; }
+//	100% { opacity: 1; }
+//}
+//@keyframes fade-btn {
+//	0%   { opacity: 0; }
+//	40%  { opacity: 0; }
+//	100% { opacity: 1; }
+//}
 
 .wall.expanded .overlay-color { transform: none; }
-.wall.expanded .snake path { stroke: $color-white; }
-.wall.expanded .intro {
-	opacity: 1;
-	transform: none;
-}
-.wall.expanded .title .btn { display: none; }
+.wall.expanded .snake path    { stroke: $color-white; }
+.wall.expanded .title .btn    { display: none; }
+.wall.expanded .intro { transform: none; }
+.wall.expanded .intro,
+.wall.expanded .more { opacity: 1; }
 
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
-	.obsession-#{$i} .snake         { color: $color; }
+	.obsession-#{$i} svg.snake      { stroke: $color; }
 	.obsession-#{$i} .overlay-color { background: rgba($color, .9) }
 }
 
 @include media("md") {
 	$gutter: grid-gutter("md");
+
+	.wall .snake { width:  210px + 4px + 4px; }
+	.wall .title .btn { left: -1em; }
+
 	@if $gutter != grid-gutter("sm") {
-		.wall .title { margin-bottom: calc(25px + 70px + #{$gutter * 2}); }
+		.wall .title { margin-bottom: calc(#{$gutter / 2} + 70px + #{$gutter * 2}); } // margin between text and snake's bottom + 40px + 2 full gutters
+
+			.wall .snake {
+				height: calc(100% + #{$gutter} + #{$gutter / 2} + 70px); // 100% + snake's top + margin between text and snake's bottom + snake's bottom
+				top:  calc(#{-$gutter} - 4px);
+				left: calc(#{-$gutter} - 4px);
+			}
 	}
 }
 
 @include media("lg") {
 	$gutter: grid-gutter("lg");
 	@if $gutter != grid-gutter("md") {
-		.wall .title { margin-bottom: calc(25px + 70px + #{$gutter * 2}); }
+		.wall .title { margin-bottom: calc(#{$gutter / 2} + 70px + #{$gutter * 2}); } // margin between text and snake's bottom + 40px + 2 full gutters
+
+			.wall .snake {
+				height: calc(100% + #{$gutter} + #{$gutter / 2} + 70px); // 100% + snake's top + margin between text and snake's bottom + snake's bottom
+				top:  calc(#{-$gutter} - 4px);
+				left: calc(#{-$gutter} - 4px);
+			}
 	}
 }
 /* @end .wall */
