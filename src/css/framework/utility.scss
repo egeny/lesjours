@@ -8,13 +8,14 @@
 %fadable-active { @include fadable-active; }
 .responsive { @include responsive; }
 
+/* Easy link's style */
 .link,
 %link {
 	background-image: linear-gradient(to bottom, $color-media, $color-media);
 	background-position: 0 1em;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
-	padding: 0.125em 0;
+	padding: .125em 0;
 
 	// Don't use display: inline-block since it might cause issues with long links
 	transition: background-position .15s;
@@ -29,6 +30,11 @@
 .link:hover,
 .link:focus,
 %link-active { background-position: 0 0; }
+
+@each $color in $colors-obsessions {
+	$i: index($colors-obsessions, $color);
+	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+}
 
 .link-unstyled {
 	text-decoration: none;
