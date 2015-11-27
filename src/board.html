@@ -2,7 +2,6 @@
 {% extends "partials/layout.html" %}
 
 {% block content %}
-
 <ul>
 	<li><a href="#episodes"><i><img src="img/btn-doc.png" alt="" /></i> Les épisodes</a></li>
 	<li><a href="#personnages"><i><img src="img/btn-people.png" alt="" /></i> Les personnages</a></li>
@@ -13,18 +12,18 @@
 	<li><a href="#documents"><i><img src="img/btn-folder.png" alt="" /></i> Les documents</a></li>
 </ul>
 
-<div class="container">
+<div class="container obsession-1">
 	<div class="row">
-		<div class="col col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
-			<h2>Les années collège</h2>
+		<div class="col gutter-0 col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
+			<h2 class="gutter-left-1 style-meta"><a href="#" class="link obsession">Les années collège</a></h2>
 			<div class="tab-container">
 				<section id="episodes" class="tab">
-					<h3>Les épisodes</h3>
+					<h3 class="tab-title gutter-left-1 style-meta-larger">Les épisodes</h3>
 				</section><!-- end of #episodes -->
 
 				<section id="personnages" class="tab">
-					<h3>Les personnages</h3>
-					<ul class="mosaic">
+					<h3 class="tab-title gutter-left-1 style-meta-larger">Les personnages</h3>
+					<ul class="mosaic row list-unstyled">
 						{%
 							set items = [
 								{
@@ -96,8 +95,8 @@
 				</section><!-- end of #personnages -->
 
 				<section id="images" class="tab">
-					<h3>Les images</h3>
-					<ul class="mosaic">
+					<h3 class="tab-title gutter-left-1 style-meta-larger">Les images</h3>
+					<ul class="mosaic row list-unstyled">
 						{%
 							set items = []
 						%}
@@ -108,8 +107,8 @@
 				</section><!-- end of #images -->
 
 				<section id="data" class="tab">
-					<h3>Les data</h3>
-					<ul class="mosaic">
+					<h3 class="tab-title gutter-left-1 style-meta-larger">Les data</h3>
+					<ul class="mosaic row list-unstyled">
 						{%
 							set items = [
 								{
@@ -152,8 +151,8 @@
 				</section><!-- end of #data -->
 
 				<section id="lieux" class="tab">
-					<h3>Les lieux</h3>
-					<ul class="mosaic">
+					<h3 class="tab-title gutter-left-1 style-meta-larger">Les lieux</h3>
+					<ul class="mosaic row list-unstyled">
 						{%
 							set items = [
 								{

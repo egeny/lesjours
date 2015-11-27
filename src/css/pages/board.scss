@@ -1,119 +1,88 @@
 /* @group Board */
 $gutter: grid-gutter("sm");
 
-.mosaic {
-	@extend .list-unstyled;
-	@extend .row;
-}
+.tab-title { margin-bottom: .75em; }
 
-	.mosaic li {
-		@extend .col-sm-2;
-		padding: $gutter / 2;
+.mosaic li { overflow: hidden; }
+
+	.mosaic a {
+		display: block;
+		position: relative;
+		color: currentColor;
 	}
 
-		.mosaic a {
-			display: block;
-			position: relative;
-			color: currentColor;
+		// Prepare the overlay's offsets (will be re-used)
+		$padding-top:    $gutter * 1.5;
+		$padding-right:  $gutter;
+		$padding-bottom: $gutter * 4;
+		$padding-left:   $gutter;
+
+		.mosaic .overlay {
+			@extend %fadable;
+			background-color: rgba($color-media, .9);
+			padding: $padding-top $padding-right $padding-bottom $padding-left;
 		}
 
-			.mosaic img { @extend .responsive; }
+		.mosaic a:hover .overlay,
+		.mosaic a:focus .overlay { @extend %fadable-active }
 
-			.mosaic .overlay { @extend %fadable; }
+			.mosaic .snake-3        { margin-left: $gutter; }
+			.mosaic .snake-3:before { border-color: $color-white; }
 
-			.mosaic a:hover .overlay,
-			.mosaic a:focus .overlay { @extend %fadable-active }
+			/* Fix the background position by setting the .snake-3's offset (padding-left + margin-left and padding-top) */
+			.mosaic .snake-3 .snake-container,
+			.mosaic .snake-3 .snake-wrapper { background-position: #{-($padding-left + $gutter)} #{-$padding-top}; }
 
-			.mosaic .title {
-				@extend %font-brandon;
-				@include font-weight-black("brandon");
-				font-size: 1.5em;
-				line-height: 1.25;
-			}
+			/* Fix the background size by calculating the snake-3's parent's width (100% + offset left + offset right) */
+			.mosaic .snake-3 .snake-container { background-size: calc(100% + #{$padding-left + $gutter + $padding-right}); }
+			.mosaic .snake-3 .snake-wrapper   { background-color: rgba($color-media, .9); }
 
-			.mosaic .subtitle {
-				@extend %font-brandon;
-				@include font-weight-medium("brandon");
-				font-size: 0.875em;
-				text-transform: uppercase;
-			}
+			.mosaic .title    { margin-bottom: 0; }
+			.mosaic .subtitle { text-transform: uppercase; }
 
-			.mosaic .desc {
-				margin-right: $gutter;
-				@extend %font-proxima;
-				@include font-weight-semi-bold("brandon");
-			}
+		.mosaic .desc {
+			@extend %font-proxima;
+			@include font-weight-semi-bold("proxima");
+			line-height: 1.625;
+		}
 
-			.mosaic .more {
-				@extend .text-center;
-				position: absolute;
-				bottom: $gutter;
-				right: 0;
-				left:  0;
-			}
-
-			.mosaic .overlay,
-			%mosaic-overlay { background-color: rgba($color-media, .9); }
-
-			// Prepare the offsets (will be re-used)
-			$padding-top:    $gutter * 1.5;
-			$padding-right:  $gutter;
-			$padding-bottom: $gutter * 4;
-			$padding-left:   $gutter * 2;
-
-			.mosaic .overlay { padding: $padding-top $padding-right $padding-bottom $padding-left; }
-
-				.mosaic .snake-3 { margin-bottom: $gutter * 2.5; }
-				.mosaic .snake-3:before { border-color: $color-white; }
-
-					/* Fix the background position by setting the .snake-3's offset (margin-left and margin-top) */
-					.mosaic .snake-3 .snake-container,
-					.mosaic .snake-3 .snake-wrapper { background-position: #{-$padding-left} #{-$padding-top}; }
-
-					/* Fix the background size by calculating the snake-3's parent's width (100% + margin-left and margin-right) */
-					.mosaic .snake-3 .snake-container { background-size: calc(100% + #{$padding-left + $padding-right}); }
-
-					.mosaic .snake-3 .snake-wrapper { @extend %mosaic-overlay; }
+		.mosaic .more {
+			position: absolute;
+			right:  0;
+			bottom: 0;
+			left:   0;
+		}
 
 @include media("md") {
 	$gutter: grid-gutter("md");
 
-	.mosaic li { @extend .col-md-3; }
+	.mosaic li { width: 50%; }
 
 	@if $gutter != grid-gutter("sm") {
-		.mosaic li       { padding: $gutter / 2; }
-		.mosaic .snake-3 { margin-bottom: $gutter * 2.5; }
-		.mosaic .desc    { margin-right: $gutter; }
-		.mosaic .more    { bottom: $gutter; }
-
 		// Prepare the offsets (will be re-used)
 		$padding-top:    $gutter * 1.5;
 		$padding-right:  $gutter;
 		$padding-bottom: $gutter * 4;
-		$padding-left:   $gutter * 2;
+		$padding-left:   $gutter;
 
 		.mosaic .overlay { padding: $padding-top $padding-right $padding-bottom $padding-left; }
+		.mosaic .snake-3 { margin-left: $gutter; }
 
-		/* Fix the background position by setting the .snake-3's offset (margin-left and margin-top) */
+		/* Fix the background position by setting the .snake-3's offset (padding-left + margin-left and padding-top) */
 		.mosaic .snake-3 .snake-container,
-		.mosaic .snake-3 .snake-wrapper { background-position: #{-$padding-left} #{-$padding-top}; }
+		.mosaic .snake-3 .snake-wrapper { background-position: #{-($padding-left + $gutter)} #{-$padding-top}; }
 
-		/* Fix the background size by calculating the snake-3's parent's width (100% + margin-left and margin-right) */
-		.mosaic .snake-3 .snake-container { background-size: calc(100% + #{$padding-left + $padding-right}); }
+		/* Fix the background size by calculating the snake-3's parent's width (100% + offset left + offset right) */
+		.mosaic .snake-3 .snake-container { background-size: calc(100% + #{$padding-left + $gutter + $padding-right}); }
 	}
 }
 
 @include media("lg") {
 	$gutter: grid-gutter("lg");
 
-	.mosaic li { @extend .col-lg-3; }
+	.mosaic li { width: 33.333333%; }
 
 	@if $gutter != grid-gutter("md") {
-		.mosaic li       { padding: $gutter / 2; }
-		.mosaic .snake-3 { margin-bottom: $gutter * 2.5; }
-		.mosaic .desc    { margin-right: $gutter; }
-		.mosaic .more    { bottom: $gutter; }
-
 		// Prepare the offsets (will be re-used)
 		$padding-top:    $gutter * 1.5;
 		$padding-right:  $gutter;
@@ -121,13 +90,14 @@ $gutter: grid-gutter("sm");
 		$padding-left:   $gutter * 2;
 
 		.mosaic .overlay { padding: $padding-top $padding-right $padding-bottom $padding-left; }
+		.mosaic .snake-3 { margin-left: $gutter; }
 
-		/* Fix the background position by setting the .snake-3's offset (margin-left and margin-top) */
+		/* Fix the background position by setting the .snake-3's offset (padding-left + margin-left and padding-top) */
 		.mosaic .snake-3 .snake-container,
-		.mosaic .snake-3 .snake-wrapper { background-position: #{-$padding-left} #{-$padding-top}; }
+		.mosaic .snake-3 .snake-wrapper { background-position: #{-($padding-left + $gutter)} #{-$padding-top}; }
 
-		/* Fix the background size by calculating the snake-3's parent's width (100% + margin-left and margin-right) */
-		.mosaic .snake-3 .snake-container { background-size: calc(100% + #{$padding-left + $padding-right}); }
+		/* Fix the background size by calculating the snake-3's parent's width (100% + offset left + offset right) */
+		.mosaic .snake-3 .snake-container { background-size: calc(100% + #{$padding-left + $gutter + $padding-right}); }
 	}
 }
 /* @end Board */
