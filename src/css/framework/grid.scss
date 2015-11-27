@@ -53,10 +53,10 @@
 .col-center { align-self: center;     }
 .col-bottom { align-self: flex-end;   }
 
-.gutter-top-0    { margin-top:    0; }
-.gutter-right-0  { padding-right: 0; }
-.gutter-bottom-0 { margin-bottom: 0; }
-.gutter-left-0   { padding-left:  0; }
+.gutter-top-0    { margin-top:    0 !important; }
+.gutter-right-0  { padding-right: 0 !important; }
+.gutter-bottom-0 { margin-bottom: 0 !important; }
+.gutter-left-0   { padding-left:  0 !important; }
 .gutter-0        {
 	@extend .gutter-right-0;
 	@extend .gutter-left-0;
