@@ -26,6 +26,22 @@ $gutter: grid-gutter("sm");
 }
 
 [role="tab"] span { display: none; }
+
+@include media("lg") {
+	.txt li { width: 50%; }
+}
+.txt li p { margin-bottom: .5em; }
+.txt .snake-1:before {
+	width:  1.5em;
+	height: 1.5em;
+	left: calc(-1.5em - 4px);
+}
+.txt .link-unstyled:hover,
+.txt .link-unstyled:focus,
+.txt .link-unstyled:hover .style-meta,
+.txt .link-unstyled:focus .style-meta {
+	color: $color-media;
+}
 /* end WIP */
 
 .tab-title { margin-bottom: .75em; }
