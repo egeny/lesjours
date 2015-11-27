@@ -1,3 +1,3 @@
 <svg class="snake" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 300" preserveAspectRatio="none">
-	<path stroke-width="4" d="M218 25 V2 H2 V298 H218 v-70" />
+	<path fill="none" stroke-width="4" d="M218 25 V2 H2 V298 H218 v-70" />
 </svg>

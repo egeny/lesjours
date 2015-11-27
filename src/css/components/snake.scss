@@ -2,27 +2,6 @@
 /*csslint known-properties:false */
 $gutter: grid-gutter("sm");
 
-svg.snake {
-	width:  220px;
-	height: calc(100% + 25px + 70px + 25px); // 100% + snake's top + snake's bottom + margin between text and snake's bottom
-	border: 0;
-
-	overflow: visible; /* Allow to overflow, the path's stroke may overflow */
-	position: absolute;
-	top:  -25px;
-	left: -20px;
-}
-
-	svg.snake path {
-		transition: stroke .5s, stroke-dashoffset 1.5s;
-
-		fill: none;
-		stroke: currentColor;
-		stroke-dasharray: 1000 1000;
-		shape-rendering: optimizeSpeed;      /* Prevent stroke's anti-aliasing */
-		vector-effect:   non-scaling-stroke; /* Do not scale the stroke's width (only the path have to be scaled) */
-	}
-
 .snake {
 	border: 4px solid $color-brand;
 	position: absolute;
