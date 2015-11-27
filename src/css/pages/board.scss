@@ -4,6 +4,28 @@ $gutter: grid-gutter("sm");
 /* WIP */
 [role="tab"][aria-selected="true"] { color: $color-darker; }
 [role="tabpanel"][aria-hidden="true"] { display: none; }
+
+[role="tablist"] li {
+	width: (100% / 8);
+	height: 85px;
+	text-align: center;
+}
+[role="tab"] {
+	display: block;
+	text-decoration: none;
+	color: $color-brand;
+}
+[role="tab"]:before {
+	display: block;
+	content: "●";
+	color: #F1CFCA; // FIXME
+}
+
+[role="tab"][aria-selected="true"]:before {
+	color: $color-brand;
+}
+
+[role="tab"] span { display: none; }
 /* end WIP */
 
 .tab-title { margin-bottom: .75em; }
