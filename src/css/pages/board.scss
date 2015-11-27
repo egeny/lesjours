@@ -1,6 +1,11 @@
 /* @group Board */
 $gutter: grid-gutter("sm");
 
+/* WIP */
+[role="tab"][aria-selected="true"] { color: $color-darker; }
+[role="tabpanel"][aria-hidden="true"] { display: none; }
+/* end WIP */
+
 .tab-title { margin-bottom: .75em; }
 
 .mosaic li { overflow: hidden; }

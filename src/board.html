@@ -2,14 +2,14 @@
 {% extends "partials/layout.html" %}
 
 {% block content %}
-<ul>
-	<li><a href="#episodes"><i><img src="img/btn-doc.png" alt="" /></i> Les épisodes</a></li>
-	<li><a href="#personnages"><i><img src="img/btn-people.png" alt="" /></i> Les personnages</a></li>
-	<li><a href="#images"><i><img src="img/btn-image.png" alt="" /></i> Les images</a></li>
-	<li><a href="#data"><i><img src="img/btn-data.png" alt="" /></i> Les data</a></li>
-	<li><a href="#lieux"><i><img src="img/btn-geo.png" alt="" /></i> Les lieux</a></li>
-	<li><a href="#bande-originale"><i><img src="img/btn-ipod.png" alt="" /></i> La bande originale</a></li>
-	<li><a href="#documents"><i><img src="img/btn-folder.png" alt="" /></i> Les documents</a></li>
+<ul class="col-md-left-1 list-inline" role="tablist">
+	<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="false" tabindex="-1"><i><img src="img/btn-doc.png" alt="" /></i> <span>Les épisodes</span></a></li>
+	<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="true" tabindex="0"><i><img src="img/btn-people.png" alt="" /></i> <span>Les personnages</span></a></li>
+	<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1"><i><img src="img/btn-image.png" alt="" /></i> <span>Les images</span></a></li>
+	<li role="presentation"><a role="tab" id="tab-data" aria-controls="data" href="#data" aria-selected="false" tabindex="-1"><i><img src="img/btn-data.png" alt="" /></i> <span>Les data</span></a></li>
+	<li role="presentation"><a role="tab" id="tab-lieux" aria-controls="lieux" href="#lieux" aria-selected="false" tabindex="-1"><i><img src="img/btn-geo.png" alt="" /></i> <span>Les lieux</span></a></li>
+	<li role="presentation"><a role="tab" id="tab-bande-originale" aria-controls="bande-originale" href="#bande-originale" aria-selected="false" tabindex="-1"><i><img src="img/btn-ipod.png" alt="" /></i> <span>La bande originale</span></a></li>
+	<li role="presentation"><a role="tab" id="tab-documents" aria-controls="documents" href="#documents" aria-selected="false" tabindex="-1"><i><img src="img/btn-folder.png" alt="" /></i> <span>Les documents</span></a></li>
 </ul>
 
 <div class="container obsession-1">
@@ -17,11 +17,11 @@
 		<div class="col gutter-0 col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
 			<h2 class="gutter-left-1 style-meta"><a href="#" class="link obsession">Les années collège</a></h2>
 			<div class="tab-container">
-				<section id="episodes" class="tab">
+				<section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="true">
 					<h3 class="tab-title gutter-left-1 style-meta-larger">Les épisodes</h3>
 				</section><!-- end of #episodes -->
 
-				<section id="personnages" class="tab">
+				<section id="personnages" class="tab" role="tabpanel" aria-labelledby="tab-personnages" aria-hidden="false">
 					<h3 class="tab-title gutter-left-1 style-meta-larger">Les personnages</h3>
 					<ul class="mosaic row list-unstyled">
 						{%
@@ -94,7 +94,7 @@
 					</ul>
 				</section><!-- end of #personnages -->
 
-				<section id="images" class="tab">
+				<section id="images" class="tab" role="tabpanel" aria-labelledby="tab-images" aria-hidden="true">
 					<h3 class="tab-title gutter-left-1 style-meta-larger">Les images</h3>
 					<ul class="mosaic row list-unstyled">
 						{%
@@ -106,7 +106,7 @@
 					</ul>
 				</section><!-- end of #images -->
 
-				<section id="data" class="tab">
+				<section id="data" class="tab" role="tabpanel" aria-labelledby="tab-data" aria-hidden="true">
 					<h3 class="tab-title gutter-left-1 style-meta-larger">Les data</h3>
 					<ul class="mosaic row list-unstyled">
 						{%
@@ -150,7 +150,7 @@
 					</ul>
 				</section><!-- end of #data -->
 
-				<section id="lieux" class="tab">
+				<section id="lieux" class="tab" role="tabpanel" aria-labelledby="tab-lieux" aria-hidden="true">
 					<h3 class="tab-title gutter-left-1 style-meta-larger">Les lieux</h3>
 					<ul class="mosaic row list-unstyled">
 						{%
@@ -183,8 +183,8 @@
 					</ul>
 				</section><!-- end of #lieux -->
 
-				<section id="bande-originale" class="tab">
-					<h3>La bande originale</h3>
+				<section id="bande-originale" class="tab txt" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="true">
+					<h3 class="tab-title gutter-left-1 style-meta-larger">La bande originale</h3>
 
 					<h4>Interviews</h4>
 					<ul>
@@ -229,8 +229,8 @@
 					</ul>
 				</section><!-- end of #bande-originale -->
 
-				<section id="documents" class="tab">
-					<h3>Les documents</h3>
+				<section id="documents" class="tab txt" role="tabpanel" aria-labelledby="tab-documents" aria-hidden="true">
+					<h3 class="tab-title gutter-left-1 style-meta-larger">Les documents</h3>
 
 					<h4>Bibliographie</h4>
 					<ul>

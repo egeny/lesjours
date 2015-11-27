@@ -1,5 +1,24 @@
 $("body").addClass("js");
 
+$("[role=tablist] a").click(function(e) {
+	e.preventDefault();
+
+	var
+		$this   = $(this),
+		$links  = $this.parent().siblings().find("[aria-selected]"),
+		$target = $("#" + $this.attr("aria-controls")),
+		$panels = $target.siblings("[role=tabpanel]");
+
+	$links.attr("aria-selected", false);
+	$links.attr("tabindex", -1);
+
+	$this.attr("aria-selected", true);
+	$this.attr("tabindex", 0);
+
+	$panels.attr("aria-hidden", true);
+	$target.attr("aria-hidden", false);
+});
+
 $(".wall .title .btn").click(function(e) {
 	e.preventDefault();
 	$(this).parents(".wall").toggleClass("expanded");
