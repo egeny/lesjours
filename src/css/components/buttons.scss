@@ -42,6 +42,7 @@
 	.btn:focus:before { transform: scale(0.833333); }
 
 	.btn i {
+		display: block; // Recommended if you want to animate with firefox
 		position: relative;
 		font-style: normal;
 	}
@@ -56,5 +57,5 @@
 .btn-primary            { color:      $color-main;  }
 .btn-primary:before     { background: $color-white; }
 .btn-transparent        { color:      currentColor; }
-.btn-transparent:before { background: transparent;  }
+.btn-transparent:before { content: none; }
 /* @end Buttons */
