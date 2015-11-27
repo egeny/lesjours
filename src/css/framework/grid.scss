@@ -53,6 +53,15 @@
 .col-center { align-self: center;     }
 .col-bottom { align-self: flex-end;   }
 
+.gutter-top-0    { margin-top:    0; }
+.gutter-right-0  { padding-right: 0; }
+.gutter-bottom-0 { margin-bottom: 0; }
+.gutter-left-0   { padding-left:  0; }
+.gutter-0        {
+	@extend .gutter-right-0;
+	@extend .gutter-left-0;
+}
+
 // Prepare a mixin to easily add some custom rules depending on breakpoint
 @mixin media($name, $only: false) {
 	$sm: map-get($grids, "sm");
@@ -169,8 +178,7 @@ $last-gutter:     null;
 			}
 		}
 
-		// Add some special .gutter-top-X and .gutter-bottom-X for special margin
-		// Trust me, you don't want to refactor what you will find below
+		// Add some special .gutter-top-X for special margin
 		@for $i from 1 through 12 {
 			%gutter-top-#{$gutter}-#{$i} {
 				@if $gutter != $last-gutter { margin-top: $gutter * $i; }
@@ -195,18 +203,11 @@ $last-gutter:     null;
 				}
 			}
 
-			// Do not "merge" these selectors
 			.gutter-top-#{$i}    { @extend %gutter-top-#{$gutter}-#{$i};    }
 			.gutter-right-#{$i}  { @extend %gutter-right-#{$gutter}-#{$i};  }
 			.gutter-bottom-#{$i} { @extend %gutter-bottom-#{$gutter}-#{$i}; }
 			.gutter-left-#{$i}   { @extend %gutter-left-#{$gutter}-#{$i};   }
 			.gutter-#{$i}        { @extend %gutter-#{$gutter}-#{$i};        }
-
-			.gutter-#{$device}-top-#{$i}    { @extend %gutter-top-#{$gutter}-#{$i};    }
-			.gutter-#{$device}-right-#{$i}  { @extend %gutter-right-#{$gutter}-#{$i};  }
-			.gutter-#{$device}-bottom-#{$i} { @extend %gutter-bottom-#{$gutter}-#{$i}; }
-			.gutter-#{$device}-left-#{$i}   { @extend %gutter-left-#{$gutter}-#{$i};   }
-			.gutter-#{$device}-#{$i}        { @extend %gutter-#{$gutter}-#{$i};        }
 		}
 	}
 
@@ -222,6 +223,27 @@ $last-gutter:     null;
 		.col-#{$device}-top    { align-self: flex-start; }
 		.col-#{$device}-center { align-self: center;     }
 		.col-#{$device}-bottom { align-self: flex-end;   }
+
+		.gutter-#{$device}-top-0    { margin-top:    0; }
+		.gutter-#{$device}-right-0  { padding-right: 0; }
+		.gutter-#{$device}-bottom-0 { margin-bottom: 0; }
+		.gutter-#{$device}-left-0   { padding-left:  0; }
+		.gutter-#{$device}-0        {
+			@extend .gutter-#{$device}-right-0;
+			@extend .gutter-#{$device}-left-0;
+		}
+
+		// Add some special .gutter-$device-top-X for special margin
+		@for $i from 1 through 12 {
+			.gutter-#{$device}-top-#{$i}    { margin-top:    $gutter * $i; }
+			.gutter-#{$device}-right-#{$i}  { padding-right: $gutter * $i; }
+			.gutter-#{$device}-bottom-#{$i} { margin-bottom: $gutter * $i; }
+			.gutter-#{$device}-left-#{$i}   { padding-left:  $gutter * $i; }
+			.gutter-#{$device}-#{$i}        {
+				@extend .gutter-#{$device}-right-#{$i};
+				@extend .gutter-#{$device}-left-#{$i};
+			}
+		}
 	}
 
 	$last-breakpoint: $breakpoint;
