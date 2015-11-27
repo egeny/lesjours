@@ -30,6 +30,11 @@
 .link:focus,
 %link-active { background-position: 0 0; }
 
+.link-unstyled {
+	text-decoration: none;
+	color: currentColor;
+}
+
 /* List utility classes */
 .list-unstyled { list-style: none; }
 

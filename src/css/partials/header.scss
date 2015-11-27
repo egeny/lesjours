@@ -37,14 +37,10 @@
 #menu.opened { @extend %fadable-active; }
 
 	#menu a {
+		@extend .link-unstyled;
 		margin: 0.75em 0;
-
 		display: inline-block;
-
-		text-decoration: none;
 		text-transform: uppercase;
-
-		color: currentColor;
 	}
 
 		#menu a i {
