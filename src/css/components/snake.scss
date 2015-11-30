@@ -14,7 +14,8 @@ $gutter: grid-gutter("sm");
 	.snake-1:before,
 	.snake-2:before,
 	.snake-3:before {
-		@extend .snake;
+		border: 4px solid $color-brand;
+		position: absolute;
 		content: "";
 	}
 
