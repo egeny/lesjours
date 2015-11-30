@@ -36,7 +36,10 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 audio, canvas, iframe, img, svg, video { vertical-align: middle; }
 
 /* Add a nice cursor for abbreviations */
-abbr { cursor: help; }
+abbr {
+	cursor: help;
+	text-decoration: none;
+}
 
 /* Disable the default italic for address */
 address { font-style: inherit; }

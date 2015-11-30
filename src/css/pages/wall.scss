@@ -29,6 +29,7 @@ $gutter: grid-gutter("sm");
 				width:  calc(100px + #{$gutter * 2});
 				height: calc(100% + #{$gutter} + #{$gutter / 2} + 40px); // 100% + snake's top + margin between text and snake's bottom + snake's bottom
 				border: 0;
+				stroke-width: 4px;
 
 				overflow: visible; /* Allow to overflow, the path's stroke may overflow */
 				top:  #{-$gutter};
