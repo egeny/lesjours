@@ -86,6 +86,9 @@ ul, ol { padding: 0; }
 	display: inline-block;
 }
 
+/* ARIA FTW */
+[aria-hidden=true] { display: none; }
+
 @import "components/components";
 @import "partials/partials";
 

@@ -2,7 +2,7 @@
 {% extends "partials/layout.html" %}
 
 {% block content %}
-<ul class="col-md-left-1 list-inline" role="tablist">
+<ul id="board-header" class="col-sm-left-1 col-md-left-1 list-inline text-center" role="tablist">
 	<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="false" tabindex="-1">{{ icon("blank") }} <span>Les épisodes</span></a></li>
 	<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("blank") }} <span>Les personnages</span></a></li>
 	<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("blank") }} <span>Les images</span></a></li>
@@ -18,11 +18,11 @@
 			<h2 class="gutter-left-1 style-meta"><a href="#" class="link obsession">Les années collège</a></h2>
 			<div class="tab-container">
 				<section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="true">
-					<h3 class="tab-title gutter-left-1 style-meta-larger">Les épisodes</h3>
+					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les épisodes</h3>
 				</section><!-- end of #episodes -->
 
-				<section id="personnages" class="tab" role="tabpanel" aria-labelledby="tab-personnages" aria-hidden="false">
-					<h3 class="tab-title gutter-left-1 style-meta-larger">Les personnages</h3>
+				<section id="personnages" class="tab" role="tabpanel" aria-labelledby="tab-personnages" aria-hidden="true">
+					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les personnages</h3>
 					<ul class="mosaic row list-unstyled">
 						{%
 							set items = [
@@ -94,11 +94,18 @@
 					</ul>
 				</section><!-- end of #personnages -->
 
-				<section id="images" class="tab" role="tabpanel" aria-labelledby="tab-images" aria-hidden="true">
-					<h3 class="tab-title gutter-left-1 style-meta-larger">Les images</h3>
+				<section id="images" class="tab" role="tabpanel" aria-labelledby="tab-images" aria-hidden="false">
+					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les images</h3>
 					<ul class="mosaic row list-unstyled">
 						{%
-							set items = []
+							set items = [
+								{ img: "img/board/image-1.jpg" },
+								{ img: "img/board/image-2.jpg" },
+								{ img: "img/board/image-3.jpg" },
+								{ img: "img/board/image-4.jpg" },
+								{ img: "img/board/image-5.jpg" },
+								{ img: "img/board/image-6.jpg" }
+							]
 						%}
 						{% for item in items %}
 							{% include "partials/mosaic-item.html" %}
@@ -107,7 +114,7 @@
 				</section><!-- end of #images -->
 
 				<section id="data" class="tab" role="tabpanel" aria-labelledby="tab-data" aria-hidden="true">
-					<h3 class="tab-title gutter-left-1 style-meta-larger">Les data</h3>
+					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les data</h3>
 					<ul class="mosaic row list-unstyled">
 						{%
 							set items = [
@@ -151,7 +158,7 @@
 				</section><!-- end of #data -->
 
 				<section id="lieux" class="tab" role="tabpanel" aria-labelledby="tab-lieux" aria-hidden="true">
-					<h3 class="tab-title gutter-left-1 style-meta-larger">Les lieux</h3>
+					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les lieux</h3>
 					<ul class="mosaic row list-unstyled">
 						{%
 							set items = [
@@ -183,19 +190,25 @@
 					</ul>
 				</section><!-- end of #lieux -->
 
-				<section id="bande-originale" class="tab txt" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="true">
-					<h3 class="tab-title gutter-left-1 style-meta-larger">La bande originale</h3>
+				<section id="bande-originale" class="tab col" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="true">
+					<h3 class="gutter-bottom-2 style-meta-larger">La bande originale</h3>
 
-					<h4 class="style-meta-large">Interviews</h4>
-					<ul class="row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
+					<ul class="gutter-bottom-3 style-meta list-inline quick-links">
+						<li><a class="link" href="#interviews" />Interviews</a></li>
+						<li><a class="link" href="#playlists" />Playlists</a></li>
+						<li><a class="link" href="#ambiances" />Ambiances</a></li>
+					</ul>
+
+					<h4 id="interviews" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Interviews {{ icon("blank", class="color-media") }}</h4>
+					<ul class="articles row list-unstyled">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
 							<a class="link-unstyled" href="#">
 								<h5 class="h5 snake-1"><span class="snake-container">Titre interview 1</span></h5>
 								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
 								<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
 							</a>
 						</li>
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
 							<a class="link-unstyled" href="#">
 								<h5 class="h5 snake-1"><span class="snake-container">Titre interview 2</span></h5>
 								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
@@ -204,16 +217,16 @@
 						</li>
 					</ul>
 
-					<h4 class="style-meta-large">Playlists</h4>
-					<ul class="row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
+					<h4 id="playlists" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Playlists {{ icon("blank", class="color-media") }}</h4>
+					<ul class="articles row list-unstyled">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
 							<a class="link-unstyled" href="#">
 								<h5 class="h5 snake-1"><span class="snake-container">Playlist 1</span></h5>
 								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
 								<span class="style-meta"><time>25 sept. 2015</time></span>
 							</a>
 						</li>
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
 							<a class="link-unstyled" href="#">
 								<h5 class="h5 snake-1"><span class="snake-container">Playlist numéro 2</span></h5>
 								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
@@ -222,16 +235,16 @@
 						</li>
 					</ul>
 
-					<h4 class="style-meta-large">Ambiances</h4>
-					<ul class="row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
+					<h4 id="ambiances" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Ambiances {{ icon("blank", class="color-media") }}</h4>
+					<ul class="articles row list-unstyled">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
 							<a class="link-unstyled" href="#">
 								<h5 class="h5 snake-1"><span class="snake-container">Ambiance numéro 1</span></h5>
 								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
 								<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
 							</a>
 						</li>
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
 							<a class="link-unstyled" href="#">
 								<h5 class="h5 snake-1"><span class="snake-container">Ambiance numéro 2</span></h5>
 								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
@@ -241,48 +254,66 @@
 					</ul>
 				</section><!-- end of #bande-originale -->
 
-				<section id="documents" class="tab txt" role="tabpanel" aria-labelledby="tab-documents" aria-hidden="true">
-					<h3 class="tab-title gutter-left-1 style-meta-larger">Les documents</h3>
+				<section id="documents" class="tab col" role="tabpanel" aria-labelledby="tab-documents" aria-hidden="true">
+					<h3 class="gutter-bottom-2 style-meta-larger">Les documents</h3>
 
-					<h4 class="style-meta-large">Bibliographie</h4>
-					<ul class="row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
-							<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 1</span></h5>
-							<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-							<span class="style-meta">Nom de l'auteur • éditeur</span>
+					<ul class="gutter-bottom-3 style-meta list-inline quick-links">
+						<li><a class="link" href="#bibliographie" />Bibliographie</a></li>
+						<li><a class="link" href="#telechargements" />Téléchargements</a></li>
+						<li><a class="link" href="#scans" />Scans</a></li>
+					</ul>
+
+					<h4 id="bibliographie" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Bibliographie {{ icon("blank", class="color-media") }}</h4>
+					<ul class="articles row list-unstyled">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+							<a class="link-unstyled" href="#">
+								<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 1</span></h5>
+								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+								<span class="style-meta">Nom de l'auteur • éditeur</span>
+							</a>
 						</li>
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
-							<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 2</span></h5>
-							<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-							<span class="style-meta">Nom de l'auteur • éditeur</span>
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+							<a class="link-unstyled" href="#">
+								<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 2</span></h5>
+								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+								<span class="style-meta">Nom de l'auteur • éditeur</span>
+							</a>
 						</li>
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
-							<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 3</span></h5>
-							<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-							<span class="style-meta">Nom de l'auteur • éditeur</span>
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+							<a class="link-unstyled" href="#">
+								<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 3</span></h5>
+								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+								<span class="style-meta">Nom de l'auteur • éditeur</span>
+							</a>
 						</li>
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
-							<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 4</span></h5>
-							<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-							<span class="style-meta">Nom de l'auteur • éditeur</span>
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+							<a class="link-unstyled" href="#">
+								<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 4</span></h5>
+								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+								<span class="style-meta">Nom de l'auteur • éditeur</span>
+							</a>
 						</li>
 					</ul>
 
-					<h4 class="style-meta-large">Téléchargements</h4>
-					<ul class="row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
-							<h5 class="h5 snake-1"><span class="snake-container">Document numéro 1 pdf</span></h5>
-							<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-							<span class="style-meta">Nom de l'auteur</span>
+					<h4 id="telechargements" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Téléchargements {{ icon("blank", class="color-media") }}</h4>
+					<ul class="articles row list-unstyled">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+							<a class="link-unstyled" href="#">
+								<h5 class="h5 snake-1"><span class="snake-container">Document numéro 1 pdf</span></h5>
+								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+								<span class="style-meta">Nom de l'auteur</span>
+							</a>
 						</li>
 					</ul>
 
-					<h4 class="style-meta-large">Scans</h4>
-					<ul class="row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-4 gutter-bottom-1">
-							<h5 class="h5 snake-1"><span class="snake-container">Document scanné numéro 1</span></h5>
-							<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-							<span class="style-meta">Info 1 • Info 2</span>
+					<h4 id="scans" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Scans {{ icon("blank", class="color-media") }}</h4>
+					<ul class="articles row list-unstyled">
+						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+							<a class="link-unstyled" href="#">
+								<h5 class="h5 snake-1"><span class="snake-container">Document scanné numéro 1</span></h5>
+								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+								<span class="style-meta">Info 1 • Info 2</span>
+							</a>
 						</li>
 					</ul>
 				</section><!-- end of #documents -->
