@@ -1,5 +1,22 @@
 $("body").addClass("js");
 
+(function() {
+	var previous = 0, $window = $(window);
+	$window.scroll(function() {
+		var current = $window.scrollTop();
+
+		if (current < previous) {
+			$("#header").addClass("fixed");
+			$("#board-header").addClass("fixed");
+		} else {
+			$("#header").removeClass("fixed");
+			$("#board-header").removeClass("fixed");
+		}
+
+		previous = current;
+	});
+}());
+
 $("[role=tablist] a").click(function(e) {
 	e.preventDefault();
 

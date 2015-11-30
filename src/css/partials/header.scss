@@ -2,10 +2,25 @@
 /*csslint ids:false */
 #header {
 	background: $color-white;
-	position: relative;
-	text-align: center;
+
+	z-index: 1000;
+	position: absolute;
+	top:   0;
+	right: 0;
+	left:  0;
+
 	color: $color-brand;
 }
+
+#header.fixed {
+	position: fixed;
+	animation: header .3s;
+}
+.header-margin { margin-top: 85px; }
+@keyframes header {
+	from { top: -100%; }
+}
+
 
 #header h1,
 #header h1 a { display: inline-block; }
