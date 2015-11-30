@@ -3,6 +3,25 @@
 
 {% block content %}
 <div class="container">
+<style>
+	html { height: 100%; }
+	body { height: inherit; overflow: hidden; }
+	body > div.container { height: calc(100% - 85px); }
+	body > div.container > .col { height: 100%; }
+
+	.carousel-container,
+	.carousel,
+	.carousel li,
+	.carousel img { height: inherit; }
+
+	.carousel-controls {
+		background: #FFF;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+</style>
 	<div class="col">
 		<div class="carousel-container">
 			<ul class="carousel">
