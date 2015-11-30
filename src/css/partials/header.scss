@@ -68,11 +68,6 @@
 			transition: transform .3s;
 		}
 
-		#menu a i svg {
-			width:  1.5em;
-			height: 1.5em;
-		}
-
 		#menu a:hover i:before,
 		#menu a:focus i:before { transform: scale(0.833333); }
 
