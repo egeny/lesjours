@@ -25,10 +25,10 @@ $gutter: grid-gutter("sm");
 	}
 
 	.snake-1:before {
-		width:  36px;
-		height: 36px;
-		left:  -36px;
-		bottom: calc(.25em + 4px);
+		width:  1.5em;
+		height: 1.5em;
+		left:  -1.5em;
+		bottom: 4px;
 	}
 
 	.snake-1 .snake-container {
