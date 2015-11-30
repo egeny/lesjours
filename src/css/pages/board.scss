@@ -1,81 +1,68 @@
 /* @group Board */
 $gutter: grid-gutter("sm");
 
-/* WIP */
-[role="tab"][aria-selected="true"] { color: $color-darker; }
-[role="tabpanel"][aria-hidden="true"] { display: none; }
+[role="tablist"] {
+	background: $color-white;
+	height: 64px; // Header's height on small devices
 
-[role="tablist"] li {
-	width: (100% / 8);
-	height: 85px;
-	text-align: center;
-}
-[role="tab"] {
-	display: block;
-	text-decoration: none;
-	color: $color-brand;
-}
-[role="tab"]:before {
-	display: block;
-	content: "●";
-	color: #F1CFCA; // FIXME
+	z-index: 1000;
+	position: absolute;
+	top:   0;
+	right: 0;
+	left:  0;
 }
 
-[role="tab"][aria-selected="true"]:before {
-	color: $color-brand;
+[role="tablist"].fixed {
+	position: fixed;
+	animation: header .3s;
 }
 
-[role="tab"] span { display: none; }
-
-@include media("lg") {
-	.txt li { width: 50%; }
-}
-.txt li p { margin-bottom: .5em; }
-.txt .snake-1:before {
-	width:  1.5em;
-	height: 1.5em;
-	left: calc(-1.5em - 4px);
-}
-.txt .link-unstyled:hover,
-.txt .link-unstyled:focus,
-.txt .link-unstyled:hover .style-meta,
-.txt .link-unstyled:focus .style-meta {
-	color: $color-media;
-}
-
-#footer {
-	height: 180px;
-	@extend %logo;
-	background-repeat: no-repeat;
-	background-position: 50% calc(50% + 12px);
-	background-size: 70px 70px;
-}
-#footer .pattern-1 { height: $gutter; }
-@include media("md") {
-	$gutter: grid-gutter("md");
-
-	#footer .pattern-1 {
-		height: $gutter;
-		margin-left: calc(#{(100% / 8)} - #{$gutter});
+	[role="tablist"] li {
+		width: (100% / 8); // There is 7 tabs, plus one for the margin-left
+		height: 100%;
+		vertical-align: top;
 	}
-}
-@include media("lg") {
-	$gutter: grid-gutter("lg");
 
-	#footer .pattern-1 {
-		height: $gutter;
-		margin-left: calc(#{(100% / 12)} - #{$gutter});
-		margin-right: calc(#{(100% / 12)} - #{$gutter});
-	}
-}
-/* end WIP */
+		[role="tab"] {
+			box-sizing: border-box;
+			height: 100%;
+			padding-top: 10px; // FIXME
 
-.tab-title { margin-bottom: .75em; }
+			display: block;
 
-.mosaic li { overflow: hidden; }
+			text-decoration: none;
+			color: $color-brand;
+		}
+
+		[role="tab"][aria-selected="true"] { color: $color-darker; }
+
+		[role="tab"]:before {
+			content: "●";
+			display: block;
+			line-height: 1;
+			color: lighten($color-brand, 37%);
+		}
+
+		[role="tab"]:focus { outline: 0; }
+		[role="tab"]:hover:before,
+		[role="tab"]:focus:before { color: $color-brand; }
+
+		[role="tab"][aria-selected="true"]:before { color: inherit; }
+		[role="tab"] span {
+			margin-top: 1em;
+			@extend %font-proxima;
+			@include font-weight-bold("proxima");
+			font-size: 0.625em;
+			display: none; // Is displayed only on large devices
+		}
+
+.quick-links li { margin-right: 3em; }
+
+.mosaic li { padding: $gutter / 2; }
 
 	.mosaic a {
 		display: block;
+		overflow: hidden;
 		position: relative;
 		color: currentColor;
 	}
@@ -130,12 +117,38 @@ $gutter: grid-gutter("sm");
 			left:   0;
 		}
 
+.articles .link-unstyled { display: block; }
+.articles .link-unstyled:hover,
+.articles .link-unstyled:focus,
+.articles .link-unstyled:hover .style-meta,
+.articles .link-unstyled:focus .style-meta { color: $color-media; }
+
+.articles .h5 { margin-bottom: .25em; }
+.articles p   { margin-bottom: .5em; }
+
+.articles .snake-1:before {
+	width:  $gutter *  2;
+	height: $gutter *  2;
+	left:   $gutter * -2;
+}
+
 @include media("md") {
 	$gutter: grid-gutter("md");
 
+	// Header's height on medium and large devices
+	[role="tablist"] { height: 85px; }
+
 	.mosaic li { width: 50%; }
 
+	.articles .snake-1:before {
+		width:  $gutter *  1.5;
+		height: $gutter *  1.5;
+		left:   $gutter * -1.5;
+	}
+
 	@if $gutter != grid-gutter("sm") {
+		.mosaic li { padding: $gutter / 2; }
+
 		.mosaic .snake {
 			top:    $gutter;
 			right:  $gutter;
@@ -164,9 +177,14 @@ $gutter: grid-gutter("sm");
 @include media("lg") {
 	$gutter: grid-gutter("lg");
 
-	.mosaic li { width: 33.333333%; }
+	[role="tab"] span { display: block; }
+
+	.mosaic   li { width: 33.333333%; }
+	.articles li { width: 50%; }
 
 	@if $gutter != grid-gutter("md") {
+		.mosaic li { padding: $gutter / 2; }
+
 		.mosaic .snake {
 			top:    $gutter;
 			right:  $gutter;
@@ -189,6 +207,12 @@ $gutter: grid-gutter("sm");
 
 		/* Fix the background size by calculating the snake-3's parent's width (100% + offset left + offset right) */
 		.mosaic .snake-3 .snake-container { background-size: calc(100% + #{$padding-left + $gutter + $padding-right}); }
+
+		.articles .snake-1:before {
+			width:  $gutter *  1.5;
+			height: $gutter *  1.5;
+			left:   $gutter * -1.5;
+		}
 	}
 }
 /* @end Board */
