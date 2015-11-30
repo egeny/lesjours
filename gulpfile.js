@@ -4,14 +4,16 @@
 
 var
 	del        = require('del'),
-	lazypipe   = require('lazypipe'),
+	fs         = require('fs'),
+	merge      = require('merge-stream'),
 	path       = require('path'),
+	sequence   = require('run-sequence'),
 	gulp       = require('gulp'),
 	concat     = require('gulp-concat'),
 	header     = require('gulp-header'),
 	livereload = require('gulp-livereload'),
 	rename     = require('gulp-rename'),
-	tap        = require('gulp-tap'),
+	replace    = require('gulp-replace'),
 
 	// HTML
 	nunjucks = require('gulp-nunjucks-render'),
@@ -32,18 +34,33 @@ var
 
 	// SVG
 	spriter = require('gulp-svg-sprite'),
+	svgmin  = require('gulp-svgmin'),
 
 	banner  = '/*! <%= package.name %> v<%= package.version %> */\n',
 	context = { package: require('./package.json') },
 
-	// The spriter configuration
+	// The middlewares configuration
 	config = {
-		mode: {
-			symbol: {
-				inline: true,
-				dest:   '.',
-				sprite: '' // Will be changed when needed (just here as a reminder)
+		spriter: {
+			mode: {
+				symbol: {
+					inline: true,
+					dest:   '.'
+				}
 			}
+		},
+		svgmin: {
+			multipass: true,
+			js2svg: {
+				pretty: true,
+				indent: '\t'
+			},
+			plugins: [
+				{ removeTitle:        true },
+				{ sortAttrs:          true },
+				{ removeDimensions:   true },
+				{ removeStyleElement: true }
+			]
 		}
 	},
 
@@ -51,7 +68,6 @@ var
 		src:  'src/**/*',
 		dist: 'dist/',
 
-		assets: ['src/episode/**/*'],
 		html: {
 			input:  'src/',
 			output: 'dist/'
@@ -80,22 +96,93 @@ var
 			input:  'src/js/',
 			output: 'dist/js/'
 		}
+	},
+
+	// A set of tasks to launch on different contexts
+	tasks = {
+		'copy:img': function(context) {
+			return function() {
+				return gulp.src(context.input + '/**/*.{gif,jpg,png}')
+					.pipe(gulp.dest(context.output))
+					.pipe(livereload());
+			}
+		},
+
+		'optimize:img': function(context) {
+			return function() {
+				return gulp.src(context.input + '**/*.{gif,jpg,png}')
+					//.pipe(image()) // For now, disable image's optimization since sometimes it destroy images
+					.pipe(gulp.dest(context.input));
+			}
+		},
+
+		'copy:svg': function(context) {
+			return function() {
+				return gulp.src([context.input + '*.svg'])
+					.pipe(gulp.dest(context.output))
+					.pipe(livereload());
+			}
+		},
+
+		'optimize:svg': function(context) {
+			return function() {
+				return gulp.src([context.input + '**/*.svg', '!ui.svg'])
+					.pipe(svgmin(config.svgmin))
+					.pipe(replace('fill-rule="evenodd" ', ''))
+					.pipe(gulp.dest(context.input));
+			}
+		},
+
+		'sprite:svg': function(context) {
+			return function() {
+				var tasks = folders(context.input).map(function(folder) {
+					return gulp.src(path.join(context.input, folder, '*.svg'))
+						.pipe(spriter(config.spriter))
+						.pipe(rename(folder + '.svg'))
+						.pipe(replace('#FFF',    'currentColor'))
+						.pipe(replace('#000',    'currentColor'))
+						.pipe(replace('#C83E2C', 'currentColor'))
+						.pipe(gulp.dest(context.input)) // Save on input so we could use them as HTML templates (should not be versionned)
+						.pipe(livereload());
+				});
+
+				// Return a stream merging other streams
+				return !merge(tasks).isEmpty() ? merge(tasks) : null;
+			}
+		}
 	};
 
-nunjucks.nunjucks.configure([paths.html.input, paths.html.output], { watch: false });
+// Utility function to find folders
+function folders(dir) {
+	return fs.readdirSync(dir)
+		.filter(function(file) {
+			return fs.statSync(path.join(dir, file)).isDirectory();
+		});
+}
 
-gulp.task('default', ['clean', 'build']);
+// Configure nunjucks
+nunjucks.nunjucks.configure([paths.html.input], { watch: false });
 
-gulp.task('build', ['assets', 'build:css', 'build:css:img', 'build:css:svg', 'build:js', 'build:img', 'build:svg', 'build:html']);
-gulp.task('lint',  ['lint:sass', 'lint:css', 'lint:js']);
+gulp.task('default', function() {
+	sequence('clean', 'build');
+});
+
+gulp.task('build', function(cb) {
+	sequence(
+		'build:img',
+		'build:css:img',
+		'build:svg',
+		'build:css:svg',
+		'build:css',
+		'build:js',
+		'build:html',
+		cb);
+});
+
+gulp.task('lint', ['lint:sass', 'lint:css', 'lint:js']);
 
 gulp.task('clean', function() {
 	del.sync(paths.dist);
-});
-
-gulp.task('assets', function() {
-	return gulp.src(paths.assets, { base: 'src' })
-		.pipe(gulp.dest(paths.dist));
 });
 
 gulp.task('build:html', function() {
@@ -112,11 +199,9 @@ gulp.task('lint:sass', function() {
 });
 
 gulp.task('lint:css', function() {
-	return;
+	return; // Disabled for now since most of the errors are non-sense
 	return gulp.src(paths.css.input + '**/*.css')
-		.pipe(csslint({
-			'adjoining-classes': false
-		}))
+		.pipe(csslint()) // TODO: configure
 		.pipe(csslint.reporter());
 });
 
@@ -130,32 +215,6 @@ gulp.task('build:css', function() {
 		.pipe(minify())
 		.pipe(gulp.dest(paths.css.output))
 		.pipe(livereload());
-
-	var worker = lazypipe()
-		.pipe(sass, { outputStyle: "expanded" })
-		.pipe(autoprefixer)
-		.pipe(header, banner, context)
-		.pipe(gulp.dest, paths.css.output)
-		.pipe(rename, { suffix: '.min' })
-		.pipe(minify)
-		.pipe(gulp.dest, paths.css.output)
-		.pipe(livereload);
-
-	function filter() {
-		return tap(function(file) {
-			if (['.css', '.scss', '.sass'].indexOf(path.extname(file.path)) > -1) {
-				return t.through(worker);
-			}
-
-			if (file.isDirectory()) {
-				return gulp.src(file.path + '/*.css') // FIXME: File order might break things
-					.pipe(concat(file.relative + '.css'))
-					.pipe(worker());
-			}
-		});
-	}
-
-	return gulp.src(paths.css.input + '*').pipe(filter());
 });
 
 gulp.task('lint:js', function() {
@@ -164,92 +223,52 @@ gulp.task('lint:js', function() {
 		.pipe(eslint.format());
 });
 
-gulp.task('build:js', ['lint:js'], function() {
-	var worker = lazypipe()
-		.pipe(header, banner, context)
-		.pipe(gulp.dest, paths.js.output)
-		.pipe(rename, { suffix: '.min' })
-		.pipe(uglify)
-		.pipe(header, banner, context)
-		.pipe(gulp.dest, paths.js.output)
-		.pipe(livereload);
-
-	function filter() {
-		return tap(function(file, t) {
-			if (path.extname(file.path) === '.js') {
-				return t.through(worker);
-			}
-
-			if (file.isDirectory()) {
-				return gulp.src(file.path + '/*.js')
-					.pipe(concat(file.relative + '.js'))
-					.pipe(worker());
-			}
-		});
-	}
-
-	return gulp.src(paths.js.input + '*').pipe(filter());
-});
-
-gulp.task('build:css:img', function() {
-	return gulp.src(paths.css.img.input + "/**/*.{gif,jpg,png}")
-		.pipe(image())
-		.pipe(gulp.dest(paths.css.img.output))
+gulp.task('build:js', ['build:js:components'], function() {
+	return gulp.src(paths.js.input + '*.js')
+		.pipe(header(banner, context))
+		.pipe(gulp.dest(paths.js.output))
+		.pipe(rename({ suffix: '.min' }))
+		.pipe(uglify())
+		.pipe(header(banner, context))
+		.pipe(gulp.dest(paths.js.output))
 		.pipe(livereload());
 });
 
-gulp.task('build:img', function() {
-	return gulp.src(paths.img.input + "/**/*.{gif,jpg,png}")
-		.pipe(image())
-		.pipe(gulp.dest(paths.img.output))
-		.pipe(livereload());
+gulp.task('build:js:components', function() {
+	var tasks = folders(paths.js.input).map(function(folder) {
+		return gulp.src(path.join(paths.js.input, folder, '*.js'))
+			.pipe(concat(folder + '.js'))
+			.pipe(header(banner, context))
+			.pipe(gulp.dest(paths.js.output))
+			.pipe(rename({ suffix: '.min' }))
+			.pipe(uglify())
+			.pipe(header(banner, context))
+			.pipe(gulp.dest(paths.js.output))
+			.pipe(livereload());
+	});
+
+	// Return a stream merging other streams
+	return !merge(tasks).isEmpty() ? merge(tasks) : null;
 });
 
-gulp.task('build:css:svg', function() {
-	var worker = lazypipe()
-		.pipe(gulp.dest, paths.css.svg.output)
-		.pipe(livereload);
+gulp.task('build:img',     function(cb) { sequence('optimize:img',     'copy:img',     cb); });
+gulp.task('build:css:img', function(cb) { sequence('optimize:css:img', 'copy:css:img', cb); });
 
-	function filter() {
-		return tap(function(file, t) {
-			if (path.extname(file.path) === '.svg') {
-				return t.through(worker);
-			}
+gulp.task('build:svg',     function(cb) { sequence('optimize:svg',     'sprite:svg',     'copy:svg',     cb); });
+gulp.task('build:css:svg', function(cb) { sequence('optimize:css:svg', 'sprite:css:svg', 'copy:css:svg', cb); });
 
-			if (file.isDirectory()) {
-				config.mode.symbol.sprite = file.relative + '.svg';
-				return gulp.src(file.path + '/*.svg')
-					.pipe(spriter(config))
-					.pipe(worker());
-			}
-		});
-	}
+// run-sequence needs actual gulp tasks, so we have to create them
+gulp.task('optimize:img',     tasks['optimize:img'](paths.img));
+gulp.task('optimize:css:img', tasks['optimize:img'](paths.css.img));
+gulp.task('copy:img',         tasks['copy:img'](paths.img));
+gulp.task('copy:css:img',     tasks['copy:img'](paths.css.img));
 
-	return gulp.src(paths.css.svg.input + '*').pipe(filter());
-});
-
-gulp.task('build:svg', function() {
-	var worker = lazypipe()
-		.pipe(gulp.dest, paths.svg.output)
-		.pipe(livereload);
-
-	function filter() {
-		return tap(function(file, t) {
-			if (path.extname(file.path) === '.svg') {
-				return t.through(worker);
-			}
-
-			if (file.isDirectory()) {
-				config.mode.symbol.sprite = file.relative + '.svg';
-				return gulp.src(file.path + '/*.svg')
-					.pipe(spriter(config))
-					.pipe(worker());
-			}
-		});
-	}
-
-	return gulp.src(paths.svg.input + '*').pipe(filter());
-});
+gulp.task('optimize:svg',     tasks['optimize:svg'](paths.svg));
+gulp.task('optimize:css:svg', tasks['optimize:svg'](paths.css.svg));
+gulp.task('sprite:svg',       tasks['sprite:svg'](paths.svg));
+gulp.task('sprite:css:svg',   tasks['sprite:svg'](paths.css.svg));
+gulp.task('copy:svg',         tasks['copy:svg'](paths.svg));
+gulp.task('copy:css:svg',     tasks['copy:svg'](paths.css.svg));
 
 gulp.task('watch', ['build'], function() {
 	livereload.listen();
