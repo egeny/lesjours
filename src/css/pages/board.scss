@@ -92,6 +92,14 @@ $gutter: grid-gutter("sm");
 			padding: $padding-top $padding-right $padding-bottom $padding-left;
 		}
 
+		.mosaic .snake {
+			border-color: #FFF;
+			top:    $gutter;
+			right:  $gutter;
+			bottom: $gutter;
+			left:   $gutter;
+		}
+
 		.mosaic a:hover .overlay,
 		.mosaic a:focus .overlay { @extend %fadable-active }
 
@@ -128,6 +136,13 @@ $gutter: grid-gutter("sm");
 	.mosaic li { width: 50%; }
 
 	@if $gutter != grid-gutter("sm") {
+		.mosaic .snake {
+			top:    $gutter;
+			right:  $gutter;
+			bottom: $gutter;
+			left:   $gutter;
+		}
+
 		// Prepare the offsets (will be re-used)
 		$padding-top:    $gutter * 1.5;
 		$padding-right:  $gutter;
@@ -152,6 +167,13 @@ $gutter: grid-gutter("sm");
 	.mosaic li { width: 33.333333%; }
 
 	@if $gutter != grid-gutter("md") {
+		.mosaic .snake {
+			top:    $gutter;
+			right:  $gutter;
+			bottom: $gutter;
+			left:   $gutter;
+		}
+
 		// Prepare the offsets (will be re-used)
 		$padding-top:    $gutter * 1.5;
 		$padding-right:  $gutter;
