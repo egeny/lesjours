@@ -1,0 +1,28 @@
+/* @group #footer */
+#footer {}
+	#footer .pattern-1 { height: $gutter; }
+	#footer a { display: inline-block; }
+
+@include media("md") {
+	$gutter: grid-gutter("md");
+
+	#footer img {
+		width:  70px;
+		height: 70px;
+	}
+
+	#footer .pattern-1 {
+		height: $gutter;
+		margin-left: calc(#{(100% / 8)} - #{$gutter});
+	}
+}
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+
+	#footer .pattern-1 {
+		height: $gutter;
+		margin-left:  calc(#{(100% / 12)} - #{$gutter});
+		margin-right: calc(#{(100% / 12)} - #{$gutter});
+	}
+}
+/* @end #footer */
