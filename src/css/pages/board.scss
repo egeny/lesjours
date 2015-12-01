@@ -56,7 +56,7 @@ $gutter: grid-gutter("sm");
 			display: none; // Is displayed only on large devices
 		}
 
-.quick-links li { margin-right: 3em; }
+.quick-links li { margin-right: 1em; }
 
 .mosaic li { padding: $gutter / 2; }
 
@@ -138,6 +138,7 @@ $gutter: grid-gutter("sm");
 	// Header's height on medium and large devices
 	[role="tablist"] { height: 85px; }
 
+	.quick-links li { margin-right: 3em; }
 	.mosaic li { width: 50%; }
 
 	.articles .snake-1:before {
