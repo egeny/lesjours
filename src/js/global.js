@@ -1,18 +1,58 @@
 $("body").addClass("js");
 
 (function() {
-	var previous = 0, $window = $(window);
+	var
+		affixes  = [],
+		previous = 0,
+		$window  = $(window);
+
+	$("[data-spy=affix]").each(function() {
+		var affix = { $element: $(this) };
+		affix.initial = affix.$element.offset().top;
+		affix.start   = affix.initial + affix.$element.height();
+		affix.snap    = affix.start - 10;
+		affixes.push(affix);
+	});
+
 	$window.scroll(function() {
 		var current = $window.scrollTop();
 
-		if (current < previous) {
-			$("#header").addClass("fixed");
-			$("#board-header").addClass("fixed");
-		} else {
-			$("#header").removeClass("fixed");
-			$("#board-header").removeClass("fixed");
-		}
+		affixes.forEach(function(item) {
+			// When reaching the point where we have to start displaying as fixed
+			if (current > item.start) {
+				if (!item.$element.hasClass("fixed")) {
+					item.$element.removeClass("animated show"); // Clear some classes
+					item.$element.addClass("fixed"); // Set as fixed
+				}
+			}
 
+			// If going up…
+			if (current < previous) {
+				// Check if we reached the point where to snap to initial position
+				if (current < item.snap) {
+					// Snap only once
+					if (item.$element.hasClass("fixed")) {
+						// Set a translateY as the distance between the initial position and current one
+						item.$element.css("transform", "translateY(" + (current - item.initial) + "px)");
+						item.$element.removeClass("fixed animated show"); // Clear all the classes (even animated)
+
+						// Wait for the browser to apply the classes and style
+						window.setTimeout(function() {
+							item.$element.addClass("animated"); // Set as animated
+							item.$element.attr("style", null);  // Release
+						}, 50);
+					}
+				} else {
+					// Otherwise, simply show
+					item.$element.addClass("animated show");
+				}
+			} else {
+				// If going down, hide
+				item.$element.removeClass("show");
+			}
+		});
+
+		// Remember the previous scroll position to know if we are going up or down
 		previous = current;
 	});
 }());

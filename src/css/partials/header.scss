@@ -2,8 +2,10 @@
 /*csslint ids:false */
 #header {
 	background: $color-white;
+	max-width: $max-width;
+	margin: 0 auto;
 
-	z-index: 1000;
+	z-index: 10000;
 	position: absolute;
 	top:   0;
 	right: 0;
@@ -12,15 +14,16 @@
 	color: $color-brand;
 }
 
+#header,
+#header-offset { height: 64px; }
+
 #header.fixed {
 	position: fixed;
-	animation: header .3s;
-}
-.header-margin { margin-top: 85px; }
-@keyframes header {
-	from { top: -100%; }
+	transform: translateY(-100%);
 }
 
+#header.animated { transition: transform .3s; }
+#header.show     { transform: none; }
 
 #header h1,
 #header h1 a { display: inline-block; }
@@ -120,6 +123,9 @@
 		}
 
 @include media("md") {
+	#header,
+	#header-offset { height: 85px; }
+
 	#header h1 img {
 		width: auto;
 		height: 60px;
