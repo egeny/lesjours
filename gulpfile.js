@@ -128,7 +128,7 @@ var
 			return function() {
 				return gulp.src([context.input + '**/*.svg', '!ui.svg'])
 					.pipe(svgmin(config.svgmin))
-					.pipe(replace('fill-rule="evenodd" ', ''))
+					.pipe(replace('fill-rule="evenodd"', ''))
 					.pipe(gulp.dest(context.input));
 			}
 		},
