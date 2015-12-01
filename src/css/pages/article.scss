@@ -296,7 +296,9 @@ article .lettrine.with-quote {
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
 	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $color, $color); }
-	article.obsession-#{$i} .snake      { border-color: $color; }
+
+	article.obsession-#{$i} .snake,
+	article.obsession-#{$i} figcaption:before { border-color: $color; }
 
 	article.obsession-#{$i} blockquote:before { background-color: rgba($color, .75); }
 	article.obsession-#{$i} .lettrine         { background-color: $color; }

@@ -16,16 +16,13 @@ html {
 }
 
 body {
+	max-width: $max-width;
 	margin: 0 auto;
 	font-size: 0.875em;
 }
 
 @include media("md") {
 	body { font-size: inherit; }
-}
-
-@media (min-width: $max-width) {
-	body { max-width: $max-width; }
 }
 
 /* Remove some default margins */
