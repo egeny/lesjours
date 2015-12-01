@@ -96,6 +96,7 @@ article figure {}
 		@extend .snake-2;
 		@extend .style-meta;
 		margin-top: .75em;
+		margin-left: $gutter * 2.25;
 		color: inherit;
 		line-height: inherit;
 	}
@@ -318,7 +319,8 @@ article .lettrine.with-quote {
 		left:  -4px; // Offset the border
 	}
 
-	article .lettrine { margin-left: -.5em; }
+	article figcaption { margin-left: 0; }
+	article .lettrine  { margin-left: -.5em; }
 
 	.article-container > * { @extend .col-md-left-1; }
 	.article-container > * { @extend .col-md-5; }
