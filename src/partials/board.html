@@ -1,7 +1,3 @@
-{% set page = { title: "LesJours — Board" } %}
-{% extends "partials/layout.html" %}
-
-{% block content %}
 <ul id="board-header" class="col-sm-left-1 col-md-left-1 list-inline text-center" role="tablist">
 	<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="false" tabindex="-1">{{ icon("blank") }} <span>Les épisodes</span></a></li>
 	<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("blank") }} <span>Les personnages</span></a></li>
@@ -321,5 +317,3 @@
 		</div>
 	</div>
 </div>
-{% include "partials/footer.html" %}
-{% endblock %}
