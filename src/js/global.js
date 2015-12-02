@@ -20,13 +20,29 @@ function throttle(fn, time) {
 $document.ready(function() {
 	var
 		affixes  = [],
-		affix.initial = affix.$element.offset().top;
-		affix.start   = affix.initial + affix.$element.height();
-		affix.snap    = affix.start - 10;
-		affixes.push(affix);
-	});
+		previous = 0;
 
-	$window.scroll(function() {
+	function find() {
+		$("[data-spy=affix]").each(function(index) {
+			var
+				affix  = affixes[index] || { $element: $(this) },
+				offset = affix.$element.offset().top;
+
+			// Avoid recomputing offsets if the element is already fixed
+			if (affix.$element.hasClass("fixed")) { return; }
+
+			if (affix.initial !== offset) {
+				affix.initial = offset;
+				affix.height  = affix.$element.height(),
+				affix.start   = offset + affix.height;
+				affix.snap    = offset + ((affix.$element.data("snap") * affix.height) || 0);
+			}
+
+			affixes[index] = affix; // Use affixes[index] instead of push because we might use this function to update as well
+		});
+	}
+
+	function check() {
 		var current = $window.scrollTop();
 
 		affixes.forEach(function(item) {
@@ -66,8 +82,7 @@ $document.ready(function() {
 
 		// Remember the previous scroll position to know if we are going up or down
 		previous = current;
-	});
-}());
+	}
 
 $("[role=tablist] a").click(function(e) {
 	e.preventDefault();
