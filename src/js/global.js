@@ -1,13 +1,25 @@
 document.body.classList.add("js");
 
-(function() {
+var
+	$document = $(document),
+	$window   = $(window);
+
+function throttle(fn, time) {
+	time || (time = 250);
+	var wait;
+
+	return function() {
+		if (!wait) {
+			fn.apply(this, arguments);
+			wait = true;
+			window.setTimeout(function() { wait = false; }, time);
+		}
+	}
+}
+
+$document.ready(function() {
 	var
 		affixes  = [],
-		previous = 0,
-		$window  = $(window);
-
-	$("[data-spy=affix]").each(function() {
-		var affix = { $element: $(this) };
 		affix.initial = affix.$element.offset().top;
 		affix.start   = affix.initial + affix.$element.height();
 		affix.snap    = affix.start - 10;
