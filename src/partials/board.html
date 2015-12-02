@@ -1,319 +1,322 @@
-<ul id="board-header" class="col-sm-left-1 col-md-left-1 list-inline text-center" role="tablist">
-	<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="false" tabindex="-1">{{ icon("files") }} <span>Les épisodes</span></a></li>
-	<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("people") }} <span>Les personnages</span></a></li>
-	<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("camera") }} <span>Les images</span></a></li>
-	<li role="presentation"><a role="tab" id="tab-data" aria-controls="data" href="#data" aria-selected="false" tabindex="-1">{{ icon("graph") }} <span>Les data</span></a></li>
-	<li role="presentation"><a role="tab" id="tab-lieux" aria-controls="lieux" href="#lieux" aria-selected="false" tabindex="-1">{{ icon("marker") }} <span>Les lieux</span></a></li>
-	<li role="presentation"><a role="tab" id="tab-bande-originale" aria-controls="bande-originale" href="#bande-originale" aria-selected="true" tabindex="0">{{ icon("headphones") }} <span>La bande originale</span></a></li>
-	<li role="presentation"><a role="tab" id="tab-documents" aria-controls="documents" href="#documents" aria-selected="false" tabindex="-1">{{ icon("folder") }} <span>Les documents</span></a></li>
-</ul>
+<section class="board">
+	<ul id="board-header" class="col-sm-left-1 col-md-left-1 list-inline text-center" role="tablist" data-spy="affix" data-spy="1">
+		<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="false" tabindex="-1">{{ icon("files") }} <span>Les épisodes</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("people") }} <span>Les personnages</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("camera") }} <span>Les images</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-data" aria-controls="data" href="#data" aria-selected="false" tabindex="-1">{{ icon("graph") }} <span>Les data</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-lieux" aria-controls="lieux" href="#lieux" aria-selected="false" tabindex="-1">{{ icon("marker") }} <span>Les lieux</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-bande-originale" aria-controls="bande-originale" href="#bande-originale" aria-selected="true" tabindex="0">{{ icon("headphones") }} <span>La bande originale</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-documents" aria-controls="documents" href="#documents" aria-selected="false" tabindex="-1">{{ icon("folder") }} <span>Les documents</span></a></li>
+	</ul>
+	<div class="header-offset"></div>
 
-<div class="container obsession-1">
-	<div class="row">
-		<div class="col gutter-0 col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
-			<h2 class="gutter-left-1 style-meta"><a href="#" class="link obsession">Les années collège</a></h2>
-			<div class="tab-container">
-				<section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="true">
-					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les épisodes</h3>
-				</section><!-- end of #episodes -->
+	<div class="container obsession-1">
+		<div class="row">
+			<div class="col gutter-0 col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
+				<h2 class="gutter-left-1 style-meta"><a href="#" class="link obsession">Les années collège</a></h2>
+				<div class="tab-container">
+					<section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="true">
+						<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les épisodes</h3>
+					</section><!-- end of #episodes -->
 
-				<section id="personnages" class="tab" role="tabpanel" aria-labelledby="tab-personnages" aria-hidden="true">
-					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les personnages</h3>
-					<ul class="mosaic row list-unstyled">
-						{%
-							set items = [
-								{
-									img:      "img/board/person-1.jpg",
-									title:    "Judith Cohen Solal",
-									subtitle: "Psychanalyste"
-								},
-								{
-									img:      "img/board/person-3.jpg",
-									title:    "Kevina",
-									subtitle: "Élève en 6<sup>ème</sup> techno"
-								},
-								{
-									img:      "img/board/person-4.jpg",
-									title:    "Kevin O’long Dupont",
-									subtitle: "Élève en 3<sup>ème</sup> B"
-								},
-								{
-									img:      "img/board/person-5.jpg",
-									title:    "Jules-Édouard",
-									subtitle: "Surveillant"
-								},
-								{
-									img:      "img/board/person-3.jpg",
-									title:    "Kevina",
-									subtitle: "Élève en 6<sup>ème</sup> techno"
-								},
-								{
-									img:      "img/board/person-2.jpg",
-									title:    "D<sup>r</sup> Robert Oppenheimer",
-									subtitle: "Doctorant en physique nucléaire"
-								},
-								{
-									img:      "img/board/person-4.jpg",
-									title:    "Kevin O’long Dupont",
-									subtitle: "Élève en 3<sup>ème</sup> B"
-								},
-								{
-									img:      "img/board/person-4.jpg",
-									title:    "Kevin O’long Dupont",
-									subtitle: "Élève en 3<sup>ème</sup> B"
-								},
-								{
-									img:      "img/board/person-4.jpg",
-									title:    "Kevin O’long Dupont",
-									subtitle: "Élève en 3<sup>ème</sup> B"
-								},
-								{
-									img:      "img/board/person-4.jpg",
-									title:    "Kevin O’long Dupont",
-									subtitle: "Élève en 3<sup>ème</sup> B"
-								},
-								{
-									img:      "img/board/person-5.jpg",
-									title:    "Jules-Édouard",
-									subtitle: "Surveillant"
-								},
-								{
-									img:      "img/board/person-1.jpg",
-									title:    "Judith Cohen Solal",
-									subtitle: "Psychanalyste"
-								}
-							]
-						%}
-						{% for item in items %}
-							{% include "partials/mosaic-item.html" %}
-						{% endfor %}
-					</ul>
-				</section><!-- end of #personnages -->
+					<section id="personnages" class="tab" role="tabpanel" aria-labelledby="tab-personnages" aria-hidden="true">
+						<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les personnages</h3>
+						<ul class="mosaic row list-unstyled">
+							{%
+								set items = [
+									{
+										img:      "img/board/person-1.jpg",
+										title:    "Judith Cohen Solal",
+										subtitle: "Psychanalyste"
+									},
+									{
+										img:      "img/board/person-3.jpg",
+										title:    "Kevina",
+										subtitle: "Élève en 6<sup>ème</sup> techno"
+									},
+									{
+										img:      "img/board/person-4.jpg",
+										title:    "Kevin O’long Dupont",
+										subtitle: "Élève en 3<sup>ème</sup> B"
+									},
+									{
+										img:      "img/board/person-5.jpg",
+										title:    "Jules-Édouard",
+										subtitle: "Surveillant"
+									},
+									{
+										img:      "img/board/person-3.jpg",
+										title:    "Kevina",
+										subtitle: "Élève en 6<sup>ème</sup> techno"
+									},
+									{
+										img:      "img/board/person-2.jpg",
+										title:    "D<sup>r</sup> Robert Oppenheimer",
+										subtitle: "Doctorant en physique nucléaire"
+									},
+									{
+										img:      "img/board/person-4.jpg",
+										title:    "Kevin O’long Dupont",
+										subtitle: "Élève en 3<sup>ème</sup> B"
+									},
+									{
+										img:      "img/board/person-4.jpg",
+										title:    "Kevin O’long Dupont",
+										subtitle: "Élève en 3<sup>ème</sup> B"
+									},
+									{
+										img:      "img/board/person-4.jpg",
+										title:    "Kevin O’long Dupont",
+										subtitle: "Élève en 3<sup>ème</sup> B"
+									},
+									{
+										img:      "img/board/person-4.jpg",
+										title:    "Kevin O’long Dupont",
+										subtitle: "Élève en 3<sup>ème</sup> B"
+									},
+									{
+										img:      "img/board/person-5.jpg",
+										title:    "Jules-Édouard",
+										subtitle: "Surveillant"
+									},
+									{
+										img:      "img/board/person-1.jpg",
+										title:    "Judith Cohen Solal",
+										subtitle: "Psychanalyste"
+									}
+								]
+							%}
+							{% for item in items %}
+								{% include "partials/mosaic-item.html" %}
+							{% endfor %}
+						</ul>
+					</section><!-- end of #personnages -->
 
-				<section id="images" class="tab" role="tabpanel" aria-labelledby="tab-images" aria-hidden="false">
-					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les images</h3>
-					<ul class="mosaic row list-unstyled">
-						{%
-							set items = [
-								{ img: "img/board/image-1.jpg" },
-								{ img: "img/board/image-2.jpg" },
-								{ img: "img/board/image-3.jpg" },
-								{ img: "img/board/image-4.jpg" },
-								{ img: "img/board/image-5.jpg" },
-								{ img: "img/board/image-6.jpg" }
-							]
-						%}
-						{% for item in items %}
-							{% include "partials/mosaic-item.html" %}
-						{% endfor %}
-					</ul>
-				</section><!-- end of #images -->
+					<section id="images" class="tab" role="tabpanel" aria-labelledby="tab-images" aria-hidden="false">
+						<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les images</h3>
+						<ul class="mosaic row list-unstyled">
+							{%
+								set items = [
+									{ img: "img/board/image-1.jpg" },
+									{ img: "img/board/image-2.jpg" },
+									{ img: "img/board/image-3.jpg" },
+									{ img: "img/board/image-4.jpg" },
+									{ img: "img/board/image-5.jpg" },
+									{ img: "img/board/image-6.jpg" }
+								]
+							%}
+							{% for item in items %}
+								{% include "partials/mosaic-item.html" %}
+							{% endfor %}
+						</ul>
+					</section><!-- end of #images -->
 
-				<section id="data" class="tab" role="tabpanel" aria-labelledby="tab-data" aria-hidden="true">
-					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les data</h3>
-					<ul class="mosaic row list-unstyled">
-						{%
-							set items = [
-								{
-									img:      "img/board/data-1.jpg",
-									title:    "Datavisualisation",
-									subtitle: "Sous-titre",
-									desc:     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
-								},
-								{
-									img:      "img/board/data-2.jpg",
-									title:    "Datavisualisation",
-									subtitle: "Sous-titre"
-								},
-								{
-									img:      "img/board/data-3.jpg",
-									title:    "Datavisualisation",
-									subtitle: "Sous-titre"
-								},
-								{
-									img:      "img/board/data-1.jpg",
-									title:    "Datavisualisation",
-									subtitle: "Sous-titre"
-								},
-								{
-									img:      "img/board/data-4.jpg",
-									title:    "Datavisualisation",
-									subtitle: "Sous-titre"
-								},
-								{
-									img:      "img/board/data-5.jpg",
-									title:    "Datavisualisation",
-									subtitle: "Sous-titre"
-								}
-							]
-						%}
-						{% for item in items %}
-							{% include "partials/mosaic-item.html" %}
-						{% endfor %}
-					</ul>
-				</section><!-- end of #data -->
+					<section id="data" class="tab" role="tabpanel" aria-labelledby="tab-data" aria-hidden="true">
+						<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les data</h3>
+						<ul class="mosaic row list-unstyled">
+							{%
+								set items = [
+									{
+										img:      "img/board/data-1.jpg",
+										title:    "Datavisualisation",
+										subtitle: "Sous-titre",
+										desc:     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+									},
+									{
+										img:      "img/board/data-2.jpg",
+										title:    "Datavisualisation",
+										subtitle: "Sous-titre"
+									},
+									{
+										img:      "img/board/data-3.jpg",
+										title:    "Datavisualisation",
+										subtitle: "Sous-titre"
+									},
+									{
+										img:      "img/board/data-1.jpg",
+										title:    "Datavisualisation",
+										subtitle: "Sous-titre"
+									},
+									{
+										img:      "img/board/data-4.jpg",
+										title:    "Datavisualisation",
+										subtitle: "Sous-titre"
+									},
+									{
+										img:      "img/board/data-5.jpg",
+										title:    "Datavisualisation",
+										subtitle: "Sous-titre"
+									}
+								]
+							%}
+							{% for item in items %}
+								{% include "partials/mosaic-item.html" %}
+							{% endfor %}
+						</ul>
+					</section><!-- end of #data -->
 
-				<section id="lieux" class="tab" role="tabpanel" aria-labelledby="tab-lieux" aria-hidden="true">
-					<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les lieux</h3>
-					<ul class="mosaic row list-unstyled">
-						{%
-							set items = [
-								{
-									img:      "img/board/geo-1.jpg",
-									title:    "Nom premier lieu",
-									subtitle: "Sous-titre"
-								},
-								{
-									img:      "img/board/geo-2.jpg",
-									title:    "Nom premier lieu",
-									subtitle: "Sous-titre"
-								},
-								{
-									img:      "img/board/geo-3.jpg",
-									title:    "Nom premier lieu",
-									subtitle: "Sous-titre"
-								},
-								{
-									img:      "img/board/geo-3.jpg",
-									title:    "Nom premier lieu",
-									subtitle: "Sous-titre"
-								}
-							]
-						%}
-						{% for item in items %}
-							{% include "partials/mosaic-item.html" %}
-						{% endfor %}
-					</ul>
-				</section><!-- end of #lieux -->
+					<section id="lieux" class="tab" role="tabpanel" aria-labelledby="tab-lieux" aria-hidden="true">
+						<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les lieux</h3>
+						<ul class="mosaic row list-unstyled">
+							{%
+								set items = [
+									{
+										img:      "img/board/geo-1.jpg",
+										title:    "Nom premier lieu",
+										subtitle: "Sous-titre"
+									},
+									{
+										img:      "img/board/geo-2.jpg",
+										title:    "Nom premier lieu",
+										subtitle: "Sous-titre"
+									},
+									{
+										img:      "img/board/geo-3.jpg",
+										title:    "Nom premier lieu",
+										subtitle: "Sous-titre"
+									},
+									{
+										img:      "img/board/geo-3.jpg",
+										title:    "Nom premier lieu",
+										subtitle: "Sous-titre"
+									}
+								]
+							%}
+							{% for item in items %}
+								{% include "partials/mosaic-item.html" %}
+							{% endfor %}
+						</ul>
+					</section><!-- end of #lieux -->
 
-				<section id="bande-originale" class="tab col" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="true">
-					<h3 class="gutter-bottom-2 style-meta-larger">La bande originale</h3>
+					<section id="bande-originale" class="tab col" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="true">
+						<h3 class="gutter-bottom-2 style-meta-larger">La bande originale</h3>
 
-					<ul class="gutter-bottom-3 style-meta list-inline quick-links">
-						<li><a class="link" href="#interviews" />Interviews</a></li>
-						<li><a class="link" href="#playlists" />Playlists</a></li>
-						<li><a class="link" href="#ambiances" />Ambiances</a></li>
-					</ul>
+						<ul class="gutter-bottom-3 style-meta list-inline quick-links">
+							<li><a class="link" href="#interviews" />Interviews</a></li>
+							<li><a class="link" href="#playlists" />Playlists</a></li>
+							<li><a class="link" href="#ambiances" />Ambiances</a></li>
+						</ul>
 
-					<h4 id="interviews" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Interviews {{ icon("blank", class="color-media") }}</h4>
-					<ul class="articles row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Titre interview 1</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
-							</a>
-						</li>
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Titre interview 2</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
-							</a>
-						</li>
-					</ul>
+						<h4 id="interviews" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Interviews {{ icon("blank", class="color-media") }}</h4>
+						<ul class="articles row list-unstyled">
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Titre interview 1</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
+								</a>
+							</li>
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Titre interview 2</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
+								</a>
+							</li>
+						</ul>
 
-					<h4 id="playlists" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Playlists {{ icon("blank", class="color-media") }}</h4>
-					<ul class="articles row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Playlist 1</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta"><time>25 sept. 2015</time></span>
-							</a>
-						</li>
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Playlist numéro 2</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta">nom de l'auteur</span>
-							</a>
-						</li>
-					</ul>
+						<h4 id="playlists" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Playlists {{ icon("blank", class="color-media") }}</h4>
+						<ul class="articles row list-unstyled">
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Playlist 1</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta"><time>25 sept. 2015</time></span>
+								</a>
+							</li>
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Playlist numéro 2</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta">nom de l'auteur</span>
+								</a>
+							</li>
+						</ul>
 
-					<h4 id="ambiances" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Ambiances {{ icon("blank", class="color-media") }}</h4>
-					<ul class="articles row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Ambiance numéro 1</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
-							</a>
-						</li>
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Ambiance numéro 2</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
-							</a>
-						</li>
-					</ul>
-				</section><!-- end of #bande-originale -->
+						<h4 id="ambiances" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Ambiances {{ icon("blank", class="color-media") }}</h4>
+						<ul class="articles row list-unstyled">
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Ambiance numéro 1</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
+								</a>
+							</li>
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Ambiance numéro 2</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta"><time>25 sept. 2015</time> • nom du journaliste</span>
+								</a>
+							</li>
+						</ul>
+					</section><!-- end of #bande-originale -->
 
-				<section id="documents" class="tab col" role="tabpanel" aria-labelledby="tab-documents" aria-hidden="true">
-					<h3 class="gutter-bottom-2 style-meta-larger">Les documents</h3>
+					<section id="documents" class="tab col" role="tabpanel" aria-labelledby="tab-documents" aria-hidden="true">
+						<h3 class="gutter-bottom-2 style-meta-larger">Les documents</h3>
 
-					<ul class="gutter-bottom-3 style-meta list-inline quick-links">
-						<li><a class="link" href="#bibliographie" />Bibliographie</a></li>
-						<li><a class="link" href="#telechargements" />Téléchargements</a></li>
-						<li><a class="link" href="#scans" />Scans</a></li>
-					</ul>
+						<ul class="gutter-bottom-3 style-meta list-inline quick-links">
+							<li><a class="link" href="#bibliographie" />Bibliographie</a></li>
+							<li><a class="link" href="#telechargements" />Téléchargements</a></li>
+							<li><a class="link" href="#scans" />Scans</a></li>
+						</ul>
 
-					<h4 id="bibliographie" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Bibliographie {{ icon("blank", class="color-media") }}</h4>
-					<ul class="articles row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 1</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta">Nom de l'auteur • éditeur</span>
-							</a>
-						</li>
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 2</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta">Nom de l'auteur • éditeur</span>
-							</a>
-						</li>
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 3</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta">Nom de l'auteur • éditeur</span>
-							</a>
-						</li>
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 4</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta">Nom de l'auteur • éditeur</span>
-							</a>
-						</li>
-					</ul>
+						<h4 id="bibliographie" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Bibliographie {{ icon("blank", class="color-media") }}</h4>
+						<ul class="articles row list-unstyled">
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 1</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta">Nom de l'auteur • éditeur</span>
+								</a>
+							</li>
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 2</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta">Nom de l'auteur • éditeur</span>
+								</a>
+							</li>
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 3</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta">Nom de l'auteur • éditeur</span>
+								</a>
+							</li>
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Titre livre numéro 4</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta">Nom de l'auteur • éditeur</span>
+								</a>
+							</li>
+						</ul>
 
-					<h4 id="telechargements" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Téléchargements {{ icon("blank", class="color-media") }}</h4>
-					<ul class="articles row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Document numéro 1 pdf</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta">Nom de l'auteur</span>
-							</a>
-						</li>
-					</ul>
+						<h4 id="telechargements" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Téléchargements {{ icon("blank", class="color-media") }}</h4>
+						<ul class="articles row list-unstyled">
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Document numéro 1 pdf</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta">Nom de l'auteur</span>
+								</a>
+							</li>
+						</ul>
 
-					<h4 id="scans" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Scans {{ icon("blank", class="color-media") }}</h4>
-					<ul class="articles row list-unstyled">
-						<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
-							<a class="link-unstyled" href="#">
-								<h5 class="h5 snake-1"><span class="snake-container">Document scanné numéro 1</span></h5>
-								<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
-								<span class="style-meta">Info 1 • Info 2</span>
-							</a>
-						</li>
-					</ul>
-				</section><!-- end of #documents -->
+						<h4 id="scans" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">Scans {{ icon("blank", class="color-media") }}</h4>
+						<ul class="articles row list-unstyled">
+							<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+								<a class="link-unstyled" href="#">
+									<h5 class="h5 snake-1"><span class="snake-container">Document scanné numéro 1</span></h5>
+									<p>Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.</p>
+									<span class="style-meta">Info 1 • Info 2</span>
+								</a>
+							</li>
+						</ul>
+					</section><!-- end of #documents -->
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
+</section>
