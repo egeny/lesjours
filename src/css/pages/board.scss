@@ -1,60 +1,55 @@
 /* @group Board */
 $gutter: grid-gutter("sm");
 
-[role="tablist"] {
-	background: $color-white;
-	height: 64px; // Header's height on small devices
+.board { position: relative; }
 
-	z-index: 1000;
-	position: absolute;
-	top:   0;
-	right: 0;
-	left:  0;
-}
-
-[role="tablist"].fixed {
-	position: fixed;
-	animation: header .3s;
-}
-
-	[role="tablist"] li {
-		width: (100% / 8); // There is 7 tabs, plus one for the margin-left
-		height: 100%;
-		vertical-align: top;
+	.board [role="tablist"] {
+		background: $color-white;
+		height: 64px; // Header's height on small devices
 	}
 
-		[role="tab"] {
-			box-sizing: border-box;
+	// Fix z-index so it will be below the main header while in position absolute, but on top when fixed
+	.board [role="tablist"]       { z-index: 9999; }
+	.board [role="tablist"].fixed { z-index: 10001; }
+
+		.board [role="tablist"] li {
+			width: (100% / 8); // There is 7 tabs, plus one for the margin-left
 			height: 100%;
-			padding-top: 10px; // FIXME
-
-			display: block;
-
-			text-decoration: none;
-			color: $color-brand;
+			vertical-align: top;
 		}
 
-		[role="tab"][aria-selected="true"] { color: $color-darker; }
+			.board [role="tab"] {
+				box-sizing: border-box;
+				height: 100%;
+				padding-top: 10px; // FIXME
 
-		[role="tab"]:before {
-			content: "●";
-			display: block;
-			line-height: 1;
-			color: lighten($color-brand, 37%);
-		}
+				display: block;
 
-		[role="tab"]:focus { outline: 0; }
-		[role="tab"]:hover:before,
-		[role="tab"]:focus:before { color: $color-brand; }
+				text-decoration: none;
+				color: lighten($color-brand, 37%);
+			}
 
-		[role="tab"][aria-selected="true"]:before { color: inherit; }
-		[role="tab"] span {
-			margin-top: 1em;
-			@extend %font-proxima;
-			@include font-weight-bold("proxima");
-			font-size: 0.625em;
-			display: none; // Is displayed only on large devices
-		}
+			.board [role="tab"]:before {
+				content: "●";
+				display: block;
+				line-height: 1;
+			}
+
+			.board [role="tab"]:hover,
+			.board [role="tab"]:focus { color: $color-brand; }
+			.board [role="tab"]:focus { outline: 0; }
+
+			.board [role="tab"][aria-selected="true"] { color: $color-darker; }
+			.board [role="tab"][aria-selected="true"]:hover,
+			.board [role="tab"][aria-selected="true"]:focus  { color: inherit; }
+
+			.board [role="tab"] span {
+				margin-top: 1em;
+				@extend %font-proxima;
+				@include font-weight-bold("proxima");
+				font-size: 0.625em;
+				display: none; // Is displayed only on large devices
+			}
 
 .quick-links li { margin-right: 1em; }
 
@@ -136,7 +131,7 @@ $gutter: grid-gutter("sm");
 	$gutter: grid-gutter("md");
 
 	// Header's height on medium and large devices
-	[role="tablist"] { height: 85px; }
+	.board [role="tablist"] { height: 85px; }
 
 	.quick-links li { margin-right: 3em; }
 	.mosaic li { width: 50%; }
@@ -178,7 +173,7 @@ $gutter: grid-gutter("sm");
 @include media("lg") {
 	$gutter: grid-gutter("lg");
 
-	[role="tab"] span { display: block; }
+	.board [role="tab"] span { display: block; }
 
 	.mosaic   li { width: 33.333333%; }
 	.articles li { width: 50%; }

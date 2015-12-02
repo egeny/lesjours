@@ -1,0 +1,18 @@
+/* @group Affix */
+[data-spy=affix] {
+	z-index: 10000;
+	position: absolute;
+	top:   0;
+	right: 0;
+	left:  0;
+}
+
+[data-spy=affix].fixed {
+	position: fixed;
+	transform: translateY(-100%);
+	will-change: transform; // Give a hint to the browser that the header is very likely to be transformed
+}
+
+[data-spy=affix].animated { transition: transform .3s; }
+[data-spy=affix].show     { transform: none; }
+/* @end Affix */

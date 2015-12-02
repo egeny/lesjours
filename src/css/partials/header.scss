@@ -4,27 +4,11 @@
 	background: $color-white;
 	max-width: $max-width;
 	margin: 0 auto;
-
-	z-index: 10000;
-	position: absolute;
-	top:   0;
-	right: 0;
-	left:  0;
-
 	color: $color-brand;
 }
 
 #header,
-#header-offset { height: 64px; }
-
-#header.fixed {
-	position: fixed;
-	transform: translateY(-100%);
-	will-change: transform; // Give a hint to the browser that the header is very likely to be transformed
-}
-
-#header.animated { transition: transform .3s; }
-#header.show     { transform: none; }
+.header-offset { height: 64px; }
 
 #header h1,
 #header h1 a { display: inline-block; }
@@ -208,7 +192,7 @@
 
 @include media("md") {
 	#header,
-	#header-offset { height: 85px; }
+	.header-offset { height: 85px; }
 
 	#header h1 img {
 		width: auto;
