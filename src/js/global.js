@@ -81,16 +81,16 @@ $(".wall .title .btn").click(function(e) {
 	$(this).parents(".wall").toggleClass("expanded");
 });
 
-$("#toggle-menu").click(function() {
+$(document).ready(function() {
 	var
-		menu   = $("#menu"),
-		first  = menu.hasClass("opened") ? "close" : "burger",
-		second = menu.hasClass("opened") ? "burger" : "close";
+		$burger = $("#burger"),
+		$menu   = $("#menu");
 
-	var use = $(this).find("use");
-
-	use.attr("xlink:href", use.attr("xlink:href").replace(first, second));
-	menu.toggleClass("opened");
+	$burger.click(function() {
+		$burger.removeClass("initial");
+		$burger.toggleClass("close");
+		$menu.toggleClass("opened");
+	});
 });
 
 (function() {

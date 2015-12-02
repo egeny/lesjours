@@ -1,8 +1,12 @@
 <header id="header" class="container text-center" data-spy="affix">
 	<div class="col">
 		<h1><a href="/"><img width="55" height="42" src="img/logo-text.svg" alt="LesJours" /></a></h1>
-		<button class="pull-left btn-blank" id="toggle-menu" type="button">{{ icon("burger", "menu") }}</button>
-		<button class="pull-right btn-blank" id="toggle-profile" type="button"><img src="img/profile.png" alt="John" /></button>
+		<button id="burger" class="pull-left btn-blank initial" type="button" aria-label="menu">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+		<button id="profile" class="pull-right btn-blank" type="button"><img src="img/profile.png" alt="John" /></button>
 	</div>
 
 	<nav id="menu" class="container">

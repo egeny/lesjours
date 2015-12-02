@@ -20,6 +20,7 @@
 #header.fixed {
 	position: fixed;
 	transform: translateY(-100%);
+	will-change: transform; // Give a hint to the browser that the header is very likely to be transformed
 }
 
 #header.animated { transition: transform .3s; }
@@ -29,10 +30,93 @@
 #header h1 a { display: inline-block; }
 #header h1 a { padding: 0.785714em; }
 
-#header .pull-left,
-#header .pull-right { margin-top: .75em; }
+#burger {
+	box-sizing: content-box;
+	width:  30px;
+	padding: 5px;
+	margin-top: 12px;
+}
 
-#header .pull-left { padding: 0.5625em; }
+	#burger span {
+		background: currentColor;
+
+		width: 100%;
+		height: 3px;
+
+		margin-top:    4px;
+		margin-bottom: 6px;
+
+		display: block;
+
+		transition: transform .3s;
+		transform-origin: 50%;
+
+		// Set global's animations
+		animation-direction: reverse; // Set as reverse in order to return to initial state
+		animation-duration: .3s;
+		animation-timing-function: ease-in-out;
+	}
+
+	#burger :last-child { margin-bottom: 5px; }
+
+	#burger:hover :first-child,
+	#burger:focus :first-child { transform: translateY(2px); }
+
+	#burger:hover :last-child,
+	#burger:focus :last-child { transform: translateY(-2px); }
+
+	// Use the burger-*-initial animation to return to initial state
+	#burger :first-child  { animation-name: burger-1-initial; }
+	#burger :nth-child(2) { animation-name: burger-2-initial; }
+	#burger :last-child   { animation-name: burger-3-initial; }
+
+	// When there is an initial class, avoid animating (page load)
+	#burger.initial span { animation: none; }
+
+	// When the button has a "close" class, play the animation forwards (and stays there)
+	#burger.close span {
+		animation-direction: normal;
+		animation-fill-mode: forwards;
+	}
+
+	// Use *another* animation, otherwise we won't be able to animate different states
+	#burger.close :first-child  { animation-name: burger-1; }
+	#burger.close :nth-child(2) { animation-name: burger-2; }
+	#burger.close :last-child   { animation-name: burger-3; }
+
+@keyframes burger-1 {
+	50%  { transform: translateY(9px); }
+	100% { transform: translateY(9px) rotate(45deg); }
+}
+
+// As stated before, we have to use another animation name in order to animate while changing state
+// For convenience, this is the same animation but played in reverse
+@keyframes burger-1-initial {
+	50%  { transform: translateY(9px); }
+	100% { transform: translateY(9px) rotate(45deg); }
+}
+
+@keyframes burger-2 {
+	50%  { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+// See burger-1-initial
+@keyframes burger-2-initial {
+	50%  { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+@keyframes burger-3 {
+	50%  { transform: translateY(-9px); }
+	100% { transform: translateY(-9px) rotate(-45deg); }
+}
+
+// See burger-1-initial
+@keyframes burger-3-initial {
+	50%  { transform: translateY(-9px); }
+	100% { transform: translateY(-9px) rotate(-45deg); }
+}
 
 #menu {
 	background: $color-white;
@@ -131,7 +215,9 @@
 		height: 60px;
 	}
 
-	#header .pull-left,
-	#header .pull-right { margin-top: 1em; }
+	#burger { margin-top: 22px; }
+
+	//#burger,
+	//#profile { margin-top: 1em; }
 }
 /* @end #header */

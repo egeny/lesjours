@@ -126,7 +126,7 @@ var
 
 		'optimize:svg': function(context) {
 			return function() {
-				return gulp.src([context.input + '**/*.svg', '!ui.svg'])
+				return gulp.src([context.input + '**/*.svg', '!src/img/snake.svg', '!src/img/ui.svg'])
 					.pipe(svgmin(config.svgmin))
 					.pipe(replace('fill-rule="evenodd"', ''))
 					.pipe(gulp.dest(context.input));
