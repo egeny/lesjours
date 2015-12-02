@@ -1,4 +1,4 @@
-$("body").addClass("js");
+document.body.classList.add("js");
 
 (function() {
 	var
@@ -93,7 +93,7 @@ $(document).ready(function() {
 	});
 });
 
-(function() {
+$document.ready(function() {
 	// TODO: check with multiple carousel (might occurs?)
 	// TODO: swipe
 	// TODO: fallback for older browsers?
@@ -147,4 +147,4 @@ $(document).ready(function() {
 	}
 
 	$buttons.click(change);
-}());
+});
