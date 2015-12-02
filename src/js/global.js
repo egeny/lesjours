@@ -84,23 +84,54 @@ $document.ready(function() {
 		previous = current;
 	}
 
-$("[role=tablist] a").click(function(e) {
-	e.preventDefault();
+	$window.scroll(throttle(check));
 
-	var
-		$this   = $(this),
-		$links  = $this.parent().siblings().find("[aria-selected]"),
-		$target = $("#" + $this.attr("aria-controls")),
-		$panels = $target.siblings("[role=tabpanel]");
+	// Find affixes (and their offets)
+	find(); // Right now
+	$window.load(find); // Check if the offset's haven't changed due to image loading
+	$window.bind("font-active", find); // Check if the offset's haven't changed due to font loading
+	$window.resize(throttle(find)); // Check if the offset's haven't changed due to window resize
+});
 
-	$links.attr("aria-selected", false);
-	$links.attr("tabindex", -1);
+$document.ready(function() {
+	$("[role=tablist] a").click(function(e) {
+		e.preventDefault();
 
-	$this.attr("aria-selected", true);
-	$this.attr("tabindex", 0);
+		var
+			$this   = $(this),
+			$links  = $this.parent().siblings().find("[aria-selected]"),
+			$target = $("#" + $this.attr("aria-controls")),
+			$panels = $target.siblings("[role=tabpanel]");
 
-	$panels.attr("aria-hidden", true);
-	$target.attr("aria-hidden", false);
+		$links.attr("aria-selected", false);
+		$links.attr("tabindex", -1);
+
+		$this.attr("aria-selected", true);
+		$this.attr("tabindex", 0);
+
+		$panels.attr("aria-hidden", true);
+		$target.attr("aria-hidden", false);
+
+		// Add the anchor to the URL, so the user can copy the URL
+		history.pushState(null, null, "#" + $this.attr("aria-controls"));
+
+		// Scroll to the target since we might be below
+		$window.scrollTop($target.offset().top);
+	});
+
+	// Check if a hash is present so we could switch to it
+	if (window.location.hash) {
+		var
+			hash    = window.location.hash,
+			$target = $(hash);
+
+		if ($target.hasClass("tab")) {
+			$("#" + $target.attr("aria-labelledby")).click();
+		} else if ($target.parents(".tab").length) {
+			$("#" + $target.parents(".tab").attr("aria-labelledby")).click();
+			history.pushState(null, null, hash);
+		}
+	}
 });
 
 $(".wall .title .btn").click(function(e) {
