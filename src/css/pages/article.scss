@@ -285,14 +285,61 @@ article .lettrine.with-quote {
 	.article-container ul li:before { content: "• "; }
 	.article-container ol li:before { content: "• " counter(list) " "; }
 
-	article > footer .container {
-		padding-right: $margin;
-		padding-left:  $margin;
-	}
+	article > footer { padding-bottom: $margin; }
 
-	article > footer .row { background: $color-white; }
-	article > footer li   { margin-bottom: 1em; }
-	article .tags a { background-image: linear-gradient(to bottom, $color-external, $color-external); }
+		article .meta {
+			padding-right: $margin;
+			padding-left:  $margin;
+		}
+
+			article .meta .row    { background: $color-white; }
+			article .meta li      { margin-bottom: 1em; }
+			article .meta .tags a { background-image: linear-gradient(to bottom, $color-external, $color-external); }
+
+		article .rel { background: $color-white; }
+			article .rel li { display: inline-flex; }
+
+				article .rel a {
+					padding: 1em 0;
+					flex: 1; // Grow so it will use 100% of the parent's height
+					position: relative;
+				}
+
+				article .rel a,
+				article .rel span { display: block; }
+
+				article .rel i {
+					margin-top:  -.5em;
+					position: absolute;
+					top: 50%;
+					left: #{-$margin};
+
+					font-size: 3em;
+					color: $color-brand;
+				}
+
+				article .rel a[rel="next"] i {
+					right: #{-$margin};
+					left: auto;
+				}
+
+					article .rel i svg {
+						width:  1em;
+						height: 1em;
+						display: block;
+						position: relative;
+					}
+
+				article .rel a[rel="prev"] div { margin-left:  $gutter * 2; }
+				article .rel a[rel="next"] div { margin-right: $gutter * 2; }
+
+					article .rel .style-meta {
+						font-size: .9375em;
+						@include font-weight-semi-bold("proxima");
+						line-height: 1.666667;
+					}
+
+					article .rel .h5 { margin: 0; }
 
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
@@ -306,6 +353,10 @@ article .lettrine.with-quote {
 
 	article.obsession-#{$i} aside span,
 	article.obsession-#{$i} .question:before { color: $color; }
+}
+
+@include media("sm", true) {
+	article .rel .col-sm-1 div { @include sr; }
 }
 
 @include media("md") {
@@ -349,10 +400,44 @@ article .lettrine.with-quote {
 	.article-container > .full { @extend .col-md-8; }
 	.article-container > .full figcaption { @extend .col-md-left-1; }
 
+	article .rel i {
+		margin-left: -.5em;
+		left: 12.5%; // Half the total size
+		color: $color-white;
+	}
+
+	article .rel a[rel="next"] i {
+		margin-left: 0;
+		margin-right: -.5em;
+		right: 12.5%;
+	}
+
+		// Same as .btn:before (cannot extend since it is in a media query)
+		article .rel i:before {
+			background: $color-brand;
+
+			width:  100%;
+			height: 100%;
+			border-radius: 50%;
+
+			display: block;
+			content: "";
+			position: absolute;
+
+			transition: transform .3s;
+		}
+
+		article .rel a:hover i:before,
+		article .rel a:focus i:before { transform: scale(0.833333); }
+
+	article .rel a[rel="prev"] div { margin-left:  25%; }
+	article .rel a[rel="next"] div { margin-right: 25%; }
+
 	@if $margin != grid-margin("sm") {
 		article blockquote:before { left: #{-$margin / 2}; }
 
-		article > footer .container {
+		article > footer { padding-bottom: $margin; }
+		article .meta {
 			padding-right: $margin;
 			padding-left:  $margin;
 		}
@@ -388,7 +473,8 @@ article .lettrine.with-quote {
 	@if $margin != grid-margin("md") {
 		article blockquote:before { left: #{-$margin / 2}; }
 
-		article > footer .container {
+		article > footer { padding-bottom: $margin; }
+		article .meta {
 			padding-right: $margin;
 			padding-left:  $margin;
 		}

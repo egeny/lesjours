@@ -169,7 +169,7 @@
 		</div>
 	</div>
 	<footer class="pattern-1">
-		<div class="container gutter-bottom-2">
+		<div class="meta container gutter-bottom-2">
 			<div class="row style-meta">
 				<div class="col col-md-left-1 col-md-3 gutter-bottom-1">
 					<p class="sr">Crédits</p>
@@ -192,11 +192,27 @@
 			</div>
 		</div>
 
-		<div>
+		<div class="rel container">
 			<p class="sr">D’autres épisodes</p>
-			<ul>
-				<li><a rel="prev" href="#"><span>Épisode n°17<span class="sr"> : </span></span>Le collège que tout le monde voulait éviter</a></li>
-				<li><a rel="next" href="#"><span>Épisode n°19<span class="sr"> : </span></span>Kévin pèse dans le game</a></li>
+			<ul class="row list-unstyled">
+				<li class="col col-sm-3 col-md-4 col-lg-4 col-lg-right-4">
+					<a class="link-unstyled" rel="prev" href="#">
+						<i>{{ icon("angle-left") }}</i>
+						<div>
+							<span class="style-meta">Épisode n°17<span class="sr"> : </span></span>
+							<span class="h5">Le collège que tout le monde voulait éviter</span>
+						</div>
+					</a>
+				</li>
+				<li class="col col-sm-1 col-md-4 col-lg-4">
+					<a class="link-unstyled" rel="next" href="#">
+						<i>{{ icon("angle-right") }}</i>
+						<div class="text-right">
+							<span class="style-meta">Épisode n°19<span class="sr"> : </span></span>
+							<span class="h5">Kévin pèse dans le game</span>
+						</div>
+					</a>
+				</li>
 			</ul>
 		</div>
 	</footer>
