@@ -1,8 +1,8 @@
 <li class="col">
 	<a href="{{ item.href|default("#") }}">
-		<img class="responsive" src="{{ item.img }}" alt="" />
-		<div class="overlay pattern-1">
-			{% if item.title %}
+		<img class="responsive" src="{{ item.img }}" alt="{{ item.alt }}" />
+		{% if item.title %}
+			<div class="overlay pattern-1">
 				<div class="snake-3 gutter-bottom-5">
 					<div class="snake-container" style="background-image: url({{ item.img }})">
 						<div class="snake-wrapper pattern-1">
@@ -12,16 +12,18 @@
 					</div>
 				</div>
 				{% if item.desc %}
-				<div class="desc">
-					<p>{{ item.desc }}</p>
-				</div>
+					<div class="desc">
+						<p>{{ item.desc }}</p>
+					</div>
 				{% endif %}
 				<div class="more text-center gutter-bottom-2">
 					<span class="btn btn-primary"><i>Lire</i></span>
 				</div>
-			{% else %}
+			</div>
+		{% else %}
+			<div class="overlay pattern-1 no-content">
 				<div class="snake"></div>
-			{% endif %}
-		</div>
+			</div>
+		{% endif %}
 	</a>
 </li>

@@ -3,12 +3,16 @@
 #header {
 	background: $color-white;
 	max-width: $max-width;
+	height: 64px;
 	margin: 0 auto;
 	color: $color-brand;
 }
 
-#header,
-.header-offset { height: 64px; }
+// Used as placeholder when a header is fixed
+.header-container {
+	height: 64px;
+	position: relative;
+}
 
 #header h1,
 #header h1 a { display: inline-block; }
@@ -139,23 +143,12 @@
 			color: $color-white;
 		}
 
-		#menu a i:before {
-			background: $color-brand;
-			border-radius: 50%;
-
-			content: "";
-			z-index: -1;
-			position: absolute;
-			top:    0;
-			right:  0;
-			bottom: 0;
-			left:   0;
-
-			transition: transform .3s;
-		}
+		#menu a i:before { @extend .btn:before }
 
 		#menu a:hover i:before,
 		#menu a:focus i:before { transform: scale(0.833333); }
+
+		#menu i svg { position: relative; }
 
 	#menu span {
 		margin: 0.5em 0;
@@ -180,19 +173,17 @@
 		margin-bottom: 0.5em;
 	}
 
-		#menu .list-inline a i {
-			padding: 1em;
-			margin: 0;
-		}
+		#menu .list-inline a i { margin: 0; }
 
 		#menu .list-inline a i svg {
-			width:  1em;
-			height: 1em;
+			width:   1em;
+			height:  1em;
+			padding: 1em;
 		}
 
 @include media("md") {
 	#header,
-	.header-offset { height: 85px; }
+	.header-container { height: 85px; }
 
 	#header h1 img {
 		width: auto;
@@ -200,8 +191,6 @@
 	}
 
 	#burger { margin-top: 22px; }
-
-	//#burger,
 	//#profile { margin-top: 1em; }
 }
 /* @end #header */

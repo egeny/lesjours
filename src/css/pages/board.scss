@@ -77,6 +77,8 @@ $gutter: grid-gutter("sm");
 			padding: $padding-top $padding-right $padding-bottom $padding-left;
 		}
 
+		.mosaic .overlay.no-content { padding: 0; }
+
 		.mosaic .snake {
 			border-color: #FFF;
 			top:    $gutter;
