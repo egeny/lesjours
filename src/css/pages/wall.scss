@@ -7,8 +7,6 @@ $gutter: grid-gutter("sm");
 	color: $color-white;
 }
 
-	.wall img { @extend .responsive; }
-
 	.wall .overlay-color {
 		transform:  translateY(100%);
 		transition: transform .5s;
@@ -56,7 +54,7 @@ $gutter: grid-gutter("sm");
 					to { transform: translateY(.75em); }
 				}
 
-		.wall .intro {
+		.wall .desc {
 			position: relative; // Fix a weird bug with Chrome where the content isn't clear after a transition
 			opacity: 0;
 			transform: translateY(-1em);
@@ -68,7 +66,7 @@ $gutter: grid-gutter("sm");
 			transition: opacity .3s;
 		}
 
-//.wall .intro {
+//.wall .desc {
 //	opacity: 0;
 //	transform: translateY(-10px);
 //	transition: opacity .5s, transform .3s;
@@ -112,8 +110,8 @@ $gutter: grid-gutter("sm");
 .wall.expanded .overlay-color { transform: none; }
 .wall.expanded .snake path    { stroke: $color-white; }
 .wall.expanded .title .btn    { display: none; }
-.wall.expanded .intro { transform: none; }
-.wall.expanded .intro,
+.wall.expanded .desc { transform: none; }
+.wall.expanded .desc,
 .wall.expanded .more { opacity: 1; }
 
 @each $color in $colors-obsessions {
