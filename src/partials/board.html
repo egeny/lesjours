@@ -1,5 +1,24 @@
 <section class="board">
 	<ul id="board-header" class="col-sm-left-1 col-md-left-1 list-inline text-center" role="tablist" data-spy="affix" data-spy="1">
+<section class="board obsession-3">
+	<header class="container gutter-top-2 gutter-bottom-2">
+		<div class="row">
+			<div class="col">
+				<div class="wall expanded">
+					{%
+						set wall = {
+							img: "img/wall/3.jpg",
+							href: "episode.html",
+							title: "Les années<br/>Collège",
+							subtitle: "Un an en 3<sup>ème</sup>B à Aubervilliers"
+						}
+					%}
+					{% include "partials/wall.html" %}
+				</div>
+			</div>
+		</div>
+	</header>
+
 		<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="false" tabindex="-1">{{ icon("files") }} <span>Les épisodes</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("people") }} <span>Les personnages</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("camera") }} <span>Les images</span></a></li>
