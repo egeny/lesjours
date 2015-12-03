@@ -1,0 +1,12 @@
+/* Screen reader only — see http://a11yproject.com/posts/how-to-hide-content/ */
+@mixin sr {
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	border: 0;
+	margin: -1px;
+
+	overflow: hidden;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+}

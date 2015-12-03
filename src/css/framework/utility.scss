@@ -73,19 +73,9 @@
 .pull-left  { float: left;  }
 .pull-right { float: right; }
 
-/* Screen reader only — see http://a11yproject.com/posts/how-to-hide-content/ */
+/* Screen reader only */
 .sr,
-.sr-focusable {
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	border: 0;
-	margin: -1px;
-
-	overflow: hidden;
-	position: absolute;
-	clip: rect(0, 0, 0, 0);
-}
+.sr-focusable { @include sr; }
 
 .sr-focusable:active,
 .sr-focusable:focus {
