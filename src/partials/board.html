@@ -17,8 +17,8 @@
 		</div>
 	</header>
 
-	<div class="header-container">
-		<ul id="board-header" class="col-sm-left-1 col-md-left-1 list-inline text-center" role="tablist" data-spy="affix" data-snap="1">
+	<div class="header-container gutter-bottom-2">
+		<ul id="board-header" class="col-sm-left-0 col-md-left-1 list-inline text-center" role="tablist" data-spy="affix" data-snap="1">
 			<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="false" tabindex="-1">{{ icon("files") }} <span>Les épisodes</span></a></li>
 			<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("people") }} <span>Les personnages</span></a></li>
 			<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("camera") }} <span>Les images</span></a></li>
@@ -111,7 +111,7 @@
 						</ul>
 					</section><!-- end of #personnages -->
 
-					<section id="images" class="tab" role="tabpanel" aria-labelledby="tab-images" aria-hidden="false">
+					<section id="images" class="tab" role="tabpanel" aria-labelledby="tab-images" aria-hidden="true">
 						<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les images</h3>
 						<ul class="mosaic row list-unstyled">
 							{%
@@ -207,7 +207,7 @@
 						</ul>
 					</section><!-- end of #lieux -->
 
-					<section id="bande-originale" class="tab col" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="true">
+					<section id="bande-originale" class="tab col" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="false">
 						<h3 class="gutter-bottom-2 style-meta-larger">La bande originale</h3>
 
 						<ul class="gutter-bottom-3 style-meta list-inline quick-links">
