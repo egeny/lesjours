@@ -45,10 +45,11 @@ $gutter: grid-gutter("sm");
 
 			.board [role="tab"] span {
 				margin-top: 1em;
+				display: none; // Is displayed only on large devices
 				@extend %font-proxima;
 				@include font-weight-bold("proxima");
 				font-size: 0.625em;
-				display: none; // Is displayed only on large devices
+				text-transform: uppercase;
 			}
 
 .quick-links li { margin-right: 1em; }
