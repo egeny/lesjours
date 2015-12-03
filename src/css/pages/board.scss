@@ -3,6 +3,8 @@ $gutter: grid-gutter("sm");
 
 .board { position: relative; }
 
+	.board .wall img { max-height: 415px; }
+
 	.board [role="tablist"] {
 		background: $color-white;
 		height: 64px; // Header's height on small devices

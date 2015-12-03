@@ -29,6 +29,7 @@ $gutter: grid-gutter("sm");
 				border: 0;
 				stroke-width: 4px;
 
+				pointer-events: none;
 				overflow: visible; /* Allow to overflow, the path's stroke may overflow */
 				top:  #{-$gutter};
 				left: #{$gutter};
