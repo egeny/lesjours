@@ -1,0 +1,124 @@
+/* @group Player */
+.player {
+	background-color: $color-media;
+	background-image: linear-gradient(to right, transparent 50%, darken($color-media, 43%) 0);
+
+	width:  96px;
+	height: 96px;
+	padding-bottom: 9px;
+
+	overflow: hidden;
+	position: relative;
+}
+
+.player.inactive { background: $color-light; }
+
+	/* Kudos to Lea Verou for her awesome article */
+	/* @see http://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/ */
+	.player:before {
+		background-color: inherit;
+
+		width:  50%;
+		height: 100%;
+		padding-top:   9px; // Add padding to be sure to overlap the bottom arrow
+		padding-right: 9px;
+
+		content: "";
+		position: absolute;
+		top:   -9px;
+		right: -9px;
+	}
+
+	/* Use a class for the animation so we can restart it */
+	.player.animated:before {
+		transform-origin: left;
+
+		animation: player-progress-spin 1s linear infinite, player-progress-bg 2s step-end infinite;
+		animation-duration: inherit;  /* Inherit so we can use inline style on the parent */
+		animation-play-state: paused; /* Start paused anyway, prefer using a class to change the state (some browsers are buggy) */
+	}
+
+	@keyframes player-progress-spin {
+		to { transform: rotate(.5turn); }
+	}
+
+	@keyframes player-progress-bg {
+		50% { background: darken($color-media, 43%); }
+	}
+
+	.player.playing:before { animation-play-state: running; }
+
+	/* Use a container to fix the actual content size */
+	.player .container {
+		box-sizing: border-box;
+		width:  100%;
+		height: 100%;
+		padding: 8px;
+	}
+
+	/* Use an inline SVG as a mask */
+	.player:after {
+		/* Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox) */
+		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 105'><path fill='white' fill-rule='evenodd' d='M54.04 95.624C77.7 92.654 96 72.464 96 48 96 21.49 74.51 0 48 0S0 21.49 0 48c0 24.832 18.856 45.26 43.032 47.746L48.5 105l5.54-9.376zM0 0h96.552v105H0V0z' /></svg>");
+
+		content: "";
+		position: absolute;
+		top:    0;
+		right:  0;
+		bottom: 0;
+		left:   0;
+
+		pointer-events: none;
+	}
+
+	.player button {
+		width:  inherit;
+		height: inherit;
+		border: 6px solid $color-white;
+		border-radius: 50%;
+
+		outline: 0;
+		position: relative;
+	}
+
+		.player button:before {
+			background: rgba(0, 0, 0, .6) url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='white' d='M5 28.503V3.5l22 12.503-22 12.5z' /></svg>") no-repeat center;
+
+			background-size: 50%;
+
+			width:  inherit;
+			height: inherit;
+			border-radius: inherit;
+
+			content: "";
+			position: absolute;
+			top:  0;
+			left: 0;
+		}
+
+		.player.playing button:before { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='white' d='M12.5 29.5v-27h-9v27h9zm7 0h9v-27h-9v27z' /></svg>"); }
+
+		.player button .container {
+			padding: 0;
+			border-radius: inherit;
+			overflow: hidden;
+		}
+
+			.player button img { height: 100%; }
+
+		.player button:after {
+			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'><path fill='white' d='M9.735 0L5.007 8 .28 0h9.455z' /></svg>");
+
+			width:  10px;
+			height: 8px;
+			margin-left: -5px;
+
+			content: "";
+			position: absolute;
+			bottom: -13px; /* height + parent's border - 1px */
+			left: 50%;
+
+			transform: translateX(0.5px); /* Fix a minor centering issue (retina?) */
+			pointer-events: none;
+		}
+/* @end Player */
