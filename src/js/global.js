@@ -206,3 +206,36 @@ $document.ready(function() {
 
 	$buttons.click(change);
 });
+
+$(document).ready(function() {
+	$(".player").each(function() {
+		var
+			$player = $(this),
+			 player = $player.find("audio")[0],
+			$button = $player.find("button");
+
+		player.addEventListener("playing", function() {
+			$player.addClass("animated playing");
+		});
+
+		player.addEventListener("pause", function() {
+			$player.removeClass("playing");
+		});
+
+		player.addEventListener("ended", function() {
+			// Remove the "animated" class to reset the CSS animation
+			$player.removeClass("animated");
+		});
+
+		function handleDuration() {
+			$player.css("animation-duration", player.duration / 2 + "s, " + player.duration + "s");
+		}
+
+		player.addEventListener("durationchange", handleDuration);
+		if (player.duration) { handleDuration(); }
+
+		$button.click(function() {
+			player.paused ? player.play() : player.pause();
+		});
+	});
+});
