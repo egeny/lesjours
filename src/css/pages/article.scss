@@ -232,6 +232,102 @@ article .lettrine.with-quote {
 	background-position: .1875em 50%;
 }
 
+article .mini {
+	width: 100px;
+	padding: 0;
+
+	position: absolute;
+	top:   0;
+	right: 0;
+
+	@extend %font-proxima;
+	font-size: .875em;
+
+	transition: transform .3s;
+	transform: translateX(150%);
+	animation: show-up .3s forwards;
+
+	color: $color-black;
+}
+
+@keyframes show-up {
+	100% { transform: none; }
+}
+
+	article .mini a { display: block; }
+
+	article .mini a:hover,
+	article .mini a:focus { color: $color-media; }
+
+		article .mini .image {
+			width:  80px;
+			height: 80px;
+			padding: 8px;
+			border-radius: 50%;
+
+			display: inline-block;
+		}
+
+		article .mini .image,
+		article .mini .player {
+			margin-bottom: .5em;
+			position: relative;
+			left: -14px; // padding-left + img's border
+		}
+
+		article .mini a:hover .image,
+		article .mini a:focus .image { background: $color-media; }
+
+			article .mini .image img {
+				box-sizing: border-box;
+				height: 100%;
+				border: 6px solid $color-white;
+				border-radius: 50%;
+			}
+
+		article .mini p { margin-bottom: 0; }
+
+		article .mini .title {
+			@include font-weight-bold("proxima");
+			text-transform: uppercase;
+		}
+
+		article .mini .subtitle {
+			@include font-weight-semi-bold("proxima");
+			color: $color-dark;
+		}
+
+		article .mini a:hover .subtitle,
+		article .mini a:focus .subtitle { color: inherit; }
+
+		article .mini figcaption {
+			padding-top: .75em;
+			border-top: 1px solid $color-dark;
+			margin-top: .75em;
+
+			@include font-weight-regular("proxima");
+			font-size:  1em;
+			font-style: italic;
+		}
+
+		article .mini figcaption:before { content: none; }
+
+article .share {
+	margin: 0;
+
+	position: absolute;
+	top:    0;
+	bottom: 0;
+	left:   0;
+}
+
+	article .share ul {
+		margin: 1.5em 0;
+
+		position: sticky;
+		top: 1.5em;
+	}
+
 // Consider every child of .article-container as a column
 .article-container > * { @extend .col; }
 
@@ -284,6 +380,9 @@ article .lettrine.with-quote {
 	.article-container li:before { @include font-weight-bold("archer"); }
 	.article-container ul li:before { content: "• "; }
 	.article-container ol li:before { content: "• " counter(list) " "; }
+
+	.article-container .mini  { margin: 0; }
+	.article-container .share li:before { content: none; }
 
 	article > footer { padding-bottom: $margin; }
 
@@ -356,6 +455,7 @@ article .lettrine.with-quote {
 }
 
 @include media("sm", true) {
+	article .mini { display: none; }
 	article .rel .col-sm-1 div { @include sr; }
 }
 
@@ -451,6 +551,23 @@ article .lettrine.with-quote {
 @include media("lg") {
 	$margin: grid-margin("lg");
 	$gutter: grid-gutter("lg");
+
+	article .mini { width: 310px; }
+
+	article .mini .image,
+	article .mini .player {
+		float: left;
+		left: 0;
+	}
+
+	article .mini .title,
+	article .mini .subtitle,
+	article .mini figcaption {
+		width: 200px;
+		float: right;
+	}
+
+	article .mini .title { margin-top: 36px; }
 
 	.article-container > * { @extend .col-lg-left-2; }
 	.article-container > * { @extend .col-lg-6; }
