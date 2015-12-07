@@ -207,34 +207,35 @@ $document.ready(function() {
 	$buttons.click(change);
 });
 
+// Audio player
 $(document).ready(function() {
 	$(".player").each(function() {
 		var
-			$player = $(this),
-			 player = $player.find("audio")[0],
-			$button = $player.find("button");
+			$container = $(this),
+			$player    = $container.find("audio"),
+			$button    = $container.find("button");
 
-		player.addEventListener("playing", function() {
-			$player.addClass("animated playing");
+		$player.on("playing", function() {
+			$container.addClass("animated playing");
 		});
 
-		player.addEventListener("pause", function() {
-			$player.removeClass("playing");
+		$player.on("pause", function() {
+			$container.removeClass("playing");
 		});
 
-		player.addEventListener("ended", function() {
-			// Remove the "animated" class to reset the CSS animation
-			$player.removeClass("animated");
+		$player.on("ended", function() {
+			$container.removeClass("animated"); // Remove the "animated" class to reset the CSS animation
 		});
 
-		function handleDuration() {
-			$player.css("animation-duration", player.duration / 2 + "s, " + player.duration + "s");
-		}
+		$player.on("durationchange", function() {
+			var duration = $player[0].duration || 0;
+			$container.css("animation-duration", duration / 2 + "s, " + duration + "s");
+		});
 
-		player.addEventListener("durationchange", handleDuration);
-		if (player.duration) { handleDuration(); }
+		$player.trigger("durationchange");
 
 		$button.click(function() {
+			var player = $player[0];
 			player.paused ? player.play() : player.pause();
 		});
 	});
