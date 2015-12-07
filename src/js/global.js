@@ -4,15 +4,15 @@ var
 	$document = $(document),
 	$window   = $(window);
 
+// Throttle the calls for a function (avoid calling too many times)
 function throttle(fn, time) {
-	time || (time = 250);
 	var wait;
 
 	return function() {
 		if (!wait) {
 			fn.apply(this, arguments);
 			wait = true;
-			window.setTimeout(function() { wait = false; }, time);
+			window.setTimeout(function() { wait = false; }, time || 250);
 		}
 	}
 }
@@ -93,6 +93,7 @@ $document.ready(function() {
 	$window.resize(throttle(find)); // Check if the offset's haven't changed due to window resize
 });
 
+// Enable tabs
 $document.ready(function() {
 	$("[role=tablist] a").click(function(e) {
 		e.preventDefault();
@@ -121,15 +122,9 @@ $document.ready(function() {
 
 	// Check if a hash is present so we could switch to it
 	if (window.location.hash) {
-		var
-			hash    = window.location.hash,
-			$target = $(hash);
-
+		var $target = $(window.location.hash);
 		if ($target.hasClass("tab")) {
 			$("#" + $target.attr("aria-labelledby")).click();
-		} else if ($target.parents(".tab").length) {
-			$("#" + $target.parents(".tab").attr("aria-labelledby")).click();
-			history.pushState(null, null, hash);
 		}
 	}
 });
@@ -145,7 +140,7 @@ $(document).ready(function() {
 		$menu   = $("#menu");
 
 	$burger.click(function() {
-		$burger.removeClass("initial");
+		$burger.removeClass("initial"); // The initial class is used to disable animations
 		$burger.toggleClass("close");
 		$menu.toggleClass("opened");
 	});
