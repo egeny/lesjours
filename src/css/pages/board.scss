@@ -10,9 +10,8 @@ $gutter: grid-gutter("sm");
 		height: 64px; // Header's height on small devices
 	}
 
-	// Fix z-index so it will be below the main header while in position absolute, but on top when fixed
-	.board [role="tablist"]       { z-index: 9999; }
-	.board [role="tablist"].fixed { z-index: 10001; }
+	// Fix the z-index so it will be below the main header
+	.board [role="tablist"].sticky { z-index: 10001; }
 
 		.board [role="tablist"] li {
 			width: (100% / 8); // There is 7 tabs, plus one for the margin-left

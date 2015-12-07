@@ -17,80 +17,62 @@ function throttle(fn, time) {
 	}
 }
 
+// Enable the position: sticky elements
+$document.ready(function() {
+	$(".sticky").Stickyfill();
+});
+
+// Enable the sticky headers
 $document.ready(function() {
 	var
-		affixes  = [],
+		headers  = [],
 		previous = 0;
 
-	function find() {
-		$("[data-spy=affix]").each(function(index) {
-			var
-				affix  = affixes[index] || { $element: $(this) },
-				offset = affix.$element.offset().top;
+	$(".sticky-header").each(function() {
+		headers.push({ $element: $(this) });
+	});
 
-			// Avoid recomputing offsets if the element is already fixed
-			if (affix.$element.hasClass("fixed")) { return; }
-
-			if (affix.initial !== offset) {
-				affix.initial = offset;
-				affix.height  = affix.$element.height(),
-				affix.start   = offset + affix.height;
-				affix.snap    = offset + ((affix.$element.data("snap") * affix.height) || 0);
-			}
-
-			affixes[index] = affix; // Use affixes[index] instead of push because we might use this function to update as well
-		});
-	}
-
-	function check() {
+	$window.scroll(throttle(function() {
 		var current = $window.scrollTop();
 
-		affixes.forEach(function(item) {
+		headers.forEach(function(header, index) {
+			// Recompute the start position of element not yet sticky
+			// This might be not really performant but way easier than trying to guess when the element's offset is going to change
+			if (!header.$element.hasClass("sticky")) {
+				header.start = header.$element.offset().top + header.$element.height();
+			}
+
 			// When reaching the point where we have to start displaying as fixed
-			if (current > item.start) {
-				if (!item.$element.hasClass("fixed")) {
-					item.$element.removeClass("animated show"); // Clear some classes
-					item.$element.addClass("fixed"); // Set as fixed
+			if (current > header.start) {
+				if (!header.$element.hasClass("sticky")) {
+					header.$element.removeClass("animated show"); // Clear some classes
+					header.$element.addClass("sticky"); // Set as sticky
+					Stickyfill.add(header.$element[0]);
 				}
 			}
+
+			// If this element isn't sticky yet we can stop
+			if (!header.$element.hasClass("sticky")) { return; }
 
 			// If going up…
 			if (current < previous) {
-				// Check if we reached the point where to snap to initial position
-				if (current < item.snap) {
-					// Snap only once
-					if (item.$element.hasClass("fixed")) {
-						// Set a translateY as the distance between the initial position and current one
-						item.$element.css("transform", "translateY(" + (current - item.initial) + "px)");
-						item.$element.removeClass("fixed animated show"); // Clear all the classes (even animated)
-
-						// Wait for the browser to apply the classes and style
-						window.setTimeout(function() {
-							item.$element.addClass("animated"); // Set as animated
-							item.$element.attr("style", null);  // Release
-						}, 50);
-					}
+				// Check if we need to reset the header to its initial position
+				if (current < header.start) {
+					header.$element.removeClass("sticky animated show");
+					Stickyfill.remove(header.$element[0]);
 				} else {
 					// Otherwise, simply show
-					item.$element.addClass("animated show");
+					header.$element.addClass("animated show");
 				}
 			} else {
 				// If going down, hide
-				item.$element.removeClass("show");
+				header.$element.removeClass("show");
 			}
 		});
 
 		// Remember the previous scroll position to know if we are going up or down
 		previous = current;
-	}
-
-	$window.scroll(throttle(check));
-
-	// Find affixes (and their offets)
-	find(); // Right now
-	$window.load(find); // Check if the offset's haven't changed due to image loading
-	$window.bind("font-active", find); // Check if the offset's haven't changed due to font loading
-	$window.resize(throttle(find)); // Check if the offset's haven't changed due to window resize
+	}, 100)); // Throttle, but with an acceptable delay (250ms is too high)
 });
 
 // Enable tabs

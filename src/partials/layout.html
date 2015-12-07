@@ -11,23 +11,7 @@
 
 	<link rel="stylesheet" href="https://cloud.typography.com/6234674/791928/css/fonts.css" />
 	<script src="https://use.typekit.net/cyq3qtt.js"></script>
-	<script>
-		try {
-			Typekit.handler = function(event) {
-				return function() {
-					window.LJ = window.LJ || {};
-					window.LJ.fonts = event;
-					if ($) { $(window).trigger("font-" + event); }
-				}
-			};
-
-			Typekit.load({
-				async: true,
-				active:   Typekit.handler("active"),
-				inactive: Typekit.handler("inactive"),
-			});
-		} catch(e) {}
-	</script>
+	<script>try { Typekit.load({ async: true }); } catch(e) {}</script>
 
 	<link rel="stylesheet" href="css/global.css" />
 	{% block css %}{% endblock %}
@@ -38,6 +22,7 @@
 	{% block content %}{% endblock %}
 
 	<script src="js/jquery.min.js"></script>
+	<script src="js/stickyfill.min.js"></script>
 	<script src="js/global.js"></script>
 	{% block js %}{% endblock %}
 </body>
