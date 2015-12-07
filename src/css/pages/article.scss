@@ -312,21 +312,18 @@ article .mini {
 
 		article .mini figcaption:before { content: none; }
 
-article .share {
-	margin: 0;
+article .share { margin: 0; }
 
-	position: absolute;
-	top:    0;
-	bottom: 0;
-	left:   0;
-}
-
-	article .share ul {
-		margin: 1.5em 0;
-
-		position: sticky;
-		top: 1.5em;
+	article .share li {
+		margin-left:  1em;
+		margin-right: 1em;
+		display: inline-block;
 	}
+
+		article .share svg {
+			width:  2em;
+			height: 2em;
+		}
 
 // Consider every child of .article-container as a column
 .article-container > * { @extend .col; }
@@ -472,6 +469,27 @@ article .share {
 
 	article figcaption { margin-left: 0; }
 	article .lettrine  { margin-left: -.5em; }
+
+	article .share {
+		@include fadable;
+		position: absolute;
+		top:    185px;
+		bottom: 0;
+		left:   0;
+	}
+
+	article .share.show { @include fadable-active; }
+
+		article .share ul {
+			margin: 1.5em 0;
+			position: sticky;
+			top: 1.5em;
+		}
+
+			article .share li {
+				margin-left:  0;
+				margin-right: 0;
+			}
 
 	.article-container > * { @extend .col-md-left-1; }
 	.article-container > * { @extend .col-md-5; }

@@ -17,6 +17,19 @@ function throttle(fn, time) {
 	}
 }
 
+// Fade the share when necessary
+$document.ready(function() {
+	var timer, $share = $(".share");
+
+	$window.scroll(throttle(function() {
+		$share.addClass("show");
+		window.clearTimeout(timer);
+		timer = window.setTimeout(function() {
+			$share.removeClass("show");
+		}, $share.data("fade"));
+	}));
+});
+
 // Enable the position: sticky elements
 $document.ready(function() {
 	$(".sticky").Stickyfill();
