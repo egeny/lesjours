@@ -249,6 +249,7 @@ article .mini.show { transform: none; }
 
 	article .mini a { display: block; }
 
+	article .mini.active a,
 	article .mini a:hover,
 	article .mini a:focus { color: $color-media; }
 
@@ -264,6 +265,7 @@ article .mini.show { transform: none; }
 		article .mini .image,
 		article .mini .player { margin: 0 auto .5em; }
 
+		article .mini.active .image,
 		article .mini a:hover .image,
 		article .mini a:focus .image { background: $color-media; }
 
@@ -290,6 +292,7 @@ article .mini.show { transform: none; }
 			color: $color-dark;
 		}
 
+		article .mini.active .subtitle,
 		article .mini a:hover .subtitle,
 		article .mini a:focus .subtitle { color: inherit; }
 

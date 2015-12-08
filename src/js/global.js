@@ -65,6 +65,14 @@ $document.ready(function() {
 			$mini   = $minis[index],
 			$button = $mini.find(".player button");
 
+		function hover() { $mini.addClass("active");    }
+		function blur()  { $mini.removeClass("active"); }
+
+		$element.mouseenter(hover);
+		$element.focus(hover);
+		$element.mouseleave(blur);
+		$element.blur(blur);
+
 		if (!$button.length) { return; }
 
 		$element.click(function(e) {
