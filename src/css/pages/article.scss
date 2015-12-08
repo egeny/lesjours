@@ -233,26 +233,19 @@ article .lettrine.with-quote {
 }
 
 article .mini {
-	width: 100px;
-	padding: 0;
-
 	position: absolute;
-	top:   0;
 	right: 0;
 
 	@extend %font-proxima;
 	font-size: .875em;
 
 	transition: transform .3s;
-	transform: translateX(150%);
-	animation: show-up .3s forwards;
+	transform: translateX(100%);
 
 	color: $color-black;
 }
 
-@keyframes show-up {
-	100% { transform: none; }
-}
+article .mini.show { transform: none; }
 
 	article .mini a { display: block; }
 
@@ -265,15 +258,11 @@ article .mini {
 			padding: 8px;
 			border-radius: 50%;
 
-			display: inline-block;
+			display: block;
 		}
 
 		article .mini .image,
-		article .mini .player {
-			margin-bottom: .5em;
-			position: relative;
-			left: -14px; // padding-left + img's border
-		}
+		article .mini .player { margin: 0 auto .5em; }
 
 		article .mini a:hover .image,
 		article .mini a:focus .image { background: $color-media; }
@@ -285,7 +274,11 @@ article .mini {
 				border-radius: 50%;
 			}
 
-		article .mini p { margin-bottom: 0; }
+		article .mini p,
+		article .mini figcaption {
+			margin-left: calc((100% - 80px) / 2);
+			margin-bottom: 0;
+		}
 
 		article .mini .title {
 			@include font-weight-bold("proxima");
@@ -378,7 +371,7 @@ article .share { margin: 0; }
 	.article-container ul li:before { content: "• "; }
 	.article-container ol li:before { content: "• " counter(list) " "; }
 
-	.article-container .mini  { margin: 0; }
+	.article-container .mini { margin: 0; }
 	.article-container .share li:before { content: none; }
 
 	article > footer { padding-bottom: $margin; }
@@ -489,6 +482,7 @@ article .share { margin: 0; }
 			article .share li {
 				margin-left:  0;
 				margin-right: 0;
+				display: block;
 			}
 
 	.article-container > * { @extend .col-md-left-1; }
@@ -504,6 +498,8 @@ article .share { margin: 0; }
 
 	.article-container > .glossary,
 	.article-container > .notes { font-size: 0.8125em; }
+
+	.article-container .mini { margin-bottom: $gutter; }
 
 	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
 	.article-container .col-md-left-0 { @extend .col-md-left-0; }
@@ -570,22 +566,19 @@ article .share { margin: 0; }
 	$margin: grid-margin("lg");
 	$gutter: grid-gutter("lg");
 
-	article .mini { width: 310px; }
-
 	article .mini .image,
-	article .mini .player {
-		float: left;
-		left: 0;
-	}
+	article .mini .player { float: left; }
 
 	article .mini .title,
 	article .mini .subtitle,
 	article .mini figcaption {
-		width: 200px;
+		width: calc(100% - 96px - 1em);
+		margin-left: 0;
+
 		float: right;
 	}
 
-	article .mini .title { margin-top: 36px; }
+	article .mini .title { margin-top: 30px; }
 
 	.article-container > * { @extend .col-lg-left-2; }
 	.article-container > * { @extend .col-lg-6; }
@@ -617,6 +610,7 @@ article .share { margin: 0; }
 
 	@if $gutter != grid-gutter("md") {
 		article figure .snake { left: #{-$gutter}; }
+		.article-container .mini { margin-bottom: $gutter; }
 	}
 }
 /* @end Article */
