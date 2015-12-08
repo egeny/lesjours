@@ -142,6 +142,7 @@ var
 						.pipe(replace('#FFF',    'currentColor'))
 						.pipe(replace('#000',    'currentColor'))
 						.pipe(replace('#C83E2C', 'currentColor'))
+						.pipe(replace('#F3DF93', 'currentColor'))
 						.pipe(gulp.dest(context.input)) // Save on input so we could use them as HTML templates (should not be versionned)
 						.pipe(livereload());
 				});
@@ -161,7 +162,7 @@ function folders(dir) {
 }
 
 // Configure nunjucks
-nunjucks.nunjucks.configure([paths.html.input], { watch: false });
+nunjucks.nunjucks.configure([paths.html.input], { watch: false, noCache: true });
 
 gulp.task('default', function() {
 	sequence('clean', 'build');
