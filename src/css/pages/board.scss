@@ -40,9 +40,7 @@ $gutter: grid-gutter("sm");
 			.board [role="tab"]:focus { color: $color-brand; }
 			.board [role="tab"]:focus { outline: 0; }
 
-			.board [role="tab"][aria-selected="true"] { color: $color-darker; }
-			.board [role="tab"][aria-selected="true"]:hover,
-			.board [role="tab"][aria-selected="true"]:focus  { color: inherit; }
+			.board [role="tab"][aria-selected="true"] { color: $color-brand; }
 
 			.board [role="tab"] span {
 				margin-top: 1em;
