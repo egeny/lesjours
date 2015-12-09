@@ -8,6 +8,9 @@
 %fadable-active { @include fadable-active; }
 .responsive { @include responsive; }
 
+/* Quick overflow: hidden */
+.no-overflow { overflow: hidden; }
+
 /* Easy link's style */
 .link,
 %link {

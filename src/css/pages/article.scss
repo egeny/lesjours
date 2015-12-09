@@ -321,8 +321,6 @@ article .share { margin: 0; }
 			height: 2em;
 		}
 
-.article-container { overflow: hidden; }
-
 // Consider every child of .article-container as a column
 .article-container > * { @extend .col; }
 
