@@ -23,7 +23,7 @@
 			</div>
 		</div>
 	</header>
-	<div class="container">
+	<div class="container relative">
 		<div class="row article-container relative">
 			<p><span class="lettrine">E</span>lle s’applique, liant ses lettres d’un trait appuyé de stylo-bille. À côté du mot <q>arabe</q>, elle a écrit <q>voleur</q>. Une grande partie des élèves de cette classe de troisième a eu la même idée. Sans se concerter. Les mots sont posés sans gêne, provocation ou colère. Son voisin d’en face, un grand garçon souriant, a lui écrit le mot <q>islamiste</q>. Un autre encore a mis <q>violeur</q>. Lundi dernier, ces élèves <a href="#" data-mini="1">du collège Gabriel-Péri d’Aubervilliers</a> (Seine-Saint-Denis) ont participé durant 2 heures au programme <a href="#">CoExist</a>, un dispositif de lutte contre le racisme et l’antisémitisme fondé sur le principe de la déconstruction des préjugés. <abbr title="Société Nationale des Chemins de Fer français">SNCF</abbr></p>
 
@@ -211,13 +211,14 @@
 					<li id="note-2">suscite une réaction unanime : « Français » auquel une écrasante majorité appose l’adjectif «raciste». Plus rarement «blanc», «riche», «bourgeois» ou «parisien».</li>
 				</ol>
 			</div>
-			<div class="share col-md-1 col-lg-2 text-center show" data-fade="3000">
-				<ul class="sticky">
-					<li class="gutter-bottom-2"><a class="btn" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
-					<li class="gutter-bottom-2"><a class="btn" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
-					<li><a class="btn" href="#"><i>{{ icon("plane", "Partager") }}</i></a></li>
-				</ul>
-			</div>
+		</div>
+		{# This must be outside of the .article-container otherwise it won't be sticky due to the overflow: hidden #}
+		<div class="share col col-md-1 col-lg-2 text-center show" data-fade="3000">
+			<ul class="sticky">
+				<li class="gutter-bottom-2"><a class="btn" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
+				<li class="gutter-bottom-2"><a class="btn" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
+				<li><a class="btn" href="#"><i>{{ icon("plane", "Partager") }}</i></a></li>
+			</ul>
 		</div>
 	</div>
 	<footer class="pattern-1">
