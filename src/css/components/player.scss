@@ -12,7 +12,8 @@
 }
 
 .active .player,
-.player.playing { background-color: $color-media; }
+.player.playing,
+.player:hover { background-color: $color-media; }
 
 	/* Kudos to Lea Verou for her awesome article */
 	/* @see http://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/ */
