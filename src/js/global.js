@@ -213,7 +213,7 @@ $document.ready(function() {
 });
 
 // Set the behaviour for the wall's title buttons
-$(document.ready(function () {
+$document.ready(function () {
 	$(".wall .title .btn").click(function(e) {
 		var
 			$this     = $(this),
@@ -226,10 +226,10 @@ $(document.ready(function () {
 
 		e.preventDefault();
 	});
-}));
+});
 
 // Set the burger's button behaviour
-$(document).ready(function() {
+$document.ready(function() {
 	var
 		$burger = $("#burger"),
 		$menu   = $("#menu");
