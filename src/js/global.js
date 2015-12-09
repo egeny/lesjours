@@ -320,6 +320,9 @@ $document.ready(function() {
 		}
 	});
 
+	$carousel.hammer().bind("swiperight", function() { $buttons.filter("[data-direction=backward]").click(); });
+	$carousel.hammer().bind("swipeleft", change);
+
 	$buttons.click(change);
 	$carousel.trigger("state-changed");
 });
