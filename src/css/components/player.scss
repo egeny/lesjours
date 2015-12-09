@@ -30,6 +30,10 @@
 		right: -9px;
 	}
 
+	// Due to a bug with Safari, we have to set the background-color when the animation started
+	// Otherwise, the player-progress-bg animation won't properly inherit its background
+	.player.animated { background-color: $color-media; }
+
 	/* Use a class for the animation so we can restart it */
 	.player.animated:before {
 		transform-origin: left;
