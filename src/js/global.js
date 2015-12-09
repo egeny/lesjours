@@ -133,7 +133,7 @@ $document.ready(function() {
 		headers.push({ $element: $(this) });
 	});
 
-	$window.scroll(throttle(function() {
+	$window.scroll(function() {
 		var current = $window.scrollTop();
 
 		headers.forEach(function(header, index) {
@@ -173,7 +173,7 @@ $document.ready(function() {
 
 		// Remember the previous scroll position to know if we are going up or down
 		previous = current;
-	}, 100)); // Throttle, but with an acceptable delay (250ms is too high)
+	});
 });
 
 // Enable tabs
