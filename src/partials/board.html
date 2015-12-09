@@ -17,13 +17,13 @@
 		</div>
 	</header>
 
-	<ul class="col-sm-left-0 col-md-left-1 list-inline text-center sticky-header" role="tablist">
-		<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="false" tabindex="-1">{{ icon("files") }} <span>Les épisodes</span></a></li>
+	<ul class="col-sm-left-0 col-md-left-1 list-inline text-center" role="tablist">
+		<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="true" tabindex="0">{{ icon("files") }} <span>Les épisodes</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("people") }} <span>Les personnages</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("camera") }} <span>Les images</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-data" aria-controls="data" href="#data" aria-selected="false" tabindex="-1">{{ icon("graph") }} <span>Les data</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-lieux" aria-controls="lieux" href="#lieux" aria-selected="false" tabindex="-1">{{ icon("marker") }} <span>Les lieux</span></a></li>
-		<li role="presentation"><a role="tab" id="tab-bande-originale" aria-controls="bande-originale" href="#bande-originale" aria-selected="true" tabindex="0">{{ icon("headphones") }} <span>La bande originale</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-bande-originale" aria-controls="bande-originale" href="#bande-originale" aria-selected="false" tabindex="-1">{{ icon("headphones") }} <span>La bande originale</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-documents" aria-controls="documents" href="#documents" aria-selected="false" tabindex="-1">{{ icon("folder") }} <span>Les documents</span></a></li>
 	</ul>
 
@@ -32,8 +32,18 @@
 			<div class="col gutter-0 col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
 				<h2 class="gutter-left-1 style-meta"><a href="#" class="link obsession">Les années collège</a></h2>
 				<div class="tab-container">
-					<section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="true">
+					<section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="false">
 						<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les épisodes</h3>
+						<article class="gutter-1">
+							<img class="responsive gutter-bottom-2" src="img/episode/header.jpg" alt="" />
+							<h4 class="h4 snake-2"><span class="snake-container">Des élèves et des préjugés</span></h4>
+							<p>Mardi, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes et homophobes.</p>
+							<p class="style-meta">25 sept. 2015 • épisode 17 | Texte <a href="#">Alice Géraud</a> • Photos <a href="#">Simon Lambert</a></p>
+							<p>Elle s’applique, liant ses lettres d’un trait appuyé de stylo-bille. À côté du mot <q>arabe</q>, elle a écrit <q>voleur</q>. Une grande partie des élèves de cette classe de troisième a eu la même idée. Sans se concerter. Les mots sont posés sans gêne, provocation ou colère. Son voisin d’en face, un grand garçon souriant, a lui écrit le mot <q>islamiste</q>. Un autre encore a mis <q>violeur</q>. Lundi dernier, ces élèves du collège Gabriel-Péri d’Aubervilliers (Seine-Saint-Denis) ont participé durant 2 heures au programme CoExist, un dispositif. (…)</p>
+							<div class="more text-center">
+								<a class="btn" href="#"><i>Lire</i></a>
+							</div>
+						</article>
 					</section><!-- end of #episodes -->
 
 					<section id="personnages" class="tab" role="tabpanel" aria-labelledby="tab-personnages" aria-hidden="true">
@@ -205,7 +215,7 @@
 						</ul>
 					</section><!-- end of #lieux -->
 
-					<section id="bande-originale" class="tab col" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="false">
+					<section id="bande-originale" class="tab col" role="tabpanel" aria-labelledby="tab-bande-originale" aria-hidden="true">
 						<h3 class="gutter-bottom-2 style-meta-larger">La bande originale</h3>
 
 						<ul class="gutter-bottom-3 style-meta list-inline quick-links">
