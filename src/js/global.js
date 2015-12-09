@@ -212,11 +212,23 @@ $document.ready(function() {
 	}
 });
 
-$(".wall .title .btn").click(function(e) {
-	e.preventDefault();
-	$(this).parents(".wall").toggleClass("expanded");
-});
+// Set the behaviour for the wall's title buttons
+$(document.ready(function () {
+	$(".wall .title .btn").click(function(e) {
+		var
+			$this     = $(this),
+			$wall     = $this.parents(".wall"),
+			$carousel = $wall.parent();
 
+		$wall.toggleClass("expanded");
+		$carousel.data("state", "paused");
+		$carousel.trigger("state-changed");
+
+		e.preventDefault();
+	});
+}));
+
+// Set the burger's button behaviour
 $(document).ready(function() {
 	var
 		$burger = $("#burger"),
@@ -229,18 +241,20 @@ $(document).ready(function() {
 	});
 });
 
+// Carousel
 $document.ready(function() {
 	// TODO: check with multiple carousel (might occurs?)
-	// TODO: swipe
 	// TODO: fallback for older browsers?
-	// TODO: list items
-	// TODO: auto-next
 	// TODO: one item?
 	// TODO: bug with two items
 	var
 		$carousel = $(".carousel"),
-		$items    = $carousel.children()
-		$buttons  = $carousel.siblings(".carousel-controls").find("button");
+		$items    = $carousel.children(),
+		$controls = $(".carousel-controls"),
+		$buttons  = $controls.find("button"),
+		$pager    = $controls.find("li"),
+		interval  = $carousel.data("interval"),
+		timer;
 
 	function next($item) {
 		return $item.next().length ? $item.next() : $items.first();
@@ -257,6 +271,12 @@ $document.ready(function() {
 			selected  = $carousel.find(".selected"), // Find the currently selected item
 			i = 0, count = $items.length, order = 2;
 
+		// Stop the interval if this function was called with an event (its target should be a button)
+		if (e) {
+			$carousel.data("state", "paused");
+			$carousel.trigger("state-changed");
+		}
+
 		// Makes sure we have a selected item (fallback to the first item)
 		selected = selected.length ? selected : $items.first();
 
@@ -264,6 +284,10 @@ $document.ready(function() {
 		selected.removeClass("selected expanded");
 		selected = direction === "forward" ? next(selected) : previous(selected);
 		selected.addClass("selected");
+
+		// Update the pager
+		$pager.removeClass("selected");
+		$pager.eq(selected.index()).addClass("selected");
 
 		// Loop through the items to re-order them
 		for (; i < count; i++) {
@@ -282,7 +306,22 @@ $document.ready(function() {
 		}, 50); // Use a timeout so the browser have the time to set the "hold" transition and transformation (the animation won't work otherwise)
 	}
 
+	// Listen for state-changed event to automatically switch items
+	$carousel.on("state-changed", function() {
+		switch ($carousel.data("state")) {
+			case "playing":
+			case "running":
+				if (interval) { timer = window.setInterval(change, interval); }
+			break;
+
+			case "paused":
+				window.clearInterval(timer);
+			break;
+		}
+	});
+
 	$buttons.click(change);
+	$carousel.trigger("state-changed");
 });
 
 // Audio player
