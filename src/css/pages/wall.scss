@@ -1,0 +1,57 @@
+/* @group .page-wall */
+$margin: grid-margin("sm");
+
+.page-wall > .container { height: calc(100% - 64px - #{$margin * 2}); }
+
+.page-wall,
+.page-wall > .container .col,
+.page-wall .carousel-container,
+.page-wall .carousel,
+.page-wall .wall,
+.page-wall .wall img { height: 100%; }
+
+.page-wall .expanded .overlay { overflow: auto; }
+
+.page-wall .carousel-controls {
+	line-height: #{$margin * 2};
+	color: lighten($color-brand, 37%);
+}
+
+.page-wall .carousel-controls .selected { color: $color-brand; }
+
+.page-wall .carousel-controls .btn {
+	position: absolute;
+	bottom: 0;
+	right: #{-$margin / 2};
+}
+
+.page-wall .carousel-controls .btn[data-direction="backward"] {
+	right: auto;
+	left: #{-$margin / 2};
+}
+
+.page-wall .carousel-controls .btn svg {
+	width:  3em;
+	height: 3em;
+}
+
+@include media("md") {
+	$margin: grid-margin("md");
+	@if $margin != grid-margin("sm") {
+		.page-wall > .container { height: calc(100% - 85px - #{$margin * 2}); }
+		.page-wall .carousel-controls { line-height: #{$margin * 2}; }
+		.page-wall .carousel-controls .btn { right: #{-$margin / 2}; }
+		.page-wall .carousel-controls .btn[data-direction="backward"] { left: #{-$margin / 2}; }
+	}
+}
+
+@include media("lg") {
+	$margin: grid-margin("lg");
+	@if $margin != grid-margin("md") {
+		.page-wall > .container { height: calc(100% - 85px - #{$margin * 2}); }
+		.page-wall .carousel-controls { line-height: #{$margin * 2}; }
+		.page-wall .carousel-controls .btn { right: #{-$margin / 2}; }
+		.page-wall .carousel-controls .btn[data-direction="backward"] { left: #{-$margin / 2}; }
+	}
+}
+/* @end .page-wall */
