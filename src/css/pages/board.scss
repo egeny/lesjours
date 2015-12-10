@@ -33,7 +33,7 @@ $gutter: grid-gutter("sm");
 			.board [role="tab"]:before {
 				content: "●";
 				display: block;
-				line-height: 1;
+				line-height: 1.75;
 			}
 
 			.board [role="tab"]:hover,
