@@ -239,13 +239,17 @@ article .mini {
 	@extend %font-proxima;
 	font-size: .875em;
 
-	transition: transform .3s;
+	opacity: 0;
+	transition: opacity .6s, transform .6s;
 	transform: translateX(100%);
 
 	color: $color-black;
 }
 
-article .mini.show { transform: none; }
+article .mini.show {
+	opacity: 1;
+	transform: none;
+}
 
 	article .mini a { display: block; }
 
