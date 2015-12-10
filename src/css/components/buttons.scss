@@ -39,11 +39,12 @@
 	}
 
 	.btn:hover:before,
-	.btn:focus:before { transform: scale(0.833333); }
+	.btn:focus:before { transform: scale(0.9); }
 
 	.btn i {
 		display: block; // Recommended if you want to animate with firefox
 		position: relative;
+		top: 1px; // Seriously…
 		font-style: normal;
 	}
 
