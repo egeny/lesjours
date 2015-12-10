@@ -15,7 +15,7 @@
 		try {
 			Typekit.handler = function(event) {
 				return function() {
-					if ($) { $(window).trigger("font-" + event); }
+					if (window.$) { $(window).trigger("font-" + event); }
 				}
 			};
 
