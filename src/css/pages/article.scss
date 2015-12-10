@@ -439,7 +439,7 @@ article .share { margin: 0; }
 
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
-	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, rgba($color, .5), rgba($color, .5)); }
 
 	article.obsession-#{$i} .snake,
 	article.obsession-#{$i} figcaption:before { border-color: $color; }
