@@ -605,6 +605,13 @@ article .share { margin: 0; }
 	.article-container > .full { @extend .col-lg-12; }
 	.article-container > .full figcaption { @extend .col-lg-left-2; }
 
+	article .meta p,
+	article .meta ul,
+	article .meta li { display: inline-block; }
+
+	article .meta p,
+	article .meta li { margin-right: 1.5em; }
+
 	@if $margin != grid-margin("md") {
 		article blockquote:before { left: #{-$margin / 2}; }
 
