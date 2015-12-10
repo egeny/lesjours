@@ -1,4 +1,4 @@
-<li class="col">
+<li class="col{% if item.minor %} minor{% endif %}">
 	<a href="{{ item.href|default("#") }}">
 		<img class="responsive" src="{{ item.img }}" alt="{{ item.alt }}" />
 		{% if item.title %}

@@ -136,7 +136,9 @@ $gutter: grid-gutter("sm");
 	.board [role="tablist"] { height: 85px; }
 
 	.quick-links li { margin-right: 3em; }
-	.mosaic li { width: 50%; }
+
+	.mosaic li     { width: 50%; }
+	.mosaic .minor { width: calc(33.333333% + #{$gutter}); }
 
 	.articles .snake-1:before {
 		width:  $gutter *  1.5;
@@ -177,7 +179,9 @@ $gutter: grid-gutter("sm");
 
 	.board [role="tab"] span { display: block; }
 
-	.mosaic   li { width: 33.333333%; }
+	.mosaic li     { width: 33.333333%; }
+	.mosaic .minor { width: 20%; }
+
 	.articles li { width: 50%; }
 
 	@if $gutter != grid-gutter("md") {
