@@ -36,7 +36,7 @@
 
 @each $color in $colors-obsessions {
 	$i: index($colors-obsessions, $color);
-	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, rgba($color, .5), rgba($color, .5)); }
 }
 
 .link-unstyled {
