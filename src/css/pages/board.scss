@@ -114,14 +114,6 @@ $gutter: grid-gutter("sm");
 			left:   0;
 		}
 
-.board .style-meta-large { position: relative; }
-.board .style-meta-large svg {
-	margin-top: -.75em;
-	position: absolute;
-	top: 50%;
-	left: -2em;
-}
-
 .articles .link-unstyled { display: block; }
 .articles .link-unstyled:hover,
 .articles .link-unstyled:focus,
