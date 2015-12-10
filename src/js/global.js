@@ -200,7 +200,7 @@ $document.ready(function() {
 		history.pushState(null, null, "#" + $this.attr("aria-controls"));
 
 		// Scroll to the target since we might be below
-		$window.scrollTop($target.offset().top);
+		//$window.scrollTop($target.offset().top);
 	});
 
 	// Check if a hash is present so we could switch to it
