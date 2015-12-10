@@ -192,9 +192,9 @@ article .interview {
 }
 
 	article .question {
-		@include font-weight-bold("archer");
-		font-variant: small-caps;
 		margin: 1.5em 0 .75em;
+		@include font-weight-bold("archer");
+		text-transform: uppercase;
 	}
 
 	article .question:before {
