@@ -23,7 +23,7 @@ article header { position: relative; } // Used to position the .snake
 		left:   $margin;
 	}
 
-	article header h2   { margin-bottom: .5em; }
+	article header .h2  { margin-bottom: .5em; }
 	article header time { display: inline-block; }
 
 article a       { @extend %link; }
@@ -63,13 +63,13 @@ article blockquote { position: relative; }
 		z-index: -1;
 		position: absolute;
 		top:  -.75em;
-		left: #{-$margin / 2};
+		left: 4px;
 
 		font-size: 1.85em;
 	}
 
 	article blockquote p {
-		padding-left: 1.25em;
+		padding-left: 1.75em;
 		margin-bottom: .125em;
 
 		@extend %font-brandon;
@@ -108,10 +108,16 @@ article figure {}
 
 	article figcaption > span { @extend .snake-container; }
 
-article h3 { @extend .h3; }
-article h4 { @extend .h4; }
-article h5 { @extend .h5; }
-article h6 { @extend .h6; }
+	article figcaption .credits,
+	article figcaption .credits a { @include font-weight-regular("proxima"); }
+
+article h3 { @extend .h4; }
+article h4 { @extend .h5; }
+article h5 { @extend .h6; }
+
+article h3,
+article h4,
+article h5 { margin-bottom: 0; }
 
 article i,
 article em { font-style: italic; }
@@ -142,32 +148,20 @@ article .glossary {}
 	article .glossary dfn { font-style: inherit; }
 
 	article .glossary dt,
-	article .glossary dd {
-		margin-bottom: 1em; // FIXME: not working since display is inline
-		display: inline;
-	}
+	article .glossary dd { display: inline; }
 
 	article .glossary dt { @include font-weight-bold("archer"); }
 
-	article .glossary dt:before {
+	article .glossary dd:after {
 		content: "";
 		display: table;
+		margin-bottom: 1em;
 	}
+
+	article .glossary dd:last-child:after { content: none; }
 
 	article .glossary dfn:before { content: "• ";  }
 	article .glossary dfn:after  { content: " : "; }
-
-	article .glossary ol li {
-		margin-bottom: 1em;
-		counter-increment: notes;
-	}
-
-	article .glossary :target { background: $color-media; }
-
-	article .glossary ol li:before {
-		@include font-weight-bold("archer");
-		content: "[" counter(notes) "] ";
-	}
 
 article .notes {}
 
@@ -178,6 +172,8 @@ article .notes {}
 		margin-bottom: 1em;
 		counter-increment: notes;
 	}
+
+	article .notes ol li:last-child { margin-bottom: 0; }
 
 	article .notes :target { background: $color-media; }
 
@@ -194,7 +190,6 @@ article .interview {
 	article .question {
 		margin: 1.5em 0 .75em;
 		@include font-weight-bold("archer");
-		text-transform: uppercase;
 	}
 
 	article .question:before {
@@ -264,6 +259,7 @@ article .mini.show {
 			border-radius: 50%;
 
 			display: block;
+			font-size: inherit;
 		}
 
 		article .mini .image,
@@ -284,6 +280,7 @@ article .mini.show {
 		article .mini figcaption {
 			margin-left: calc((100% - 80px) / 2);
 			margin-bottom: 0;
+			font: inherit;
 		}
 
 		article .mini .title {
@@ -300,7 +297,8 @@ article .mini.show {
 		article .mini a:hover .subtitle,
 		article .mini a:focus .subtitle { color: inherit; }
 
-		article .mini figcaption {
+		article .mini figcaption,
+		article .mini .caption {
 			padding-top: .75em;
 			border-top: 1px solid $color-dark;
 			margin-top: .75em;
@@ -312,7 +310,7 @@ article .mini.show {
 
 		article .mini figcaption:before { content: none; }
 
-article .share { margin: 0; }
+article .share { margin-bottom: 1.5em; }
 
 	article .share li {
 		margin-left:  1em;
@@ -377,6 +375,7 @@ article .share { margin: 0; }
 	.article-container li:before { @include font-weight-bold("archer"); }
 	.article-container ul li:before { content: "• "; }
 	.article-container ol li:before { content: "• " counter(list) " "; }
+	.article-container ol ol li:before { content: "• " counter(list, lower-alpha) " "; }
 
 	.article-container .mini { margin: 0; }
 	.article-container .share li:before { content: none; }
@@ -389,7 +388,10 @@ article .share { margin: 0; }
 		}
 
 			article .meta .row    { background: $color-white; }
+			article .meta p       { margin: 0 1em 1em 0; }
 			article .meta li      { margin-bottom: 1em; }
+			article .meta a       { margin-left: .25em; }
+			article .meta .tags a { margin-left: 0; }
 			article .meta .tags a { background-image: linear-gradient(to bottom, $color-external, $color-external); }
 
 		article .rel { background: $color-white; }
@@ -467,8 +469,9 @@ article .share { margin: 0; }
 		left:  -4px; // Offset the border
 	}
 
-	article figcaption { margin-left: 0; }
-	article .lettrine  { margin-left: -.5em; }
+	article blockquote p { padding-left: 1.25em; }
+	article figcaption   { margin-left: 0; }
+	article .lettrine    { margin-left: -.5em; }
 
 	article .share {
 		@include fadable;
