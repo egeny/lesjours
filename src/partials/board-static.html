@@ -1,0 +1,267 @@
+<section class="board obsession-3">
+	<header class="container gutter-top-2">
+		<div class="row">
+			<div class="col">
+				<div class="wall expanded">
+					{%
+						set wall = {
+							img: "/obsessions/les-annees-college/les-annees-college.jpg",
+							href: "/obsessions/les-annees-college/",
+							title: "Les années<br/>Collège",
+							subtitle: "Un an en 3<sup>ème</sup>B à Aubervilliers"
+						}
+					%}
+					{% include "partials/wall.html" %}
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<ul class="gutter-bottom-1 col-md-left-1 col-lg-left-1 col-lg-right-1 list-inline text-center sticky-header" role="tablist">
+		<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="true" tabindex="0">{{ icon("files") }} <span>Les épisodes</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("people") }} <span>Les personnages</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("camera") }} <span>Les images</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-data" aria-controls="data" href="#data" aria-selected="false" tabindex="-1">{{ icon("graph") }} <span>Les data</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-lieux" aria-controls="lieux" href="#lieux" aria-selected="false" tabindex="-1">{{ icon("marker") }} <span>Les lieux</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-bande-originale" aria-controls="bande-originale" href="#bande-originale" aria-selected="false" tabindex="-1">{{ icon("headphones") }} <span>La bande originale</span></a></li>
+		<li role="presentation"><a role="tab" id="tab-documents" aria-controls="documents" href="#documents" aria-selected="false" tabindex="-1">{{ icon("folder") }} <span>Les documents</span></a></li>
+	</ul>
+{%
+	set people = [
+		{
+			img:      "/obsessions/good-com-bad-cop/img/person-1.jpg",
+			title:    "Judith Cohen Solal",
+			subtitle: "Psychanalyste"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-3.jpg",
+			title:    "Kevina",
+			subtitle: "Élève en 6<sup>ème</sup> techno"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-4.jpg",
+			title:    "Kevin O’long Dupont",
+			subtitle: "Élève en 3<sup>ème</sup> B"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-5.jpg",
+			title:    "Jules-Édouard",
+			subtitle: "Surveillant"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-3.jpg",
+			title:    "Kevina",
+			subtitle: "Élève en 6<sup>ème</sup> techno"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/person-2.jpg",
+			title:    "D<sup>r</sup> Robert Oppenheimer",
+			subtitle: "Doctorant en physique nucléaire"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-4.jpg",
+			title:    "Kevin O’long Dupont",
+			subtitle: "Élève en 3<sup>ème</sup> B"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-4.jpg",
+			title:    "Kevin O’long Dupont",
+			subtitle: "Élève en 3<sup>ème</sup> B"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-4.jpg",
+			title:    "Kevin O’long Dupont",
+			subtitle: "Élève en 3<sup>ème</sup> B"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-4.jpg",
+			title:    "Kevin O’long Dupont",
+			subtitle: "Élève en 3<sup>ème</sup> B"
+		},
+		{
+			minor:    true,
+			img:      "/obsessions/good-com-bad-cop/img/person-5.jpg",
+			title:    "Jules-Édouard",
+			subtitle: "Surveillant"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/person-1.jpg",
+			title:    "Judith Cohen Solal",
+			subtitle: "Psychanalyste"
+		}
+	]
+%}
+{%
+	set images = ["/obsessions/good-com-bad-cop/img/image-1.jpg", "/obsessions/good-com-bad-cop/img/image-2.jpg", "/obsessions/good-com-bad-cop/img/image-3.jpg", "/obsessions/good-com-bad-cop/img/image-4.jpg", "/obsessions/good-com-bad-cop/img/image-5.jpg", "/obsessions/good-com-bad-cop/img/image-6.jpg"]
+%}
+{%
+	set data = [
+		{
+			img:      "/obsessions/good-com-bad-cop/img/data-1.jpg",
+			title:    "Datavisualisation",
+			subtitle: "Sous-titre",
+			desc:     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/data-2.jpg",
+			title:    "Datavisualisation",
+			subtitle: "Sous-titre"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/data-3.jpg",
+			title:    "Datavisualisation",
+			subtitle: "Sous-titre"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/data-1.jpg",
+			title:    "Datavisualisation",
+			subtitle: "Sous-titre"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/data-4.jpg",
+			title:    "Datavisualisation",
+			subtitle: "Sous-titre"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/data-5.jpg",
+			title:    "Datavisualisation",
+			subtitle: "Sous-titre"
+		}
+	]
+%}
+{%
+	set places = [
+		{
+			img:      "/obsessions/good-com-bad-cop/img/geo-1.jpg",
+			title:    "Nom premier lieu",
+			subtitle: "Sous-titre"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/geo-2.jpg",
+			title:    "Nom premier lieu",
+			subtitle: "Sous-titre"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/geo-3.jpg",
+			title:    "Nom premier lieu",
+			subtitle: "Sous-titre"
+		},
+		{
+			img:      "/obsessions/good-com-bad-cop/img/geo-3.jpg",
+			title:    "Nom premier lieu",
+			subtitle: "Sous-titre"
+		}
+	]
+%}
+{%
+	set soundtrack = [
+		{
+			"id": "interview",
+			"title": "Interview",
+			"icon": "micro",
+			"items": [
+				{
+					"href": "#",
+					"title": "Titre interview 1",
+					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
+					"date": "2015-09-25",
+					"meta": "nom du journaliste"
+				}
+			]
+		},
+		{
+			"id": "playlists",
+			"title": "Playlists",
+			"icon": "disc",
+			"items": [
+				{
+					"href": "#",
+					"title": "Playlist 1",
+					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
+					"date": "2015-09-25"
+				}
+			]
+		},
+		{
+			"id": "ambiances",
+			"title": "Ambiances",
+			"icon": "wave",
+			"items": [
+				{
+					"href": "#",
+					"title": "Ambiance numéro 1",
+					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
+					"date": "2015-09-25"
+				}
+			]
+		}
+	]
+%}
+{%
+	set documents = [
+		{
+			"id": "bibliographie",
+			"title": "Bibliographie",
+			"icon": "book",
+			"items": [
+				{
+					"href": "#",
+					"title": "Titre livre numéro 1",
+					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
+					"meta": "nom du journaliste"
+				}
+			]
+		},
+		{
+			"id": "telechargements",
+			"title": "Téléchargements",
+			"icon": "download",
+			"items": [
+				{
+					"href": "#",
+					"title": "Document numéro 1 pdf",
+					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
+					"meta": "nom de l'auteur"
+				}
+			]
+		},
+		{
+			"id": "scans",
+			"title": "Scans",
+			"icon": "player",
+			"items": [
+				{
+					"href": "#",
+					"title": "Document scanné numéro 1",
+					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
+					"meta": "Info 1"
+				}
+			]
+		}
+	]
+%}
+	<div class="container">
+		<div class="row">
+			<div class="col gutter-0 col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
+				<h2 class="gutter-left-1 style-meta"><a href="/v1/obsessions/les-annees-college/" class="link obsession">Les années collège</a></h2>
+				<div class="tab-container">
+					{% include "partials/board/episodes.html"   %}
+					{% include "partials/board/people.html"     %}
+					{% include "partials/board/images.html"     %}
+					{% include "partials/board/data.html"       %}
+					{% include "partials/board/places.html"     %}
+					{% include "partials/board/soundtrack.html" %}
+					{% include "partials/board/documents.html"  %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
