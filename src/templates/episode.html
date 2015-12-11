@@ -1,0 +1,100 @@
+{% set page = { title: title } %}
+{% extends "partials/_layout.html" %}
+
+{% block content %}
+<article class="obsession-1" role="main">
+	<header class="gutter-bottom-6">
+		<img src="{{ header.img|default("img/header.jpg") }}" alt="{{ header.alt }}" />
+		<div class="col-md-top-1 col-md-left-1 col-md-5 col-lg-top-1 col-lg-left-2 col-lg-6 snake"></div>
+		<div class="container container-no-margin">
+			<div class="row">
+				<div class="col gutter-sm-4 col-md-left-1 col-md-5 col-lg-left-2 col-lg-6">
+					<p class="gutter-top-2 gutter-bottom-2 style-meta">Épisode n°{{ number }} de l’obsession <a class="obsession" href="{{ obsession.href }}">{{ obsession.name }}</a></p>
+					<h2 class="h2">{{ title }}</h2>
+					<p>{{ intro }}</p>
+					<time class="gutter-bottom-2 style-meta" pubdate="{{ date }}">{{ date }}</time>
+					<address class="gutter-bottom-1">
+						<ul class="list-inline-dotted style-meta">
+						{% for credit in credits %}
+							<li>{{ credit }}</li>
+						{% endfor %}
+						</ul>
+					</address>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="relative">
+		<div class="container no-overflow">
+			<div class="row article-container relative">
+				{{ content}}
+			</div>
+		</div>
+		{# This must be outside of the .article-container otherwise it won't be sticky due to the overflow: hidden #}
+		<div class="share col col-md-1 col-lg-2 text-center show" data-fade="3000">
+			<ul class="sticky">
+				<li class="gutter-sm-bottom-0 gutter-bottom-2"><a class="btn" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
+				<li class="gutter-sm-bottom-0 gutter-bottom-2"><a class="btn" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
+				<li><a class="btn" href="#"><i>{{ icon("plane", "Partager") }}</i></a></li>
+			</ul>
+		</div>
+	</div>
+	<footer class="pattern-1">
+		<div class="meta container gutter-bottom-2">
+			<div class="row style-meta">
+				<div class="col gutter-bottom-1 gutter-sm-2 col-md-left-1 col-md-3 gutter-md-left-0 col-lg-left-2 col-lg-6 gutter-lg-left-0">
+					<p class="sr">Crédits</p>
+					<ul class="list-unstyled">
+					{% for credit in credits %}
+						<li>{{ credit }}</li>
+					{% endfor %}
+					</ul>
+				</div>
+
+				{% if tags %}
+				<div class="col gutter-bottom-1 gutter-sm-2 col-md-3 col-lg-left-2 col-lg-8 gutter-lg-left-0">
+					<p>Les mots-clés</p>
+					<ul class="tags list-unstyled">
+					{% for tag in tags %}
+						<li><a href="#">{{ tag }}</a></li>
+					{% endfor %}
+					</ul>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+
+		{% if rel %}
+		<div class="rel container">
+			<p class="sr">D’autres épisodes</p>
+			<ul class="row list-unstyled">
+				{% if rel.prev %}
+				<li class="col col-sm-3 col-md-4 col-lg-4 col-lg-right-4">
+					<a class="link-unstyled" rel="prev" href="{{ rel.prev.href }}">
+						<i>{{ icon("angle-left") }}</i>
+						<div>
+							<span class="style-meta">Épisode n°{{ number - 1}}<span class="sr"> : </span></span>
+							<span class="h5">{{ rel.prev.title }}</span>
+						</div>
+					</a>
+				</li>
+				{% endif %}
+				{% if rel.next %}
+				<li class="col col-sm-1 col-md-4 col-lg-4">
+					<a class="link-unstyled" rel="next" href="{{ rel.next.href }}">
+						<i>{{ icon("angle-right") }}</i>
+						<div class="text-right">
+							<span class="style-meta">Épisode n°{{ number + 1 }}<span class="sr"> : </span></span>
+							<span class="h5">{{ rel.next.title }}</span>
+						</div>
+					</a>
+				</li>
+				{% endif %}
+			</ul>
+		</div>
+		{% endif %}
+	</footer>
+</article>
+{# include "partials/board.html"   #}
+{% include "partials/_footer.html" %}
+{% endblock %}

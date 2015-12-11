@@ -1,0 +1,31 @@
+{
+	"template": "episode",
+	"number": 2,
+	"date": "2015-11-20T13:50+01:00",
+
+	"title": "Le charbon, l’ennemi utile",
+	"intro": "La plupart des entreprises françaises disent se désengager de l’énergie fossile la plus polluante. Des promesses à relativiser, qui leur servent surtout à apparaître irréprochables le temps de la COP.",
+
+	"obsession": {
+		"name": "Good Com’ bad COP",
+		"href": "/obsessions/good-com-bad-cop"
+	},
+
+	"credits": [
+		"Texte <a href=\"#\">Nicolas Cori</a>",
+		"Photos <a href=\"#\">Pierre Morel</a>"
+	],
+
+	"tags": ["Charbon", "Climat", "COP21", "Communication", "Total", "Engie", "BNP Paribas", "BPCE", "Société générale"],
+
+	"rel": {
+		"prev": {
+			"title": "?",
+			"href":  "#"
+		},
+		"next": {
+			"title": "Houille ! Les écolos passent à la banque",
+			"href":  "#"
+		}
+	}
+}

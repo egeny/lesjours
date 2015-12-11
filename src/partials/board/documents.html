@@ -1,0 +1,22 @@
+<section id="documents" class="tab col" role="tabpanel" aria-labelledby="tab-documents" aria-hidden="true">
+	<h3 class="gutter-bottom-2 style-meta-larger">Les documents</h3>
+
+	{% if documents %}
+		<ul class="gutter-bottom-3 style-meta list-inline quick-links">
+			{% for group in documents %}
+			<li><a class="link" href="#{{ group.id }}" />{{ group.title }}</a></li>
+			{% endfor %}
+		</ul>
+
+		{% for group in documents %}
+		<h4 id="{{ group.id }}" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">{{ group.title }} {{ icon(group.icon, class="color-media") }}</h4>
+		<ul class="articles row list-unstyled">
+			{% for item in group.items %}
+			<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+				{% include "partials/board/article-item.html" %}
+			</li>
+			{% endfor %}
+		</ul>
+		{% endfor %}
+	{% endif %}
+</section><!-- end of #documents -->

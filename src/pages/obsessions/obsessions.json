@@ -1,0 +1,29 @@
+{
+	"template": "obsessions",
+	"obsessions": [
+		{
+			"number": 1,
+			"img": "la-mauvaise-herbe-de-provence/la-mauvaise-herbe-de-provence.jpg",
+			"href": "la-mauvaise-herbe-de-provence",
+			"title": "La mauvaise herbe<br/>de Provence",
+			"subtitle": "Magna aliqua Ut enim",
+			"desc": "<p>Itas simin ent. Udicius et ut aut quasperum, aditae serum isqui doles molorit quiandam sumquoditias etur reperi beatur aut aliti torero blant as que odi odit quos autem evelianiate nonem sam aut omnihillit etum lam explitatur ?</p><p>Faceptiorro magnihiciist as alitas velestrunt, sed magnihit doluptatem inullam, sitem. Et et, quas utemquam si incipsam, venimpor aut vel eos ut quo inction num rerescius.</p><p>Itas simin ent. Udicius et ut aut quasperum, aditae serum isqui doles molorit quiandam sumquoditias etur reperi beatur aut aliti torero blant as que odi odit quos autem evelianiate nonem sam aut omnihillit etum lam explitatur ?</p><p>Faceptiorro magnihiciist as alitas velestrunt, sed magnihit doluptatem inullam, sitem. Et et, quas utemquam si incipsam, venimpor aut vel eos ut quo inction num rerescius.</p>"
+		},
+		{
+			"number": 2,
+			"img": "good-com-bad-cop/good-com-bad-cop.jpg",
+			"href": "good-com-bad-cop",
+			"title": "Good Com’<br/>bad COP",
+			"subtitle": "Magna aliqua Ut enim",
+			"desc": "<p>Itas simin ent. Udicius et ut aut quasperum, aditae serum isqui doles molorit quiandam sumquoditias etur reperi beatur aut aliti torero blant as que odi odit quos autem evelianiate nonem sam aut omnihillit etum lam explitatur ?</p><p>Faceptiorro magnihiciist as alitas velestrunt, sed magnihit doluptatem inullam, sitem. Et et, quas utemquam si incipsam, venimpor aut vel eos ut quo inction num rerescius.</p>"
+		},
+		{
+			"number": 3,
+			"img": "les-annees-college/les-annees-college.jpg",
+			"href": "les-annees-college",
+			"title": "Les années<br/>Collège",
+			"subtitle": "Un an en 3<sup>ème</sup>B à Aubervilliers",
+			"desc": "<p>Itas simin ent. Udicius et ut aut quasperum, aditae serum isqui doles molorit quiandam sumquoditias etur reperi beatur aut aliti torero blant as que odi odit quos autem evelianiate nonem sam aut omnihillit etum lam explitatur ?</p><p>Faceptiorro magnihiciist as alitas velestrunt, sed magnihit doluptatem inullam, sitem. Et et, quas utemquam si incipsam, venimpor aut vel eos ut quo inction num rerescius.</p>"
+		}
+	]
+}

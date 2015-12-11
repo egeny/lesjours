@@ -65,13 +65,11 @@ var
 	},
 
 	paths = {
-		src:  'src/**/*',
 		dist: 'dist/',
 
-		html: {
-			input:  'src/',
-			output: 'dist/'
-		},
+		templates: 'src/templates',
+		pages:     'src/pages',
+
 		css: {
 			input:  'src/css/',
 			output: 'dist/css/',
@@ -162,7 +160,7 @@ function folders(dir) {
 }
 
 // Configure nunjucks
-nunjucks.nunjucks.configure([paths.html.input], { watch: false, noCache: true });
+nunjucks.nunjucks.configure(['src'], { watch: false, noCache: true });
 
 gulp.task('default', function() {
 	sequence('clean', 'build');
@@ -187,10 +185,54 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build:html', function() {
-	return gulp.src(paths.html.input + '*.html')
-		.pipe(nunjucks())
-		.pipe(gulp.dest(paths.html.output))
-		.pipe(livereload());
+	var streams = merge();
+
+	function build(folder, parent) {
+		var data = {};
+		parent = parent || "";
+
+		try {
+			data = JSON.parse(fs.readFileSync(path.join(paths.pages, parent, folder, folder + '.json')));
+		} catch(e) {}
+
+		try {
+			data.content = fs.readFileSync(path.join(paths.pages, parent, folder, folder + '.html'));
+		} catch(e) {}
+
+		// Generate the HTML using the metadata and content
+		if (data.template) {
+			streams.add(
+				gulp
+					.src(path.join(paths.templates, data.template + '.html'))
+					.pipe(nunjucks(data))
+					.pipe(rename(path.join(parent, folder, 'index.html')))
+					.pipe(gulp.dest(paths.dist))
+					.pipe(livereload())
+			);
+		} else {
+			streams.add(
+				gulp
+					.src(path.join(paths.pages, parent, folder, '*.html'))
+					.pipe(nunjucks())
+					.pipe(gulp.dest(path.join(paths.dist, parent, folder)))
+					.pipe(livereload())
+			);
+		}
+
+		// Copy the assets
+		streams.add(
+			gulp
+				.src(path.join(paths.pages, parent, folder, '**/*.{gif,png,jpg,m4a,webm,mp4}'), { base: paths.pages })
+				.pipe(gulp.dest(paths.dist))
+		);
+
+		parent = path.join(parent, folder);
+		folders(path.join(paths.pages, parent)).forEach(function(folder) { build(folder, parent); });
+	}
+
+	folders(paths.pages).forEach(function(folder) { build(folder); });
+
+	return !streams.isEmpty() ? streams : null;
 });
 
 gulp.task('lint:sass', function() {
@@ -274,7 +316,8 @@ gulp.task('copy:css:svg',     tasks['copy:svg'](paths.css.svg));
 gulp.task('watch', ['build'], function() {
 	livereload.listen();
 
-	gulp.watch(paths.html.input    + '**/*.html',            ['build:html']);
+	gulp.watch(paths.pages         + '**/*.html',            ['build:html']);
+	gulp.watch(paths.templates     + '**/*.html',            ['build:html']);
 	gulp.watch(paths.css.input     + '**/*.{css,scss,sass}', ['build:css']);
 	gulp.watch(paths.css.img.input + '**/*.{gif,jpg,png}',   ['build:css:img']);
 	gulp.watch(paths.css.svg.input + '**/*.svg',             ['build:css:svg']);

@@ -1,0 +1,36 @@
+{
+	"template": "episode",
+	"number": 16,
+	"date": "2015-09-25T15:57+01:00",
+
+	"title": "Des élèves et des préjugés",
+	"intro": "Mardi, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes et homophobes.",
+
+	"header": {
+		"img": "img/header.jpg",
+		"alt": ""
+	},
+
+	"obsession": {
+		"name": "Les années collèges",
+		"href": "#"
+	},
+
+	"credits": [
+		"Texte <a href=\"#\">Alice Géraud</a>",
+		"Photos <a href=\"#\">Simon Lambert</a>"
+	],
+
+	"tags": ["Éducation", "Racisme", "Intégration"],
+
+	"rel": {
+		"prev": {
+			"title": "Le collège que tout le monde voulait éviter",
+			"href":  "#"
+		},
+		"next": {
+			"title": "Le collège que tout le monde voulait éviter",
+			"href":  "#"
+		}
+	}
+}

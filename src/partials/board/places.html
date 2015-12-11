@@ -1,0 +1,8 @@
+<section id="lieux" class="tab" role="tabpanel" aria-labelledby="tab-lieux" aria-hidden="true">
+	<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les lieux</h3>
+	<ul class="mosaic row list-unstyled">
+		{% for item in places %}
+			{% include "partials/board/mosaic-item.html" %}
+		{% endfor %}
+	</ul>
+</section><!-- end of #lieux -->

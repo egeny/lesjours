@@ -1,0 +1,9 @@
+<section id="images" class="tab" role="tabpanel" aria-labelledby="tab-images" aria-hidden="true">
+	<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les images</h3>
+	<ul class="mosaic row list-unstyled">
+		{% for source in images %}
+			{% set item = { img: source } %}
+			{% include "partials/board/mosaic-item.html" %}
+		{% endfor %}
+	</ul>
+</section><!-- end of #images -->

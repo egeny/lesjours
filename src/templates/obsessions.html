@@ -1,0 +1,30 @@
+{# FIXME: page-wall should be page-obsessions #}
+{% set page = { title: "LesJours — Obsessions", class: "page-wall" } %}
+{% extends "partials/_layout.html" %}
+
+{% block content %}
+<div class="container">
+	<div class="col">
+		<div class="carousel-container">
+			<ul class="carousel" data-interval="5000" data-state="running" role="listbox">
+			{% for obsession in obsessions %}
+				<li class="wall obsession-{{ obsession.number }}">
+					{# FIXME: partials/wall is ugly #}
+					{% set wall = obsession %}
+					{% include "partials/wall.html" %}
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div class="carousel-controls relative text-center">
+			<button class="btn btn-reverse" data-direction="backward"><i>{{ icon("angle-left", "Obsession précédente") }}</i></button>
+			<ul class="list-inline" role="presentation">
+			{% for obsession in obsessions %}
+				<li{% if loop.first %} class="selected"{% endif %}>●</li>
+			{% endfor %}
+			</ul>
+			<button class="btn btn-reverse"><i>{{ icon("angle-right", "Obsession suivante") }}</i></button>
+		</div>
+	</div>
+</div>
+{% endblock %}

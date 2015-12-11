@@ -27,19 +27,19 @@
 		} catch(e) {}
 	</script>
 
-	<link rel="stylesheet" href="css/global.css" />
+	<link rel="stylesheet" href="/css/global.css" />
 	{% block css %}{% endblock %}
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
 	{% include "img/ui.svg" %}
-	{% include "partials/header.html" %}
+	{% include "partials/_header.html" %}
 	{% block content %}{% endblock %}
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/stickyfill.min.js"></script>
-	<script src="js/hammer.min.js"></script>
-	<script src="js/jquery.hammer.min.js"></script>
-	<script src="js/global.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/stickyfill.min.js"></script>
+	<script src="/js/hammer.min.js"></script>
+	<script src="/js/jquery.hammer.min.js"></script>
+	<script src="/js/global.js"></script>
 	{% block js %}{% endblock %}
 </body>
 </html>
