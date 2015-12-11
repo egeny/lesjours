@@ -36,6 +36,7 @@
 		position: absolute;
 
 		transition: transform .3s;
+		backface-visibility: hidden;
 	}
 
 	.btn:hover:before,
