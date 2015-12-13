@@ -1,0 +1,31 @@
+{
+	"template": "episode",
+	"number": 3,
+	"date": "2015-11-17T13:50+01:00",
+
+	"title": "A midi, la classe se tait",
+	"intro": "Lundi 16 novembre, premier jour de classe après les attentats. Certains profs redoutent la réaction des élèves. Mais, cette fois-ci, il n'y aura pas de « je ne suis pas Charlie ».",
+
+	"obsession": {
+		"name": "Les années collège",
+		"href": "/obsessions/les-annees-college"
+	},
+
+	"credits": [
+		"Texte <a href=\"#\">Alice Géraud</a>",
+		"Photos <a href=\"#\">Simon Lambert</a>"
+	],
+
+	"tags": ["Education", "Collège", "Paris", "Mixité", "13-Novembre" ],
+
+	"rel": {
+		"prev": {
+			"title": "Dernière danse avant l'état d'urgence",
+			"href":  "#"
+		},
+		"next": {
+			"title": "",
+			"href":  "#"
+		}
+	}
+}

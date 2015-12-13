@@ -1,0 +1,31 @@
+{
+	"template": "episode",
+	"number": 3,
+	"date": "2015-11-20T13:50+01:00",
+
+	"title": "Houille ! Les écolos passent à la banque",
+	"intro": "Pour pousser BNP Paribas à arrêter de financer le charbon, l'ONG les Amis de la Terre a multiplié les actions contre la banque. Exemple en octobre, devant une agence à Paris.",
+
+	"obsession": {
+		"name": "Good Com’ bad COP",
+		"href": "/obsessions/good-com-bad-cop"
+	},
+
+	"credits": [
+		"Texte <a href=\"#\">Nicolas Cori</a>",
+		"Photos <a href=\"#\">Pierre Morel</a>"
+	],
+
+	"tags": ["Charbon", "Climat", "COP21", "Communication", "Amis de la Terre", "BNP Paribas"],
+
+	"rel": {
+		"prev": {
+			"title": "?",
+			"href":  "#"
+		},
+		"next": {
+			"title": "?",
+			"href":  "#"
+		}
+	}
+}

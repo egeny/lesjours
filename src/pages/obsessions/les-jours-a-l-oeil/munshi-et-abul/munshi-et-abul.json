@@ -1,0 +1,30 @@
+{
+	"template": "episode",
+	"number": 1,
+	"date": "2015-11-12T13:50+01:00",
+
+	"title": "« Si ma famille le sait, ils me tuent&nbsp;»",
+	"intro": "Ce soir, les troisième B du collège Aimé-Césaire vont voir un spectacle de danse au Cent-Quatre. A deux pas de chez eux, mais par-delà le pont où des jeunes se battent régulièrement avec ceux de l'arrondissement voisin.",
+
+	"obsession": {
+		"name": "Les Jours à l'œil",
+		"href": "/obsessions/les-jours-a-l-oeil"
+	},
+
+	"credits": [
+		"Texte et photos <a href=\"#\">Sebastian Castelier</a>"
+	],
+
+	"tags": ["Photographie", "Bangladesh", "Homosexualité"],
+
+	"rel": {
+		"prev": {
+			"title": "",
+			"href":  "#"
+		},
+		"next": {
+			"title": "A midi, la classe se tait",
+			"href":  "#"
+		}
+	}
+}
