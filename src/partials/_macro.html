@@ -1,12 +1,12 @@
 {% macro icon(name, title, class) -%}
 	{% if title -%}
-	<svg class="ui-{{ name }}{% if class %} {{ class }}{% endif %}" role="img" aria-labeledby="ui-{{ name }}-title">
+	<svg width="32" height="32" class="ui-{{ name }}{% if class %} {{ class }}{% endif %}" role="img" aria-labeledby="ui-{{ name }}-title">
 		<use xlink:href="#{{ name }}" />
 		<image src="/img/ui/{{ name }}.png" />
 		<title id="ui-{{ name }}-title">{{ title }}</title>
 	</svg>
 	{% else -%}
-	<svg class="ui-{{ name }}{% if class %} {{ class }}{% endif %}" role="presentation">
+	<svg width="32" height="32" class="ui-{{ name }}{% if class %} {{ class }}{% endif %}" role="presentation">
 		<use xlink:href="#{{ name }}" />
 		<image src="/img/ui/{{ name }}.png" />
 	</svg>
