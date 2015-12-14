@@ -1,14 +1,14 @@
 {
 	"template": "board",
 
-	"number": 2,
-	"name": "Les Jours à l'œil",
+	"number": 5,
+	"name": "Les Jours à l’œil",
 	"href": "/obsessions/les-jours-a-l-oeil",
 
 	"header": {
 		"img": "les-jours-a-l-oeil.jpg",
 		"href": "/obsessions/les-jours-a-l-oeil",
-		"title": "Les Jours à l'œil",
+		"title": "Les Jours à l’œil",
 		"subtitle": "Magna aliqua Ut enim"
 	},
 
@@ -209,7 +209,7 @@
 					"href": "#",
 					"title": "Document numéro 1 pdf",
 					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"meta": "nom de l'auteur"
+					"meta": "nom de l’auteur"
 				}
 			]
 		},

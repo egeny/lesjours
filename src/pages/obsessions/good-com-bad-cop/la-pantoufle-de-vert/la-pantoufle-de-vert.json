@@ -7,6 +7,7 @@
 	"intro": "Ce think tank veut lutter contre le réchauffement climatique en « décarbonant » l’économie. Financé par les entreprises, il est surtout un outil bien pratique pour communiquer sur leurs engagements climatiques.",
 
 	"obsession": {
+		"number": 4,
 		"name": "Good Com’ bad COP",
 		"href": "/obsessions/good-com-bad-cop"
 	},
@@ -20,12 +21,8 @@
 
 	"rel": {
 		"prev": {
-			"title": "?",
-			"href":  "#"
-		},
-		"next": {
-			"title": "Houille ! Les écolos passent à la banque",
-			"href":  "#"
+			"title": "Papou est dans le pétrole",
+			"href":  "/obsessions/good-com-bad-cop/papou-est-dans-le-petrole"
 		}
 	}
 }

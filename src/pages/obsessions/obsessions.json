@@ -6,7 +6,7 @@
 			"img": "treize-novembre/treize-novembre.jpg",
 			"href": "treize-novembre",
 			"title": "Treize Novembre",
-			"subtitle": "Récits de la France d'après.",
+			"subtitle": "Récits de la France d’après.",
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
 		{
@@ -15,13 +15,13 @@
 			"href": "les-annees-college",
 			"title": "Les années<br/>Collège",
 			"subtitle": "Un an en 3<sup>ème</sup>B à Aimé-Césaire dans le nord de Paris.",
-			"desc": "<p> Ils s’appellent Moussa, Lucie, Rayan, Agita ou Faema. Ils sont en 3e B à Aimé-Césaire, un collège classé REP situé dans un quartier populaire du nord de Paris. Les Jours racontent la vie de cette classe durant toute une année scolaire.</p><p>C’est une année charnière pour les adolescents, la dernière passée ensemble avant l'orientation vers des filières générale, technique ou pro qui dessineront en partie leurs vies d'après. Cette chose encore un peu floue qu'on appelle le futur.</p>"
+			"desc": "<p> Ils s’appellent Moussa, Lucie, Rayan, Agita ou Faema. Ils sont en 3e B à Aimé-Césaire, un collège classé REP situé dans un quartier populaire du nord de Paris. Les Jours racontent la vie de cette classe durant toute une année scolaire.</p><p>C’est une année charnière pour les adolescents, la dernière passée ensemble avant l’orientation vers des filières générale, technique ou pro qui dessineront en partie leurs vies d’après. Cette chose encore un peu floue qu’on appelle le futur.</p>"
 		},
 		{
 			"number": 3,
 			"img": "l-empire/l-empire.jpg",
 			"href": "l-empire",
-			"title": "L'empire",
+			"title": "L’empire",
 			"subtitle": "Comment Vincent Bolloré a mangé Canal+.",
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
@@ -37,7 +37,7 @@
 			"number": 5,
 			"img": "les-jours-a-l-oeil/les-jours-a-l-oeil.jpg",
 			"href": "les-jours-a-l-oeil",
-			"title": "Les Jours<br/>à l'oeil",
+			"title": "Les Jours<br/>à l’oeil",
 			"subtitle": "Histoires de photos et de photographes.",
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
@@ -46,7 +46,7 @@
 			"img": "la-mecanique-fn/la-mecanique-fn.jpg",
 			"href": "la-mecanique-fn",
 			"title": "La mécanique FN",
-			"subtitle": "L'emprise de l'extrême-droite décortiquée.",
+			"subtitle": "L’emprise de l’extrême-droite décortiquée.",
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		}
 	]

@@ -2,7 +2,7 @@
 {% extends "partials/_layout.html" %}
 
 {% block content %}
-<article class="obsession-1" role="main">
+<article class="obsession-{{ obsession.number }}" role="main">
 	<header class="gutter-bottom-6">
 		<img src="{{ header.img|default("img/header.jpg") }}" alt="{{ header.alt }}" />
 		<div class="col-md-top-1 col-md-left-1 col-md-5 col-lg-top-1 col-lg-left-2 col-lg-6 snake"></div>

@@ -3,10 +3,11 @@
 	"number": 2,
 	"date": "2015-11-12T13:50+01:00",
 
-	"title": "Dernière danse avant l'état d'urgence",
-	"intro": "Ce soir, les troisième B du collège Aimé-Césaire vont voir un spectacle de danse au Cent-Quatre. A deux pas de chez eux, mais par-delà le pont où des jeunes se battent régulièrement avec ceux de l'arrondissement voisin.",
+	"title": "Dernière danse avant l’état d’urgence",
+	"intro": "Ce soir, les troisième B du collège Aimé-Césaire vont voir un spectacle de danse au Cent-Quatre. A deux pas de chez eux, mais par-delà le pont où des jeunes se battent régulièrement avec ceux de l’arrondissement voisin.",
 
 	"obsession": {
+		"number": 2,
 		"name": "Les années collège",
 		"href": "/obsessions/les-annees-college"
 	},
@@ -16,16 +17,16 @@
 		"Photos <a href=\"#\">Simon Lambert</a>"
 	],
 
-	"tags": ["Education", "Mixité", "Diversité", "Collège", "Danse", "Aurélien Bory", "Paris", "Etat d'urgence" ],
+	"tags": ["Education", "Mixité", "Diversité", "Collège", "Danse", "Aurélien Bory", "Paris", "Etat d’urgence" ],
 
 	"rel": {
 		"prev": {
-			"title": "",
+			"title": "?",
 			"href":  "#"
 		},
 		"next": {
 			"title": "A midi, la classe se tait",
-			"href":  "#"
+			"href":  "/obsessions/les-annees-college/a-midi-la-classe-se-tait"
 		}
 	}
 }

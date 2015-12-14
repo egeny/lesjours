@@ -4,9 +4,10 @@
 	"date": "2015-11-20T13:50+01:00",
 
 	"title": "Papou est dans le pétrole",
-	"intro": "A la tête de Total depuis décembre 2014, Patrick Pouyanné s'affiche comme un homme sympa et ouvert aux questions climatiques. Mais l'intérêt de son entreprise passe avant tout.",
+	"intro": "A la tête de Total depuis décembre 2014, Patrick Pouyanné s’affiche comme un homme sympa et ouvert aux questions climatiques. Mais l’intérêt de son entreprise passe avant tout.",
 
 	"obsession": {
+		"number": 4,
 		"name": "Good Com’ bad COP",
 		"href": "/obsessions/good-com-bad-cop"
 	},
@@ -20,12 +21,12 @@
 
 	"rel": {
 		"prev": {
-			"title": "?",
-			"href":  "#"
+			"title": "Houille ! Les écolos passent à la banque",
+			"href":  "/obsessions/good-com-bad-cop/houille-les-ecolos-passent-a-la-banque"
 		},
 		"next": {
-			"title": "Houille ! Les écolos passent à la banque",
-			"href":  "#"
+			"title": "The Shift Project, la pantoufle de vert des entreprises",
+			"href":  "/obsessions/good-com-bad-cop/la-pantoufle-de-vert"
 		}
 	}
 }

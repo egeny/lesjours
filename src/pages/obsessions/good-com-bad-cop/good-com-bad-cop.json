@@ -1,7 +1,7 @@
 {
 	"template": "board",
 
-	"number": 2,
+	"number": 4,
 	"name": "Good Com’ bad COP",
 	"href": "/obsessions/good-com-bad-cop",
 
@@ -209,7 +209,7 @@
 					"href": "#",
 					"title": "Document numéro 1 pdf",
 					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"meta": "nom de l'auteur"
+					"meta": "nom de l’auteur"
 				}
 			]
 		},
