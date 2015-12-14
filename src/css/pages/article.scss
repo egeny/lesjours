@@ -189,6 +189,7 @@ article .interview {
 
 	article .question {
 		margin: 1.5em 0 .75em;
+		@extend %font-archer-smcp;
 		@include font-weight-bold("archer");
 	}
 
