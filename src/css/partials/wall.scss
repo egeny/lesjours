@@ -13,14 +13,15 @@ $gutter: grid-gutter("sm");
 	}
 
 	.wall .overlay-pattern {
-		// This is almost .pattern-1 except for the path's color and the linear-gradient
-		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>"), linear-gradient(to bottom, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0) 360px);
-		background-size: 2px 4px, 100% 100%;
+		// This is almost .pattern-1 except for the path's color
+		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+		background-size: 2px 4px;
 	}
 
 		.wall .title {
 			margin-bottom: calc(#{$gutter / 2} + 40px + #{$gutter * 2}); // margin between text and snake's bottom + 40px + 2 full gutters
 			position: relative;
+			text-transform: 0 0 15px rgba($color-black, .3);
 		}
 
 			.wall .snake {
