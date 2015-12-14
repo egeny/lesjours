@@ -316,12 +316,12 @@ gulp.task('copy:css:svg',     tasks['copy:svg'](paths.css.svg));
 gulp.task('watch', ['build'], function() {
 	livereload.listen();
 
-	gulp.watch(paths.pages         + '**/*.html',            ['build:html']);
-	gulp.watch(paths.templates     + '**/*.html',            ['build:html']);
-	gulp.watch(paths.css.input     + '**/*.{css,scss,sass}', ['build:css']);
-	gulp.watch(paths.css.img.input + '**/*.{gif,jpg,png}',   ['build:css:img']);
-	gulp.watch(paths.css.svg.input + '**/*.svg',             ['build:css:svg']);
-	gulp.watch(paths.img.input     + '**/*.{gif,jpg,png}',   ['build:img']);
-	gulp.watch(paths.svg.input     + '**/*.svg',             ['build:svg']);
-	gulp.watch(paths.js.input      + '**/*.js',              ['build:js']);
+	gulp.watch(path.join(paths.pages,         '**/*.{html,json}'),     ['build:html']);
+	gulp.watch(path.join(paths.templates,     '**/*.html'),            ['build:html']);
+	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'), ['build:css']);
+	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),   ['build:css:img']);
+	gulp.watch(path.join(paths.css.svg.input, '**/*.svg'),             ['build:css:svg']);
+	gulp.watch(path.join(paths.img.input,     '**/*.{gif,jpg,png}'),   ['build:img']);
+	gulp.watch(path.join(paths.svg.input,     '**/*.svg'),             ['build:svg']);
+	gulp.watch(path.join(paths.js.input,      '**/*.js'),              ['build:js']);
 });
