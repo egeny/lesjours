@@ -3,30 +3,29 @@
 	"number": 3,
 	"date": "2015-11-20T13:50+01:00",
 
-	"title": "Houille ! Les écolos passent à la banque",
-	"intro": "Pour pousser BNP Paribas à arrêter de financer le charbon, l’ONG les Amis de la Terre a multiplié les actions contre la banque. Exemple en octobre, devant une agence à Paris.",
+	"title": "Houille ! Les écolos passent à la banque",
+	"intro": "Pour pousser BNP Paribas à arrêter de financer le charbon, l'ONG les Amis de la Terre a multiplié les actions contre la banque. Exemple en octobre, devant une agence à Paris.",
 
 	"obsession": {
-		"number": 4,
 		"name": "Good Com’ bad COP",
 		"href": "/obsessions/good-com-bad-cop"
 	},
 
 	"credits": [
 		"Texte <a href=\"#\">Nicolas Cori</a>",
-		"Photos <a href=\"#\">Pierre Morel</a>"
+		"Photos <a href=\"#\">Antoine Stouls</a>"
 	],
 
 	"tags": ["Charbon", "Climat", "COP21", "Communication", "Amis de la Terre", "BNP Paribas"],
 
 	"rel": {
 		"prev": {
-			"title": "Le charbon, l’ennemi utile",
-			"href":  "/obsessions/good-com-bad-cop/le-charbon-l-ennemi-utile"
+			"title": "?",
+			"href":  "#"
 		},
 		"next": {
-			"title": "Papou est dans le pétrole",
-			"href":  "/obsessions/good-com-bad-cop/papou-est-dans-le-petrole"
+			"title": "?",
+			"href":  "#"
 		}
 	}
 }

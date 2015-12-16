@@ -1,0 +1,15 @@
+{
+	"template": "board",
+
+	"number": 1,
+	"name": "Treize Novembre",
+	"href": "/obsessions/treize-novembre",
+
+	"header": {
+		"img": "treize-novembre.jpg",
+		"href": "/obsessions/treize-novembre",
+		"title": "Treize Novembre",
+		"subtitle": "Texte"
+	}
+
+}

@@ -1,0 +1,31 @@
+{
+	"template": "episode",
+	"number": 4,
+	"date": "2015-12-23T13:50+01:00",
+
+	"title": "<q>Comment dire qu’ils nous ont tiré dessus parce que c’est nous ?</q>",
+	"intro": "<b>Journal de bord du XIe.</b> Sophie était à la terrasse du Bataclan le soir de l’attaque, elle a vu l’un des terroristes avant qu'il entre dans la salle.",
+
+	"obsession": {
+		"name": "Treize novembre",
+		"href": "/obsessions/treize-novembre"
+	},
+
+	"credits": [
+		"Texte <a href=\"#\">Propos recueillis par Charlotte Rotman</a>",
+		"Photos <a href=\"#\">Michel Slomka/Hans Lucas et Charlotte Rotman</a>"
+	],
+
+	"tags": ["attentats", "Bataclan", "drapeaux", "", ""],
+
+	"rel": {
+		"prev": {
+			"title": "",
+			"href":  "#"
+		},
+		"next": {
+			"title": "",
+			"href":  "#"
+		}
+	}
+}

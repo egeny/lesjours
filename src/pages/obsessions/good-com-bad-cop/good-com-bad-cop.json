@@ -2,89 +2,52 @@
 	"template": "board",
 
 	"number": 4,
-	"name": "Good Com’ bad COP",
+	"name": "Good com, bad COP",
 	"href": "/obsessions/good-com-bad-cop",
 
 	"header": {
 		"img": "good-com-bad-cop.jpg",
 		"href": "/obsessions/good-com-bad-cop",
-		"title": "Good Com’ bad COP",
-		"subtitle": "Magna aliqua Ut enim"
+		"title": "Good com, bad COP",
+		"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?"
 	},
 
 	"people": [
 		{
-			"img":      "img/person-1.jpg",
-			"title":    "Judith Cohen Solal",
-			"subtitle": "Psychanalyste"
+			"img":      "img/mestrallet.jpg",
+			"title":    "Gérard Mestrallet",
+			"subtitle": "66 ans, PDG d'Engie (ex-GDF Suez)",
+			"minor":    true
+
 		},
 		{
-			"img":      "img/person-3.jpg",
-			"title":    "Kevina",
-			"subtitle": "Élève en 6<sup>ème</sup> techno",
+			"img":      "img/pouyanne.jpg",
+			"title":    "Patrick Pouyanné",
+			"subtitle": "52 ans, directeur général de Total",
+			"href":     "papou-est-dans-le-petrole/"		
+		},
+		{
+			"img":      "img/lucie-pinson.jpg",
+			"title":    "Lucie Pinson",
+			"subtitle": "29 ans, chargée de campagne finance privée aux Amis de la Terre",
+			"href":     "houille-les-ecolos-passent-a-la-banque/",
 			"minor":    true
 		},
 		{
-			"img":      "img/person-4.jpg",
-			"title":    "Kevin O’long Dupont",
-			"subtitle": "Élève en 3<sup>ème</sup> B",
+			"img":      "img/jancovici.jpg",
+			"title":    "Jean-Marc Jancovici",
+			"subtitle": "53 ans, président du think tank The Shift Project",
+			"href":     "la-pantoufle-de-vert/",
 			"minor":    true
 		},
 		{
-			"img":      "img/person-5.jpg",
-			"title":    "Jules-Édouard",
-			"subtitle": "Surveillant",
+			"img":      "img/levy.jpg",
+			"title":    "Jean-Bernard Lévy",
+			"subtitle": "60 ans, PDG d'EDF",
+			"href":     "la-pantoufle-de-vert/",
 			"minor":    true
-		},
-		{
-			"img":      "img/person-3.jpg",
-			"title":    "Kevina",
-			"subtitle": "Élève en 6<sup>ème</sup> techno",
-			"minor":    true
-		},
-		{
-			"img":      "img/person-2.jpg",
-			"title":    "D<sup>r</sup> Robert Oppenheimer",
-			"subtitle": "Doctorant en physique nucléaire"
-		},
-		{
-			"img":      "img/person-4.jpg",
-			"title":    "Kevin O’long Dupont",
-			"subtitle": "Élève en 3<sup>ème</sup> B",
-			"minor":    true
-		},
-		{
-			"img":      "img/person-4.jpg",
-			"title":    "Kevin O’long Dupont",
-			"subtitle": "Élève en 3<sup>ème</sup> B",
-			"minor":    true
-		},
-		{
-			"img":      "img/person-4.jpg",
-			"title":    "Kevin O’long Dupont",
-			"subtitle": "Élève en 3<sup>ème</sup> B",
-			"minor":    true
-		},
-		{
-			"img":      "img/person-4.jpg",
-			"title":    "Kevin O’long Dupont",
-			"subtitle": "Élève en 3<sup>ème</sup> B",
-			"minor":    true
-		},
-		{
-			"img":      "img/person-5.jpg",
-			"title":    "Jules-Édouard",
-			"subtitle": "Surveillant",
-			"minor":    true
-		},
-		{
-			"img":      "img/person-1.jpg",
-			"title":    "Judith Cohen Solal",
-			"subtitle": "Psychanalyste"
 		}
 	],
-
-	"images": ["img/image-1.jpg", "img/image-2.jpg", "img/image-3.jpg", "img/image-4.jpg", "img/image-5.jpg", "img/image-6.jpg"],
 
 	"data": [
 		{
@@ -145,84 +108,88 @@
 
 	"soundtrack": [
 		{
-			"id": "interview",
-			"title": "Interview",
-			"icon": "micro",
-			"items": [
-				{
-					"href": "#",
-					"title": "Titre interview 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25",
-					"meta": "nom du journaliste"
-				}
-			]
-		},
-		{
-			"id": "playlists",
-			"title": "Playlists",
-			"icon": "disc",
-			"items": [
-				{
-					"href": "#",
-					"title": "Playlist 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25"
-				}
-			]
-		},
-		{
 			"id": "ambiances",
-			"title": "Ambiances",
+			"title": "Sons",
 			"icon": "wave",
 			"items": [
 				{
-					"href": "#",
-					"title": "Ambiance numéro 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25"
+					"href": "audio/prix-pinocchio.m4a",
+					"title": "Le «prix Pinocchio» du climat",
+					"desc": "Chaque année, les Amis de la Terre distinguent les entreprises les plus mensongères en matière d'environnement.",
+					"date": "2015-12-03",
+					"meta": "Nicolas Cori"
+				},
+				{
+					"href": "audio/greenwashing.m4a",
+					"title": "«Qu'est-ce que le greenwashing&nbsp;?»",
+					"desc": "Lors de la même cérémonie, les comédiens Estelle Brattesani et Antoine Bonnet brocardent le discours vert des entreprises.",
+					"date": "2015-12-03",
+					"meta": "Nicolas Cori"
+				},
+				{
+					"href": "/le-charbon-l-ennemi-utile/audio/1.m4a",
+					"title": "«Je suis sorti du charbon»",
+					"desc": "Patrick Pouyanné répond à Jean-Marc Jancovici lors du World Efficiency",
+					"date": "2015-10-15",
+					"meta": "Nicolas Cori"
 				}
 			]
 		}
+
+
 	],
 
 	"documents": [
-		{
-			"id": "bibliographie",
-			"title": "Bibliographie",
-			"icon": "book",
-			"items": [
-				{
-					"href": "#",
-					"title": "Titre livre numéro 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"meta": "nom du journaliste"
-				}
-			]
-		},
 		{
 			"id": "telechargements",
 			"title": "Téléchargements",
 			"icon": "download",
 			"items": [
 				{
-					"href": "#",
-					"title": "Document numéro 1 pdf",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"meta": "nom de l’auteur"
-				}
-			]
-		},
-		{
-			"id": "scans",
-			"title": "Scans",
-			"icon": "player",
-			"items": [
+					"href": "doc/banques-francaises.pdf",
+					"title": "«Banques françaises&nbsp;: quand le vert vire au noir»",
+					"desc": "Etude sur le greenwashing menée par Oxfam et les Amis de la Terre.",
+					"date": "2015-11-05"
+				},
 				{
-					"href": "#",
-					"title": "Document scanné numéro 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"meta": "Info 1"
+					"href": "doc/emissions-etat.pdf",
+					"title": "«Emissions d'Etat»",
+					"desc": "Oxfam et les Amis de la Terre dénoncent le rôle de la France dans la pollution au charbon.",
+					"date": "2015-05-19"
+				},
+				{
+					"href": "doc/engie-communique.pdf",
+					"title": "Le «business dialog» d'Engie avec la COP21",
+					"desc": "Communiqué de presse de l'ex-GDF Suez vantant la participation des entreprises au sommet de Paris.",
+					"date": "2015-12-04"
+				},
+				{
+					"href": "doc/fausses-solutions.pdf",
+					"title": "«Les fausses solutions de la COP21»",
+					"desc": "Document du Corporate Europe Observatory raillant les «improbables remèdes technologiques au changement climatique».",
+					"date": "2015-11-05"
+				},
+				{
+					"href": "doc/fueling-fire.pdf",
+					"title": "Les pollueurs financeurs",
+					"desc": "L'ONG Corporate Accountability International décrypte le lobbying des industriels lors de la COP21."
+				},
+				{
+					"href": "doc/lobby-planet.pdf",
+					"title": "«Les criminels du climat»",
+					"desc": "A la manière du Lonely Planet, un guide sur la «marchandisation de la COP21»."
+				},
+				{
+					"href": "doc/corporate-cookbook.pdf",
+					"title": "«Les recettes du corporte»",
+					"desc": "Un doigt de court-termisme, un soupçon d'énergie fossile&nbsp;: apprenez à cuisiner la COP21.",
+					"date": "2015-11-17"
+				},
+				{
+					"href": "doc/total-bilan.pdf",
+					"title": "Total au rapport",
+					"desc": "Une somme, signée des Amis de la Terre et de l'Observatoire des multinationales, qui dépiaute <q>le véritable bilan annuel</q> du géant pétrolier.",
+					"date": "2015-05-28"
 				}
 			]
 		}

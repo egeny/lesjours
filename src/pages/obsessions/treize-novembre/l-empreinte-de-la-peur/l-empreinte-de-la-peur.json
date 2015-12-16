@@ -1,0 +1,31 @@
+{
+	"template": "episode",
+	"number": 3,
+	"date": "2015-12-23T13:50+01:00",
+
+	"title": "L’empreinte de la peur",
+	"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, penser, boire un verre. Le retour aux gestes quotidiens est plombé par de nouveaux réflexes désagréables.",
+
+	"obsession": {
+		"name": "Treize novembre",
+		"href": "/obsessions/treize-novembre"
+	},
+
+	"credits": [
+		"Texte <a href=\"#\">Charlotte Rotman</a>",
+		"Photos <a href=\"#\">Michel Slomka/Hans Lucas et Charlotte Rotman</a>"
+	],
+
+	"tags": ["attentats", "Bataclan", "peur"],
+
+	"rel": {
+		"prev": {
+			"title": "<q>Un périmètre de désolation</q>",
+			"href":  "#"
+		},
+		"next": {
+			"title": "<q>Content de vous avoir revu</q>",
+			"href":  "a-l-intention-des-victimes"
+		}
+	}
+}

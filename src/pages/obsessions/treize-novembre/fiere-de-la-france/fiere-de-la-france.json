@@ -1,0 +1,31 @@
+{
+	"template": "episode",
+	"number": 9,
+	"date": "2015-12-23T13:50+01:00",
+
+	"title": "<q>Fière de la France?</q>",
+	"intro": "<b>Journal de bord du XIe.</b> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
+
+	"obsession": {
+		"name": "Treize novembre",
+		"href": "/obsessions/treize-novembre"
+	},
+
+	"credits": [
+		"Texte <a href=\"#\">Charlotte Rotman</a>",
+		"Photos <a href=\"#\">Michel Slomka/Hans Lucas et Charlotte Rotman</a>"
+	],
+
+	"tags": ["attentats", "Bataclan", "drapeaux"],
+
+	"rel": {
+		"prev": {
+			"title": "Comment dire qu’ils nous ont tiré dessus parce que c’est nous ?",
+			"href":  "comment-dire-qu-ils-nous-ont-tire.html"
+		},
+		"next": {
+			"title": "",
+			"href":  "#"
+		}
+	}
+}

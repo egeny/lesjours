@@ -4,10 +4,9 @@
 	"date": "2015-11-17T13:50+01:00",
 
 	"title": "A midi, la classe se tait",
-	"intro": "Lundi 16 novembre, premier jour de classe après les attentats. Certains profs redoutent la réaction des élèves. Mais, cette fois-ci, il n’y aura pas de « je ne suis pas Charlie ».",
+	"intro": "Lundi 16 novembre, premier jour de classe après les attentats. Certains profs redoutent la réaction des élèves. Mais, cette fois-ci, il n'y aura pas de « je ne suis pas Charlie ».",
 
 	"obsession": {
-		"number": 2,
 		"name": "Les années collège",
 		"href": "/obsessions/les-annees-college"
 	},
@@ -21,8 +20,12 @@
 
 	"rel": {
 		"prev": {
-			"title": "Dernière danse avant l’état d’urgence",
-			"href":  "/obsessions/les-annees-college/derniere-danse-avant-l-etat-d-urgence"
+			"title": "Dernière danse avant l'état d'urgence",
+			"href":  "#"
+		},
+		"next": {
+			"title": "",
+			"href":  "#"
 		}
 	}
 }
