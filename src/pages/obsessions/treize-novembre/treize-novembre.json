@@ -1,7 +1,7 @@
 {
 	"template": "board",
 
-	"number": 1,
+	"color": 1,
 	"name": "Treize Novembre",
 	"href": "/obsessions/treize-novembre",
 

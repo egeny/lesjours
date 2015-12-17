@@ -3,29 +3,30 @@
 	"number": 2,
 	"date": "2015-12-23T13:50+01:00",
 
-	"title": "<q>Un périmètre de désolation</q>",
+	"title": "« Un périmètre de désolation »",
 	"intro": "<strong>Journal de bord du XIe.</strong> Au lendemain des attentats, le quartier du Bataclan est bouclé. La ville, exceptionnellement, est silencieuse.",
 
 	"obsession": {
+		"color": 1,
 		"name": "Treize novembre",
 		"href": "/obsessions/treize-novembre"
 	},
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka/Hans Lucas et Charlotte Rotman</a>"
+		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 	],
 
-	"tags": ["attentats", "Bataclan", "combinaison", "", ""],
+	"tags": ["attentats", "Bataclan", "combinaison"],
 
 	"rel": {
 		"prev": {
-			"title": "",
+			"title": "?",
 			"href":  "#"
 		},
 		"next": {
-			"title": "<q>L'empreinte de la peur</q>",
-			"href":  "l-empreinte-de-la-peur.html"
+			"title": "« L'empreinte de la peur »",
+			"href":  "/obsessions/treize-novembre/l-empreinte-de-la-peur"
 		}
 	}
 }

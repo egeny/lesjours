@@ -1,7 +1,7 @@
 {
 	"template": "board",
 
-	"number": 4,
+	"color": 4,
 	"name": "Good com, bad COP",
 	"href": "/obsessions/good-com-bad-cop",
 
@@ -9,22 +9,21 @@
 		"img": "good-com-bad-cop.jpg",
 		"href": "/obsessions/good-com-bad-cop",
 		"title": "Good com, bad COP",
-		"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?"
+		"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?"
 	},
 
 	"people": [
 		{
 			"img":      "img/mestrallet.jpg",
 			"title":    "Gérard Mestrallet",
-			"subtitle": "66 ans, PDG d'Engie (ex-GDF Suez)",
+			"subtitle": "66 ans, PDG d’Engie (ex-GDF Suez)",
 			"minor":    true
-
 		},
 		{
 			"img":      "img/pouyanne.jpg",
 			"title":    "Patrick Pouyanné",
 			"subtitle": "52 ans, directeur général de Total",
-			"href":     "papou-est-dans-le-petrole/"		
+			"href":     "papou-est-dans-le-petrole/"
 		},
 		{
 			"img":      "img/lucie-pinson.jpg",
@@ -43,7 +42,7 @@
 		{
 			"img":      "img/levy.jpg",
 			"title":    "Jean-Bernard Lévy",
-			"subtitle": "60 ans, PDG d'EDF",
+			"subtitle": "60 ans, PDG d’EDF",
 			"href":     "la-pantoufle-de-vert/",
 			"minor":    true
 		}
@@ -114,29 +113,27 @@
 			"items": [
 				{
 					"href": "audio/prix-pinocchio.m4a",
-					"title": "Le «prix Pinocchio» du climat",
-					"desc": "Chaque année, les Amis de la Terre distinguent les entreprises les plus mensongères en matière d'environnement.",
+					"title": "Le « prix Pinocchio » du climat",
+					"desc": "Chaque année, les Amis de la Terre distinguent les entreprises les plus mensongères en matière d’environnement.",
 					"date": "2015-12-03",
 					"meta": "Nicolas Cori"
 				},
 				{
 					"href": "audio/greenwashing.m4a",
-					"title": "«Qu'est-ce que le greenwashing&nbsp;?»",
+					"title": "« Qu’est-ce que le greenwashing ? »",
 					"desc": "Lors de la même cérémonie, les comédiens Estelle Brattesani et Antoine Bonnet brocardent le discours vert des entreprises.",
 					"date": "2015-12-03",
 					"meta": "Nicolas Cori"
 				},
 				{
 					"href": "/le-charbon-l-ennemi-utile/audio/1.m4a",
-					"title": "«Je suis sorti du charbon»",
+					"title": "« Je suis sorti du charbon »",
 					"desc": "Patrick Pouyanné répond à Jean-Marc Jancovici lors du World Efficiency",
 					"date": "2015-10-15",
 					"meta": "Nicolas Cori"
 				}
 			]
 		}
-
-
 	],
 
 	"documents": [
@@ -147,48 +144,48 @@
 			"items": [
 				{
 					"href": "doc/banques-francaises.pdf",
-					"title": "«Banques françaises&nbsp;: quand le vert vire au noir»",
+					"title": "« Banques françaises : quand le vert vire au noir »",
 					"desc": "Etude sur le greenwashing menée par Oxfam et les Amis de la Terre.",
 					"date": "2015-11-05"
 				},
 				{
 					"href": "doc/emissions-etat.pdf",
-					"title": "«Emissions d'Etat»",
+					"title": "« Emissions d’Etat »",
 					"desc": "Oxfam et les Amis de la Terre dénoncent le rôle de la France dans la pollution au charbon.",
 					"date": "2015-05-19"
 				},
 				{
 					"href": "doc/engie-communique.pdf",
-					"title": "Le «business dialog» d'Engie avec la COP21",
-					"desc": "Communiqué de presse de l'ex-GDF Suez vantant la participation des entreprises au sommet de Paris.",
+					"title": "Le « business dialog » d’Engie avec la COP21",
+					"desc": "Communiqué de presse de l’ex-GDF Suez vantant la participation des entreprises au sommet de Paris.",
 					"date": "2015-12-04"
 				},
 				{
 					"href": "doc/fausses-solutions.pdf",
-					"title": "«Les fausses solutions de la COP21»",
-					"desc": "Document du Corporate Europe Observatory raillant les «improbables remèdes technologiques au changement climatique».",
+					"title": "« Les fausses solutions de la COP21 »",
+					"desc": "Document du Corporate Europe Observatory raillant les « improbables remèdes technologiques au changement climatique ».",
 					"date": "2015-11-05"
 				},
 				{
 					"href": "doc/fueling-fire.pdf",
 					"title": "Les pollueurs financeurs",
-					"desc": "L'ONG Corporate Accountability International décrypte le lobbying des industriels lors de la COP21."
+					"desc": "L’ONG Corporate Accountability International décrypte le lobbying des industriels lors de la COP21."
 				},
 				{
 					"href": "doc/lobby-planet.pdf",
-					"title": "«Les criminels du climat»",
-					"desc": "A la manière du Lonely Planet, un guide sur la «marchandisation de la COP21»."
+					"title": "« Les criminels du climat »",
+					"desc": "À la manière du Lonely Planet, un guide sur la « marchandisation de la COP21 »."
 				},
 				{
 					"href": "doc/corporate-cookbook.pdf",
-					"title": "«Les recettes du corporte»",
-					"desc": "Un doigt de court-termisme, un soupçon d'énergie fossile&nbsp;: apprenez à cuisiner la COP21.",
+					"title": "« Les recettes du corporte »",
+					"desc": "Un doigt de court-termisme, un soupçon d’énergie fossile : apprenez à cuisiner la COP21.",
 					"date": "2015-11-17"
 				},
 				{
 					"href": "doc/total-bilan.pdf",
 					"title": "Total au rapport",
-					"desc": "Une somme, signée des Amis de la Terre et de l'Observatoire des multinationales, qui dépiaute <q>le véritable bilan annuel</q> du géant pétrolier.",
+					"desc": "Une somme, signée des Amis de la Terre et de l’Observatoire des multinationales, qui dépiaute <q>le véritable bilan annuel</q> du géant pétrolier.",
 					"date": "2015-05-28"
 				}
 			]

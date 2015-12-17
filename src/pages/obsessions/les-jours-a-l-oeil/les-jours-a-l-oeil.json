@@ -1,7 +1,7 @@
 {
 	"template": "board",
 
-	"number": 5,
+	"color": 5,
 	"name": "Les Jours à l’œil",
 	"href": "/obsessions/les-jours-a-l-oeil",
 

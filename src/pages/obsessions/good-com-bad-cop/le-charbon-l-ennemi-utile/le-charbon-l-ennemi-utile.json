@@ -7,6 +7,7 @@
 	"intro": "La plupart des entreprises françaises disent se désengager de l’énergie fossile la plus polluante. Des promesses à relativiser, qui leur servent surtout à apparaître irréprochables le temps de la COP.",
 
 	"obsession": {
+		"color": 4,
 		"name": "Good Com’ bad COP",
 		"href": "/obsessions/good-com-bad-cop"
 	},
@@ -25,7 +26,7 @@
 		},
 		"next": {
 			"title": "Houille ! Les écolos passent à la banque",
-			"href":  "#"
+			"href":  "/obsessions/good-com-bad-cop/houille-les-ecolos-passent-a-la-banque"
 		}
 	}
 }

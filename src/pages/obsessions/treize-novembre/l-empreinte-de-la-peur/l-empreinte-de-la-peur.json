@@ -3,29 +3,30 @@
 	"number": 3,
 	"date": "2015-12-23T13:50+01:00",
 
-	"title": "L’empreinte de la peur",
+	"title": "« L’empreinte de la peur »",
 	"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, penser, boire un verre. Le retour aux gestes quotidiens est plombé par de nouveaux réflexes désagréables.",
 
 	"obsession": {
+		"color": 1,
 		"name": "Treize novembre",
 		"href": "/obsessions/treize-novembre"
 	},
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka/Hans Lucas et Charlotte Rotman</a>"
+		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 	],
 
 	"tags": ["attentats", "Bataclan", "peur"],
 
 	"rel": {
 		"prev": {
-			"title": "<q>Un périmètre de désolation</q>",
-			"href":  "#"
+			"title": "« Un périmètre de désolation »",
+			"href":  "/obsessions/treize-novembre/un-perimetre-de-desolation"
 		},
 		"next": {
-			"title": "<q>Content de vous avoir revu</q>",
-			"href":  "a-l-intention-des-victimes"
+			"title": "« Content de vous avoir revu »",
+			"href":  "/obsessions/treize-novembre/content-de-vous-avoir-revu"
 		}
 	}
 }

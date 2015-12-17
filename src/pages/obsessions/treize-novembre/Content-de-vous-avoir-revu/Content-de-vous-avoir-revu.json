@@ -3,29 +3,30 @@
 	"number": 4,
 	"date": "2015-12-23T13:50+01:00",
 
-	"title": "<q>Content de vous avoir revu</q>",
+	"title": "« Content de vous avoir revu »",
 	"intro": "<strong>Journal de bord du XIe.</strong> Lundi matin, l’école reprend mais les attentats résonnent encore dans le quartier. L’après-midi, François Hollande déclare que la France est en guerre.",
 
 	"obsession": {
+		"color": 1,
 		"name": "Treize novembre",
 		"href": "/obsessions/treize-novembre"
 	},
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka/Hans Lucas et Charlotte Rotman</a>"
+		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 	],
 
 	"tags": ["attentats", "Bataclan", "retrouvailles"],
 
 	"rel": {
 		"prev": {
-			"title": "L'empreinte de la peur",
-			"href":  "#"
+			"title": "« L'empreinte de la peur »",
+			"href":  "/obsessions/treize-novembre/l-empreinte-de-la-peur"
 		},
 		"next": {
-			"title": "<q>A l'intention des victimes et des impliqués</q>",
-			"href":  "a-l-intention-des-victimes"
+			"title": "« À l’intention des victimes et des impliqués »",
+			"href":  "/obsessions/treize-novembre/a-l-intention-des-victimes"
 		}
 	}
 }

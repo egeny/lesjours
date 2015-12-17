@@ -2,7 +2,7 @@
 	"template": "obsessions",
 	"obsessions": [
 		{
-			"number": 1,
+			"color": 1,
 			"img": "treize-novembre/treize-novembre.jpg",
 			"href": "treize-novembre",
 			"title": "Treize Novembre",
@@ -10,7 +10,7 @@
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
 		{
-			"number": 2,
+			"color": 2,
 			"img": "les-annees-college/les-annees-college.jpg",
 			"href": "les-annees-college",
 			"title": "Les années<br/>Collège",
@@ -18,7 +18,7 @@
 			"desc": "<p> Ils s’appellent Moussa, Lucie, Rayan, Agita ou Faema. Ils sont en 3e B à Aimé-Césaire, un collège classé REP situé dans un quartier populaire du nord de Paris. Les Jours racontent la vie de cette classe durant toute une année scolaire.</p><p>C’est une année charnière pour les adolescents, la dernière passée ensemble avant l’orientation vers des filières générale, technique ou pro qui dessineront en partie leurs vies d’après. Cette chose encore un peu floue qu’on appelle le futur.</p>"
 		},
 		{
-			"number": 3,
+			"color": 3,
 			"img": "l-empire/l-empire.jpg",
 			"href": "l-empire",
 			"title": "L’empire",
@@ -26,15 +26,15 @@
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
 		{
-			"number": 4,
+			"color": 4,
 			"img": "good-com-bad-cop/good-com-bad-cop.jpg",
 			"href": "good-com-bad-cop",
-			"title": "Good Com’<br/>bad COP",
+			"title": "Good com, bad COP",
 			"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?",
 			"desc": "<p>Les multinationales qui polluent sont mises en cause pour leur rôle dans le dérèglement climatique. Elles aimeraient nous faire croire qu’elles ont la solution pour diminuer les émissions de CO2 tandis que les ONG s’attachent à enrayer cette belle communication.</p>"
 		},
 		{
-			"number": 5,
+			"color": 5,
 			"img": "les-jours-a-l-oeil/les-jours-a-l-oeil.jpg",
 			"href": "les-jours-a-l-oeil",
 			"title": "Les Jours<br/>à l’oeil",
@@ -42,7 +42,7 @@
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
 		{
-			"number": 6,
+			"color": 6,
 			"img": "la-mecanique-fn/la-mecanique-fn.jpg",
 			"href": "la-mecanique-fn",
 			"title": "La mécanique FN",

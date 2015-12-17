@@ -1,14 +1,14 @@
 {
 	"template": "board",
 
-	"number": 2,
+	"color": 2,
 	"name": "Les années collège",
 	"href": "/obsessions/les-annees-college",
 
 	"header": {
 		"img": "les-annees-college.jpg",
 		"href": "/obsessions/les-annees-college",
-		"title": "Les années collège",
+		"title": "Les années<br/>Collège",
 		"subtitle": "Un an en 3<sup>ème</sup>B à Aimé-Césaire, dans le nord de Paris."
 	},
 

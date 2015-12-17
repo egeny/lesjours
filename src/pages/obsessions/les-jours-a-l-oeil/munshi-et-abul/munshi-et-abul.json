@@ -3,27 +3,24 @@
 	"number": 1,
 	"date": "2015-11-12T13:50+01:00",
 
-	"title": "« Si ma famille le sait, ils me tuent&nbsp;»",
-	"intro": "Munshi et Abul s'aiment discrètement dans un pays, le Bangladesh, où l'homosexualité est punie par la loi. Et pensent à l'exil pour se protéger des violences.",
+	"title": "« Si ma famille le sait, ils me tuent »",
+	"intro": "Munshi et Abul s’aiment discrètement dans un pays, le Bangladesh, où l’homosexualité est punie par la loi. Et pensent à l’exil pour se protéger des violences.",
 
 	"obsession": {
-		"name": "Les Jours à l'œil",
+		"color": 5,
+		"name": "Les Jours à l’œil",
 		"href": "/obsessions/les-jours-a-l-oeil"
 	},
 
 	"credits": [
-		"Texte et photos <a href=\"#\">Sebastian Castelier</a>"
+		"Texte et photos <a href=\"#\">Sébastian Castelier</a>"
 	],
 
 	"tags": ["Photographie", "Bangladesh", "Homosexualité"],
 
 	"rel": {
-		"prev": {
-			"title": "",
-			"href":  "#"
-		},
 		"next": {
-			"title": "A midi, la classe se tait",
+			"title": "?",
 			"href":  "#"
 		}
 	}

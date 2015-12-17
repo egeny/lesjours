@@ -3,28 +3,29 @@
 	"number": 5,
 	"date": "2015-12-23T13:50+01:00",
 
-	"title": "<q>À l’intention des victimes et des impliqués</q>",
-	"intro": "<b>Journal de bord du XIe.</b> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
+	"title": "« À l’intention des victimes et des impliqués »",
+	"intro": "<strong>Journal de bord du XIe.</strong> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
 
 	"obsession": {
+		"color": 1,
 		"name": "Treize novembre",
 		"href": "/obsessions/treize-novembre"
 	},
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka/Hans Lucas et Charlotte Rotman</a>"
+		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 	],
 
 	"tags": ["attentats", "Bataclan", "soutien"],
 
 	"rel": {
 		"prev": {
-			"title": "<q>Content de vous avoir revu</q>",
-			"href":  "#"
+			"title": "« Content de vous avoir revu »",
+			"href":  "/obsessions/treize-novembre/content-de-vous-avoir-revu"
 		},
 		"next": {
-			"title": "",
+			"title": "?",
 			"href":  "#"
 		}
 	}
