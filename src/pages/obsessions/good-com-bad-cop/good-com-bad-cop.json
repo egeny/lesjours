@@ -1,49 +1,129 @@
 {
 	"template": "board",
 
-	"color": 4,
-	"name": "Good com, bad COP",
 	"href": "/obsessions/good-com-bad-cop",
 
-	"header": {
-		"img": "good-com-bad-cop.jpg",
-		"href": "/obsessions/good-com-bad-cop",
-		"title": "Good com, bad COP",
-		"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?"
-	},
+	"img": "good-com-bad-cop.jpg",
+	"alt": "",
+
+	"color": 4,
+	"name": "Good com, bad COP",
+	"title": "Good com, bad COP",
+	"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?",
+
+	"episodes": [
+		{
+			"href": "la-pantoufle-de-vert",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 5,
+			"date": "2015-11-20T13:50+01:00",
+
+			"title": "The Shift Project, la pantoufle de vert des entreprises",
+			"intro": "Ce think tank veut lutter contre le réchauffement climatique en « décarbonant » l’économie. Financé par les entreprises, il est surtout un outil bien pratique pour communiquer sur leurs engagements climatiques.",
+			"lead": "Tous les enfants savent qu’une fourmi que 18 mètres avec un chapeau sur la tête, ça n’existe pas. Mais saviez-vous qu’un think tank pro-climat financé par EDF, Bouygues, la SNCF et Vinci Autoroutes, ça existe bien ? Cela s’appelle The Shift Project. Créé en 2010 par Jean-Marc Jancovici, un ingénieur-conseil iconoclaste, The Shift a pour objet de <q>réfléchir à la transition vers une économie à bas carbone</q>. C’est un think tank tout ce qu’il y a de plus sérieux, avec un conseil scientifique composé notamment du climatologue Hervé Le Treut, membre du Giec, et de Gaël Giraud, chef économiste à l’Agence française du développement. Il produit des analyses sur les choix énergétiques, organise avec des spécialistes des conférences sur le climat et propose aux journalistes des briefings sur les enjeux de la COP 21. Mais The Shift est aussi bien utile pour les entreprises qui le financent : le think tank met sur pied des débats où des grands patrons peuvent, sans être trop bousculés, présenter la stratégie climat de leur groupe.",
+
+			"credits": [
+				"Texte <a href=\"#\">Nicolas Cori</a>",
+				"Photos <a href=\"#\">Pierre Morel</a>"
+			]
+		},
+		{
+			"href": "papou-est-dans-le-petrole",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 4,
+			"date": "2015-11-20T13:50+01:00",
+
+			"title": "Papou est dans le pétrole",
+			"intro": "À la tête de Total depuis décembre 2014, Patrick Pouyanné s’affiche comme un homme sympa et ouvert aux questions climatiques. Mais l’intérêt de son entreprise passe avant tout.",
+			"lead": "Quand Christophe de Margerie, l’ex-PDG moustachu de Total, est mort dans le crash de son avion, en octobre 2014, le conseil d’administration du groupe pétrolier avait le choix entre deux successeurs: Philippe Boisseau, le responsable du marketing, et Patrick Pouyanné, patron de la branche chimie-raffinage. Les deux hommes sont polytechniciens et ingénieurs des mines, sont passés par des cabinets ministériels de droite dans les années 1990, puis ont rejoint le groupe pétrolier avant de progresser parallèlement dans sa hiérarchie. Le premier ressemble à un patron lambda, costume gris et air sérieux ; le deuxième a un côté nounours, grand et enveloppé, et a toujours le sourire aux lèvres. C’est lui qui a été choisi.",
+
+			"credits": [
+				"Texte <a href=\"#\">Nicolas Cori</a>",
+				"Photos <a href=\"#\">Pierre Morel</a>"
+			]
+		},
+		{
+			"href": "houille-les-ecolos-passent-a-la-banque",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 3,
+			"date": "2015-11-20T13:50+01:00",
+
+			"title": "Houille ! Les écolos passent à la banque",
+			"intro": "Pour pousser BNP Paribas à arrêter de financer le charbon, l’ONG les Amis de la Terre a multiplié les actions contre la banque. Exemple en octobre, devant une agence à Paris.",
+			"lead": "Le rendez-vous avait été fixé par les Amis de la Terre un samedi d’octobre dernier, à 11 heures, devant une agence BNP Paribas située place Félix-Eboué, dans le XIIe arrondissement de Paris, en <q>présence de citoyens et de porteurs d’alternatives</q>. Il s’agissait de <q>montrer qu’il est possible d’épargner le climat avec notre argent</q>. BNP Paribas sponsorise la COP 21 et, selon Pierre Sagot, responsable communication de la branche française de l’ONG qui se veut protectrice de l’homme et de l’environnement dans 76 pays, la banque <q>est la première en France à financer le secteur du charbon</q>. Pire, elle <q>n’a toujours pas pris un seul engagement climat crédible à deux mois de la conférence</q> – elle ne l’a fait qu’après l’action de l’ONG. Les Amis de la Terre avaient donc décidé de la viser.",
+
+			"credits": [
+				"Texte <a href=\"#\">Nicolas Cori</a>",
+				"Photos <a href=\"#\">Antoine Stouls</a>"
+			]
+		},
+		{
+			"href": "le-charbon-l-ennemi-utile",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 2,
+			"date": "2015-12-15T13:50+01:00",
+
+			"title": "Le charbon, l’ennemi utile",
+			"intro": "La plupart des entreprises françaises disent se désengager de l’énergie fossile la plus polluante. Des promesses à relativiser, qui leur servent surtout à apparaître irréprochables le temps de la COP.",
+			"lead": "Qui aurait dit qu’en 2015, l’abandon du charbon serait la principale mesure mise en avant par les grosses entreprises françaises pour évoquer leur engagement climatique ? Dans un pays qui a fermé sa dernière mine il y a plus de dix ans et où seulement cinq centrales à charbon fonctionnent encore. Et pourtant, de Total à Engie (ex-GDF Suez) en passant par la Société générale et BNP Paribas, c’est le gratin du CAC 40 qui a, quelques mois ou quelques semaines avant le lancement de la COP 21 à Paris, déclaré son désamour pour cette roche sale.",
+
+			"credits": [
+				"Texte <a href=\"#\">Nicolas Cori</a>",
+				"Photos <a href=\"#\">Pierre Morel</a>"
+			]
+		}
+	],
 
 	"people": [
 		{
+			"href":     "#",
 			"img":      "img/mestrallet.jpg",
+			"alt":      "",
 			"title":    "Gérard Mestrallet",
 			"subtitle": "66 ans, PDG d’Engie (ex-GDF Suez)",
 			"minor":    true
 		},
 		{
+			"href":     "papou-est-dans-le-petrole",
 			"img":      "img/pouyanne.jpg",
+			"alt":      "",
 			"title":    "Patrick Pouyanné",
-			"subtitle": "52 ans, directeur général de Total",
-			"href":     "papou-est-dans-le-petrole/"
+			"subtitle": "52 ans, directeur général de Total"
 		},
 		{
+			"href":     "houille-les-ecolos-passent-a-la-banque",
 			"img":      "img/lucie-pinson.jpg",
+			"alt":      "",
 			"title":    "Lucie Pinson",
 			"subtitle": "29 ans, chargée de campagne finance privée aux Amis de la Terre",
-			"href":     "houille-les-ecolos-passent-a-la-banque/",
 			"minor":    true
 		},
 		{
+			"href":     "la-pantoufle-de-vert",
 			"img":      "img/jancovici.jpg",
+			"alt":      "",
 			"title":    "Jean-Marc Jancovici",
 			"subtitle": "53 ans, président du think tank The Shift Project",
-			"href":     "la-pantoufle-de-vert/",
 			"minor":    true
 		},
 		{
+			"href":     "la-pantoufle-de-vert",
 			"img":      "img/levy.jpg",
+			"alt":      "",
 			"title":    "Jean-Bernard Lévy",
 			"subtitle": "60 ans, PDG d’EDF",
-			"href":     "la-pantoufle-de-vert/",
 			"minor":    true
 		}
 	],

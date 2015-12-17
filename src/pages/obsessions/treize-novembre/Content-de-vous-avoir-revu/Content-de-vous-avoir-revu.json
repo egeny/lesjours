@@ -1,16 +1,11 @@
 {
 	"template": "episode",
+
 	"number": 4,
 	"date": "2015-12-23T13:50+01:00",
 
 	"title": "« Content de vous avoir revu »",
 	"intro": "<strong>Journal de bord du XIe.</strong> Lundi matin, l’école reprend mais les attentats résonnent encore dans le quartier. L’après-midi, François Hollande déclare que la France est en guerre.",
-
-	"obsession": {
-		"color": 1,
-		"name": "Treize novembre",
-		"href": "/obsessions/treize-novembre"
-	},
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",

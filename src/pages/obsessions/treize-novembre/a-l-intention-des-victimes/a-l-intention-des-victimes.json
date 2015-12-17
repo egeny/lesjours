@@ -1,16 +1,11 @@
 {
 	"template": "episode",
+
 	"number": 5,
 	"date": "2015-12-23T13:50+01:00",
 
 	"title": "« À l’intention des victimes et des impliqués »",
 	"intro": "<strong>Journal de bord du XIe.</strong> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
-
-	"obsession": {
-		"color": 1,
-		"name": "Treize novembre",
-		"href": "/obsessions/treize-novembre"
-	},
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",

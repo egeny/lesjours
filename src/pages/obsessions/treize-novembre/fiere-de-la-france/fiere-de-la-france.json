@@ -1,16 +1,11 @@
 {
 	"template": "episode",
+
 	"number": 9,
 	"date": "2015-12-23T13:50+01:00",
 
 	"title": "« Fière de la France ? »",
 	"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
-
-	"obsession": {
-		"color": 1,
-		"name": "Treize novembre",
-		"href": "/obsessions/treize-novembre"
-	},
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",

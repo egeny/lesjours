@@ -1,61 +1,111 @@
 {
 	"template": "board",
 
-	"color": 2,
-	"name": "Les années collège",
 	"href": "/obsessions/les-annees-college",
 
-	"header": {
-		"img": "les-annees-college.jpg",
-		"href": "/obsessions/les-annees-college",
-		"title": "Les années<br/>Collège",
-		"subtitle": "Un an en 3<sup>ème</sup>B à Aimé-Césaire, dans le nord de Paris."
-	},
+	"img": "les-annees-college.jpg",
+	"alt": "",
+
+	"color": 2,
+	"name": "Les années collège",
+	"title": "Les années<br/>Collège",
+	"subtitle": "Un an en 3e B à Aimé-Césaire, dans le nord de Paris.",
+
+	"episodes": [
+		{
+			"href": "a-midi-la-classe-se-tait",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 3,
+			"date": "2015-11-17T13:50+01:00",
+
+			"title": "À midi, la classe se tait",
+			"intro": "Lundi 16 novembre, premier jour de classe après les attentats. Certains profs redoutent la réaction des élèves. Mais, cette fois-ci, il n'y aura pas de « je ne suis pas Charlie ».",
+			"lead": "Ce lundi matin, les enseignants du collège Aimé-Césaire sont arrivés trois quarts d'heure avant le début des cours. Pour parler de ce qui s'est passé. Parler, surtout, de la façon dont ils allaient aborder les attentats avec les élèves, comment ils allaient organiser la minute de silence, comment gérer l'émotion –&nbsp;la leur et celle des élèves&nbsp;–, appréhender d'éventuels états de chocs, d'éventuels dérapages aussi. Une enseignante confie qu'elle ne se sent pas d'entendre des propos justifiant les attentats. <q>Pas cette fois-ci.</q>",
+
+			"credits": [
+				"Texte <a href=\"#\">Alice Géraud</a>",
+				"Photos <a href=\"#\">Simon Lambert</a>"
+			]
+		},
+		{
+			"href": "un-pont-entre-deux-danses",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 2,
+			"date": "2015-11-12T13:50+01:00",
+
+			"title": "Un pont entre deux danses",
+			"intro": "Ce soir, les 3e B du collège Aimé-Césaire vont voir un spectacle de danse au Cent-Quatre. A deux pas de chez eux, mais par-delà le pont où des jeunes se battent régulièrement avec ceux de l ’arrondissement voisin.",
+			"lead": "Ce 12 novembre, dernière douce soirée d'automne, dernière soirée avant que Paris ne bascule dans autre chose, les 3e&nbsp;B vont voir un spectacle au Cent-Quatre, lieu culturel parisien plutôt branché situé à quelques centaines de mètres de leur collège. Durant toute l'année de troisième, les élèves étudient des œuvres pour l'épreuve d'histoire des arts du brevet. Le programme est libre et les enseignants en profitent pour organiser des sorties autour de ces œuvres, des rencontres avec les artistes. Récemment, les troisièmes sont ainsi allés à Versailles voir les sculptures géantes d'Anish Kapoor. Là, Antoine Labaere, leur professeur principal, a choisi le spectacle d'un chorégraphe qu'il aime particulièrement, Aurélien Bory. Un spectacle d'abord pas facile, abstrait et lent, surtout pour des élèves de 15 ans. <q>On verra bien</q>, sourit-il.",
+
+			"credits": [
+				"Texte <a href=\"#\">Alice Géraud</a>",
+				"Photos <a href=\"#\">Simon Lambert</a>"
+			]
+		}
+	],
 
 	"people": [
 		{
+			"href":     "un-pont-entre-deux-danses",
 			"img":      "img/antoinelabaere.jpg",
+			"alt":      "",
 			"title":    "Antoine Labaere",
-			"subtitle": "32 ans, Professeur principal de la 3<sup>ème</sup>B",
-			"href":     "un-pont-entre-deux-danses/"
+			"subtitle": "32 ans, Professeur principal de la 3e B"
 		},
 		{
+			"href":     "#",
 			"img":      "img/jessika.jpg",
+			"alt":      "",
 			"title":    "Jessika",
 			"subtitle": "13 ans, sérieuse élève"
 		},
 		{
+			"href":     "a-midi-la-classe-se-tait",
 			"img":      "img/jlterrana.jpg",
+			"alt":      "",
 			"title":    "Jean-Louis Terrana",
-			"subtitle": "50 ans, le principal d'Aimé-Césaire",
-			"href":     "a-midi-la-classe-se-tait/"
+			"subtitle": "50 ans, le principal d'Aimé-Césaire"
 		},
 		{
+			"href":     "#",
 			"img":      "img/vithuran.jpg",
+			"alt":      "",
 			"title":    "Vithuran",
 			"subtitle": "14 ans, fou de voitures"
 		},
 		{
+			"href":     "#",
 			"img":      "img/nina.jpg",
+			"alt":      "",
 			"title":    "Nina",
-			"subtitle": "14 ans, la déléguée de la 3<sup>ème</sup>B"
+			"subtitle": "14 ans, la déléguée de la 3e B"
 		},
 		{
+			"href":     "a-midi-la-classe-se-tait",
 			"img":      "img/matea.jpg",
+			"alt":      "",
 			"title":    "Matéa",
-			"subtitle": "14 ans, pâtisserie et jeux vidéo",
-			"href":     "a-midi-la-classe-se-tait/"
+			"subtitle": "14 ans, pâtisserie et jeux vidéo"
 		},
 		{
+			"href":     "#",
 			"img":      "img/tdecormon.jpg",
+			"alt":      "",
 			"title":    "Thiphaine Decormon",
 			"subtitle": "La conseillère d'orientation"
 		},
 		{
+			"href":     "#",
 			"img":      "img/delphine.jpg",
+			"alt":      "",
 			"title":    "Delphine",
-			"subtitle": "14 ans,",
-			"href":     "un-pont-entre-deux-danses/"
+			"subtitle": "14 ans"
 		}
 	],
 

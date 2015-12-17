@@ -2,49 +2,67 @@
 	"template": "obsessions",
 	"obsessions": [
 		{
+			"href": "/obsessions/treize-novembre",
+
+			"img": "treize-novembre.jpg",
+			"alt": "",
+
 			"color": 1,
-			"img": "treize-novembre/treize-novembre.jpg",
-			"href": "treize-novembre",
 			"title": "Treize Novembre",
-			"subtitle": "Récits de la France d’après.",
+			"subtitle": "Récits de la France d’après",
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
 		{
-			"color": 2,
-			"img": "les-annees-college/les-annees-college.jpg",
 			"href": "les-annees-college",
+
+			"img": "les-annees-college.jpg",
+			"alt": "",
+
+			"color": 2,
 			"title": "Les années<br/>Collège",
-			"subtitle": "Un an en 3<sup>ème</sup>B à Aimé-Césaire dans le nord de Paris.",
+			"subtitle": "Un an en 3e B à Aimé-Césaire dans le nord de Paris.",
 			"desc": "<p> Ils s’appellent Moussa, Lucie, Rayan, Agita ou Faema. Ils sont en 3e B à Aimé-Césaire, un collège classé REP situé dans un quartier populaire du nord de Paris. Les Jours racontent la vie de cette classe durant toute une année scolaire.</p><p>C’est une année charnière pour les adolescents, la dernière passée ensemble avant l’orientation vers des filières générale, technique ou pro qui dessineront en partie leurs vies d’après. Cette chose encore un peu floue qu’on appelle le futur.</p>"
 		},
 		{
-			"color": 3,
-			"img": "l-empire/l-empire.jpg",
 			"href": "l-empire",
+
+			"img": "l-empire.jpg",
+			"alt": "",
+
+			"color": 3,
 			"title": "L’empire",
 			"subtitle": "Comment Vincent Bolloré a mangé Canal+.",
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
 		{
-			"color": 4,
-			"img": "good-com-bad-cop/good-com-bad-cop.jpg",
 			"href": "good-com-bad-cop",
+
+			"img": "good-com-bad-cop.jpg",
+			"alt": "",
+
+			"color": 4,
 			"title": "Good com, bad COP",
 			"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?",
 			"desc": "<p>Les multinationales qui polluent sont mises en cause pour leur rôle dans le dérèglement climatique. Elles aimeraient nous faire croire qu’elles ont la solution pour diminuer les émissions de CO2 tandis que les ONG s’attachent à enrayer cette belle communication.</p>"
 		},
 		{
-			"color": 5,
-			"img": "les-jours-a-l-oeil/les-jours-a-l-oeil.jpg",
 			"href": "les-jours-a-l-oeil",
+
+			"img": "les-jours-a-l-oeil.jpg",
+			"alt": "",
+
+			"color": 5,
 			"title": "Les Jours<br/>à l’oeil",
 			"subtitle": "Histoires de photos et de photographes.",
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
 		},
 		{
-			"color": 6,
-			"img": "la-mecanique-fn/la-mecanique-fn.jpg",
 			"href": "la-mecanique-fn",
+
+			"img": "la-mecanique-fn.jpg",
+			"alt": "",
+
+			"color": 6,
 			"title": "La mécanique FN",
 			"subtitle": "L’emprise de l’extrême-droite décortiquée.",
 			"desc": "<p>Un paragraphe para paru pari pris</p><p>Deux paragraphes para paru pari pris</p><p>Trois paragraphes para paru pari pris</p>"
