@@ -29,7 +29,7 @@ $gutter: grid-gutter("sm");
 		width:  1.5em;
 		height: 1.5em;
 		left:  -1.5em;
-		bottom: 4px;
+		top: calc(-.75em - 4px);
 	}
 
 	.snake-1 .snake-container {
