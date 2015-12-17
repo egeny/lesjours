@@ -217,4 +217,36 @@ $gutter: grid-gutter("sm");
 		}
 	}
 }
+
+.f1 .h4 { margin-left: 35px; margin-bottom: 25px; }
+.f1 .snake-2:before { width: 36px; }
+.f1 .intro { margin-bottom: 14px; @include font-weight-bold("archer"); }
+.f1 .style-meta { margin-bottom: 14px; }
+
+.previous .pattern-1 { height: $gutter; }
+.f3 a:hover .h5,
+.f3 a:hover p { color: $color-brand; }
+.f3 .h5 { margin-bottom: 14px; }
+.f3 p { margin-bottom: 14px; }
+.f3 li { margin-bottom: 30px; }
+.f3 .style-meta { line-height: 1; }
+
+@include media("md") {
+	$gutter: grid-gutter("md");
+	.f1 .h4 { margin-left: 0; margin-bottom: 45px; }
+	.f1 .snake-2:before { width: 59px; }
+	.f1 .style-meta { display: inline; line-height: 1; }
+	.f1 ul.style-meta { line-height: 1; margin-left: 10px; border-left: 1px solid $color-dark; padding-left: 10px;}
+	.f1 ul.style-meta:after { display: table; content: ""; }
+	.f1 .style-meta li { display: inline; }
+	.f1 .style-meta li:after            { content: " • "; }
+	.f1 .style-meta li:last-child:after { content: "";    }
+	.previous .pattern-1 { height: $gutter; }
+}
+
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+	.f1 .snake-2:before { width: 36px; left: -36px; bottom: -12px; height: 120%; min-height: 70px; }
+	.previous .pattern-1 { height: $gutter; }
+}
 /* @end Board */

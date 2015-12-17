@@ -1,13 +1,45 @@
 <section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="false">
 	<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les épisodes</h3>
-	<article class="gutter-1">
-		<img class="responsive gutter-bottom-2" src="img/episode/header.jpg" alt="" />
-		<h4 class="h4 snake-2"><span class="snake-container">Des élèves et des préjugés</span></h4>
-		<p>Mardi, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes et homophobes.</p>
-		<p class="style-meta">25 sept. 2015 • épisode 17 | Texte <a href="#">Alice Géraud</a> • Photos <a href="#">Simon Lambert</a></p>
-		<p>Elle s’applique, liant ses lettres d’un trait appuyé de stylo-bille. À côté du mot <q>arabe</q>, elle a écrit <q>voleur</q>. Une grande partie des élèves de cette classe de troisième a eu la même idée. Sans se concerter. Les mots sont posés sans gêne, provocation ou colère. Son voisin d’en face, un grand garçon souriant, a lui écrit le mot <q>islamiste</q>. Un autre encore a mis <q>violeur</q>. Lundi dernier, ces élèves du collège Gabriel-Péri d’Aubervilliers (Seine-Saint-Denis) ont participé durant 2 heures au programme CoExist, un dispositif. (…)</p>
-		<div class="more text-center">
-			<a class="btn" href="#"><i>Lire</i></a>
+
+	{% set latest = obsession.episodes[0] %}
+	<article class="f1 row">
+		<img class="col col-top col-lg-6 gutter-bottom-2" src="{{ obsession.href }}/{{ latest.href }}/{{ latest.img }}" alt="{{ latest.alt }}" />
+		<div class="f2 col col-lg-6">
+			<h4 class="h4 snake-2"><a href="{{ obsession.href }}/{{ latest.href }}" class="snake-container">{{ latest.title }}</a></h4>
+			<p class="intro">{{ latest.intro }}</p>
+			<p class="style-meta"><time pubdate="{{ latest.date }}">{{ latest.date|human }}</time> • épisode {{ latest.number }}</p>
+			<ul class="list-unstyled style-meta">
+			{% for credit in latest.credits %}
+				<li>{{ credit }}</li>
+			{% endfor %}
+			</ul>
+			<p>{{ latest.lead }} (…)</p>
+		</div>
+		<div class="col col-lg-12 more text-center gutter-bottom-4">
+			<a class="btn" href="{{ obsession.href }}/{{ latest.href }}"><i>Lire</i></a>
 		</div>
 	</article>
+
+	{% if obsession.episodes.length > 1 %}
+	<div class="previous">
+		<div class="pattern-1"></div>
+		<h4 class="style-meta-large gutter-left-1 gutter-top-2 gutter-bottom-2">Précedemment…</h4>
+		<ol class="f3 row list-unstyled">
+			{% for episode in obsession.episodes %}
+				{% if not loop.first %}
+					<li class="col-lg-6">
+						<a class="row link-unstyled" href="{{ obsession.href }}/{{ episode.href }}">
+							<img class="col col-top col-sm-2 col-md-4 col-lg-6" src="{{ obsession.href }}/{{ episode.href }}/{{ episode.img }}" alt="{{ episode.alt }}" />
+							<div class="col col-sm-2 col-md-4 col-lg-6">
+								<h5 class="h5 snake-1"><span class="snake-container">{{ episode.title }}</span></h5>
+								<p>{{ episode.intro }}</p>
+								<p class="style-meta"><time pubdate="{{ episode.date }}">{{ episode.date|human }}</time> • épisode n°{{ episode.number }}</p>
+							</div>
+						</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ol>
+	</div>
+	{% endif %}
 </section><!-- end of #episodes -->
