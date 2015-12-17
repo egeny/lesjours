@@ -1,16 +1,13 @@
-<section class="board obsession-{{ color }}">
-	{% if header %}
+<section class="board obsession-{{ obsession.color }}">
 	<header class="container gutter-top-2">
 		<div class="row">
 			<div class="col">
 				<div class="wall expanded">
-					{% set wall = header %}
 					{% include "partials/wall.html" %}
 				</div>
 			</div>
 		</div>
 	</header>
-	{% endif %}
 
 	<ul class="gutter-bottom-1 col-md-left-1 col-lg-left-1 col-lg-right-1 list-inline text-center sticky-header" role="tablist">
 		<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="true" tabindex="0">{{ icon("files") }} <span>Les épisodes</span></a></li>
@@ -25,7 +22,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col gutter-0 col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
-				<h2 class="gutter-left-1 style-meta"><a href="{{ href }}" class="link obsession">{{ name }}</a></h2>
+				<h2 class="gutter-left-1 style-meta"><a href="{{ obsession.href }}" class="link obsession">{{ obsession.name }}</a></h2>
 				<div class="tab-container">
 					{% include "partials/board/episodes.html"   %}
 					{% include "partials/board/people.html"     %}

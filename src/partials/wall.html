@@ -3,31 +3,31 @@
 	You can also use the **expanded** modifier to display the overlay-color
 
 	Placeholders:
-		- wall.img
-		- wall.alt (optional but recommended)
-		- wall.href
-		- wall.title
-		- wall.subtitle
-		- wall.desc (optional)
+		- obsession.img
+		- obsession.alt (optional but recommended)
+		- obsession.href
+		- obsession.title
+		- obsession.subtitle
+		- obsession.desc (optional)
 #}
-<img class="responsive" src="{{ wall.img }}" alt="{{ wall.alt }}" />
+<img class="responsive" src="{{ obsession.href }}/{{ obsession.img }}" alt="{{ obsession.alt }}" />
 <div class="overlay overlay-color"></div>
 <div class="overlay overlay-pattern"></div>
 <div class="overlay">
 	<div class="title gutter-top-7 gutter-sm-top-4 gutter-sm-4 col-md-h-1 col-lg-h-1">
 		{% include "img/snake.svg" %}
-		<h2 class="h2"><a class="link-unstyled" href="{{ wall.href }}">{{ wall.title }}</a></h2>
-		<span class="p-larger">{{ wall.subtitle }}</span>
-		{% if wall.desc %}
-			<a href="{{ wall.href }}" class="btn btn-transparent"><i>{{ icon("chevron-down", "Lire") }}</i></a>
+		<h2 class="h2"><a class="link-unstyled" href="{{ obsession.href }}">{{ obsession.title }}</a></h2>
+		<span class="p-larger">{{ obsession.subtitle }}</span>
+		{% if obsession.desc %}
+			<a href="{{ obsession.href }}" class="btn btn-transparent"><i>{{ icon("chevron-down", "Lire") }}</i></a>
 		{% endif %}
 	</div>
-	{% if wall.desc %}
+	{% if obsession.desc %}
 		<div class="desc gutter-sm-4 col-md-left-1 col-md-5 col-lg-left-1 col-lg-6">
-			{{ wall.desc }}
+			{{ obsession.desc }}
 		</div>
 		<div class="more gutter-bottom-2 text-center">
-			<a href="{{ wall.href }}" class="btn btn-reverse"><i>{{ icon("chevron-down", "Lire") }}</i></a>
+			<a href="{{ obsession.href }}" class="btn btn-reverse"><i>{{ icon("chevron-down", "Lire") }}</i></a>
 		</div>
 	{% endif %}
 </div>

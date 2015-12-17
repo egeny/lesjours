@@ -3,7 +3,7 @@
 	<h5 class="h5 snake-1"><span class="snake-container">{{ item.title }}</span></h5>
 	<p>{{ item.desc }}</p>
 	<span class="style-meta">
-		{% if item.date %}<time pubdate="{{ item.date }}">{{ item.date }}</time>{% endif %}
+		{% if item.date %}<time pubdate="{{ item.date }}">{{ item.date|human }}</time>{% endif %}
 		{% if item.date and item.meta %} • {% endif %}
 		{% if item.meta %}{{ item.meta }}{% endif %}
 	</span>
