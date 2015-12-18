@@ -22,7 +22,7 @@ $margin: grid-margin("sm");
 
 .page-obsessions .carousel-controls .btn {
 	position: absolute;
-	bottom: 0;
+	bottom: -6px;
 	right: #{-$margin / 2};
 	color: $color-brand;
 }
@@ -39,6 +39,9 @@ $margin: grid-margin("sm");
 
 @include media("md") {
 	$margin: grid-margin("md");
+
+	.page-obsessions .carousel-controls .btn { bottom: 1px; }
+
 	@if $margin != grid-margin("sm") {
 		.page-obsessions > .container { height: calc(100% - 85px - #{$margin * 2}); }
 		.page-obsessions .carousel-controls { line-height: #{$margin * 2}; }
