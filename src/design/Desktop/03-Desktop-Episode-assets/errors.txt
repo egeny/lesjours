@@ -1,4 +1,0 @@
-[Mon Nov 16 2015 17:53:12 GMT+0100 (CET)] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
-[Mon Nov 16 2015 17:53:12 GMT+0100 (CET)] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
-[Mon Nov 16 2015 17:53:12 GMT+0100 (CET)] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
-[Mon Nov 16 2015 17:53:12 GMT+0100 (CET)] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.
