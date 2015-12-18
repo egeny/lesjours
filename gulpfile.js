@@ -214,6 +214,7 @@ gulp.task('build:html', function() {
 
 	function build(folder, parent) {
 		var data = {}, metadata = {};
+		folder = folder || '';
 		parent = parent || '';
 
 		try {
@@ -274,8 +275,7 @@ gulp.task('build:html', function() {
 		folders(path.join(paths.pages, parent)).forEach(function(folder) { build(folder, parent); });
 	}
 
-	folders(paths.pages).forEach(function(folder) { build(folder); });
-
+	build();
 	return !streams.isEmpty() ? streams : null;
 });
 
