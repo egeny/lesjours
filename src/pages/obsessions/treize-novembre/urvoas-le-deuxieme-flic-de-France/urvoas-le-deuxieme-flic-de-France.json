@@ -1,7 +1,7 @@
 {
 	"template": "episode",
 
-	"number": 4,
+	"number": 6,
 	"date": "2015-12-23T13:50+01:00",
 
 	"title": "Jean-Jacques Urvoas, le deuxième flic de France",
@@ -9,19 +9,19 @@
 
 	"credits": [
 		"Texte <a href=\"#\">Camille Polloni</a>",
-		"Photo <a href=\"#\">Sébastien Calvet</a>",
+		"Photo <a href=\"#\">Sébastien Calvet</a>"
 	],
 
 	"tags": ["13 Novembre", "Etat d'urgence", "Parti socialiste", "sécurité", "Jean-Jacques Urvoas"],
 
 	"rel": {
 		"prev": {
-			"title": "« À l'intention des victimes et des impliqués »",
-			"href":  "/obsessions/treize-novembre/a-l-intention-des-victimes"
+			"title": "« À l'intention des victimes et des impliqués »",
+			"href":  "a-l-intention-des-victimes"
 		},
 		"next": {
-			"title": "« Comment dire qu'ils nous ont tiré dessus parce que c'est nous ? »",
-			"href":  "/obsessions/treize-novembre/comment-dire-qu-ils-nous-ont-tire-dessus-parce-que-c-est-nous"
+			"title": "?",
+			"href":  "#"
 		}
 	}
 }

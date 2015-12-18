@@ -17,11 +17,11 @@
 	"rel": {
 		"prev": {
 			"title": "« L'empreinte de la peur »",
-			"href":  "/obsessions/treize-novembre/l-empreinte-de-la-peur"
+			"href":  "l-empreinte-de-la-peur"
 		},
 		"next": {
 			"title": "« À l’intention des victimes et des impliqués »",
-			"href":  "/obsessions/treize-novembre/a-l-intention-des-victimes"
+			"href":  "a-l-intention-des-victimes"
 		}
 	}
 }

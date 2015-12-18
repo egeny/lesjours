@@ -17,11 +17,11 @@
 	"rel": {
 		"prev": {
 			"title": "« Content de vous avoir revu »",
-			"href":  "/obsessions/treize-novembre/content-de-vous-avoir-revu"
+			"href":  "content-de-vous-avoir-revu"
 		},
 		"next": {
-			"title": "?",
-			"href":  "#"
+			"title": "Jean-Jacques Urvoas, le deuxième flic de France",
+			"href":  "urvoas-le-deuxieme-flic-de-france"
 		}
 	}
 }

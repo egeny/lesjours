@@ -70,7 +70,7 @@
 			<ul class="row list-unstyled">
 				{% if episode.rel.prev %}
 				<li class="col col-sm-3 col-md-4 col-lg-4 col-lg-right-4">
-					<a class="link-unstyled" rel="prev" href="{{ episode.rel.prev.href }}">
+					<a class="link-unstyled" rel="prev" href="{{ obsession.href }}/{{ episode.rel.prev.href }}">
 						<i>{{ icon("angle-left") }}</i>
 						<div>
 							<span class="style-meta">Épisode n°{{ episode.number - 1 }}<span class="sr"> : </span></span>
@@ -81,7 +81,7 @@
 				{% endif %}
 				{% if episode.rel.next %}
 				<li class="col col-sm-1 col-md-4 col-lg-4">
-					<a class="link-unstyled" rel="next" href="{{ episode.rel.next.href }}">
+					<a class="link-unstyled" rel="next" href="{{ obsession.href }}/{{ episode.rel.next.href }}">
 						<i>{{ icon("angle-right") }}</i>
 						<div class="text-right">
 							<span class="style-meta">Épisode n°{{ episode.number + 1 }}<span class="sr"> : </span></span>

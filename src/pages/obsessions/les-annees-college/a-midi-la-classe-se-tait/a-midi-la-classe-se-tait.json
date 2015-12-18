@@ -17,7 +17,11 @@
 	"rel": {
 		"prev": {
 			"title": "Un pont entre deux danses",
-			"href":  "/obsessions/les-annees-college/un-pont-entre-deux-danses"
+			"href":  "un-pont-entre-deux-danses"
+		},
+		"next": {
+			"title": "Louis-le-Grand, l’autre bout du monde",
+			"href":  "louis-le-grand-l-autre-bout-du-monde"
 		}
 	}
 }
