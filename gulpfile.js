@@ -266,7 +266,7 @@ gulp.task('build:html', function() {
 		// Copy the assets
 		streams.add(
 			gulp
-				.src(path.join(paths.pages, parent, folder, '**/*.{gif,png,jpg,m4a,webm,mp4}'), { base: paths.pages })
+				.src(path.join(paths.pages, parent, folder, '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'), { base: paths.pages })
 				.pipe(gulp.dest(paths.dist))
 		);
 
