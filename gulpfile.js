@@ -97,6 +97,8 @@ var
 		}
 	},
 
+	root = '/v1',
+
 	// A set of tasks to launch on different contexts
 	tasks = {
 		'copy:img': function(context) {
@@ -244,6 +246,8 @@ gulp.task('build:html', function() {
 					.src(path.join(paths.templates, metadata.template + '.html'))
 					.pipe(nunjucks(data))
 					.pipe(rename(path.join(parent, folder, 'index.html')))
+					.pipe(replace(/(src|href)="\/(\w)/g, '$1="' + root + '/$2'))
+					.pipe(replace('href="/"',          'href="' + root + '/"'))
 					.pipe(gulp.dest(paths.dist))
 					.pipe(livereload())
 			);
@@ -252,6 +256,8 @@ gulp.task('build:html', function() {
 				gulp
 					.src(path.join(paths.pages, parent, folder, '*.html'))
 					.pipe(nunjucks())
+					.pipe(replace(/(src|href)="\/(\w)/g, '$1="' + root + '/$2'))
+					.pipe(replace('href="/"',          'href="' + root + '/"'))
 					.pipe(gulp.dest(path.join(paths.dist, parent, folder)))
 					.pipe(livereload())
 			);
