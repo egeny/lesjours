@@ -1,0 +1,71 @@
+/* @group Input */
+/* FIXME: clean me */
+.field label {
+	@extend %font-brandon;
+	@include font-weight-black("brandon");
+	font-size: 24px;
+	line-height: 30px;
+	margin-bottom: 10px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.field input {
+	background: none;
+	border: 0;
+	border-bottom: 2px solid lighten($color-brand, 37%); /* FIXME: this color should be in variable.scss */
+	font-size: 1.125em;
+	padding: .5em 0;
+	width: 100%;
+	outline: 0;
+	line-height: 1.333333;
+	margin-bottom: 2.5em;
+	@extend %font-proxima;
+	@include font-weight-regular("proxima");
+	transition: border-color .3s;
+}
+
+.field input:active,
+.field input:focus { border-color: $color-brand; }
+.field input:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50%/1em 1.4em; }
+
+input.radio,
+input.checkbox { @extend .sr; }
+
+input.checkbox + .checkbox,
+input.radio    + .radio {
+	width:  1.5em;
+	height: 1.5em;
+	border: .1875em solid $color-white;
+
+	display: inline-block;
+	position: relative;
+
+	vertical-align: middle;
+}
+
+input.radio + .radio { border-radius: 50%; }
+
+input.checkbox + .checkbox:before,
+input.radio    + .radio:before {
+	content: "";
+
+	border:        inherit;
+	border-radius: inherit;
+	border-color:  transparent;
+
+	position: absolute;
+	top:  50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+input.checkbox:active  + .checkbox,
+input.checkbox:focus   + .checkbox,
+input.checkbox:checked + .checkbox,
+input.checkbox:checked + .checkbox:before,
+input.radio:active     + .radio,
+input.radio:focus      + .radio,
+input.radio:checked    + .radio,
+input.radio:checked    + .radio:before { border-color: $color-brand; }
+/* @end Input */
