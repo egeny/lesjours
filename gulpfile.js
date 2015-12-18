@@ -135,6 +135,7 @@ var
 		'sprite:svg': function(context) {
 			return function() {
 				var tasks = folders(context.input).map(function(folder) {
+					if (folder === 'favicon') { return gulp.src('.'); }
 					return gulp.src(path.join(context.input, folder, '*.svg'))
 						.pipe(spriter(config.spriter))
 						.pipe(rename(folder + '.svg'))
