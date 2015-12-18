@@ -2,6 +2,7 @@ dist/
 src/img/ui.svg
 src/img/ui/*.png
 src/img/ui/*.svg
+src/img/favicon.svg
 
 # Bower
 bower_components/
