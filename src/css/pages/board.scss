@@ -218,6 +218,7 @@ $gutter: grid-gutter("sm");
 	}
 }
 
+/* FIXME: clean me */
 .f1 .h4 { margin-left: 35px; margin-bottom: 25px; }
 .f1 .snake-2:before { width: 36px; }
 .f1 .intro { margin-bottom: 14px; @include font-weight-bold("archer"); }
