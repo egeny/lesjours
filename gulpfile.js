@@ -182,7 +182,7 @@ nunjucks.nunjucks
 			case 11: month = 'déce.'; break;
 		}
 
-		return date.getDate() + " " + month + " " + date.getFullYear();
+		return date.getDate() + ' ' + month + ' ' + date.getFullYear();
 	});
 
 gulp.task('default', function() {
@@ -212,7 +212,7 @@ gulp.task('build:html', function() {
 
 	function build(folder, parent) {
 		var data = {}, metadata = {};
-		parent = parent || "";
+		parent = parent || '';
 
 		try {
 			metadata = JSON.parse(fs.readFileSync(path.join(paths.pages, parent, folder, folder + '.json')));
@@ -225,7 +225,7 @@ gulp.task('build:html', function() {
 			}
 		} catch(e) {}
 
-		if (metadata.template === "episode") {
+		if (metadata.template === 'episode') {
 			// Get the episode's content
 			try {
 				data[metadata.template].content = fs.readFileSync(path.join(paths.pages, parent, folder, folder + '.html'));
