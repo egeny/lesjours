@@ -52,7 +52,7 @@ All these colors might be updated in the `variables.scss` file.
 
 <div class="container">
 	<div class="sample" style="background: #C83E2C">Brand<br/>#C83E2C</div>
-	<div class="sample" style="background: #F1C5C0; color: #414141">Brand light<br/>#C83E2C</div>
+	<div class="sample" style="background: #F1C5C0; color: #414141">Brand light<br/>#F1C5C0</div>
 </div>
 <div class="container">
 	<div class="sample" style="background: #414141">Main<br/>#414141</div>
