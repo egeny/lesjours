@@ -119,6 +119,8 @@ All the classes are prefixed to target specific devices:
 
 Note that with these classes, the width **won't be resetted** when a breakpoint is reached ; which means that setting `.col-sm-1` will set a width of 25% ((100% / 4) * 1) even on medium and large devices. You will have to manually define the width for other devices.
 
+You can also use `.col-auto`, `.col-sm-auto`, `.col-md-auto` or `.col-lg-auto` to set the `width` to `auto`.
+
 ### Example
 ```html
 <div class="container">
@@ -244,11 +246,13 @@ You can also use the following classes to quickly offset a column based on the g
 
 All the classes are **also** prefixed to target specific devices:
 
-* Small devices: `.gutter-sm-top-0` to `.gutter-sm-top-12`
-* Medium devices: `.gutter-md-top-0` to `.gutter-md-top-12`
-* Large devices: `.gutter-lg-top-0` to `.gutter-lg-top-12`
+* Small devices: `.gutter-sm-top-0` to `.gutter-sm-top-8`
+* Medium devices: `.gutter-md-top-0` to `.gutter-md-top-8`
+* Large devices: `.gutter-lg-top-0` to `.gutter-lg-top-8`
 
 Please note the gutter size is **half** of the configured gutter size (`gutter-sm-top-1` will add a `margin-top` of **0.5rem** and not **1rem**). This is because in the configuration the `$gutter` variable represent the **full gutter** ; but in CSS the gutter are applied to each sides of a column so they are divided by 2.
+
+Finally, you can use `no-margin-top`, `no-margin-right` `no-margin-bottom` or `no-margin-left` to remove a specific margin.
 
 ### Examples
 ```html

@@ -184,7 +184,7 @@ $last-gutter:     null;
 		}
 
 		// Add some special .gutter-top-X for special margin
-		@for $i from 1 through 12 {
+		@for $i from 1 through 8 {
 			%gutter-top-#{$gutter}-#{$i} {
 				@if $gutter != $last-gutter { margin-top: $gutter * $i; }
 			}
