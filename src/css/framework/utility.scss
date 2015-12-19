@@ -34,9 +34,10 @@
 .link:focus,
 %link-active { background-position: 0 0; }
 
-@each $color in $colors-obsessions {
-	$i: index($colors-obsessions, $color);
-	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, rgba($color, .5), rgba($color, .5)); }
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "light");
+	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
 }
 
 .link-unstyled {

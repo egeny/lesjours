@@ -440,18 +440,20 @@ article .share { margin-bottom: 1.5em; }
 
 					article .rel .h5 { margin: 0; }
 
-@each $color in $colors-obsessions {
-	$i: index($colors-obsessions, $color);
-	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, rgba($color, .5), rgba($color, .5)); }
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$main:  map-get($colors, "main");
+	$light: map-get($colors, "light");
+	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $light, $light); }
 
 	article.obsession-#{$i} .snake,
-	article.obsession-#{$i} figcaption:before { border-color: $color; }
+	article.obsession-#{$i} figcaption:before { border-color: $main; }
 
-	article.obsession-#{$i} blockquote:before { background-color: rgba($color, .75); }
-	article.obsession-#{$i} .lettrine         { background-color: $color; }
+	article.obsession-#{$i} blockquote:before { background-color: rgba($main, .75); }
+	article.obsession-#{$i} .lettrine         { background-color: $main; }
 
 	article.obsession-#{$i} aside span,
-	article.obsession-#{$i} .question:before { color: $color; }
+	article.obsession-#{$i} .question:before { color: $main; }
 }
 
 @include media("sm", true) {

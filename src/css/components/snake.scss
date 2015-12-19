@@ -54,11 +54,11 @@ $gutter: grid-gutter("sm");
 
 	.snake-3 .snake-wrapper { display: block; }
 
-@each $color in $colors-obsessions {
-	$i: index($colors-obsessions, $color);
+@each $colors in $colors-obsessions {
+	$i: index($colors-obsessions, $colors);
 	.obsession-#{$i} .snake-1:before,
 	.obsession-#{$i} .snake-2:before,
-	.obsession-#{$i} .snake-3:before { border-color: $color; }
+	.obsession-#{$i} .snake-3:before { border-color: map-get($colors, "main"); }
 }
 
 @include media("md") {

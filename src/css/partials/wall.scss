@@ -116,8 +116,9 @@ $gutter: grid-gutter("sm");
 .wall.expanded .desc,
 .wall.expanded .more { opacity: 1; }
 
-@each $color in $colors-obsessions {
-	$i: index($colors-obsessions, $color);
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "main");
 	.obsession-#{$i} svg.snake      { stroke: $color; }
 	.obsession-#{$i} .overlay-color { background: rgba($color, .9) }
 }
