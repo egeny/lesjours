@@ -13,7 +13,7 @@
 .field input {
 	background: none;
 	border: 0;
-	border-bottom: 2px solid lighten($color-brand, 37%); /* FIXME: this color should be in variable.scss */
+	border-bottom: 2px solid $color-brand-light;
 	font-size: 1.125em;
 	padding: .5em 0;
 	width: 100%;

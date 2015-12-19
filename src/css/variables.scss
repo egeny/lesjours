@@ -1,5 +1,7 @@
 // Main colors
-$color-brand: #C83E2C;
+$color-brand:       #C83E2C;
+$color-brand-light: lighten($color-brand, 37%);
+
 $color-main:  #414141;
 $color-black: #000;
 $color-white: #FFF;
@@ -18,7 +20,9 @@ $color-external: #E49287;
 $colors-obsessions: (#EB8A31, #679EA7, #DBD2A2, #719A82, #D71F85, #A889AD);
 
 $colors: (
-	brand: $color-brand,
+	brand:       $color-brand,
+	brand-light: $color-brand-light,
+
 	main:  $color-main,
 	black: $color-black,
 	white: $color-white,

@@ -15,7 +15,7 @@ $margin: grid-margin("sm");
 
 .page-obsessions .carousel-controls {
 	line-height: #{$margin * 2};
-	color: lighten($color-brand, 37%);
+	color: $color-brand-light;
 }
 
 .page-obsessions .carousel-controls .selected { color: $color-brand; }

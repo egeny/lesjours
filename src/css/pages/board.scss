@@ -27,7 +27,7 @@ $gutter: grid-gutter("sm");
 				display: block;
 
 				text-decoration: none;
-				color: lighten($color-brand, 37%);
+				color: $color-brand-light;
 			}
 
 			.board [role="tab"]:before {
