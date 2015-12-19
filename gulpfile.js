@@ -103,7 +103,7 @@ var
 	tasks = {
 		'copy:img': function(context) {
 			return function() {
-				return gulp.src(context.input + '/**/*.{gif,jpg,png}')
+				return gulp.src(context.input + '/**/*.{ico,gif,jpg,png}')
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
@@ -111,7 +111,7 @@ var
 
 		'optimize:img': function(context) {
 			return function() {
-				return gulp.src(context.input + '**/*.{gif,jpg,png}')
+				return gulp.src(context.input + '**/*.{ico,gif,jpg,png}')
 					//.pipe(image()) // For now, disable image's optimization since sometimes it destroy images
 					.pipe(gulp.dest(context.input));
 			}
