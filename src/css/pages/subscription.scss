@@ -1,155 +1,292 @@
 /* @group Subscription */
-/* FIXME: clean me */
-.fu {
-	background:
-		url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>") left/2px 4px,
-		linear-gradient(to bottom, rgba($color-black, .6), rgba($color-black, .6)),
-		url(img/back/subscription.jpg) center/cover;
-	color: $color-white;
-}
+$gutter: grid-gutter("sm");
 
-.fu h2 { padding-top: 100px; }
+.subscription {}
 
-.plans { justify-content: center; }
+	.subscription fieldset { counter-increment: fieldset; }
 
-.plans div {
-	border: 4px solid $color-white;
-	padding-bottom: 44px;
-}
+		.subscription legend:before,
+		.subscription button[type="submit"] i {
+			width:  1.5em;
+			height: 1.5em;
+			line-height: 1.5;
+			border: 1px solid;
+			border-radius: 50%;
+			margin-right: .5em;
 
-.plans li {
-	background: $color-white;
-	width: 254px;
-	border: 1px solid $color-brand;
-	margin: 12px;
-	position: relative;
-	color: $color-main;
-}
+			z-index: 1;
+			display: inline-block;
 
-.plans li:nth-child(1),
-.plans li:nth-child(2) {
-	background: $color-brand;
-	color: $color-darkest;
-}
-.plans p { margin: 0; }
+			@extend %font-brandon;
+			@include font-weight-regular("brandon");
+			font-size: .75em;
 
-.plans .price,
-.plans .name { color: $color-brand; }
+			content: counter(fieldset);
+			text-align: center;
+		}
 
-.plans .price {
-	position: relative;
-	@extend %font-brandon;
-	@include font-weight-black("brandon");
-	font-size: 60px;
-	margin-top: 5px;
-	line-height: 100px;
+		.plans { justify-content: center; }
+
+			.plans li {
+				background: $color-white;
+
+				width: 254px;
+				border: 1px solid $color-brand;
+				margin: $gutter / 2;
+
+				position: relative;
+
+				color: $color-main;
+			}
+
+			.plans .strong {
+				background: $color-brand;
+				color: $color-darkest;
+			}
+
+				// Reset some defaults
+				.plans p {
+					margin-bottom: .5em;
+					line-height: 1;
+				}
+
+				.plans p,
+				.plans small { padding: 0 .5em; }
+
+				.plans img { margin: 35px 0 30px; }
+
+				.plans .price,
+				.plans .name { color: $color-brand; }
+
+				.plans .strong .price,
+				.plans .strong .name { color: $color-white; }
+
+				.plans .price {
+					margin: 0;
+					position: relative;
+
+					@extend %font-brandon;
+					@include font-weight-black("brandon");
+					font-size: 3.75rem;
+					line-height: 100px; // Prefer px since the font-size might vary
+				}
+
+					.plans .currency {
+						margin-left: .25em;
+
+						position: absolute;
+						top: 1.5em;
+
+						font-size: 1.25rem;
+						line-height: 1;
+
+						text-align: left;
+					}
+
+						.plans .currency span { display: block; }
+
+				.plans .name {
+					font-size: 1.25rem;
+					font-style: italic;
+					@include font-weight-bold("archer");
+				}
+
+				.plans .desc,
+				.plans small,
+				.plans .action {
+					@extend %font-proxima;
+					font-size: .75rem;
+				}
+
+				.plans .desc {
+					@include font-weight-extra-bold("proxima");
+					text-transform: uppercase;
+				}
+
+				.plans small {
+					margin-bottom: .5em;
+					display: block;
+					@include font-weight-semi-bold("proxima");
+				}
+
+				.plans .action {
+					background: $color-white;
+
+					display: block;
+					position: absolute;
+					bottom: 0;
+					left:   0;
+					right:  0;
+
+					@include font-weight-bold("proxima");
+					font-size: 1rem;
+					line-height: 2.75;
+
+					text-decoration: none;
+					text-transform: uppercase;
+
+					cursor: pointer;
+
+					color: $color-brand;
+				}
+
+					.plans .action input { @extend .sr; }
+
+					.plans .action > span {
+						background: $color-white;
+						display: block;
+						color: $color-brand;
+					}
+
+					.plans .action > span:after {
+						background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") left/100%;
+
+						width:  28px;
+						height: 20px;
+						margin-top:  -10px; // Center vertically
+						margin-left: -14px; // Center horizontally
+
+						content: "";
+						position: absolute;
+						top:  50%;
+						left: 50%;
+
+						opacity: 0;
+						visibility: hidden;
+						transform: scale(3);
+					}
+
+				.plans .action:hover, // .action might be a link as wall
+				.plans .action:focus,
+				.plans .action:hover > span, // Overload the selector
+				.plans .action input:focus + span { // Allow the same visual feedback when the input is focused
+					background: $color-brand;
+					color: $color-white;
+				}
+
+				.plans .action input:checked + span {
+					background: $color-brand;
+					transition: color .3s;
+					color: $color-brand; // Clever (or not) way to hide the text without additional markup
+				}
+
+				.plans .action input:checked + span:after {
+					opacity: 1;
+					visibility: visible;
+					transform: scale(1);
+
+					transition: opacity .3s, visibility 0s, transform .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+				}
+
+	.subscription button[type="submit"] {
+		font-size: 1rem;
+		line-height: 3;
+	}
+
+	.subscription button[type="submit"] i { display: none; }
+
+	.subscription .gift {
+		@include font-weight-regular("proxima");
+		line-height: 1.5;
+	}
+
+		.subscription .gift svg {
+			width:  26px;
+			height: 37px;
+			margin-right: .75em;
+		}
+
+		.subscription .gift strong {
+			display: block;
+			@include font-weight-bold("proxima");
+		}
+
+@include media("sm", true) {
+	// This div is useful only on small devices
+	.plans div {
+		border: 3px solid $color-white;
+		padding-bottom: 2.75rem; // See .plans .action
+		position: relative;
+	}
 }
 
 @include media("md") {
-	.plans li {
-		width: 256px;
-		border: 0;
+	$gutter: grid-gutter("md");
+
+	.subscription {
+		background:
+			url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>") left/2px 4px,
+			linear-gradient(to bottom, rgba($color-black, .6), rgba($color-black, .6)),
+			url(img/back/subscription.jpg) center/cover;
+		background-attachment: fixed;
+		color: $color-white;
 	}
-	.plans .price { font-size: 100px; }
-	.plans .currency { top: 45px; }
-	.plans li:nth-child(3) .price { font-size: 60px; }
-	.plans li:nth-child(3) .currency { top: 28px; }
+
+		.subscription legend:before,
+		.subscription button[type="submit"] i {
+				background: $color-black;
+
+				margin-top: -.75em;
+				position: absolute;
+				top: 50%;
+				left: calc(-1.5em - #{$gutter});
+		}
+
+		.plans li {
+			width: 238px;
+			border: 4px solid $color-white;
+			padding-bottom: 2.75rem; // See .plans .action
+		}
+
+			.plans .strong .price { font-size: 6.25rem; }
+
+	.subscription .gift { color: $color-white; }
+
+	.subscription button[type="submit"] {
+		position: static;
+		line-height: 4.5;
+	}
+
+	.subscription button[type="submit"] i {
+		content: "";
+		display: block;
+
+		font-size: 1.125em;
+
+		pointer-events: none;
+		outline: 0;
+	}
+
+	.subscription button[type="submit"] i svg {
+		margin-top: -4px;
+		font-size: 10px;
+	}
+
+	.subscription .progress {
+		background: $color-white;
+
+		width: 1px;
+
+		position: absolute;
+		top:    20px;
+		bottom: 30px;
+		left: calc(#{-$gutter} - .75em);
+
+		font-size: 1.125em; // Same as .subscription legend:before (18px)
+	}
+
+	@if $gutter != grid-gutter("sm") {
+		.subscription legend:before { left: calc(-1.5em - #{$gutter}); }
+		.plans li { margin: $gutter / 2; }
+	}
 }
 
-.plans li:nth-child(1) .price,
-.plans li:nth-child(2) .price,
-.plans li:nth-child(1) .name,
-.plans li:nth-child(2) .name { color: $color-white; }
-
-.plans .currency {
-	position: absolute;
-	top: 28px;
-	font-size: 20px;
-	line-height: 1;
-	margin-left: 5px;
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+	@if $gutter != grid-gutter("md") {
+		.subscription legend:before { left: calc(-1.5em - #{$gutter}); }
+		.plans li { margin: $gutter / 2; }
+		.subscription .progress { left: calc(#{-$gutter} - .75em); }
+	}
 }
-
-.plans .currency span {
-	text-align: left;
-	display: block;
-}
-
-.plans .name {
-	@include font-weight-bold("archer");
-	font-style: italic;
-	font-size: 19px;
-	margin-bottom: 12px;
-	line-height: 1;
-}
-
-.plans .desc {
-	@extend %font-proxima;
-	@include font-weight-extra-bold("proxima");
-	font-size: 12px;
-	text-transform: uppercase;
-	margin-bottom: 5px;
-}
-
-.plans small {
-	@extend %font-proxima;
-	@include font-weight-semi-bold("proxima");
-	font-size: 12px;
-	display: block;
-	margin-bottom: 12px;
-}
-
-.plans .action {
-	@extend %font-proxima;
-	@include font-weight-bold("proxima");
-	font-size: 16px;
-	line-height: 1.75;
-	padding: 8px 0;
-	display: block;
-	text-transform: uppercase;
-	background: $color-white;
-	color: $color-brand;
-	cursor: pointer;
-	text-decoration: none;
-	position: absolute;
-	bottom: 4px;
-	left: 4px;
-	right: 4px;
-	margin: 0;
-}
-
-.plans .action:after {
-	content: "";
-	position: absolute;
-	width: 28px;
-	height: 20px;
-	top: 50%;
-	margin-top: -10px;
-	left: 50%;
-	margin-left: -14px;
-	transform: scale(3);
-	opacity: 0;
-	visibility: hidden;
-	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") left/100%;
-	transition: opacity .3s, visibility 0s .3s, transform 0s .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
-
-.plans .action.selected:after {
-	visibility: visible;
-	opacity: 1;
-	transform: scale(1);
-	transition: opacity .3s, visibility 0s, transform .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-}
-
-.plans .action.selected,
-.plans .action:hover {
-	background: $color-brand;
-	color: $color-white;
-}
-
-.plans .action span { transition: opacity .3s; }
-.plans .action.selected span { opacity: 0; }
-
-.plans .action input { display: none; }
-
-.plans img { margin: 35px 0 30px; }
 /* @end Subscription */

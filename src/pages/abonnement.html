@@ -1,31 +1,37 @@
-{% set page = { title: "LesJours — Abonnement" } %}
+{% set page = { title: "LesJours — Abonnement", class: "page-subscription" } %}
 {% extends "partials/_layout.html" %}
 
 {% block content %}
-<div class="container">
+<div class="container gutter-bottom-2">
 	<div class="col">
-		<div class="fu">
-			<h2 class="col-md-left-1 style-meta-larger">Devenir jouriste</h2>
-			<form action="#">
-				<fieldset id="formule">
-					<legend class="col-md-left-1 style-meta-large">Choisir ma formule</legend>
+		<div class="subscription overflow-auto">
+			<h2 class="col-md-left-1 gutter-top-8 gutter-bottom-3 style-meta-larger">Devenir jouriste</h2>
+			<form action="#" class="col gutter-0 gutter-bottom-2 col-md-left-1 col-md-6 relative">
+				<fieldset id="formule" class="gutter-bottom-4">
+					<legend class="style-meta-large relative">Choisir ma formule</legend>
 					<ul class="plans row list-unstyled text-center">
-						<li>
+						<li class="strong">
 							<div>
 								<p class="price">9<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois</span></span></p>
 								<p class="name">Jouriste</p>
 								<p class="desc">1 €/mois pour la version test jusqu'au lancement public</p>
 								<small>Sans engagement de durée<br/>2 profils par abonnement</small>
-								<label class="action"><input type="radio" name="plan" value="jouriste" required /><span>Choisir<span class="sr"> la formule à 9€ par mois</span></span></label>
+								<label class="action">
+									<input type="radio" name="plan" value="jouriste" required />
+									<span>Choisir<span class="sr"> la formule à 9€ par mois</span></span>
+								</label>
 							</div>
 						</li>
-						<li>
+						<li class="strong">
 							<div>
 								<p class="price">90<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par an<sup>*</sup></span></span></p>
 								<p class="name">Jouriste cash</p>
 								<p class="desc">Version test gratuite</p>
 								<small>Sans engagement de durée<br/>2 profils par abonnement<br/><sup>*</sup>À compter du lancement public</small>
-								<label class="action"><input type="radio" name="plan" value="jouriste-cash" required /><span>Choisir<span class="sr"> la formule à 90€ par an</span></span></label>
+								<label class="action">
+									<input type="radio" name="plan" value="jouriste-cash" required />
+									<span>Choisir<span class="sr"> la formule à 90€ par an</span></span>
+								</label>
 							</div>
 						</li>
 						<li>
@@ -34,7 +40,10 @@
 								<p class="name">Jouriste désargenté</p>
 								<p class="desc">1 €/mois pour la version test jusqu'au lancement public</p>
 								<small>Sans engagement de durée<br/>Pour les -25 ans, chômeurs, fauchés, radins</small>
-								<label class="action"><input type="radio" name="plan" value="jouriste-desargente" required /><span>Choisir<span class="sr"> la formule à 5€ par mois</span></span></label>
+								<label class="action">
+									<input type="radio" name="plan" value="jouriste-desargente" required />
+									<span>Choisir<span class="sr"> la formule à 5€ par mois</span></span>
+								</label>
 							</div>
 						</li>
 						<li>
@@ -48,8 +57,8 @@
 						</li>
 					</ul>
 				</fieldset>
-				<fieldset id="coordonnees" class="col col-md-left-1 col-md-6">
-					<legend class="style-meta-large">Mes coordonnées</legend>
+				<fieldset id="coordonnees" class="col-lg-6">
+					<legend class="gutter-bottom-2 style-meta-large relative">Mes coordonnées</legend>
 					<div class="field">
 						<label for="name">Nom</label>
 						<input id="name" name="name" type="text" placeholder="Dupont" autocomplete="family-name" required />
@@ -79,43 +88,40 @@
 						<input id="city" name="city" type="text" placeholder="Paris" autocomplete="address-level2" required />
 					</div>
 				</fieldset>
-				<fieldset id="mode-de-paiement" class="col col-md-left-1 col-md-6">
-					<legend class="style-meta-large">Mon mode de paiement</legend>
-					<p>Un sac Les Jours offert si je choisis le prélèvement automatique.</p>
-					<div>
-						<label>
+				<fieldset id="mode-de-paiement">
+					<legend class="gutter-bottom-2 style-meta-large relative">Mon mode de paiement</legend>
+					<div class="gift style-meta">
+						<i class="pull-left">{{ icon("bag") }}</i>
+						<p><strong class="text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
+					</div>
+					<div class="field row">
+						<label class="col gutter-left-0 col-md-auto">
 							<input class="radio" type="radio" name="payment" value="bank" required>
 							<span class="radio"></span>
 							Prélèvement
 						</label>
-						<label>
+						<label class="col gutter-sm-left-0 col-md-auto">
 							<input class="radio" type="radio" name="payment" value="card" required>
 							<span class="radio"></span>
 							Carte bancaire
 						</label>
 					</div>
 				</fieldset>
-				<div class="col col-md-left-1 col-md-6">
-					<label>
+				<div>
+					<label class="style-meta text-upper">
 						<input class="checkbox" type="checkbox" name="" required>
 						<span class="checkbox"></span>
-						J’accepte les conditions générales de vente. Lire les <a href="#"><abbr title="Conditions Générales de Vente">CGV</abbr></a>.
+						J’accepte les conditions générales de vente. <a class="link-unstyled color-brand" href="#">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
 					</label>
-					<p>Vous avez choisi la formule « Jouriste » à 9 €/mois. <a href="#formule">Modifier</a></p>
-					<button class="btn-blank" type="submit">Accéder au paiement</button>
+					<p class="style-meta text-upper">Vous avez choisi la formule « Jouriste » à 9 €/mois. <a class="link-unstyled color-brand" href="#formule">Modifier</a></p>
+					<div class="relative text-center">
+						<button class="col col-md-5 col-lg-5 btn-blank style-meta bg-brand color-white text-upper" type="submit"><i>{{ icon("check") }}</i>Accéder au paiement</button>
+					</div>
 				</div>
+				<div class="progress"></div>
 			</form>
 		</div>
 	</div>
 </div>
-{% endblock %}
-{% block js %}
-<script>
-	$(document).ready(function() {
-		$(".plans input").on("change", function() {
-			$(".plans label").removeClass("selected");
-			$(this).parent().addClass("selected");
-		});
-	});
-</script>
+<div class="fake-bottom"></div>
 {% endblock %}
