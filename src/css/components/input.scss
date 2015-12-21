@@ -1,46 +1,54 @@
 /* @group Input */
-/* FIXME: clean me */
 .field label {
 	@extend %font-brandon;
 	@include font-weight-black("brandon");
-	font-size: 24px;
-	line-height: 30px;
-	margin-bottom: 10px;
-	cursor: pointer;
+	font-size: 1.25em;
+	line-height: 1.25;
+	margin-bottom: .5em;
+
 	display: inline-block;
+	cursor: pointer;
 }
 
-.field input {
+.field input[type="email"],
+.field input[type="password"],
+.field input[type="text"] {
 	background: none;
+
+	width: 100%;
+	padding: .5em 0;
 	border: 0;
 	border-bottom: 2px solid $color-brand-light;
-	font-size: 1.125em;
-	padding: .5em 0;
-	width: 100%;
-	outline: 0;
-	line-height: 1.333333;
-	margin-bottom: 2.5em;
+	margin-bottom: 2em;
+
 	@extend %font-proxima;
 	@include font-weight-regular("proxima");
+	line-height: 1.333333;
+
 	transition: border-color .3s;
+
+	outline: 0;
 }
+
+.field input[type="email"]:valid,
+.field input[type="password"]:valid,
+.field input[type="text"]:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50%/1em 1.4em; }
 
 .field input:active,
 .field input:focus { border-color: $color-brand; }
-.field input:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50%/1em 1.4em; }
 
 input.radio,
 input.checkbox { @extend .sr; }
 
 input.checkbox + .checkbox,
 input.radio    + .radio {
+	box-sizing: border-box;
 	width:  1.5em;
 	height: 1.5em;
-	border: .1875em solid $color-white;
+	border: 2px solid;
 
 	display: inline-block;
 	position: relative;
-
 	vertical-align: middle;
 }
 
@@ -50,7 +58,7 @@ input.checkbox + .checkbox:before,
 input.radio    + .radio:before {
 	content: "";
 
-	border:        inherit;
+	border:        3px solid;
 	border-radius: inherit;
 	border-color:  transparent;
 
@@ -68,4 +76,12 @@ input.radio:active     + .radio,
 input.radio:focus      + .radio,
 input.radio:checked    + .radio,
 input.radio:checked    + .radio:before { border-color: $color-brand; }
+
+@include media("md") {
+	.field label { font-size: 1.5em; }
+
+	.field input[type="email"],
+	.field input[type="password"],
+	.field input[type="text"] { font-size: 1.125em; }
+}
 /* @end Input */
