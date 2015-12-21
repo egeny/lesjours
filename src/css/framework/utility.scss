@@ -1,4 +1,6 @@
 /* @group Utility */
+$margin: grid-margin("sm");
+
 // Mixins
 .clearfix { @include clearfix; }
 .fadable,
@@ -8,8 +10,17 @@
 %fadable-active { @include fadable-active; }
 .responsive { @include responsive; }
 
-/* Quick overflow: hidden */
-.no-overflow { overflow: hidden; }
+/* Reusable class to fake a bottom margin */
+.fake-bottom {
+	background: $color-white;
+	height: $margin;
+
+	z-index: 10000;
+	position: fixed;
+	right:  0;
+	bottom: 0;
+	left:   0;
+}
 
 /* Easy link's style */
 .link,
@@ -44,7 +55,6 @@
 	background: none;
 	padding: 0;
 	text-decoration: none;
-	text-transform: none;
 	color: currentColor;
 }
 
@@ -56,6 +66,10 @@
 
 .list-inline-dotted li:after            { content: " • "; }
 .list-inline-dotted li:last-child:after { content: "";    }
+
+/* Quick overflows */
+.no-overflow   { overflow: hidden; }
+.overflow-auto { overflow: auto; }
 
 /* Quick overlay */
 .overlay {
@@ -98,4 +112,19 @@
 .text-left   { text-align: left;   }
 .text-center { text-align: center; }
 .text-right  { text-align: right;  }
+.text-upper  { text-transform: uppercase; }
+
+@include media("md") {
+	$margin: grid-margin("md");
+	@if $margin != grid-margin("sm") {
+		.fake-bottom { height: $margin; }
+	}
+}
+
+@include media("lg") {
+	$margin: grid-margin("lg");
+	@if $margin != grid-margin("md") {
+		.fake-bottom { height: $margin; }
+	}
+}
 /* @end Utility */
