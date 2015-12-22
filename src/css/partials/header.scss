@@ -1,5 +1,7 @@
 /* @group #header */
 /*csslint ids:false */
+$gutter: grid-gutter("sm");
+
 #header {
 	background: $color-white;
 	max-width: $max-width;
@@ -22,13 +24,15 @@
 
 #header h1,
 #header h1 a { display: inline-block; }
-#header h1 a { padding: 0.785714em; }
+#header h1 a { padding: 11px; }
 
 #burger {
-	box-sizing: content-box;
-	width:  30px;
+	width:  40px;
 	padding: 5px;
-	margin-top: 12px;
+
+	position: absolute;
+	top: 12px;
+	left: #{$gutter / 2};
 }
 
 	#burger span {
@@ -112,15 +116,19 @@
 	100% { transform: translateY(-9px) rotate(-45deg); }
 }
 
-#profile {
-	width:  40px;
-	height: 40px;
-	margin-top: 12px;
+#account {
+	line-height: 64px;
+
+	position: absolute;
+	top: 0;
+	right: #{$gutter / 2};
 }
 
-	#profile img {
-		height: 100%;
-		border-radius: 50%;
+	#login { line-height: 1; }
+
+	#login svg {
+		width:  initial;
+		height: initial;
 	}
 
 #menu {
@@ -160,10 +168,10 @@
 			color: $color-white;
 		}
 
-		#menu a i:before { @extend .btn:before }
+		#menu a i:before { @extend .btn-round:before }
 
 		#menu a:hover i:before,
-		#menu a:focus i:before { transform: scale(0.833333); }
+		#menu a:focus i:before { transform: scale(0.9); }
 
 		#menu i svg { position: relative; }
 
@@ -199,19 +207,29 @@
 		}
 
 @include media("md") {
+	$gutter: grid-gutter("md");
+
 	#header { height: 85px; }
 
-	#header h1 img {
-		width: auto;
-		height: 60px;
+		#header h1 img {
+			width: auto;
+			height: 60px;
+		}
+
+	#burger  { top: 22px; }
+	#account { line-height: 85px; }
+
+	@if $gutter != grid-gutter("sm") {
+		#burger  { left:  #{$gutter / 2}; }
+		#account { right: #{$gutter / 2}; }
 	}
+}
 
-	#burger { margin-top: 22px; }
-
-	#profile {
-		width:  45px;
-		height: 45px;
-		margin-top: 20px;
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+	@if $gutter != grid-gutter("md") {
+		#burger  { left:  #{$gutter / 2}; }
+		#account { right: #{$gutter / 2}; }
 	}
 }
 /* @end #header */
