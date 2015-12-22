@@ -114,6 +114,13 @@ $margin: grid-margin("sm");
 .text-right  { text-align: right;  }
 .text-upper  { text-transform: uppercase; }
 
+@each $device, $grid in $grids {
+	@include media($device, true) {
+		.hidden-#{$device} { display: none !important; }
+		.sr-#{$device}     { @include sr; }
+	}
+}
+
 @include media("md") {
 	$margin: grid-margin("md");
 	@if $margin != grid-margin("sm") {
