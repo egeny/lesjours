@@ -539,7 +539,7 @@ article .share { margin-bottom: 1.5em; }
 		right: 12.5%;
 	}
 
-		// Same as .btn:before (cannot extend since it is in a media query)
+		// Same as .btn-round:before (cannot extend since it is in a media query)
 		article .rel i:before {
 			background: $color-brand;
 
@@ -552,10 +552,11 @@ article .share { margin-bottom: 1.5em; }
 			position: absolute;
 
 			transition: transform .3s;
+			backface-visibility: hidden;
 		}
 
 		article .rel a:hover i:before,
-		article .rel a:focus i:before { transform: scale(0.833333); }
+		article .rel a:focus i:before { transform: scale(0.9); }
 
 	article .rel a[rel="prev"] div { margin-left:  25%; }
 	article .rel a[rel="next"] div { margin-right: 25%; }

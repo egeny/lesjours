@@ -19,7 +19,7 @@
 		<h2 class="h2"><a class="link-unstyled" href="{{ obsession.href }}">{{ obsession.title }}</a></h2>
 		<span class="p-larger">{{ obsession.subtitle }}</span>
 		{% if obsession.desc %}
-			<a href="{{ obsession.href }}" class="btn btn-transparent"><i>{{ icon("chevron-down", "Lire") }}</i></a>
+			<a href="{{ obsession.href }}" class="btn"><i>{{ icon("chevron-down", "Lire") }}</i></a>
 		{% endif %}
 	</div>
 	{% if obsession.desc %}
@@ -27,7 +27,7 @@
 			{{ obsession.desc }}
 		</div>
 		<div class="more gutter-bottom-2 text-center">
-			<a href="{{ obsession.href }}" class="btn btn-reverse"><i>{{ icon("chevron-down", "Lire") }}</i></a>
+			<a href="{{ obsession.href }}" class="btn-round btn-reverse"><i>{{ icon("chevron-down", "Lire") }}</i></a>
 		</div>
 	{% endif %}
 </div>

@@ -46,6 +46,9 @@ $gutter: grid-gutter("sm");
 			.wall .title .p-larger { display: block; }
 
 			.wall .title .btn {
+				width:       3.5em;
+				line-height: 3.5em;
+
 				position: absolute;
 				left: calc(#{$gutter} + 4px);
 			}

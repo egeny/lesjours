@@ -6,7 +6,7 @@ $gutter: grid-gutter("sm");
 	.subscription fieldset { counter-increment: fieldset; }
 
 		.subscription legend:before,
-		.subscription button[type="submit"] i {
+		.subscription .btn-primary i {
 			width:  1.5em;
 			height: 1.5em;
 			line-height: 1.5;
@@ -178,12 +178,7 @@ $gutter: grid-gutter("sm");
 					transition: opacity .3s, visibility 0s, transform .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 				}
 
-	.subscription button[type="submit"] {
-		font-size: 1rem;
-		line-height: 3;
-	}
-
-	.subscription button[type="submit"] i { display: none; }
+	.subscription .btn-primary i { display: none; }
 
 	.subscription .gift {
 		@include font-weight-regular("proxima");
@@ -223,7 +218,7 @@ $gutter: grid-gutter("sm");
 	}
 
 		.subscription legend:before,
-		.subscription button[type="submit"] i {
+		.subscription .btn-primary i {
 				background: $color-black;
 
 				margin-top: -.75em;
@@ -242,25 +237,22 @@ $gutter: grid-gutter("sm");
 
 	.subscription .gift { color: $color-white; }
 
-	.subscription button[type="submit"] {
-		position: static;
-		line-height: 4.5;
-	}
+	.subscription .btn-primary { position: static; }
 
-	.subscription button[type="submit"] i {
-		content: "";
-		display: block;
+		.subscription .btn-primary i {
+			content: "";
+			display: block;
 
-		font-size: 1.125em;
+			font-size: 1.125em;
 
-		pointer-events: none;
-		outline: 0;
-	}
+			pointer-events: none;
+			outline: 0;
+		}
 
-	.subscription button[type="submit"] i svg {
-		margin-top: -4px;
-		font-size: 10px;
-	}
+			.subscription .btn-primary svg {
+				margin-top: -4px;
+				font-size: 10px;
+			}
 
 	.subscription .progress {
 		background: $color-white;

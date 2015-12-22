@@ -16,13 +16,13 @@
 			</ul>
 		</div>
 		<div class="carousel-controls relative text-center">
-			<button class="btn btn-transparent" data-direction="backward"><i>{{ icon("angle-left", "Obsession précédente") }}</i></button>
+			<button class="btn" data-direction="backward"><i>{{ icon("angle-left", "Obsession précédente") }}</i></button>
 			<ul class="list-inline" role="presentation">
 			{% for obsession in obsessions %}
 				<li{% if loop.first %} class="selected"{% endif %}>●</li>
 			{% endfor %}
 			</ul>
-			<button class="btn btn-transparent"><i>{{ icon("angle-right", "Obsession suivante") }}</i></button>
+			<button class="btn"><i>{{ icon("angle-right", "Obsession suivante") }}</i></button>
 		</div>
 	</div>
 </div>

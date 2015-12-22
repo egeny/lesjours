@@ -1,30 +1,42 @@
 /* @group Buttons */
-.btn,
 .btn-blank {
 	background: none;
 	padding: 0;
 	border:  0;
 }
 
-.btn {
-	width:       3.5em;
-	line-height: 3.5em;
+.btn,
+.btn-primary,
+.btn-round,
+.btn-square {
+	background: none;
+
+	padding: 0;
+	border:  0;
 
 	display: inline-block;
-	position: relative;
 
 	@extend %font-proxima;
 	@include font-weight-bold("proxima");
 	font-size: 0.8125rem; // Always 13px (1rem = 16px)
 
 	text-align: center;
-	text-decoration: none;
+	text-decoration: none; // For links
 	text-transform: uppercase;
+
+	color: inherit; // For links
+}
+
+.btn-round {
+	width:       3.5em;
+	line-height: 3.5em;
+
+	position: relative;
 
 	color: $color-white;
 }
 
-	.btn:before {
+	.btn-round:before {
 		background: $color-brand;
 
 		width:  100%;
@@ -39,20 +51,40 @@
 		backface-visibility: hidden;
 	}
 
-	.btn:hover:before,
-	.btn:focus:before { transform: scale(0.9); }
+	.btn-round:hover:before,
+	.btn-round:focus:before { transform: scale(0.9); }
 
-	.btn i {
-		display: block; // Recommended if you want to animate with firefox
+	.btn-round > i,
+	.btn-round > span {
+		//display: block; // Recommended if you want to animate with firefox
 		position: relative;
 		top: 1px; // Seriously…
+
 		font-style: normal;
 	}
 
+.btn-square {
+	padding: 2px .5em 0;
+	border:  2px solid transparent;
+	line-height: 19px;
+}
+
+.btn-square:hover,
+.btn-square:focus { border-color: inherit; }
+
+.btn-primary {
+	background: $color-brand;
+
+	font-size: 1rem; // Always 16px (1rem = 16px)
+	line-height: 4.5;
+
+	color: $color-white;
+}
+
 .btn-reverse            { color:      $color-brand; }
 .btn-reverse:before     { background: $color-white; }
-.btn-primary            { color:      $color-main;  }
-.btn-primary:before     { background: $color-white; }
 .btn-transparent        { color:      currentColor; }
-.btn-transparent:before { content: none; }
+.btn-transparent:before { content:    none; }
+.btn-white              { color:      inherit; }
+.btn-white:before       { background: $color-white; }
 /* @end Buttons */
