@@ -220,6 +220,11 @@ $gutter: grid-gutter("sm");
 	#burger  { top: 22px; }
 	#account { line-height: 85px; }
 
+	#login-modal [role="document"] {
+		box-sizing: border-box;
+		width: 400px;
+	}
+
 	@if $gutter != grid-gutter("sm") {
 		#burger  { left:  #{$gutter / 2}; }
 		#account { right: #{$gutter / 2}; }

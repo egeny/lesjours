@@ -15,6 +15,26 @@
 		</div>
 	</div>
 
+	<div id="login-modal" class="modal text-left" role="dialog" tabindex="-1">
+		<form action="#" role="document">
+			<fieldset>
+				<legend class="style-meta-larger gutter-bottom-2">Se connecter</legend>
+				<button class="btn close color-brand" type="button">{{ icon("close", "Fermer cette fenêtre") }}</button>
+				<div class="field">
+					<label for="mail">Adresse e-mail</label>
+					<input id="mail" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
+				</div>
+				<div class="field">
+					<label for="password">Mot de passe</label>
+					<input id="password" name="password" type="password" placeholder="××××××××" required />
+				</div>
+				<a class="link external style-meta" href="#">J’ai oublié mon e-mail ou mon mot de passe</a>
+				<button class="btn-primary full-width gutter-top-4 gutter-bottom-4" type="button">Valider</button>
+				<p class="style-meta no-margin-bottom text-upper color-main">Pas encore jouriste ? <a class="link-unstyled color-brand" href="/abonnement.html">Abonnez-vous maintenant.</a></p>
+			</fieldset>
+		</form>
+	</div>
+
 	<nav id="menu" class="container">
 		<div class="col col-md-left-1 col-md-7 col-lg-left-2 col-lg-10">
 			<a href="/"><i>{{ icon("angle-right") }}</i> À la une</a>
