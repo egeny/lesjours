@@ -125,11 +125,12 @@ $gutter: grid-gutter("sm");
 }
 
 	#login { line-height: 1; }
+	#login:focus .btn-square { border-color: inherit; }
 
-	#login svg {
-		width:  initial;
-		height: initial;
-	}
+		#login svg {
+			width:  initial;
+			height: initial;
+		}
 
 #menu {
 	background: $color-white;
