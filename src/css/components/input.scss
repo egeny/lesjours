@@ -32,7 +32,10 @@
 
 .field input[type="email"]:valid,
 .field input[type="password"]:valid,
-.field input[type="text"]:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50%/1em 1.4em; }
+.field input[type="text"]:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50%/1em 1.4em; }
+
+// Same as previous, but with a white check mark
+.field input.reverse-check:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50%/1em 1.4em; }
 
 .field input:active,
 .field input:focus { border-color: $color-brand; }
