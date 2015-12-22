@@ -22,6 +22,10 @@ $margin: grid-margin("sm");
 	left:   0;
 }
 
+/* Quick width or height 100% */
+.full-width  { width:  100%; }
+.full-height { height: 100%; }
+
 /* Easy link's style */
 .link,
 %link {
@@ -44,6 +48,8 @@ $margin: grid-margin("sm");
 .link:hover,
 .link:focus,
 %link-active { background-position: 0 0; }
+
+.link.external { background-image: linear-gradient(to bottom, $color-external, $color-external); }
 
 @each $colors in $colors-obsessions {
 	$i:     index($colors-obsessions, $colors);
