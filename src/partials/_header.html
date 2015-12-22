@@ -19,7 +19,7 @@
 	</div>
 
 	<div id="login-modal" class="modal text-left" role="dialog" tabindex="-1">
-		<form action="#" role="document">
+		<form action="/session.php" method="post" role="document">
 			<fieldset>
 				<legend class="style-meta-larger gutter-bottom-2">Se connecter</legend>
 				<button class="btn close color-brand" type="button">{{ icon("close", "Fermer cette fenêtre") }}</button>
@@ -32,7 +32,7 @@
 					<input id="password" name="password" type="password" placeholder="××××××××" required />
 				</div>
 				<a class="link external style-meta" href="#">J’ai oublié mon e-mail ou mon mot de passe</a>
-				<button class="btn-primary full-width gutter-top-4 gutter-bottom-4" type="button">Valider</button>
+				<button class="btn-primary full-width gutter-top-4 gutter-bottom-4" type="submit">Valider</button>
 				<p class="style-meta no-margin-bottom text-upper color-main">Pas encore jouriste ? <a class="link-unstyled color-brand" href="/abonnement.html">Abonnez-vous maintenant.</a></p>
 			</fieldset>
 		</form>
