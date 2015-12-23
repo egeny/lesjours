@@ -19,6 +19,7 @@
 	padding: .5em 0;
 	border: 0;
 	border-bottom: 2px solid $color-brand-light;
+	border-radius: 0; // Some user-agent have a default border-radius
 	margin-bottom: 2em;
 
 	@extend %font-proxima;
