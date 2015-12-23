@@ -2,25 +2,25 @@
 	"template": "episode",
 
 	"number": 2,
-	"date": "2015-12-23T13:50+01:00",
+	"date": "2015-12-23T10:00+01:00",
 
-	"title": "« Un périmètre de désolation »",
+	"title": "Un périmètre de désolation",
 	"intro": "<strong>Journal de bord du XIe.</strong> Au lendemain des attentats, le quartier du Bataclan est bouclé. La ville, exceptionnellement, est silencieuse.",
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+		"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 	],
 
-	"tags": ["attentats", "Bataclan", "combinaison"],
+	"tags": ["Attentats", "Bataclan", "13 Novembre"],
 
 	"rel": {
 		"prev": {
-			"title": "?",
-			"href":  "#"
+			"title": "Vendredi ou la nuit sauvage",
+			"href":  "vendredi-ou-la-nuit-sauvage"
 		},
 		"next": {
-			"title": "« L'empreinte de la peur »",
+			"title": "L'empreinte de la peur",
 			"href":  "l-empreinte-de-la-peur"
 		}
 	}

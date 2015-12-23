@@ -1,23 +1,23 @@
 {
 	"template": "episode",
 
-	"number": 9,
-	"date": "2015-12-23T13:50+01:00",
+	"number": 7,
+	"date": "2016-01-01T10:00+01:00",
 
-	"title": "« Fière de la France ? »",
+	"title": "#fierdelafrance ?",
 	"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+		"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 	],
 
 	"tags": ["attentats", "Bataclan", "drapeaux"],
 
 	"rel": {
 		"prev": {
-			"title": "Comment dire qu’ils nous ont tiré dessus parce que c’est nous ?",
-			"href":  "comment-dire-qu-ils-nous-ont-tire-dessus-parce-que-c-est-nous"
+			"title": "« J'ai vu le tireur, jeune, calme, tranquille »",
+			"href":  "j-ai-vu-le-tireur-jeune-calme-tranquille"
 		}
 	}
 }

@@ -1,14 +1,14 @@
 {
 	"template": "episode",
 
-	"number": 6,
-	"date": "2015-12-23T13:50+01:00",
+	"number": 10,
+	"date": "2016-01-04T10:00+01:00",
 
 	"title": "Jean-Jacques Urvoas, le deuxième flic de France",
 	"intro": "<strong>Députés en état d’urgence.</strong> Fabricant d'équilibres au-delà des idéologies, l'élu du Finistère incarne la conversion sécuritaire du Parti socialiste.",
 
 	"credits": [
-		"Texte <a href=\"#\">Camille Polloni</a>",
+		"Texte <a href=\"#\">Sylvie Regensburg</a>",
 		"Photo <a href=\"#\">Sébastien Calvet</a>"
 	],
 
@@ -16,8 +16,8 @@
 
 	"rel": {
 		"prev": {
-			"title": "« À l'intention des victimes et des impliqués »",
-			"href":  "a-l-intention-des-victimes"
+			"title": "?",
+			"href":  "#"
 		},
 		"next": {
 			"title": "?",

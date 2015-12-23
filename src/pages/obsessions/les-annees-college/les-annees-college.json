@@ -109,13 +109,13 @@
 			"img":      "img/matea.jpg",
 			"alt":      "",
 			"title":    "Matéa",
-			"subtitle": "14 ans, pâtisserie et jeux vidéo"
+			"subtitle": "14 ans, élève en 3e&nbsp;B"
 		},
 		{
 			"href":     "#",
 			"img":      "img/tdecormon.jpg",
 			"alt":      "",
-			"title":    "Thiphaine Decormon",
+			"title":    "Tiphaine Decormon",
 			"subtitle": "La conseillère d'orientation"
 		},
 		{
@@ -123,72 +123,42 @@
 			"img":      "img/delphine.jpg",
 			"alt":      "",
 			"title":    "Delphine",
-			"subtitle": "14 ans"
+			"subtitle": "14 ans, élève en 3e&nbsp;B"
 		}
 	],
 
 	"places": [
 		{
-			"img":      "img/geo-1.jpg",
-			"title":    "Nom premier lieu",
-			"subtitle": "Sous-titre"
+			"img":      "img/facade-college.jpg",
+			"title":    "La façade d'Aimé-Césaire",
+			"subtitle": "Le collège s'est installé dans l'ancienne messagerie des Douanes."
 		},
 		{
-			"img":      "img/geo-2.jpg",
-			"title":    "Nom premier lieu",
-			"subtitle": "Sous-titre"
+			"img":      "img/entree-college.jpg",
+			"title":    "L'entrée du collège",
+			"subtitle": "#"
 		},
 		{
-			"img":      "img/geo-3.jpg",
-			"title":    "Nom premier lieu",
-			"subtitle": "Sous-titre"
+			"img":      "img/cour-college.jpg",
+			"title":    "La cour d'Aimé-Césaire",
+			"subtitle": "#"
 		},
 		{
-			"img":      "img/geo-3.jpg",
-			"title":    "Nom premier lieu",
-			"subtitle": "Sous-titre"
+			"img":      "img/plan-college1.jpg",
+			"title":    "Un plan de coupe du collège",
+			"subtitle": "#"
+		},
+		{
+			"img":      "img/plan-college2.jpg",
+			"title":    "Aimé-Césaire, plan masse",
+			"subtitle": "#"
+		},
+		{
+			"img":      "img/carte-scolaire-rond.jpg",
+			"title":    "Aimé-Césaire dans la carte scolaire du XVIIIe arrondissement",
+			"subtitle": "#"
 		}
-	],
-
-	"soundtrack": [
-		{
-			"id": "interview",
-			"title": "Interview",
-			"icon": "micro",
-			"items": [
-				{
-					"href": "#",
-					"title": "Titre interview 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25",
-					"meta": "nom du journaliste"
-				}
-			]
-		},
-		{
-			"id": "playlists",
-			"title": "Playlists",
-			"icon": "disc",
-			"items": [
-				{
-					"href": "#",
-					"title": "Playlist 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25"
-				}
-			]
-		},
-		{
-			"id": "ambiances",
-			"title": "Ambiances",
-			"icon": "wave",
-			"items": [
-				{
-					"href": "#",
-					"title": "Ambiance numéro 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25"
-				}
+			
 			]
 		}
 	]

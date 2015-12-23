@@ -1,18 +1,18 @@
 {
 	"template": "episode",
 
-	"number": 2,
-	"date": "2015-11-12T13:50+01:00",
+	"number": 3,
+	"date": "2015-12-23T10:00+01:00",
 
 	"title": "Un pont entre deux danses",
-	"intro": "Ce soir, les 3e B du collège Aimé-Césaire vont voir un spectacle de danse au Cent-Quatre. A deux pas de chez eux, mais par-delà le pont où des jeunes se battent régulièrement avec ceux de l ’arrondissement voisin.",
+	"intro": "Ce soir, les 3e B du collège Aimé-Césaire vont voir un spectacle de danse au Cent-Quatre. A deux pas de chez eux, mais par-delà le pont où des jeunes se battent régulièrement avec ceux de l’arrondissement voisin.",
 
 	"credits": [
 		"Texte <a href=\"#\">Alice Géraud</a>",
 		"Photos <a href=\"#\">Simon Lambert</a>"
 	],
 
-	"tags": ["Education", "Mixité", "Diversité", "Collège", "Danse", "Aurélien Bory", "Paris", "Etat d ’urgence" ],
+	"tags": ["Education", "Mixité", "Diversité", "Collège", "Danse", "Aurélien Bory", "Paris"],
 
 	"rel": {
 		"prev": {

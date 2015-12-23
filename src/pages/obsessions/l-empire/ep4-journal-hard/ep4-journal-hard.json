@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"number": 4,
+	"date": "2015-12-15T13:50+01:00",
+
+	"title": "Bolloré à Canal+, le journal du hard",
+	"intro": "Après avoir écarté Rodolphe Belmer, le nouveau patron de Canal + a mené une séance d'humiliation dont se souviennent encore les cadres de la chaîne.",
+
+	"credits": [
+		"Texte <a href=\"#\">Raphaël Garrigos et Isabelle Roberts</a>",
+		"Photos <a href=\"#\">Sébastien Calvet</a>"
+	],
+
+	"tags": ["#", "#", "#", "#", "#", "#", "# #", "#", "#"],
+
+	"rel": {
+		"prev": {
+			"title": "#",
+			"href":  "#"
+		},
+		"next": {
+			"title": "#",
+			"href":  "#"
+		}
+	}
+}

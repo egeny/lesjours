@@ -2,21 +2,21 @@
 	"template": "episode",
 
 	"number": 3,
-	"date": "2015-12-23T13:50+01:00",
+	"date": "2015-12-26T10:00+01:00",
 
-	"title": "« L’empreinte de la peur »",
-	"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, penser, boire un verre. Le retour aux gestes quotidiens est plombé par de nouveaux réflexes désagréables.",
+	"title": "L’empreinte de la peur",
+	"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, penser, l'impensable retour du quotidien.",
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+		"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 	],
 
 	"tags": ["attentats", "Bataclan", "peur"],
 
 	"rel": {
 		"prev": {
-			"title": "« Un périmètre de désolation »",
+			"title": "Un périmètre de désolation",
 			"href":  "un-perimetre-de-desolation"
 		},
 		"next": {

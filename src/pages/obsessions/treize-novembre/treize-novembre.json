@@ -9,61 +9,61 @@
 	"color": 1,
 	"name":  "Treize Novembre",
 	"title": "Treize Novembre",
-	"subtitle": "Récits de la France d’après.",
+	"subtitle": "Récits de la France d’après",
 
 	"episodes": [
-		{
-			"href": "fiere-de-la-france",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 9,
-			"date": "2015-12-23T13:50+01:00",
-
-			"title": "« Fière de la France ? »",
-			"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
-			"lead": "Le quartier ne pavoise pas. Enfin, pas sur commande. Boulevard Voltaire, entre la place de la République et le Bataclan, je compte peu de drapeaux accrochés aux balcons.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
-		{
-			"href": "comment-dire-qu-ils-nous-ont-tire-dessus-parce-que-c-est-nous",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 8,
-			"date": "2015-12-23T13:50+01:00",
-
-			"title": "« Comment dire qu’ils nous ont tiré dessus parce que c’est nous ? »",
-			"intro": "<strong>Journal de bord du XIe.</strong> Sophie était à la terrasse du Bataclan le soir de l’attaque, elle a vu l’un des terroristes avant qu'il entre dans la salle.",
-			"lead": "Je retrouve Sophie quelques jours après l’avoir croisée par hasard <a href=\"a-l-intention-des-victimes.html\">voir episode 5</a>. Elle m’avait expliqué qu’elle était à la terrasse du Bataclan Café le soir de l’attaque. Elle ne m’en avait pas dit beaucoup plus, je n’avais pas posé de questions. Je lui avais proposé de se revoir. On s'installe face à face dans un petit café tranquille qui fait aussi de bonnes pâtisseries. Sophie parle avec calme, d’un débit régulier. Sans heurts, sans haut-le-cœur. Ses mots ne s’entrechoquent pas.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
 		{
 			"href": "urvoas-le-deuxieme-flic-de-france",
 
 			"img": "img/header.jpg",
 			"alt": "",
 
-			"number": 6,
-			"date": "2015-12-23T13:50+01:00",
+			"number": 10,
+			"date": "2016-01-04T13:50+01:00",
 
 			"title": "Jean-Jacques Urvoas, le deuxième flic de France",
 			"intro": "<strong>Députés en état d’urgence.</strong> Fabricant d'équilibres au-delà des idéologies, l'élu du Finistère incarne la conversion sécuritaire du Parti socialiste.",
 			"lead": "Ce matin, les enfants retournent à l’école. Nous décidons d’y aller tous ensemble. La route habituelle est barrée. Nous descendons par la rue Oberkampf. Je tiens mes enfants fermement par la main, alors que d’ordinaire mon fils aîné, qui a 10 ans, nous lâche au moindre prétexte pour faire le chemin tout seul. J’espère qu’ils ne remarqueront pas les traces de la fusillade autour d’eux. Dans le caniveau, je vois des gants de soins maculés, des paquets de compresses, du matériel médical que personne n’a encore pensé à enlever. Du sang aussi. Devant l’un des immeubles, une petite pancarte écrite à la main indique que des blessés du Bataclan ont été soignés ici. La porte cochère est ouverte. Dans la cour, au sol, on peut encore voir les grandes traînées rouges des corps déplacés.",
 
 			"credits": [
-				"Texte <a href=\"#\">Camille Polloni</a>",
+				"Texte <a href=\"#\">Sylvie Regensburg</a>",
 				"Photo <a href=\"#\">Sébastien Calvet</a>"
+			]
+		},
+		{
+			"href": "fiere-de-la-france",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 7,
+			"date": "2016-01-01T10:00+01:00",
+
+			"title": "#fierdelafrance ?",
+			"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
+			"lead": "Le quartier ne pavoise pas. Enfin, pas sur commande. Boulevard Voltaire, entre la place de la République et le Bataclan, je compte peu de drapeaux accrochés aux balcons.",
+
+			"credits": [
+				"Texte <a href=\"#\">Charlotte Rotman</a>",
+				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+			]
+		},
+		{
+			"href": "j-ai-vu-le-tireur-jeune-calme-tranquille",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 6,
+			"date": "2016-01-01T10:00+01:00",
+
+			"title": "« J'ai vu le tireur, jeune, calme, tranquille »",
+			"intro": "<strong>Journal de bord du XIe.</strong> Sophie était à la terrasse du Bataclan le soir de l’attaque, elle s'est cachée pendant plusieurs heures à l'intérieur.",
+			"lead": "Je retrouve Sophie quelques jours après l’avoir croisée par hasard <a href=\"a-l-intention-des-victimes.html\">voir episode 5</a>. Elle m’avait expliqué qu’elle était à la terrasse du Bataclan Café le soir de l’attaque. Elle ne m’en avait pas dit beaucoup plus, je n’avais pas posé de questions. Je lui avais proposé de se revoir. On s'installe face à face dans un petit café tranquille qui fait aussi de bonnes pâtisseries. Sophie parle avec calme, d’un débit régulier. Sans heurts, sans haut-le-cœur. Ses mots ne s’entrechoquent pas.",
+
+			"credits": [
+				"Texte <a href=\"#\">Charlotte Rotman</a>",
+				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 			]
 		},
 		{
@@ -73,7 +73,7 @@
 			"alt": "",
 
 			"number": 5,
-			"date": "2015-12-23T13:50+01:00",
+			"date": "2015-12-30T10:00+01:00",
 
 			"title": "« À l’intention des victimes et des impliqués »",
 			"intro": "<strong>Journal de bord du XIe.</strong> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
@@ -81,7 +81,7 @@
 
 			"credits": [
 				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 			]
 		},
 		{
@@ -91,7 +91,7 @@
 			"alt": "",
 
 			"number": 4,
-			"date": "2015-12-23T13:50+01:00",
+			"date": "2015-12-26T10:00+01:00",
 
 			"title": "« Content de vous avoir revu »",
 			"intro": "<strong>Journal de bord du XIe.</strong> Lundi matin, l’école reprend mais les attentats résonnent encore dans le quartier. L’après-midi, François Hollande déclare que la France est en guerre.",
@@ -99,7 +99,7 @@
 
 			"credits": [
 				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 			]
 		},
 		{
@@ -109,15 +109,15 @@
 			"alt": "",
 
 			"number": 3,
-			"date": "2015-12-23T13:50+01:00",
+			"date": "2015-12-26T10:00+01:00",
 
-			"title": "« L’empreinte de la peur »",
+			"title": "L’empreinte de la peur",
 			"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, penser, boire un verre. Le retour aux gestes quotidiens est plombé par de nouveaux réflexes désagréables.",
-			"lead": "L’équipe des Jours s’envoie des mails : comment travailler ? Que faire ? Quelles propositions journalistiques ? Je suis incapable de répondre. Je n’arrive pas à réfléchir, je n’ai aucun réflexe, aucune idée. Je me tais.",
+			"lead": "Les membres de l'équipe des Jours s’envoient des mails : comment travailler ? Que faire ? Quelles propositions journalistiques ? Je suis incapable de répondre. Je n’arrive pas à réfléchir, je n’ai aucun réflexe, aucune idée. Je me tais.",
 
 			"credits": [
 				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 			]
 		},
 		{
@@ -127,15 +127,33 @@
 			"alt": "",
 
 			"number": 2,
-			"date": "2015-12-23T13:50+01:00",
+			"date": "2015-12-23T10:00+01:00",
 
-			"title": "« Un périmètre de désolation »",
+			"title": "Un périmètre de désolation",
 			"intro": "<strong>Journal de bord du XIe.</strong> Au lendemain des attentats, le quartier du Bataclan est bouclé. La ville, exceptionnellement, est silencieuse.",
 			"lead": "J’avais fermé les volets qui donnent sur le boulevard. D’ordinaire, je les laisse ouverts. Au petit matin, je n’entends plus un bruit. Le quartier est entièrement bouclé. Le carrefour, d’habitude si bruyant, est vide. Pas une seule voiture ne passe. Il n’y a plus de circulation. Tout est figé, calme. Seules les silhouettes sombres des policiers barrent l’horizon. Leurs uniformes sont les seules tâches verticales. Je les regarde stationner sur le bitume déserté. Autour du Bataclan, ils ont dressé des barrières, boulevard Voltaire et rue Oberkampf. Déjà, des gens se massent aux barricades des forces de l’ordre, à l’extérieur de ce no man’s land. Nous habitons au croisement de ces artères coupées du reste de la ville. C’est un périmètre de désolation.",
 
 			"credits": [
 				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+			]
+		}
+		{
+			"href": "vendredi-ou-la-nuit-sauvage",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 1,
+			"date": "2015-12-23T10:00+01:00",
+
+			"title": "Vendredi ou la nuit sauvage",
+			"intro": "Ce soir du 13 novembre, notre journaliste Charlotte Rotman était chez elle à côté du Bataclan ; les députés PS Barbara Romagnan et Jean-Jacques Urvoas étaient dans leurs circonscriptions, Vincent, musulman converti et futur assigné à résidence, chez lui à Aubervilliers.",
+			"lead": "Comme journaliste, on est rarement un témoin involontaire. On se bat au contraire pour être au plus proche d’un événement, pour voir de nos yeux, entendre de nos propres oreilles. Le soir des attentats dans le quartier du Bataclan, les médias ont été tenus à l’écart par les policiers. J’étais, moi, sans le vouloir, au cœur de cette enclave. Mais sur le moment, je n’ai eu aucun réflexe professionnel. C’est venu plus tard, difficilement, pressée par d’autres.",
+
+			"credits": [
+				"Texte <a href=\"#\">Charlotte Rotman</a>",
+				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Julien Muguet/Hans Lucas</a>"
 			]
 		}
 	]

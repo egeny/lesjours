@@ -1,0 +1,28 @@
+{
+	"template": "episode",
+
+	"number": 2,
+	"date": "2015-11-08T10:00+01:00",
+
+	"title": "Encore un matin",
+	"intro": "Montrer son carnet de correspondance, passer la grille, survivre à la récré, monter en cours, sortir ses affaires en silence.",
+
+	"credits": [
+		"Texte <a href=\"#\">Alice Géraud</a>",
+		"Photos <a href=\"#\">Pierre Morel</a>"
+	],
+
+	"tags": ["Education", "Collège", "Paris", "Mixité"],
+
+		""rel": {"
+		"prev": {
+			"title": "Encore un matin",
+			"href":  "Encore-un-matin"
+		},
+		"next": {
+			"title": "Un pont entre deux danses",
+			"href":  "un-pont-entre-deux-danses"
+
+
+	}
+}

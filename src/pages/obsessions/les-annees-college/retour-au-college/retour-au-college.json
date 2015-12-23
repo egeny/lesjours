@@ -1,0 +1,23 @@
+{
+	"template": "episode",
+
+	"number": 1,
+	"date": "2015-12-23T10:00+01:00",
+
+	"title": "Retour au collège",
+	"intro": "Les Jours retournent en classe durant un an. Mais quelle idée&nbsp;?",
+
+	"credits": [
+		"Texte <a href=\"#\">Alice Géraud</a>",
+		"Photos <a href=\"#\">Pierre Morel</a>"
+	],
+
+	"tags": ["Education", "Collège", "Paris", "Mixité"],
+
+		"rel": {
+		"next": {
+			"title": "Un pont entre deux danses",
+			"href":  "un-pont-entre-deux-danses"
+		}
+	}
+}
