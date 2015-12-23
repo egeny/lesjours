@@ -6,30 +6,12 @@
 	"img": "l-empire.jpg",
 	"alt": "",
 
-	"color": 4,
+	"color": 3,
 	"name": "L'empire",
 	"title": "L'empire",
 	"subtitle": "Comment Vincent Bolloré a mangé Canal+.",
 
 	"episodes": [
-		{
-			"href": "ep1-guignols",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 1,
-			"date": "2015-11-20T13:50+01:00",
-
-			"title": "",
-			"intro": "",
-			"lead": "",
-
-			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Pierre Morel</a>"
-			]
-		},
 		{
 			"href": "ep2-plug-canal",
 
@@ -37,51 +19,33 @@
 			"alt": "",
 
 			"number": 2,
-			"date": "2015-11-20T13:50+01:00",
+			"date": "2015-12-23T10:00+01:00",
 
-			"title": "",
-			"intro": "",
-			"lead": "",
+			"title": "Bolloré&nbsp;: le plug Canal",
+			"intro": "Arrivé chez Vivendi en lui vendant la chaîne Direct 8, l'homme d'affaires a patienté avant de s'attaquer à sa première cible&nbsp;: Rodolphe Belmer, le numéro 2 de Canal+.",
+			"lead": "l aura mis le temps. Il aura attendu son heure, tapi dans l’ombre, guettant sa proie, patiemment. Quand, en juillet 2015, Vincent Bolloré se met à dégommer une à une toutes les têtes de Canal+, ça fait un an déjà qu’il a été nommé président du conseil de surveillance de Vivendi (…)",
 
 			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Pierre Morel</a>"
+				"Texte <a href=\"#\">Raphaël Garrigos et Isabelle Roberts</a>",
+				"Photos <a href=\"#\">Sébastien Calvet</a>"
 			]
 		},
 		{
-			"href": "ep3-portrait-belmer",
+			"href": "ep1-guignols",
 
 			"img": "img/header.jpg",
 			"alt": "",
 
-			"number": 3,
-			"date": "2015-11-20T13:50+01:00",
+			"number": 1,
+			"date": "2015-12-23T10:00+01:00",
 
-			"title": "",
-			"intro": "",
-			"lead": "",
-
-			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Antoine Stouls</a>"
-			]
-		},
-		{
-			"href": "ep4-journal-hard",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 4,
-			"date": "2015-12-15T13:50+01:00",
-
-			"title": "",
-			"intro": "",
-			"lead": "",
+			"title": "Ainsi fondent les marionnettes",
+			"intro": "Décapités puis revenus pour vanter les produits Vivendi, «&nbsp;Les Guignols&nbsp;» façon Bolloré ne font plus d'info. Ni d'humour.",
+			"lead": "Johnny est à la machine à café. Et là, il la confond avec un distributeur&nbsp;: <q>Ah que je veux pas un macchiato, ah que je veux 30 euros en billets de 20.</q> Ceci n’est pas une parodie, ceci est un sketch des <em>Guignols de l’info (…)",
 
 			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Pierre Morel</a>"
+				"Texte <a href=\"#\">Raphaël Garrigos et Isabelle Roberts</a>",
+				"Photos <a href=\"#\">Sébastien Calvet</a>"
 			]
 		}
 	],
@@ -100,7 +64,8 @@
 			"img":      "img/bollore-portrait.jpg",
 			"alt":      "",
 			"title":    "Vincent Bolloré",
-			"subtitle": "63 ans, patron (de Vivendi, d'Havas, de Canal+…)"
+			"subtitle": "63 ans, patron (de Vivendi, d'Havas, de Canal+…)",
+			"minor":    true
 		},
 		{
 			"href":     "#",
@@ -111,7 +76,7 @@
 			"minor":    true
 		},
 		{
-			"href":     "l#",
+			"href":     "#",
 			"img":      "img/aprikian-portrait.jpg",
 			"alt":      "",
 			"title":    "Ara Aprikian",
@@ -121,145 +86,27 @@
 			
 			],
 
-	"images": ["img/les-guignols-header.jpg", "img/le-plug-canal-header.jpg", "img/le-plug-canal-1.jpg", "img/les-guignols-1.jpg"],
+	"images": ["img/les-guignols-header.jpg", "img/le-plug-canal-header.jpg", "img/le-plug-canal-1.jpg", "img/les-guignols-1.jpg", "img/degreef-header.jpg"],
 
-	"data": [
-		{
-			"img":      "img/data-1.jpg",
-			"title":    "Datavisualisation",
-			"subtitle": "Sous-titre",
-			"desc":     "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea. commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem."
-		},
-		{
-			"img":      "img/data-2.jpg",
-			"title":    "Datavisualisation",
-			"subtitle": "Sous-titre"
-		},
-		{
-			"img":      "img/data-3.jpg",
-			"title":    "Datavisualisation",
-			"subtitle": "Sous-titre"
-		},
-		{
-			"img":      "img/data-1.jpg",
-			"title":    "Datavisualisation",
-			"subtitle": "Sous-titre"
-		},
-		{
-			"img":      "img/data-4.jpg",
-			"title":    "Datavisualisation",
-			"subtitle": "Sous-titre"
-		},
-		{
-			"img":      "img/data-5.jpg",
-			"title":    "Datavisualisation",
-			"subtitle": "Sous-titre"
-		}
-	],
 
 	"places": [
 		{
-			"img":      "img/geo-1.jpg",
-			"title":    "Nom premier lieu",
-			"subtitle": "Sous-titre"
-		},
-		{
-			"img":      "img/geo-2.jpg",
-			"title":    "Nom premier lieu",
-			"subtitle": "Sous-titre"
-		},
-		{
-			"img":      "img/geo-3.jpg",
-			"title":    "Nom premier lieu",
-			"subtitle": "Sous-titre"
-		},
-		{
-			"img":      "img/geo-3.jpg",
-			"title":    "Nom premier lieu",
-			"subtitle": "Sous-titre"
-		}
-	],
-
-	"soundtrack": [
-		{
-			"id": "interview",
-			"title": "Interview",
-			"icon": "micro",
-			"items": [
-				{
-					"href": "#",
-					"title": "Titre interview 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25",
-					"meta": "nom du journaliste"
-				}
-			]
-		},
-		{
-			"id": "playlists",
-			"title": "Playlists",
-			"icon": "disc",
-			"items": [
-				{
-					"href": "#",
-					"title": "Playlist 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25"
-				}
-			]
-		},
-		{
-			"id": "ambiances",
-			"title": "Ambiances",
-			"icon": "wave",
-			"items": [
-				{
-					"href": "#",
-					"title": "Ambiance numéro 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"date": "2015-09-25"
-				}
-			]
+			"img":      "img/carte-l-empire.jpg",
+			"title":    "Les cinq royaumes de Bolloré",
+			"href": 	"https://www.google.com/maps/d/edit?mid=zEN87Ui19vGI.kn86OklBgDys&usp=sharing"
 		}
 	],
 
 	"documents": [
-		{
-			"id": "bibliographie",
-			"title": "Bibliographie",
-			"icon": "book",
-			"items": [
-				{
-					"href": "#",
-					"title": "Titre livre numéro 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"meta": "nom du journaliste"
-				}
-			]
-		},
 		{
 			"id": "telechargements",
 			"title": "Téléchargements",
 			"icon": "download",
 			"items": [
 				{
-					"href": "#",
-					"title": "Document numéro 1 pdf",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"meta": "nom de l’auteur"
+					"href": "doc/tract-libre.pdf",
+					"title": "L'inquiétude de +Libres",
+					"desc": "Le syndicat autonome de Canal+ dresse un bilan des 100 premiers jours de Vincent Bolloré à la tête du groupe.",
 				}
 			]
-		},
-		{
-			"id": "scans",
-			"title": "Scans",
-			"icon": "player",
-			"items": [
-				{
-					"href": "#",
-					"title": "Document scanné numéro 1",
-					"desc": "Description, la classe a reçu l’association Co-exist. Durant deux heures, ils ont planchés sur leurs préjugés racistes.",
-					"meta": "Info 1"
-		}
-	]
 }

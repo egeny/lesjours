@@ -12,78 +12,7 @@
 	"subtitle": "Récits de la France d’après",
 
 	"episodes": [
-		{
-			"href": "urvoas-le-deuxieme-flic-de-france",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 10,
-			"date": "2016-01-04T13:50+01:00",
-
-			"title": "Jean-Jacques Urvoas, le deuxième flic de France",
-			"intro": "<strong>Députés en état d’urgence.</strong> Fabricant d'équilibres au-delà des idéologies, l'élu du Finistère incarne la conversion sécuritaire du Parti socialiste.",
-			"lead": "Ce matin, les enfants retournent à l’école. Nous décidons d’y aller tous ensemble. La route habituelle est barrée. Nous descendons par la rue Oberkampf. Je tiens mes enfants fermement par la main, alors que d’ordinaire mon fils aîné, qui a 10 ans, nous lâche au moindre prétexte pour faire le chemin tout seul. J’espère qu’ils ne remarqueront pas les traces de la fusillade autour d’eux. Dans le caniveau, je vois des gants de soins maculés, des paquets de compresses, du matériel médical que personne n’a encore pensé à enlever. Du sang aussi. Devant l’un des immeubles, une petite pancarte écrite à la main indique que des blessés du Bataclan ont été soignés ici. La porte cochère est ouverte. Dans la cour, au sol, on peut encore voir les grandes traînées rouges des corps déplacés.",
-
-			"credits": [
-				"Texte <a href=\"#\">Sylvie Regensburg</a>",
-				"Photo <a href=\"#\">Sébastien Calvet</a>"
-			]
-		},
-		{
-			"href": "fiere-de-la-france",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 7,
-			"date": "2016-01-01T10:00+01:00",
-
-			"title": "#fierdelafrance ?",
-			"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
-			"lead": "Le quartier ne pavoise pas. Enfin, pas sur commande. Boulevard Voltaire, entre la place de la République et le Bataclan, je compte peu de drapeaux accrochés aux balcons.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
-		{
-			"href": "j-ai-vu-le-tireur-jeune-calme-tranquille",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 6,
-			"date": "2016-01-01T10:00+01:00",
-
-			"title": "« J'ai vu le tireur, jeune, calme, tranquille »",
-			"intro": "<strong>Journal de bord du XIe.</strong> Sophie était à la terrasse du Bataclan le soir de l’attaque, elle s'est cachée pendant plusieurs heures à l'intérieur.",
-			"lead": "Je retrouve Sophie quelques jours après l’avoir croisée par hasard <a href=\"a-l-intention-des-victimes.html\">voir episode 5</a>. Elle m’avait expliqué qu’elle était à la terrasse du Bataclan Café le soir de l’attaque. Elle ne m’en avait pas dit beaucoup plus, je n’avais pas posé de questions. Je lui avais proposé de se revoir. On s'installe face à face dans un petit café tranquille qui fait aussi de bonnes pâtisseries. Sophie parle avec calme, d’un débit régulier. Sans heurts, sans haut-le-cœur. Ses mots ne s’entrechoquent pas.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
-		{
-			"href": "a-l-intention-des-victimes",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 5,
-			"date": "2015-12-30T10:00+01:00",
-
-			"title": "« À l’intention des victimes et des impliqués »",
-			"intro": "<strong>Journal de bord du XIe.</strong> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
-			"lead": "J’ai trouvé l’information dans ma boîte aux lettres la veille : un courrier du maire du XIe et une note  <q>à l’intention des victimes et des impliqués</q>. Nous sommes <q>des impliqués</q>, alors. <q>Vous avez peut-être eu peur ou ressenti un danger, vous êtes peut-être blessé. Vous avez pu éprouver un choc ou un stress psychologique…</q> La cellule de soutien psychologique <q>restera ouverte à tous tant que le besoin s’en fera ressentir</q>.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
+		
 		{
 			"href": "content-de-vous-avoir-revu",
 
@@ -156,5 +85,40 @@
 				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Julien Muguet/Hans Lucas</a>"
 			]
 		}
-	]
+	],
+
+	"people": [
+		{
+			"href":     "#",
+			"img":      "img/blocheportrait2.jpg",
+			"alt":      "",
+			"title":    "Patrick Bloche",
+			"subtitle": "59 ans, député et ancien maire du XIe"
+		},
+		{
+			"href":     "#",
+			"img":      "img/assigne-3.jpg",
+			"alt":      "",
+			"title":    "Vincent",
+			"subtitle": "32 ans, assigné à résidence"
+		},
+		{
+			"href":     "#",
+			"img":      "img/romagnanportrait.jpg",
+			"alt":      "",
+			"title":    "Barbara Romagnan",
+			"subtitle": "41 ans, députée PS anti-état d'urgence"
+		},
+		{
+			"href":     "#",
+			"img":      "img/urvoasportrait.jpg",
+			"alt":      "",
+			"title":    "Jean-Jacques Urvoas",
+			"subtitle": "56 ans, deuxième flic de France"
+		}
+	],
+
+	"images": ["img/vendredi-ou-la-nuit-sauvage-header.jpg", "img/un-perimetre-de-desolation-header.jpg", "img/l-empreinte-de-la-peur-header.jpg", "img/content-de-vous-avoir-revu-header.jpg"],
+
+
 }

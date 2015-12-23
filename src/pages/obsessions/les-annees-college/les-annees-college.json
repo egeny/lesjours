@@ -13,31 +13,13 @@
 
 	"episodes": [
 		{
-			"href": "louis-le-grand-l-autre-bout-du-monde",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 4,
-			"date": "2015-11-17T13:50+01:00",
-
-			"title": "Louis-le-Grand, l’autre bout du monde",
-			"intro": "Jessika, Agita et Soumiga ont été présélectionnées pour intégrer le prestigieux lycée Louis-le-Grand l'an prochain. Première visite ce mercredi 18 novembre, à 30 minutes de métro et quelques années-lumière d'Aimé-Césaire.",
-			"lead": "Le conseiller principal d'éducation (CPE) de Louis-le-Grand, un collège situé en plein quartier Latin, sur la rive gauche de la Seine, s'exprime avec un phrasé militaire, une voix saccadée et forte. Il interpelle le groupe d'élèves d'un désuet <q>jeunes gens</q>. Ça en fait sourire certains. Ce mercredi ensoleillé de novembre, ils sont une petite centaine, accompagnés de quelques parents et profs, sélectionnés parmi les meilleurs élèves de troisième des collèges parisiens classé Réseau d'éducation prioritaire (REP). Certains intègrerons le lycée Louis-le-Grand en classe de seconde.",
-
-			"credits": [
-				"Texte <a href=\"#\">Alice Géraud</a>",
-				"Photos <a href=\"#\">Pierre Morel</a>"
-			]
-		},
-		{
 			"href": "a-midi-la-classe-se-tait",
 
 			"img": "img/header.jpg",
 			"alt": "",
 
-			"number": 3,
-			"date": "2015-11-17T13:50+01:00",
+			"number": 4,
+			"date": "2015-12-23T10:00+01:00",
 
 			"title": "À midi, la classe se tait",
 			"intro": "Lundi 16 novembre, premier jour de classe après les attentats. Certains profs redoutent la réaction des élèves. Mais, cette fois-ci, il n'y aura pas de « je ne suis pas Charlie ».",
@@ -54,8 +36,8 @@
 			"img": "img/header.jpg",
 			"alt": "",
 
-			"number": 2,
-			"date": "2015-11-12T13:50+01:00",
+			"number": 3,
+			"date": "2015-12-23T10:00+01:00",
 
 			"title": "Un pont entre deux danses",
 			"intro": "Ce soir, les 3e B du collège Aimé-Césaire vont voir un spectacle de danse au Cent-Quatre. A deux pas de chez eux, mais par-delà le pont où des jeunes se battent régulièrement avec ceux de l ’arrondissement voisin.",
@@ -65,7 +47,42 @@
 				"Texte <a href=\"#\">Alice Géraud</a>",
 				"Photos <a href=\"#\">Simon Lambert</a>"
 			]
-		}
+		},
+		{
+			"href": "Encore-un-matin",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 2,
+			"date": "2015-12-23T10:00+01:00",
+
+			"title": "Encore un matin",
+			"intro": "Lundi 16 novembre, premier jour de classe après les attentats. Certains profs redoutent la réaction des élèves. Mais, cette fois-ci, il n'y aura pas de « je ne suis pas Charlie ».",
+			"lead": "Ils sont les vigies de 8h20. Imperméables à la météo, invariablement postés devant les grilles du collège, ils disent bonjour et vérifient que chaque élève a bien en main son carnet de correspondance –&nbsp;qu’on appelle en réalité «&nbsp;le carnet&nbsp;» tout court. Ils demandent de se dépêcher ou au contraire de ne pas courir.", 
+			
+			"credits": [
+				"Texte <a href=\"#\">Alice Géraud</a>",
+				"Photos <a href=\"#\">Simon Lambert</a>"
+			]
+		},
+		{
+			"href": "retour-au-college",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 1,
+			"date": "2015-12-23T10:00+01:00",
+
+			"title": "Retour au collège",
+			"intro": "Les Jours retournent en classe durant un an. Mais quelle idée&nbsp;?",
+			"lead": "A l'origine de cette obsession des <em>Jours</em>, il y avait ces questions entêtantes sur la séparation des corps sociaux. Quelles mécaniques sont en œuvre pour séparer avec un tel systématisme les riches des pauvres, les noirs des blancs&nbsp;? Quelles sont celles qui, au contraire, rassemblent et corrigent inégalités et différences&nbsp;?", 
+			"credits": [
+				"Texte <a href=\"#\">Alice Géraud</a>",
+				"Photos <a href=\"#\">Pierre Morel</a>"
+			]
+		},
 	],
 
 	"people": [
@@ -124,6 +141,18 @@
 			"alt":      "",
 			"title":    "Delphine",
 			"subtitle": "14 ans, élève en 3e&nbsp;B"
+		}
+	],
+
+	"images": ["img/encore-un-matin-header.jpg", "img/header-a-midi-la-classe-se-tait.jpg", "img/retour-au-college-header.jpg", "img/un-pont-entre-deux-danses-HEADER.jpg"],
+
+	
+	"data": [
+		{
+			"img":      "img/carte-segregation.jpg",
+			"title":    "L'apartheid du collège",
+			"subtitle": "Paris est le département français où la ségrégation scolaire est la plus forte",
+			"href":     "http://www.assemblee-nationale.fr/14/rap-info/i3292.asp#P1136_269512"
 		}
 	],
 
