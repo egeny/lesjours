@@ -12,24 +12,7 @@
 	"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?",
 
 	"episodes": [
-		{
-			"href": "la-pantoufle-de-vert",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 5,
-			"date": "2015-12-30T10:00+01:00",
-
-			"title": "The Shift Project, la pantoufle de vert des entreprises",
-			"intro": "Ce think tank veut lutter contre le réchauffement climatique en « décarbonant » l’économie. Financé par les entreprises, il est surtout un outil bien pratique pour communiquer sur leurs engagements climatiques.",
-			"lead": "Tous les enfants savent qu’une fourmi que 18 mètres avec un chapeau sur la tête, ça n’existe pas. Mais saviez-vous qu’un think tank pro-climat financé par EDF, Bouygues, la SNCF et Vinci Autoroutes, ça existe bien ?",
-
-			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Pierre Morel</a>"
-			]
-		},
+	
 		{
 			"href": "papou-est-dans-le-petrole",
 
