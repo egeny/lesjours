@@ -461,7 +461,6 @@ article .share { margin-bottom: 1.5em; }
 
 @include media("sm", true) {
 	article .mini { display: none; }
-	article .rel .col-sm-1 div { @include sr; }
 }
 
 @include media("md") {
