@@ -2,7 +2,7 @@
 	"template": "episode",
 
 	"number": 1,
-	"date": "2015-12-15T13:50+01:00",
+	"date": "2015-12-23T10:00+01:00",
 
 	"title": "Ainsi fondent les marionnettes",
 	"intro": "Décapités puis revenus pour vanter les produits Vivendi, «&nbsp;Les Guignols&nbsp;» façon Bolloré ne font plus d'info. Ni d'humour.",
@@ -12,13 +12,9 @@
 		"Photos <a href=\"#\">Sébastien Calvet</a>"
 	],
 
-	"tags": ["#", "#", "#", "#", "#", "#", "# #", "#", "#"],
+	"tags": ["Bolloré", "Canal+", "Belmer", "Guignols"],
 
 	"rel": {
-		"prev": {
-			"title": "#",
-			"href":  "#"
-		},
 		"next": {
 			"title": "Bolloré, le plug Canal",
 			"href":  "ep2-plug-canal"
