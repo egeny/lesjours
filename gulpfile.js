@@ -97,7 +97,7 @@ var
 		}
 	},
 
-	root = '/v1',
+	root = '',
 
 	// A set of tasks to launch on different contexts
 	tasks = {
