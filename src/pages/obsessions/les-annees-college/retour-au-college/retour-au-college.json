@@ -14,7 +14,7 @@
 
 	"tags": ["Education", "Collège", "Paris", "Mixité"],
 
-		"rel": {
+	"rel": {
 		"next": {
 			"title": "Un pont entre deux danses",
 			"href":  "un-pont-entre-deux-danses"

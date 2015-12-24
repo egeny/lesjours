@@ -31,8 +31,9 @@
 		}
 	],
 
-	"images": ["img/making-of-header.jpg", "img/mariage-header.jpg", "img/muezzin-header.jpg"
-			]
-		}
+	"images": [
+		{ "href": "#", "img": "img/making-of-header.jpg" },
+		{ "href": "#", "img": "img/mariage-header.jpg" },
+		{ "href": "#", "img": "img/muezzin-header.jpg" }
 	]
 }

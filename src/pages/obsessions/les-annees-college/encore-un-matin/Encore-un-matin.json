@@ -14,7 +14,7 @@
 
 	"tags": ["Education", "Collège", "Paris", "Mixité"],
 
-		""rel": {"
+	"rel": {
 		"prev": {
 			"title": "Encore un matin",
 			"href":  "Encore-un-matin"
@@ -22,7 +22,6 @@
 		"next": {
 			"title": "Un pont entre deux danses",
 			"href":  "un-pont-entre-deux-danses"
-
-
+		}
 	}
 }

@@ -78,7 +78,7 @@
 			"title": "Encore un matin",
 			"intro": "Lundi 16 novembre, premier jour de classe après les attentats. Certains profs redoutent la réaction des élèves. Mais, cette fois-ci, il n'y aura pas de « je ne suis pas Charlie ».",
 			"lead": "Ils sont les vigies de 8h20. Imperméables à la météo, invariablement postés devant les grilles du collège, ils disent bonjour et vérifient que chaque élève a bien en main son carnet de correspondance –&nbsp;qu’on appelle en réalité «&nbsp;le carnet&nbsp;» tout court. Ils demandent de se dépêcher ou au contraire de ne pas courir.", 
-			
+
 			"credits": [
 				"Texte <a href=\"#\">Alice Géraud</a>",
 				"Photos <a href=\"#\">Simon Lambert</a>"
@@ -100,7 +100,7 @@
 				"Texte <a href=\"#\">Alice Géraud</a>",
 				"Photos <a href=\"#\">Pierre Morel</a>"
 			]
-		},
+		}
 	],
 
 	"people": [
@@ -162,9 +162,13 @@
 		}
 	],
 
-	"images": ["img/encore-un-matin-header.jpg", "img/header-a-midi-la-classe-se-tait.jpg", "img/retour-au-college-header.jpg", "img/un-pont-entre-deux-danses-HEADER.jpg"],
+	"images": [
+		{ "href": "#", "img": "img/encore-un-matin-header.jpg" },
+		{ "href": "#", "img": "img/header-a-midi-la-classe-se-tait.jpg" },
+		{ "href": "#", "img": "img/retour-au-college-header.jpg" },
+		{ "href": "#", "img": "img/un-pont-entre-deux-danses-HEADER.jpg" }
+	],
 
-	
 	"data": [
 		{
 			"img":      "img/carte-segregation.jpg",
@@ -204,9 +208,6 @@
 			"img":      "img/carte-scolaire-rond.jpg",
 			"title":    "Aimé-Césaire dans la carte scolaire du XVIIIe arrondissement",
 			"subtitle": "#"
-		}
-			
-			]
 		}
 	]
 }

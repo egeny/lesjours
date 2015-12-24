@@ -12,7 +12,6 @@
 	"subtitle": "Récits de la France d’après",
 
 	"episodes": [
-		
 		{
 			"href": "content-de-vous-avoir-revu",
 
@@ -66,7 +65,7 @@
 				"Texte <a href=\"#\">Charlotte Rotman</a>",
 				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
 			]
-		}
+		},
 		{
 			"href": "vendredi-ou-la-nuit-sauvage",
 
@@ -118,7 +117,10 @@
 		}
 	],
 
-	"images": ["img/vendredi-ou-la-nuit-sauvage-header.jpg", "img/un-perimetre-de-desolation-header.jpg", "img/l-empreinte-de-la-peur-header.jpg", "img/content-de-vous-avoir-revu-header.jpg"],
-
-
+	"images": [
+		{ "href": "#", "img": "img/vendredi-ou-la-nuit-sauvage-header.jpg" },
+		{ "href": "#", "img": "img/un-perimetre-de-desolation-header.jpg" },
+		{ "href": "#", "img": "img/l-empreinte-de-la-peur-header.jpg" },
+		{ "href": "#", "img": "img/content-de-vous-avoir-revu-header.jpg" }
+	]
 }

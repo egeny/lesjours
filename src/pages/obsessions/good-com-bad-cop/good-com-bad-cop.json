@@ -83,7 +83,7 @@
 				"Texte <a href=\"#\">Nicolas Cori</a>",
 				"Photos <a href=\"#\">Pierre Morel</a>"
 			]
-		}
+		},
 		{
 			"href": "la-cop-passe-les-entreprises-carburent",
 
@@ -146,8 +146,12 @@
 		}
 	],
 
-	"images": ["img/houille-les-ecolos-header.jpg", "img/la-cop-passe-les-entreprises-carburent-header.jpg", "img/la-pantoufle-de-vert-header.jpg", "img/le-charbon-l-ennemi-utile-header.jpg"],
-
+	"images": [
+		{ "href": "#", "img": "img/houille-les-ecolos-header.jpg" },
+		{ "href": "#", "img": "img/la-cop-passe-les-entreprises-carburent-header.jpg" },
+		{ "href": "#", "img": "img/la-pantoufle-de-vert-header.jpg" },
+		{ "href": "#", "img": "img/le-charbon-l-ennemi-utile-header.jpg" }
+	],
 
 	"soundtrack": [
 		{
