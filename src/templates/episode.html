@@ -13,6 +13,7 @@
 					<h2 class="h2">{{ episode.title }}</h2>
 					<p>{{ episode.intro }}</p>
 					<time class="gutter-bottom-2 style-meta" pubdate="{{ episode.date }}">{{ episode.date|human }}</time>
+					<time class="gutter-bottom-2 style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
 					<address class="gutter-bottom-1">
 						<ul class="list-inline-dotted style-meta">
 						{% for credit in episode.credits %}

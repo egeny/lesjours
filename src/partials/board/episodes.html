@@ -7,7 +7,7 @@
 		<div class="f2 col col-lg-6">
 			<h4 class="h4 snake-2"><a href="{{ obsession.href }}/{{ latest.href }}" class="snake-container">{{ latest.title }}</a></h4>
 			<p class="intro">{{ latest.intro }}</p>
-			<p class="style-meta"><time pubdate="{{ latest.date }}">{{ latest.date|human }}</time> • épisode {{ latest.number }}</p>
+			<p class="style-meta"><time datetime="{{ latest.date }}">{{ latest.date|human }}</time> • épisode {{ latest.number }}</p>
 			<ul class="list-unstyled style-meta">
 			{% for credit in latest.credits %}
 				<li>{{ credit }}</li>
