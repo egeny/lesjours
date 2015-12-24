@@ -108,6 +108,8 @@ article figure {}
 
 	article figcaption > span { @extend .snake-container; }
 
+	article figcaption .credits:before { content: " — "; }
+
 	article figcaption .credits,
 	article figcaption .credits a { @include font-weight-regular("proxima"); }
 
