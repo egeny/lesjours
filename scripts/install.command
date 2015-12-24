@@ -6,4 +6,5 @@ clear
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install node
+npm install
 npm install -g gulp-cli
