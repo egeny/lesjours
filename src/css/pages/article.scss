@@ -182,6 +182,9 @@ article .notes {}
 		content: "[" counter(notes) "] ";
 	}
 
+	article a[href^="#note"]:before { content: "["; }
+	article a[href^="#note"]:after  { content: "]"; }
+
 article .interview {
 	margin-top:    .5em;
 	margin-bottom: .75em;
