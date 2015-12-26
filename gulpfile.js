@@ -4,11 +4,14 @@
 
 var
 	del        = require('del'),
+	finder     = require('find-in-files'),
 	fs         = require('fs'),
+	glob       = require('glob'),
 	merge      = require('merge-stream'),
 	path       = require('path'),
 	sequence   = require('run-sequence'),
 	gulp       = require('gulp'),
+	changed    = require('gulp-changed'),
 	concat     = require('gulp-concat'),
 	header     = require('gulp-header'),
 	livereload = require('gulp-livereload'),
@@ -21,7 +24,7 @@ var
 	// CSS
 	autoprefixer = require('gulp-autoprefixer'),
 	csslint      = require('gulp-csslint'),
-	minify       = require('gulp-minify-css'),
+	minify       = require('gulp-cssnano'),
 	sass         = require('gulp-sass'),
 	sasslint     = require('gulp-sass-lint'),
 
@@ -38,6 +41,9 @@ var
 
 	banner  = '/*! <%= package.name %> v<%= package.version %> */\n',
 	context = { package: require('./package.json') },
+
+	// A cache for incremental build
+	cache = {},
 
 	// The middlewares configuration
 	config = {
@@ -200,6 +206,7 @@ gulp.task('build', function(cb) {
 		'build:css',
 		'build:js',
 		'build:html',
+		'build:assets',
 		cb);
 });
 
@@ -209,75 +216,84 @@ gulp.task('clean', function() {
 	del.sync(paths.dist);
 });
 
-gulp.task('build:html', function() {
-	var streams = merge();
+gulp.task('build:assets', function(cb) {
+	var streams = glob
+		.sync(path.join(paths.pages, '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'))
+		.map(function(file) {
+			return assets(file);
+		});
 
-	function build(folder, parent) {
-		var data = {}, metadata = {};
-		folder = folder || '';
-		parent = parent || '';
-
-		try {
-			metadata = JSON.parse(fs.readFileSync(path.join(paths.pages, parent, folder, folder + '.json')));
-
-			// Wrap the data in a prefix if necessary (doesn't exist already)
-			if (!metadata[metadata.template]) {
-				data[metadata.template === 'board' ? 'obsession' : metadata.template] = metadata;
-			} else {
-				data = metadata;
-			}
-		} catch(e) {}
-
-		if (metadata.template === 'episode') {
-			// Get the episode's content
-			try {
-				data[metadata.template].content = fs.readFileSync(path.join(paths.pages, parent, folder, folder + '.html'));
-			} catch(e) {}
-
-			// Merge the obsession's data with episode's data (in order to properly load the board)
-			try {
-				data.obsession = JSON.parse(fs.readFileSync(path.join(paths.pages, parent, parent.replace('obsessions/', '') + '.json')));
-			} catch(e) {}
-		}
-
-		// Generate the HTML using the metadata and content
-		if (metadata.template) {
-			streams.add(
-				gulp
-					.src(path.join(paths.templates, metadata.template + '.html'))
-					.pipe(nunjucks(data))
-					.pipe(rename(path.join(parent, folder, 'index.html')))
-					.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
-					.pipe(replace('href="/"',          'href="' + root + '/"'))
-					.pipe(gulp.dest(paths.dist))
-					.pipe(livereload())
-			);
-		} else {
-			streams.add(
-				gulp
-					.src(path.join(paths.pages, parent, folder, '*.html'))
-					.pipe(nunjucks())
-					.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
-					.pipe(replace('href="/"',          'href="' + root + '/"'))
-					.pipe(gulp.dest(path.join(paths.dist, parent, folder)))
-					.pipe(livereload())
-			);
-		}
-
-		// Copy the assets
-		streams.add(
-			gulp
-				.src(path.join(paths.pages, parent, folder, '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'), { base: paths.pages })
-				.pipe(gulp.dest(paths.dist))
-		);
-
-		parent = path.join(parent, folder);
-		folders(path.join(paths.pages, parent)).forEach(function(folder) { build(folder, parent); });
-	}
-
-	build();
-	return !streams.isEmpty() ? streams : null;
+	return streams.length ? merge(streams) : null;
 });
+
+gulp.task('build:html', function() {
+	var streams = glob
+		.sync(path.join(paths.pages, '**/*.{html,json}'))
+		.filter(function(file, index, files) {
+			var parsed = path.parse(file);
+			return (parsed.ext === '.html') ? (files.indexOf(path.join(parsed.dir, parsed.name + '.json')) < 0) : true;
+		})
+		.map(function(file) {
+			return html(file);
+		});
+
+	return streams.length ? merge(streams) : null;
+});
+
+// This function might be called as a gulp's task callback (e.g. gulp.watch)
+function assets(e) {
+	return gulp
+		.src(e.path || e, { base: paths.pages })
+		.pipe(changed(paths.dist))
+		.pipe(gulp.dest(paths.dist))
+		.pipe(livereload());
+}
+
+// This function might be called as a gulp's task callback (e.g. gulp.watch)
+function html(e) {
+	var
+		data = {}, metadata = {},
+		parsed = path.parse(path.relative(paths.pages, e.path || e)),
+		file, name;
+
+	// Get the page's metadata
+	try {
+		metadata = JSON.parse(fs.readFileSync(path.join(paths.pages, parsed.dir, parsed.name + '.json')));
+
+		// Wrap the data in a prefix if necessary (if the "template" key doesn't exist already)
+		if (!metadata[metadata.template]) {
+			data[metadata.template] = metadata;
+		} else {
+			data = metadata;
+		}
+
+		// Store the pages paths in a cache with its associated template (will be used when watching templates files)
+		cache[metadata.template] = cache[metadata.template] || [];
+		if (cache[metadata.template].indexOf(path.join(paths.pages, parsed.dir, parsed.base)) === -1) {
+			cache[metadata.template].push(path.join(paths.pages, parsed.dir, parsed.base));
+		}
+
+		// Get the page's content
+		data[metadata.template].content = fs.readFileSync(path.join(paths.pages, parsed.dir, parsed.name + '.html'));
+
+		// Specific data injection
+		if (metadata.template === 'episode') {
+			data.obsession = JSON.parse(fs.readFileSync(path.join(paths.pages, parsed.dir, '..', parsed.dir.replace('obsessions' + path.sep, '').replace(path.sep + parsed.name, '') + '.json')));
+		}
+	} catch(e) {}
+
+	file = metadata.template ? path.join(paths.templates, metadata.template + '.html') : path.join(paths.pages, parsed.dir, parsed.base);
+	name = metadata.template ? path.join(parsed.dir, 'index.html')                     : path.relative(paths.pages, file);
+
+	return gulp
+		.src(file, { base: paths.pages })
+		.pipe(nunjucks(data))
+		.pipe(rename(name))
+		.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
+		.pipe(replace('href="/"',                 'href="' + root + '/"'))
+		.pipe(gulp.dest(paths.dist))
+		.pipe(livereload());
+}
 
 gulp.task('lint:sass', function() {
 	return gulp.src(paths.css.input + '**/*.{scss,sass}')
@@ -360,9 +376,51 @@ gulp.task('copy:css:svg',     tasks['copy:svg'](paths.css.svg));
 gulp.task('watch', ['build'], function() {
 	livereload.listen();
 
-	gulp.watch(path.join(paths.partials,      '**/*.html'),            ['build:html']);
-	gulp.watch(path.join(paths.templates,     '**/*.html'),            ['build:html']);
-	gulp.watch(path.join(paths.pages,         '**/*.{html,json}'),     ['build:html']);
+	// The callback function used when a partial is changed
+	function partials(e) {
+		var found = [];
+
+		// When the partials tree is complete, look for affected templates and build the pages using them
+		function done() {
+			finder.find(found.join('|'), paths.templates).then(function(results) {
+				for (var template in results) {
+					templates({ path: template });
+				};
+			});
+		}
+
+		// Find partials recursively (after found in which file a partial is used, search for this new partial)
+		function find(partial) {
+			finder.find(partial, paths.partials).then(function(results) {
+				// Clean the results
+				var partials = Object.keys(results).map(function(file) { return 'partials/' + path.relative(paths.partials, file); });
+
+				// Concatenate the found partials
+				found = found.concat(partials);
+
+				// Call recursively if necessary
+				partials.length ? find(partials.join('|')) : done();
+			});
+		}
+
+		find('partials/' + path.relative(paths.partials, e.path));
+	}
+
+	// The callback function used when a template is changed
+	function templates(e) {
+		var parsed = path.parse(e.path);
+
+		// Simply look the cache for the pages associated to the given template
+		(cache[parsed.name] || []).forEach(function(page) {
+			html({ path: page });
+		});
+	}
+
+	gulp.watch(path.join(paths.partials,      '**/*.html'),                           partials);
+	gulp.watch(path.join(paths.templates,     '**/*.html'),                           templates);
+	gulp.watch(path.join(paths.pages,         '**/*.{html,json}'),                    html);
+	gulp.watch(path.join(paths.pages,         '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'), assets);
+
 	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'), ['build:css']);
 	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),   ['build:css:img']);
 	gulp.watch(path.join(paths.css.svg.input, '**/*.svg'),             ['build:css:svg']);
