@@ -326,32 +326,45 @@ gulp.task('lint:js', function() {
 		.pipe(eslint.format());
 });
 
-gulp.task('build:js', ['build:js:components'], function() {
-	return gulp.src(paths.js.input + '*.js')
-		.pipe(header(banner, context))
-		.pipe(gulp.dest(paths.js.output))
+gulp.task('optimize:js', function() {
+	function compare(stream, cb, sourceFile, targetPath) {
+		var
+			parsed = path.parse(targetPath),
+			target = path.join(parsed.dir, parsed.name + '.min.js');
+
+		changed.compareLastModifiedTime(stream, cb, sourceFile, target);
+	}
+
+	return gulp
+		.src([path.join(paths.js.input, '**/*.js'), '!**/*.min.js'])
+		.pipe(changed(paths.js.input, { hasChanged: compare }))
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(uglify())
-		.pipe(header(banner, context))
-		.pipe(gulp.dest(paths.js.output))
-		.pipe(livereload());
+		.pipe(gulp.dest(paths.js.input));
 });
 
-gulp.task('build:js:components', function() {
-	var tasks = folders(paths.js.input).map(function(folder) {
-		return gulp.src(path.join(paths.js.input, folder, '*.js'))
-			.pipe(concat(folder + '.js'))
-			.pipe(header(banner, context))
-			.pipe(gulp.dest(paths.js.output))
-			.pipe(rename({ suffix: '.min' }))
-			.pipe(uglify())
-			.pipe(header(banner, context))
-			.pipe(gulp.dest(paths.js.output))
-			.pipe(livereload());
-	});
+gulp.task('build:js', ['optimize:js'], function() {
+	var
+		files = ['jquery', 'stickyfill', 'hammer', 'jquery.hammer', 'global', 'components/*'],
+		streams = merge();
 
-	// Return a stream merging other streams
-	return !merge(tasks).isEmpty() ? merge(tasks) : null;
+	streams.add(gulp
+		.src(files.map(function(file) { return path.join(paths.js.input, file + '.js') }).concat('!**/*.min.js'))
+		.pipe(concat('global.js'))
+		.pipe(header(banner, context))
+		.pipe(gulp.dest(paths.js.output))
+		.pipe(livereload())
+	);
+
+	streams.add(gulp
+		.src(files.map(function(file) { return path.join(paths.js.input, file + '.min.js') }))
+		.pipe(concat('global.min.js'))
+		.pipe(header(banner, context))
+		.pipe(gulp.dest(paths.js.output))
+		.pipe(livereload())
+	);
+
+	return streams;
 });
 
 gulp.task('build:img',     function(cb) { sequence('optimize:img',     'copy:img',     cb); });
@@ -421,10 +434,10 @@ gulp.task('watch', ['build'], function() {
 	gulp.watch(path.join(paths.pages,         '**/*.{html,json}'),                    html);
 	gulp.watch(path.join(paths.pages,         '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'), assets);
 
-	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'), ['build:css']);
-	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),   ['build:css:img']);
-	gulp.watch(path.join(paths.css.svg.input, '**/*.svg'),             ['build:css:svg']);
-	gulp.watch(path.join(paths.img.input,     '**/*.{gif,jpg,png}'),   ['build:img']);
-	gulp.watch(path.join(paths.svg.input,     '**/*.svg'),             ['build:svg']);
-	gulp.watch(path.join(paths.js.input,      '**/*.js'),              ['build:js']);
+	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'),      ['build:css']);
+	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),        ['build:css:img']);
+	gulp.watch(path.join(paths.css.svg.input, '**/*.svg'),                  ['build:css:svg']);
+	gulp.watch(path.join(paths.img.input,     '**/*.{gif,jpg,png}'),        ['build:img']);
+	gulp.watch(path.join(paths.svg.input,     '**/*.svg'),                  ['build:svg']);
+	gulp.watch([path.join(paths.js.input,      '**/*.js'), '!**/*.min.js'], ['build:js']);
 });
