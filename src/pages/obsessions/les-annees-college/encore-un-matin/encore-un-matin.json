@@ -2,7 +2,7 @@
 	"template": "episode",
 
 	"number": 2,
-	"date": "2015-11-08T10:00+01:00",
+	"date": "2015-12-24T11:00+01:00",
 
 	"title": "Encore un matin",
 	"intro": "Montrer son carnet de correspondance, passer la grille, survivre à la récré, monter en cours, sortir ses affaires en silence.",
@@ -16,8 +16,8 @@
 
 	"rel": {
 		"prev": {
-			"title": "Encore un matin",
-			"href":  "Encore-un-matin"
+			"title": "Retour au Collège",
+			"href":  "retour-au-college"
 		},
 		"next": {
 			"title": "Un pont entre deux danses",
