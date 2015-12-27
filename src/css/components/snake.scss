@@ -17,6 +17,7 @@ $gutter: grid-gutter("sm");
 		border: 4px solid $color-brand;
 		position: absolute;
 		content: "";
+		pointer-events: none;
 	}
 
 	.snake-container {
