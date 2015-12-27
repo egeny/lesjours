@@ -3,7 +3,6 @@ $document.ready(function() {
 		$anchors   = $("[data-mini]"),
 		$container = $(".article-container"),
 		$minis     = [], // An array of the associated mini
-		previous   = { height: 0, top: 0 }, // An object to check if we are going to overlap the previous mini
 		offset     = (68 / 2) + 6 + 8, // The offset to the center of the image
 		shown      = 0;
 
@@ -15,7 +14,9 @@ $document.ready(function() {
 
 		// Retrieve the container's top offset relative to the document
 		// It is easier and more accurate to use document's offset
-		var container = $container.offset().top;
+		var
+			container = $container.offset().top,
+			previous  = { height: 0, top: 0 };// An object to check if we are going to overlap the previous mini
 
 		// Position every #mini-X so they will be vertically centered to the anchor
 		$anchors.each(function(index, $element) {
@@ -24,7 +25,7 @@ $document.ready(function() {
 				top   = $element.offset().top - container + ($element.height() / 2) - offset;
 
 			// Check if this mini is going to overlap the previous one and fix
-			if (top > previous.top && top < previous.top + previous.height) {
+			if (top < previous.top + previous.height) {
 				top += previous.top + previous.height - top;
 			}
 
