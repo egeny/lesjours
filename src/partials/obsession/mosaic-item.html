@@ -1,5 +1,5 @@
 <li class="col{% if item.minor %} minor{% endif %}">
-	<a href="{{ obsession.href }}/{{ item.href|default("#") }}">
+	<a href="{{ item.href if item.href|startsWith("http") else obsession.href + "/" + item.href }}">
 		<img class="responsive" src="{{ obsession.href }}/{{ item.img }}" alt="{{ item.alt }}" />
 		{% if item.title %}
 			<div class="overlay pattern-1">

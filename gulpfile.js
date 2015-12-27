@@ -70,6 +70,9 @@ var
 		}
 	},
 
+	// Nunjucks environment
+	env,
+
 	paths = {
 		dist: 'dist/',
 
@@ -168,30 +171,33 @@ function folders(dir) {
 			return fs.statSync(path.join(dir, file)).isDirectory();
 		});
 }
-
 // Configure nunjucks
-nunjucks.nunjucks
-	.configure(['src'], { watch: false, noCache: true })
-	.addFilter('human', function(input) {
-		var date = new Date(input), month;
+env = nunjucks.nunjucks.configure(['src'], { watch: false, noCache: true });
 
-		switch (date.getMonth()) {
-			case 0:  month = 'janvier';   break;
-			case 1:  month = 'février';   break;
-			case 2:  month = 'mars';      break;
-			case 3:  month = 'avril';     break;
-			case 4:  month = 'mai';       break;
-			case 5:  month = 'juin';      break;
-			case 6:  month = 'juillet';   break;
-			case 7:  month = 'août';      break;
-			case 8:  month = 'septembre'; break;
-			case 9:  month = 'octobre';   break;
-			case 10: month = 'novembre';  break;
-			case 11: month = 'décembre';  break;
-		}
+env.addFilter('human', function(input) {
+	var date = new Date(input), month;
 
-		return date.getDate() + ' ' + month + ' ' + date.getFullYear();
-	});
+	switch (date.getMonth()) {
+		case 0:  month = 'janvier';   break;
+		case 1:  month = 'février';   break;
+		case 2:  month = 'mars';      break;
+		case 3:  month = 'avril';     break;
+		case 4:  month = 'mai';       break;
+		case 5:  month = 'juin';      break;
+		case 6:  month = 'juillet';   break;
+		case 7:  month = 'août';      break;
+		case 8:  month = 'septembre'; break;
+		case 9:  month = 'octobre';   break;
+		case 10: month = 'novembre';  break;
+		case 11: month = 'décembre';  break;
+	}
+
+	return date.getDate() + ' ' + month + ' ' + date.getFullYear();
+});
+
+env.addFilter('startsWith', function(input, pattern) {
+	return new RegExp('^' + pattern).test(input || '');
+});
 
 gulp.task('default', function() {
 	sequence('clean', 'build');
