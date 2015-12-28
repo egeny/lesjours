@@ -1,0 +1,127 @@
+{
+	"template": "home",
+
+	"master": {
+		"href": "vendredi-ou-la-nuit-sauvage",
+
+		"obsession": {
+			"href": "treize-novembre",
+			"name": "Treize Novembre",
+			"color": 1
+		},
+
+		"img": "img/header.jpg",
+		"alt": "",
+
+		"number": 1,
+		"title": "Vendredi ou la nuit sauvage",
+		"intro": "Ce soir du 13 novembre, notre journaliste Charlotte Rotman était chez elle à côté du Bataclan ; les députés PS Barbara Romagnan et Jean-Jacques Urvoas étaient dans leurs circonscriptions, Vincent, musulman converti et futur assigné à résidence, chez lui à Aubervilliers.",
+
+		"author": {
+			"href": "#",
+			"name": "Charlotte Rotman"
+		}
+	},
+
+	"articles": [
+		{
+			"href": "retour-au-college",
+
+			"obsession": {
+				"href": "les-annees-college",
+				"name": "Les années collège",
+				"color": 2
+			},
+
+			"number": 1,
+			"title": "Retour au collège",
+			"intro": "Les Jours retournent en classe durant un an. Mais quelle idée&nbsp;?",
+
+			"author": {
+				"href": "#",
+				"name": "Alice Géraud"
+			}
+		},
+		{
+			"href": "la-cop-passe-les-entreprises-carburent",
+
+			"obsession": {
+				"href": "good-com-bad-cop",
+				"name": "Good com, bad COP",
+				"color": 4
+			},
+
+			"number": 1,
+			"title": "La Cop passe, les entreprises carburent",
+			"intro": "Très présentes à la conférence de Paris, les multinationales ont adopté une communication subtile. Ce qui leur a permis de «greenwasher» en toute tranquillité.",
+
+			"author": {
+				"href": "#",
+				"name": "Nicolas Cori"
+			}
+		}
+	],
+
+	"obsessions": [
+		{
+			"href": "treize-novembre",
+
+			"img": "treize-novembre-mini.jpg",
+			"alt": "",
+
+			"color": 1,
+			"title": "Treize Novembre",
+			"subtitle": "Récit de la France d’après"
+		},
+		{
+			"href": "les-annees-college",
+
+			"img": "les-annees-college-mini.jpg",
+			"alt": "",
+
+			"color": 2,
+			"title": "Les années<br/>collège",
+			"subtitle": "Un an en 3e B à Aimé-Césaire, dans le nord de Paris."
+		},
+		{
+			"href": "l-empire",
+
+			"img": "l-empire-mini.jpg",
+			"alt": "",
+
+			"color": 3,
+			"title": "L’empire",
+			"subtitle": "Comment Vincent Bolloré a mangé Canal+."
+		},
+		{
+			"href": "good-com-bad-cop",
+
+			"img": "good-com-bad-cop-mini.jpg",
+			"alt": "",
+
+			"color": 4,
+			"title": "Good com,<br/>bad COP",
+			"subtitle": "À Paris, les entreprises ont promis de défendre le climat. Vraiment&nbsp;?"
+		},
+		{
+			"href": "les-jours-a-l-oeil",
+
+			"img": "les-jours-a-l-oeil-mini.jpg",
+			"alt": "",
+
+			"color": 5,
+			"title": "Les Jours<br/>à l’œil",
+			"subtitle": "Histoires de photos et de photographes."
+		},
+		{
+			"href": "la-mecanique-fn",
+
+			"img": "la-mecanique-fn-mini.jpg",
+			"alt": "",
+
+			"color": 6,
+			"title": "La mécanique FN",
+			"subtitle": "L’emprise de l’extrême droite décortiquée."
+		}
+	]
+}

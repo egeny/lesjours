@@ -1,0 +1,76 @@
+{% set page = { title: "LesJours", class: "home" } %}
+{% extends "partials/_layout.html" %}
+
+{% block content %}
+<section class="container">
+	<h2 class="sr">À la une</h2>
+	<div class="master row gutter-bottom-4 obsession-{{ home.master.obsession.color }}">
+		<div class="col col-lg-left-1 col-lg-10">
+			<div class="relative">
+				<img class="responsive" src="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img }}" alt="{{ home.master.alt }}" />
+				<div class="overlay">
+					<div class="snake-4-tmp">
+						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img }});">
+							<h3 class="h2"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}">{{ home.master.title }}</a></h3>
+							<p>{{ home.master.subtitle }}</p>
+							<span class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}">{{ home.master.obsession.name }}</a> • épisode n°{{ home.master.number }} | Par <a class="link-unstyled" href="{{ home.master.author.href|default("#") }}">{{ home.master.author.name }}</a></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% if home.articles %}
+	<div class="row articles">
+		<div class="col col-lg-left-1 col-lg-5 gutter-left-4 obsession-{{ home.articles[0].obsession.color }}">
+			<h3 class="h3 snake-1"><a href="/obsessions/{{ home.articles[0].obsession.href }}/{{ home.articles[0].href }}" class="snake-container link-unstyled">{{ home.articles[0].title }}</a></h3>
+			<p>{{ home.articles[0].intro }}</p>
+			<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.articles[0].obsession.href }}">{{ home.articles[0].obsession.name }}</a> • épisode n°{{ home.articles[0].number }}</p>
+			<span class="style-meta">Par <a class="link-unstyled" href="{{ home.articles[0].author.href|default("#") }}">{{ home.articles[0].author.name }}</a></span>
+		</div>
+		<div class="col col-lg-5 gutter-left-4 obsession-{{ home.articles[1].obsession.color }}">
+			<h3 class="h3 snake-1"><a href="/obsessions/{{ home.articles[1].obsession.href }}/{{ home.articles[1].href }}" class="snake-container link-unstyled">{{ home.articles[1].title }}</a></h3>
+			<p>{{ home.articles[1].intro }}</p>
+			<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.articles[1].obsession.href }}">{{ home.articles[1].obsession.name }}</a> • épisode n°{{ home.articles[1].number }}</p>
+			<span class="style-meta">Par <a class="link-unstyled" href="{{ home.articles[1].author.href|default("#") }}">{{ home.articles[1].author.name }}</a></span>
+		</div>
+	</div>
+	{% endif %}
+</section>
+{% if home.obsessions %}
+<hr/>
+<section class="container">
+	<h2 class="col-lg-left-1 style-meta-larger gutter-bottom-1">Nos obsessions</h2>
+	<ul class="obsessions row list-unstyled">
+		{% for obsession in home.obsessions %}
+		<li class="obsession-{{ obsession.color }}">
+			<a href="/obsessions/{{ obsession.href }}" class="block relative">
+				<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ obsession.img }}" alt="{{ obsession.alt }}" />
+				<div class="overlay pattern-2"></div>
+				<div class="overlay">
+					<div class="snake-4-tmp">
+						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ obsession.href }}/{{ obsession.img }});">
+							<div class="relative">
+								<h3 class="h4">{{ obsession.title }}</h3>
+								<p>{{ obsession.subtitle }}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endif %}
+<hr/>
+<section class="text-center">
+	<h2 class="style-meta-large">Au fil des jours</h2>
+	<ul class="list-inline gutter-top-3 gutter-bottom-3">
+		<li class="col col-auto"><a class="btn-round" href="https://twitter.com/Lesjoursfr"><i>{{ icon("twitter", "Twitter") }}</i></a></li>
+		<li class="col col-auto"><a class="btn-round" href="https://www.facebook.com/LesJoursfr/"><i>{{ icon("facebook", "Facebook") }}</i></a></li>
+		<li class="col col-auto"><a class="btn-round" href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
+	</ul>
+</section>
+{% include "partials/_footer.html" %}
+{% endblock %}

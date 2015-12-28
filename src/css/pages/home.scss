@@ -1,0 +1,71 @@
+/* @group Home */
+$gutter:  map-get(map-get($grids, "lg"), "gutter");
+$margin:  map-get(map-get($grids, "lg"), "margin");
+$columns: map-get(map-get($grids, "lg"), "columns");
+
+.home .master .snake-4-tmp {
+	margin-top:  $gutter * 4;
+	margin-left: $gutter * 4;
+	text-shadow: 0 0 15px rgba($color-black, .3);
+}
+
+.home .master .snake-4-tmp:before {
+	width: 210px;
+}
+
+.home .master .snake-4-tmp .snake-container {
+	background-size: calc(100% + #{$gutter * 4});
+	background-position: #{-$gutter * 4} #{-$gutter * 4};
+	overflow: auto;
+}
+
+.home .articles .snake-1:before {
+	width:  56px;
+	height: 63px;
+	margin-top: #{$gutter / 2}
+}
+
+.home .articles .link-unstyled { display: inline-block; }
+.home .articles .style-meta { line-height: 1; margin-bottom: 0; }
+
+.home .obsessions {
+	margin-left:  calc(#{100% / $columns} - #{$gutter / 2});
+	margin-right: calc(#{100% / $columns} - #{$gutter / 2});
+}
+
+.home .obsessions li {
+	box-sizing: border-box;
+	width: (100% / 3);
+	padding: #{$gutter / 2};
+}
+
+.home .obsessions .snake-4-tmp {
+	margin-top:  #{$gutter * 2};
+	margin-left: #{$gutter * 2};
+}
+
+.home .obsessions .snake-container {
+	background-size: calc(100% + #{$gutter * 2});
+	background-position: #{-$gutter * 2} #{-$gutter * 2};
+	overflow: auto;
+}
+
+.home .obsessions .snake-4-tmp .h4 { margin-bottom: 0.25em }
+.home .obsessions .snake-4-tmp p { margin-bottom: 0.5em }
+.home .obsessions .snake-container:before {
+	content: "";
+	@extend .overlay;
+	@extend .pattern-2;
+}
+
+hr {
+	height: $gutter;
+	@extend .pattern-1;
+
+	border: 0;
+	margin: $margin;
+}
+
+.home .text-center h2 { @include font-weight-light("proxima"); }
+
+/* @end Home */
