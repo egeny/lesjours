@@ -12,5 +12,12 @@
 		"Photos <a href=\"#\">Olivier Coret/Divergence-images</a>"
 	],
 
-	"tags": ["FN", "Le Pen", "Sarkozy", "Hollande", "Valls", "Cambadelis"]
+	"tags": ["FN", "Le Pen", "Sarkozy", "Hollande", "Valls", "Cambadelis"],
+
+	"rel": {
+		"next": {
+			"title": "Hollande et Valls dans les petits souliers du Front national",
+			"href":  "nationalite-souliers"
+		}
+	}
 }
