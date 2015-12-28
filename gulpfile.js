@@ -296,6 +296,7 @@ function html(e) {
 		.pipe(nunjucks(data))
 		.pipe(rename(name))
 		.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
+		.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
 		.pipe(replace('href="/"',                 'href="' + root + '/"'))
 		.pipe(gulp.dest(paths.dist))
 		.pipe(livereload());
