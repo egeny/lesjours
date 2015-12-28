@@ -10,6 +10,9 @@ $margin: grid-margin("sm");
 %fadable-active { @include fadable-active; }
 .responsive { @include responsive; }
 
+.block { display: block; }
+.color-inherit { color: inherit; }
+
 /* Reusable class to fake a bottom margin */
 .fake-bottom {
 	background: $color-white;
@@ -90,6 +93,13 @@ $margin: grid-margin("sm");
 // Two dots with 0.2 opacity
 .pattern-1 {
 	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+	background-size: 2px 4px;
+}
+
+// Two dots with 0.5 opacity
+.pattern-2 {
+	// FIXME: should use opacity instead
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .5)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
 	background-size: 2px 4px;
 }
 
