@@ -23,7 +23,7 @@
 
 			"title": "« Content de vous avoir revu »",
 			"intro": "<strong>Journal de bord du XIe.</strong> Lundi matin, l’école reprend mais les attentats résonnent encore dans le quartier. L’après-midi, François Hollande déclare que la France est en guerre.",
-			"lead": "Ce matin, les enfants retournent à l’école. Nous décidons d’y aller tous ensemble. La route habituelle est barrée. Nous descendons par la rue Oberkampf. Je tiens mes enfants fermement par la main, alors que d’ordinaire mon fils aîné, qui a 10 ans, nous lâche au moindre prétexte pour faire le chemin tout seul. J’espère qu’ils ne remarqueront pas les traces de la fusillade autour d’eux. Dans le caniveau, je vois des gants de soins maculés, des paquets de compresses, du matériel médical que personne n’a encore pensé à enlever. Du sang aussi. Devant l’un des immeubles, une petite pancarte écrite à la main indique que des blessés du Bataclan ont été soignés ici. La porte cochère est ouverte. Dans la cour, au sol, on peut encore voir les grandes traînées rouges des corps déplacés.",
+			"lead": "Ce matin, les enfants retournent à l’école. Nous décidons d’y aller tous ensemble. La route habituelle est barrée. Nous descendons par la rue Oberkampf. Je tiens mes enfants fermement par la main, alors que d’ordinaire mon fils aîné, qui a 10 ans, nous lâche au moindre prétexte pour faire le chemin tout seul. J’espère qu’ils ne remarqueront pas les traces de la fusillade autour d’eux.",
 
 			"credits": [
 				"Texte <a href=\"#\">Charlotte Rotman</a>",
@@ -40,7 +40,7 @@
 			"date": "2015-12-26T10:00+01:00",
 
 			"title": "L’empreinte de la peur",
-			"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, penser, boire un verre. Le retour aux gestes quotidiens est plombé par de nouveaux réflexes désagréables.",
+			"intro": "Sortir, travailler, réfléchir, l'impensable retour du quotidien",
 			"lead": "Les membres de l'équipe des Jours s’envoient des mails : comment travailler ? Que faire ? Quelles propositions journalistiques ? Je suis incapable de répondre. Je n’arrive pas à réfléchir, je n’ai aucun réflexe, aucune idée. Je me tais.",
 
 			"credits": [
@@ -88,28 +88,28 @@
 
 	"people": [
 		{
-			"href":     "#",
+			"href":     "vendredi-ou-la-nuit-sauvage",
 			"img":      "img/blocheportrait2.jpg",
 			"alt":      "",
 			"title":    "Patrick Bloche",
 			"subtitle": "59 ans, député et ancien maire du XIe"
 		},
 		{
-			"href":     "#",
+			"href":     "vendredi-ou-la-nuit-sauvage",
 			"img":      "img/assigne-3.jpg",
 			"alt":      "",
 			"title":    "Vincent",
 			"subtitle": "32 ans, assigné à résidence"
 		},
 		{
-			"href":     "#",
+			"href":     "vendredi-ou-la-nuit-sauvage",
 			"img":      "img/romagnanportrait.jpg",
 			"alt":      "",
 			"title":    "Barbara Romagnan",
 			"subtitle": "41 ans, députée PS anti-état d'urgence"
 		},
 		{
-			"href":     "#",
+			"href":     "vendredi-ou-la-nuit-sauvage",
 			"img":      "img/urvoasportrait.jpg",
 			"alt":      "",
 			"title":    "Jean-Jacques Urvoas",
