@@ -123,8 +123,10 @@ article h5 { margin-bottom: 0; }
 article i,
 article em { font-style: italic; }
 
-article q:before { content: "« "; }
-article q:after  { content: " »"; }
+article q:before   { content: "« "; }
+article q:after    { content: " »"; }
+article q q:before { content: "“"; }
+article q q:after  { content: "”"; }
 
 article table {}
 	article caption {}
