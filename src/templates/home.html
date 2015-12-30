@@ -45,11 +45,11 @@
 		{% for obsession in home.obsessions %}
 		<li class="obsession-{{ obsession.color }}">
 			<a href="/obsessions/{{ obsession.href }}" class="block relative no-overflow">
-				<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + ".jpg") }}" alt="{{ obsession.alt }}" />
+				<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + "-mini.jpg") }}" alt="{{ obsession.alt }}" />
 				<div class="overlay pattern-2"></div>
 				<div class="overlay">
 					<div class="snake-4-tmp">
-						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + ".jpg") }});">
+						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + "-mini.jpg") }});">
 							<div class="relative">
 								<h3 class="h4">{{ obsession.title }}</h3>
 								<p>{{ obsession.subtitle }}</p>
