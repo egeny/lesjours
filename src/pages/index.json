@@ -1,127 +1,19 @@
 {
 	"template": "home",
 
-	"master": {
-		"href": "a-l-intention-des-victimes",
-
-		"obsession": {
-			"href": "treize-novembre",
-			"name": "Treize Novembre",
-			"color": 1
-		},
-
-		"img": "img/header.jpg",
-		"alt": "",
-
-		"number": 5,
-		"title": "«A l’intention<br/>des victimes…»",
-		"subtitle": "Journal de bord du XIe. Depuis les attentats, des centaines de personnes<br/>se sont rendues à la cellule d’aide psychologique de la mairie.",
-
-		"author": {
-			"href": "#",
-			"name": "Charlotte Rotman"
-		}
-	},
+	"master": "episode:treize-novembre/a-l-intention-des-victimes",
 
 	"articles": [
-		{
-			"href": "houille-les-ecolos-passent-a-la-banque",
-
-			"obsession": {
-				"href": "good-com-bad-cop",
-				"name": "Good com, bad COP",
-				"color": 4
-			},
-
-			"number": 3,
-			"title": "Houille ! Les écolos<br/>passent à la banque",
-			"intro": "Pour pousser BNP Paribas à arrêter de financer le charbon, l’ONG les Amis de la Terre multiplie les actions contre la banque.",
-
-			"author": {
-				"href": "#",
-				"name": "Nicolas Cori"
-			}
-		},
-		{
-			"href": "louis-le-grand-l-autre-bout-du-monde",
-
-			"obsession": {
-				"href": "les-annees-college",
-				"name": "Les années collège",
-				"color": 2
-			},
-
-			"number": 5,
-			"title": "Louis-le-Grand, l’autre bout du monde",
-			"intro": "Jessika, Agita et Soumiga ont été présélectionnées pour intégrer le prestigieux lycée Louis-le-Grand l'an prochain. Première visite, à 30 minutes de métro et quelques années-lumière d'Aimé-Césaire.",
-
-			"author": {
-				"href": "#",
-				"name": "Alice Géraud"
-			}
-		}
+		"episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
+		"episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde"
 	],
 
 	"obsessions": [
-		{
-			"href": "treize-novembre",
-
-			"img": "treize-novembre-mini.jpg",
-			"alt": "",
-
-			"color": 1,
-			"title": "Treize Novembre",
-			"subtitle": "Récit de la France d’après"
-		},
-		{
-			"href": "les-annees-college",
-
-			"img": "les-annees-college-mini.jpg",
-			"alt": "",
-
-			"color": 2,
-			"title": "Les années<br/>collège",
-			"subtitle": "Un an en 3e B à Aimé-Césaire, dans le nord de Paris."
-		},
-		{
-			"href": "l-empire",
-
-			"img": "l-empire-mini.jpg",
-			"alt": "",
-
-			"color": 3,
-			"title": "L’empire",
-			"subtitle": "Comment Vincent Bolloré a mangé Canal+."
-		},
-		{
-			"href": "good-com-bad-cop",
-
-			"img": "good-com-bad-cop-mini.jpg",
-			"alt": "",
-
-			"color": 4,
-			"title": "Good com,<br/>bad COP",
-			"subtitle": "À Paris, les entreprises ont promis de défendre le climat. Vraiment&nbsp;?"
-		},
-		{
-			"href": "les-jours-a-l-oeil",
-
-			"img": "les-jours-a-l-oeil-mini.jpg",
-			"alt": "",
-
-			"color": 5,
-			"title": "Les Jours<br/>à l’œil",
-			"subtitle": "Histoires de photos et de photographes."
-		},
-		{
-			"href": "la-mecanique-fn",
-
-			"img": "la-mecanique-fn-mini.jpg",
-			"alt": "",
-
-			"color": 6,
-			"title": "La mécanique FN",
-			"subtitle": "L’emprise de l’extrême droite décortiquée."
-		}
+		"obsession:treize-novembre",
+		"obsession:les-annees-college",
+		"obsession:l-empire",
+		"obsession:good-com-bad-cop",
+		"obsession:les-jours-a-l-oeil",
+		"obsession:la-mecanique-fn"
 	]
 }

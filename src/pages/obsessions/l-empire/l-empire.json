@@ -1,53 +1,18 @@
 {
 	"template": "obsession",
 
-	"href": "/obsessions/l-empire",
-
-	"img": "l-empire.jpg",
-	"alt": "",
+	"href": "l-empire",
 
 	"color": 3,
-	"name": "L'empire",
+	"name":  "L'empire",
 	"title": "L'empire",
 	"subtitle": "Comment Vincent Bolloré a mangé Canal+.",
+	"desc": "<p>Il a déjà fixé la date&nbsp;: le 17 février 2022, Vincent Bolloré lèguera sa petite épicerie à sa dynastie. Du transport et de la logistique, du fioul et des batteries électriques, du plastique et des palmiers en Afrique. Et Havas. Et Vivendi. Et Canal+.</p><p>Depuis l’été dernier, l’homme d’affaires mène un raid sur le groupe crypté dont il a viré la quasi-totalité des dirigeants. Désormais, Vincent Bolloré fait sa loi à Canal+ et ça ne fait que commencer.</p>",
 
 	"episodes": [
-		{
-			"href": "ep2-plug-canal",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 2,
-			"date": "2015-12-24T10:00+01:00",
-
-			"title": "Bolloré&nbsp;: le plug Canal",
-			"intro": "Arrivé chez Vivendi en lui vendant la chaîne Direct 8, l'homme d'affaires a patienté avant de s'attaquer à sa première cible&nbsp;: Rodolphe Belmer, le numéro 2 de Canal+.",
-			"lead": "Il aura mis le temps. Il aura attendu son heure, tapi dans l’ombre, guettant sa proie, patiemment. Quand, en juillet 2015, Vincent Bolloré se met à dégommer une à une toutes les têtes de Canal+, ça fait un an déjà qu’il a été nommé président du conseil de surveillance de Vivendi",
-
-			"credits": [
-				"Texte <a href=\"#\">Raphaël Garrigos et Isabelle Roberts</a>",
-				"Photos <a href=\"#\">Sébastien Calvet</a>"
-			]
-		},
-		{
-			"href": "ep1-guignols",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 1,
-			"date": "2015-12-23T10:00+01:00",
-
-			"title": "Ainsi fondent les marionnettes",
-			"intro": "Décapités puis revenus pour vanter les produits Vivendi, «&nbsp;Les Guignols&nbsp;» façon Bolloré ne font plus d'info. Ni d'humour.",
-			"lead": "Johnny est à la machine à café. Et là, il la confond avec un distributeur&nbsp;: <q>Ah que je veux pas un macchiato, ah que je veux 30 euros en billets de 20.</q> Ceci n’est pas une parodie, ceci est un sketch des <em>Guignols de l’info",
-
-			"credits": [
-				"Texte <a href=\"#\">Raphaël Garrigos et Isabelle Roberts</a>",
-				"Photos <a href=\"#\">Sébastien Calvet</a>"
-			]
-		}
+		"episode:l-empire/ep4-journal-hard",
+		"episode:l-empire/ep2-plug-canal",
+		"episode:l-empire/ep1-guignols"
 	],
 
 	"people": [
@@ -95,9 +60,9 @@
 
 	"places": [
 		{
-			"img":      "img/carte-l-empire.jpg",
-			"title":    "Les cinq royaumes de Bolloré",
-			"href": 	"https://www.google.com/maps/d/edit?mid=zEN87Ui19vGI.kn86OklBgDys&usp=sharing"
+			"img":   "img/carte-l-empire.jpg",
+			"title": "Les cinq royaumes de Bolloré",
+			"href":  "https://www.google.com/maps/d/edit?mid=zEN87Ui19vGI.kn86OklBgDys&usp=sharing"
 		}
 	],
 

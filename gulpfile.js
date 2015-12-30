@@ -195,6 +195,20 @@ env.addFilter('human', function(input) {
 	return date.getDate() + ' ' + month + ' ' + date.getFullYear();
 });
 
+env.addFilter('published', function(input, date) {
+	if (!input) { return input; }
+
+	var reference = date ? new Date(date).getTime() : new Date().getTime();
+
+	if (input.push) {
+		return input.filter(function(resource) {
+			return new Date(resource.date).getTime() <= reference;
+		});
+	} else {
+		return new Date(input.date).getTime() <= reference;
+	}
+});
+
 env.addFilter('startsWith', function(input, pattern) {
 	return new RegExp('^' + pattern).test(input || '');
 });
@@ -259,47 +273,142 @@ function assets(e) {
 		.pipe(livereload());
 }
 
+// Make a deep copy of data and fetch sub-resources
+function expand(data) {
+	var
+		r = /^(?!http)(\w+):(.+)/,
+		result = {},
+		property, matches;
+
+	for (property in data) {
+		if (typeof data[property] === 'string') {
+			matches          = data[property].match(r);
+			result[property] = matches ? fetch(matches[1], matches[2]) : data[property];
+		} else if (data[property].push) {
+			result[property] = data[property].map(function(value) {
+				return expand({ value: value }).value; // Small trick to call recursively on every items
+			});
+		} else if (typeof data[property] === 'object' && data[property] !== null) {
+			result[property] = expand(data[property]);
+		} else {
+			result[property] = data[property];
+		}
+	}
+
+	return result;
+}
+
+// Fetch some metadata
+function fetch(kind, fragment) {
+	var
+		fragments = fragment.split('/'),
+		obsession, episode;
+
+	// Makes sure we have a cache for this kind of resource
+	cache[kind] = cache[kind] || {};
+
+	// Return the cache resource if found
+	if (cache[kind][fragments[fragments.length - 1]]) {
+		return cache[kind][fragments[fragments.length - 1]];
+	}
+
+	// Otherwise, we have to fetch it :(
+	switch (kind) {
+		case 'episode':
+			if (fragments.length === 2) {
+				obsession = fragments[0];
+				episode   = fragments[1];
+
+				try {
+					cache[kind][episode] = JSON.parse(fs.readFileSync(path.join(paths.pages, 'obsessions', obsession, episode, episode + '.json')));
+					cache[kind][episode].obsession = fetch('obsession', obsession);
+				} catch(e) {
+					cache[kind][episode] = {};
+				}
+
+				return cache[kind][episode];
+			} else {
+				console.log("The fragment " + kind + ":" + fragment + " is invalid");
+				return {};
+			}
+
+		case 'obsession':
+			try {
+				cache[kind][fragment] = JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment, fragment + '.json')));
+			} catch(e) {
+				cache[kind][fragment] = {};
+			}
+
+			return cache[kind][fragment];
+	}
+}
+
 // This function might be called as a gulp's task callback (e.g. gulp.watch)
 function html(e) {
 	var
-		data = {}, metadata = {},
-		parsed = path.parse(path.relative(paths.pages, e.path || e)),
-		file, name;
+		file   = path.relative(paths.pages, e.path || e), // The current file being processed
+		parsed = path.parse(file),
+		source,  // The source file to use in the final stream (either the file or a template)
+		content, // The extracted content (.html file)
+		metadata = {}, // The extracted metadata (.json file)
+		data     = {}; // The final data to use as context with nunjucks
 
-	// Get the page's metadata
+	// Try to retrieve some associated metadata
 	try {
+		// Try to ready the metadata without checking the caching since we might be watching some files and need to refresh the data
 		metadata = JSON.parse(fs.readFileSync(path.join(paths.pages, parsed.dir, parsed.name + '.json')));
 
-		// Wrap the data in a prefix if necessary (if the "template" key doesn't exist already)
-		if (!metadata[metadata.template]) {
-			data[metadata.template] = metadata;
-		} else {
-			data = metadata;
+		// Store some informations in a cache ; will surely be re-used
+		if (metadata.template) {
+			// Keep the metadata
+			cache[metadata.template] = cache[metadata.template] || {};
+			cache[metadata.template][parsed.name] = metadata;
+
+			// Save a cache for files and the template they use (will be used when watching templates files)
+			cache.template = cache.template || {};
+			cache.template[metadata.template] = cache.template[metadata.template] || [];
+
+			// Push only if the file doesn't exists
+			if (cache.template[metadata.template].indexOf(file) === -1) {
+				cache.template[metadata.template].push(file);
+			}
 		}
 
-		// Store the pages paths in a cache with its associated template (will be used when watching templates files)
-		cache[metadata.template] = cache[metadata.template] || [];
-		if (cache[metadata.template].indexOf(path.join(paths.pages, parsed.dir, parsed.base)) === -1) {
-			cache[metadata.template].push(path.join(paths.pages, parsed.dir, parsed.base));
-		}
-
-		// Get the page's content
-		data[metadata.template].content = fs.readFileSync(path.join(paths.pages, parsed.dir, parsed.name + '.html'));
-		data[metadata.template].content = nunjucks.nunjucks.renderString(data[metadata.template].content.toString(), data);
-
-		// Specific data injection
+		// Inject some data
 		if (metadata.template === 'episode') {
-			data.obsession = JSON.parse(fs.readFileSync(path.join(paths.pages, parsed.dir, '..', parsed.dir.replace('obsessions' + path.sep, '').replace(path.sep + parsed.name, '') + '.json')));
+			data.obsession = expand(fetch('obsession', parsed.dir.split(path.sep)[1]));
 		}
+
+		// Wrap the data in a prefix if necessary (if the "template" key doesn't exists already)
+		if (!metadata[metadata.template]) {
+			data[metadata.template] = expand(metadata); // Make a deep copy of the metadata and resolve the sub-resources
+			delete data[metadata.template].template; // Cleaning just for fun
+		} else {
+			data = expand(metadata); // Make a deep copy of the metadata and resolve the sub-resources
+		}
+
+		// Try to retrieve the content
+		content = fs.readFileSync(path.join(paths.pages, parsed.dir, parsed.name + '.html'));
+		data[metadata.template].content = nunjucks.nunjucks.renderString(content.toString(), data);
+		// If metadata.template doesn't exists it will raise an Error (so, no need to check first)
 	} catch(e) {}
 
-	file = metadata.template ? path.join(paths.templates, metadata.template + '.html') : path.join(paths.pages, parsed.dir, parsed.base);
-	name = metadata.template ? path.join(parsed.dir, 'index.html')                     : path.relative(paths.pages, file);
+	// Set the final source final to use as a starting point in the stream
+	if (metadata.template) {
+		// If there is a "template" property in the metadata use it
+		source = path.join(paths.templates, metadata.template + '.html');
+	} else if (content) {
+		// Otherwise, use the content file (if a content was found)
+		source = path.join(paths.pages, parsed.dir, parsed.name + '.html');
+	} else {
+		// Otherwise, fallback to the current file (shouldn't do anything)
+		source = path.join(paths.pages, file);
+	}
 
 	return gulp
-		.src(file, { base: paths.pages })
+		.src(source, { base: paths.pages })
 		.pipe(nunjucks(data))
-		.pipe(rename(name))
+		.pipe(rename(path.join(parsed.dir, metadata.template ? 'index.html' : parsed.base)))
 		.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
 		.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
 		.pipe(replace('href="/"',                 'href="' + root + '/"'))
@@ -436,7 +545,7 @@ gulp.task('watch', ['build'], function() {
 		var parsed = path.parse(e.path);
 
 		// Simply look the cache for the pages associated to the given template
-		(cache[parsed.name] || []).forEach(function(page) {
+		(cache.template[parsed.name] || []).forEach(function(page) {
 			html({ path: page });
 		});
 	}

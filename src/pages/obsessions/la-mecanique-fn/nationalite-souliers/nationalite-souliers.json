@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "nationalite-souliers",
+
 	"number": 2,
 	"date": "2015-12-29T10:00+01:00",
 
 	"title": "Hollande et Valls dans les petits souliers du Front national",
 	"intro": "Inefficace et attentatoire au principe d’égalité entre les citoyens, la déchéance de nationalité est une vieille revendication de l’extrême droite. Un pari hasardeux de François Hollande en vue de la présidentielle qui suscite un tollé à gauche.",
+	"lead":  "Quelle violence contre les consciences. Tant de reniements, de volte-face et, finalement, de mépris pour ceux qui portent (encore) des idéaux, donneraient presque envie de baisser les bras. L'affaire de la déchéance de la nationalité étendue aux binationaux nés en France est une lamentable faillite politique et morale du duo exécutif Hollande-Valls.",
 
 	"credits": [
 		"Texte <a href=\"#\">Antoine Guiral</a>",
@@ -15,9 +18,6 @@
 	"tags": ["FN", "Le Pen", "Sarkozy", "Hollande", "Valls", "Cambadelis", "Nationalité"],
 
 	"rel": {
-		"prev": {
-			"title": "France année zéro",
-			"href":  "france-annee-zero"
-		}
+		"prev": "episode:la-mecanique-fn/france-annee-zero"
 	}
 }

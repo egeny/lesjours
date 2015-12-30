@@ -1,11 +1,11 @@
 <section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="false">
 	<h3 class="gutter-left-1 gutter-bottom-2 style-meta-larger">Les épisodes</h3>
-
-	{% set latest = obsession.episodes[0] %}
+	{% set episodes = obsession.episodes|published %}
+	{% set latest = episodes[0] %}
 	<article class="f1 row">
-		<img class="col col-top col-lg-6 gutter-bottom-2" src="{{ obsession.href }}/{{ latest.href }}/{{ latest.img }}" alt="{{ latest.alt }}" />
+		<img class="col col-top col-lg-6 gutter-bottom-2" src="/obsessions/{{ obsession.href }}/{{ latest.href }}/{{ latest.img|default("img/header.jpg") }}" alt="{{ latest.alt }}" />
 		<div class="f2 col col-lg-6">
-			<h4 class="h4 snake-2"><a href="{{ obsession.href }}/{{ latest.href }}" class="snake-container">{{ latest.title }}</a></h4>
+			<h4 class="h4 snake-2"><a href="/obsessions/{{ obsession.href }}/{{ latest.href }}" class="snake-container">{{ latest.title }}</a></h4>
 			<p class="intro">{{ latest.intro }}</p>
 			<p class="style-meta"><time datetime="{{ latest.date }}">{{ latest.date|human }}</time> • épisode {{ latest.number }}</p>
 			<ul class="list-unstyled style-meta">
@@ -16,20 +16,20 @@
 			<p>{{ latest.lead }} (…)</p>
 		</div>
 		<div class="col col-lg-12 more text-center gutter-bottom-4">
-			<a class="btn-round" href="{{ obsession.href }}/{{ latest.href }}"><span>Lire</span></a>
+			<a class="btn-round" href="/obsessions/{{ obsession.href }}/{{ latest.href }}"><span>Lire</span></a>
 		</div>
 	</article>
 
-	{% if obsession.episodes.length > 1 %}
+	{% if episodes.length > 1 %}
 	<div class="previous">
 		<div class="pattern-1"></div>
 		<h4 class="style-meta-large gutter-left-1 gutter-top-2 gutter-bottom-2">Précedemment…</h4>
 		<ol class="f3 row list-unstyled">
-			{% for episode in obsession.episodes %}
+			{% for episode in episodes %}
 				{% if not loop.first %}
 					<li class="col-lg-6">
-						<a class="row link-unstyled" href="{{ obsession.href }}/{{ episode.href }}">
-							<img class="col col-top col-sm-2 col-md-4 col-lg-6" src="{{ obsession.href }}/{{ episode.href }}/{{ episode.img }}" alt="{{ episode.alt }}" />
+						<a class="row link-unstyled" href="/obsessions/{{ obsession.href }}/{{ episode.href }}">
+							<img class="col col-top col-sm-2 col-md-4 col-lg-6" src="/obsessions/{{ obsession.href }}/{{ episode.href }}/{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" />
 							<div class="col col-sm-2 col-md-4 col-lg-6">
 								<h5 class="h5 snake-1"><span class="snake-container">{{ episode.title }}</span></h5>
 								<p>{{ episode.intro }}</p>

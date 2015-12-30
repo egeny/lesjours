@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "ep1-guignols",
+
 	"number": 1,
 	"date": "2015-12-23T10:00+01:00",
 
 	"title": "Ainsi fondent les marionnettes",
-	"intro": "Décapités puis revenus pour vanter les produits Vivendi, «&nbsp;Les Guignols&nbsp;» façon Bolloré ne font plus d'info. Ni d'humour.",
+	"intro": "Décapités puis revenus pour vanter les produits Vivendi, « Les Guignols » façon Bolloré ne font plus d'info. Ni d'humour.",
+	"lead":  "Johnny est à la machine à café. Et là, il la confond avec un distributeur : <q>Ah que je veux pas un macchiato, ah que je veux 30 euros en billets de 20.</q> Ceci n’est pas une parodie, ceci est un sketch des <i>Guignols de l’info</i>.",
 
 	"credits": [
 		"Texte <a href=\"#\">Raphaël Garrigos et Isabelle Roberts</a>",
@@ -15,9 +18,6 @@
 	"tags": ["Bolloré", "Canal+", "Belmer", "Guignols"],
 
 	"rel": {
-		"next": {
-			"title": "Bolloré, le plug Canal",
-			"href":  "ep2-plug-canal"
-		}
+		"next": "episode:l-empire/ep2-plug-canal"
 	}
 }

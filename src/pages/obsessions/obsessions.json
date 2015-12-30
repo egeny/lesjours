@@ -1,71 +1,12 @@
 {
 	"template": "obsessions",
+
 	"obsessions": [
-		{
-			"href": "treize-novembre",
-
-			"img": "treize-novembre.jpg",
-			"alt": "",
-
-			"color": 1,
-			"title": "Treize Novembre",
-			"subtitle": "Récit de la France d’après",
-			"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, «Les Jours» racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>"
-		},
-		{
-			"href": "les-annees-college",
-
-			"img": "les-annees-college.jpg",
-			"alt": "",
-
-			"color": 2,
-			"title": "Les années<br/>collège",
-			"subtitle": "Un an en 3e B à Aimé-Césaire, dans le nord de Paris.",
-			"desc": "<p>Ils s’appellent Moussa, Lucie, Rayan, Agita ou Faema. Ils sont en 3e B à Aimé-Césaire, un collège classé REP situé dans un quartier populaire du nord de Paris. Les Jours racontent la vie de cette classe durant toute une année scolaire.</p><p>C’est une année charnière pour les adolescents, la dernière passée ensemble avant l’orientation vers des filières générale, technique ou pro qui dessineront en partie leurs vies d’après. Cette chose encore un peu floue qu’on appelle le futur.</p>"
-		},
-		{
-			"href": "l-empire",
-
-			"img": "l-empire.jpg",
-			"alt": "",
-
-			"color": 3,
-			"title": "L’empire",
-			"subtitle": "Comment Vincent Bolloré a mangé Canal+.",
-			"desc": "<p>Il a déjà fixé la date&nbsp;: le 17 février 2022, Vincent Bolloré lèguera sa petite épicerie à sa dynastie. Du transport et de la logistique, du fioul et des batteries électriques, du plastique et des palmiers en Afrique. Et Havas. Et Vivendi. Et Canal+.</p><p>Depuis l’été dernier, l’homme d’affaires mène un raid sur le groupe crypté dont il a viré la quasi-totalité des dirigeants. Désormais, Vincent Bolloré fait sa loi à Canal+ et ça ne fait que commencer.</p>"
-		},
-		{
-			"href": "good-com-bad-cop",
-
-			"img": "good-com-bad-cop.jpg",
-			"alt": "",
-
-			"color": 4,
-			"title": "Good com,<br/>bad COP",
-			"subtitle": "À Paris, les entreprises ont promis de défendre le climat. Vraiment&nbsp;?",
-			"desc": "<p>Les multinationales qui polluent sont mises en cause pour leur rôle dans le dérèglement climatique. Elles aimeraient nous faire croire qu’elles ont la solution pour diminuer les émissions de CO2 tandis que les ONG s’attachent à enrayer cette belle communication.</p>"
-		},
-		{
-			"href": "les-jours-a-l-oeil",
-
-			"img": "les-jours-a-l-oeil.jpg",
-			"alt": "",
-
-			"color": 5,
-			"title": "Les Jours<br/>à l’œil",
-			"subtitle": "Histoires de photos et de photographes.",
-			"desc": "<p>Pour raconter des histoires, des lieux, des personnages, il faut des images. Des images qui puissent retenir et éclairer ces sujets trop souvent emportés dans le flot de l'actualité, des images qui apportent une voix en plus à l’information.</p><p>Dans Les Jours à l’œil, nous questionnons les images qui, d’un enfant reposant sur le sable grec à une chemise d'Air France, font l’actualité. Et nous présentons également les travaux photographiques qui ont retenu notre attention, piqué notre curiosité ou fait trembler nos certitudes. Les photographes ont l’œil ; ils ont désormais la parole.</p>"
-		},
-		{
-			"href": "la-mecanique-fn",
-
-			"img": "la-mecanique-fn.jpg",
-			"alt": "",
-
-			"color": 6,
-			"title": "La mécanique FN",
-			"subtitle": "L’emprise de l’extrême droite décortiquée.",
-			"desc": "<p>Avec 6 820 147 électeurs aux régionales de novembre&nbsp;2015, le FN prend en tenaille le débat public.</p><p>Médias, sondages, stratégie frontiste, repli, porosité des mots et des idées… Immersion dans la banalisation de l'extrême droite."
-		}
+		"obsession:treize-novembre",
+		"obsession:les-annees-college",
+		"obsession:l-empire",
+		"obsession:good-com-bad-cop",
+		"obsession:les-jours-a-l-oeil",
+		"obsession:la-mecanique-fn"
 	]
 }

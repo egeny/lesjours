@@ -5,6 +5,10 @@ $gutter: grid-gutter("sm");
 
 	.board .wall img { max-height: 415px; }
 
+	// FIXME
+	.board .wall .desc,
+	.board .wall .more { display: none; }
+
 	.board [role="tablist"] {
 		background: $color-white;
 		height: 64px; // Header's height on small devices

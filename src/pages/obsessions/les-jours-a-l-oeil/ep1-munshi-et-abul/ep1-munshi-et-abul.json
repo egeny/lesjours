@@ -1,15 +1,22 @@
 {
 	"template": "episode",
 
+	"href": "ep1-munshi-et-abul",
+
 	"number": 1,
 	"date": "2015-12-21T13:50+01:00",
 
 	"title": "« Si ma famille le sait, ils me tuent »",
 	"intro": "Munshi et Abul s’aiment discrètement dans un pays, le Bangladesh, où l’homosexualité est punie par la loi. Et pensent à l’exil pour se protéger des violences.",
+	"lead":  "Les parcs, les universités, les habitations et internet sont, au Bangladesh comme ailleurs, des lieux de rencontre pour la communauté homosexuelle. Sauf qu’ici, <q>quiconque a volontairement une relation charnelle contre l’ordre de la nature avec un homme, une femme ou un animal, sera puni de prison à vie.</q>",
 
 	"credits": [
 		"Texte et photos <a href=\"#\">Sébastian Castelier</a>"
 	],
 
-	"tags": ["Photographie", "Bangladesh", "Homosexualité"]
+	"tags": ["Photographie", "Bangladesh", "Homosexualité"],
+
+	"rel": {
+		"next": "episode:les-jours-a-l-oeil/ep2-bana-alum"
+	}
 }

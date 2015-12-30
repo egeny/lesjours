@@ -9,7 +9,7 @@
 		<div class="container container-no-margin">
 			<div class="row">
 				<div class="col gutter-sm-4 col-md-left-1 col-md-5 col-lg-left-2 col-lg-6">
-					<p class="gutter-top-2 gutter-bottom-2 style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="obsession" href="{{ obsession.href }}">{{ obsession.name }}</a></p>
+					<p class="gutter-top-2 gutter-bottom-2 style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="obsession" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a></p>
 					<h2 class="h2">{{ episode.title }}</h2>
 					<p>{{ episode.intro }}</p>
 					<time class="gutter-bottom-2 style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
@@ -51,7 +51,7 @@
 					</ul>
 				</div>
 
-				{% if tags %}
+				{% if episode.tags %}
 				<div class="col gutter-bottom-1 gutter-sm-2 col-md-3 col-lg-left-2 col-lg-8 gutter-lg-left-0">
 					<p>Les mots-clés</p>
 					<ul class="tags list-unstyled">
@@ -64,13 +64,14 @@
 			</div>
 		</div>
 
-		{% if episode.rel %}
+		{% if episode.rel.prev|published or episode.rel.next|published %}
+		{# TODO: date de pub #}
 		<div class="rel container gutter-top-2">
 			<p class="sr">D’autres épisodes</p>
 			<ul class="row list-unstyled">
-				{% if episode.rel.prev %}
+				{% if episode.rel.prev|published %}
 				<li class="col col-sm-4 col-md-4 col-lg-4 col-lg-right-4">
-					<a class="link-unstyled" rel="prev" href="{{ obsession.href }}/{{ episode.rel.prev.href }}">
+					<a class="link-unstyled" rel="prev" href="/obsessions/{{ obsession.href }}/{{ episode.rel.prev.href }}">
 						<i>{{ icon("angle-left") }}</i>
 						<div>
 							<span class="style-meta">Épisode n°{{ episode.number - 1 }}<span class="sr"> : </span></span>
@@ -79,9 +80,9 @@
 					</a>
 				</li>
 				{% endif %}
-				{% if episode.rel.next %}
+				{% if episode.rel.next|published %}
 				<li class="col col-sm-4 col-md-4 col-lg-4{% if not episode.rel.prev %} col-md-left-4 col-lg-left-8{% endif %}">
-					<a class="link-unstyled" rel="next" href="{{ obsession.href }}/{{ episode.rel.next.href }}">
+					<a class="link-unstyled" rel="next" href="/obsessions/{{ obsession.href }}/{{ episode.rel.next.href }}">
 						<i>{{ icon("angle-right") }}</i>
 						<div class="text-right">
 							<span class="style-meta">Épisode n°{{ episode.number + 1 }}<span class="sr"> : </span></span>
@@ -95,6 +96,6 @@
 		{% endif %}
 	</footer>
 </article>
-{% include "partials/obsession.html"   %}
-{% include "partials/_footer.html" %}
+{% include "partials/obsession.html" %}
+{% include "partials/_footer.html"   %}
 {% endblock %}

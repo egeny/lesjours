@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "content-de-vous-avoir-revu",
+
 	"number": 4,
 	"date": "2015-12-26T10:00+01:00",
 
 	"title": "« Content de vous avoir revu »",
 	"intro": "<strong>Journal de bord du XIe.</strong> Lundi matin, l’école reprend mais les attentats résonnent encore dans le quartier. L’après-midi, François Hollande déclare que la France est en guerre.",
+	"lead":  "Ce matin, les enfants retournent à l’école. Nous décidons d’y aller tous ensemble. La route habituelle est barrée. Nous descendons par la rue Oberkampf. Je tiens mes enfants fermement par la main, alors que d’ordinaire mon fils aîné, qui a 10 ans, nous lâche au moindre prétexte pour faire le chemin tout seul. J’espère qu’ils ne remarqueront pas les traces de la fusillade autour d’eux.",
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
@@ -15,9 +18,7 @@
 	"tags": ["attentats", "Bataclan", "retrouvailles"],
 
 	"rel": {
-		"prev": {
-			"title": "L'empreinte de la peur",
-			"href":  "l-empreinte-de-la-peur"
-		}
+		"prev": "episode:treize-novembre/l-empreinte-de-la-peur",
+		"next": "episode:treize-novembre/a-l-intention-des-victimes"
 	}
 }

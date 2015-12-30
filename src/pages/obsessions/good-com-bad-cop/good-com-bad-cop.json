@@ -1,89 +1,20 @@
 {
 	"template": "obsession",
 
-	"href": "/obsessions/good-com-bad-cop",
-
-	"img": "good-com-bad-cop.jpg",
-	"alt": "",
+	"href": "good-com-bad-cop",
 
 	"color": 4,
-	"name": "Good com, bad COP",
+	"name":  "Good com, bad COP",
 	"title": "Good com, bad COP",
 	"subtitle": "Les entreprises ont promis de défendre le climat à la conférence de Paris. Vraiment ?",
+	"desc": "<p>Les multinationales qui polluent sont mises en cause pour leur rôle dans le dérèglement climatique. Elles aimeraient nous faire croire qu’elles ont la solution pour diminuer les émissions de CO2 tandis que les ONG s’attachent à enrayer cette belle communication.</p>",
 
 	"episodes": [
-		{
-			"href": "papou-est-dans-le-petrole",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 4,
-			"date": "2015-12-23T10:00+01:00",
-
-			"title": "Papou est dans le pétrole",
-			"intro": "À la tête de Total depuis décembre 2014, Patrick Pouyanné s’affiche comme un homme sympa et ouvert aux questions climatiques. Mais l’intérêt de son entreprise passe avant tout.",
-			"lead": "Quand Christophe de Margerie, l’ex-PDG moustachu de Total, est mort dans le crash de son avion, en octobre 2014, le conseil d’administration du groupe pétrolier avait le choix entre deux successeurs: Philippe Boisseau, le responsable du marketing, et Patrick Pouyanné, patron de la branche chimie-raffinage.",
-
-			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Pierre Morel</a>"
-			]
-		},
-		{
-			"href": "houille-les-ecolos-passent-a-la-banque",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 3,
-			"date": "2015-12-23T10:00+01:00",
-
-			"title": "Houille ! Les écolos passent à la banque",
-			"intro": "Pour pousser BNP Paribas à arrêter de financer le charbon, l’ONG les Amis de la Terre a multiplié les actions contre la banque. Exemple en octobre, devant une agence à Paris.",
-			"lead": "Le rendez-vous avait été fixé par les Amis de la Terre un samedi d’octobre dernier, à 11 heures, devant une agence BNP Paribas située place Félix-Eboué, dans le XIIe arrondissement de Paris, en <q>présence de citoyens et de porteurs d’alternatives</q>. Il s’agissait de <q>montrer qu’il est possible d’épargner le climat avec notre argent</q>.",
-
-			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Antoine Stouls</a>"
-			]
-		},
-		{
-			"href": "le-charbon-l-ennemi-utile",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 2,
-			"date": "2015-12-23T10:00+01:00",
-
-			"title": "Le charbon, l’ennemi utile",
-			"intro": "La plupart des entreprises françaises disent se désengager de l’énergie fossile la plus polluante. Des promesses à relativiser, qui leur servent surtout à apparaître irréprochables le temps de la COP.",
-			"lead": "Qui aurait dit qu’en 2015, l’abandon du charbon serait la principale mesure mise en avant par les grosses entreprises françaises pour évoquer leur engagement climatique ? Dans un pays qui a fermé sa dernière mine il y a plus de dix ans et où seulement cinq centrales à charbon fonctionnent encore.",
-
-			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Pierre Morel</a>"
-			]
-		},
-		{
-			"href": "la-cop-passe-les-entreprises-carburent",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 1,
-			"date": "2015-12-23T10:00+01:00",
-
-			"title": "La Cop passe, les entreprises carburent",
-			"intro": "Très présentes à la conférence de Paris, les multinationales ont adopté une communication subtile. Ce qui leur a permis de «greenwasher» en toute tranquillité.",
-			"lead": "Qui a dit, au sortir de la COP21, <q> c’est un très bon accord qui donne un signal important </q> ? Un politique, un militant du climat, un journaliste ? Non, c’est Patrick Pouyanné, le patron de Total, une des entreprises françaises les plus émettrices de CO2.",
-
-			"credits": [
-				"Texte <a href=\"#\">Nicolas Cori</a>",
-				"Photos <a href=\"#\">Pierre Morel</a>"
-			]
-		}
+		"episode:good-com-bad-cop/la-pantoufle-de-vert",
+		"episode:good-com-bad-cop/papou-est-dans-le-petrole",
+		"episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
+		"episode:good-com-bad-cop/le-charbon-l-ennemi-utile",
+		"episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent"
 	],
 
 	"people": [

@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "encore-un-matin",
+
 	"number": 2,
 	"date": "2015-12-24T11:00+01:00",
 
 	"title": "Encore un matin",
 	"intro": "Montrer son carnet de correspondance, passer la grille, survivre à la récré, monter en cours, sortir ses affaires en silence.",
+	"lead":  "Ils sont les vigies de 8h20. Imperméables à la météo, invariablement postés devant les grilles du collège, ils disent bonjour et vérifient que chaque élève a bien en main son carnet de correspondance –&nbsp;qu’on appelle en réalité «&nbsp;le carnet&nbsp;» tout court. Ils demandent de se dépêcher ou au contraire de ne pas courir.",
 
 	"credits": [
 		"Texte <a href=\"#\">Alice Géraud</a>",
@@ -15,13 +18,7 @@
 	"tags": ["Education", "Collège", "Paris", "Mixité"],
 
 	"rel": {
-		"prev": {
-			"title": "Retour au Collège",
-			"href":  "retour-au-college"
-		},
-		"next": {
-			"title": "Un pont entre deux danses",
-			"href":  "un-pont-entre-deux-danses"
-		}
+		"prev": "episode:les-annees-college/retour-au-college",
+		"next": "episode:les-annees-college/un-pont-entre-deux-danses"
 	}
 }

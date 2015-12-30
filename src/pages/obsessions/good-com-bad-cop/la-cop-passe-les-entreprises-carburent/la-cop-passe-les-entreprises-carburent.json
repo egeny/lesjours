@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "la-cop-passe-les-entreprises-carburent",
+
 	"number": 1,
 	"date": "2015-12-23T13:50+01:00",
 
 	"title": "La COP passe, les entreprises carburent",
 	"intro": "Très présentes à la conférence de Paris, les multinationales ont adopté une communication subtile. Ce qui leur a permis de «greenwasher» en toute tranquillité.",
+	"lead":  "Qui a dit, au sortir de la COP21, <q> c’est un très bon accord qui donne un signal important </q> ? Un politique, un militant du climat, un journaliste ? Non, c’est Patrick Pouyanné, le patron de Total, une des entreprises françaises les plus émettrices de CO2.",
 
 	"credits": [
 		"Texte <a href=\"#\">Nicolas Cori</a>",
@@ -15,9 +18,6 @@
 	"tags": ["Climat", "COP21", "Communication", "Total", "EDF", "Engie"],
 
 	"rel": {
-		"next": {
-			"title": "Le charbon, l'ennemi utile",
-			"href":  "le-charbon-l-ennemi-utile"
-		}
+		"next": "episode:good-com-bad-cop/le-charbon-l-ennemi-utile"
 	}
 }

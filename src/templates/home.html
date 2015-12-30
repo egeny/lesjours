@@ -7,10 +7,10 @@
 	<div class="master row gutter-bottom-4 obsession-{{ home.master.obsession.color }}">
 		<div class="col col-lg-left-1 col-lg-10">
 			<div class="relative no-overflow">
-				<img class="responsive" src="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img }}" alt="{{ home.master.alt }}" />
+				<img class="responsive" src="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img|default("img/header.jpg") }}" alt="{{ home.master.alt }}" />
 				<div class="overlay">
 					<div class="snake-4-tmp">
-						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img }});">
+						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img|default("img/header.jpg") }});">
 							<h3 class="h2"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}">{{ home.master.title }}</a></h3>
 							<p>{{ home.master.subtitle }}</p>
 							<span class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}">{{ home.master.obsession.name }}</a> • épisode n°{{ home.master.number }} | Par <a class="link-unstyled" href="{{ home.master.author.href|default("#") }}">{{ home.master.author.name }}</a></span>
@@ -45,11 +45,11 @@
 		{% for obsession in home.obsessions %}
 		<li class="obsession-{{ obsession.color }}">
 			<a href="/obsessions/{{ obsession.href }}" class="block relative no-overflow">
-				<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ obsession.img }}" alt="{{ obsession.alt }}" />
+				<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + ".jpg") }}" alt="{{ obsession.alt }}" />
 				<div class="overlay pattern-2"></div>
 				<div class="overlay">
 					<div class="snake-4-tmp">
-						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ obsession.href }}/{{ obsession.img }});">
+						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + ".jpg") }});">
 							<div class="relative">
 								<h3 class="h4">{{ obsession.title }}</h3>
 								<p>{{ obsession.subtitle }}</p>

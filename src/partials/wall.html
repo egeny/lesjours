@@ -10,13 +10,13 @@
 		- obsession.subtitle
 		- obsession.desc (optional)
 #}
-<img class="responsive" src="{{ obsession.href }}/{{ obsession.img }}" alt="{{ obsession.alt }}" />
+<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + ".jpg") }}" alt="{{ obsession.alt }}" />
 <div class="overlay overlay-color"></div>
 <div class="overlay overlay-pattern"></div>
 <div class="overlay">
 	<div class="title gutter-top-7 gutter-sm-top-4 gutter-sm-4 col-md-h-1 col-lg-h-1">
 		{% include "img/snake.svg" %}
-		<h2 class="h2"><a class="link-unstyled" href="{{ obsession.href }}">{{ obsession.title }}</a></h2>
+		<h2 class="h2"><a class="link-unstyled" href="/obsessions/{{ obsession.href }}">{{ obsession.title }}</a></h2>
 		<span class="p-larger">{{ obsession.subtitle }}</span>
 		{% if obsession.desc %}
 			<a href="{{ obsession.href }}" class="btn"><i>{{ icon("chevron-down", "Lire") }}</i></a>
@@ -27,7 +27,7 @@
 			{{ obsession.desc }}
 		</div>
 		<div class="more gutter-bottom-2 text-center">
-			<a href="{{ obsession.href }}" class="btn-round btn-reverse"><i>{{ icon("chevron-down", "Lire") }}</i></a>
+			<a href="/obsessions/{{ obsession.href }}" class="btn-round btn-reverse"><i>{{ icon("chevron-down", "Lire") }}</i></a>
 		</div>
 	{% endif %}
 </div>

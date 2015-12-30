@@ -1,53 +1,16 @@
 {
 	"template": "obsession",
 
-	"href": "/obsessions/la-mecanique-fn",
-
-	"img": "la-mecanique-fn.jpg",
-	"alt": "",
+	"href": "la-mecanique-fn",
 
 	"color": 6,
-	"name": "La mécanique FN",
+	"name":  "La mécanique FN",
 	"title": "La mécanique FN",
 	"subtitle": "L’emprise de l’extrême droite décortiquée.",
+	"desc": "<p>Avec 6 820 147 électeurs aux régionales de novembre&nbsp;2015, le FN prend en tenaille le débat public.</p><p>Médias, sondages, stratégie frontiste, repli, porosité des mots et des idées… Immersion dans la banalisation de l'extrême droite.",
 
 	"episodes": [
-		{
-			"href": "nationalite-souliers",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 2,
-			"date": "2015-12-29T10:00+01:00",
-
-			"title": "Hollande et Valls dans les petits souliers du Front national",
-			"intro": "Inefficace et attentatoire au principe d’égalité entre les citoyens, la déchéance de nationalité est une vieille revendication de l’extrême droite. Un pari hasardeux de François Hollande en vue de la présidentielle qui suscite un tollé à gauche.",
-			"lead": "Quelle violence contre les consciences. Tant de reniements, de volte-face et, finalement, de mépris pour ceux qui portent (encore) des idéaux, donneraient presque envie de baisser les bras. L'affaire de la déchéance de la nationalité étendue aux binationaux nés en France est une lamentable faillite politique et morale du duo exécutif Hollande-Valls.",
-
-			"credits": [
-				"Texte <a href=\"#\">Antoine Guiral</a>",
-				"Photos <a href=\"#\">Sébastien Calvet</a>"
-			]
-		},	
-		{
-			"href": "france-annee-zero",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 1,
-			"date": "2015-12-23T10:00+01:00",
-
-			"title": "France année zéro",
-			"intro": "L'extrême droite a heureusement perdu les élections régionales, mais la démocratie aussi. Face à des dirigeants qui s'accrochent par tous les moyens et mènent des politiques pour lesquelles les électeurs n'ont jamais voté, la France a besoin d'un recommencement politique.",
-			"lead": "Oui à l'état d'urgence ! Oui aux perquisitions citoyennes dans les partis politiques ! Allons-y, de l'air, de nouvelles têtes, d'autres idées… En ce soir de second tour des élections régionales, on respire certes un peu mieux mais notre santé démocratique reste chancelante. Alors, tout pour ne pas continuer comme ça. Rompre avec cette désespérante politique compassée, inaudible, figée dans ses codes obsolètes, qui sidère par son impuissance autant qu'elle indiffère ou fâche des millions de citoyens.",
-
-			"credits": [
-				"Texte <a href=\"#\">Antoine Guiral</a>",
-				"Photos <a href=\"#\">Olivier Coret/Divergence-images</a>"
-			]
-
-		}
+		"episode:la-mecanique-fn/nationalite-souliers",
+		"episode:la-mecanique-fn/france-annee-zero"
 	]
 }

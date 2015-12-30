@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "fiere-de-la-france",
+
 	"number": 7,
 	"date": "2016-01-01T10:00+01:00",
 
 	"title": "#fierdelafrance ?",
 	"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
+	"lead":  "",
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
@@ -15,9 +18,6 @@
 	"tags": ["attentats", "Bataclan", "drapeaux"],
 
 	"rel": {
-		"prev": {
-			"title": "« J'ai vu le tireur, jeune, calme, tranquille »",
-			"href":  "j-ai-vu-le-tireur-jeune-calme-tranquille"
-		}
+		"prev": "episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille"
 	}
 }

@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "j-ai-vu-le-tireur-jeune-calme-tranquille",
+
 	"number": 6,
 	"date": "2016-01-01T10:00+01:00",
 
 	"title": "« J’ai vu le tireur, jeune, calme, tranquille »",
 	"intro": "<strong>Journal de bord du XIe.</strong> Sophie était à la terrasse du Bataclan le soir de l’attaque, elle s'est cachée pendant plusieurs heures à l'intérieur.",
+	"lead":  "",
 
 	"credits": [
 		"Texte <a href=\"#\">Propos recueillis par Charlotte Rotman</a>",
@@ -15,13 +18,7 @@
 	"tags": ["Attentats", "Bataclan", "13 Novembre"],
 
 	"rel": {
-		"prev": {
-			"title": "« A l'intention des victimes et des impliqués »",
-			"href":  "a-l-intention-des-victimes-et-des-impliques"
-		},
-		"next": {
-			"title": "Fière de la France ?",
-			"href":  "fiere-de-la-france"
-		}
+		"prev": "episode:treize-novembre/a-l-intention-des-victimes",
+		"next": "episode:treize-novembre/fiere-de-la-france"
 	}
 }

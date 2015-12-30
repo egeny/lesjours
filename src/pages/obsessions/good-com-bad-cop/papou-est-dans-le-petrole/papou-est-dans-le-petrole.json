@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "papou-est-dans-le-petrole",
+
 	"number": 4,
 	"date": "2015-12-23T10:00+01:00",
 
 	"title": "Papou est dans le pétrole",
 	"intro": "À la tête de Total depuis décembre 2014, Patrick Pouyanné s’affiche comme un homme sympa et ouvert aux questions climatiques. Mais l’intérêt de son entreprise passe avant tout.",
+	"lead":  "Quand Christophe de Margerie, l’ex-PDG moustachu de Total, est mort dans le crash de son avion, en octobre 2014, le conseil d’administration du groupe pétrolier avait le choix entre deux successeurs: Philippe Boisseau, le responsable du marketing, et Patrick Pouyanné, patron de la branche chimie-raffinage.",
 
 	"credits": [
 		"Texte <a href=\"#\">Nicolas Cori</a>",
@@ -15,13 +18,7 @@
 	"tags": ["Charbon", "Climat", "COP21", "Communication", "Total"],
 
 	"rel": {
-		"prev": {
-			"title": "Houille ! Les écolos passent à la banque",
-			"href":  "houille-les-ecolos-passent-a-la-banque"
-		},
-		"next": {
-			"title": "The Shift Project, la pantoufle de vert des entreprises",
-			"href":  "la-pantoufle-de-vert"
-		}
+		"prev": "episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
+		"next": "episode:good-com-bad-cop/la-pantoufle-de-vert"
 	}
 }

@@ -1,107 +1,23 @@
 {
 	"template": "obsession",
 
-	"href": "/obsessions/treize-novembre",
-
-	"img": "treize-novembre.jpg",
-	"alt": "",
+	"href": "treize-novembre",
 
 	"color": 1,
 	"name":  "Treize Novembre",
 	"title": "Treize Novembre",
 	"subtitle": "Récits de la France d’après",
+	"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, «Les Jours» racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>",
 
 	"episodes": [
-		{
-			"href": "a-l-intention-des-victimes",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 5,
-			"date": "2015-12-30T10:00+01:00",
-
-			"title": "« À l’intention des victimes et des impliqués »",
-			"intro": "<strong>Journal de bord du XIe.</strong> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
-			"lead": "Dans ma boîte aux lettres, la veille, j'ai trouvé l’information : un courrier du maire du XIe et une note <q>à l’intention des victimes et des impliqués</q>. Nous sommes <q>des impliqués</q>, alors. ",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
-		{
-			"href": "content-de-vous-avoir-revu",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 4,
-			"date": "2015-12-26T10:00+01:00",
-
-			"title": "« Content de vous avoir revu »",
-			"intro": "<strong>Journal de bord du XIe.</strong> Lundi matin, l’école reprend mais les attentats résonnent encore dans le quartier. L’après-midi, François Hollande déclare que la France est en guerre.",
-			"lead": "Ce matin, les enfants retournent à l’école. Nous décidons d’y aller tous ensemble. La route habituelle est barrée. Nous descendons par la rue Oberkampf. Je tiens mes enfants fermement par la main, alors que d’ordinaire mon fils aîné, qui a 10 ans, nous lâche au moindre prétexte pour faire le chemin tout seul. J’espère qu’ils ne remarqueront pas les traces de la fusillade autour d’eux.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
-		{
-			"href": "l-empreinte-de-la-peur",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 3,
-			"date": "2015-12-26T10:00+01:00",
-
-			"title": "L’empreinte de la peur",
-			"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, réfléchir, l'impensable retour du quotidien.",
-			"lead": "Les membres de l'équipe des Jours s’envoient des mails : comment travailler ? Que faire ? Quelles propositions journalistiques ? Je suis incapable de répondre. Je n’arrive pas à réfléchir, je n’ai aucun réflexe, aucune idée. Je me tais.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
-		{
-			"href": "un-perimetre-de-desolation",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 2,
-			"date": "2015-12-23T10:00+01:00",
-
-			"title": "Un périmètre de désolation",
-			"intro": "<strong>Journal de bord du XIe.</strong> Au lendemain des attentats, le quartier du Bataclan est bouclé. La ville, exceptionnellement, est silencieuse.",
-			"lead": "J’avais fermé les volets qui donnent sur le boulevard. D’ordinaire, je les laisse ouverts. Au petit matin, je n’entends plus un bruit. Le quartier est entièrement bouclé. Le carrefour, d’habitude si bruyant, est vide. Pas une seule voiture ne passe. Il n’y a plus de circulation. Tout est figé, calme. Seules les silhouettes sombres des policiers barrent l’horizon. Leurs uniformes sont les seules tâches verticales. Je les regarde stationner sur le bitume déserté. Autour du Bataclan, ils ont dressé des barrières, boulevard Voltaire et rue Oberkampf. Déjà, des gens se massent aux barricades des forces de l’ordre, à l’extérieur de ce no man’s land. Nous habitons au croisement de ces artères coupées du reste de la ville. C’est un périmètre de désolation.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-			]
-		},
-		{
-			"href": "vendredi-ou-la-nuit-sauvage",
-
-			"img": "img/header.jpg",
-			"alt": "",
-
-			"number": 1,
-			"date": "2015-12-23T10:00+01:00",
-
-			"title": "Vendredi ou la nuit sauvage",
-			"intro": "Ce soir du 13 novembre, notre journaliste Charlotte Rotman était chez elle à côté du Bataclan ; les députés PS Barbara Romagnan et Jean-Jacques Urvoas étaient dans leurs circonscriptions, Vincent, musulman converti et futur assigné à résidence, chez lui à Aubervilliers.",
-			"lead": "Comme journaliste, on est rarement un témoin involontaire. On se bat au contraire pour être au plus proche d’un événement, pour voir de nos yeux, entendre de nos propres oreilles. Le soir des attentats dans le quartier du Bataclan, les médias ont été tenus à l’écart par les policiers. J’étais, moi, sans le vouloir, au cœur de cette enclave. Mais sur le moment, je n’ai eu aucun réflexe professionnel. C’est venu plus tard, difficilement, pressée par d’autres.",
-
-			"credits": [
-				"Texte <a href=\"#\">Charlotte Rotman</a>",
-				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Julien Muguet/Hans Lucas</a>"
-			]
-		}
+		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"episode:treize-novembre/fiere-de-la-france",
+		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
+		"episode:treize-novembre/a-l-intention-des-victimes",
+		"episode:treize-novembre/content-de-vous-avoir-revu",
+		"episode:treize-novembre/l-empreinte-de-la-peur",
+		"episode:treize-novembre/un-perimetre-de-desolation",
+		"episode:treize-novembre/vendredi-ou-la-nuit-sauvage"
 	],
 
 	"people": [

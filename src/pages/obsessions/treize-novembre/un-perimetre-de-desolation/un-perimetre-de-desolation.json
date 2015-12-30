@@ -1,11 +1,14 @@
 {
 	"template": "episode",
 
+	"href": "un-perimetre-de-desolation",
+
 	"number": 2,
 	"date": "2015-12-23T10:00+01:00",
 
 	"title": "Un périmètre de désolation",
 	"intro": "<strong>Journal de bord du XIe.</strong> Au lendemain des attentats, le quartier du Bataclan est bouclé. La ville, exceptionnellement, est silencieuse.",
+	"lead":  "J’avais fermé les volets qui donnent sur le boulevard. D’ordinaire, je les laisse ouverts. Au petit matin, je n’entends plus un bruit. Le quartier est entièrement bouclé. Le carrefour, d’habitude si bruyant, est vide. Pas une seule voiture ne passe. Il n’y a plus de circulation. Tout est figé, calme. Seules les silhouettes sombres des policiers barrent l’horizon. Leurs uniformes sont les seules tâches verticales. Je les regarde stationner sur le bitume déserté. Autour du Bataclan, ils ont dressé des barrières, boulevard Voltaire et rue Oberkampf. Déjà, des gens se massent aux barricades des forces de l’ordre, à l’extérieur de ce no man’s land. Nous habitons au croisement de ces artères coupées du reste de la ville. C’est un périmètre de désolation.",
 
 	"credits": [
 		"Texte <a href=\"#\">Charlotte Rotman</a>",
@@ -15,13 +18,7 @@
 	"tags": ["Attentats", "Bataclan", "13 Novembre"],
 
 	"rel": {
-		"prev": {
-			"title": "Vendredi ou la nuit sauvage",
-			"href":  "vendredi-ou-la-nuit-sauvage"
-		},
-		"next": {
-			"title": "L'empreinte de la peur",
-			"href":  "l-empreinte-de-la-peur"
-		}
+		"prev": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"next": "episode:treize-novembre/l-empreinte-de-la-peur"
 	}
 }
