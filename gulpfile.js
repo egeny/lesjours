@@ -285,6 +285,7 @@ function html(e) {
 
 		// Get the page's content
 		data[metadata.template].content = fs.readFileSync(path.join(paths.pages, parsed.dir, parsed.name + '.html'));
+		data[metadata.template].content = nunjucks.nunjucks.renderString(data[metadata.template].content.toString(), data);
 
 		// Specific data injection
 		if (metadata.template === 'episode') {
