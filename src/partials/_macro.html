@@ -4,3 +4,7 @@
 		{% if title %}<title id="ui-{{ name }}-title">{{ title }}</title>{% endif %}
 	</svg>
 {%- endmacro %}
+
+{% macro mini(mini) %}
+	{% include "partials/episode/mini.html" %}
+{% endmacro %}

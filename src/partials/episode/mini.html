@@ -1,0 +1,46 @@
+{#
+	Add the markup for a "mini" figure or aside in an episode.
+
+	Placeholders:
+		- mini.number (required in order to be linked with a data-mini)
+		- mini.img
+		- mini.alt (optional but recommended)
+		- mini.href
+		- mini.title
+		- mini.subtitle
+		- mini.caption (optional)
+		- mini.sources (optional, the list of audio sources URLs)
+#}
+{% set tag = "aside" if not mini.sources else "figure" %}
+<{{ tag }} id="mini-{{ mini.number }}" class="mini col-md-2 col-lg-3 gutter-lg-0">
+	{% if tag == "figure" %}
+	<div class="player">
+		<div class="container">
+			<audio aria-hidden="true">
+			{% for source in mini.sources %}
+				{% if r/webm$/g|test(source) %}{% set mime = "audio/webm" %}{% endif %}
+				{% if r/m4a$/g |test(source) %}{% set mime = "audio/mp4"  %}{% endif %}
+				<source type="{{ mime }}" src="{{ source }}" />
+			{% endfor %}
+			</audio>
+			<button class="btn-blank" type="button">
+				<div class="container">
+					<img class="responsive" src="{{ mini.img }}" alt="{{ mini.alt }}" />
+				</div>
+			</button>
+		</div>
+	</div>
+	{% endif %}
+	<a class="link-unstyled" href="{{ mini.href|default("#") }}" />
+		{% if tag == "aside" %}<span class="image"><img class="responsive" src="{{ mini.img }}" alt="{{ mini.alt }}" /></span>{% endif %}
+		<p class="title">{{ mini.title }}</p>
+		<p class="subtitle">{{ mini.subtitle }}</p>
+	</a>
+	{% if mini.caption %}
+		{% if tag == "figure" %}
+			<figcaption>{{ mini.caption }}</figcaption>
+		{% else %}
+			<p class="caption">{{ mini.caption }}</p>
+		{% endif %}
+	{% endif %}
+</{{ tag }}>
