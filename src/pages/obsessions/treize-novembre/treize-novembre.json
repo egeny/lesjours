@@ -13,6 +13,24 @@
 
 	"episodes": [
 		{
+			"href": "a-l-intention-des-victimes",
+
+			"img": "img/header.jpg",
+			"alt": "",
+
+			"number": 5,
+			"date": "2015-12-30T10:00+01:00",
+
+			"title": "« À l’intention des victimes et des impliqués »",
+			"intro": "<strong>Journal de bord du XIe.</strong> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
+			"lead": "Dans ma boîte aux lettres, la veille, j'ai trouvé l’information : un courrier du maire du XIe et une note <q>à l’intention des victimes et des impliqués</q>. Nous sommes <q>des impliqués</q>, alors. ",
+
+			"credits": [
+				"Texte <a href=\"#\">Charlotte Rotman</a>",
+				"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
+			]
+		},
+		{
 			"href": "content-de-vous-avoir-revu",
 
 			"img": "img/header.jpg",
@@ -40,7 +58,7 @@
 			"date": "2015-12-26T10:00+01:00",
 
 			"title": "L’empreinte de la peur",
-			"intro": "Sortir, travailler, réfléchir, l'impensable retour du quotidien",
+			"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, réfléchir, l'impensable retour du quotidien.",
 			"lead": "Les membres de l'équipe des Jours s’envoient des mails : comment travailler ? Que faire ? Quelles propositions journalistiques ? Je suis incapable de répondre. Je n’arrive pas à réfléchir, je n’ai aucun réflexe, aucune idée. Je me tais.",
 
 			"credits": [
