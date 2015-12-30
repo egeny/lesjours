@@ -199,6 +199,10 @@ env.addFilter('startsWith', function(input, pattern) {
 	return new RegExp('^' + pattern).test(input || '');
 });
 
+env.addFilter('test', function(pattern, input) {
+	return pattern.test(input || '');
+});
+
 gulp.task('default', function() {
 	sequence('clean', 'build');
 });
