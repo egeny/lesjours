@@ -10,15 +10,17 @@
 	"intro": "Pour pousser BNP Paribas à arrêter de financer le charbon, l’ONG les Amis de la Terre a multiplié les actions contre la banque. Exemple en octobre, devant une agence à Paris.",
 	"lead":  "Le rendez-vous avait été fixé par les Amis de la Terre un samedi d’octobre dernier, à 11 heures, devant une agence BNP Paribas située place Félix-Eboué, dans le XIIe arrondissement de Paris, en <q>présence de citoyens et de porteurs d’alternatives</q>. Il s’agissait de <q>montrer qu’il est possible d’épargner le climat avec notre argent</q>.",
 
-	"credits": [
-		"Texte <a href=\"#\">Nicolas Cori</a>",
-		"Photos <a href=\"#\">Antoine Stouls/les Amis de la Terre</a>"
-	],
-
 	"tags": ["Charbon", "Climat", "COP21", "Communication", "Amis de la Terre", "BNP Paribas"],
 
 	"rel": {
-		"prev": "episode:good-com-bad-cop/le-charbon-l-ennemi-utile",
-		"next": "episode:good-com-bad-cop/papou-est-dans-le-petrole"
+		"authors": [
+			{ "text":  "author:nicolas-cori" },
+			{ "photo": "Antoine Stouls/les Amis de la Terre" }
+		],
+
+		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"prev":  "episode:good-com-bad-cop/le-charbon-l-ennemi-utile",
+		"next":  "episode:good-com-bad-cop/papou-est-dans-le-petrole",
+		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
 	}
 }

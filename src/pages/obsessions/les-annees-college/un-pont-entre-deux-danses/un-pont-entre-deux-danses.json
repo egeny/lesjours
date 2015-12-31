@@ -10,15 +10,17 @@
 	"intro": "Ce soir, les 3e B du collège Aimé-Césaire vont voir un spectacle de danse au Cent-Quatre. A deux pas de chez eux, mais par-delà le pont où des jeunes se battent régulièrement avec ceux de l ’arrondissement voisin.",
 	"lead":  "Ce 12 novembre, dernière douce soirée d'automne, dernière soirée avant que Paris ne bascule dans autre chose, les 3e&nbsp;B vont voir un spectacle au Cent-Quatre, lieu culturel parisien plutôt branché situé à quelques centaines de mètres de leur collège. Durant toute l'année de troisième, les élèves étudient des œuvres pour l'épreuve d'histoire des arts du brevet. Le programme est libre et les enseignants en profitent pour organiser des sorties autour de ces œuvres, des rencontres avec les artistes. Récemment, les troisièmes sont ainsi allés à Versailles voir les sculptures géantes d'Anish Kapoor. Là, Antoine Labaere, leur professeur principal, a choisi le spectacle d'un chorégraphe qu'il aime particulièrement, Aurélien Bory. Un spectacle d'abord pas facile, abstrait et lent, surtout pour des élèves de 15 ans. <q>On verra bien</q>, sourit-il.",
 
-	"credits": [
-		"Texte <a href=\"#\">Alice Géraud</a>",
-		"Photos <a href=\"#\">Simon Lambert</a>"
-	],
-
 	"tags": ["Education", "Mixité", "Diversité", "Collège", "Danse", "Aurélien Bory", "Paris"],
 
 	"rel": {
-		"prev": "episode:les-annees-college/encore-un-matin",
-		"next": "episode:les-annees-college/a-midi-la-classe-se-tait"
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/encore-un-matin",
+		"next":  "episode:les-annees-college/a-midi-la-classe-se-tait",
+		"last":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde"
 	}
 }

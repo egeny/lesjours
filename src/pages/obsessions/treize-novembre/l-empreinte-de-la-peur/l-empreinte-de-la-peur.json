@@ -10,15 +10,17 @@
 	"intro": "<strong>Journal de bord du XIe.</strong> Sortir, travailler, penser, l'impensable retour du quotidien.",
 	"lead":  "Les membres de l'équipe des Jours s’envoient des mails : comment travailler ? Que faire ? Quelles propositions journalistiques ? Je suis incapable de répondre. Je n’arrive pas à réfléchir, je n’ai aucun réflexe, aucune idée. Je me tais.",
 
-	"credits": [
-		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-	],
-
 	"tags": ["attentats", "Bataclan", "peur"],
 
 	"rel": {
-		"prev": "episode:treize-novembre/un-perimetre-de-desolation",
-		"next": "episode:treize-novembre/content-de-vous-avoir-revu"
+		"authors": [
+			{ "text": "author:charlotte-rotman" },
+			{ "photo": ["Michel Slomka/Hans Lucas", "author:charlotte-rotman"]}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/un-perimetre-de-desolation",
+		"next":  "episode:treize-novembre/content-de-vous-avoir-revu",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

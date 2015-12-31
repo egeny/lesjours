@@ -174,6 +174,10 @@ function folders(dir) {
 // Configure nunjucks
 env = nunjucks.nunjucks.configure(['src'], { watch: false, noCache: true });
 
+env.addFilter('expand', function(input) {
+	return expand(input);
+});
+
 env.addFilter('human', function(input) {
 	var date = new Date(input), month;
 
@@ -340,6 +344,15 @@ function fetch(kind, fragment) {
 			}
 
 			return cache[kind][fragment];
+
+		default:
+			try {
+				cache[kind][fragment] = JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment + '.json')));
+			} catch(e) {
+				cache[kind][fragment] = {};
+			}
+
+			return cache[kind][fragment];
 	}
 }
 
@@ -376,6 +389,7 @@ function html(e) {
 
 		// Inject some data
 		if (metadata.template === 'episode') {
+			// FIXME: avoid expanding, prefer in templates
 			data.obsession = expand(fetch('obsession', parsed.dir.split(path.sep)[1]));
 		}
 

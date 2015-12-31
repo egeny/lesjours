@@ -10,10 +10,15 @@
 	"intro": "<strong>Députés en état d’urgence.</strong> Fabricant d'équilibres au-delà des idéologies, l'élu du Finistère incarne la conversion sécuritaire du Parti socialiste.",
 	"lead":  "",
 
-	"credits": [
-		"Texte <a href=\"#\">Sylvie Regensburg</a>",
-		"Photo <a href=\"#\">Sébastien Calvet</a>"
-	],
+	"tags": ["13 Novembre", "Etat d'urgence", "Parti socialiste", "sécurité", "Jean-Jacques Urvoas"],
 
-	"tags": ["13 Novembre", "Etat d'urgence", "Parti socialiste", "sécurité", "Jean-Jacques Urvoas"]
+	"rel": {
+		"authors": [
+			{ "text":  "author:sylive-regensburg" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
 }

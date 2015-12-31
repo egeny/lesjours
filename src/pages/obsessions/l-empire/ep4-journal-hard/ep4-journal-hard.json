@@ -10,10 +10,15 @@
 	"intro": "Après avoir écarté Rodolphe Belmer, le nouveau patron de Canal + a mené une séance d'humiliation dont se souviennent encore les cadres de la chaîne.",
 	"lead":  "",
 
-	"credits": [
-		"Texte <a href=\"#\">Raphaël Garrigos et Isabelle Roberts</a>",
-		"Photos <a href=\"#\">Sébastien Calvet</a>"
-	],
+	"tags": ["#", "#", "#", "#", "#", "#", "#", "#", "#"],
 
-	"tags": ["#", "#", "#", "#", "#", "#", "#", "#", "#"]
+	"rel": {
+		"authors": [
+			{ "text":  "author:garriberts" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:l-empire/ep1-guignols",
+		"last":  "episode:l-empire/ep6-portrait-bollore"
+	}
 }

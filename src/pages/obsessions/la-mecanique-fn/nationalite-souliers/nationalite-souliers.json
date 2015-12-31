@@ -10,14 +10,16 @@
 	"intro": "Inefficace et attentatoire au principe d’égalité entre les citoyens, la déchéance de nationalité est une vieille revendication de l’extrême droite. Un pari hasardeux de François Hollande en vue de la présidentielle qui suscite un tollé à gauche.",
 	"lead":  "Quelle violence contre les consciences. Tant de reniements, de volte-face et, finalement, de mépris pour ceux qui portent (encore) des idéaux, donneraient presque envie de baisser les bras. L'affaire de la déchéance de la nationalité étendue aux binationaux nés en France est une lamentable faillite politique et morale du duo exécutif Hollande-Valls.",
 
-	"credits": [
-		"Texte <a href=\"#\">Antoine Guiral</a>",
-		"Photo <a href=\"#\">Sébastien Calvet</a>"
-	],
-
 	"tags": ["FN", "Le Pen", "Sarkozy", "Hollande", "Valls", "Cambadelis", "Nationalité"],
 
 	"rel": {
-		"prev": "episode:la-mecanique-fn/france-annee-zero"
+		"authors": [
+			{ "text":  "author:antoine-guiral"   },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:la-mecanique-fn/france-annee-zero",
+		"prev":  "episode:la-mecanique-fn/france-annee-zero",
+		"last":  "episode:la-mecanique-fn/nationalite-souliers"
 	}
 }

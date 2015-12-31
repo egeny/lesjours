@@ -1,6 +1,10 @@
 {% set page = { title: "LesJours", class: "home" } %}
 {% extends "partials/_layout.html" %}
 
+{% macro author(episode) %}
+	{% for group in episode.rel.authors %}{% set group = group|expand %}{% for kind, authors in group %}{% if kind == "text" %}{% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link-unstyled" rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}
+{% endmacro %}
+
 {% block content %}
 <section class="container">
 	<h2 class="sr">À la une</h2>
@@ -13,7 +17,7 @@
 						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img|default("img/header.jpg") }});">
 							<h3 class="h2"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}">{{ home.master.title }}</a></h3>
 							<p>{{ home.master.subtitle }}</p>
-							<span class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}">{{ home.master.obsession.name }}</a> • épisode n°{{ home.master.number }} | Par <a class="link-unstyled" href="{{ home.master.author.href|default("#") }}">{{ home.master.author.name }}</a></span>
+							<span class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}">{{ home.master.obsession.name }}</a> • épisode n°{{ home.master.number }} | Par {{ author(home.master) }}</span>
 						</div>
 					</div>
 				</div>
@@ -26,13 +30,13 @@
 			<h3 class="h3 snake-1"><a href="/obsessions/{{ home.articles[0].obsession.href }}/{{ home.articles[0].href }}" class="snake-container link-unstyled">{{ home.articles[0].title }}</a></h3>
 			<p>{{ home.articles[0].intro }}</p>
 			<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.articles[0].obsession.href }}">{{ home.articles[0].obsession.name }}</a> • épisode n°{{ home.articles[0].number }}</p>
-			<span class="style-meta">Par <a class="link-unstyled" href="{{ home.articles[0].author.href|default("#") }}">{{ home.articles[0].author.name }}</a></span>
+			<span class="style-meta">Par {{ author(home.articles[0]) }}</span>
 		</div>
 		<div class="col col-md-4 col-lg-5 gutter-left-4 obsession-{{ home.articles[1].obsession.color }}">
 			<h3 class="h3 snake-1"><a href="/obsessions/{{ home.articles[1].obsession.href }}/{{ home.articles[1].href }}" class="snake-container link-unstyled">{{ home.articles[1].title }}</a></h3>
 			<p>{{ home.articles[1].intro }}</p>
 			<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.articles[1].obsession.href }}">{{ home.articles[1].obsession.name }}</a> • épisode n°{{ home.articles[1].number }}</p>
-			<span class="style-meta">Par <a class="link-unstyled" href="{{ home.articles[1].author.href|default("#") }}">{{ home.articles[1].author.name }}</a></span>
+			<span class="style-meta">Par {{ author(home.articles[1]) }}</span>
 		</div>
 	</div>
 	{% endif %}

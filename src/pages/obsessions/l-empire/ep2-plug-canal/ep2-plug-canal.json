@@ -18,6 +18,13 @@
 	"tags": ["Bolloré", "Canal+", "Belmer", "Guignols"],
 
 	"rel": {
-		"prev": "episode:l-empire/ep1-guignols"
+		"authors": [
+			{ "text":  "author:garriberts" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:l-empire/ep1-guignols",
+		"prev":  "episode:l-empire/ep1-guignols",
+		"last":  "episode:l-empire/ep6-portrait-bollore"
 	}
 }

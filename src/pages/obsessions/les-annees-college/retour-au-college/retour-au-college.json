@@ -10,14 +10,16 @@
 	"intro": "Les Jours retournent en classe durant un an. Mais quelle idée ?",
 	"lead":  "À l'origine de cette obsession des <em>Jours</em>, il y avait ces questions entêtantes sur la séparation des corps sociaux. Quelles mécaniques sont en œuvre pour séparer avec un tel systématisme les riches des pauvres, les noirs des blancs&nbsp;? Quelles sont celles qui, au contraire, rassemblent et corrigent inégalités et différences ?",
 
-	"credits": [
-		"Texte <a href=\"#\">Alice Géraud</a>",
-		"Photos <a href=\"#\">Simon Lambert</a>"
-	],
-
 	"tags": ["Education", "Collège", "Paris", "Mixité"],
 
 	"rel": {
-		"next": "episode:les-annees-college/encore-un-matin"
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"next":  "episode:les-annees-college/encore-un-matin",
+		"last":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde"
 	}
 }

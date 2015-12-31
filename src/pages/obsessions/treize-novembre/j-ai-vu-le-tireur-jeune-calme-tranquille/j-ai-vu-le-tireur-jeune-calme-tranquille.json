@@ -10,15 +10,17 @@
 	"intro": "<strong>Journal de bord du XIe.</strong> Sophie était à la terrasse du Bataclan le soir de l’attaque, elle s'est cachée pendant plusieurs heures à l'intérieur.",
 	"lead":  "",
 
-	"credits": [
-		"Texte <a href=\"#\">Propos recueillis par Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-	],
-
 	"tags": ["Attentats", "Bataclan", "13 Novembre"],
 
 	"rel": {
-		"prev": "episode:treize-novembre/a-l-intention-des-victimes",
-		"next": "episode:treize-novembre/fiere-de-la-france"
+		"authors": [
+			{ "text": "author:charlotte-rotman" },
+			{ "photo": ["Michel Slomka/Hans Lucas", "author:charlotte-rotman"]  }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/a-l-intention-des-victimes",
+		"next":  "episode:treize-novembre/fiere-de-la-france",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

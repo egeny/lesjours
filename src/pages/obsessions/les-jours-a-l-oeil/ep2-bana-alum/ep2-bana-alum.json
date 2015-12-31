@@ -10,13 +10,16 @@
 	"intro": "Dans un bidonville de Dacca, deux homosexuels bangladais se marient dans la joie et la clandestinité.",
 	"lead":  "À Dacca, la capitale du Bangladesh, un de nos guides dans la communauté nous propose d’assister à un mariage homosexuel. Nous nous retrouvons le soir même dans un endroit peu sécurisé, le long des voies de chemin de fer, dans un bidonville les plus austères et les plus pauvres de Dacca.",
 
-	"credits": [
-		"Texte et photos <a href=\"#\">Sébastian Castelier</a>"
-	],
-
 	"tags": ["Photographie", "Bangladesh", "Homosexualité"],
 
 	"rel": {
-		"prev": "episode:les-jours-a-l-oeil/ep1-munshi-et-abul"
+		"authors": [
+			{ "text":  "author:sebastian-castelier" },
+			{ "photo": "author:sebastian-castelier" }
+		],
+
+		"first": "episode:les-jours-a-l-oeil/ep1-munshi-et-abul",
+		"prev":  "episode:les-jours-a-l-oeil/ep1-munshi-et-abul",
+		"last":  "episode:les-jours-a-l-oeil/ep4-makingof"
 	}
 }

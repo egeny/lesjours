@@ -15,8 +15,13 @@
 					<time class="gutter-bottom-2 style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
 					<address class="gutter-bottom-1">
 						<ul class="list-inline-dotted style-meta">
-						{% for credit in episode.credits %}
-							<li>{{ credit }}</li>
+						{% for group in episode.rel.authors %}
+							{% for kind, authors in group %}
+								{% set kind = "Texte"  if kind == "text"  else kind %}
+								{% set kind = "Photos" if kind == "photo" else kind %}
+								{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
+								<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+							{% endfor %}
 						{% endfor %}
 						</ul>
 					</address>
@@ -45,8 +50,13 @@
 				<div class="col gutter-bottom-1 gutter-sm-2 col-md-left-1 col-md-3 gutter-md-left-0 col-lg-left-2 col-lg-6 gutter-lg-left-0">
 					<p class="sr">Crédits</p>
 					<ul class="list-unstyled">
-					{% for credit in episode.credits %}
-						<li>{{ credit }}</li>
+					{% for group in episode.rel.authors %}
+						{% for kind, authors in group %}
+							{% set kind = "Texte"  if kind == "text"  else kind %}
+							{% set kind = "Photos" if kind == "photo" else kind %}
+							{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
+							<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+						{% endfor %}
 					{% endfor %}
 					</ul>
 				</div>

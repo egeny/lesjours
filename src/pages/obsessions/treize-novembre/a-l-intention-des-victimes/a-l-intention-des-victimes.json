@@ -10,15 +10,17 @@
 	"intro": "<strong>Journal de bord du XIe.</strong> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
 	"lead":  "Dans ma boîte aux lettres, la veille, j'ai trouvé l’information : un courrier du maire du XIe et une note « à l’intention des victimes et des impliqués ». Nous sommes « des impliqués », alors.",
 
-	"credits": [
-		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka</a>, <a href=\"#\">Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-	],
-
 	"tags": ["attentats", "Bataclan", "soutien"],
 
 	"rel": {
-		"prev": "episode:treize-novembre/content-de-vous-avoir-revu",
-		"next": "episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille"
+		"authors": [
+			{ "text": "author:charlotte-rotman" },
+			{ "photo": ["Michel Slomka/Hans Lucas", "author:charlotte-rotman"]}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/content-de-vous-avoir-revu",
+		"next":  "episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

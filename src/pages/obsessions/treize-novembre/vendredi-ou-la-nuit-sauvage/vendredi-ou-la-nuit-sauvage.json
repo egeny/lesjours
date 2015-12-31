@@ -10,14 +10,16 @@
 	"intro": "Ce soir du 13 novembre, notre journaliste Charlotte Rotman était chez elle à côté du Bataclan ; les députés PS Barbara Romagnan et Jean-Jacques Urvoas étaient dans leurs circonscriptions, Vincent, musulman converti et futur assigné à résidence, chez lui à Aubervilliers.",
 	"lead":  "Comme journaliste, on est rarement un témoin involontaire. On se bat au contraire pour être au plus proche d’un événement, pour voir de nos yeux, entendre de nos propres oreilles. Le soir des attentats dans le quartier du Bataclan, les médias ont été tenus à l’écart par les policiers. J’étais, moi, sans le vouloir, au cœur de cette enclave. Mais sur le moment, je n’ai eu aucun réflexe professionnel. C’est venu plus tard, difficilement, pressée par d’autres.",
 
-	"credits": [
-		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Julien Muguet/Hans Lucas</a>"
-	],
-
 	"tags": ["Attentats", "Bataclan", "13 Novembre"],
 
 	"rel": {
-		"next": "episode:treize-novembre/un-perimetre-de-desolation"
+		"authors": [
+			{ "text": "author:charlotte-rotman" },
+			{ "photo": ["Michel Slomka/Hans Lucas", "Julien Muguet/Hans Lucas"] }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"next":  "episode:treize-novembre/un-perimetre-de-desolation",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

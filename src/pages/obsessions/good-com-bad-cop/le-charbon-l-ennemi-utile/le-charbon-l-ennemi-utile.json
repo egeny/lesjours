@@ -10,15 +10,17 @@
 	"intro": "La plupart des entreprises françaises disent se désengager de l’énergie fossile la plus polluante. Des promesses à relativiser, qui leur servent surtout à apparaître irréprochables le temps de la COP.",
 	"lead":  "Qui aurait dit qu’en 2015, l’abandon du charbon serait la principale mesure mise en avant par les grosses entreprises françaises pour évoquer leur engagement climatique ? Dans un pays qui a fermé sa dernière mine il y a plus de dix ans et où seulement cinq centrales à charbon fonctionnent encore.",
 
-	"credits": [
-		"Texte <a href=\"#\">Nicolas Cori</a>",
-		"Photos <a href=\"#\">Pierre Morel</a>"
-	],
-
 	"tags": ["Charbon", "Climat", "COP21", "Communication", "Total", "Engie", "BNP Paribas", "BPCE", "Société générale"],
 
 	"rel": {
-		"prev": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
-		"next": "episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque"
+		"authors": [
+			{ "text":  "author:nicolas-cori" },
+			{ "photo": "author:pierre-morel" }
+		],
+
+		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"prev":  "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"next":  "episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
+		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
 	}
 }

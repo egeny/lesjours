@@ -10,14 +10,16 @@
 	"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
 	"lead":  "",
 
-	"credits": [
-		"Texte <a href=\"#\">Charlotte Rotman</a>",
-		"Photos <a href=\"#\">Michel Slomka/Hans Lucas</a> et <a href=\"#\">Charlotte Rotman</a>"
-	],
-
 	"tags": ["attentats", "Bataclan", "drapeaux"],
 
 	"rel": {
-		"prev": "episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille"
+		"authors": [
+			{ "text": "author:charlotte-rotman" },
+			{ "photo": ["Michel Slomka/Hans Lucas", "author:charlotte-rotman"]  }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

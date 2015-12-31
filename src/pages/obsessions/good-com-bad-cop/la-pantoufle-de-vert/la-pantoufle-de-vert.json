@@ -10,14 +10,16 @@
 	"intro": "Ce think tank veut lutter contre le réchauffement climatique en « décarbonant » l’économie. Financé par les entreprises, il est surtout un outil bien pratique pour communiquer sur leurs engagements climatiques.",
 	"lead":  "",
 
-	"credits": [
-		"Texte <a href=\"#\">Nicolas Cori</a>",
-		"Photos <a href=\"#\">Pierre Morel</a>"
-	],
-
 	"tags": ["Climat", "COP21", "Communication", "Total", "EDF"],
 
 	"rel": {
-		"prev": "episode:good-com-bad-cop/papou-est-dans-le-petrole"
+		"authors": [
+			{ "text":  "author:nicolas-cori" },
+			{ "photo": "author:pierre-morel" }
+		],
+
+		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"prev":  "episode:good-com-bad-cop/papou-est-dans-le-petrole",
+		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
 	}
 }
