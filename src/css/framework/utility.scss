@@ -74,7 +74,7 @@ $margin: grid-margin("sm");
 .list-inline-dotted > li { display: inline-block; }
 
 .list-inline-dotted li:after            { content: " • "; }
-.list-inline-dotted li:last-child:after { content: "";    }
+.list-inline-dotted li:last-child:after { content: none;  }
 
 /* Quick overflows */
 .no-overflow   { overflow: hidden; }
