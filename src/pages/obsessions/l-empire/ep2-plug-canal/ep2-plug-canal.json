@@ -10,11 +10,6 @@
 	"intro": "Arrivé chez Vivendi en lui vendant la chaîne Direct 8, l'homme d'affaires a patienté avant de s'attaquer à sa première cible&nbsp;: Rodolphe Belmer, le numéro 2 de Canal+.",
 	"lead":  "Il aura mis le temps. Il aura attendu son heure, tapi dans l’ombre, guettant sa proie, patiemment. Quand, en juillet 2015, Vincent Bolloré se met à dégommer une à une toutes les têtes de Canal+, ça fait un an déjà qu’il a été nommé président du conseil de surveillance de Vivendi",
 
-	"credits": [
-		"Texte <a href=\"#\">Raphaël Garrigos et Isabelle Roberts</a>",
-		"Photos <a href=\"#\">Sébastien Calvet</a>"
-	],
-
 	"tags": ["Bolloré", "Canal+", "Belmer", "Guignols"],
 
 	"rel": {
@@ -25,6 +20,7 @@
 
 		"first": "episode:l-empire/ep1-guignols",
 		"prev":  "episode:l-empire/ep1-guignols",
+		"next":  "episode:l-empire/ep3-portrait-belmer",
 		"last":  "episode:l-empire/ep6-portrait-bollore"
 	}
 }

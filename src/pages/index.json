@@ -1,11 +1,11 @@
 {
 	"template": "home",
 
-	"master": "episode:treize-novembre/a-l-intention-des-victimes",
+	"master": "episode:l-empire/ep3-portrait-belmer",
 
 	"articles": [
-		"episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
-		"episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde"
+		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
+		"episode:les-jours-a-l-oeil/ep2-bana-alum"
 	],
 
 	"obsessions": [

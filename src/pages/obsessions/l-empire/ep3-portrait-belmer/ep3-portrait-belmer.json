@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "ep3-portrait-belmer",
+
+	"number": 3,
+	"date": "2015-12-31T10:00+01:00",
+
+	"title": "Belmer, la cible<br/>qu'on voit danser",
+	"intro": "Première victime expiatoire de l'ère Bolloré, l'ancien numéro 2 de Canal+ est un pragmatique discret, qui a remis la chaîne d'aplomb en faisant comme avant.",
+	"subtitle": "Première victime expiatoire de l'ère Bolloré, l'ancien numéro 2 de Canal+ est un pragmatique discret.",
+
+	"tags": ["Vincent Bolloré", "Canal+", "Rodolphe Belmer", "Guignols", "Bertrand Méheut"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:garriberts" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:l-empire/ep1-guignols",
+		"prev":  "episode:l-empire/ep2-plug-canal",
+		"next":  "episode:l-empire/ep4-journal-hard",
+		"last":  "episode:l-empire/ep6-portrait-bollore"
+	}
+}
