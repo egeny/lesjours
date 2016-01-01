@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "ingenieur-pourquoi-pas",
+
+	"number": 6,
+	"date": "2016-01-02T10:00+01:00",
+
+	"title": "« Madame, le Front national,<br/>c’est le parti où il y a Marine Le Pen ? »",
+	"intro": "<strong>Instants de classe.</strong> Lendemain du premier tour des régionales, le Front national est arrivé en tête. Comme chaque lundi, la 3e B du collège Aimé-Césaire analyse l'actualité en cours de français.",
+	"lead":  "",
+
+	"tags": ["Education", "Collège", "Paris", "Mixité"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde",
+		"last":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde"
+	}
+}

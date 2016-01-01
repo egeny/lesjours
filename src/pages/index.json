@@ -1,11 +1,11 @@
 {
 	"template": "home",
 
-	"master": "episode:l-empire/ep3-portrait-belmer",
+	"master": "episode:les-annees-college/ingenieur-pourquoi-pas",
 
 	"articles": [
-		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
-		"episode:les-jours-a-l-oeil/ep2-bana-alum"
+		"episode:good-com-bad-cop/la-pantoufle-de-vert",
+		"episode:la-mecanique-fn/nationalite-souliers"
 	],
 
 	"obsessions": [

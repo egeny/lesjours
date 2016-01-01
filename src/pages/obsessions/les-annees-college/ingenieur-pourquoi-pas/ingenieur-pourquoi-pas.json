@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "ingenieur-pourquoi-pas",
+
+	"number": 7,
+	"date": "2016-01-02T10:00+01:00",
+
+	"title": "« Ingénieur ?<br/>Pourquoi pas, pourquoi pas… »",
+	"intro": "Ce matin, Junior a rendez-vous avec la conseillère d’orientation. Où il est question d’un CAP «agent de qualité de l’eau».",
+	"lead":  "",
+
+	"tags": ["Education", "Collège", "Paris", "Mixité", "Orientation"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/madame-front-national",
+		"next": "episode:les-annees-college/ingenieur-pourquoi-pas",
+		"last":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde"
+	}
+}
