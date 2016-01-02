@@ -8,7 +8,7 @@
 
 	"title": "Louis-le-Grand, l’autre bout du monde",
 	"intro": "Jessika, Agita et Soumiga ont été présélectionnées pour intégrer le prestigieux lycée Louis-le-Grand l'an prochain. Première visite ce mercredi 18 novembre, à 30 minutes de métro et quelques années-lumière d'Aimé-Césaire.",
-	"lead":  "Le conseiller principal d'éducation (CPE) de Louis-le-Grand, un établissement situé en plein quartier Latin, sur la rive gauche de la Seine, s'exprime avec un phrasé militaire, une voix saccadée et forte. Il interpelle le groupe d'élèves d'un désuet <q>jeunes gens</q>. Ça en fait sourire certains. Ce mercredi ensoleillé de novembre, ils sont une petite centaine, accompagnés de quelques parents et profs, sélectionnés parmi les meilleurs élèves de troisième des collèges parisiens classé Réseau d'éducation prioritaire (REP). Certains intègrerons le lycée Louis-le-Grand en classe de seconde.</p>",
+	"subtitle":  "Le conseiller principal d'éducation (CPE) de Louis-le-Grand, un établissement situé en plein quartier Latin, sur la rive gauche de la Seine, s'exprime avec un phrasé militaire, une voix saccadée et forte. Il interpelle le groupe d'élèves d'un désuet <q>jeunes gens</q>. Ça en fait sourire certains. Ce mercredi ensoleillé de novembre, ils sont une petite centaine, accompagnés de quelques parents et profs, sélectionnés parmi les meilleurs élèves de troisième des collèges parisiens classé Réseau d'éducation prioritaire (REP). Certains intègrerons le lycée Louis-le-Grand en classe de seconde.</p>",
 
 	"tags": ["Education", "Collège", "Paris", "Mixité"],
 
@@ -20,7 +20,7 @@
 
 		"first": "episode:les-annees-college/retour-au-college",
 		"prev":  "episode:les-annees-college/a-midi-la-classe-se-tait",
-		"next": "episode:les-annees-college/ingenieur-pourquoi-pas"
-		"last":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde"
+		"next": "episode:les-annees-college/madame-front-national",
+		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
 	}
 }

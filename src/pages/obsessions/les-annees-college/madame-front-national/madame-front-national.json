@@ -20,6 +20,7 @@
 
 		"first": "episode:les-annees-college/retour-au-college",
 		"prev":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde",
-		"last":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde"
+		"next":  "episode:les-annees-college/ingenieur-pourquoi-pas",
+		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
 	}
 }
