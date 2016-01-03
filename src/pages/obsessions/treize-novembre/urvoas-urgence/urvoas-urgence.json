@@ -1,0 +1,23 @@
+{
+	"template": "episode",
+
+	"number": 11,
+	"date": "2016-01-05T10:00+01:00",
+
+	"title": "Urvoas relance la politique des chiffres",
+	"intro": "<strong>Députés en état d’urgence.</strong> Ce mercredi 2 décembre, le président de la commission des Lois de l'Assemblée promet un contrôle « en temps réel » de l’état d’urgence par le Parlement. Grâce à des montagnes rassurantes de données.",
+	"subtitle": "",
+
+	"tags": ["13 Novembre", "Etat d'urgence", "Parti socialiste", "sécurité", "Jean-Jacques Urvoas"],
+
+	"rel": {
+		"authors": [
+			{ "text": "author:sylvie-regensburg" },
+			{ "photo": "author:sebastien-calvet"}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}

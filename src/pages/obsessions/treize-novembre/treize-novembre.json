@@ -11,6 +11,8 @@
 
 	"episodes": [
 		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"episode:treize-novembre/foi-sous-les-bombes",
+		"episode:treize-novembre/pratique-fondamentaliste",
 		"episode:treize-novembre/fiere-de-la-france",
 		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
 		"episode:treize-novembre/a-l-intention-des-victimes",
@@ -29,7 +31,7 @@
 			"subtitle": "59 ans, député et ancien maire du XIe"
 		},
 		{
-			"href":     "vendredi-ou-la-nuit-sauvage",
+			"href":     "foi-sous-les-bombes",
 			"img":      "img/assigne-3.jpg",
 			"alt":      "",
 			"title":    "Vincent",

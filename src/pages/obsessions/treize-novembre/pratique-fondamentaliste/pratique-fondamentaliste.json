@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "pratique-fondamentaliste",
+
+	"number": 8,
+	"date": "2016-01-03T10:00+01:00",
+
+	"title": "« L’intéressé adopte une pratique fondamentaliste de l’islam »",
+	"intro": "<strong>Vies d’assignés.</strong> Musulman converti, Vincent s’est retrouvé assigné à résidence après le vote de l'état d'urgence. Une note blanche des renseignements l’accuse d’avoir des fréquentations dangereuses.",
+	"subtitle":  "Vincent n’a le droit de marcher que d’un côté de l’avenue Jean-Jaurès, l'artère qui sépare les communes d’Aubervilliers et de Pantin, en Seine-Saint-Denis. Depuis le 27 novembre, ce musulman converti est assigné à résidence à Aubervilliers.",
+
+	"tags": ["attentats", "Bataclan", "assigné", "état d'urgence"],
+
+	"rel": {
+		"authors": [
+			{ "text": "author:sylvie-regensburg" },
+			{ "photo": "author:sebastien-calvet"}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/fiere-de-la-france",
+		"next":  "episode:treize-novembre/foi-sous-les-bombes",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}

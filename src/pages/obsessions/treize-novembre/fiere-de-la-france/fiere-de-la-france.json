@@ -8,7 +8,7 @@
 
 	"title": "#fierdelafrance ?",
 	"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
-	"lead":  "",
+	"subtitle":  "",
 
 	"tags": ["attentats", "Bataclan", "drapeaux"],
 
@@ -20,6 +20,7 @@
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"prev":  "episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
+		"next":  "episode:treize-novembre/pratique-fondamentaliste",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }
