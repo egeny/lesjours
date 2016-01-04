@@ -7,8 +7,8 @@
 	"date": "2016-01-03T10:00+01:00",
 
 	"title": "La foi sous les bombes",
-	"subtitle": "<strong>Vies d’assignés.</strong> Les services de renseignements jugent Vincent dangereux. Lui se dit pieux. Ce musulman converti de 32 ans est aussi graffeur.",
-	"intro":  "Vincent a toujours été pratiquant, de près ou de loin. <q>Ma mère nous emmenait à la messe le dimanche</q>, se souvient-il. <q>C’est elle qui m’a fait croire en Dieu. Elle interprétait les choses comme des signes. Au Liban, un bombardement était tombé juste à côté de nous. Ça donne la foi en une puissance au-dessus.",
+	"intro": "<strong>Vies d’assignés.</strong> Les services de renseignements jugent Vincent dangereux. Lui se dit pieux. Ce musulman converti de 32 ans est aussi graffeur.",
+	"subtitle":  "Vincent a toujours été pratiquant, de près ou de loin. <q>Ma mère nous emmenait à la messe le dimanche</q>, se souvient-il. <q>C’est elle qui m’a fait croire en Dieu. Elle interprétait les choses comme des signes. Au Liban, un bombardement était tombé juste à côté de nous. Ça donne la foi en une puissance au-dessus.",
 
 	"tags": ["attentats", "Bataclan", "assigné", "état d'urgence"],
 
@@ -20,6 +20,7 @@
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"prev":  "episode:treize-novembre/pratique-fondamentaliste",
+		"next": "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

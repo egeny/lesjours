@@ -1,11 +1,11 @@
 {
 	"template": "home",
 
-	"master": "episode:treize-novembre/foi-sous-les-bombes",
+	"master": "episode:treize-novembre/urvoas-le-deuxieme-flic-de-France",
 
 	"articles": [
-		"episode:good-com-bad-cop/la-pantoufle-de-vert",
-		"episode:la-mecanique-fn/nationalite-souliers"
+		"episode:les-annees-college/madame-front-national",
+		"episode:good-com-bad-cop/papou-est-dans-le-petrole"
 	],
 
 	"obsessions": [
