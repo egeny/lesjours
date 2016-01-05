@@ -18,7 +18,7 @@
 
 	"people": [
 		{
-			"href":     "#",
+			"href":     "ep3-portrait-belmer",
 			"img":      "img/belmer-portrait.jpg",
 			"alt":      "",
 			"title":    "Rodolphe Belmer",
@@ -26,7 +26,7 @@
 			"minor":    true
 		},
 		{
-			"href":     "#",
+			"href":     "ep1-guignols",
 			"img":      "img/bollore-portrait.jpg",
 			"alt":      "",
 			"title":    "Vincent Bolloré",
@@ -34,7 +34,7 @@
 			"minor":    true
 		},
 		{
-			"href":     "#",
+			"href":     "ep2-plug-canal",
 			"img":      "img/meheut-portrait.jpg",
 			"alt":      "",
 			"title":    "Bertrand Méheut",

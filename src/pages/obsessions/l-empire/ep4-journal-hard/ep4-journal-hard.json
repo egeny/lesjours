@@ -4,13 +4,13 @@
 	"href": "ep4-journal-hard",
 
 	"number": 4,
-	"date": "2016-01-01T13:50+01:00",
+	"date": "2016-01-04T13:50+01:00",
 
 	"title": "Bolloré à Canal+, le journal du hard",
-	"intro": "Après avoir écarté Rodolphe Belmer, le nouveau patron de Canal + a mené une séance d'humiliation dont se souviennent encore les cadres de la chaîne.",
-	"lead":  "",
+	"subtitle": "Après avoir écarté Rodolphe Belmer, le nouveau patron de Canal + a mené une séance d'humiliation dont se souviennent encore les cadres de la chaîne.",
+	"intro":  "Nous sommes le lundi 6 juillet 2015 et, comme le chante Louane, une artiste Universal chère à l’intégration verticale de Vincent Bolloré, c’est le jour un, celui qu’on retient. Ou plutôt, si l’on résume le sentiment de ceux qui l’ont vécu, le jour hun.",
 
-	"tags": ["#", "#", "#", "#", "#", "#", "#", "#", "#"],
+	"tags": ["Vincent Bolloré", "Rodolphe Belmer", "Canal+", "Vivendi"],
 
 	"rel": {
 		"authors": [
@@ -19,6 +19,7 @@
 		],
 
 		"first": "episode:l-empire/ep1-guignols",
+		"prev": "episode:l-empire/ep3-portrait-belmer",
 		"last":  "episode:l-empire/ep6-portrait-bollore"
 	}
 }

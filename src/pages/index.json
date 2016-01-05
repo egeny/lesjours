@@ -1,11 +1,11 @@
 {
 	"template": "home",
 
-	"master": "episode:treize-novembre/urvoas-le-deuxieme-flic-de-France",
+	"master": "episode:l-empire/ep4-journal-hard",
 
 	"articles": [
-		"episode:les-annees-college/madame-front-national",
-		"episode:good-com-bad-cop/papou-est-dans-le-petrole"
+		"episode:treize-novembre/pratique-fondamentaliste",
+		"episode:les-jours-a-l-oeil/ep2-bana-alum"
 	],
 
 	"obsessions": [
