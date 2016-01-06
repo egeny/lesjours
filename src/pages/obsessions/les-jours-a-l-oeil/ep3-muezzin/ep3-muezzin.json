@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "ep3-muezzin",
+
+	"number": 3,
+	"date": "2016-01-06T06:50+01:00",
+
+	"title": "Un minaret et des hommes",
+	"intro": "Au Bangladesh, le photographe Sebastian Castelier a rencontré Mahbeb, un muezzin qui a décidé de vivre ouvertement son homosexualité malgré les interdits de sa religion et de son pays.",
+	"subtitle":  "Au centre de Dacca, la capitale du Bangladesh, des centaines de croyants se pressent pour la prière du vendredi sans imaginer que le muezzin du lieu, âgé de 37 ans, dissimule sous sa djellaba une homosexualité assumée et revendiquée.",
+
+	"tags": ["Photographie", "Bangladesh", "Homosexualité"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sebastian-castelier" },
+			{ "photo": "author:sebastian-castelier" }
+		],
+
+		"first": "episode:les-jours-a-l-oeil/ep1-munshi-et-abul",
+		"prev":  "episode:les-jours-a-l-oeil/ep2-bana-alum",
+		"last":  "episode:les-jours-a-l-oeil/ep4-makingof"
+	}
+}
