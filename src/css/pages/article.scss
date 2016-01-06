@@ -82,7 +82,7 @@ article blockquote { position: relative; }
 
 	article blockquote footer {
 		@extend .style-meta;
-		padding-left: 3em;
+		padding-left: 4em;
 	}
 
 article dl,
@@ -477,7 +477,8 @@ article .share { margin-bottom: 1.5em; }
 		left:  -4px; // Offset the border
 	}
 
-	article blockquote p { padding-left: 1.25em; }
+	article blockquote p      { padding-left: 1.25em; }
+	article blockquote footer { padding-left: 3em; }
 	article figcaption   { margin-left: 0; }
 	article .lettrine    { margin-left: -.5em; }
 
