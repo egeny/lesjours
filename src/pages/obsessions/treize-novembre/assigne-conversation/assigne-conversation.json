@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "assigne-conversation",
+
+	"number": 13,
+	"date": "2016-01-06T08:00+01:00",
+
+	"title": "Ses mots l'assignent",
+	"intro": "<strong>Vies d’assignés.</strong> Vincent n’est pas un « bon » assigné à résidence. Il n’est pas militant écolo, il est musulman rigoriste et parfois même un peu complotiste.",
+	"subtitle":  "Déjà un mois que Vincent est assigné à résidence. S’il avait été privé de liberté par une décision de justice, l’accusation aurait dû prouver sa culpabilité. Pas là. L’état d’urgence a sa logique propre, extra-judiciaire.",
+
+	"tags": ["attentats", "Bataclan", "assigné", "état d'urgence", "Daech"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sylvie-regensburg" },
+			{ "photo": "author:sebastien-calvet"}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/transport-terrorisme",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}
