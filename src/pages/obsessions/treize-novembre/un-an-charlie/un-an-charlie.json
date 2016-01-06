@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "un-an-charlie",
+
+	"number": 14,
+	"date": "2016-01-07T08:00+01:00",
+
+	"title": "Un an après Charlie<br/>dans une école du XIe",
+	"subtitle": "<strong>Journal du XIe.</strong> Après les attentats de janvier 2015, les élèves avaient dessiné leurs maux.<br/>Après ceux de novembre, ils ont repris leurs feutres et leurs crayons.",
+	"intro":   "Brigitte Baudelot est institutrice en CM2 dans une école située à mi-chemin entre <i>Charlie Hebdo</i> et le Bataclan, dans l'est de Paris. Il y a un an, l’attaque de l'hebdomadaire satirique, qui a fait 12 morts, s’était déroulée un mercredi vers 11h 30, l’heure de la sortie d’école.",
+
+	"tags": ["attentats", "Bataclan", "Charlie", "école"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman" },
+			{ "photo": "author:sebastien-calvet"}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/assigne-conversation",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}

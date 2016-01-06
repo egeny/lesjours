@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "ep5-jour-de-deug",
+
+	"number": 5,
+	"date": "2016-01-07T13:50+01:00",
+
+	"title": "Jour de « Deug » national pour Canal+",
+	"intro":  "Dans la chaleur du début de l'été s'est tenue une étrange soirée d'hommage à Alain de Greef, dit « Deug », mort la semaine où Vincent Bolloré a entamé son grand ménage au sein du groupe.",
+	"subtitle": "Peut-être se serait-il installé à l’écart de l’agitation du jardin, sous les voûtes, là où Antoine de Caunes a fait une courte et fantomatique apparition. Ou alors aurait-il choisi de s’asseoir avec les trois quarts de Nuls qui ont fait le déplacement pour lui.",
+
+	"tags": ["Vincent Bolloré", "Rodolphe Belmer", "Canal+", "Vivendi", "Alain de Greef"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:garriberts" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:l-empire/ep1-guignols",
+		"prev": "episode:l-empire/ep4-journal-hard",
+		"last":  "episode:l-empire/ep6-portrait-bollore"
+	}
+}
