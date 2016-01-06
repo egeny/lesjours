@@ -7,10 +7,10 @@
 			<span></span>
 		</button>
 		<div id="account">
-			<!--<a class="hidden-sm btn-square" href="/abonnement.html">S’abonner</a>
+			<!--<a class="sm-hidden btn-square" href="/abonnement.html">S’abonner</a>
 			<a id="login" class="btn-blank color-brand" href="#login-modal">
-				<span class="hidden-md hidden-lg btn-round btn-transparent">{{ icon("login") }}</span>
-				<span class="sr-sm btn-square">Se connecter</span>
+				<span class="md-hidden lg-hidden btn-round btn-transparent">{{ icon("login") }}</span>
+				<span class="sm-sr btn-square">Se connecter</span>
 			</a>-->
 			<a id="profile" class="btn-blank" href="#">
 				<img class="responsive" src="/img/profile.svg" alt="Accéder à mon profil" />
@@ -21,7 +21,7 @@
 	<div id="login-modal" class="modal text-left" role="dialog" tabindex="-1">
 		<form action="/session.php" method="post" role="document">
 			<fieldset>
-				<legend class="style-meta-larger gutter-bottom-2">Se connecter</legend>
+				<legend class="style-meta-larger mb-2g">Se connecter</legend>
 				<button class="btn close color-brand" type="button">{{ icon("close", "Fermer cette fenêtre") }}</button>
 				<div class="field">
 					<label for="mail">Adresse e-mail</label>
@@ -32,14 +32,14 @@
 					<input id="password" name="password" type="password" placeholder="××××××××" required />
 				</div>
 				<a class="link external style-meta" href="#">J’ai oublié mon e-mail ou mon mot de passe</a>
-				<button class="btn-primary full-width gutter-top-4 gutter-bottom-4" type="submit">Valider</button>
-				<p class="style-meta no-margin-bottom text-upper color-main">Pas encore jouriste ? <a class="link-unstyled color-brand" href="/abonnement.html">Abonnez-vous maintenant.</a></p>
+				<button class="btn-primary full-width mv-4g" type="submit">Valider</button>
+				<p class="style-meta mb-0 text-upper color-main">Pas encore jouriste ? <a class="link-unstyled color-brand" href="/abonnement.html">Abonnez-vous maintenant.</a></p>
 			</fieldset>
 		</form>
 	</div>
 
 	<nav id="menu" class="container">
-		<div class="col col-md-left-1 col-md-7 col-lg-left-2 col-lg-10">
+		<div class="col md-ml-1c md-w-7c lg-ml-2c lg-w-10c">
 			<a href="/"><i>{{ icon("angle-right") }}</i> À la une</a>
 			<span>Les obsessions :</span>
 			<ul class="list-unstyled">
@@ -55,9 +55,9 @@
 				<li><a href="#"><i>{{ icon("angle-right") }}</i> Conditions d’utilisation</a></li>
 			</ul>
 			<ul class="row list-inline">
-				<li class="col col-sm-auto col-md-1"><a href="https://twitter.com/Lesjoursfr"><i>{{ icon("twitter", "Twitter") }}</i></a></li>
-				<li class="col col-sm-auto col-md-1"><a href="https://www.facebook.com/LesJoursfr/"><i>{{ icon("facebook", "Facebook") }}</i></a></li>
-				<li class="col col-sm-auto col-md-1"><a href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
+				<li class="col sm-w-auto md-w-1c"><a href="https://twitter.com/Lesjoursfr"><i>{{ icon("twitter", "Twitter") }}</i></a></li>
+				<li class="col sm-w-auto md-w-1c"><a href="https://www.facebook.com/LesJoursfr/"><i>{{ icon("facebook", "Facebook") }}</i></a></li>
+				<li class="col sm-w-auto md-w-1c"><a href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
 			</ul>
 		</div>
 	</nav>

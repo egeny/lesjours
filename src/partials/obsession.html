@@ -1,5 +1,5 @@
 <section class="board obsession-{{ obsession.color }}">
-	<header class="container gutter-top-2">
+	<header class="container mt-2g">
 		<div class="row">
 			<div class="col">
 				<div class="wall expanded">
@@ -9,7 +9,7 @@
 		</div>
 	</header>
 
-	<ul class="gutter-bottom-1 col-md-left-1 col-lg-left-1 col-lg-right-1 list-inline text-center sticky-header" role="tablist">
+	<ul class="mb-1g md-ml-1c lg-ml-1c lg-mr-1c list-inline text-center sticky-header" role="tablist">
 		<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="true" tabindex="0">{{ icon("files") }} <span>Les épisodes</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("people") }} <span>Les personnages</span></a></li>
 		<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("camera") }} <span>Les images</span></a></li>
@@ -21,8 +21,8 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col gutter-0 col-md-left-1 col-md-6 col-lg-left-1 col-lg-10">
-				<h2 class="gutter-left-1 style-meta"><a href="/obsessions/{{ obsession.href }}" class="link obsession">{{ obsession.name }}</a></h2>
+			<div class="col ph-0 md-ml-1c md-w-6c lg-ml-1c lg-w-10c">
+				<h2 class="pl-1g style-meta"><a href="/obsessions/{{ obsession.href }}" class="link obsession">{{ obsession.name }}</a></h2>
 				<div class="tab-container">
 					{% include "partials/obsession/episodes.html"   %}
 					{% include "partials/obsession/people.html"     %}

@@ -12,7 +12,7 @@
 		- mini.sources (optional, the list of audio sources URLs)
 #}
 {% set tag = "aside" if not mini.sources else "figure" %}
-<{{ tag }} id="mini-{{ mini.number }}" class="mini col-md-2 col-lg-3 gutter-lg-0">
+<{{ tag }} id="mini-{{ mini.number }}" class="mini md-w-2c lg-w-3c lg-ph-0">
 	{% if tag == "figure" %}
 	<div class="player">
 		<div class="container">

@@ -1,20 +1,7 @@
 /* @group Grid */
 // Inspired by Bootstrap 4 — http://getbootstrap.com
-.container,
-.container-fixed {}
-
-.no-flex .container,
-.no-flex .container-fixed { @include clearfix; }
-
-.container-fixed {
-	margin-right: auto;
-	margin-left:  auto;
-}
-
-.container-no-margin {
-	padding-right: 0 !important;
-	padding-left:  0 !important;
-}
+.container {}
+.no-flex .container { @include clearfix; }
 
 .row {
 	display: flex;
@@ -45,36 +32,40 @@
 	float: left;
 }
 
-.col-auto { width: auto; }
-
 .col-first  { order: -1; }
 .col-last   { order:  1; }
 .col-top    { align-self: flex-start; }
 .col-center { align-self: center;     }
 .col-bottom { align-self: flex-end;   }
 
-.gutter-top-0    { margin-top:    0 !important; }
-.gutter-right-0  { padding-right: 0 !important; }
-.gutter-bottom-0 { margin-bottom: 0 !important; }
-.gutter-left-0   { padding-left:  0 !important; }
-.gutter-0        {
-	@extend .gutter-right-0;
-	@extend .gutter-left-0;
-}
+.w-auto { width: auto; }
 
-.no-margin-top    { margin-top:    0 !important; }
-.no-margin-right  { margin-right:  0 !important; }
-.no-margin-bottom { margin-bottom: 0 !important; }
-.no-margin-left   { margin-left:   0 !important; }
+.ma-0, .m-0  { margin:        0 !important; }
+.mt-0, .mv-0 { margin-top:    0 !important; }
+.mr-0, .mh-0 { margin-right:  0 !important; }
+.mb-0, .mv-0 { margin-bottom: 0 !important; }
+.ml-0, .mh-0 { margin-left:   0 !important; }
+
+.ma-auto, .m-auto  { margin:        auto; }
+.mt-auto, .mv-auto { margin-top:    auto; }
+.mr-auto, .mh-auto { margin-right:  auto; }
+.mb-auto, .mv-auto { margin-bottom: auto; }
+.ml-auto, .mh-auto { margin-left:   auto; }
+
+.pa-0, .p-0  { padding:        0 !important; }
+.pt-0, .pv-0 { padding-top:    0 !important; }
+.pr-0, .ph-0 { padding-right:  0 !important; }
+.pb-0, .pv-0 { padding-bottom: 0 !important; }
+.pl-0, .ph-0 { padding-left:   0 !important; }
 
 // Prepare a mixin to easily add some custom rules depending on breakpoint
-@mixin media($name, $only: false) {
+@mixin media($name, $strict: false) {
 	$sm: map-get($grids, "sm");
 	$md: map-get($grids, "md");
 	$lg: map-get($grids, "lg");
 
 	@if $name == "sm" {
-		@if $only {
+		@if $strict {
 			@media (max-width: map-get($md, "breakpoint")) {
 				@content;
 			}
@@ -82,7 +73,7 @@
 			@content
 		}
 	}	@else if $name == "md" {
-		@if $only {
+		@if $strict {
 			@media (min-width: map-get($md, "breakpoint")) and (max-width: map-get($lg, "breakpoint")) {
 				@content;
 			}
@@ -114,27 +105,17 @@ $last-gutter:     null;
 @each $device, $grid in $grids {
 	$breakpoint: map-get($grid, "breakpoint");
 	$columns:    map-get($grid, "columns");
-	$gutter:     map-get($grid, "gutter") / 2;
-	$margin:     map-get($grid, "margin") - $gutter;
+	$gutter:     map-get($grid, "gutter") / 2;       // Prefer half gutters (added to both sides)
+	$margin:     map-get($grid, "margin") - $gutter; // Remove an half-gutter since container's margin and column's gutters are merged
 
 	// Set these rules for this device and larger
 	@include media($device) {
 		@if $margin != $last-margin {
-			.container,
-			.container-fixed {
+			.container {
 				/* Container's margins */
 				padding-right: $margin;
 				padding-left:  $margin;
 			}
-		}
-
-		@if $breakpoint {
-			.container-fixed { max-width: $breakpoint; }
-		}
-
-		.container-#{$device}-no-margin {
-			padding-right: 0;
-			padding-left:  0;
 		}
 
 		@if $gutter != $last-gutter {
@@ -145,109 +126,100 @@ $last-gutter:     null;
 			}
 		}
 
-		.col-#{$device}-auto { width: auto; }
+		.#{$device}-w-auto { width: auto; }
 
-		.col-#{$device}-top-0    { margin-top:    0; }
-		.col-#{$device}-right-0  { margin-right:  0; }
-		.col-#{$device}-bottom-0 { margin-bottom: 0; }
-		.col-#{$device}-left-0   { margin-left:   0; }
-
-		.col-#{$device}-v-0 {
-			@extend .col-#{$device}-top-0;
-			@extend .col-#{$device}-bottom-0;
-		}
-
-		.col-#{$device}-h-0 {
-			@extend .col-#{$device}-right-0;
-			@extend .col-#{$device}-left-0;
-		}
-
-		// Generate .col-sm-*, .col-md-* and .col-lg-*
+		// Generate .$device-$property-$amount-c(olumns)
 		@for $i from 1 through $columns {
 			$width: (100% / $columns) * $i;
-			.col-#{$device}-#{$i} { width: $width; }
+			.#{$device}-w-#{$i}c { width: $width; }
 
-			.col-#{$device}-top-#{$i}    { margin-top:    $width; }
-			.col-#{$device}-right-#{$i}  { margin-right:  $width; }
-			.col-#{$device}-bottom-#{$i} { margin-bottom: $width; }
-			.col-#{$device}-left-#{$i}   { margin-left:   $width; }
+			.#{$device}-ma-#{$i}c, .#{$device}-m-#{$i}c  { margin:        $width; }
+			.#{$device}-mt-#{$i}c, .#{$device}-mv-#{$i}c { margin-top:    $width; }
+			.#{$device}-mr-#{$i}c, .#{$device}-mh-#{$i}c { margin-right:  $width; }
+			.#{$device}-mb-#{$i}c, .#{$device}-mv-#{$i}c { margin-bottom: $width; }
+			.#{$device}-ml-#{$i}c, .#{$device}-mh-#{$i}c { margin-left:   $width; }
 
-			.col-#{$device}-v-#{$i} {
-				@extend .col-#{$device}-top-#{$i};
-				@extend .col-#{$device}-bottom-#{$i};
-			}
-
-			.col-#{$device}-h-#{$i} {
-				@extend .col-#{$device}-right-#{$i};
-				@extend .col-#{$device}-left-#{$i};
-			}
+			.#{$device}-pa-#{$i}c, .#{$device}-p-#{$i}c  { padding:        $width; }
+			.#{$device}-pt-#{$i}c, .#{$device}-pv-#{$i}c { padding-top:    $width; }
+			.#{$device}-pr-#{$i}c, .#{$device}-ph-#{$i}c { padding-right:  $width; }
+			.#{$device}-pb-#{$i}c, .#{$device}-pv-#{$i}c { padding-bottom: $width; }
+			.#{$device}-pl-#{$i}c, .#{$device}-ph-#{$i}c { padding-left:   $width; }
 		}
 
-		// Add some special .gutter-top-X for special margin
+		// Add some special margin and padding classes (with gutter value)
 		@for $i from 1 through 8 {
-			%gutter-top-#{$gutter}-#{$i} {
-				@if $gutter != $last-gutter { margin-top: $gutter * $i; }
-			}
+			$value: $gutter * $i;
+			%ma-#{$i}-#{$gutter} { @if $gutter != $last-gutter { margin:        $value; } }
+			%mt-#{$i}-#{$gutter} { @if $gutter != $last-gutter { margin-top:    $value; } }
+			%mr-#{$i}-#{$gutter} { @if $gutter != $last-gutter { margin-right:  $value; } }
+			%mb-#{$i}-#{$gutter} { @if $gutter != $last-gutter { margin-bottom: $value; } }
+			%ml-#{$i}-#{$gutter} { @if $gutter != $last-gutter { margin-left:   $value; } }
 
-			%gutter-right-#{$gutter}-#{$i} {
-				@if $gutter != $last-gutter { padding-right: $gutter * $i; }
-			}
+			%pa-#{$i}-#{$gutter} { @if $gutter != $last-gutter { padding:        $value; } }
+			%pt-#{$i}-#{$gutter} { @if $gutter != $last-gutter { padding-top:    $value; } }
+			%pr-#{$i}-#{$gutter} { @if $gutter != $last-gutter { padding-right:  $value; } }
+			%pb-#{$i}-#{$gutter} { @if $gutter != $last-gutter { padding-bottom: $value; } }
+			%pl-#{$i}-#{$gutter} { @if $gutter != $last-gutter { padding-left:   $value; } }
 
-			%gutter-bottom-#{$gutter}-#{$i} {
-				@if $gutter != $last-gutter { margin-bottom: $gutter * $i; }
-			}
+			.ma-#{$i}g, .m-#{$i}g  { @extend %ma-#{$i}-#{$gutter}; }
+			.mt-#{$i}g, .mv-#{$i}g { @extend %mt-#{$i}-#{$gutter}; }
+			.mr-#{$i}g, .mh-#{$i}g { @extend %mr-#{$i}-#{$gutter}; }
+			.mb-#{$i}g, .mv-#{$i}g { @extend %mb-#{$i}-#{$gutter}; }
+			.ml-#{$i}g, .mh-#{$i}g { @extend %ml-#{$i}-#{$gutter}; }
 
-			%gutter-left-#{$gutter}-#{$i} {
-				@if $gutter != $last-gutter { padding-left: $gutter * $i; }
-			}
-
-			%gutter-#{$gutter}-#{$i} {
-				@if $gutter != $last-gutter {
-					padding-right: $gutter * $i;
-					padding-left:  $gutter * $i;
-				}
-			}
-
-			.gutter-top-#{$i}    { @extend %gutter-top-#{$gutter}-#{$i};    }
-			.gutter-right-#{$i}  { @extend %gutter-right-#{$gutter}-#{$i};  }
-			.gutter-bottom-#{$i} { @extend %gutter-bottom-#{$gutter}-#{$i}; }
-			.gutter-left-#{$i}   { @extend %gutter-left-#{$gutter}-#{$i};   }
-			.gutter-#{$i}        { @extend %gutter-#{$gutter}-#{$i};        }
+			.pa-#{$i}g, .p-#{$i}g  { @extend %pa-#{$i}-#{$gutter}; }
+			.pt-#{$i}g, .pv-#{$i}g { @extend %pt-#{$i}-#{$gutter}; }
+			.pr-#{$i}g, .ph-#{$i}g { @extend %pr-#{$i}-#{$gutter}; }
+			.pb-#{$i}g, .pv-#{$i}g { @extend %pb-#{$i}-#{$gutter}; }
+			.pl-#{$i}g, .ph-#{$i}g { @extend %pl-#{$i}-#{$gutter}; }
 		}
 	}
 
 	// Set these rules for this device only
-	@include media($device, true) {
-		.row-#{$device}-top     { align-items: flex-start;     }
-		.row-#{$device}-center  { align-items: center;         }
-		.row-#{$device}-bottom  { align-items: flex-end;       }
-		.row-#{$device}-reverse { flex-direction: row-reverse; }
+	@include media($device, $strict: true) {
+		.#{$device}-row-top     { align-items: flex-start;     }
+		.#{$device}-row-center  { align-items: center;         }
+		.#{$device}-row-bottom  { align-items: flex-end;       }
+		.#{$device}-row-reverse { flex-direction: row-reverse; }
 
-		.col-#{$device}-first  { order: -1; }
-		.col-#{$device}-last   { order:  1; }
-		.col-#{$device}-top    { align-self: flex-start; }
-		.col-#{$device}-center { align-self: center;     }
-		.col-#{$device}-bottom { align-self: flex-end;   }
+		.#{$device}-col-first  { order: -1; }
+		.#{$device}-col-last   { order:  1; }
+		.#{$device}-col-top    { align-self: flex-start; }
+		.#{$device}-col-center { align-self: center;     }
+		.#{$device}-col-bottom { align-self: flex-end;   }
 
-		.gutter-#{$device}-top-0    { margin-top:    0; }
-		.gutter-#{$device}-right-0  { padding-right: 0; }
-		.gutter-#{$device}-bottom-0 { margin-bottom: 0; }
-		.gutter-#{$device}-left-0   { padding-left:  0; }
-		.gutter-#{$device}-0        {
-			@extend .gutter-#{$device}-right-0;
-			@extend .gutter-#{$device}-left-0;
-		}
+		.#{$device}-ma-0, .#{$device}-m-0  { margin:        0; }
+		.#{$device}-mt-0, .#{$device}-mv-0 { margin-top:    0; }
+		.#{$device}-mr-0, .#{$device}-mh-0 { margin-right:  0; }
+		.#{$device}-mb-0, .#{$device}-mv-0 { margin-bottom: 0; }
+		.#{$device}-ml-0, .#{$device}-mh-0 { margin-left:   0; }
 
-		// Add some special .gutter-$device-top-X for special margin
-		@for $i from 1 through 12 {
-			.gutter-#{$device}-top-#{$i}    { margin-top:    $gutter * $i; }
-			.gutter-#{$device}-right-#{$i}  { padding-right: $gutter * $i; }
-			.gutter-#{$device}-bottom-#{$i} { margin-bottom: $gutter * $i; }
-			.gutter-#{$device}-left-#{$i}   { padding-left:  $gutter * $i; }
-			.gutter-#{$device}-#{$i}        {
-				@extend .gutter-#{$device}-right-#{$i};
-				@extend .gutter-#{$device}-left-#{$i};
-			}
+		.#{$device}-ma-auto, .#{$device}-m-auto  { margin:        auto; }
+		.#{$device}-mt-auto, .#{$device}-mv-auto { margin-top:    auto; }
+		.#{$device}-mr-auto, .#{$device}-mh-auto { margin-right:  auto; }
+		.#{$device}-mb-auto, .#{$device}-mv-auto { margin-bottom: auto; }
+		.#{$device}-ml-auto, .#{$device}-mh-auto { margin-left:   auto; }
+
+		.#{$device}-pa-0, .#{$device}-p-0  { padding:        0; }
+		.#{$device}-pt-0, .#{$device}-pv-0 { padding-top:    0; }
+		.#{$device}-pr-0, .#{$device}-ph-0 { padding-right:  0; }
+		.#{$device}-pb-0, .#{$device}-pv-0 { padding-bottom: 0; }
+		.#{$device}-pl-0, .#{$device}-ph-0 { padding-left:   0; }
+
+		// Add some special .$device-X-Yg to easily set margin or padding to a gutter multiplicator
+		@for $i from 1 through 8 {
+			$value: $i * $gutter;
+			.#{$device}-ma-#{$i}g, .#{$device}-m-#{$i}g  { margin:        $value; }
+			.#{$device}-mt-#{$i}g, .#{$device}-mv-#{$i}g { margin-top:    $value; }
+			.#{$device}-mr-#{$i}g, .#{$device}-mh-#{$i}g { margin-right:  $value; }
+			.#{$device}-mb-#{$i}g, .#{$device}-mv-#{$i}g { margin-bottom: $value; }
+			.#{$device}-ml-#{$i}g, .#{$device}-mh-#{$i}g { margin-left:   $value; }
+
+			.#{$device}-pa-#{$i}g, .#{$device}-p-#{$i}g  { padding:        $value; }
+			.#{$device}-pt-#{$i}g, .#{$device}-pv-#{$i}g { padding-top:    $value; }
+			.#{$device}-pr-#{$i}g, .#{$device}-ph-#{$i}g { padding-right:  $value; }
+			.#{$device}-pb-#{$i}g, .#{$device}-pv-#{$i}g { padding-bottom: $value; }
+			.#{$device}-pl-#{$i}g, .#{$device}-ph-#{$i}g { padding-left:   $value; }
 		}
 	}
 

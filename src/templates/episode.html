@@ -3,17 +3,17 @@
 
 {% block content %}
 <article class="obsession-{{ obsession.color }}" role="main">
-	<header class="gutter-bottom-6">
+	<header class="mb-6g">
 		<img src="{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" />
-		<div class="col-md-top-1 col-md-left-1 col-md-5 col-lg-top-1 col-lg-left-2 col-lg-6 snake"></div>
-		<div class="container container-no-margin">
+		<div class="md-mt-1c md-ml-1c md-w-5c lg-mt-1c lg-ml-2c lg-w-6c snake"></div>
+		<div class="container ph-0">
 			<div class="row">
-				<div class="col gutter-sm-4 col-md-left-1 col-md-5 col-lg-left-2 col-lg-6">
-					<p class="gutter-top-2 gutter-bottom-2 style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="obsession" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a></p>
+				<div class="col sm-ph-4g md-ml-1c md-w-5c lg-ml-2c lg-w-6c">
+					<p class="mv-2g style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="obsession" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a></p>
 					<h2 class="h2">{{ episode.title }}</h2>
 					<p>{{ episode.intro }}</p>
-					<time class="gutter-bottom-2 style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
-					<address class="gutter-bottom-1">
+					<time class="mb-2g style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
+					<address class="mb-1g">
 						<ul class="list-inline-dotted style-meta">
 						{% for group in episode.rel.authors %}
 							{% for kind, authors in group %}
@@ -36,10 +36,10 @@
 			</div>
 		</div>
 		{# This must be outside of the .article-container otherwise it won't be sticky due to the overflow: hidden #}
-		<div class="share col col-md-1 col-lg-2 text-center show" data-fade="3000">
+		<div class="share col md-w-1c lg-w-2c text-center show" data-fade="3000">
 			<ul class="sticky">
-				<li class="gutter-sm-bottom-0 gutter-bottom-2"><a class="btn-round" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
-				<li class="gutter-sm-bottom-0 gutter-bottom-2"><a class="btn-round" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
+				<li class="sm-mb-0 mb-2g"><a class="btn-round" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
+				<li class="sm-mb-0 mb-2g"><a class="btn-round" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
 				<li><a class="btn-round" href="#"><i>{{ icon("plane", "Partager") }}</i></a></li>
 			</ul>
 		</div>
@@ -47,7 +47,7 @@
 	<footer class="pattern-1">
 		<div class="meta container">
 			<div class="row style-meta">
-				<div class="col gutter-bottom-1 gutter-sm-2 col-md-left-1 col-md-3 gutter-md-left-0 col-lg-left-2 col-lg-6 gutter-lg-left-0">
+				<div class="col mb-1g sm-ph-2g md-ml-1c md-w-3c md-pl-0 lg-ml-2c lg-w-6c lg-pl-0">
 					<p class="sr">Crédits</p>
 					<ul class="list-unstyled">
 					{% for group in episode.rel.authors %}
@@ -62,7 +62,7 @@
 				</div>
 
 				{% if episode.tags %}
-				<div class="col gutter-bottom-1 gutter-sm-2 col-md-3 col-lg-left-2 col-lg-8 gutter-lg-left-0">
+				<div class="col mb-1g sm-ph-2g md-w-3c lg-ml-2c lg-w-8c lg-pl-0">
 					<p>Les mots-clés</p>
 					<ul class="tags list-unstyled">
 					{% for tag in episode.tags %}
@@ -75,11 +75,11 @@
 		</div>
 
 		{% if episode.rel.prev|published or episode.rel.next|published %}
-		<div class="rel container gutter-top-2">
+		<div class="rel container mt-2g">
 			<p class="sr">D’autres épisodes</p>
 			<ul class="row list-unstyled">
 				{% if episode.rel.prev|published %}
-				<li class="col col-sm-4 col-md-4 col-lg-4 col-lg-right-4">
+				<li class="col sm-w-4c md-w-4c lg-w-4c lg-mr-4c">
 					<a class="link-unstyled" rel="prev" href="/obsessions/{{ obsession.href }}/{{ episode.rel.prev.href }}">
 						<i>{{ icon("angle-left") }}</i>
 						<div>
@@ -90,7 +90,7 @@
 				</li>
 				{% endif %}
 				{% if episode.rel.next|published %}
-				<li class="col col-sm-4 col-md-4 col-lg-4{% if not episode.rel.prev %} col-md-left-4 col-lg-left-8{% endif %}">
+				<li class="col sm-w-4c md-w-4c lg-w-4c{% if not episode.rel.prev %} md-ml-4c lg-ml-8c{% endif %}">
 					<a class="link-unstyled" rel="next" href="/obsessions/{{ obsession.href }}/{{ episode.rel.next.href }}">
 						<i>{{ icon("angle-right") }}</i>
 						<div class="text-right">

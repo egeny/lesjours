@@ -132,8 +132,8 @@ $margin: grid-margin("sm");
 
 @each $device, $grid in $grids {
 	@include media($device, true) {
-		.hidden-#{$device} { display: none !important; }
-		.sr-#{$device}     { @include sr; }
+		.#{$device}-hidden { display: none !important; }
+		.#{$device}-sr     { @include sr; }
 	}
 }
 

@@ -503,8 +503,8 @@ article .share { margin-bottom: 1.5em; }
 				display: block;
 			}
 
-	.article-container > * { @extend .col-md-left-1; }
-	.article-container > * { @extend .col-md-5; }
+	.article-container > * { @extend .md-ml-1c; }
+	.article-container > * { @extend .md-w-5c; }
 
 	.article-container a { background-position: 0 1.0625em; }
 
@@ -520,17 +520,17 @@ article .share { margin-bottom: 1.5em; }
 	.article-container .mini { margin-bottom: $gutter; }
 
 	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
-	.article-container .col-md-left-0 { @extend .col-md-left-0; }
+	.article-container .md-ml-0 { @extend .md-ml-0; }
 
 	// We don't need to go through all the columns, we can stop before the "default" size
 	@for $i from 1 through 4 {
-		.article-container .col-md-#{$i} { @extend .col-md-#{$i}; }
+		.article-container .md-w-#{$i}-c { @extend .md-w-#{$i}-c; }
 	}
 
 	// For columns having the "full" class, remove the margin and expand
-	.article-container > .full { @extend .col-md-left-0; }
-	.article-container > .full { @extend .col-md-8; }
-	.article-container > .full figcaption { @extend .col-md-left-1; }
+	.article-container > .full { @extend .md-ml-0; }
+	.article-container > .full { @extend .md-w-8c; }
+	.article-container > .full figcaption { @extend .md-ml-1c; }
 
 	article .rel i {
 		margin-left: -.5em;
@@ -599,23 +599,22 @@ article .share { margin-bottom: 1.5em; }
 
 	article .mini .title { margin-top: 30px; }
 
-	.article-container > * { @extend .col-lg-left-2; }
-	.article-container > * { @extend .col-lg-6; }
+	.article-container > * { @extend .lg-ml-2c; }
+	.article-container > * { @extend .lg-w-6c; }
 
 	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
-	@for $i from 0 through 1 {
-		.article-container .col-lg-left-#{$i} { @extend .col-lg-left-#{$i}; }
-	}
+	.article-container .lg-ml-0   { @extend .lg-ml-0; }
+	.article-container .lg-ml-1c { @extend .lg-ml-1c; }
 
 	// We don't need to go through all the columns, we can stop before the "default" size
 	@for $i from 1 through 5 {
-		.article-container .col-lg-#{$i} { @extend .col-lg-#{$i}; }
+		.article-container .lg-w-#{$i}-c { @extend .lg-w-#{$i}-c; }
 	}
 
 	// For columns having the "full" class, remove the margin and expand
-	.article-container > .full { @extend .col-lg-left-0; }
-	.article-container > .full { @extend .col-lg-12; }
-	.article-container > .full figcaption { @extend .col-lg-left-2; }
+	.article-container > .full { @extend .lg-ml-0; }
+	.article-container > .full { @extend .lg-w-12c; }
+	.article-container > .full figcaption { @extend .lg-ml-2c; }
 
 	article .meta p,
 	article .meta ul,

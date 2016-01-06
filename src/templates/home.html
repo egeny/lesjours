@@ -8,8 +8,8 @@
 {% block content %}
 <section class="container">
 	<h2 class="sr">À la une</h2>
-	<div class="master row gutter-bottom-4 obsession-{{ home.master.obsession.color }}">
-		<div class="col col-lg-left-1 col-lg-10">
+	<div class="master row mb-4g obsession-{{ home.master.obsession.color }}">
+		<div class="col lg-ml-1c lg-w-10c">
 			<div class="relative no-overflow">
 				<img class="responsive" src="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img|default("img/header.jpg") }}" alt="{{ home.master.alt }}" />
 				<div class="overlay">
@@ -26,13 +26,13 @@
 	</div>
 	{% if home.articles %}
 	<div class="row articles">
-		<div class="col gutter-sm-bottom-4 col-md-4 col-lg-left-1 col-lg-5 gutter-left-4 obsession-{{ home.articles[0].obsession.color }}">
+		<div class="col sm-mb-4g md-w-4c lg-ml-1c lg-w-5c pl-4g obsession-{{ home.articles[0].obsession.color }}">
 			<h3 class="h3 snake-1"><a href="/obsessions/{{ home.articles[0].obsession.href }}/{{ home.articles[0].href }}" class="snake-container link-unstyled">{{ home.articles[0].title }}</a></h3>
 			<p>{{ home.articles[0].intro }}</p>
 			<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.articles[0].obsession.href }}">{{ home.articles[0].obsession.name }}</a> • épisode n°{{ home.articles[0].number }}</p>
 			<span class="style-meta">Par {{ author(home.articles[0]) }}</span>
 		</div>
-		<div class="col col-md-4 col-lg-5 gutter-left-4 obsession-{{ home.articles[1].obsession.color }}">
+		<div class="col md-w-4c lg-w-5c pl-4g obsession-{{ home.articles[1].obsession.color }}">
 			<h3 class="h3 snake-1"><a href="/obsessions/{{ home.articles[1].obsession.href }}/{{ home.articles[1].href }}" class="snake-container link-unstyled">{{ home.articles[1].title }}</a></h3>
 			<p>{{ home.articles[1].intro }}</p>
 			<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.articles[1].obsession.href }}">{{ home.articles[1].obsession.name }}</a> • épisode n°{{ home.articles[1].number }}</p>
@@ -44,7 +44,7 @@
 {% if home.obsessions %}
 <hr/>
 <section class="container">
-	<h2 class="gutter-sm-left-1 col-md-left-1 col-lg-left-1 style-meta-larger gutter-bottom-1">Nos obsessions</h2>
+	<h2 class="sm-pl-1g md-ml-1c lg-ml-1c style-meta-larger mb-1g">Nos obsessions</h2>
 	<ul class="obsessions row list-unstyled">
 		{% for obsession in home.obsessions %}
 		<li class="obsession-{{ obsession.color }}">
@@ -70,10 +70,10 @@
 <hr/>
 <section class="text-center">
 	<h2 class="style-meta-large">Au fil des jours</h2>
-	<ul class="list-inline gutter-top-3 gutter-bottom-3">
-		<li class="col col-auto"><a class="btn-round" href="https://twitter.com/Lesjoursfr"><i>{{ icon("twitter", "Twitter") }}</i></a></li>
-		<li class="col col-auto"><a class="btn-round" href="https://www.facebook.com/LesJoursfr/"><i>{{ icon("facebook", "Facebook") }}</i></a></li>
-		<li class="col col-auto"><a class="btn-round" href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
+	<ul class="list-inline mv-3g">
+		<li class="col w-auto"><a class="btn-round" href="https://twitter.com/Lesjoursfr"><i>{{ icon("twitter", "Twitter") }}</i></a></li>
+		<li class="col w-auto"><a class="btn-round" href="https://www.facebook.com/LesJoursfr/"><i>{{ icon("facebook", "Facebook") }}</i></a></li>
+		<li class="col w-auto"><a class="btn-round" href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
 	</ul>
 </section>
 {% include "partials/_footer.html" %}

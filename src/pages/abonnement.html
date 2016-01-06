@@ -2,12 +2,12 @@
 {% extends "partials/_layout.html" %}
 
 {% block content %}
-<div class="container gutter-bottom-2">
+<div class="container mb-2g">
 	<div class="col">
 		<div class="subscription overflow-auto">
-			<h2 class="col-md-left-1 gutter-top-8 gutter-bottom-3 style-meta-larger">Devenir jouriste</h2>
-			<form action="#" class="col gutter-0 gutter-bottom-2 col-md-left-1 col-md-6 relative">
-				<fieldset id="formule" class="gutter-bottom-4">
+			<h2 class="md-ml-1c mt-8g mb-3g style-meta-larger">Devenir jouriste</h2>
+			<form action="#" class="col ph-0 mb-2g md-ml-1c md-w-6c relative">
+				<fieldset id="formule" class="mb-4g">
 					<legend class="style-meta-large relative">Choisir ma formule</legend>
 					<ul class="plans row list-unstyled text-center">
 						<li class="strong">
@@ -57,8 +57,8 @@
 						</li>
 					</ul>
 				</fieldset>
-				<fieldset id="coordonnees" class="col-lg-6">
-					<legend class="gutter-bottom-2 style-meta-large relative">Mes coordonnées</legend>
+				<fieldset id="coordonnees" class="lg-w-6c">
+					<legend class="mb-2g style-meta-large relative">Mes coordonnées</legend>
 					<div class="field">
 						<label for="name">Nom</label>
 						<input id="name" class="reverse-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" required />
@@ -89,18 +89,18 @@
 					</div>
 				</fieldset>
 				<fieldset id="mode-de-paiement">
-					<legend class="gutter-bottom-2 style-meta-large relative">Mon mode de paiement</legend>
+					<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
 					<div class="gift style-meta">
 						<i class="pull-left">{{ icon("bag") }}</i>
 						<p><strong class="text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
 					</div>
 					<div class="field row">
-						<label class="col gutter-left-0 col-md-auto">
+						<label class="col pl-0 md-w-auto">
 							<input class="radio" type="radio" name="payment" value="bank" required>
 							<span class="radio"></span>
 							Prélèvement
 						</label>
-						<label class="col gutter-sm-left-0 col-md-auto">
+						<label class="col sm-pl-0 md-w-auto">
 							<input class="radio" type="radio" name="payment" value="card" required>
 							<span class="radio"></span>
 							Carte bancaire
@@ -115,7 +115,7 @@
 					</label>
 					<p class="style-meta text-upper">Vous avez choisi la formule « Jouriste » à 9 €/mois. <a class="link-unstyled color-brand" href="#formule">Modifier</a></p>
 					<div class="relative text-center">
-						<button class="col col-md-5 col-lg-5 btn-primary" type="submit">
+						<button class="col md-w-5c lg-w-5c btn-primary" type="submit">
 							<i>{{ icon("check") }}</i>
 							<span>Accéder au paiement</span>
 						</button>

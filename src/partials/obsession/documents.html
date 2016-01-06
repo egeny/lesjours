@@ -1,18 +1,18 @@
 <section id="documents" class="tab col" role="tabpanel" aria-labelledby="tab-documents" aria-hidden="true">
-	<h3 class="gutter-bottom-2 style-meta-larger">Les documents</h3>
+	<h3 class="mb-2g style-meta-larger">Les documents</h3>
 
 	{% if obsession.documents %}
-		<ul class="gutter-bottom-3 style-meta list-inline quick-links">
+		<ul class="mb-3g style-meta list-inline quick-links">
 			{% for group in obsession.documents %}
 			<li><a class="link" href="#{{ group.id }}" />{{ group.title }}</a></li>
 			{% endfor %}
 		</ul>
 
 		{% for group in obsession.documents %}
-		<h4 id="{{ group.id }}" class="gutter-bottom-1 gutter-sm-bottom-2 style-meta-large">{{ group.title }} {{ icon(group.icon, class="color-media") }}</h4>
+		<h4 id="{{ group.id }}" class="mb-1g sm-mb-2g style-meta-large">{{ group.title }} {{ icon(group.icon, class="color-media") }}</h4>
 		<ul class="articles row list-unstyled">
 			{% for item in group.items %}
-			<li class="col gutter-top-2 gutter-left-3 gutter-sm-left-4 gutter-bottom-2">
+			<li class="col mt-2g pl-3g sm-pl-4g mb-2g">
 				{% include "partials/obsession/article-item.html" %}
 			</li>
 			{% endfor %}
