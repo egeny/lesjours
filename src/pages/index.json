@@ -1,11 +1,11 @@
 {
 	"template": "home",
 
-	"master": "episode:l-empire/ep4-journal-hard",
+	"master": "episode:treize-novembre/assigne-conversation",
 
 	"articles": [
-		"episode:treize-novembre/pratique-fondamentaliste",
-		"episode:les-jours-a-l-oeil/ep2-bana-alum"
+		"episode:les-jours-a-l-oeil/ep3-muezzin",
+		"episode:les-annees-college/ingenieur-pourquoi-pas"
 	],
 
 	"obsessions": [
