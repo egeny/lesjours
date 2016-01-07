@@ -405,7 +405,9 @@ function html(e) {
 		content = fs.readFileSync(path.join(paths.pages, parsed.dir, parsed.name + '.html'));
 		data[metadata.template].content = nunjucks.nunjucks.renderString(content.toString(), data);
 		// If metadata.template doesn't exists it will raise an Error (so, no need to check first)
-	} catch(e) {}
+	} catch(e) {
+		if (e.code !== 'ENOENT') { console.log(e); }
+	}
 
 	// Set the final source final to use as a starting point in the stream
 	if (metadata.template) {
