@@ -1,10 +1,10 @@
 {
 	"template": "home",
 
-	"master": "episode:treize-novembre/assigne-conversation",
+	"master": "episode:treize-novembre/un-an-charlie",
 
 	"articles": [
-		"episode:les-jours-a-l-oeil/ep3-muezzin",
+		"episode:l-empire/ep5-jour-de-deug",
 		"episode:les-annees-college/ingenieur-pourquoi-pas"
 	],
 
