@@ -1,11 +1,7 @@
 {
 	"template": "episode",
 
-<<<<<<< HEAD
-	"href":	"urvoas-urgence",
-=======
 	"href": "urvoas-urgence",
->>>>>>> master
 
 	"number": 11,
 	"date": "2016-01-05T10:00+01:00",
