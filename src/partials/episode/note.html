@@ -1,0 +1,14 @@
+{#
+	Add the markup for a "note" aside in an episode.
+
+	Placeholders:
+		- note.number (required in order to be linked with a data-note)
+		- note.title
+		- note.caption
+		- note.href (optional)
+#}
+<aside id="note-{{ note.number }}" class="mini md-w-2c lg-w-3c">
+	<p class="title">{{ note.title }}</p>
+	<p class="caption">{{ note.caption }}</p>
+	{% if note.href %}<a class="more link-unstyled" href="{{ note.href|default("#") }}" />En savoir plus</a>{% endif %}
+</aside>

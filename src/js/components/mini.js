@@ -1,6 +1,6 @@
 $document.ready(function() {
 	var
-		$anchors   = $("[data-mini]"),
+		$anchors   = $("[data-mini],[href^=#note]"),
 		$container = $(".article-container"),
 		$minis     = [], // An array of the associated mini
 		offset     = (68 / 2) + 6 + 8, // The offset to the center of the image
@@ -16,13 +16,15 @@ $document.ready(function() {
 		// It is easier and more accurate to use document's offset
 		var
 			container = $container.offset().top,
-			previous  = { height: 0, top: 0 };// An object to check if we are going to overlap the previous mini
+			previous  = { height: 0, top: 0 }; // An object to check if we are going to overlap the previous mini
 
 		// Position every #mini-X so they will be vertically centered to the anchor
 		$anchors.each(function(index, $element) {
 			var
-				$mini = $minis[index] || ($minis[index] = $("#mini-" + $element.data("mini"))),
-				top   = $element.offset().top - container + ($element.height() / 2) - offset;
+				mini  = !!$element.data("mini"),
+				id    = mini ? "#mini-" + $element.data("mini") : "#note-" + $element.attr("href").replace("#note-", ""),
+				$mini = $minis[index] || ($minis[index] = $(id)),
+				top   = mini ? $element.offset().top - container + ($element.height() / 2) - offset : $element.offset().top - container; // The top offset computation may vary depending on the content (regular "mini" or "note")
 
 			// Check if this mini is going to overlap the previous one and fix
 			if (top < previous.top + previous.height) {
