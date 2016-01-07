@@ -127,6 +127,8 @@ article q:before   { content: "« "; }
 article q:after    { content: " »"; }
 article q q:before { content: "“"; }
 article q q:after  { content: "”"; }
+article blockquote q:before { content: "“"; }
+article blockquote q:after  { content: "”"; }
 
 article table {}
 	article caption {}
