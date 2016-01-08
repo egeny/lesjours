@@ -25,7 +25,7 @@
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-sass": "latest",
-    "gulp-sass-lint": "latest",
+    "gulp-sass-lint": "^1.1.1",
     "gulp-svg-sprite": "^1.2.18",
     "gulp-svgmin": "latest",
     "gulp-uglify": "latest",
