@@ -1,4 +1,6 @@
 $document.ready(function() {
+	"use strict";
+
 	var
 		$burger = $("#burger"),
 		$menu   = $("#menu");

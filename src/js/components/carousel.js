@@ -1,8 +1,11 @@
 $document.ready(function() {
+	"use strict";
+
 	// TODO: check with multiple carousel (might occurs?)
 	// TODO: fallback for older browsers?
 	// TODO: one item?
 	// TODO: bug with two items
+
 	var
 		$carousel = $(".carousel"),
 		$items    = $carousel.children(),
@@ -68,11 +71,11 @@ $document.ready(function() {
 			case "playing":
 			case "running":
 				if (interval) { timer = window.setInterval(change, interval); }
-			break;
+				break;
 
 			case "paused":
 				window.clearInterval(timer);
-			break;
+				break;
 		}
 	});
 

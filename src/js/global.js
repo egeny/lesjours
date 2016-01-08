@@ -1,8 +1,10 @@
-document.body.classList.add("js");
-
+/* eslint no-unused-vars: 0 */
 var
+	$body     = $(document.body),
 	$document = $(document),
 	$window   = $(window);
+
+$body.addClass("js");
 
 // Throttle the calls for a function (avoid calling too many times)
 function throttle(fn, time) {
@@ -14,11 +16,11 @@ function throttle(fn, time) {
 			wait = true;
 			window.setTimeout(function() { wait = false; }, time || 250);
 		}
-	}
+	};
 }
 
 // Set the behaviour for the wall's title buttons
-$document.ready(function () {
+$document.ready(function() {
 	$(".wall .title .btn").click(function(e) {
 		var
 			$this     = $(this),

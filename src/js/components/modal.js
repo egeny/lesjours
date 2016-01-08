@@ -1,4 +1,6 @@
 $document.ready(function() {
+	"use strict";
+
 	$(".modal").each(function() {
 		var $this = $(this);
 		$this.click(function(e) {
