@@ -1,7 +1,7 @@
 /* @group Grid */
 // Inspired by Bootstrap 4 — http://getbootstrap.com
 .container {}
-.no-flex .container { @include clearfix; }
+.no-flexwrap .container { @include clearfix; }
 
 .row {
 	display: flex;
@@ -9,7 +9,7 @@
 	align-content: flex-start; /* Prevent from stretching since we need the content's height for margins */
 }
 
-.no-flex .row {
+.no-flexwrap .row {
 	@include clearfix;
 	display: block;
 }
@@ -27,7 +27,7 @@
 	position: relative;
 }
 
-.no-flex .col {
+.no-flexwrap .col {
 	min-height: 1px;
 	float: left;
 }
