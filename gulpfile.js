@@ -458,8 +458,10 @@ gulp.task('build:css', function() {
 });
 
 gulp.task('lint:js', function() {
-	return gulp.src(paths.js.input + '**/*.js')
-		.pipe(eslint()) // TODO: configure
+	var files = ['global', 'components/*'];
+
+	return gulp.src(files.map(function(file) { return path.join(paths.js.input, file + '.js') }).concat('!**/*.min.js'))
+		.pipe(eslint())
 		.pipe(eslint.format());
 });
 
@@ -482,7 +484,7 @@ gulp.task('optimize:js', function() {
 
 gulp.task('build:js', ['optimize:js'], function() {
 	var
-		files = ['jquery', 'stickyfill', 'hammer', 'jquery.hammer', 'global', 'components/*'],
+		files = ['modernizr', 'jquery', 'stickyfill', 'hammer', 'jquery.hammer', 'global', 'components/*'],
 		streams = merge();
 
 	streams.add(gulp
