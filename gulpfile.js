@@ -112,7 +112,7 @@ var
 	tasks = {
 		'copy:img': function(context) {
 			return function() {
-				return gulp.src(context.input + '/**/*.{ico,gif,jpg,png}')
+				return gulp.src(path.join(context.input, '/**/*.{ico,gif,jpg,png}'))
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
@@ -120,7 +120,7 @@ var
 
 		'optimize:img': function(context) {
 			return function() {
-				return gulp.src(context.input + '**/*.{ico,gif,jpg,png}')
+				return gulp.src(path.join(context.input, '**/*.{ico,gif,jpg,png}'))
 					//.pipe(image()) // For now, disable image's optimization since sometimes it destroy images
 					.pipe(gulp.dest(context.input));
 			}
@@ -128,7 +128,7 @@ var
 
 		'copy:svg': function(context) {
 			return function() {
-				return gulp.src([context.input + '*.svg'])
+				return gulp.src([path.join(context.input, '*.svg')])
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
@@ -136,7 +136,7 @@ var
 
 		'optimize:svg': function(context) {
 			return function() {
-				return gulp.src([context.input + '**/*.svg', '!src/img/snake.svg', '!src/img/ui.svg'])
+				return gulp.src([path.join(context.input, '**/*.svg'), '!src/img/snake.svg', '!src/img/ui.svg'])
 					.pipe(svgmin(config.svgmin))
 					.pipe(replace('fill-rule="evenodd"', ''))
 					.pipe(gulp.dest(context.input));
@@ -433,20 +433,20 @@ function html(e) {
 }
 
 gulp.task('lint:sass', function() {
-	return gulp.src(paths.css.input + '**/*.{scss,sass}')
+	return gulp.src(path.join(paths.css.input, '**/*.{scss,sass}'))
 		.pipe(sasslint())
 		.pipe(sasslint.format());
 });
 
 gulp.task('lint:css', function() {
 	return; // Disabled for now since most of the errors are non-sense
-	return gulp.src(paths.css.input + '**/*.css')
+	return gulp.src(path.join(paths.css.input, '**/*.css'))
 		.pipe(csslint()) // TODO: configure
 		.pipe(csslint.reporter());
 });
 
 gulp.task('build:css', function() {
-	return gulp.src(paths.css.input + 'global.scss')
+	return gulp.src(path.join(paths.css.input, 'global.scss'))
 		.pipe(sass({ outputStyle: 'expanded' }))
 		.pipe(autoprefixer())
 		.pipe(header(banner, context))
@@ -543,7 +543,7 @@ gulp.task('watch', ['build'], function() {
 		function find(partial) {
 			finder.find(partial, paths.partials).then(function(results) {
 				// Clean the results
-				var partials = Object.keys(results).map(function(file) { return 'partials/' + path.relative(paths.partials, file); });
+				var partials = Object.keys(results).map(function(file) { return path.join('partials', path.relative(paths.partials, file)); });
 
 				// Concatenate the found partials
 				found = found.concat(partials);
@@ -553,7 +553,7 @@ gulp.task('watch', ['build'], function() {
 			});
 		}
 
-		find('partials/' + path.relative(paths.partials, e.path));
+		find(path.join('partials', path.relative(paths.partials, e.path)));
 	}
 
 	// The callback function used when a template is changed
@@ -571,10 +571,10 @@ gulp.task('watch', ['build'], function() {
 	gulp.watch(path.join(paths.pages,         '**/*.{html,json}'),                    html);
 	gulp.watch(path.join(paths.pages,         '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'), assets);
 
-	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'),      ['build:css']);
-	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),        ['build:css:img']);
-	gulp.watch(path.join(paths.css.svg.input, '**/*.svg'),                  ['build:css:svg']);
-	gulp.watch(path.join(paths.img.input,     '**/*.{gif,jpg,png}'),        ['build:img']);
-	gulp.watch(path.join(paths.svg.input,     '**/*.svg'),                  ['build:svg']);
-	gulp.watch([path.join(paths.js.input,      '**/*.js'), '!**/*.min.js'], ['build:js']);
+	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'),     ['build:css']);
+	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),       ['build:css:img']);
+	gulp.watch(path.join(paths.css.svg.input, '**/*.svg'),                 ['build:css:svg']);
+	gulp.watch(path.join(paths.img.input,     '**/*.{gif,jpg,png}'),       ['build:img']);
+	gulp.watch(path.join(paths.svg.input,     '**/*.svg'),                 ['build:svg']);
+	gulp.watch([path.join(paths.js.input,     '**/*.js'), '!**/*.min.js'], ['build:js']);
 });
