@@ -216,6 +216,10 @@ env.addFilter('published', function(input, date) {
 	}
 });
 
+env.addFilter('removeBR', function(input) {
+	return (input || '').replace(/<br\/?>/g, ' ');
+});
+
 env.addFilter('startsWith', function(input, pattern) {
 	return new RegExp('^' + pattern).test(input || '');
 });

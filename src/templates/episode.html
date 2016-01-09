@@ -1,4 +1,4 @@
-{% set page = { title: episode.title + " — Les Jours" } %}
+{% set page = { title: episode.title|removeBR + " — Les Jours" } %}
 {% extends "partials/_layout.html" %}
 
 {% block content %}
@@ -10,7 +10,7 @@
 			<div class="row">
 				<div class="col sm-ph-4g md-ml-1c md-w-5c lg-ml-2c lg-w-6c">
 					<p class="mv-2g style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="obsession" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a></p>
-					<h2 class="h2">{{ episode.title }}</h2>
+					<h2 class="h2">{{ episode.title|removeBR }}</h2>
 					<p>{{ episode.intro }}</p>
 					<time class="mb-2g style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
 					<address class="mb-1g">
