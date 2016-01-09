@@ -3,14 +3,22 @@ $margin: grid-margin("sm");
 
 // Mixins
 .clearfix { @include clearfix; }
+
 .fadable,
-%fadable { @include fadable; }
-.fadable:hover,
-.fadable:focus,
+%fadable {
+	@include fadable;
+
+	&:hover,
+	&:focus { @include fadable-active; }
+}
+
 %fadable-active { @include fadable-active; }
+
 .responsive { @include responsive; }
 
-.block { display: block; }
+.block        { display: block; }
+.inline-block { display: inline-block; }
+
 .color-inherit { color: inherit; }
 
 /* Reusable class to fake a bottom margin */
@@ -18,11 +26,11 @@ $margin: grid-margin("sm");
 	background: $color-white;
 	height: $margin;
 
-	z-index: 10000;
 	position: fixed;
 	right:  0;
 	bottom: 0;
 	left:   0;
+	z-index: 10000;
 }
 
 /* Quick width or height 100% */
@@ -33,9 +41,9 @@ $margin: grid-margin("sm");
 .link,
 %link {
 	background-image: linear-gradient(to bottom, $color-media, $color-media);
-	background-position: 0 1em;
-	background-repeat: no-repeat;
+	background-position: 0 1.075em;
 	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	padding: .125em 0;
 
 	// Don't use display: inline-block since it might cause issues with long links
@@ -43,21 +51,30 @@ $margin: grid-margin("sm");
 
 	font-weight: bold; // Don't use the font-weight-* mixin here since we don't know which font will be used
 	text-decoration: none;
-	text-transform: uppercase;
 
 	color: $color-main;
+
+	&:hover,
+	&:focus { @extend %link-active; }
+
+	&.external { background-image: linear-gradient(to bottom, $color-external, $color-external); }
 }
 
-.link:hover,
-.link:focus,
-%link-active { background-position: 0 0; }
+@include media("md") {
+	.link { background-position: 0 1em; }
+}
 
-.link.external { background-image: linear-gradient(to bottom, $color-external, $color-external); }
+%link-active { background-position: 0 0; }
 
 @each $colors in $colors-obsessions {
 	$i:     index($colors-obsessions, $colors);
 	$color: map-get($colors, "light");
-	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+
+	.obsession-#{$i} {
+		.link {
+			.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+		}
+	}
 }
 
 .link-unstyled {
@@ -68,13 +85,12 @@ $margin: grid-margin("sm");
 }
 
 /* List utility classes */
-.list-unstyled { list-style: none; }
+.list-unstyled > li         { padding: 0; }
+.list-unstyled > li::before { content: none; }
 
-.list-inline > li,
-.list-inline-dotted > li { display: inline-block; }
-
-.list-inline-dotted li:after            { content: " • "; }
-.list-inline-dotted li:last-child:after { content: none;  }
+.list-inline > li                     { display: inline-block; }
+.list-inline > li:first-child         { padding: 0; }
+.list-inline > li:first-child::before { content: none; }
 
 /* Quick overflows */
 .no-overflow   { overflow: hidden; }
@@ -107,22 +123,34 @@ $margin: grid-margin("sm");
 .pull-left  { float: left;  }
 .pull-right { float: right; }
 
+
+%quote {
+	// Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox)
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>");
+	background-repeat: no-repeat;
+}
+
+
 /* Quick position: relative */
 .relative { position: relative; }
 
 /* Screen reader only */
-.sr,
-.sr-focusable { @include sr; }
+%sr,
+.sr { @include sr; }
 
-.sr-focusable:active,
-.sr-focusable:focus {
-	width:  auto;
-	height: auto;
-	margin: 0;
+.sr-focusable {
+	@include sr;
 
-	overflow: visible;
-	position: static;
-	clip: auto;
+	&:active,
+	&:focus {
+		width:  auto;
+		height: auto;
+		margin: 0;
+
+		clip: auto;
+		overflow: visible;
+		position: static;
+	}
 }
 
 .text-left   { text-align: left;   }
