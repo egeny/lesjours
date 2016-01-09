@@ -1,17 +1,18 @@
 /* @group Grid */
 // Inspired by Bootstrap 4 — http://getbootstrap.com
-.container {}
-.no-flexwrap .container { @include clearfix; }
+.container {
+	.no-flexwrap & { @include clearfix; }
+}
 
 .row {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start; /* Prevent from stretching since we need the content's height for margins */
-}
 
-.no-flexwrap .row {
-	@include clearfix;
-	display: block;
+	.no-flexwrap & {
+		@include clearfix;
+		display: block;
+	}
 }
 
 .row-top     { align-items: flex-start;     }
@@ -25,11 +26,11 @@
 	flex-shrink: 0;
 
 	position: relative;
-}
 
-.no-flexwrap .col {
-	min-height: 1px;
-	float: left;
+	.no-flexwrap & {
+		min-height: 1px;
+		float: left;
+	}
 }
 
 .col-first  { order: -1; }
