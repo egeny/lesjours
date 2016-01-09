@@ -440,7 +440,7 @@ function html(e) {
 }
 
 gulp.task('lint:sass', function() {
-	return gulp.src(path.join(paths.css.input, '**/*.{scss,sass}'))
+	return gulp.src([path.join(paths.css.input, '**/*.{scss,sass}'), '!src/css/framework/grid.scss'])
 		.pipe(sasslint())
 		.pipe(sasslint.format());
 });
