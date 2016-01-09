@@ -350,23 +350,6 @@ article .share { margin-bottom: 1.5em; }
 	margin-bottom: 1.5em;
 }
 
-.article-container ul,
-.article-container ol {
-	counter-reset: list;
-	list-style: none;
-}
-
-	.article-container ul ul,
-	.article-container ul ol,
-	.article-container ol ul,
-	.article-container ol ol { padding-left: 1em; }
-
-	.article-container li { counter-increment: list; }
-	.article-container li:before { @include font-weight-bold("archer"); }
-	.article-container ul li:before { content: "• "; }
-	.article-container ol li:before { content: "• " counter(list) " "; }
-	.article-container ol ol li:before { content: "• " counter(list, lower-alpha) " "; }
-
 	.article-container .mini { margin: 0; }
 	.article-container .share li:before { content: none; }
 

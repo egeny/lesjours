@@ -2,7 +2,7 @@
 	<h3 class="mb-2g style-meta-larger">La bande originale</h3>
 
 	{% if obsession.soundtrack %}
-		<ul class="mb-3g style-meta list-inline quick-links">
+		<ul class="mb-3g style-meta list-unstyled list-inline quick-links">
 			{% for group in obsession.soundtrack %}
 			<li><a class="link" href="#{{ group.id }}" />{{ group.title }}</a></li>
 			{% endfor %}
