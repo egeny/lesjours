@@ -43,6 +43,20 @@ abbr {
 /* Disable the default italic for address */
 address { font-style: inherit; }
 
+/* Default styles for <aside> */
+aside {
+	p {
+		margin: 0;
+		@extend .h2;
+		@include font-weight-bold("brandon");
+		font-size: 2em;
+	}
+
+	span {
+		font-size: 1.333333em;
+		color: $color-brand;
+	}
+}
 /* Remove default fieldset styles */
 fieldset {
 	padding: 0;

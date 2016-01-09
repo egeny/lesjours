@@ -31,16 +31,6 @@ article a:hover,
 article a:focus { @extend %link-active; }
 
 article abbr  {}
-article aside {}
-
-	article aside p {
-		@extend .h2;
-		@include font-weight-bold("brandon");
-		font-size: 2em;
-		margin: 0;
-	}
-
-	article aside span { font-size: 1.333333em; }
 
 // Archer's bold is actually bolder than the default "bold" (its font-weights seems wrong)
 article b,
