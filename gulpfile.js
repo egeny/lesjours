@@ -567,7 +567,7 @@ gulp.task('watch', ['build'], function() {
 
 		// Simply look the cache for the pages associated to the given template
 		(cache.template[parsed.name] || []).forEach(function(page) {
-			html({ path: page });
+			html({ path: path.join(paths.pages, page) });
 		});
 	}
 
