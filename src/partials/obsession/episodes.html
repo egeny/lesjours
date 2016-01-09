@@ -27,8 +27,8 @@
 	</article>
 
 	{% if episodes.length > 1 %}
-	<div class="previous">
-		<div class="pattern-1"></div>
+	<hr class="mh-0" />
+	<section class="previous">
 		<h4 class="style-meta-large pl-1g mv-2g">Précédemment…</h4>
 		<ol class="f3 row list-unstyled">
 			{% for episode in episodes %}
@@ -46,6 +46,6 @@
 				{% endif %}
 			{% endfor %}
 		</ol>
-	</div>
+	</section>
 	{% endif %}
 </section><!-- end of #episodes -->

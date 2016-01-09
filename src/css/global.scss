@@ -2,7 +2,8 @@
 @import "mixins/mixins";
 @import "framework/framework";
 
-// Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com
+$margin: grid-margin("sm");
+$gutter: grid-gutter("sm");
 
 html {
 	background: $color-white;
@@ -58,6 +59,16 @@ figure picture,
 figure svg,
 figure table,
 figure video { @include responsive; }
+}
+
+/* Default styles for <hr/> */
+hr {
+	@extend .pattern-1;
+
+	height: $gutter;
+	border: 0;
+	margin: $gutter $margin;
+}
 
 /* The <h1> is reserved for the page's title */
 h1 { font-size: 1em; }
@@ -75,7 +86,6 @@ ul, ol { padding: 0; }
 ::selection {
 	background: $color-external;
 	text-shadow: none;
-}
 
 /* Default style for UI elements */
 [class^=ui-] {
@@ -86,6 +96,48 @@ ul, ol { padding: 0; }
 
 /* ARIA FTW */
 [aria-hidden=true] { display: none; }
+
+}
+
+@include media("md") {
+	$margin: grid-margin("md");
+	$gutter: grid-gutter("md");
+
+	@if $margin != grid-margin("sm") {
+		hr {
+			margin-right: $margin;
+			margin-left:  $margin;
+		}
+	}
+
+	@if $gutter != grid-gutter("sm") {
+		hr {
+			height:        $gutter;
+			margin-top:    $gutter;
+			margin-bottom: $gutter;
+		}
+	}
+}
+
+@include media("lg") {
+	$margin: grid-margin("lg");
+	$gutter: grid-gutter("lg");
+
+	@if $margin != grid-margin("md") {
+		hr {
+			margin-right: $margin;
+			margin-left:  $margin;
+		}
+	}
+
+	@if $gutter != grid-gutter("md") {
+		hr {
+			height:        $gutter;
+			margin-top:    $gutter;
+			margin-bottom: $gutter;
+		}
+	}
+}
 
 @import "components/components";
 @import "partials/partials";

@@ -1,5 +1,4 @@
 /* @group Home */
-$margin:  grid-margin("sm");
 $gutter:  grid-gutter("sm");
 $columns: map-get(map-get($grids, "sm"), "columns");
 
@@ -52,14 +51,6 @@ $columns: map-get(map-get($grids, "sm"), "columns");
 	@extend .pattern-2;
 }
 
-hr {
-	height: $gutter;
-	@extend .pattern-1;
-
-	border: 0;
-	margin: $margin;
-}
-
 .home .text-center h2 { @include font-weight-light("proxima"); }
 
 @include media("sm", true) {
@@ -67,7 +58,6 @@ hr {
 }
 
 @include media("md") {
-	$margin: grid-gutter("md");
 	$gutter: grid-gutter("md");
 	$columns: map-get(map-get($grids, "md"), "columns");
 
@@ -77,10 +67,6 @@ hr {
 	}
 
 	.home .obsessions li { width: (100% / 2); }
-
-	@if $margin != grid-margin("sm") {
-		hr { margin: $margin; }
-	}
 
 	@if $gutter != grid-gutter("sm") {
 		.home .master .snake-4-tmp {
@@ -112,21 +98,14 @@ hr {
 			background-size: calc(100% + #{$gutter * 2} + #{$gutter});
 			background-position: #{-$gutter * 2} #{-$gutter * 2};
 		}
-
-		hr { height: $gutter; }
 	}
 }
 
 @include media("lg") {
-	$margin: grid-gutter("lg");
 	$gutter: grid-gutter("lg");
 	$columns: map-get(map-get($grids, "lg"), "columns");
 
 	.home .obsessions li { width: (100% / 3); }
-
-	@if $margin != grid-margin("md") {
-		hr { margin: $margin; }
-	}
 
 	@if $gutter != grid-gutter("md") {
 		.home .master .snake-4-tmp {
@@ -158,8 +137,6 @@ hr {
 			background-size: calc(100% + #{$gutter * 2} + #{$gutter});
 			background-position: #{-$gutter * 2} #{-$gutter * 2};
 		}
-
-		hr { height: $gutter; }
 	}
 }
 /* @end Home */
