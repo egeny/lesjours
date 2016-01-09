@@ -112,6 +112,34 @@ fieldset {
 	margin:  0;
 }
 
+/* Default styles for <figcaption> */
+figcaption {
+	@extend .snake-2;
+	@extend .style-meta;
+	margin-top: .75em;
+	margin-left: $gutter * 2.25;
+
+	line-height: inherit;
+	color:       inherit;
+
+	&::before {
+		height: auto;
+		top: -30px;
+	}
+
+	> span { @extend .snake-container; }
+
+	.credits {
+		@include font-weight-regular("proxima");
+		&::before { content: "— "; }
+
+		a {
+			background-position: 0 1.125em;
+			font-weight: inherit;
+		}
+	}
+}
+
 /* Set figure's content as responsive */
 figure audio,
 figure canvas,
@@ -206,6 +234,7 @@ ul, ol { padding: 0; }
 
 	.obsession-#{$i} {
 		blockquote::before { background-color: rgba($color, .75); }
+		figcaption::before { border-color: $color; }
 	}
 }
 
@@ -217,6 +246,9 @@ ul, ol { padding: 0; }
 		p      { padding-left: 1.25em; }
 		footer { padding-left: 3em; }
 	}
+
+	figcaption { margin-left: 0; }
+
 	@if $margin != grid-margin("sm") {
 		blockquote::before { left: $margin / -2; }
 		hr {

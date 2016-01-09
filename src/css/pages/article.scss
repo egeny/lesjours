@@ -39,27 +39,10 @@ article dt,
 article dfn,
 article dd {}
 
-article figure {}
-
-	article figcaption {
-		@extend .snake-2;
-		@extend .style-meta;
-		margin-top: .75em;
-		margin-left: $gutter * 2.25;
-		color: inherit;
-		line-height: inherit;
+		&:hover,
+		&:focus { @extend %link-active; }
 	}
 
-	article figcaption:before {
-		height: auto;
-		top: -30px;
-	}
-
-	article figcaption > span { @extend .snake-container; }
-	article figcaption > span .credits:before { content: "— "; }
-
-	article figcaption .credits,
-	article figcaption .credits a { @include font-weight-regular("proxima"); }
 
 article h3 { @extend .h4; }
 article h4 { @extend .h5; }
@@ -391,7 +374,6 @@ article .share { margin-bottom: 1.5em; }
 		left:  -4px; // Offset the border
 	}
 
-	article figcaption   { margin-left: 0; }
 	article .lettrine    { margin-left: -.5em; }
 
 	article .share {
