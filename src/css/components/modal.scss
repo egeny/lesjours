@@ -3,37 +3,38 @@ $gutter: grid-gutter("sm");
 
 .modal {
 	background:
-		url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>") 0/2px 4px
+		url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>") 0 / 2px 4px
 		rgba($color-black, .7);
 
-	overflow: auto;
 	display: none;
-	z-index: 20000;
+	overflow: auto;
+
 	position: fixed;
 	top:    0;
 	right:  0;
 	bottom: 0;
 	left:   0;
-}
+	z-index: 20000;
 
-.modal:target { display: block; }
+	&:target { display: block; }
 
-	.modal [role="document"] {
+	[role="document"] {
 		background: $color-white;
 		padding: $gutter;
 		color: $color-main;
 	}
 
-	.modal .close {
+	.close {
 		position: absolute;
 		top:   $gutter;
 		right: $gutter;
-	}
 
-		.modal .close svg {
+		svg {
 			width:  24px;
 			height: 24px;
 		}
+	}
+}
 
 @include media("md") {
 	$gutter: grid-gutter("md");
@@ -47,10 +48,13 @@ $gutter: grid-gutter("sm");
 	}
 
 	@if $gutter != grid-gutter("sm") {
-		.modal [role="document"] { padding: $gutter; }
-		.modal .close {
-			top:   $gutter;
-			right: $gutter;
+		.modal {
+			[role="document"] { padding: $gutter; }
+
+			.close {
+				top:   $gutter;
+				right: $gutter;
+			}
 		}
 	}
 }
@@ -58,10 +62,13 @@ $gutter: grid-gutter("sm");
 @include media("lg") {
 	$gutter: grid-gutter("lg");
 	@if $gutter != grid-gutter("md") {
-		.modal [role="document"] { padding: $gutter; }
-		.modal .close {
-			top:   $gutter;
-			right: $gutter;
+		.modal {
+			[role="document"] { padding: $gutter; }
+
+			.close {
+				top:   $gutter;
+				right: $gutter;
+			}
 		}
 	}
 }
