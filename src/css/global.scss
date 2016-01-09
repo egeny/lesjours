@@ -210,6 +210,14 @@ li ol li {
 /* Set a default margin for <p> */
 p { margin-bottom: 1.5em; }
 
+/* Set the correct quotes */
+q {
+	quotes: "« " " »" "“" "”";
+	font-style: italic;
+
+	blockquote & { quotes: "“" "”"; }
+}
+
 /* Allow only vertical resizing of textareas */
 textarea { resize: vertical; }
 
