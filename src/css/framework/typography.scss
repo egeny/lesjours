@@ -1,21 +1,21 @@
 %font-archer {
-	font-family: "Archer SSm A", "Archer SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
+	font-family: "Archer SSm A", "Archer SSm B", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 %font-archer-smcp {
-	font-family: "Archer SSm SMCP A", "Archer SSm SMCP B", Helvetica, Arial, sans-serif;
 	font-style: normal;
+	font-family: "Archer SSm SMCP A", "Archer SSm SMCP B", Helvetica, Arial, sans-serif;
 }
 
 %font-brandon {
-	font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
+	font-family: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 %font-proxima {
-	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-style: normal;
+	font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @mixin font-weight-thin($font: "")        { font-weight: 100; }
@@ -29,28 +29,44 @@
 @mixin font-weight-black($font: "")       { font-weight: 900; }
 
 /* Headings */
-.h2, .h3, .h4, .h5, .h6 {
+%heading {
 	@extend %font-brandon;
 	@include font-weight-black("brandon");
 	line-height: 1;
 }
 
-.h2 { font-size: 2rem;     }
-.h3 { font-size: 1.75rem;  }
-.h4 { font-size: 1.5rem;   }
-.h5 { font-size: 1.125rem; }
-.h6 { font-size: .8125rem; }
+.h2 {
+	margin-bottom: .25em;
+	@extend %heading;
+	font-size: 2rem;
+}
 
-.h2 { margin-bottom: 0.25em; }
-.h3,
-.h4 { margin-bottom: 0.5em; }
-.h5,
-.h6 { margin-bottom: 0.75em; }
+.h3 {
+	margin-bottom: .5em;
+	@extend %heading;
+	font-size: 1.75rem;
+}
 
-.h5 { line-height: 1.25; }
-.h6 { line-height: 1.5;  }
+.h4 {
+	margin-bottom: .5em;
+	@extend %heading;
+	font-size: 1.5rem;
+}
 
-.h6 { @include font-weight-medium("brandon"); }
+.h5 {
+	margin-bottom: .75em;
+	@extend %heading;
+	font-size: 1.125rem;
+	line-height: 1.25;
+}
+
+.h6 {
+	margin-bottom: .75em;
+	@extend %heading;
+	@include font-weight-medium("brandon");
+	font-size: .8125rem;
+	line-height: 1.5;
+}
 
 /* Body */
 .p {
@@ -73,9 +89,9 @@
 	font-size: .8125em;
 	line-height: 2;
 	color: $color-dark;
-}
 
-.style-meta a { padding: 0.075em 0; }
+	a { padding: .075em 0; }
+}
 
 .style-meta-large {
 	@extend %font-proxima;
