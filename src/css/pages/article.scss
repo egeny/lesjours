@@ -32,9 +32,6 @@ article a:focus { @extend %link-active; }
 
 article abbr  {}
 
-// Archer's bold is actually bolder than the default "bold" (its font-weights seems wrong)
-article b,
-article strong { @include font-weight-bold("archer"); }
 
 article blockquote { position: relative; }
 

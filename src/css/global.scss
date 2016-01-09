@@ -57,6 +57,9 @@ aside {
 		color: $color-brand;
 	}
 }
+
+// Archer's bold is actually bolder than the default "bold" (its font-weights seems wrong)
+b, strong { @include font-weight-bold("archer"); }
 /* Remove default fieldset styles */
 fieldset {
 	padding: 0;
