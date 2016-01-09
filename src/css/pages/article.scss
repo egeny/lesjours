@@ -62,13 +62,6 @@ article table {}
 			article th {}
 			article td {}
 
-article .dialogue {
-	margin-top:    1.5em;
-	margin-bottom: .75em;
-}
-
-	article .dialogue p        { margin-bottom: .75em; }
-	article .dialogue p:before { content: "— "; }
 
 // FIXME: article-container or global?
 a[href^="#note"]:after { content: "*"; }
