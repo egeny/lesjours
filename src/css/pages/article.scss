@@ -69,33 +69,12 @@ a[href^="#note"]:after { content: "*"; }
 }
 
 
-article .lettrine {
-	background-color: $color-brand;
+	h3,
+	h4,
+	h5 { margin-bottom: 0; }
 
-	width: 1.6em;
-	line-height: 1.6em;
-	border-radius: 50%;
-	margin: -.25em .15em 0 0;
-
-	float: left;
-	display: inline-block;
-
-	@extend %font-brandon;
-	@include font-weight-regular("brandon");
-	font-size: 3.75em;
-
-	text-align: center;
-
-	color: $color-white;
 }
 
-article .lettrine::selection { background: transparent; }
-
-article .lettrine.with-quote {
-	@extend %quote;
-	background-size: .25em .25em;
-	background-position: .1875em 50%;
-}
 
 article .mini {
 	position: absolute;
@@ -322,8 +301,6 @@ article .share { margin-bottom: 1.5em; }
 	article.obsession-#{$i} .snake,
 	article.obsession-#{$i} figcaption:before { border-color: $main; }
 
-	article.obsession-#{$i} .lettrine         { background-color: $main; }
-
 }
 
 @include media("sm", true) {
@@ -340,8 +317,6 @@ article .share { margin-bottom: 1.5em; }
 		right: 0;
 		left:  -4px; // Offset the border
 	}
-
-	article .lettrine    { margin-left: -.5em; }
 
 	article .share {
 		@include fadable;
