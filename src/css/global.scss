@@ -163,6 +163,9 @@ hr {
 /* The <h1> is reserved for the page's title */
 h1 { font-size: 1em; }
 
+// Just to be sure
+i, em { font-style: italic; }
+
 /* Default styles for <ol>, <ul> and <li> */
 ol, ul {
 	padding: 0;
