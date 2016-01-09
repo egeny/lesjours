@@ -171,12 +171,15 @@ function folders(dir) {
 			return fs.statSync(path.join(dir, file)).isDirectory();
 		});
 }
-// Configure nunjucks
-env = nunjucks.nunjucks.configure(['src'], { watch: false, noCache: true });
 
-env.addFilter('expand', function(input) {
-	return expand(input);
+// Configure nunjucks
+env = nunjucks.nunjucks.configure('src', {
+	autoescape: false,
+	noCache:    true,
+	watch:      false
 });
+
+env.addFilter('expand', expand);
 
 env.addFilter('human', function(input) {
 	var date = new Date(input), month;
