@@ -33,44 +33,6 @@ article a:focus { @extend %link-active; }
 article abbr  {}
 
 
-article blockquote { position: relative; }
-
-	article blockquote:before {
-		@extend %quote;
-		background-color: $color-brand;
-		background-position: 50% 50%;
-		background-size: 0.7em 0.7em;
-
-		width:  2.5em;
-		height: 2.5em;
-		border-radius: 50%;
-
-		content: "";
-
-		z-index: -1;
-		position: absolute;
-		top:  -.75em;
-		left: 4px;
-
-		font-size: 1.85em;
-	}
-
-	article blockquote p {
-		padding-left: 1.75em;
-		margin-bottom: .125em;
-
-		@extend %font-brandon;
-		@include font-weight-light("brandon");
-		font-size: 1.85em;
-		line-height: 1.15;
-	}
-
-	article blockquote p:last-of-type:after { content: " »"; }
-
-	article blockquote footer {
-		@extend .style-meta;
-		padding-left: 4em;
-	}
 
 article dl,
 article dt,
@@ -408,7 +370,6 @@ article .share { margin-bottom: 1.5em; }
 	article.obsession-#{$i} .snake,
 	article.obsession-#{$i} figcaption:before { border-color: $main; }
 
-	article.obsession-#{$i} blockquote:before { background-color: rgba($main, .75); }
 	article.obsession-#{$i} .lettrine         { background-color: $main; }
 
 	article.obsession-#{$i} aside span,
@@ -430,8 +391,6 @@ article .share { margin-bottom: 1.5em; }
 		left:  -4px; // Offset the border
 	}
 
-	article blockquote p      { padding-left: 1.25em; }
-	article blockquote footer { padding-left: 3em; }
 	article figcaption   { margin-left: 0; }
 	article .lettrine    { margin-left: -.5em; }
 
@@ -518,8 +477,6 @@ article .share { margin-bottom: 1.5em; }
 	article .rel a[rel="next"] div { margin-right: 25%; }
 
 	@if $margin != grid-margin("sm") {
-		article blockquote:before { left: #{-$margin / 2}; }
-
 		article > footer { padding-bottom: $margin; }
 		article .meta {
 			padding-right: $margin;
@@ -584,8 +541,6 @@ article .share { margin-bottom: 1.5em; }
 	article .meta li { margin-right: 1.5em; }
 
 	@if $margin != grid-margin("md") {
-		article blockquote:before { left: #{-$margin / 2}; }
-
 		article > footer { padding-bottom: $margin; }
 		article .meta {
 			padding-right: $margin;
