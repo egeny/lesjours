@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "com-contre-com",
+
+	"number": 6,
+	"date": "2016-01-12T13:50+01:00",
+
+	"title": "Com contre com",
+	"intro": "Pendant la COP21, entreprises et ONG ont cherché à séduire l’opinion publique en diffusant des messages simples mais elles ont évité les débats qui pourraient les mettre en porte-à-faux.",
+	"lead": "Prenez des entreprises qui polluent mais promettent de faire des efforts, des ONG qui les critiquent parce qu’elles ne font pas assez d’efforts, et réunissez le tout dans un endroit clos, par exemple le Bourget, pendant la COP21, où on parle pollution et climat. Normalement, cela devrait s’étriper, s’invectiver ou tout au moins dialoguer. Mais en fait, pas du tout.",
+
+	"tags": ["Climat", "COP21", "Communication", "Total", "EDF", "Les Amis de la Terre"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:nicolas-cori" },
+			{ "photo": "author:pierre-morel" }
+		],
+
+		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"prev":  "episode:good-com-bad-cop/la-pantoufle-de-vert",
+		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
+	}
+}
