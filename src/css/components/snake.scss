@@ -1,8 +1,82 @@
 /* @group .snake */
-/*csslint known-properties:false */
 $gutter: grid-gutter("sm");
 
-.snake {
+// Using ::before and ::after may seems like a stupid solution
+// Before, it was made using an inline SVG
+// Unfortunately, it was too hard to adapt its size to the content
+// Also, there were some bugs and this that might not be supported
+// The downside is we are no longer able to make the awesome animation
+.snake-1 {
+	border: 0 solid $color-brand;
+	border-left-width: 4px;
+	transition: border .3s 0; // We have to set a delay of 0 to avoid delay on ::before and ::after
+
+	&::before,
+	&::after {
+		width: 108px;
+		border: 4px solid;
+		border-color: inherit;
+
+		content: "";
+		display: block;
+
+		transition: inherit;
+	}
+
+	&::before {
+		height: $gutter;
+		border-width: 4px 4px 0 0;
+	}
+
+	.snake-container { padding-left: $gutter; }
+
+	&::after {
+		height: $gutter * 2.5;
+		border-width: 0 4px 4px 0;
+	}
+}
+
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "main");
+
+	.obsession-#{$i} {
+		.snake-1 { border-color: $color; }
+	}
+}
+
+@include media("md") {
+	$gutter: grid-gutter("md");
+
+	.snake-1 {
+		margin-left: #{-$gutter};
+
+		&::before,
+		&::after  { width:  210px; }
+		&::before { height: $gutter; }
+		&::after  { height: $gutter * 2.875; }
+	}
+
+	@if $gutter != grid-gutter("sm") {
+		.snake-1 .snake-container { padding-left: $gutter; }
+	}
+}
+
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+
+	@if $gutter != grid-gutter("md") {
+		.snake-1 {
+			margin-left: #{-$gutter};
+
+			&::before { height: $gutter; }
+			&::after  { height: $gutter * 2.875; }
+			.snake-container { padding-left: $gutter; }
+		}
+	}
+}
+
+/*.snake {
 	border: 4px solid $color-brand;
 	position: absolute;
 }
@@ -103,5 +177,5 @@ $gutter: grid-gutter("sm");
 			&::before { left: calc(-#{$gutter} - 4px); }
 		}
 	}
-}
+}*/
 /* @end .snake */
