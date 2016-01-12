@@ -1,0 +1,105 @@
+/* @group .cover */
+.cover {
+	background-size:  cover;
+	background-color: $color-brand;
+
+	height: 100%;
+	overflow: hidden;   // Hide the ::before overlay
+	position: relative; // Used by the ::before overlay
+	text-shadow: 0 0 1rem rgba($color-black, .3);
+	color: $color-white;
+
+	&::before {
+		background-color: inherit;
+
+		content: "";
+		display: block;
+		opacity: .9;
+
+		position: absolute;
+		top:    0;
+		right:  0;
+		bottom: 0;
+		left:   0;
+
+		transition: transform .3s;
+		transform: translateY(100%); // Start hidden, will be displayed using the .expanded class
+	}
+
+	.cover-container { overflow: hidden; }
+
+	.style-meta { line-height: inherit; }
+
+	.snake-container .btn   { position: absolute; }
+	.snake-container .btn i { animation: bounce .5s cubic-bezier(.4, 0, 1, 1) infinite alternate-reverse; }
+	.snake-container :last-child { margin-bottom: $gutter / 2; }
+
+	.desc {
+		opacity: 0;
+		transition: opacity .5s, transform .3s;
+		transform: translateY(-1em);
+	}
+
+	.more {
+		opacity: 0;
+		transition: opacity .3s;
+	}
+
+	&.expanded {
+		&::before { transform: none; }
+		.cover-container { overflow: auto; }
+		.snake-1  { border-color: $color-white; }
+		.snake-container .btn { display: none; }
+		.desc, .more { opacity: 1; }
+		.desc { transform: none; }
+	}
+
+	&.no-pattern .pattern { display: none; }
+
+	&.small {
+		// Keep a given aspect ratio
+		/*&::before {
+			background: transparent;
+			padding-top: 125%;
+			position: static;
+			transform: none;
+		}*/
+
+		.snake-1::before,
+		.snake-1::after  { width: 113px; }
+		.snake-1::before { height: 14px; }
+		.snake-1::after  { height: 24px; }
+		.snake-container { padding-left: 20px; }
+	}
+}
+
+@keyframes bounce {
+	to { transform: translateY(.75em); }
+}
+
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "main");
+
+	.obsession-#{$i} {
+		 .cover,
+		&.cover { background-color: $color; }
+	}
+}
+
+@include media("md") {
+	$gutter: grid-gutter("md");
+
+	@if $gutter != grid-gutter("sm") {
+		.cover .snake-container :last-child { margin-bottom: $gutter / 2; }
+	}
+}
+
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+
+	@if $gutter != grid-gutter("md") {
+		.cover .snake-container :last-child { margin-bottom: $gutter / 2; }
+	}
+}
+/* @end .cover */
