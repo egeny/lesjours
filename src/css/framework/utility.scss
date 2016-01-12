@@ -71,6 +71,7 @@ $margin: grid-margin("sm");
 
 	font-weight: bold; // Don't use the font-weight-* mixin here since we don't know which font will be used
 	text-decoration: none;
+	text-transform: uppercase;
 
 	color: $color-main;
 
