@@ -21,7 +21,7 @@
     "gulp-header": "latest",
     "gulp-image": "latest",
     "gulp-livereload": "latest",
-    "gulp-nunjucks-render": "carlosl/gulp-nunjucks-render",
+    "gulp-nunjucks-render": "latest",
     "gulp-rename": "latest",
     "gulp-replace": "latest",
     "gulp-sass": "latest",
