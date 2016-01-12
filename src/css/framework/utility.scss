@@ -26,6 +26,16 @@ $margin: grid-margin("sm");
 .alpha-80, .α-80 { opacity: .8; }
 .alpha-90, .α-90 { opacity: .9; }
 
+.bg-left-top      { background-position: 0 0;       }
+.bg-left          { background-position: 0 50%;     }
+.bg-left-bottom   { background-position: 0 100%;    }
+.bg-center-top    { background-position: 50% 0;     }
+.bg-center        { background-position: 50% 50%;   }
+.bg-center-bottom { background-position: 50% 100%;  }
+.bg-right-top     { background-position: 100% 0;    }
+.bg-right         { background-position: 100% 50%;  }
+.bg-right-bottom  { background-position: 100% 100%; }
+
 .block        { display: block; }
 .inline-block { display: inline-block; }
 
