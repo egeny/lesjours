@@ -177,6 +177,10 @@ $margin: grid-margin("sm");
 .text-center { text-align: center; }
 .text-right  { text-align: right;  }
 .text-upper  { text-transform: uppercase; }
+.text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 @each $device, $grid in $grids {
 	@include media($device, true) {
