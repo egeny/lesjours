@@ -546,6 +546,12 @@ gulp.task('watch', ['build'], function() {
 					templates({ path: template });
 				};
 			});
+
+			finder.find(found.join('|'), paths.pages).then(function(results) {
+				for (var page in results) {
+					html({ path: page });
+				};
+			});
 		}
 
 		// Find partials recursively (after found in which file a partial is used, search for this new partial)
@@ -562,7 +568,8 @@ gulp.task('watch', ['build'], function() {
 			});
 		}
 
-		find(path.join('partials', path.relative(paths.partials, e.path)));
+		found.push(path.join('partials', path.relative(paths.partials, e.path)));
+		find(found[0]);
 	}
 
 	// The callback function used when a template is changed
