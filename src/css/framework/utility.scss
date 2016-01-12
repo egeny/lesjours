@@ -16,6 +16,16 @@ $margin: grid-margin("sm");
 
 .responsive { @include responsive; }
 
+.alpha-10, .α-10 { opacity: .1; }
+.alpha-20, .α-20 { opacity: .2; }
+.alpha-30, .α-30 { opacity: .3; }
+.alpha-40, .α-40 { opacity: .4; }
+.alpha-50, .α-50 { opacity: .5; }
+.alpha-60, .α-60 { opacity: .6; }
+.alpha-70, .α-70 { opacity: .7; }
+.alpha-80, .α-80 { opacity: .8; }
+.alpha-90, .α-90 { opacity: .9; }
+
 .block        { display: block; }
 .inline-block { display: inline-block; }
 
