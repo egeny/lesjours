@@ -202,6 +202,10 @@ env.addFilter('human', function(input) {
 	return date.getDate() + ' ' + month + ' ' + date.getFullYear();
 });
 
+env.addFilter('in', function(input, array) {
+	return (array || []).indexOf(input) > -1;
+});
+
 env.addFilter('published', function(input, date) {
 	if (!input) { return input; }
 
@@ -218,6 +222,10 @@ env.addFilter('published', function(input, date) {
 
 env.addFilter('removeBR', function(input) {
 	return (input || '').replace(/<br\/?>/g, ' ');
+});
+
+env.addFilter('split', function(input, separator) {
+	return (input || "").split(separator);
 });
 
 env.addFilter('startsWith', function(input, pattern) {
