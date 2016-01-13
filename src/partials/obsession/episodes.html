@@ -1,6 +1,6 @@
 <section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="false">
 	<h3 class="pl-1g mb-2g style-meta-larger">Les épisodes</h3>
-	{% set episodes = obsession.episodes|published %}
+	{% set episodes = obsession.episodes|expand|published %}
 	{% set latest = episodes[0] %}
 	<article class="f1 row">
 		<img class="col col-top lg-w-6c mb-2g" src="/obsessions/{{ obsession.href }}/{{ latest.href }}/{{ latest.img|default("img/header.jpg") }}" alt="{{ latest.alt }}" />

@@ -2,6 +2,7 @@
 {% extends "partials/_layout.html" %}
 
 {% block content %}
+{% set obsession = episode.obsession|expand %}
 <article class="obsession-{{ obsession.color }}" role="main">
 	<header class="mb-6g">
 		<img src="{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" />
@@ -74,28 +75,30 @@
 			</div>
 		</div>
 
-		{% if episode.rel.prev|published or episode.rel.next|published %}
+		{% set prev = episode.rel.prev|expand %}
+		{% set next = episode.rel.next|expand %}
+		{% if prev|published or next|published %}
 		<div class="rel container mt-2g">
 			<p class="sr">D’autres épisodes</p>
 			<ul class="row list-unstyled">
-				{% if episode.rel.prev|published %}
+				{% if prev|published %}
 				<li class="col sm-w-4c md-w-4c lg-w-4c lg-mr-4c">
-					<a class="link-unstyled" rel="prev" href="/obsessions/{{ obsession.href }}/{{ episode.rel.prev.href }}">
+					<a class="link-unstyled" rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}">
 						<i>{{ icon("angle-left") }}</i>
 						<div>
-							<span class="style-meta">Épisode n°{{ episode.number - 1 }}<span class="sr"> : </span></span>
-							<span class="h5">{{ episode.rel.prev.title }}</span>
+							<span class="style-meta">Épisode n°{{ prev.number }}<span class="sr"> : </span></span>
+							<span class="h5">{{ prev.title }}</span>
 						</div>
 					</a>
 				</li>
 				{% endif %}
-				{% if episode.rel.next|published %}
-				<li class="col sm-w-4c md-w-4c lg-w-4c{% if not episode.rel.prev %} md-ml-4c lg-ml-8c{% endif %}">
-					<a class="link-unstyled" rel="next" href="/obsessions/{{ obsession.href }}/{{ episode.rel.next.href }}">
+				{% if next|published %}
+				<li class="col sm-w-4c md-w-4c lg-w-4c{% if not prev %} md-ml-4c lg-ml-8c{% endif %}">
+					<a class="link-unstyled" rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}">
 						<i>{{ icon("angle-right") }}</i>
 						<div class="text-right">
-							<span class="style-meta">Épisode n°{{ episode.number + 1 }}<span class="sr"> : </span></span>
-							<span class="h5">{{ episode.rel.next.title }}</span>
+							<span class="style-meta">Épisode n°{{ next.number }}<span class="sr"> : </span></span>
+							<span class="h5">{{ next.title }}</span>
 						</div>
 					</a>
 				</li>
