@@ -292,12 +292,31 @@ function assets(e) {
 		.pipe(livereload());
 }
 
+// Simple utility function to copy an object
+function copy(object) {
+	var property, result = {};
+
+	for (property in object) {
+		if (object.hasOwnProperty(property)) {
+			result[property] = object[property];
+		}
+	}
+
+	return result;
+}
+
 // Make a deep copy of data and fetch sub-resources
 function expand(data) {
 	var
-		r = /^(?!http)(\w+):(.+)/,
+		r = /^(?!http)(\w+):(.+)/, // A regexp to check if we need to go deeper
 		result = {},
 		property, matches;
+
+	if (!data) { return data; }
+
+	if (typeof data === 'string' || data.push) {
+		return expand({ value: data }).value;
+	}
 
 	for (property in data) {
 		if (typeof data[property] === 'string') {
@@ -321,17 +340,12 @@ function expand(data) {
 function fetch(kind, fragment) {
 	var
 		fragments = fragment.split('/'),
-		obsession, episode;
+		obsession, episode,
+		result;
 
 	// Makes sure we have a cache for this kind of resource
 	cache[kind] = cache[kind] || {};
 
-	// Return the cache resource if found
-	if (cache[kind][fragments[fragments.length - 1]]) {
-		return cache[kind][fragments[fragments.length - 1]];
-	}
-
-	// Otherwise, we have to fetch it :(
 	switch (kind) {
 		case 'episode':
 			if (fragments.length === 2) {
@@ -339,11 +353,13 @@ function fetch(kind, fragment) {
 				episode   = fragments[1];
 
 				try {
-					cache[kind][episode] = JSON.parse(fs.readFileSync(path.join(paths.pages, 'obsessions', obsession, episode, episode + '.json')));
-					cache[kind][episode].obsession = fetch('obsession', obsession);
+					cache[kind][episode] = cache[kind][episode] || JSON.parse(fs.readFileSync(path.join(paths.pages, 'obsessions', obsession, episode, episode + '.json')));
 				} catch(e) {
 					cache[kind][episode] = {};
 				}
+
+				// Automatically add a reference to the obsession resource (but do not expand, it will be while necessary in template)
+				cache[kind][episode].obsession = 'obsession:' + obsession;
 
 				return cache[kind][episode];
 			} else {
@@ -353,7 +369,7 @@ function fetch(kind, fragment) {
 
 		case 'obsession':
 			try {
-				cache[kind][fragment] = JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment, fragment + '.json')));
+				cache[kind][fragment] = cache[kind][fragment] = JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment, fragment + '.json')));
 			} catch(e) {
 				cache[kind][fragment] = {};
 			}
@@ -362,7 +378,7 @@ function fetch(kind, fragment) {
 
 		default:
 			try {
-				cache[kind][fragment] = JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment + '.json')));
+				cache[kind][fragment] = cache[kind][fragment] || JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment + '.json')));
 			} catch(e) {
 				cache[kind][fragment] = {};
 			}
@@ -388,6 +404,11 @@ function html(e) {
 
 		// Store some informations in a cache ; will surely be re-used
 		if (metadata.template) {
+			// Inject some data
+			if (metadata.template === 'episode') {
+				metadata.obsession = 'obsession:' + parsed.dir.split(path.sep)[1];
+			}
+
 			// Keep the metadata
 			cache[metadata.template] = cache[metadata.template] || {};
 			cache[metadata.template][parsed.name] = metadata;
@@ -402,18 +423,12 @@ function html(e) {
 			}
 		}
 
-		// Inject some data
-		if (metadata.template === 'episode') {
-			// FIXME: avoid expanding, prefer in templates
-			data.obsession = expand(fetch('obsession', parsed.dir.split(path.sep)[1]));
-		}
-
 		// Wrap the data in a prefix if necessary (if the "template" key doesn't exists already)
 		if (!metadata[metadata.template]) {
-			data[metadata.template] = expand(metadata); // Make a deep copy of the metadata and resolve the sub-resources
+			data[metadata.template] = copy(metadata); // Make a deep copy of the metadata
 			delete data[metadata.template].template; // Cleaning just for fun
 		} else {
-			data = expand(metadata); // Make a deep copy of the metadata and resolve the sub-resources
+			data = copy(metadata); // Make a deep copy of the metadata
 		}
 
 		// Try to retrieve the content
