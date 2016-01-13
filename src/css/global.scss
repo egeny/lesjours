@@ -20,7 +20,7 @@ html {
 body {
 	max-width: $max-width;
 	margin: 0 auto;
-	font-size: 0.875em;
+	font-size: .875em;
 }
 
 @include media("md") {
@@ -32,7 +32,7 @@ blockquote, figure, p, ul, ol, dl, dd,
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 /* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
-audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+audio, canvas, iframe, img, picture, svg, video { vertical-align: middle; }
 
 /* Add a nice cursor for abbreviations */
 abbr {
@@ -141,14 +141,8 @@ figcaption {
 }
 
 /* Set figure's content as responsive */
-figure audio,
-figure canvas,
-figure iframe,
-figure img,
-figure picture,
-figure svg,
-figure table,
-figure video { @include responsive; }
+figure {
+	audio, canvas, iframe, img, picture, svg, table, video { @include responsive; }
 }
 
 /* Default styles for <hr/> */
@@ -221,13 +215,14 @@ q {
 /* Allow only vertical resizing of textareas */
 textarea { resize: vertical; }
 
-/* Remove default padding for lists */
-ul, ol { padding: 0; }
-
 /* Remove text-shadow in selection highlight */
 ::selection {
 	background: $color-external;
 	text-shadow: none;
+}
+
+/* Add an asterisk for links pointing to a note */
+[href^="#note"]::after { content: "*"; }
 
 /* Default style for UI elements */
 [class^=ui-] {
@@ -244,6 +239,7 @@ ul, ol { padding: 0; }
 	$color: map-get($colors, "main");
 
 	.obsession-#{$i} {
+		aside span { color: $color; }
 		blockquote::before { background-color: rgba($color, .75); }
 		figcaption::before { border-color: $color; }
 	}
