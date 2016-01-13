@@ -7,11 +7,19 @@
 		<div class="carousel-container">
 			<ul class="list-unstyled carousel" data-interval="5000" data-state="running" role="listbox">
 			{% for obsession in obsessions %}
-				<li class="wall obsession-{{ obsession.color }}">
-					{# FIXME: partials/wall is ugly #}
-					{% set wall = obsession %}
-					{% include "partials/wall.html" %}
-				</li>
+				{% set obsession = obsession|expand %}
+				{%
+					set cover = {
+						tag: "li",
+						class: "obsession-" + obsession.color,
+						img: "/obsessions/" + obsession.href + "/" + obsession.href + ".jpg",
+						href: "/obsessions/" + obsession.href,
+						title: obsession.title,
+						subtitle: obsession.subtitle,
+						desc: obsession.desc
+					}
+				%}
+				{% include "partials/cover.html" %}
 			{% endfor %}
 			</ul>
 		</div>

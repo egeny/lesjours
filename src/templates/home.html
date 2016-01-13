@@ -4,24 +4,27 @@
 {% macro author(episode) %}
 	{% for group in episode.rel.authors %}{% set group = group|expand %}{% for kind, authors in group %}{% if kind == "text" %}{% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link-unstyled" rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}
 {% endmacro %}
+{% from "partials/_macro.html" import authors %}
 
 {% block content %}
-<section class="container">
-	<h2 class="sr">À la une</h2>
-	<div class="master row mb-4g obsession-{{ home.master.obsession.color }}">
-		<div class="col lg-ml-1c lg-w-10c">
-			<div class="relative no-overflow">
-				<img class="responsive" src="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img|default("img/header.jpg") }}" alt="{{ home.master.alt }}" />
-				<div class="overlay">
-					<div class="snake-4-tmp">
-						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}/{{ home.master.img|default("img/header.jpg") }});">
-							<h3 class="h2"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}/{{ home.master.href }}">{{ home.master.title }}</a></h3>
-							<p>{{ home.master.subtitle }}</p>
-							<span class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ home.master.obsession.href }}">{{ home.master.obsession.name }}</a> • épisode n°{{ home.master.number }} | Par {{ author(home.master) }}</span>
-						</div>
-					</div>
-				</div>
-			</div>
+<section class="container sm-ph-0">
+	<div class="row">
+		<div class="col sm-ph-0">
+			<h2 class="sr">À la une</h2>
+			{% set episode   = home.master|expand %}
+			{% set obsession = episode.obsession|expand %}
+			{%
+				set cover = {
+					class: "no-pattern obsession-" + obsession.color,
+					layout: "pv-5g sm-ph-2g md-pl-1c md-w-4c lg-pl-1c lg-w-5c",
+					img: "/obsessions/" + obsession.href + "/" + episode.href + "/" + episode.img|default("img/header.jpg"),
+					href: "/obsessions/" + obsession.href + "/" + episode.href,
+					title:    episode.title,
+					subtitle: episode.subtitle,
+					episode:  episode
+				}
+			%}
+			{% include "partials/cover.html" %}
 		</div>
 	</div>
 	{% if home.articles %}
@@ -44,29 +47,27 @@
 {% if home.obsessions %}
 <hr/>
 <section class="container">
-	<h2 class="sm-pl-1g md-ml-1c lg-ml-1c style-meta-larger mb-1g">Nos obsessions</h2>
-	<ul class="obsessions row list-unstyled">
+	<h2 class="pl-1g mb-1g lg-ml-1c style-meta-larger">Nos obsessions</h2>
+	<ul class="obsessions row lg-mh-1c">
 		{% for obsession in home.obsessions %}
-		<li class="obsession-{{ obsession.color }}">
-			<a href="/obsessions/{{ obsession.href }}" class="block relative no-overflow">
-				<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + "-mini.jpg") }}" alt="{{ obsession.alt }}" />
-				<div class="overlay pattern-2"></div>
-				<div class="overlay">
-					<div class="snake-4-tmp">
-						<div class="snake-container color-white" style="background-image: url(/obsessions/{{ obsession.href }}/{{ obsession.img|default(obsession.href + "-mini.jpg") }});">
-							<div class="relative">
-								<h3 class="h4">{{ obsession.title }}</h3>
-								<p>{{ obsession.subtitle }}</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</a>
-		</li>
+			{% set obsession = obsession|expand %}
+			<li class="col pa-1g obsession-{{ obsession.color }}">
+				{%
+					set cover = {
+						class: "small",
+						img: "/obsessions/" + obsession.href + "/" + obsession.href + ".jpg",
+						href: "/obsessions/" + obsession.href,
+						title: obsession.title,
+						subtitle: obsession.subtitle
+					}
+				%}
+				{% include "partials/cover.html" %}
+			</li>
 		{% endfor %}
 	</ul>
 </section>
 {% endif %}
+
 <hr/>
 <section class="text-center">
 	<h2 class="style-meta-large">Au fil des jours</h2>
