@@ -2,7 +2,7 @@
 	<a href="{{ item.href if item.href|startsWith("http") else "/obsessions/" + obsession.href + "/" + item.href|default("#") }}">
 		<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ item.img }}" alt="{{ item.alt }}" />
 		{% if item.title %}
-			<div class="overlay pattern-1">
+			<div class="overlay pattern-alpha">
 				<div class="snake-3 mb-5g">
 					<div class="snake-container" style="background-image: url(/obsessions/{{ obsession.href }}/{{ item.img }})">
 						<div class="snake-wrapper pattern-1">
@@ -21,7 +21,7 @@
 				</div>
 			</div>
 		{% else %}
-			<div class="overlay pattern-1 no-content">
+			<div class="overlay pattern-alpha no-content">
 				<div class="snake"></div>
 			</div>
 		{% endif %}

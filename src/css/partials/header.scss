@@ -185,13 +185,6 @@ $gutter: grid-gutter("sm");
 		@include font-weight-light("proxima");
 	}
 
-	#menu ul {
-		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 24'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0zM1 4h1v1H1zM0 6h1v1H0zM1 8h1v1H1zM0 10h1v1H0zM1 12h1v1H1zM0 14h1v1H0zM1 16h1v1H1zM0 18h1v1H0zM1 20h1v1H1zM0 22h1v1H0z'/></svg>") repeat-x 0 100%;
-		background-size: 2px 24px;
-		padding-bottom: 3em;
-		margin-bottom:  1.5em;
-	}
-
 	#menu .list-inline {
 		background: none;
 		padding: 0;
