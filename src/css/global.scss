@@ -156,7 +156,7 @@ figure {
 
 /* Default styles for <hr/> */
 hr {
-	@extend .pattern-1;
+	@extend .pattern-alpha;
 
 	height: $gutter;
 	border: 0;

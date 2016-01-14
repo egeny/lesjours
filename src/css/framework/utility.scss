@@ -9,7 +9,7 @@ $margin: grid-margin("sm");
 	@include fadable;
 
 	&:hover,
-	&:focus { @include fadable-active; }
+	&:focus { @extend %fadable-active; }
 }
 
 %fadable-active { @include fadable-active; }
