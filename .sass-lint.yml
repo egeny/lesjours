@@ -184,18 +184,18 @@ rules:
       - 'animation-fill-mode'
       - 'animation-play-state'
 
+      # Transformation
+      - 'transform'
+      - 'transform-box'
+      - 'transform-origin'
+      - 'transform-style'
+
       # Transformation: transition
       - 'transition'
       - 'transition-delay'
       - 'transition-duration'
       - 'transition-property'
       - 'transition-timing-function'
-
-      # Transformation
-      - 'transform'
-      - 'transform-box'
-      - 'transform-origin'
-      - 'transform-style'
 
       # Misc: lists
       - 'list-style'
