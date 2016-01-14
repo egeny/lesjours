@@ -1,5 +1,4 @@
 /* @group #header */
-/*csslint ids:false */
 $gutter: grid-gutter("sm");
 
 #header {
@@ -32,7 +31,7 @@ $gutter: grid-gutter("sm");
 
 	position: absolute;
 	top: 12px;
-	left: #{$gutter / 2};
+	left: $gutter / 2;
 }
 
 	#burger span {
@@ -121,7 +120,7 @@ $gutter: grid-gutter("sm");
 
 	position: absolute;
 	top: 0;
-	right: #{$gutter / 2};
+	right: $gutter / 2;
 }
 
 	#login-btn { line-height: 1; }
@@ -212,16 +211,16 @@ $gutter: grid-gutter("sm");
 	}
 
 	@if $gutter != grid-gutter("sm") {
-		#burger  { left:  #{$gutter / 2}; }
-		#account { right: #{$gutter / 2}; }
+		#burger  { left:  $gutter / 2; }
+		#account { right: $gutter / 2; }
 	}
 }
 
 @include media("lg") {
 	$gutter: grid-gutter("lg");
 	@if $gutter != grid-gutter("md") {
-		#burger  { left:  #{$gutter / 2}; }
-		#account { right: #{$gutter / 2}; }
+		#burger  { left:  $gutter / 2; }
+		#account { right: $gutter / 2; }
 	}
 }
 /* @end #header */

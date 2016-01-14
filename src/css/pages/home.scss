@@ -21,7 +21,7 @@ $gutter:  grid-gutter("sm");
 
 .home .text-center h2 { @include font-weight-light("proxima"); }
 
-@include media("sm", true) {
+@include media("sm", $strict: true) {
 	.home .articles .snake-1:before { left: calc(-2rem + 8px); }
 }
 

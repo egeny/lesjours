@@ -169,6 +169,8 @@ h1 { font-size: 1em; }
 // Just to be sure
 i, em { font-style: italic; }
 
+label { cursor: pointer; }
+
 /* Default styles for <ol> and <ul> */
 ol, ul {
 	padding: 0;
@@ -195,8 +197,8 @@ textarea { resize: vertical; }
 	text-shadow: none;
 }
 
-/* Add an asterisk for links pointing to a note */
-[href^="#note"]::after { content: "*"; }
+/* ARIA FTW */
+[aria-hidden=true] { display: none; }
 
 /* Default style for UI elements */
 [class^=ui-] {
@@ -205,8 +207,8 @@ textarea { resize: vertical; }
 	display: inline-block;
 }
 
-/* ARIA FTW */
-[aria-hidden=true] { display: none; }
+/* Add an asterisk for links pointing to a note */
+[href^="#note"]::after { content: "*"; }
 
 @each $colors in $colors-obsessions {
 	$i:     index($colors-obsessions, $colors);
