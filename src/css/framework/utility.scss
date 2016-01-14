@@ -41,18 +41,6 @@ $margin: grid-margin("sm");
 
 .color-inherit { color: inherit; }
 
-/* Reusable class to fake a bottom margin */
-.fake-bottom {
-	background: $color-white;
-	height: $margin;
-
-	position: fixed;
-	right:  0;
-	bottom: 0;
-	left:   0;
-	z-index: 10000;
-}
-
 /* Quick width or height 100% */
 .full-width  { width:  100%; }
 .full-height { height: 100%; }
@@ -214,19 +202,5 @@ ol.list > li {
 
 @include media("md") {
 	.link { background-position: 0 1em; }
-}
-
-@include media("md") {
-	$margin: grid-margin("md");
-	@if $margin != grid-margin("sm") {
-		.fake-bottom { height: $margin; }
-	}
-}
-
-@include media("lg") {
-	$margin: grid-margin("lg");
-	@if $margin != grid-margin("md") {
-		.fake-bottom { height: $margin; }
-	}
 }
 /* @end Utility */
