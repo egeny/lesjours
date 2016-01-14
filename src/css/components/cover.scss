@@ -14,13 +14,8 @@
 
 		content: "";
 		display: block;
-		opacity: .9;
 
-		position: absolute;
-		top:    0;
-		right:  0;
-		bottom: 0;
-		left:   0;
+		@include overlay;
 
 		transition: transform .3s;
 		transform: translateY(100%); // Start hidden, will be displayed using the .expanded class
@@ -79,6 +74,15 @@
 			transform: none;
 		}
 
+		a {
+			transition: background-color .3s;
+			&:hover,
+			&:focus {
+				background-color: inherit;
+				.snake-1 { border-color: $color-white; }
+			}
+		}
+
 		.snake-1::before,
 		.snake-1::after  { width: 113px; }
 		.snake-1::before { height: 14px; }
@@ -96,7 +100,7 @@
 
 	.obsession-#{$i} {
 		 .cover,
-		&.cover { background-color: $color; }
+		&.cover { background-color: rgba($color, .9); }
 	}
 }
 
