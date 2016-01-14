@@ -1,129 +1,130 @@
-{% set page = { title: "LesJours — Abonnement", class: "page-subscription" } %}
+{%
+	set page = {
+		title: "Abonnement — Les Jours",
+		class: "page-subscription full-height no-overflow"
+	}
+%}
 {% extends "partials/_layout.html" %}
 
 {% block content %}
-<div class="container mb-2g">
-	<div class="col">
-		<div class="subscription overflow-auto">
-			<h2 class="md-ml-1c mt-8g mb-3g style-meta-larger">Devenir jouriste</h2>
-			<form action="#" class="col ph-0 mb-2g md-ml-1c md-w-6c relative">
-				<fieldset id="formule" class="mb-4g">
-					<legend class="style-meta-large relative">Choisir ma formule</legend>
-					<ul class="plans row text-center">
-						<li class="strong">
-							<div>
-								<p class="price">9<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois</span></span></p>
-								<p class="name">Jouriste</p>
-								<p class="desc">Sans engagement de durée</p>
-								<small>2 profils par abonnement</small>
-								<label class="action">
-									<input type="radio" name="plan" value="jouriste" required />
-									<span>Choisir<span class="sr"> la formule à 9€ par mois</span></span>
+<div class="container calc-height">
+	<div class="row full-height">
+		<div class="col full-height">
+			<div class="subscription full-height overflow-auto">
+				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Devenir jouriste</h2>
+				<form action="#" class="mb-2g md-w-6c md-ml-1c relative">
+					<fieldset id="formule" class="mb-4g">
+						<legend class="style-meta-large relative">Choisir ma formule</legend>
+						<ul class="plans row text-center">
+							<li class="ma-1g strong">
+								<label>
+									<span class="price">9<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois</span></span></span>
+									<span class="name">Jouriste</span>
+									<span class="desc">Sans engagement de durée</span>
+									<small>2 profils par abonnement</small>
+									<input class="sr" type="radio" name="plan" value="jouriste" required />
+									<span class="action">Choisir</span>
 								</label>
-							</div>
-						</li>
-						<li>
-							<div>
-								<p class="price">90<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par an<sup>*</sup></span></span></p>
-								<p class="name">Jouriste cash</p>
-								<p class="desc">Sans engagement de durée</p>
-								<small>2 profils par abonnement</small>
-								<label class="action">
-									<input type="radio" name="plan" value="jouriste-cash" required />
-									<span>Choisir<span class="sr"> la formule à 90€ par an</span></span>
+							</li>
+							<li class="ma-1g">
+								<label>
+									<span class="price">90<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par an<sup>*</sup></span></span></span>
+									<span class="name">Jouriste cash</span>
+									<span class="desc">Sans engagement de durée</span>
+									<small>2 profils par abonnement</small>
+									<input class="sr" type="radio" name="plan" value="jouriste-cash" required />
+									<span class="action">Choisir</span>
 								</label>
-							</div>
-						</li>
-						<li>
-							<div>
-								<p class="price">5<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois</span></span></p>
-								<p class="name">Jouriste désargenté</p>
-								<p class="desc">Sans engagement de durée</p>
-								<small>Pour les -25 ans, chômeurs, fauchés, radins</small>
-								<label class="action">
-									<input type="radio" name="plan" value="jouriste-desargente" required />
-									<span>Choisir<span class="sr"> la formule à 5€ par mois</span></span>
+							</li>
+							<li class="ma-1g">
+								<label>
+									<span class="price">5<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois</span></span></span>
+									<span class="name">Jouriste désargenté</span>
+									<span class="desc">Sans engagement de durée</span>
+									<small>Pour les -25 ans, chômeurs, fauchés, radins</small>
+									<input class="sr" type="radio" name="plan" value="jouriste-desargente" required />
+									<span class="action">Choisir</span>
 								</label>
-							</div>
-						</li>
-						<li>
-							<div>
-								<img width="202" height="39" src="img/jouristes.svg" alt="" />
-								<p class="name">Jouristes groupés</p>
-								<p class="desc">Tarifs sur mesure</p>
-								<small>Réservé aux entreprises, collectivités, communautés, sectes</small>
-								<a class="action" href="#">Nous contacter</a>
-							</div>
-						</li>
-					</ul>
-				</fieldset>
-				<fieldset id="coordonnees" class="lg-w-6c">
-					<legend class="mb-2g style-meta-large relative">Mes coordonnées</legend>
-					<div class="field">
-						<label for="name">Nom</label>
-						<input id="name" class="reverse-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" required />
-					</div>
-					<div class="field">
-						<label for="firstname">Prénom</label>
-						<input id="firstname" class="reverse-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" required />
-					</div>
-					<div class="field">
-						<label for="mail">Adresse e-mail</label>
-						<input id="mail" class="reverse-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
-					</div>
-					<div class="field">
-						<label for="password">Mot de passe</label>
-						<input id="password" class="reverse-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" required />
-					</div>
-					<div class="field">
-						<label for="address">Adresse</label>
-						<input id="address" class="reverse-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" required />
-					</div>
-					<div class="field">
-						<label for="zip">Code postal</label>
-						<input id="zip" class="reverse-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" required />
-					</div>
-					<div class="field">
-						<label for="city">Ville</label>
-						<input id="city" class="reverse-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" required />
-					</div>
-				</fieldset>
-				<fieldset id="mode-de-paiement">
-					<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
-					<div class="gift style-meta">
-						<i class="pull-left">{{ icon("bag") }}</i>
-						<p><strong class="text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
-					</div>
-					<div class="field row">
-						<label class="col pl-0 md-w-auto">
-							<input class="radio" type="radio" name="payment" value="bank" required>
-							<span class="radio"></span>
-							Prélèvement
+							</li>
+							<li class="ma-1g">
+								<a href="#">
+									<img width="202" height="39" src="img/jouristes.svg" alt="" />
+									<span class="name">Jouristes groupés</span>
+									<span class="desc">Tarifs sur mesure</span>
+									<small>Réservé aux entreprises, collectivités, communautés, sectes</small>
+									<span class="action">Nous contacter</span>
+								</a>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset id="coordonnees" class="lg-w-6c">
+						<legend class="mb-2g style-meta-large relative">Mes coordonnées</legend>
+						<div class="field">
+							<label for="name">Nom</label>
+							<input id="name" class="check md-white-check lg-white-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" required />
+						</div>
+						<div class="field">
+							<label for="firstname">Prénom</label>
+							<input id="firstname" class="check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" required />
+						</div>
+						<div class="field">
+							<label for="mail">Adresse e-mail</label>
+							<input id="mail" class="check md-white-check lg-white-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
+						</div>
+						<div class="field">
+							<label for="password">Mot de passe</label>
+							<input id="password" class="check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" required />
+						</div>
+						<div class="field">
+							<label for="address">Adresse</label>
+							<input id="address" class="check md-white-check lg-white-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" required />
+						</div>
+						<div class="field">
+							<label for="zip">Code postal</label>
+							<input id="zip" class="check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" required />
+						</div>
+						<div class="field">
+							<label for="city">Ville</label>
+							<input id="city" class="check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" required />
+						</div>
+					</fieldset>
+					<fieldset id="mode-de-paiement">
+						<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
+						<div class="gift style-meta lh-inherit">
+							<i class="pull-left">{{ icon("bag") }}</i>
+							<p><strong class="block text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
+						</div>
+						<div class="field row mb-1g">
+							<label class="col md-w-auto pr-2g pl-0">
+								<input class="radio" type="radio" name="payment" value="bank" required>
+								<span class="radio"></span>
+								Prélèvement
+							</label>
+							<label class="col md-w-auto pr-2g pl-0">
+								<input class="radio" type="radio" name="payment" value="card" required>
+								<span class="radio"></span>
+								Carte bancaire
+							</label>
+						</div>
+					</fieldset>
+					<div>
+						<label class="mb-2g style-meta text-upper">
+							<input class="checkbox" type="checkbox" name="allowed" required>
+							<span class="checkbox"></span>
+							J’accepte les conditions générales de vente. <a class="color-brand" href="#">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
 						</label>
-						<label class="col sm-pl-0 md-w-auto">
-							<input class="radio" type="radio" name="payment" value="card" required>
-							<span class="radio"></span>
-							Carte bancaire
-						</label>
+						<p class="summary mv-4g pa-2g style-meta lh-inherit text-upper color-main">Vous avez choisi la formule « Jouriste » à 9 €/mois. <a class="color-brand" href="#formule">Modifier</a></p>
+						<div class="relative text-center">
+							<button class="btn-primary sm-w-4c md-w-5c lg-w-5c" type="submit">
+								<i>{{ icon("check") }}</i>
+								<span>Accéder au paiement</span>
+							</button>
+						</div>
 					</div>
-				</fieldset>
-				<div>
-					<label class="style-meta text-upper">
-						<input class="checkbox" type="checkbox" name="" required>
-						<span class="checkbox"></span>
-						J’accepte les conditions générales de vente. <a class="color-brand" href="#">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
-					</label>
-					<p class="style-meta text-upper">Vous avez choisi la formule « Jouriste » à 9 €/mois. <a class="color-brand" href="#formule">Modifier</a></p>
-					<div class="relative text-center">
-						<button class="col md-w-5c lg-w-5c btn-primary" type="submit">
-							<i>{{ icon("check") }}</i>
-							<span>Accéder au paiement</span>
-						</button>
-					</div>
-				</div>
-				<div class="progress"></div>
-			</form>
-		</div>
-	</div>
-</div>
+					<div class="progress"></div>
+				</form>
+			</div>
+		</div><!-- end of .col -->
+	</div><!-- end of .row -->
+</div><!-- end of .container -->
 {% endblock %}
