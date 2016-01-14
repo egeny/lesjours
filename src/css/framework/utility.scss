@@ -118,13 +118,7 @@ $margin: grid-margin("sm");
 .overflow-auto { overflow: auto; }
 
 /* Quick overlay */
-.overlay {
-	position: absolute;
-	top:    0;
-	right:  0;
-	bottom: 0;
-	left:   0;
-}
+.overlay { @include overlay; }
 
 /* Patterns */
 // Two dots with 0.2 opacity

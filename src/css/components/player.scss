@@ -32,11 +32,7 @@
 		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 105'><path fill='white' fill-rule='evenodd' d='M54.04 95.624C77.7 92.654 96 72.464 96 48 96 21.49 74.51 0 48 0S0 21.49 0 48c0 24.832 18.856 45.26 43.032 47.746L48.5 105l5.54-9.376zM0 0h96.552v105H0V0z' /></svg>");
 
 		content: "";
-		position: absolute;
-		top:    0;
-		right:  0;
-		bottom: 0;
-		left:   0;
+		@include overlay;
 
 		pointer-events: none;
 	}
