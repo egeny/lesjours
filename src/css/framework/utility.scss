@@ -41,9 +41,13 @@ $margin: grid-margin("sm");
 
 .color-inherit { color: inherit; }
 
-/* Quick width or height 100% */
+/* Quick width or height */
 .full-width  { width:  100%; }
 .full-height { height: 100%; }
+.calc-height { height: calc(100% - 64px - #{$margin}); } // 100% - header's height - one margin at bottom
+
+/* Quick line-height: inherit */
+.lh-inherit { line-height: inherit; }
 
 /* Easy link's style */
 .link,
@@ -188,7 +192,7 @@ ol.list > li {
 }
 
 @each $device, $grid in $grids {
-	@include media($device, true) {
+	@include media($device, $strict: true) {
 		.#{$device}-hidden { display: none !important; }
 		.#{$device}-sr     { @include sr; }
 	}
@@ -201,6 +205,16 @@ ol.list > li {
 }
 
 @include media("md") {
+	$margin: grid-margin("md");
+	.calc-height { height: calc(100% - 85px - #{$margin}); }
 	.link { background-position: 0 1em; }
+}
+
+@include media("lg") {
+	$margin: grid-margin("lg");
+
+	@if $margin != grid-margin("md") {
+		.calc-height { height: calc(100% - 85px - #{$margin}); }
+	}
 }
 /* @end Utility */
