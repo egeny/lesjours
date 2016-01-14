@@ -93,23 +93,49 @@ $margin: grid-margin("sm");
 	color: inherit;
 }
 
-@each $colors in $colors-obsessions {
-	$i:     index($colors-obsessions, $colors);
-	$color: map-get($colors, "light");
-	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
-}
-
-@include media("md") {
-	.link { background-position: 0 1em; }
-}
-
 /* List utility classes */
-.list-unstyled > li         { padding: 0; }
-.list-unstyled > li::before { content: none; }
+.list {
+	counter-reset: list;
 
-.list-inline > li                     { display: inline-block; }
-.list-inline > li:first-child         { padding: 0; }
-.list-inline > li:first-child::before { content: none; }
+	> li {
+		padding-left: .666667em;
+		counter-increment: list;
+		position: relative;
+
+		&::before {
+			content: "•";
+
+			position: absolute;
+			top:  0;
+			left: 0;
+
+			@include font-weight-bold("archer");
+		}
+	}
+}
+
+ol.list > li {
+	padding-left: 1.6em;
+	&::before { content: "• " counter(list); }
+
+	&:nth-last-child(n+10),
+	&:nth-last-child(n+10) ~ li { padding-left: 2.2em; } // Increase the padding when reaching 10+ <li>
+}
+
+.list > li > ol.list > li {
+	&::before { content: "• " counter(list, lower-alpha); }
+
+	&:nth-last-child(n+10),
+	&:nth-last-child(n+10) ~ li { padding-left: 1.6em; } // Do not increase the padding (see above)
+
+	&:nth-last-child(n+13),
+	&:nth-last-child(n+13) ~ li { padding-left: 2.2em; } // Increase the padding when reaching 13+ <li> (letter M)
+}
+
+.list-inline > li { display: inline-block; }
+
+.list.list-inline > :first-child         { padding-left: 0; }
+.list.list-inline > :first-child::before { content: none; }
 
 /* Quick overflows */
 .no-overflow   { overflow: hidden; }
@@ -178,6 +204,16 @@ $margin: grid-margin("sm");
 		.#{$device}-hidden { display: none !important; }
 		.#{$device}-sr     { @include sr; }
 	}
+}
+
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "light");
+	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+}
+
+@include media("md") {
+	.link { background-position: 0 1em; }
 }
 
 @include media("md") {

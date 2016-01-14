@@ -169,45 +169,10 @@ h1 { font-size: 1em; }
 // Just to be sure
 i, em { font-style: italic; }
 
-/* Default styles for <ol>, <ul> and <li> */
+/* Default styles for <ol> and <ul> */
 ol, ul {
 	padding: 0;
-	counter-reset: list;
 	list-style: none;
-}
-
-li {
-	padding-left: .666667em;
-	counter-increment: list;
-	position: relative;
-
-	&::before {
-		content: "•";
-
-		position: absolute;
-		top:  0;
-		left: 0;
-
-		@include font-weight-bold("archer");
-	}
-}
-
-ol > li {
-	padding-left: 1.6em;
-	&::before { content: "• " counter(list); }
-
-	&:nth-last-child(n+10),
-	&:nth-last-child(n+10) ~ li { padding-left: 2.2em; }
-}
-
-li ol li {
-	&::before { content: "• " counter(list, lower-alpha); }
-
-	&:nth-last-child(n+10),
-	&:nth-last-child(n+10) ~ li { padding-left: 1.6em; }
-
-	&:nth-last-child(n+13),
-	&:nth-last-child(n+13) ~ li { padding-left: 2.2em; }
 }
 
 /* Set a default margin for <p> */

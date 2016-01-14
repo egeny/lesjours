@@ -8,7 +8,7 @@
 			<h4 class="h4 snake-2"><a href="/obsessions/{{ obsession.href }}/{{ latest.href }}" class="snake-container">{{ latest.title }}</a></h4>
 			<p class="intro">{{ latest.intro }}</p>
 			<p class="style-meta"><time datetime="{{ latest.date }}">{{ latest.date|human }}</time> • épisode {{ latest.number }}</p>
-			<ul class="list-unstyled style-meta">
+			<ul class="style-meta">
 				{% for group in latest.rel.authors %}
 					{% set group = group|expand %}
 					{% for kind, authors in group %}
@@ -30,7 +30,7 @@
 	<hr class="mh-0" />
 	<section class="previous">
 		<h4 class="style-meta-large pl-1g mv-2g">Précédemment…</h4>
-		<ol class="f3 row list-unstyled">
+		<ol class="f3 row">
 			{% for episode in episodes %}
 				{% if not loop.first %}
 					<li class="lg-w-6c">

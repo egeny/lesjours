@@ -15,7 +15,7 @@
 					<p>{{ episode.intro }}</p>
 					<time class="mb-2g style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
 					<address class="mb-1g">
-						<ul class="list-unstyled list-inline style-meta">
+						<ul class="list list-inline style-meta">
 						{% for group in episode.rel.authors %}
 							{% for kind, authors in group %}
 								{% set kind = "Texte"  if kind == "text"  else kind %}
@@ -38,7 +38,7 @@
 		</div>
 		{# This must be outside of the .article-container otherwise it won't be sticky due to the overflow: hidden #}
 		<div class="share col md-w-1c lg-w-2c text-center show" data-fade="3000">
-			<ul class="list-unstyled sticky">
+			<ul class="sticky">
 				<li class="sm-mb-0 mb-2g"><a class="btn-round" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
 				<li class="sm-mb-0 mb-2g"><a class="btn-round" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
 				<li><a class="btn-round" href="#"><i>{{ icon("plane", "Partager") }}</i></a></li>
@@ -50,8 +50,8 @@
 			<div class="row style-meta">
 				<div class="col mb-1g sm-ph-2g md-ml-1c md-w-3c md-pl-0 lg-ml-2c lg-w-6c lg-pl-0">
 					<p class="sr">Crédits</p>
-					<ul class="list-unstyled">
-					{% for group in episode.rel.authors %}
+					<ul>
+					{% for group in episode.rel.authors|expand %}
 						{% for kind, authors in group %}
 							{% set kind = "Texte"  if kind == "text"  else kind %}
 							{% set kind = "Photos" if kind == "photo" else kind %}
@@ -65,7 +65,7 @@
 				{% if episode.tags %}
 				<div class="col mb-1g sm-ph-2g md-w-3c lg-ml-2c lg-w-8c lg-pl-0">
 					<p>Les mots-clés</p>
-					<ul class="tags list-unstyled">
+					<ul class="tags">
 					{% for tag in episode.tags %}
 						<li><a class="link external" href="#">{{ tag }}</a></li>
 					{% endfor %}
@@ -80,7 +80,7 @@
 		{% if prev|published or next|published %}
 		<div class="rel container mt-2g">
 			<p class="sr">D’autres épisodes</p>
-			<ul class="row list-unstyled">
+			<ul class="row">
 				{% if prev|published %}
 				<li class="col sm-w-4c md-w-4c lg-w-4c lg-mr-4c">
 					<a rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}">

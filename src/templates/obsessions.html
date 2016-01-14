@@ -5,7 +5,7 @@
 <div class="container">
 	<div class="col">
 		<div class="carousel-container">
-			<ul class="list-unstyled carousel" data-interval="5000" data-state="running" role="listbox">
+			<ul class="carousel" data-interval="5000" data-state="running" role="listbox">
 			{% for obsession in obsessions %}
 				{% set obsession = obsession|expand %}
 				{%
@@ -25,7 +25,7 @@
 		</div>
 		<div class="carousel-controls relative text-center">
 			<button class="btn" data-direction="backward"><i>{{ icon("angle-left", "Obsession précédente") }}</i></button>
-			<ul class="list-unstyled list-inline" role="presentation">
+			<ul class="list-inline" role="presentation">
 			{% for obsession in obsessions %}
 				<li{% if loop.first %} class="selected"{% endif %}>●</li>
 			{% endfor %}

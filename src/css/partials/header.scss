@@ -185,12 +185,6 @@ $gutter: grid-gutter("sm");
 		@include font-weight-light("proxima");
 	}
 
-	#menu .list-inline {
-		background: none;
-		padding: 0;
-		margin-bottom: 0.5em;
-	}
-
 		#menu .list-inline a i { margin: 0; }
 
 		#menu .list-inline a i svg {
