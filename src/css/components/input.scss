@@ -33,10 +33,14 @@
 		&:active,
 		&:focus { border-color: $color-brand; }
 
-		&:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50% / 1em 1.4em; }
+		&:valid {
+			background-repeat: no-repeat;
+			background-position: 100% 50%;
+			background-size: 1em 1.4em;
+		}
 
-		// Same as previous, but with a white check mark
-		&.reverse-check:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50% / 1em 1.4em; }
+		&.check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+		&.white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
 	}
 }
 
@@ -49,6 +53,7 @@
 	width:  1.5em;
 	height: 1.5em;
 	border: 2px solid;
+	margin-top: -.25em;
 
 	display: inline-block;
 	position: relative;
@@ -79,6 +84,19 @@
 .radio[type]:focus      + .radio,
 .radio[type]:checked    + .radio,
 .radio[type]:checked    + .radio::before { border-color: $color-brand; }
+
+@each $device, $grid in $grids {
+	@include media($device, $strict: true) {
+		.field {
+			input[type="email"],
+			input[type="password"],
+			input[type="text"] {
+				&.#{$device}-check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+				&.#{$device}-white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+			}
+		}
+	}
+}
 
 @include media("md") {
 	.field {
