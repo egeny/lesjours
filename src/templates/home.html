@@ -31,18 +31,18 @@
 		{% set episode   = home.articles[0]|expand  %}
 		{% set obsession = episode.obsession|expand %}
 		<div class="col sm-mb-4g md-w-4c lg-ml-1c lg-w-5c pl-4g obsession-{{ obsession.color }}">
-			<h3 class="h3 snake-1"><a href="/obsessions/{{ obsession.href }}/{{ episode.href }}" class="snake-container link-unstyled">{{ episode.title }}</a></h3>
+			<h3 class="h3 snake-1"><a href="/obsessions/{{ obsession.href }}/{{ episode.href }}" class="snake-container">{{ episode.title }}</a></h3>
 			<p>{{ episode.intro }}</p>
-			<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ episode.number }}</p>
+			<p class="style-meta color-inherit"><a href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ episode.number }}</p>
 			<span class="style-meta">Par {{ authors(episode, class="link") }}</span>
 		</div>
 
 		{% set episode   = home.articles[1]|expand  %}
 		{% set obsession = episode.obsession|expand %}
 		<div class="col md-w-4c lg-w-5c pl-4g obsession-{{ obsession.color }}">
-			<h3 class="h3 snake-1"><a href="/obsessions/{{ obsession.href }}/{{ episode.href }}" class="snake-container link-unstyled">{{ episode.title }}</a></h3>
+			<h3 class="h3 snake-1"><a href="/obsessions/{{ obsession.href }}/{{ episode.href }}" class="snake-container">{{ episode.title }}</a></h3>
 			<p>{{ episode.intro }}</p>
-			<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ episode.number }}</p>
+			<p class="style-meta color-inherit"><a href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ episode.number }}</p>
 			<span class="style-meta">Par {{ authors(episode, class="link") }}</span>
 		</div>
 	</div>

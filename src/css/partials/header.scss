@@ -153,7 +153,6 @@ $gutter: grid-gutter("sm");
 #menu.opened { @extend %fadable-active; }
 
 	#menu a {
-		@extend .link-unstyled;
 		margin: 0.75em 0;
 		display: inline-block;
 		text-transform: uppercase;
@@ -169,7 +168,7 @@ $gutter: grid-gutter("sm");
 			color: $color-white;
 		}
 
-		#menu a i:before { @extend .btn-round:before }
+		#menu a i:before { @extend .btn-round::before }
 
 		#menu a:hover i:before,
 		#menu a:focus i:before { transform: scale(0.9); }

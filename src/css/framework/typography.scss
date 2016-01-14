@@ -90,7 +90,8 @@
 	line-height: 2;
 	color: $color-dark;
 
-	a { padding: .075em 0; }
+	 .link,
+	&.link { background-position: 0 1.025em; }
 }
 
 .style-meta-large {
@@ -115,4 +116,9 @@
 	.h6 { font-size: .875rem;  }
 
 	.p-larger { font-size: 1.625em; }
+
+	.style-meta {
+		 .link,
+		&.link { background-position: 0 1.125em; }
+	}
 }

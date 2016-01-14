@@ -34,6 +34,15 @@ h1, h2, h3, h4, h5, h6 { margin: 0; }
 /* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
 audio, canvas, iframe, img, picture, svg, video { vertical-align: middle; }
 
+/* Default styles for <a> (unstyled) */
+a {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover,
+	&:focus { color: $color-brand; }
+}
+
 /* Add a nice cursor for abbreviations */
 abbr {
 	cursor: help;

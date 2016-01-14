@@ -10,7 +10,7 @@
 		<div class="container ph-0">
 			<div class="row">
 				<div class="col sm-ph-4g md-ml-1c md-w-5c lg-ml-2c lg-w-6c">
-					<p class="mv-2g style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="obsession" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a></p>
+					<p class="mv-2g style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="link obsession" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a></p>
 					<h2 class="h2">{{ episode.title|removeBR }}</h2>
 					<p>{{ episode.intro }}</p>
 					<time class="mb-2g style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
@@ -67,7 +67,7 @@
 					<p>Les mots-clés</p>
 					<ul class="tags list-unstyled">
 					{% for tag in episode.tags %}
-						<li><a href="#">{{ tag }}</a></li>
+						<li><a class="link external" href="#">{{ tag }}</a></li>
 					{% endfor %}
 					</ul>
 				</div>
@@ -83,7 +83,7 @@
 			<ul class="row list-unstyled">
 				{% if prev|published %}
 				<li class="col sm-w-4c md-w-4c lg-w-4c lg-mr-4c">
-					<a class="link-unstyled" rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}">
+					<a rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}">
 						<i>{{ icon("angle-left") }}</i>
 						<div>
 							<span class="style-meta">Épisode n°{{ prev.number }}<span class="sr"> : </span></span>
@@ -94,7 +94,7 @@
 				{% endif %}
 				{% if next|published %}
 				<li class="col sm-w-4c md-w-4c lg-w-4c{% if not prev %} md-ml-4c lg-ml-8c{% endif %}">
-					<a class="link-unstyled" rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}">
+					<a rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}">
 						<i>{{ icon("angle-right") }}</i>
 						<div class="text-right">
 							<span class="style-meta">Épisode n°{{ next.number }}<span class="sr"> : </span></span>

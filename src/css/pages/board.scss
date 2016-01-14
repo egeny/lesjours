@@ -118,12 +118,6 @@ $gutter: grid-gutter("sm");
 			left:   0;
 		}
 
-.articles .link-unstyled { display: block; }
-.articles .link-unstyled:hover,
-.articles .link-unstyled:focus,
-.articles .link-unstyled:hover .style-meta,
-.articles .link-unstyled:focus .style-meta { color: $color-media; }
-
 .articles .h5 { margin-bottom: .25em; }
 .articles p   { margin-bottom: .5em; }
 

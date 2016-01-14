@@ -70,7 +70,6 @@ $margin: grid-margin("sm");
 	transition: background-position .15s;
 
 	font-weight: bold; // Don't use the font-weight-* mixin here since we don't know which font will be used
-	text-decoration: none;
 	text-transform: uppercase;
 
 	color: $color-main;
@@ -81,28 +80,27 @@ $margin: grid-margin("sm");
 	&.external { background-image: linear-gradient(to bottom, $color-external, $color-external); }
 }
 
-@include media("md") {
-	.link { background-position: 0 1em; }
-}
-
-%link-active { background-position: 0 0; }
-
-@each $colors in $colors-obsessions {
-	$i:     index($colors-obsessions, $colors);
-	$color: map-get($colors, "light");
-
-	.obsession-#{$i} {
-		.link {
-			.obsession { background-image: linear-gradient(to bottom, $color, $color); }
-		}
-	}
+%link-active {
+	background-position: 0 0;
+	color: $color-main;
 }
 
 .link-unstyled {
 	background: none;
 	padding: 0;
-	text-decoration: none;
-	color: currentColor;
+	font-weight: inherit;
+	text-transform: inherit;
+	color: inherit;
+}
+
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "light");
+	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+}
+
+@include media("md") {
+	.link { background-position: 0 1em; }
 }
 
 /* List utility classes */

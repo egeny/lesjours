@@ -20,7 +20,7 @@
 {% set class = "bg-center " + cover.class if not r/bg-/g|test(cover.class) else cover.class %}
 <{{ cover.tag|default("div") }} class="cover {{ class }}" style="background-image: url({{ cover.img }})">
 	{% if "small"|in(cover.class|split(" ")) %}
-		<a href="{{ cover.href }}" class="link-unstyled overlay">
+		<a href="{{ cover.href }}" class="overlay">
 			<div class="overlay pattern"></div>
 			<div class="pa-2g md-pl-4g lg-pl-4g relative">
 				<div class="snake-1">
@@ -37,11 +37,11 @@
 			<div class="{{ cover.layout|default("pv-5g sm-pa-2g md-ph-1c lg-ph-1c") }} relative">
 				<div class="snake-1">
 					<div class="snake-container">
-						<h2 class="h2"><a class="link-unstyled" href="{{ cover.href }}">{{ cover.title }}</a></h2>
+						<h2 class="h2"><a href="{{ cover.href }}">{{ cover.title }}</a></h2>
 						<p class="p-larger mb-1g">{{ cover.subtitle }}</p>
 						{% if cover.episode %}
 							{% set obsession = cover.episode.obsession|expand %}
-							<p class="style-meta color-inherit"><a class="link-unstyled" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ cover.episode.number }} | Par {{ authors(cover.episode, class="link-unstyled text-upper") }}</p>
+							<p class="style-meta color-inherit"><a href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ cover.episode.number }} | Par {{ authors(cover.episode, class="text-upper") }}</p>
 						{% endif %}
 						{% if cover.desc %}
 							<a href="{{ cover.href }}" class="btn"><i>{{ icon("chevron-down", "Lire") }}</i></a>
