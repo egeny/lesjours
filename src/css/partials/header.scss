@@ -124,10 +124,10 @@ $gutter: grid-gutter("sm");
 	right: #{$gutter / 2};
 }
 
-	#login { line-height: 1; }
-	#login:focus .btn-square { border-color: inherit; }
+	#login-btn { line-height: 1; }
+	#login-btn:focus .btn-square { border-color: inherit; }
 
-		#login svg {
+		#login-btn svg {
 			width:  initial;
 			height: initial;
 		}
@@ -219,7 +219,7 @@ $gutter: grid-gutter("sm");
 	#burger  { top: 22px; }
 	#account { line-height: 85px; }
 
-	#login-modal [role="document"] {
+	#login [role="document"] {
 		box-sizing: border-box;
 		width: 400px;
 	}
