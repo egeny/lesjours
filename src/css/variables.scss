@@ -7,10 +7,9 @@ $color-black: #000;
 $color-white: #FFF;
 
 // Fonts color
-$color-darkest: #290D09;
-$color-darker:  #333;
-$color-dark:    #717171;
-$color-light:   #D7D7D7;
+$color-darker: #333;
+$color-dark:   #717171;
+$color-light:  #D7D7D7;
 
 // Links colors
 $color-media:    #F3DF93;
@@ -34,10 +33,9 @@ $colors: (
 	black: $color-black,
 	white: $color-white,
 
-	darkest: $color-darkest,
-	darker:  $color-darker,
-	dark:    $color-dark,
-	light:   $color-light,
+	darker: $color-darker,
+	dark:   $color-dark,
+	light:  $color-light,
 
 	media:    $color-media,
 	external: $color-external
