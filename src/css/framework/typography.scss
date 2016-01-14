@@ -86,7 +86,7 @@
 .style-meta {
 	@extend %font-proxima;
 	@include font-weight-bold("proxima");
-	font-size: .8125em;
+	font-size: .8125rem; // Always 13px
 	line-height: 2;
 	color: $color-dark;
 
