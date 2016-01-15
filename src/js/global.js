@@ -18,19 +18,3 @@ function throttle(fn, time) {
 		}
 	};
 }
-
-// Set the behaviour for the wall's title buttons
-$document.ready(function() {
-	$(".wall .title .btn").click(function(e) {
-		var
-			$this     = $(this),
-			$wall     = $this.parents(".wall"),
-			$carousel = $wall.parent();
-
-		$wall.toggleClass("expanded");
-		$carousel.data("state", "paused");
-		$carousel.trigger("state-changed");
-
-		e.preventDefault();
-	});
-});
