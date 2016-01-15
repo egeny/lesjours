@@ -200,15 +200,12 @@
 	}
 }
 
-@include media("sm", $strict: true) {
-	.page-subscription              { overflow: visible; }
-	.page-subscription .calc-height { height: auto; }
-
-	.subscription .btn-primary i { display: none; }
-}
-
 @include media("md") {
 	$gutter: grid-gutter("md");
+	$margin: grid-margin("md");
+
+	.page-subscription              { overflow: hidden; }
+	.page-subscription > .container { height: calc(100% - 85px - #{$margin}); }
 
 	.subscription {
 		background:
@@ -284,11 +281,17 @@
 
 @include media("lg") {
 	$gutter: grid-gutter("lg");
+	$margin: grid-margin("lg");
+
 	@if $gutter != grid-gutter("md") {
 		.subscription {
 			legend:before { left: calc(-1.5em - #{$gutter}); }
 			.progress     { left: calc(-#{$gutter} - .75em); }
 		}
+	}
+
+	@if $margin != grid-margin("md") {
+		.page-subscription > .container { height: calc(100% - 85px - #{$margin}); }
 	}
 }
 /* @end Subscription */

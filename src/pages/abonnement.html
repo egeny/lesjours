@@ -1,13 +1,13 @@
 {%
 	set page = {
 		title: "Abonnement — Les Jours",
-		class: "page-subscription full-height no-overflow"
+		class: "page-subscription"
 	}
 %}
 {% extends "partials/_layout.html" %}
 
 {% block content %}
-<div class="container calc-height">
+<div class="container">
 	<div class="row full-height">
 		<div class="col full-height">
 			<div class="subscription full-height overflow-auto">
@@ -116,7 +116,7 @@
 						<p class="summary mv-4g pa-2g style-meta lh-inherit text-upper color-main">Vous avez choisi la formule « Jouriste » à 9 €/mois. <a class="color-brand" href="#formule">Modifier</a></p>
 						<div class="relative text-center">
 							<button class="btn-primary sm-w-4c md-w-5c lg-w-5c" type="submit">
-								<i>{{ icon("check") }}</i>
+								<i class="sm-hidden">{{ icon("check") }}</i>
 								<span>Accéder au paiement</span>
 							</button>
 						</div>
