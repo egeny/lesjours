@@ -84,7 +84,7 @@
 }
 
 .btn-transparent {
-	color: currentColor;
+	color: inherit;
 	&::before { content: none; }
 }
 
