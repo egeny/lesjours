@@ -50,8 +50,7 @@ $margin: grid-margin("sm");
 .lh-inherit { line-height: inherit; }
 
 /* Easy link's style */
-.link,
-%link {
+.link {
 	background-image: linear-gradient(to bottom, $color-media, $color-media);
 	background-position: 0 1.075em;
 	background-size: 100% 100%;
@@ -67,14 +66,12 @@ $margin: grid-margin("sm");
 	color: $color-main;
 
 	&:hover,
-	&:focus { @extend %link-active; }
+	&:focus {
+		background-position: 0 0;
+		color: $color-main;
+	}
 
 	&.external { background-image: linear-gradient(to bottom, $color-external, $color-external); }
-}
-
-%link-active {
-	background-position: 0 0;
-	color: $color-main;
 }
 
 .link-unstyled {
