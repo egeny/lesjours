@@ -514,7 +514,7 @@ gulp.task('optimize:js', function() {
 
 gulp.task('build:js', ['optimize:js'], function() {
 	var
-		files = ['modernizr', 'jquery', 'stickyfill', 'hammer', 'jquery.hammer', 'global', 'components/*'],
+		files = ['libs/modernizr', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
 		streams = merge();
 
 	streams.add(gulp
