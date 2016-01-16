@@ -1,6 +1,5 @@
-{% set page = { title: "Les Jours", class: "home" } %}
+{% set page = { title: "Les Jours" } %}
 {% extends "partials/_layout.html" %}
-{% from "partials/_macro.html" import authors %}
 
 {% block content %}
 <section class="container sm-ph-0">
@@ -26,37 +25,123 @@
 </section>
 
 {% if home.articles %}
-<section class="container">
-	<div class="row articles">
-		{% set episode   = home.articles[0]|expand  %}
-		{% set obsession = episode.obsession|expand %}
-		<div class="col sm-mb-4g md-w-4c lg-ml-1c lg-w-5c pl-4g obsession-{{ obsession.color }}">
-			<h3 class="h3 snake-1"><a href="/obsessions/{{ obsession.href }}/{{ episode.href }}" class="snake-container">{{ episode.title }}</a></h3>
-			<p>{{ episode.intro }}</p>
-			<p class="style-meta color-inherit"><a href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ episode.number }}</p>
-			<span class="style-meta">Par {{ authors(episode, class="link") }}</span>
-		</div>
+<section class="container mt-2g">
+	<h2 class="sr">TODO</h2>
+	<div class="row">
+		{% set class = "md-w-⅓" if home.articles|length >= 3     else ""    %}
+		{% set class = "md-w-½" if home.articles|length % 2 == 0 else class %}
+		{% for article in home.articles %}
+			{% set article   = article|expand %}
+			{% set obsession = article.obsession|expand %}
+			{%
+				set article = {
+					class: class,
+					small: true,
+					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg"),
+					alt: article.alt,
+					href: "/obsessions/" + obsession.href + "/" + article.href,
+					title: article.title,
+					intro: article.intro,
+					number: article.number,
+					obsession: obsession,
+					rel: article.rel
+				}
+			%}
+			{% include "partials/article.html" %}
+		{% endfor %}
+	</div>
+</section>
+{% endif %}
 
-		{% set episode   = home.articles[1]|expand  %}
-		{% set obsession = episode.obsession|expand %}
-		<div class="col md-w-4c lg-w-5c pl-4g obsession-{{ obsession.color }}">
-			<h3 class="h3 snake-1"><a href="/obsessions/{{ obsession.href }}/{{ episode.href }}" class="snake-container">{{ episode.title }}</a></h3>
-			<p>{{ episode.intro }}</p>
-			<p class="style-meta color-inherit"><a href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ episode.number }}</p>
-			<span class="style-meta">Par {{ authors(episode, class="link") }}</span>
+{% if home.master2 %}
+<hr/>
+<section class="container lg-mh-1c lg-w-10c">
+	<div class="row">
+		<div class="col">
+			<h2 class="sr">TODO</h2>
+			{% set episode   = home.master2|expand %}
+			{% set obsession = episode.obsession|expand %}
+			{%
+				set cover = {
+					class: "no-pattern obsession-" + obsession.color,
+					layout: "pv-5g sm-ph-2g md-pl-1c md-w-4c lg-pl-1c lg-w-5c",
+					img: "/obsessions/" + obsession.href + "/" + episode.href + "/" + episode.img|default("img/header.jpg"),
+					href: "/obsessions/" + obsession.href + "/" + episode.href,
+					title:    episode.title,
+					subtitle: episode.subtitle,
+					episode:  episode
+				}
+			%}
+			{% include "partials/cover.html" %}
 		</div>
+	</div>
+</section>
+{% endif %}
+
+{% if home.articles2 %}
+<section class="container mt-2g lg-mh-1c lg-w-10c">
+	<h2 class="sr">TODO</h2>
+	<div class="row">
+		{% for article in home.articles2 %}
+			{% set article   = article|expand %}
+			{% set obsession = article.obsession|expand %}
+			{%
+				set article = {
+					class: "md-w-½",
+					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg") if loop.index0 < 2 else "",
+					alt: article.alt,
+					href: "/obsessions/" + obsession.href + "/" + article.href,
+					title: article.title,
+					intro: article.intro,
+					number: article.number,
+					obsession: obsession,
+					rel: article.rel
+				}
+			%}
+			{% include "partials/article.html" %}
+		{% endfor %}
+	</div>
+</section>
+{% endif %}
+
+{% if home.articles3 %}
+<section class="container mt-2g lg-mh-1c lg-w-10c">
+	<h2 class="sr">TODO</h2>
+	<div class="row">
+		{% set dir = cycler("", " row-reverse") %}
+		{% for article in home.articles3 %}
+			{% set article   = article|expand %}
+			{% set obsession = article.obsession|expand %}
+			{% set class = "md-w-½" if loop.index > 2 else "" %}
+			{% set class = class + (dir.next() if loop.index0 < 2 else "") %}
+			{%
+				set article = {
+					class: class,
+					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg") if loop.index0 < 2 else "",
+					alt: article.alt,
+					layout: "md-w-½" if loop.index0 < 2 else "",
+					href: "/obsessions/" + obsession.href + "/" + article.href,
+					title: article.title,
+					intro: article.intro,
+					number: article.number,
+					obsession: obsession,
+					rel: article.rel
+				}
+			%}
+			{% include "partials/article.html" %}
+		{% endfor %}
 	</div>
 </section>
 {% endif %}
 
 {% if home.obsessions %}
 <hr/>
-<section class="container">
+<section class="container lg-mh-1c lg-w-10c">
 	<h2 class="pl-1g mb-1g lg-ml-1c style-meta-larger">Nos obsessions</h2>
 	<ul class="obsessions row lg-mh-1c">
 		{% for obsession in home.obsessions %}
 			{% set obsession = obsession|expand %}
-			<li class="col pa-1g obsession-{{ obsession.color }}">
+			<li class="col pa-1g md-w-½ lg-w-⅓ obsession-{{ obsession.color }}">
 				{%
 					set cover = {
 						class: "small",
@@ -75,7 +160,7 @@
 
 <hr/>
 <section class="text-center">
-	<h2 class="style-meta-large">Au fil des jours</h2>
+	<h2 class="style-meta-large light">Au fil des jours</h2>
 	<ul class="list-inline mv-3g">
 		<li class="col w-auto"><a class="btn-round" href="https://twitter.com/Lesjoursfr"><i>{{ icon("twitter", "Twitter") }}</i></a></li>
 		<li class="col w-auto"><a class="btn-round" href="https://www.facebook.com/LesJoursfr/"><i>{{ icon("facebook", "Facebook") }}</i></a></li>
