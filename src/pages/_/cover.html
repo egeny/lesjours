@@ -1,0 +1,119 @@
+{% set page = { title: "LesJours — Covers" } %}
+{% extends "partials/_layout.html" %}
+
+{% block content %}
+<style>
+	.cover.small { width:  348px; }
+	.cover.c1    { height: 600px; }
+</style>
+
+<div class="container mb-2g">
+	<div class="row">
+		<div class="col">
+			{%
+				set cover = {
+					class: "expanded",
+					img: "/obsessions/les-annees-college/les-annees-college.jpg",
+					href: "#",
+					title: "Les années<br/>Collège",
+					subtitle: "Un an en 3e B à Aubervilliers"
+				}
+			%}
+			{% include "partials/cover.html" %}
+		</div><!-- end of .col -->
+	</div><!-- end of .row -->
+</div><!-- end of .container -->
+
+<div class="container mb-2g">
+	<div class="row">
+		<div class="col">
+			{%
+				set cover = {
+					class: "no-pattern",
+					img: "/obsessions/la-mecanique-fn/la-mecanique-fn.jpg",
+					href: "#",
+					title: "La pieuvre",
+					subtitle: "À quinze mois de la présidentielle, le Front national prend le pays en tenaille avec la conquête de deux régions.",
+					episode: {
+						obsession: { name: "La mauvaise herbe de Provence", href: "#" },
+						number: 17,
+						rel: {
+							authors: [
+								{ "text": { name: "Alice Géraud", href: "#" } }
+							]
+						}
+					}
+				}
+			%}
+			{% include "partials/cover.html" %}
+		</div><!-- end of .col -->
+	</div><!-- end of .row -->
+</div><!-- end of .container -->
+
+<div class="container mb-2g">
+	<div class="row">
+		<div class="col">
+			{%
+				set cover = {
+					class: "no-pattern",
+					img: "/obsessions/les-annees-college/louis-le-grand-l-autre-bout-du-monde/img/header.jpg",
+					href: "#",
+					title: "On n'est pas des prix Nobel mais on sait faire du bizness",
+					subtitle: "À Aimé-Césaire, les profs redouttaient des réactions post-Charlie. Elles n’ont pas eu lieu.",
+					meta: {
+						episode: { number: 3, author: { name: "Alice Géraud", href: "#" } },
+						obsession: { name: "Les années collège", href: "#" }
+					}
+				}
+			%}
+			{% include "partials/cover.html" %}
+		</div><!-- end of .col -->
+	</div><!-- end of .row -->
+</div><!-- end of .container -->
+
+<div class="container mb-2g">
+	<div class="row">
+		<div class="col">
+			{%
+				set cover = {
+					class: "small",
+					img: "/obsessions/treize-novembre/treize-novembre.jpg",
+					href: "#",
+					title: "Treize<br/>Novembre",
+					subtitle: "Récit de la France d’après."
+				}
+			%}
+			{% include "partials/cover.html" %}
+		</div><!-- end of .col -->
+	</div><!-- end of .row -->
+</div><!-- end of .container -->
+
+<div class="container mb-2g">
+	<div class="row">
+		<div class="col">
+			{%
+				set cover = {
+					class: "c1",
+					img: "/obsessions/les-jours-a-l-oeil/les-jours-a-l-oeil.jpg",
+					href: "#",
+					title: "<q>Si ma famille le sait, ils me tuent</q>",
+					subtitle: "Histoires de photos et de photographes.",
+					desc: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+				}
+			%}
+			{% include "partials/cover.html" %}
+		</div><!-- end of .col -->
+	</div><!-- end of .row -->
+</div><!-- end of .container -->
+{% endblock %}

@@ -1,284 +1,297 @@
 /* @group Subscription */
-$gutter: grid-gutter("sm");
+.subscription {
+	fieldset { counter-increment: fieldset; }
 
-.subscription {}
+	legend::before,
+	.btn-primary i {
+		width:  1.5em;
+		height: 1.5em;
+		border: 1px solid;
+		border-radius: 50%;
+		margin-right: .5em;
 
-	.subscription fieldset { counter-increment: fieldset; }
+		content: counter(fieldset);
 
-		.subscription legend:before,
-		.subscription .btn-primary i {
-			width:  1.5em;
-			height: 1.5em;
-			line-height: 1.5;
-			border: 1px solid;
-			border-radius: 50%;
-			margin-right: .5em;
+		display: inline-block;
+		z-index: 1;
 
-			z-index: 1;
-			display: inline-block;
-
-			@extend %font-brandon;
-			@include font-weight-regular("brandon");
-			font-size: .75em;
-
-			content: counter(fieldset);
-			text-align: center;
-		}
-
-		.plans { justify-content: center; }
-
-			.plans li {
-				background: $color-white;
-
-				width: 254px;
-				border: 1px solid $color-brand;
-				margin: $gutter / 2;
-
-				position: relative;
-
-				color: $color-main;
-			}
-
-			.plans .strong {
-				background: $color-brand;
-				color: $color-darkest;
-			}
-
-				// Reset some defaults
-				.plans p {
-					margin-bottom: .5em;
-					line-height: 1;
-				}
-
-				.plans p,
-				.plans small { padding: 0 .5em; }
-
-				.plans img { margin: 35px 0 30px; }
-
-				.plans .price,
-				.plans .name { color: $color-brand; }
-
-				.plans .strong .price,
-				.plans .strong .name { color: $color-white; }
-
-				.plans .price {
-					margin: 0;
-					position: relative;
-
-					@extend %font-brandon;
-					@include font-weight-black("brandon");
-					font-size: 3.75rem;
-					line-height: 100px; // Prefer px since the font-size might vary
-				}
-
-					.plans .currency {
-						margin-left: .25em;
-
-						position: absolute;
-						top: 1.5em;
-
-						font-size: 1.25rem;
-						line-height: 1;
-
-						text-align: left;
-					}
-
-						.plans .currency span { display: block; }
-
-				.plans .name {
-					font-size: 1.25rem;
-					font-style: italic;
-					@include font-weight-bold("archer");
-				}
-
-				.plans .desc,
-				.plans small,
-				.plans .action {
-					@extend %font-proxima;
-					font-size: .75rem;
-				}
-
-				.plans .desc {
-					@include font-weight-extra-bold("proxima");
-					text-transform: uppercase;
-				}
-
-				.plans small {
-					margin-bottom: .5em;
-					display: block;
-					@include font-weight-semi-bold("proxima");
-				}
-
-				.plans .action {
-					background: $color-white;
-
-					display: block;
-					position: absolute;
-					bottom: 0;
-					left:   0;
-					right:  0;
-
-					@include font-weight-bold("proxima");
-					font-size: 1rem;
-					line-height: 2.75;
-
-					text-decoration: none;
-					text-transform: uppercase;
-
-					cursor: pointer;
-
-					color: $color-brand;
-				}
-
-					.plans .action input { @extend .sr; }
-
-					.plans .action > span {
-						background: $color-white;
-						display: block;
-						color: $color-brand;
-					}
-
-					.plans .action > span:after {
-						background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") left/100%;
-
-						width:  28px;
-						height: 20px;
-						margin-top:  -10px; // Center vertically
-						margin-left: -14px; // Center horizontally
-
-						content: "";
-						position: absolute;
-						top:  50%;
-						left: 50%;
-
-						opacity: 0;
-						visibility: hidden;
-						transform: scale(3);
-					}
-
-				.plans .action:hover, // .action might be a link as wall
-				.plans .action:focus,
-				.plans .action:hover > span, // Overload the selector
-				.plans .action input:focus + span { // Allow the same visual feedback when the input is focused
-					background: $color-brand;
-					color: $color-white;
-				}
-
-				.plans .action input:checked + span {
-					background: $color-brand;
-					transition: color .3s;
-					color: $color-brand; // Clever (or not) way to hide the text without additional markup
-				}
-
-				.plans .action input:checked + span:after {
-					opacity: 1;
-					visibility: visible;
-					transform: scale(1);
-
-					transition: opacity .3s, visibility 0s, transform .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-				}
-
-	.subscription .btn-primary i { display: none; }
-
-	.subscription .gift {
-		@include font-weight-regular("proxima");
+		@extend %font-brandon;
+		@include font-weight-regular("brandon");
+		font-size: .75em;
 		line-height: 1.5;
+
+		text-align: center;
 	}
 
-		.subscription .gift svg {
+	fieldset.valid {
+		legend::before,
+		.btn-primary i { color: $color-brand; }
+	}
+
+	.gift {
+		@include font-weight-regular("proxima");
+
+		svg {
 			width:  26px;
 			height: 37px;
 			margin-right: .75em;
 		}
 
-		.subscription .gift strong {
-			display: block;
-			@include font-weight-bold("proxima");
-		}
+		p { padding: .25em 0; }
+	}
 
-@include media("sm", true) {
-	// This div is useful only on small devices
-	.plans div {
+	.summary { border: 1px solid; }
+}
+
+.plans {
+	justify-content: center;
+
+	li {
+		background: $color-white;
+
+		width: 254px;
+		border: 1px solid $color-brand;
+
+		display: inline-flex;
+
+		color: $color-main;
+	}
+
+	.strong {
+		background: $color-brand;
+		color:      $color-darker;
+
+		.price,
+		.name { color: $color-white; }
+	}
+
+	a,
+	label {
+		padding-bottom: 2.75rem; // See .action
 		border: 3px solid $color-white;
-		padding-bottom: 2.75rem; // See .plans .action
+
+		display: block;
+		flex: 1;
 		position: relative;
+
+		color: inherit; // Avoid default hover/focus on the links
+
+		> span,
+		> small {
+			padding: 0 .5em;
+			margin-bottom: .5em;
+			display: block;
+			line-height: 1;
+		}
+	}
+
+	.price,
+	.name { color: $color-brand; }
+
+	.price {
+		margin: 0;
+		position: relative;
+
+		@extend %font-brandon;
+		@include font-weight-black("brandon");
+		font-size: 3.75rem; // Prefer rem instead of em since font-size is different on mobile and other devices
+		line-height: 100px; // Prefer px since the font-size might vary
+	}
+
+	img { margin: 35px 0 30px; }
+
+	.currency {
+		margin-left: .25em;
+
+		position: absolute;
+		top: 1.5em;
+
+		font-size: 1.25rem;
+		line-height: 1;
+
+		text-align: left;
+
+		span { display: block; }
+	}
+
+	.name {
+		font-style: italic;
+		@include font-weight-bold("archer");
+		font-size: 1.25rem;
+	}
+
+	.desc,
+	small,
+	.action {
+		@extend %font-proxima;
+		font-size: .75rem;
+	}
+
+	.desc {
+		@include font-weight-extra-bold("proxima");
+		text-transform: uppercase;
+	}
+
+	small {
+		margin-bottom: 1em;
+		@include font-weight-semi-bold("proxima");
+	}
+
+	.action {
+		background: $color-white;
+
+		margin: 0;
+
+		position: absolute;
+		right:  0;
+		bottom: 0;
+		left:   0;
+
+		@include font-weight-bold("proxima");
+		font-size: 1rem;
+		line-height: 2.75;
+
+		text-transform: uppercase;
+
+		color: $color-brand;
+
+		&::after {
+			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") 0 / 100%;
+
+			width:  28px;
+			height: 20px;
+			margin-top:  -10px; // Center vertically
+			margin-left: -14px; // Center horizontally
+
+			content: "";
+
+			opacity: 0;
+			visibility: hidden;
+
+			position: absolute;
+			top:  50%;
+			left: 50%;
+
+			transform: scale(3);
+		}
+	}
+
+	label:hover input:checked + .action,
+	input:checked       + .action,
+	input:focus:checked + .action {
+		background: $color-brand;
+		transition: color .3s;
+		color:      $color-brand;
+	}
+
+	input:checked + .action::after {
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+		transition: opacity .3s, visibility 0s, transform .3s cubic-bezier(.18, .89, .32, 1.28);
+	}
+
+	a:hover .action,
+	a:focus .action,
+	label:hover .action,
+	input:focus + .action {
+		background: $color-brand;
+		color:      $color-white;
 	}
 }
 
 @include media("md") {
 	$gutter: grid-gutter("md");
+	$margin: grid-margin("md");
+
+	.page-subscription              { overflow: hidden; }
+	.page-subscription > .container { height: calc(100% - 85px - #{$margin}); }
 
 	.subscription {
 		background:
 			url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>") left/2px 4px,
 			linear-gradient(to bottom, rgba($color-black, .6), rgba($color-black, .6)),
-			url(img/back/subscription.jpg) center/cover;
-		background-attachment: fixed;
+			url("img/back/subscription.jpg") center/cover;
 		color: $color-white;
-	}
 
-		.subscription legend:before,
-		.subscription .btn-primary i {
-				background: $color-black;
 
-				margin-top: -.75em;
-				position: absolute;
-				top: 50%;
-				left: calc(-1.5em - #{$gutter});
+		legend:before,
+		.btn-primary i {
+			background: $color-black;
+			margin-top: -.75em;
+
+			position: absolute;
+			top: 50%;
+			left: calc(-1.5em - #{$gutter});
 		}
 
-		.plans li {
-			width: 238px;
-			border: 4px solid $color-white;
-			padding-bottom: 2.75rem; // See .plans .action
+		.gift,
+		label.style-meta { color: $color-white; }
+
+		.summary {
+			background: $color-white;
+			border: 0;
 		}
 
-			.plans .strong .price { font-size: 6.25rem; }
-
-	.subscription .gift { color: $color-white; }
-
-	.subscription .btn-primary { position: static; }
-
-		.subscription .btn-primary i {
+		.btn-primary i {
 			content: "";
-			display: block;
+
+			outline: 0;
+			pointer-events: none;
 
 			font-size: 1.125em;
 
-			pointer-events: none;
-			outline: 0;
-		}
-
-			.subscription .btn-primary svg {
+			svg {
 				margin-top: -4px;
 				font-size: 10px;
 			}
+		}
 
-	.subscription .progress {
-		background: $color-white;
+		.progress {
+			background: $color-white;
 
-		width: 1px;
+			width: 1px;
 
-		position: absolute;
-		top:    20px;
-		bottom: 30px;
-		left: calc(#{-$gutter} - .75em);
+			position: absolute;
+			top:    20px; // Arbitrary
+			bottom: 30px; // Arbitrary
+			left: calc(-#{$gutter} - .75em);
 
-		font-size: 1.125em; // Same as .subscription legend:before (18px)
+			font-size: 1.125em; // Same as .subscription legend:before (18px)
+
+			&::before {
+				background: $color-brand;
+				width: 100%;
+
+				content: "";
+				position: absolute;
+			}
+		}
 	}
 
-	@if $gutter != grid-gutter("sm") {
-		.subscription legend:before { left: calc(-1.5em - #{$gutter}); }
-		.plans li { margin: $gutter / 2; }
+	.plans {
+		li {
+			width: 238px;
+			border: 1px solid $color-white;
+		}
+
+		.strong .price { font-size: 5.25rem; }
 	}
 }
 
 @include media("lg") {
 	$gutter: grid-gutter("lg");
+	$margin: grid-margin("lg");
+
 	@if $gutter != grid-gutter("md") {
-		.subscription legend:before { left: calc(-1.5em - #{$gutter}); }
-		.plans li { margin: $gutter / 2; }
-		.subscription .progress { left: calc(#{-$gutter} - .75em); }
+		.subscription {
+			legend:before { left: calc(-1.5em - #{$gutter}); }
+			.progress     { left: calc(-#{$gutter} - .75em); }
+		}
+	}
+
+	@if $margin != grid-margin("md") {
+		.page-subscription > .container { height: calc(100% - 85px - #{$margin}); }
 	}
 }
 /* @end Subscription */

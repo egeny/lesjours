@@ -31,86 +31,18 @@ article a:hover,
 article a:focus { @extend %link-active; }
 
 article abbr  {}
-article aside {}
 
-	article aside p {
-		@extend .h2;
-		@include font-weight-bold("brandon");
-		font-size: 2em;
-		margin: 0;
-	}
 
-	article aside span { font-size: 1.333333em; }
-
-// Archer's bold is actually bolder than the default "bold" (its font-weights seems wrong)
-article b,
-article strong { @include font-weight-bold("archer"); }
-
-article blockquote { position: relative; }
-
-	article blockquote:before {
-		@extend %quote;
-		background-color: $color-brand;
-		background-position: 50% 50%;
-		background-size: 0.7em 0.7em;
-
-		width:  2.5em;
-		height: 2.5em;
-		border-radius: 50%;
-
-		content: "";
-
-		z-index: -1;
-		position: absolute;
-		top:  -.75em;
-		left: 4px;
-
-		font-size: 1.85em;
-	}
-
-	article blockquote p {
-		padding-left: 1.75em;
-		margin-bottom: .125em;
-
-		@extend %font-brandon;
-		@include font-weight-light("brandon");
-		font-size: 1.85em;
-		line-height: 1.15;
-	}
-
-	article blockquote p:last-of-type:after { content: " »"; }
-
-	article blockquote footer {
-		@extend .style-meta;
-		padding-left: 4em;
-	}
 
 article dl,
 article dt,
 article dfn,
 article dd {}
 
-article figure {}
-
-	article figcaption {
-		@extend .snake-2;
-		@extend .style-meta;
-		margin-top: .75em;
-		margin-left: $gutter * 2.25;
-		color: inherit;
-		line-height: inherit;
+		&:hover,
+		&:focus { @extend %link-active; }
 	}
 
-	article figcaption:before {
-		height: auto;
-		top: -30px;
-	}
-
-	article figcaption > span { @extend .snake-container; }
-	article figcaption > span .credits:before { content: "— "; }
-
-	article figcaption .credits,
-	article figcaption .credits a { @include font-weight-regular("proxima"); }
 
 article h3 { @extend .h4; }
 article h4 { @extend .h5; }
@@ -120,15 +52,6 @@ article h3,
 article h4,
 article h5 { margin-bottom: 0; }
 
-article i,
-article em { font-style: italic; }
-
-article q:before   { content: "« "; }
-article q:after    { content: " »"; }
-article q q:before { content: "“"; }
-article q q:after  { content: "”"; }
-article blockquote q:before { content: "“"; }
-article blockquote q:after  { content: "”"; }
 
 article table {}
 	article caption {}
@@ -139,168 +62,19 @@ article table {}
 			article th {}
 			article td {}
 
-article .dialogue {
-	margin-top:    1.5em;
-	margin-bottom: .75em;
-}
-
-	article .dialogue p        { margin-bottom: .75em; }
-	article .dialogue p:before { content: "— "; }
 
 // FIXME: article-container or global?
 a[href^="#note"]:after { content: "*"; }
 
-article .interview {
-	margin-top:    .5em;
-	margin-bottom: .75em;
 }
 
-	article .question {
-		margin: 1.5em 0 .75em;
-		@extend %font-archer-smcp;
-		@include font-weight-bold("archer");
-	}
 
-	article .question:before {
-		content: "• ";
-		color: $color-brand;
-	}
+	h3,
+	h4,
+	h5 { margin-bottom: 0; }
 
-	article .answer { margin-bottom: .75em; }
-
-article .lettrine {
-	background-color: $color-brand;
-
-	width: 1.6em;
-	line-height: 1.6em;
-	border-radius: 50%;
-	margin: -.25em .15em 0 0;
-
-	float: left;
-	display: inline-block;
-
-	@extend %font-brandon;
-	@include font-weight-regular("brandon");
-	font-size: 3.75em;
-
-	text-align: center;
-
-	color: $color-white;
 }
 
-article .lettrine::selection { background: transparent; }
-
-article .lettrine.with-quote {
-	@extend %quote;
-	background-size: .25em .25em;
-	background-position: .1875em 50%;
-}
-
-article .mini {
-	position: absolute;
-	right: 0;
-
-	@extend %font-proxima;
-	font-size: .875em;
-
-	opacity: 0;
-	transition: opacity .6s, transform .6s;
-	transform: translateX(100%);
-
-	color: $color-black;
-}
-
-article .mini.show {
-	opacity: 1;
-	transform: none;
-}
-
-	article .mini a { display: block; }
-
-	article .mini.active a,
-	article .mini a:hover,
-	article .mini a:focus { color: $color-media; }
-
-		article .mini .image {
-			width:  80px;
-			height: 80px;
-			padding: 8px;
-			border-radius: 50%;
-
-			display: block;
-			font-size: inherit;
-		}
-
-		article .mini .image,
-		article .mini .player { margin: 0 auto .5em; }
-
-		article .mini.active .image,
-		article .mini a:hover .image,
-		article .mini a:focus .image { background: $color-media; }
-
-			article .mini .image img {
-				box-sizing: border-box;
-				height: 100%;
-				border: 6px solid $color-white;
-				border-radius: 50%;
-			}
-
-		article .mini p,
-		article .mini figcaption,
-		article .mini .more {
-			margin-left: calc((100% - 80px) / 2);
-			margin-bottom: 0;
-			font: inherit;
-		}
-
-		article .mini .title {
-			@include font-weight-bold("proxima");
-			text-transform: uppercase;
-		}
-
-		article .mini .subtitle {
-			@include font-weight-semi-bold("proxima");
-			color: $color-dark;
-		}
-
-		article .mini.active .subtitle,
-		article .mini a:hover .subtitle,
-		article .mini a:focus .subtitle { color: inherit; }
-
-		article .mini figcaption,
-		article .mini .caption {
-			padding-top: .75em;
-			border-top: 1px solid $color-dark;
-			margin-top: .75em;
-
-			@include font-weight-regular("proxima");
-			font-size:  1em;
-			font-style: italic;
-		}
-
-		article .mini figcaption:before { content: none; }
-
-		article .mini[id^="note"] .title {
-			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 19'><path fill='rgb(243,223,147)' d='M15.834 10.3c2.064-.096 3.456-1.296 2.832-3.168-.528-1.632-2.4-1.872-4.08-.768l-4.416 2.88 1.392-5.136C12.09 2.188 11.466.46 9.498.46S6.906 2.188 7.434 4.108l1.392 5.136-4.416-2.88C2.73 5.26.858 5.5.33 7.132c-.624 1.872.768 3.072 2.832 3.168l5.328.288-4.128 3.264c-1.584 1.248-2.064 3.12-.48 4.224s3.12.144 3.84-1.776l1.776-4.752 1.776 4.752c.72 1.92 2.256 2.88 3.84 1.776 1.584-1.104 1.104-2.976-.48-4.224l-4.128-3.264 5.328-.288z' /></svg>") no-repeat 0 0/19px 19px;
-			padding-top: 30px;
-			margin-top: 0;
-		}
-
-		article .mini[id^="note"] .more { display: inline; }
-
-		article .mini[id^="note"] .more::after {
-			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='rgb(243,223,147)' fill-rule='evenodd' d='M6.5 6.5H4v3h2.5V12h3V9.5H12v-3H9.5V4h-3v2.5zM8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /></svg>") no-repeat;
-
-			width:  1em;
-			height: 1em;
-			margin-top: -1px;
-			margin-left: .25em;
-
-			content: "";
-			display: inline-block;
-
-			vertical-align: middle;
-		}
 
 article .share { margin-bottom: 1.5em; }
 
@@ -349,23 +123,6 @@ article .share { margin-bottom: 1.5em; }
 	margin-top:    1.5em;
 	margin-bottom: 1.5em;
 }
-
-.article-container ul,
-.article-container ol {
-	counter-reset: list;
-	list-style: none;
-}
-
-	.article-container ul ul,
-	.article-container ul ol,
-	.article-container ol ul,
-	.article-container ol ol { padding-left: 1em; }
-
-	.article-container li { counter-increment: list; }
-	.article-container li:before { @include font-weight-bold("archer"); }
-	.article-container ul li:before { content: "• "; }
-	.article-container ol li:before { content: "• " counter(list) " "; }
-	.article-container ol ol li:before { content: "• " counter(list, lower-alpha) " "; }
 
 	.article-container .mini { margin: 0; }
 	.article-container .share li:before { content: none; }
@@ -438,15 +195,9 @@ article .share { margin-bottom: 1.5em; }
 	article.obsession-#{$i} .snake,
 	article.obsession-#{$i} figcaption:before { border-color: $main; }
 
-	article.obsession-#{$i} blockquote:before { background-color: rgba($main, .75); }
-	article.obsession-#{$i} .lettrine         { background-color: $main; }
-
-	article.obsession-#{$i} aside span,
-	article.obsession-#{$i} .question:before { color: $main; }
 }
 
 @include media("sm", true) {
-	article .mini { display: none; }
 }
 
 @include media("md") {
@@ -459,11 +210,6 @@ article .share { margin-bottom: 1.5em; }
 		right: 0;
 		left:  -4px; // Offset the border
 	}
-
-	article blockquote p      { padding-left: 1.25em; }
-	article blockquote footer { padding-left: 3em; }
-	article figcaption   { margin-left: 0; }
-	article .lettrine    { margin-left: -.5em; }
 
 	article .share {
 		@include fadable;
@@ -548,8 +294,6 @@ article .share { margin-bottom: 1.5em; }
 	article .rel a[rel="next"] div { margin-right: 25%; }
 
 	@if $margin != grid-margin("sm") {
-		article blockquote:before { left: #{-$margin / 2}; }
-
 		article > footer { padding-bottom: $margin; }
 		article .meta {
 			padding-right: $margin;
@@ -565,29 +309,6 @@ article .share { margin-bottom: 1.5em; }
 @include media("lg") {
 	$margin: grid-margin("lg");
 	$gutter: grid-gutter("lg");
-
-	article .mini .image,
-	article .mini .player { float: left; }
-
-	article .mini .title,
-	article .mini .subtitle,
-	article .mini .caption,
-	article .mini figcaption {
-		width: calc(100% - 96px - 1em);
-		margin-left: 0;
-
-		float: right;
-	}
-
-	article .mini .title { margin-top: 30px; }
-
-	article .mini[id^="note"] p,
-	article .mini[id^="note"] a {
-		width: auto;
-		margin-right: $gutter / 2;
-		margin-left:  $gutter / 2;
-		float: none;
-	}
 
 	.article-container > * { @extend .lg-ml-2c; }
 	.article-container > * { @extend .lg-w-6c; }
@@ -614,8 +335,6 @@ article .share { margin-bottom: 1.5em; }
 	article .meta li { margin-right: 1.5em; }
 
 	@if $margin != grid-margin("md") {
-		article blockquote:before { left: #{-$margin / 2}; }
-
 		article > footer { padding-bottom: $margin; }
 		article .meta {
 			padding-right: $margin;

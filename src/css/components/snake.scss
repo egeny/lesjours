@@ -1,5 +1,4 @@
 /* @group .snake */
-/*csslint known-properties:false */
 $gutter: grid-gutter("sm");
 
 .snake {
@@ -7,20 +6,97 @@ $gutter: grid-gutter("sm");
 	position: absolute;
 }
 
+// Using ::before and ::after may seems like a stupid solution
+// Before, it was made using an inline SVG
+// Unfortunately, it was too hard to adapt its size to the content
+// Also, there were some bugs and this that might not be supported
+// The downside is we are no longer able to make the awesome animation
+.snake-1 {
+	border: 0 solid $color-brand;
+	border-left-width: 4px;
+	transition: border .3s;
+
+	&::before,
+	&::after {
+		width: 108px;
+		border: 4px solid;
+		border-color: inherit;
+
+		content: "";
+		display: block;
+
+		transition: inherit;
+		transition-delay: -3s; // For an unknown reason, webkit browsers add a delay (inherit?) so we have to "reset" it
+	}
+
+	&::before {
+		height: $gutter;
+		border-width: 4px 4px 0 0;
+	}
+
+	.snake-container { padding-left: $gutter; }
+
+	&::after {
+		height: $gutter * 2.5;
+		border-width: 0 4px 4px 0;
+	}
+}
+
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "main");
+
+	.obsession-#{$i} {
+		.snake,
+		.snake-1 { border-color: $color; }
+	}
+}
+
+@include media("md") {
+	$gutter: grid-gutter("md");
+
+	.snake-1 {
+		margin-left: #{-$gutter};
+
+		&::before,
+		&::after  { width:  210px; }
+		&::before { height: $gutter; }
+		&::after  { height: $gutter * 2.875; }
+	}
+
+	@if $gutter != grid-gutter("sm") {
+		.snake-1 .snake-container { padding-left: $gutter; }
+	}
+}
+
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+
+	@if $gutter != grid-gutter("md") {
+		.snake-1 {
+			margin-left: #{-$gutter};
+
+			&::before { height: $gutter; }
+			&::after  { height: $gutter * 2.875; }
+			.snake-container { padding-left: $gutter; }
+		}
+	}
+}
+
+/*
 .snake-1,
 .snake-2,
 .snake-3,
-.snake-4-tmp { position: relative; }
+.snake-4-tmp {
+	position: relative;
 
-	.snake-1:before,
-	.snake-2:before,
-	.snake-3:before,
-	.snake-4-tmp:before {
+	&::before {
 		border: 4px solid $color-brand;
-		position: absolute;
 		content: "";
+		position: absolute;
 		pointer-events: none;
 	}
+}
 
 	.snake-container {
 		background: $color-white;
@@ -28,64 +104,81 @@ $gutter: grid-gutter("sm");
 		position: relative;
 	}
 
-	.snake-1:before {
-		width:  1.5em;
-		height: 1.5em;
-		left:  -1.5em;
-		top: calc(-.75em - 4px);
+	.snake-1 {
+		&::before {
+			width:  1.5em;
+			height: 1.5em;
+			top: calc(-.75em - 4px);
+			left:  -1.5em;
+		}
+
+		.snake-container {
+			padding-left: .333333em;
+			margin-left: -.333333em;
+		}
 	}
 
-	.snake-1 .snake-container {
-		padding-left: .333333em;
-		margin-left: -.333333em;
+	.snake-2 {
+		&::before {
+			width:  3em;
+			height: 150%;
+			min-height: 3em;
+			bottom: -.75em;
+			left:   calc(-#{$gutter} - 4px);
+		}
 	}
 
-	.snake-2:before {
-		width:  3em;
-		height: 150%;
-		min-height: 3em;
-		left:   calc(-#{$gutter} - 4px);
-		bottom: -.75em;
+	.snake-3 {
+		&::before {
+			width:  55px;
+			top:    -14px;
+			bottom: -14px;
+			left:   calc(-#{$gutter} - 4px);
+		}
+
+		.snake-wrapper { display: block; }
 	}
 
-	.snake-3:before {
-		width:  55px;
-		top:    -14px;
-		bottom: -14px;
-		left:   calc(-#{$gutter} - 4px);
-	}
-
-	.snake-3 .snake-wrapper { display: block; }
-
-	.snake-4-tmp:before {
-		width:  114px;
-		top:    -26px;
-		bottom: -26px;
-		left:   -26px;
+	.snake-4-tmp {
+		&::before {
+			width:  114px;
+			top:    -26px;
+			bottom: -26px;
+			left:   -26px;
+		}
 	}
 
 @each $colors in $colors-obsessions {
 	$i: index($colors-obsessions, $colors);
-	.obsession-#{$i} .snake-1:before,
-	.obsession-#{$i} .snake-2:before,
-	.obsession-#{$i} .snake-3:before,
-	.obsession-#{$i} .snake-4-tmp:before { border-color: map-get($colors, "main"); }
+
+	.obsession-#{$i} {
+		.snake-1,
+		.snake-2,
+		.snake-3,
+		.snake-4-tmp {
+			&::before { border-color: map-get($colors, "main"); }
+		}
+	}
 }
 
 @include media("md") {
 	$gutter: grid-gutter("md");
 
 	@if $gutter != grid-gutter("sm") {
-		.snake-2:before,
-		.snake-3:before { left: calc(-#{$gutter} - 4px); }
+		.snake-2,
+		.snake-3 {
+			&::before { left: calc(-#{$gutter} - 4px); }
+		}
 	}
 }
 
 @include media("lg") {
 	$gutter: grid-gutter("lg");
 	@if $gutter != grid-gutter("md") {
-		.snake-2:before,
-		.snake-3:before { left: calc(-#{$gutter} - 4px); }
+		.snake-2,
+		.snake-3 {
+			&::before { left: calc(-#{$gutter} - 4px); }
+		}
 	}
-}
+}*/
 /* @end .snake */

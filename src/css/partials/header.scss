@@ -1,17 +1,23 @@
 /* @group #header */
-/*csslint ids:false */
 $gutter: grid-gutter("sm");
 
-#header {
+#header-container {
 	background: $color-white;
 	max-width: $max-width;
-	height: 64px;
-	margin: 0 auto;
-
-	color: $color-brand;
 }
 
-.sticky-header.sticky {
+// FIXME: temporary (also, change burger.js/menu.js)
+#header-container.fixed {
+	overflow: auto;
+	position: fixed;
+	top:    0;
+	right:  0;
+	bottom: 0;
+	left:   0;
+	z-index: 10000;
+}
+
+/*.sticky-header.sticky {
 	z-index: 10000;
 	position: sticky;
 	top: 0;
@@ -21,75 +27,72 @@ $gutter: grid-gutter("sm");
 
 .sticky-header.animated { transition: transform .3s; }
 .sticky-header.show     { transform: none; }
+*/
 
-#header h1,
-#header h1 a { display: inline-block; }
-#header h1 a { padding: 11px; }
+#header {
+	height: 64px;
+	color: $color-brand;
+
+	h1 a { padding: 11px; }
+}
 
 #burger {
-	width:  40px;
-	padding: 5px;
+	width:  35px;
+	padding: 6px 5px;
 
 	position: absolute;
 	top: 12px;
-	left: #{$gutter / 2};
-}
+	left: 0;
 
-	#burger span {
+	&::before,
+	> span,
+	&::after {
 		background: currentColor;
 
 		width: 100%;
 		height: 3px;
+		margin: 6px 0;
 
-		margin-top:    4px;
-		margin-bottom: 6px;
-
+		content: "";
 		display: block;
 
-		transition: transform .3s;
-		transform-origin: 50%;
-
 		// Set global's animations
-		animation-direction: reverse; // Set as reverse in order to return to initial state
 		animation-duration: .3s;
 		animation-timing-function: ease-in-out;
-	}
-
-	#burger :last-child { margin-bottom: 5px; }
-
-	#burger:hover :first-child,
-	#burger:focus :first-child { transform: translateY(2px); }
-
-	#burger:hover :last-child,
-	#burger:focus :last-child { transform: translateY(-2px); }
-
-	// Use the burger-*-initial animation to return to initial state
-	#burger :first-child  { animation-name: burger-1-initial; }
-	#burger :nth-child(2) { animation-name: burger-2-initial; }
-	#burger :last-child   { animation-name: burger-3-initial; }
-
-	// When there is an initial class, avoid animating (page load)
-	#burger.initial span { animation: none; }
-
-	// When the button has a "close" class, play the animation forwards (and stays there)
-	#burger.close span {
-		animation-direction: normal;
+		animation-direction: reverse; // By default, set as reverse since it will be used to go to the default state
 		animation-fill-mode: forwards;
+
+		transform-origin: 50%;
+		transition: transform .3s;
 	}
+
+	// Use the burger-*-default animation to return to default state
+	&::before { animation-name: burger-1-default; }
+	& > span  { animation-name: burger-2-default; }
+	&::after  { animation-name: burger-3-default; }
+
+	// Do not add :focus, prefers the default outline
+	&:hover {
+		&::before { transform: translateY(2px); }
+		&::after  { transform: translateY(-2px); }
+	}
+
+	&.close::before,
+	&.close > span,
+	&.close::after { animation-direction: normal; }
 
 	// Use *another* animation, otherwise we won't be able to animate different states
-	#burger.close :first-child  { animation-name: burger-1; }
-	#burger.close :nth-child(2) { animation-name: burger-2; }
-	#burger.close :last-child   { animation-name: burger-3; }
+	&.close::before { animation-name: burger-1; }
+	&.close > span  { animation-name: burger-2; }
+	&.close::after  { animation-name: burger-3; }
 
-@keyframes burger-1 {
-	50%  { transform: translateY(9px); }
-	100% { transform: translateY(9px) rotate(45deg); }
+	// When there is an "initial" class, avoid animating (page load)
+	&.initial::before,
+	&.initial > span,
+	&.initial::after  { animation-name: none; }
 }
 
-// As stated before, we have to use another animation name in order to animate while changing state
-// For convenience, this is the same animation but played in reverse
-@keyframes burger-1-initial {
+@keyframes burger-1 {
 	50%  { transform: translateY(9px); }
 	100% { transform: translateY(9px) rotate(45deg); }
 }
@@ -99,143 +102,119 @@ $gutter: grid-gutter("sm");
 	100% { opacity: 0; }
 }
 
-// See burger-1-initial
-@keyframes burger-2-initial {
-	50%  { opacity: 0; }
-	100% { opacity: 0; }
-}
-
 @keyframes burger-3 {
 	50%  { transform: translateY(-9px); }
 	100% { transform: translateY(-9px) rotate(-45deg); }
 }
 
-// See burger-1-initial
-@keyframes burger-3-initial {
+// As stated before, we have to use another animation name in order to animate while changing state
+// For convenience, this is the same animation but played in reverse
+@keyframes burger-1-default {
+	50%  { transform: translateY(9px); }
+	100% { transform: translateY(9px) rotate(45deg); }
+}
+
+// See burger-1-default
+@keyframes burger-2-default {
+	50%  { opacity: 0; }
+	100% { opacity: 0; }
+}
+
+// See burger-1-default
+@keyframes burger-3-default {
 	50%  { transform: translateY(-9px); }
 	100% { transform: translateY(-9px) rotate(-45deg); }
 }
 
 #account {
+	position: absolute;
+	top:   0;
+	right: 0;
+
 	line-height: 64px;
 
-	position: absolute;
-	top: 0;
-	right: #{$gutter / 2};
-}
+	> a { line-height: initial; }
 
-	#login { line-height: 1; }
-	#login:focus .btn-square { border-color: inherit; }
+	[href="#login"] {
+		display: inline-block;
+		&:focus .btn-square { border-color: inherit; }
 
-		#login svg {
+		svg {
 			width:  initial;
 			height: initial;
 		}
+	}
+}
 
 #menu {
-	background: $color-white;
+	// Offset the menu so the browser will correctly jump to the menu when using an anchor
+	padding-top: 64px;
+	margin-top: -64px;
 
-	z-index: 1000;
-	position: absolute;
-	top:   100%;
-	right: 0;
-	left:  0;
-
-	@extend %fadable;
+	display: none;
+	outline: 0;
 
 	@extend  %font-proxima;
 	@include font-weight-bold("proxima");
-	text-align: left;
 
-	color: $color-main;
-}
+	&:target { display: block; }
 
-#menu.opened { @extend %fadable-active; }
-
-	#menu a {
-		@extend .link-unstyled;
-		margin: 0.75em 0;
+	a {
+		margin: .75em 0;
 		display: inline-block;
 		text-transform: uppercase;
+
+		&:hover i::before,
+		&:focus i::before { transform: scale(.9); }
 	}
 
-		#menu a i {
-			margin-right: .75em;
+	i {
+		margin-right: .75em;
 
-			display: inline-block;
-			position: relative;
-
-			line-height: 1;
-			color: $color-white;
-		}
-
-		#menu a i:before { @extend .btn-round:before }
-
-		#menu a:hover i:before,
-		#menu a:focus i:before { transform: scale(0.9); }
-
-		#menu i svg { position: relative; }
-
-	#menu span {
-		margin: 0.5em 0;
-
-		display: block;
+		display: inline-block;
+		position: relative;
 
 		line-height: 1;
-		font-size: 1.375em;
-		@include font-weight-light("proxima");
+		color: $color-white;
+
+		&::before { @extend .btn-round::before }
+		svg { position: relative; }
 	}
 
-	#menu ul {
-		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 24'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0zM1 4h1v1H1zM0 6h1v1H0zM1 8h1v1H1zM0 10h1v1H0zM1 12h1v1H1zM0 14h1v1H0zM1 16h1v1H1zM0 18h1v1H0zM1 20h1v1H1zM0 22h1v1H0z'/></svg>") repeat-x 0 100%;
-		background-size: 2px 24px;
-		padding-bottom: 3em;
-		margin-bottom:  1.5em;
-	}
+	.style-meta-larger { font-size: 1.375em; }
 
-	#menu .list-inline {
-		background: none;
-		padding: 0;
-		margin-bottom: 0.5em;
-	}
+	.list-inline {
+		i { margin: 0; }
 
-		#menu .list-inline a i { margin: 0; }
-
-		#menu .list-inline a i svg {
+		svg {
 			width:   1em;
 			height:  1em;
 			padding: 1em;
 		}
+	}
+}
 
 @include media("md") {
-	$gutter: grid-gutter("md");
+	#header {
+		height: 85px;
 
-	#header { height: 85px; }
-
-		#header h1 img {
+		h1 img {
 			width: auto;
 			height: 60px;
 		}
+	}
 
 	#burger  { top: 22px; }
 	#account { line-height: 85px; }
 
-	#login-modal [role="document"] {
+	#menu {
+		padding-top: 85px;
+		margin-top: -85px;
+	}
+
+	#login [role="document"] {
 		box-sizing: border-box;
 		width: 400px;
-	}
-
-	@if $gutter != grid-gutter("sm") {
-		#burger  { left:  #{$gutter / 2}; }
-		#account { right: #{$gutter / 2}; }
-	}
-}
-
-@include media("lg") {
-	$gutter: grid-gutter("lg");
-	@if $gutter != grid-gutter("md") {
-		#burger  { left:  #{$gutter / 2}; }
-		#account { right: #{$gutter / 2}; }
 	}
 }
 /* @end #header */

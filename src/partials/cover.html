@@ -1,0 +1,62 @@
+{#
+	This partial expect a "cover" object (a cover may be an episode or an obsession).
+
+	Placeholders:
+		- cover.tag (optional, default to div)
+		- cover.class (optional)
+		- cover.img
+		- cover.href
+		- cover.title
+		- cover.subtitle
+		- cover.episode (optional)
+		- cover.desc (optional)
+
+	You can use the following specific modifier classes:
+		- no-pattern (remove the default pattern)
+		- expanded (add the color overlay)
+		- small (no description, small snake)
+#}
+{% from "partials/_macro.html" import authors %}
+{% set class = "bg-center " + cover.class if not r/bg-(?:left|center|right)/g|test(cover.class) else cover.class %}
+<{{ cover.tag|default("div") }} class="cover {{ class }}" style="background-image: url({{ cover.img }})">
+	{% if "small"|in(cover.class|split(" ")) %}
+		<a href="{{ cover.href }}" class="overlay">
+			<div class="overlay pattern"></div>
+			<div class="pa-2g md-pl-4g lg-pl-4g relative">
+				<div class="snake-1">
+					<div class="snake-container">
+						<h2 class="h4 text-overflow">{{ cover.title }}</h2>
+						<p class="mb-1g">{{ cover.subtitle }}</p>
+					</div>
+				</div>
+			</div>
+		</a>
+	{% else %}
+		<div class="overlay pattern"></div>
+		<div class="cover-container full-height">
+			<div class="{{ cover.layout|default("pv-5g sm-pa-2g md-ph-1c lg-ph-1c") }} relative">
+				<div class="snake-1">
+					<div class="snake-container">
+						<h2 class="h2"><a href="{{ cover.href }}">{{ cover.title }}</a></h2>
+						<p class="p-larger mb-1g">{{ cover.subtitle }}</p>
+						{% if cover.episode %}
+							{% set obsession = cover.episode.obsession|expand %}
+							<p class="style-meta color-inherit"><a href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ cover.episode.number }} | Par {{ authors(cover.episode, class="text-upper") }}</p>
+						{% endif %}
+						{% if cover.desc %}
+							<a href="{{ cover.href }}" class="btn"><i>{{ icon("chevron-down", "Lire") }}</i></a>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+			{% if cover.desc %}
+				<div class="desc sm-ph-3g md-w-5c md-pl-1c lg-w-6c lg-pl-1c relative">
+					{{ cover.desc }}
+				</div>
+				<div class="more mb-2g text-center">
+					<a href="{{ cover.href }}" class="btn-round btn-reverse"><i>{{ icon("chevron-down", "Lire") }}</i></a>
+				</div>
+			{% endif %}
+		</div>
+	{% endif %}
+</{{ cover.tag|default("div") }}><!-- end of .cover -->

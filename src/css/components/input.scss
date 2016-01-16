@@ -1,91 +1,110 @@
 /* @group Input */
-.field label {
-	@extend %font-brandon;
-	@include font-weight-black("brandon");
-	font-size: 1.25em;
-	line-height: 1.25;
-	margin-bottom: .5em;
+.field {
+	label {
+		margin-bottom: .5em;
+		display: inline-block;
+		cursor: pointer;
 
-	display: inline-block;
-	cursor: pointer;
+		@extend %font-brandon;
+		@include font-weight-black("brandon");
+		font-size: 1.25em;
+		line-height: 1.25;
+	}
+
+	input[type="email"],
+	input[type="password"],
+	input[type="text"] {
+		background: none;
+
+		width: 100%;
+		padding: .5em 0;
+		border: 0;
+		border-bottom: 2px solid $color-brand-light;
+		border-radius: 0; // Some user-agent have a default border-radius
+		margin-bottom: 2em;
+
+		transition: border-color .3s;
+		outline: 0;
+
+		@extend %font-proxima;
+		@include font-weight-regular("proxima");
+		line-height: 1.333333;
+
+		&:active,
+		&:focus { border-color: $color-brand; }
+
+		&:valid {
+			background-repeat: no-repeat;
+			background-position: 100% 50%;
+			background-size: 1em 1.4em;
+		}
+
+		&.check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+		&.white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+	}
 }
 
-.field input[type="email"],
-.field input[type="password"],
-.field input[type="text"] {
-	background: none;
+.checkbox[type],
+.radio[type] { @extend .sr; }
 
-	width: 100%;
-	padding: .5em 0;
-	border: 0;
-	border-bottom: 2px solid $color-brand-light;
-	border-radius: 0; // Some user-agent have a default border-radius
-	margin-bottom: 2em;
-
-	@extend %font-proxima;
-	@include font-weight-regular("proxima");
-	line-height: 1.333333;
-
-	transition: border-color .3s;
-
-	outline: 0;
-}
-
-.field input[type="email"]:valid,
-.field input[type="password"]:valid,
-.field input[type="text"]:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50%/1em 1.4em; }
-
-// Same as previous, but with a white check mark
-.field input.reverse-check:valid { background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") no-repeat 100% 50%/1em 1.4em; }
-
-.field input:active,
-.field input:focus { border-color: $color-brand; }
-
-input.radio,
-input.checkbox { @extend .sr; }
-
-input.checkbox + .checkbox,
-input.radio    + .radio {
+.checkbox[type] + .checkbox,
+.radio[type]    + .radio {
 	box-sizing: border-box;
 	width:  1.5em;
 	height: 1.5em;
 	border: 2px solid;
+	margin-top: -.25em;
 
 	display: inline-block;
 	position: relative;
 	vertical-align: middle;
+
+	&::before {
+		border:        3px solid;
+		border-color:  transparent;
+		border-radius: inherit;
+
+		content: "";
+
+		position: absolute;
+		top:  50%;
+		left: 50%;
+
+		transform: translateX(-50%) translateY(-50%);
+	}
 }
 
-input.radio + .radio { border-radius: 50%; }
+.radio[type] + .radio { border-radius: 50%; }
 
-input.checkbox + .checkbox:before,
-input.radio    + .radio:before {
-	content: "";
+.checkbox[type]:active  + .checkbox,
+.checkbox[type]:focus   + .checkbox,
+.checkbox[type]:checked + .checkbox,
+.checkbox[type]:checked + .checkbox::before,
+.radio[type]:active     + .radio,
+.radio[type]:focus      + .radio,
+.radio[type]:checked    + .radio,
+.radio[type]:checked    + .radio::before { border-color: $color-brand; }
 
-	border:        3px solid;
-	border-radius: inherit;
-	border-color:  transparent;
-
-	position: absolute;
-	top:  50%;
-	left: 50%;
-	transform: translateX(-50%) translateY(-50%);
+@each $device, $grid in $grids {
+	@include media($device, $strict: true) {
+		.field {
+			input[type="email"],
+			input[type="password"],
+			input[type="text"] {
+				&.#{$device}-check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+				&.#{$device}-white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+			}
+		}
+	}
 }
-
-input.checkbox:active  + .checkbox,
-input.checkbox:focus   + .checkbox,
-input.checkbox:checked + .checkbox,
-input.checkbox:checked + .checkbox:before,
-input.radio:active     + .radio,
-input.radio:focus      + .radio,
-input.radio:checked    + .radio,
-input.radio:checked    + .radio:before { border-color: $color-brand; }
 
 @include media("md") {
-	.field label { font-size: 1.5em; }
+	.field {
+		label { font-size: 1.5em; }
 
-	.field input[type="email"],
-	.field input[type="password"],
-	.field input[type="text"] { font-size: 1.125em; }
+		input[type="email"],
+		input[type="password"],
+		input[type="text"] { font-size: 1.125em; }
+	}
 }
 /* @end Input */

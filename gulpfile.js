@@ -112,7 +112,7 @@ var
 	tasks = {
 		'copy:img': function(context) {
 			return function() {
-				return gulp.src(context.input + '/**/*.{ico,gif,jpg,png}')
+				return gulp.src(path.join(context.input, '/**/*.{ico,gif,jpg,png}'))
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
@@ -120,7 +120,7 @@ var
 
 		'optimize:img': function(context) {
 			return function() {
-				return gulp.src(context.input + '**/*.{ico,gif,jpg,png}')
+				return gulp.src(path.join(context.input, '**/*.{ico,gif,jpg,png}'))
 					//.pipe(image()) // For now, disable image's optimization since sometimes it destroy images
 					.pipe(gulp.dest(context.input));
 			}
@@ -128,7 +128,7 @@ var
 
 		'copy:svg': function(context) {
 			return function() {
-				return gulp.src([context.input + '*.svg'])
+				return gulp.src([path.join(context.input, '*.svg')])
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
@@ -136,7 +136,7 @@ var
 
 		'optimize:svg': function(context) {
 			return function() {
-				return gulp.src([context.input + '**/*.svg', '!src/img/snake.svg', '!src/img/ui.svg'])
+				return gulp.src([path.join(context.input, '**/*.svg'), '!src/img/ui.svg'])
 					.pipe(svgmin(config.svgmin))
 					.pipe(replace('fill-rule="evenodd"', ''))
 					.pipe(gulp.dest(context.input));
@@ -171,12 +171,15 @@ function folders(dir) {
 			return fs.statSync(path.join(dir, file)).isDirectory();
 		});
 }
-// Configure nunjucks
-env = nunjucks.nunjucks.configure(['src'], { watch: false, noCache: true });
 
-env.addFilter('expand', function(input) {
-	return expand(input);
+// Configure nunjucks
+env = nunjucks.nunjucks.configure('src', {
+	autoescape: false,
+	noCache:    true,
+	watch:      false
 });
+
+env.addFilter('expand', expand);
 
 env.addFilter('human', function(input) {
 	var date = new Date(input), month;
@@ -199,6 +202,10 @@ env.addFilter('human', function(input) {
 	return date.getDate() + ' ' + month + ' ' + date.getFullYear();
 });
 
+env.addFilter('in', function(input, array) {
+	return (array || []).indexOf(input) > -1;
+});
+
 env.addFilter('published', function(input, date) {
 	if (!input) { return input; }
 
@@ -211,6 +218,14 @@ env.addFilter('published', function(input, date) {
 	} else {
 		return new Date(input.date).getTime() <= reference;
 	}
+});
+
+env.addFilter('removeBR', function(input) {
+	return (input || '').replace(/<br\/?>/g, ' ');
+});
+
+env.addFilter('split', function(input, separator) {
+	return (input || "").split(separator);
 });
 
 env.addFilter('startsWith', function(input, pattern) {
@@ -277,12 +292,31 @@ function assets(e) {
 		.pipe(livereload());
 }
 
+// Simple utility function to copy an object
+function copy(object) {
+	var property, result = {};
+
+	for (property in object) {
+		if (object.hasOwnProperty(property)) {
+			result[property] = object[property];
+		}
+	}
+
+	return result;
+}
+
 // Make a deep copy of data and fetch sub-resources
 function expand(data) {
 	var
-		r = /^(?!http)(\w+):(.+)/,
+		r = /^(?!http)(\w+):(.+)/, // A regexp to check if we need to go deeper
 		result = {},
 		property, matches;
+
+	if (!data) { return data; }
+
+	if (typeof data === 'string' || data.push) {
+		return expand({ value: data }).value;
+	}
 
 	for (property in data) {
 		if (typeof data[property] === 'string') {
@@ -306,17 +340,12 @@ function expand(data) {
 function fetch(kind, fragment) {
 	var
 		fragments = fragment.split('/'),
-		obsession, episode;
+		obsession, episode,
+		result;
 
 	// Makes sure we have a cache for this kind of resource
 	cache[kind] = cache[kind] || {};
 
-	// Return the cache resource if found
-	if (cache[kind][fragments[fragments.length - 1]]) {
-		return cache[kind][fragments[fragments.length - 1]];
-	}
-
-	// Otherwise, we have to fetch it :(
 	switch (kind) {
 		case 'episode':
 			if (fragments.length === 2) {
@@ -324,11 +353,13 @@ function fetch(kind, fragment) {
 				episode   = fragments[1];
 
 				try {
-					cache[kind][episode] = JSON.parse(fs.readFileSync(path.join(paths.pages, 'obsessions', obsession, episode, episode + '.json')));
-					cache[kind][episode].obsession = fetch('obsession', obsession);
+					cache[kind][episode] = cache[kind][episode] || JSON.parse(fs.readFileSync(path.join(paths.pages, 'obsessions', obsession, episode, episode + '.json')));
 				} catch(e) {
 					cache[kind][episode] = {};
 				}
+
+				// Automatically add a reference to the obsession resource (but do not expand, it will be while necessary in template)
+				cache[kind][episode].obsession = 'obsession:' + obsession;
 
 				return cache[kind][episode];
 			} else {
@@ -338,7 +369,7 @@ function fetch(kind, fragment) {
 
 		case 'obsession':
 			try {
-				cache[kind][fragment] = JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment, fragment + '.json')));
+				cache[kind][fragment] = cache[kind][fragment] = JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment, fragment + '.json')));
 			} catch(e) {
 				cache[kind][fragment] = {};
 			}
@@ -347,7 +378,7 @@ function fetch(kind, fragment) {
 
 		default:
 			try {
-				cache[kind][fragment] = JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment + '.json')));
+				cache[kind][fragment] = cache[kind][fragment] || JSON.parse(fs.readFileSync(path.join(paths.pages, kind + 's', fragment + '.json')));
 			} catch(e) {
 				cache[kind][fragment] = {};
 			}
@@ -373,6 +404,11 @@ function html(e) {
 
 		// Store some informations in a cache ; will surely be re-used
 		if (metadata.template) {
+			// Inject some data
+			if (metadata.template === 'episode') {
+				metadata.obsession = 'obsession:' + parsed.dir.split(path.sep)[1];
+			}
+
 			// Keep the metadata
 			cache[metadata.template] = cache[metadata.template] || {};
 			cache[metadata.template][parsed.name] = metadata;
@@ -387,18 +423,12 @@ function html(e) {
 			}
 		}
 
-		// Inject some data
-		if (metadata.template === 'episode') {
-			// FIXME: avoid expanding, prefer in templates
-			data.obsession = expand(fetch('obsession', parsed.dir.split(path.sep)[1]));
-		}
-
 		// Wrap the data in a prefix if necessary (if the "template" key doesn't exists already)
 		if (!metadata[metadata.template]) {
-			data[metadata.template] = expand(metadata); // Make a deep copy of the metadata and resolve the sub-resources
+			data[metadata.template] = copy(metadata); // Make a deep copy of the metadata
 			delete data[metadata.template].template; // Cleaning just for fun
 		} else {
-			data = expand(metadata); // Make a deep copy of the metadata and resolve the sub-resources
+			data = copy(metadata); // Make a deep copy of the metadata
 		}
 
 		// Try to retrieve the content
@@ -433,20 +463,20 @@ function html(e) {
 }
 
 gulp.task('lint:sass', function() {
-	return gulp.src(paths.css.input + '**/*.{scss,sass}')
+	return gulp.src([path.join(paths.css.input, '**/*.{scss,sass}'), '!src/css/framework/grid.scss'])
 		.pipe(sasslint())
 		.pipe(sasslint.format());
 });
 
 gulp.task('lint:css', function() {
 	return; // Disabled for now since most of the errors are non-sense
-	return gulp.src(paths.css.input + '**/*.css')
+	return gulp.src(path.join(paths.css.input, '**/*.css'))
 		.pipe(csslint()) // TODO: configure
 		.pipe(csslint.reporter());
 });
 
 gulp.task('build:css', function() {
-	return gulp.src(paths.css.input + 'global.scss')
+	return gulp.src(path.join(paths.css.input, 'global.scss'))
 		.pipe(sass({ outputStyle: 'expanded' }))
 		.pipe(autoprefixer())
 		.pipe(header(banner, context))
@@ -458,8 +488,10 @@ gulp.task('build:css', function() {
 });
 
 gulp.task('lint:js', function() {
-	return gulp.src(paths.js.input + '**/*.js')
-		.pipe(eslint()) // TODO: configure
+	var files = ['global', 'components/*'];
+
+	return gulp.src(files.map(function(file) { return path.join(paths.js.input, file + '.js') }).concat('!**/*.min.js'))
+		.pipe(eslint())
 		.pipe(eslint.format());
 });
 
@@ -482,7 +514,7 @@ gulp.task('optimize:js', function() {
 
 gulp.task('build:js', ['optimize:js'], function() {
 	var
-		files = ['jquery', 'stickyfill', 'hammer', 'jquery.hammer', 'global', 'components/*'],
+		files = ['libs/modernizr', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
 		streams = merge();
 
 	streams.add(gulp
@@ -537,13 +569,19 @@ gulp.task('watch', ['build'], function() {
 					templates({ path: template });
 				};
 			});
+
+			finder.find(found.join('|'), paths.pages).then(function(results) {
+				for (var page in results) {
+					html({ path: page });
+				};
+			});
 		}
 
 		// Find partials recursively (after found in which file a partial is used, search for this new partial)
 		function find(partial) {
 			finder.find(partial, paths.partials).then(function(results) {
 				// Clean the results
-				var partials = Object.keys(results).map(function(file) { return 'partials/' + path.relative(paths.partials, file); });
+				var partials = Object.keys(results).map(function(file) { return path.join('partials', path.relative(paths.partials, file)); });
 
 				// Concatenate the found partials
 				found = found.concat(partials);
@@ -553,7 +591,8 @@ gulp.task('watch', ['build'], function() {
 			});
 		}
 
-		find('partials/' + path.relative(paths.partials, e.path));
+		found.push(path.join('partials', path.relative(paths.partials, e.path)));
+		find(found[0]);
 	}
 
 	// The callback function used when a template is changed
@@ -562,7 +601,7 @@ gulp.task('watch', ['build'], function() {
 
 		// Simply look the cache for the pages associated to the given template
 		(cache.template[parsed.name] || []).forEach(function(page) {
-			html({ path: page });
+			html({ path: path.join(paths.pages, page) });
 		});
 	}
 
@@ -571,10 +610,10 @@ gulp.task('watch', ['build'], function() {
 	gulp.watch(path.join(paths.pages,         '**/*.{html,json}'),                    html);
 	gulp.watch(path.join(paths.pages,         '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'), assets);
 
-	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'),      ['build:css']);
-	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),        ['build:css:img']);
-	gulp.watch(path.join(paths.css.svg.input, '**/*.svg'),                  ['build:css:svg']);
-	gulp.watch(path.join(paths.img.input,     '**/*.{gif,jpg,png}'),        ['build:img']);
-	gulp.watch(path.join(paths.svg.input,     '**/*.svg'),                  ['build:svg']);
-	gulp.watch([path.join(paths.js.input,      '**/*.js'), '!**/*.min.js'], ['build:js']);
+	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'),     ['build:css']);
+	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),       ['build:css:img']);
+	gulp.watch(path.join(paths.css.svg.input, '**/*.svg'),                 ['build:css:svg']);
+	gulp.watch(path.join(paths.img.input,     '**/*.{gif,jpg,png}'),       ['build:img']);
+	gulp.watch(path.join(paths.svg.input,     '**/*.svg'),                 ['build:svg']);
+	gulp.watch([path.join(paths.js.input,     '**/*.js'), '!**/*.min.js'], ['build:js']);
 });

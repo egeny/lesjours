@@ -1,4 +1,6 @@
 $document.ready(function() {
+	"use strict";
+
 	var
 		$anchors   = $("[data-mini],[href^=#note]"),
 		$container = $(".article-container"),

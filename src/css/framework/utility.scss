@@ -3,103 +3,145 @@ $margin: grid-margin("sm");
 
 // Mixins
 .clearfix { @include clearfix; }
+
 .fadable,
-%fadable { @include fadable; }
-.fadable:hover,
-.fadable:focus,
-%fadable-active { @include fadable-active; }
-.responsive { @include responsive; }
+%fadable {
+	@include fadable;
 
-.block { display: block; }
-.color-inherit { color: inherit; }
-
-/* Reusable class to fake a bottom margin */
-.fake-bottom {
-	background: $color-white;
-	height: $margin;
-
-	z-index: 10000;
-	position: fixed;
-	right:  0;
-	bottom: 0;
-	left:   0;
+	&:hover,
+	&:focus { @extend %fadable-active; }
 }
 
-/* Quick width or height 100% */
+%fadable-active { @include fadable-active; }
+
+.responsive { @include responsive; }
+
+.alpha-10, .α-10 { opacity: .1; }
+.alpha-20, .α-20 { opacity: .2; }
+.alpha-30, .α-30 { opacity: .3; }
+.alpha-40, .α-40 { opacity: .4; }
+.alpha-50, .α-50 { opacity: .5; }
+.alpha-60, .α-60 { opacity: .6; }
+.alpha-70, .α-70 { opacity: .7; }
+.alpha-80, .α-80 { opacity: .8; }
+.alpha-90, .α-90 { opacity: .9; }
+
+.bg-left-top      { background-position: 0 0;       }
+.bg-left          { background-position: 0 50%;     }
+.bg-left-bottom   { background-position: 0 100%;    }
+.bg-center-top    { background-position: 50% 0;     }
+.bg-center        { background-position: 50% 50%;   }
+.bg-center-bottom { background-position: 50% 100%;  }
+.bg-right-top     { background-position: 100% 0;    }
+.bg-right         { background-position: 100% 50%;  }
+.bg-right-bottom  { background-position: 100% 100%; }
+
+.block        { display: block; }
+.inline-block { display: inline-block; }
+
+.color-inherit { color: inherit; }
+
+/* Quick width or height */
 .full-width  { width:  100%; }
 .full-height { height: 100%; }
+.calc-height { height: calc(100% - 64px - #{$margin}); } // 100% - header's height - one margin at bottom
+
+/* Quick line-height: inherit */
+.lh-inherit { line-height: inherit; }
 
 /* Easy link's style */
-.link,
-%link {
+.link {
 	background-image: linear-gradient(to bottom, $color-media, $color-media);
-	background-position: 0 1em;
-	background-repeat: no-repeat;
+	background-position: 0 1.075em;
 	background-size: 100% 100%;
+	background-repeat: no-repeat;
 	padding: .125em 0;
 
 	// Don't use display: inline-block since it might cause issues with long links
 	transition: background-position .15s;
 
 	font-weight: bold; // Don't use the font-weight-* mixin here since we don't know which font will be used
-	text-decoration: none;
 	text-transform: uppercase;
 
 	color: $color-main;
-}
 
-.link:hover,
-.link:focus,
-%link-active { background-position: 0 0; }
+	&:hover,
+	&:focus {
+		background-position: 0 0;
+		color: $color-main;
+	}
 
-.link.external { background-image: linear-gradient(to bottom, $color-external, $color-external); }
-
-@each $colors in $colors-obsessions {
-	$i:     index($colors-obsessions, $colors);
-	$color: map-get($colors, "light");
-	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+	&.external { background-image: linear-gradient(to bottom, $color-external, $color-external); }
 }
 
 .link-unstyled {
 	background: none;
 	padding: 0;
-	text-decoration: none;
-	color: currentColor;
+	font-weight: inherit;
+	text-transform: inherit;
+	color: inherit;
 }
 
 /* List utility classes */
-.list-unstyled { list-style: none; }
+.list {
+	counter-reset: list;
 
-.list-inline > li,
-.list-inline-dotted > li { display: inline-block; }
+	> li {
+		padding-left: .666667em;
+		counter-increment: list;
+		position: relative;
 
-.list-inline-dotted li:after            { content: " • "; }
-.list-inline-dotted li:last-child:after { content: none;  }
+		&::before {
+			content: "•";
+
+			position: absolute;
+			top:  0;
+			left: 0;
+
+			@include font-weight-bold("archer");
+		}
+	}
+}
+
+ol.list > li {
+	padding-left: 1.6em;
+	&::before { content: "• " counter(list); }
+
+	&:nth-last-child(n+10),
+	&:nth-last-child(n+10) ~ li { padding-left: 2.2em; } // Increase the padding when reaching 10+ <li>
+}
+
+.list > li > ol.list > li {
+	&::before { content: "• " counter(list, lower-alpha); }
+
+	&:nth-last-child(n+10),
+	&:nth-last-child(n+10) ~ li { padding-left: 1.6em; } // Do not increase the padding (see above)
+
+	&:nth-last-child(n+13),
+	&:nth-last-child(n+13) ~ li { padding-left: 2.2em; } // Increase the padding when reaching 13+ <li> (letter M)
+}
+
+.list-inline > li { display: inline-block; }
+
+.list.list-inline > :first-child         { padding-left: 0; }
+.list.list-inline > :first-child::before { content: none; }
 
 /* Quick overflows */
 .no-overflow   { overflow: hidden; }
 .overflow-auto { overflow: auto; }
 
 /* Quick overlay */
-.overlay {
-	position: absolute;
-	top:    0;
-	right:  0;
-	bottom: 0;
-	left:   0;
-}
+.overlay { @include overlay; }
 
 /* Patterns */
-// Two dots with 0.2 opacity
-.pattern-1 {
-	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+.pattern {
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
 	background-size: 2px 4px;
 }
 
-// Two dots with 0.5 opacity
-.pattern-2 {
-	// FIXME: should use opacity instead
-	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .5)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+// Same as previous, but with a 20% alpha fill
+.pattern-alpha {
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
 	background-size: 2px 4px;
 }
 
@@ -107,47 +149,69 @@ $margin: grid-margin("sm");
 .pull-left  { float: left;  }
 .pull-right { float: right; }
 
+
+%quote {
+	// Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox)
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>");
+	background-repeat: no-repeat;
+}
+
+
 /* Quick position: relative */
 .relative { position: relative; }
 
 /* Screen reader only */
-.sr,
-.sr-focusable { @include sr; }
+%sr,
+.sr { @include sr; }
 
-.sr-focusable:active,
-.sr-focusable:focus {
-	width:  auto;
-	height: auto;
-	margin: 0;
+.sr-focusable {
+	@include sr;
 
-	overflow: visible;
-	position: static;
-	clip: auto;
+	&:active,
+	&:focus {
+		width:  auto;
+		height: auto;
+		margin: 0;
+
+		clip: auto;
+		overflow: visible;
+		position: static;
+	}
 }
 
 .text-left   { text-align: left;   }
 .text-center { text-align: center; }
 .text-right  { text-align: right;  }
 .text-upper  { text-transform: uppercase; }
+.text-overflow {
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
 
 @each $device, $grid in $grids {
-	@include media($device, true) {
+	@include media($device, $strict: true) {
 		.#{$device}-hidden { display: none !important; }
 		.#{$device}-sr     { @include sr; }
 	}
 }
 
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "light");
+	.obsession-#{$i} .link.obsession { background-image: linear-gradient(to bottom, $color, $color); }
+}
+
 @include media("md") {
 	$margin: grid-margin("md");
-	@if $margin != grid-margin("sm") {
-		.fake-bottom { height: $margin; }
-	}
+	.calc-height { height: calc(100% - 85px - #{$margin}); }
+	.link { background-position: 0 1em; }
 }
 
 @include media("lg") {
 	$margin: grid-margin("lg");
+
 	@if $margin != grid-margin("md") {
-		.fake-bottom { height: $margin; }
+		.calc-height { height: calc(100% - 85px - #{$margin}); }
 	}
 }
 /* @end Utility */

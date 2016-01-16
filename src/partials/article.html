@@ -1,0 +1,33 @@
+{#
+	This partial expect an "article" object.
+
+	Placeholders:
+		- article.class (optional)
+		- article.img
+		- article.alt
+		- article.href
+		- article.title
+		- article.intro
+		- article.number
+
+	You can use the following specific modifier classes:
+		- no-pattern (remove the default pattern)
+		- expanded (add the color overlay)
+		- small (no description, small snake)
+
+TODO: w-*
+#}
+{% from "partials/_macro.html" import authors %}
+<div class="article row {{ article.class }}">
+	{% if article.img %}
+	<div class="col mb-2g {{ article.layout }}">
+		<a class="inline-block" href="{{ article.href }}"><img class="responsive" src="{{ article.img }}" alt="{{ article.alt }}" /></a>
+	</div>
+	{% endif %}
+	<div class="col mb-2g {{ article.layout }}">
+		<h2 class="{{ "h4" if not article.small else "h5 mb-0" }}"><a href="{{ article.href }}">{{ article.title }}</a></h2>
+		<p class="mb-1g">{{ article.intro }}</p>
+		<p class="mb-0 style-meta lh-inherit color-main"><a href="/obsessions/{{ article.obsession.href }}">{{ article.obsession.name }}</a> • épisode n°{{ article.number }}</p>
+		<p class="mb-0 style-meta lh-inherit">Par {{ authors(article, class="text-upper") }}</p>
+	</div>
+</div>
