@@ -99,6 +99,8 @@
 	@include font-weight-regular("proxima");
 	font-size: 1.5em;
 	line-height: 1.75;
+
+	&.light { @include font-weight-light("proxima"); }
 }
 
 .style-meta-larger {

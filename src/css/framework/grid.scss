@@ -31,6 +31,8 @@
 		min-height: 1px;
 		float: left;
 	}
+
+	.row-reverse > & { text-align: right; }
 }
 
 .col-first  { order: -1; }

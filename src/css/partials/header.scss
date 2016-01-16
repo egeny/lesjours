@@ -152,6 +152,7 @@ $gutter: grid-gutter("sm");
 	margin-top: -64px;
 
 	display: none;
+	outline: 0;
 
 	@extend  %font-proxima;
 	@include font-weight-bold("proxima");
