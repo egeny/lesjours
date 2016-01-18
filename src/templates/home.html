@@ -36,15 +36,15 @@
 			{%
 				set article = {
 					class: class,
-					small: true,
 					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg"),
 					alt: article.alt,
 					href: "/obsessions/" + obsession.href + "/" + article.href,
-					title: article.title,
-					intro: article.intro,
 					number: article.number,
+					title: article.title,
+					titleClass: "h5 mb-0 snake-3",
+					intro: article.intro,
 					obsession: obsession,
-					rel: article.rel
+					authors: article.rel.authors
 				}
 			%}
 			{% include "partials/article.html" %}
@@ -91,11 +91,12 @@
 					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg") if loop.index0 < 2 else "",
 					alt: article.alt,
 					href: "/obsessions/" + obsession.href + "/" + article.href,
-					title: article.title,
-					intro: article.intro,
 					number: article.number,
+					title: article.title,
+					titleClass: "snake-3" if loop.index0 < 2 else "snake-3 snake-margin",
+					intro: article.intro,
 					obsession: obsession,
-					rel: article.rel
+					authors: article.rel.authors
 				}
 			%}
 			{% include "partials/article.html" %}
@@ -112,20 +113,21 @@
 		{% for article in home.articles3 %}
 			{% set article   = article|expand %}
 			{% set obsession = article.obsession|expand %}
-			{% set class = "md-w-½" if loop.index > 2 else "" %}
+			{% set class = "md-w-½" if loop.index > 2 else "mb-1g" %}
 			{% set class = class + (dir.next() if loop.index0 < 2 else "") %}
 			{%
 				set article = {
 					class: class,
+					layout: "md-w-½" if loop.index0 < 2 else "",
 					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg") if loop.index0 < 2 else "",
 					alt: article.alt,
-					layout: "md-w-½" if loop.index0 < 2 else "",
 					href: "/obsessions/" + obsession.href + "/" + article.href,
-					title: article.title,
-					intro: article.intro,
 					number: article.number,
+					title: article.title,
+					titleClass: "snake-2" if loop.index0 < 2 else "snake-2 snake-padding",
+					intro: article.intro,
 					obsession: obsession,
-					rel: article.rel
+					authors: article.rel.authors
 				}
 			%}
 			{% include "partials/article.html" %}

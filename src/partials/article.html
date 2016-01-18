@@ -1,33 +1,32 @@
 {#
 	This partial expect an "article" object.
+	It will not use an "episode" object to allow tweaking the content.
 
 	Placeholders:
 		- article.class (optional)
-		- article.img
-		- article.alt
+		- article.layout (optional, classes to set on each "col")
+		- article.img (optional)
+		- article.alt (optional)
 		- article.href
-		- article.title
-		- article.intro
 		- article.number
-
-	You can use the following specific modifier classes:
-		- no-pattern (remove the default pattern)
-		- expanded (add the color overlay)
-		- small (no description, small snake)
-
-TODO: w-*
+		- article.title
+		- article.titleClass (optional)
+		- article.intro
+		- article.obsession
+		- article.authors
 #}
 {% from "partials/_macro.html" import authors %}
-<div class="article row {{ article.class }}">
+{% set titleClass = "h4 " + article.titleClass|default("") if not r/h\d/g|test(article.titleClass) else article.titleClass %}
+<div class="article row obsession-{{ article.obsession.color }}{% if article.class %} {{ article.class }}{% endif %}">
 	{% if article.img %}
-	<div class="col mb-2g {{ article.layout }}">
+	<div class="col mb-2g{% if article.layout %} {{ article.layout }}{% endif %}">
 		<a class="inline-block" href="{{ article.href }}"><img class="responsive" src="{{ article.img }}" alt="{{ article.alt }}" /></a>
 	</div>
 	{% endif %}
-	<div class="col mb-2g {{ article.layout }}">
-		<h2 class="{{ "h4" if not article.small else "h5 mb-0" }}"><a href="{{ article.href }}">{{ article.title }}</a></h2>
+	<div class="col mb-2g{% if article.layout %} {{ article.layout }}{% endif %}">
+		<h2 class="{{ titleClass }}"><a class="snake-container" href="{{ article.href }}">{{ article.title }}</a></h2>
 		<p class="mb-1g">{{ article.intro }}</p>
 		<p class="mb-0 style-meta lh-inherit color-main"><a href="/obsessions/{{ article.obsession.href }}">{{ article.obsession.name }}</a> • épisode n°{{ article.number }}</p>
-		<p class="mb-0 style-meta lh-inherit">Par {{ authors(article, class="text-upper") }}</p>
+		<p class="mb-0 style-meta lh-inherit">Par {{ authors(article.authors, class="text-upper") }}</p>
 	</div>
 </div>
