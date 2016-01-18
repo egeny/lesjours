@@ -10,6 +10,7 @@
 	"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, «Les Jours» racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>",
 
 	"episodes": [
+		"episode:treize-novembre/etat-urgence-mort-lente",
 		"episode:treize-novembre/un-an-charlie",
 		"episode:treize-novembre/assigne-conversation",
 		"episode:treize-novembre/transport-terrorisme",
@@ -32,7 +33,8 @@
 			"img":      "img/blocheportrait2.jpg",
 			"alt":      "",
 			"title":    "Patrick Bloche",
-			"subtitle": "59 ans, député et ancien maire du XIe"
+			"subtitle": "59 ans, député et ancien maire du XIe",
+			"minor":    true
 		},
 		{
 			"href":     "foi-sous-les-bombes",
