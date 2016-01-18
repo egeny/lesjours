@@ -1,7 +1,7 @@
-/* @group .content */
+/* @group .default-content */
 $gutter: grid-gutter("sm");
 
-.content {
+.default-content {
 	@extend %font-proxima;
 	@include font-weight-regular("proxima");
 
@@ -71,14 +71,14 @@ $gutter: grid-gutter("sm");
 @include media("md") {
 	$gutter: grid-gutter("md");
 
-	.content {
+	.default-content {
 		h2 { font-size: 2.25em;  }
 		h3 { font-size: 1.5em;   }
 		h4 { font-size: 1.125em; }
 	}
 
 	@if $gutter != grid-gutter("sm") {
-		.content {
+		.default-content {
 			> :first-child { margin-top:    $gutter; }
 			> *            { margin-bottom: $gutter; }
 		}
@@ -88,10 +88,10 @@ $gutter: grid-gutter("sm");
 @include media("lg") {
 	$gutter: grid-gutter("lg");
 	@if $gutter != grid-gutter("md") {
-		.content {
+		.default-content {
 			> :first-child { margin-top:    $gutter; }
 			> *            { margin-bottom: $gutter; }
 		}
 	}
 }
-/* @end .content */
+/* @end .default-content */
