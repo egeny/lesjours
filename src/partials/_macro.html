@@ -1,5 +1,5 @@
-{% macro authors(episode, class="") -%}
-	{% for group in episode.rel.authors %}{% set group = group|expand %}{% for kind, authors in group %}{% if kind == "text" %}{% for author in authors if authors.push else [authors] %}{% if author.href %}<a {{ 'class="' + class + '"' if class else "" }} rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}
+{% macro authors(array, class="") -%}
+	{% for group in array %}{% set group = group|expand %}{% for kind, authors in group %}{% if kind == "text" %}{% for author in authors if authors.push else [authors] %}{% if author.href %}<a {{ 'class="' + class + '"' if class else "" }} rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}{% endif %}{% endfor %}{% endfor %}
 {%- endmacro %}
 {% macro icon(name, title, class) -%}
 	<svg width="32" height="32" class="ui-{{ name }}{% if class %} {{ class }}{% endif %}" {% if title %}role="img" aria-labeledby="ui-{{ name }}-title"{% else %}role="presentation"{% endif %}>
