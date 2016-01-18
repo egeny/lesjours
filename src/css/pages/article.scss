@@ -2,77 +2,48 @@
 $margin: grid-margin("sm");
 $gutter: grid-gutter("sm");
 
-%quote {
-	// Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox)
-	background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>");
-	background-repeat: no-repeat;
-}
+article {
+	header {
+		position: relative; // Used to position the .snake
 
-article header { position: relative; } // Used to position the .snake
+		img  {
+			@include responsive;
+			max-height: 615px;
+		}
 
-	article header img  {
-		@include responsive;
-		max-height: 615px;
+		// On mobile, the snake is stuck to the margins
+		.snake {
+			top:    $margin;
+			right:  $margin;
+			bottom: -4px; // Offset the border
+			left:   $margin;
+		}
+
+		.h2  { margin-bottom: .5em; }
+		time { display: inline-block; }
 	}
 
-	// On mobile, the snake is stuck to the margins
-	article header .snake {
-		top:    $margin;
-		right:  $margin;
-		bottom: -4px; // Offset the border
-		left:   $margin;
-	}
-
-	article header .h2  { margin-bottom: .5em; }
-	article header time { display: inline-block; }
-
-article a       { @extend %link; }
-article a:hover,
-article a:focus { @extend %link-active; }
-
-article abbr  {}
-
-
-
-article dl,
-article dt,
-article dfn,
-article dd {}
-
-		&:hover,
-		&:focus { @extend %link-active; }
-	}
-
-
-article h3 { @extend .h4; }
-article h4 { @extend .h5; }
-article h5 { @extend .h6; }
-
-article h3,
-article h4,
-article h5 { margin-bottom: 0; }
-
-
-article table {}
-	article caption {}
-	article thead {}
-	article tfoot {}
-	article tbody {}
-		article tr {}
-			article th {}
-			article td {}
-
-
-// FIXME: article-container or global?
-a[href^="#note"]:after { content: "*"; }
-
-}
-
+	h3 { @extend .h4; }
+	h4 { @extend .h5; }
+	h5 { @extend .h6; }
 
 	h3,
 	h4,
 	h5 { margin-bottom: 0; }
 
+}
+
+.article-container {
+	a {
+		@extend .link;
+		background-position: 0 1.0625em;
+		text-transform: inherit;
+	}
+
+	ol, ul { @extend .list; }
+
+	// Overload some classes that might be useful
+	.link-unstyled { @extend .link-unstyled; }
 }
 
 
@@ -92,14 +63,14 @@ article .share { margin-bottom: 1.5em; }
 // Consider every child of .article-container as a column
 .article-container > * { @extend .col; }
 
-.article-container a {
+/*.article-container a {
 	background-position: 0 1.075em;
 	text-transform: inherit;
-}
+}*/
 
 .article-container > p { line-height: 1.75; }
 
-.article-container > p:last-of-type:after {
+.article-container > p:last-of-type::after {
 	// Please note that the fill color have to be in RGB instead of hexadecimal (otherwise it won't work in firefox)
 	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='rgb(200, 62, 44)' d='M32 64c17.674 0 32-14.326 32-32S49.674 0 32 0 0 14.326 0 32s14.326 32 32 32zm.54-9c-2.814 0-6.126-1.886-6.126-7.052v-1.394c0-.574.497-1.066 1.076-1.066h.746c.58 0 1.076.492 1.076 1.066v1.558c0 .738.166 4.182 3.395 4.182 1.987 0 3.312-1.804 3.312-4.51V30.4c0-.327-.25-.655-.67-.655h-8.28c-.58 0-1.08-.492-1.08-1.066V10.06c0-.568.5-1.06 1.08-1.06h.74c.58 0 1.08.492 1.08 1.066v16.48c0 .33.24.657.66.657h8.36c.58 0 1.07.492 1.07 1.066v19.84C38.9 52.86 35.67 55 32.52 55z'/></svg>") no-repeat;
 
@@ -125,7 +96,7 @@ article .share { margin-bottom: 1.5em; }
 }
 
 	.article-container .mini { margin: 0; }
-	.article-container .share li:before { content: none; }
+	.article-container .share li::before { content: none; }
 
 	article > footer { padding-bottom: $margin; }
 
@@ -139,7 +110,11 @@ article .share { margin-bottom: 1.5em; }
 			article .meta li      { margin-bottom: 1em; }
 			article .meta a       { margin-left: .25em; }
 			article .meta .tags a { margin-left: 0; }
-			article .meta .tags a { background-image: linear-gradient(to bottom, $color-external, $color-external); }
+
+			// FIXME
+			//.meta .link { background-position: 0 1.0125em; } // Don't know why those links behave differently
+			//.meta .link:hover,
+			//.meta .link:focus { @extend %link-active; }
 
 		article .rel { background: $color-white; }
 			article .rel li { display: inline-flex; }
@@ -157,14 +132,14 @@ article .share { margin-bottom: 1.5em; }
 					margin-top:  -.5em;
 					position: absolute;
 					top: 50%;
-					left: #{-$margin};
+					//left: #{-$margin};
 
 					font-size: 3em;
 					color: $color-brand;
 				}
 
 				article .rel a[rel="next"] i {
-					right: #{-$margin};
+					//right: #{-$margin};
 					left: auto;
 				}
 
@@ -185,20 +160,6 @@ article .share { margin-bottom: 1.5em; }
 					}
 
 					article .rel .h5 { margin: 0; }
-
-@each $colors in $colors-obsessions {
-	$i:     index($colors-obsessions, $colors);
-	$main:  map-get($colors, "main");
-	$light: map-get($colors, "light");
-	article.obsession-#{$i} a.obsession { background-image: linear-gradient(to bottom, $light, $light); }
-
-	article.obsession-#{$i} .snake,
-	article.obsession-#{$i} figcaption:before { border-color: $main; }
-
-}
-
-@include media("sm", true) {
-}
 
 @include media("md") {
 	$margin: grid-margin("md");
@@ -236,7 +197,7 @@ article .share { margin-bottom: 1.5em; }
 	.article-container > * { @extend .md-ml-1c; }
 	.article-container > * { @extend .md-w-5c; }
 
-	.article-container a { background-position: 0 1.0625em; }
+	//.article-container a { background-position: 0 1.0625em; }
 
 	.article-container > p,
 	.article-container > ul,
@@ -271,8 +232,8 @@ article .share { margin-bottom: 1.5em; }
 		right: 12.5%;
 	}
 
-		// Same as .btn-round:before (cannot extend since it is in a media query)
-		article .rel i:before {
+		// Same as .btn-round::before (cannot extend since it is in a media query)
+		article .rel i::before {
 			background: $color-brand;
 
 			width:  100%;
@@ -287,8 +248,8 @@ article .share { margin-bottom: 1.5em; }
 			backface-visibility: hidden;
 		}
 
-		article .rel a:hover i:before,
-		article .rel a:focus i:before { transform: scale(0.9); }
+		article .rel a:hover i::before,
+		article .rel a:focus i::before { transform: scale(0.9); }
 
 	article .rel a[rel="prev"] div { margin-left:  25%; }
 	article .rel a[rel="next"] div { margin-right: 25%; }
@@ -302,7 +263,7 @@ article .share { margin-bottom: 1.5em; }
 	}
 
 	@if $gutter != grid-gutter("sm") {
-		article figure .snake { left: #{-$gutter}; }
+		//article figure .snake { left: #{-$gutter}; }
 	}
 }
 
@@ -343,7 +304,7 @@ article .share { margin-bottom: 1.5em; }
 	}
 
 	@if $gutter != grid-gutter("md") {
-		article figure .snake { left: #{-$gutter}; }
+		//article figure .snake { left: #{-$gutter}; }
 		.article-container .mini { margin-bottom: $gutter; }
 	}
 }
