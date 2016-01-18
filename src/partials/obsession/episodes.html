@@ -1,30 +1,31 @@
+{% from "partials/_macro.html" import authors %}
 <section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="false">
 	<h3 class="pl-1g mb-2g style-meta-larger">Les épisodes</h3>
 	{% set episodes = obsession.episodes|expand|published %}
-	{% set latest = episodes[0] %}
-	<article class="f1 row">
-		<img class="col col-top lg-w-6c mb-2g" src="/obsessions/{{ obsession.href }}/{{ latest.href }}/{{ latest.img|default("img/header.jpg") }}" alt="{{ latest.alt }}" />
-		<div class="f2 col lg-w-6c">
-			<h4 class="h4 snake-2"><a href="/obsessions/{{ obsession.href }}/{{ latest.href }}" class="snake-container">{{ latest.title }}</a></h4>
-			<p class="intro">{{ latest.intro }}</p>
-			<p class="style-meta"><time datetime="{{ latest.date }}">{{ latest.date|human }}</time> • épisode {{ latest.number }}</p>
-			<ul class="style-meta">
-				{% for group in latest.rel.authors %}
+	{% set episode  = episodes[0] %}
+	<div class="row">
+		<div class="col mb-2g lg-w-½">
+			<a class="inline-block" href="/obsessions/{{ obsession.href }}/{{ episode.href }}"><img class="responsive" src="/obsessions/{{ obsession.href }}/{{ episode.href }}/{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" /></a>
+		</div>
+		<div class="col lg-w-½">
+			<h4 class="h4"><a class="snake-container" href="/obsessions/{{ obsession.href }}/{{ episode.href }}">{{ episode.title }}</a></h4>
+			<p class="fw-bold-archer">{{ episode.intro }}</p>
+			<p class="style-meta lh-inherit"><time datetime="{{ episode.date }}">{{ episode.date|human }}</time> • épisode n°{{ episode.number }} | {% for group in episode.rel.authors %}
 					{% set group = group|expand %}
 					{% for kind, authors in group %}
 						{% set kind = "Texte"  if kind == "text"  else kind %}
 						{% set kind = "Photos" if kind == "photo" else kind %}
 						{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
-						<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+						{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}
 					{% endfor %}
-				{% endfor %}
-			</ul>
-			<p>{{ latest.lead }} (…)</p>
+					{{ " • " if not loop.last else "" }}
+				{% endfor %}</p>
+				<p>{{ episode.lead }} (…)</p>
 		</div>
-		<div class="col lg-w-12c more text-center mb-4g">
+		<div class="col lg-w-100 text-center">
 			<a class="btn-round" href="/obsessions/{{ obsession.href }}/{{ latest.href }}"><span>Lire</span></a>
 		</div>
-	</article>
+	</div>
 
 	{% if episodes.length > 1 %}
 	<hr class="mh-0" />
@@ -37,7 +38,7 @@
 						<a class="row" href="/obsessions/{{ obsession.href }}/{{ episode.href }}">
 							<img class="col col-top sm-w-2c md-w-4c lg-w-6c" src="/obsessions/{{ obsession.href }}/{{ episode.href }}/{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" />
 							<div class="col sm-w-2c md-w-4c lg-w-6c">
-								<h5 class="h5 snake-1"><span class="snake-container">{{ episode.title }}</span></h5>
+								<h5 class="h5 snake-2"><span class="snake-container">{{ episode.title }}</span></h5>
 								<p>{{ episode.intro }}</p>
 								<p class="style-meta"><time datetime="{{ episode.date }}">{{ episode.date|human }}</time> • épisode n°{{ episode.number }}</p>
 							</div>
