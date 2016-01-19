@@ -3,7 +3,7 @@
 
 	"href": "assigne-conversation",
 
-	"number": 13,
+	"number": 16,
 	"date": "2016-01-06T08:00+01:00",
 
 	"title": "Ses mots l'assignent",
@@ -19,7 +19,7 @@
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/transport-terrorisme",
+		"prev":  "episode:treize-novembre/foi-sous-les-bombes",
 		"next": "episode:treize-novembre/un-an-charlie",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}

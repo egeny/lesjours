@@ -12,15 +12,15 @@
 	"episodes": [
 		"episode:treize-novembre/etat-urgence-mort-lente",
 		"episode:treize-novembre/un-an-charlie",
-		"episode:treize-novembre/assigne-conversation",
 		"episode:treize-novembre/transport-terrorisme",
-		"episode:treize-novembre/urvoas-urgence",
-		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"episode:treize-novembre/assigne-conversation",
 		"episode:treize-novembre/foi-sous-les-bombes",
 		"episode:treize-novembre/pratique-fondamentaliste",
+		"episode:treize-novembre/urvoas-urgence",
 		"episode:treize-novembre/fiere-de-la-france",
 		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
 		"episode:treize-novembre/a-l-intention-des-victimes",
+		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
 		"episode:treize-novembre/content-de-vous-avoir-revu",
 		"episode:treize-novembre/l-empreinte-de-la-peur",
 		"episode:treize-novembre/un-perimetre-de-desolation",
@@ -44,11 +44,19 @@
 			"subtitle": "32 ans, assigné à résidence"
 		},
 		{
-			"href":     "vendredi-ou-la-nuit-sauvage",
+			"href":     "romagnan-choix-non",
 			"img":      "img/romagnanportrait.jpg",
 			"alt":      "",
 			"title":    "Barbara Romagnan",
 			"subtitle": "41 ans, députée PS anti-état d'urgence"
+		},
+		{
+			"href":     "l-empreinte-de-la-peur",
+			"img":      "img/sandrine-voisine.jpg",
+			"alt":      "",
+			"title":    "Sandrine",
+			"subtitle": "X ans, voisine",
+			"minor":    true
 		},
 		{
 			"href":     "urvoas-le-deuxieme-flic-de-france",
@@ -56,6 +64,37 @@
 			"alt":      "",
 			"title":    "Jean-Jacques Urvoas",
 			"subtitle": "56 ans, deuxième flic de France"
+		},
+		{
+			"href":     "content-de-vous-avoir-revu",
+			"img":      "img/nathalie-riveraine.jpg",
+			"alt":      "",
+			"title":    "Nathalie",
+			"subtitle": "45 ans, riveraine du Bataclan",
+			"minor":    true
+		},
+		{
+			"href":     "un-perimetre-de-desolation",
+			"img":      "img/tuyen-voisin.jpg",
+			"alt":      "",
+			"title":    "Tuyen",
+			"subtitle": "X ans, voisin",
+			"minor":    true
+		},
+		{
+			"href":     "j-ai-vu-le-tireur-jeune-calme-tranquille",
+			"img":      "img/sophie-bataclan.jpg",
+			"alt":      "",
+			"title":    "Sophie",
+			"subtitle": "38 ans, en terrasse du Bataclan le 13 novembre"
+		},
+		{
+			"href":     "un-an-charlie",
+			"img":      "img/brigitte-institutrice.jpg",
+			"alt":      "",
+			"title":    "Brigitte",
+			"subtitle": "X ans, institutrice dans le XIe",
+			"minor":    true
 		}
 	],
 

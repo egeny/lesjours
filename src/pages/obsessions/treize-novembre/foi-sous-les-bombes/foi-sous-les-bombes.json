@@ -3,8 +3,8 @@
 
 	"href": "foi-sous-les-bombes",
 
-	"number": 9,
-	"date": "2016-01-03T10:00+01:00",
+	"number": 15,
+	"date": "2015-12-04T10:00+01:00",
 
 	"title": "La foi sous les bombes",
 	"intro": "<strong>Vies d’assignés.</strong> Les services de renseignements jugent Vincent dangereux. Lui se dit pieux. Ce musulman converti de 32 ans est aussi graffeur.",
@@ -20,7 +20,7 @@
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"prev":  "episode:treize-novembre/pratique-fondamentaliste",
-		"next": "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"next": "episode:treize-novembre/assigne-conversation",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }
