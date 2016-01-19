@@ -28,6 +28,23 @@
 @mixin font-weight-extra-bold($font: "")  { font-weight: 800; }
 @mixin font-weight-black($font: "")       { font-weight: 900; }
 
+// Also, add utility classes to easily set the font-weight (since the designer cannot make his mind)
+.fw-thin        { @include font-weight-thin;        }
+.fw-extra-light { @include font-weight-extra-light; }
+.fw-light       { @include font-weight-light;       }
+.fw-regular     { @include font-weight-regular;     }
+.fw-medium      { @include font-weight-medium;      }
+.fw-semi-bold   { @include font-weight-semi-bold;   }
+.fw-bold        { @include font-weight-bold;        }
+.fw-extra-bold  { @include font-weight-extra-bold;  }
+.fw-black       { @include font-weight-black;       }
+
+.fw-light-archer     { @include font-weight-light("archer");     }
+.fw-regular-archer   { @include font-weight-regular("archer");   }
+.fw-medium-archer    { @include font-weight-medium("archer");    }
+.fw-semi-bold-archer { @include font-weight-semi-bold("archer"); }
+.fw-bold-archer      { @include font-weight-bold("archer");      }
+
 /* Headings */
 %heading {
 	@extend %font-brandon;
@@ -118,9 +135,4 @@
 	.h6 { font-size: .875rem;  }
 
 	.p-larger { font-size: 1.625em; }
-
-	.style-meta {
-		 .link,
-		&.link { background-position: 0 1.125em; }
-	}
 }

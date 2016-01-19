@@ -3,13 +3,9 @@
 		<img class="responsive" src="/obsessions/{{ obsession.href }}/{{ item.img }}" alt="{{ item.alt }}" />
 		{% if item.title %}
 			<div class="overlay pattern-alpha">
-				<div class="snake-3 mb-5g">
-					<div class="snake-container" style="background-image: url(/obsessions/{{ obsession.href }}/{{ item.img }})">
-						<div class="snake-wrapper pattern-1">
-							<h4 class="title h5">{{ item.title }}</h4>
-							<span class="subtitle h6">{{ item.subtitle }}</span>
-						</div>
-					</div>
+				<div class="mb-5g">
+					<h4 class="title h5">{{ item.title }}</h4>
+					<span class="subtitle h6">{{ item.subtitle }}</span>
 				</div>
 				{% if item.desc %}
 					<div class="desc">
