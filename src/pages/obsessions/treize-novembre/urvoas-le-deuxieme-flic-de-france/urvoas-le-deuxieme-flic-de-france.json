@@ -3,8 +3,8 @@
 
 	"href": "urvoas-le-deuxieme-flic-de-france",
 
-	"number": 10,
-	"date": "2016-01-04T10:00+01:00",
+	"number": 5,
+	"date": "2015-11-18T10:00+01:00",
 
 	"title": "Jean-Jacques Urvoas,<br/>le deuxième flic de France",
 	"intro": "<strong>Députés en état d’urgence.</strong> Fabricant d'équilibres au-delà des idéologies, l'élu du Finistère incarne la conversion sécuritaire du Parti socialiste.",
@@ -19,8 +19,8 @@
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/foi-sous-les-bombes",
-		"next":  "episode:treize-novembre/urvoas-urgence",
+		"prev":  "episode:treize-novembre/content-de-vous-avoir-revu",
+		"next":  "episode:treize-novembre/romagnan-choix-non",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

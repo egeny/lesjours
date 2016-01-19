@@ -1,4 +1,6 @@
 $document.ready(function() {
+	"use strict";
+
 	$(".player").each(function() {
 		var
 			$container = $(this),

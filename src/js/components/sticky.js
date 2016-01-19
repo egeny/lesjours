@@ -1,10 +1,11 @@
 $document.ready(function() {
-	$(".sticky").Stickyfill();
+	"use strict";
 
 	var
 		headers  = [],
 		previous = 0;
 
+	$(".sticky").Stickyfill();
 	$(".sticky-header").each(function() {
 		headers.push({ $element: $(this) });
 	});
@@ -12,7 +13,7 @@ $document.ready(function() {
 	$window.scroll(function() {
 		var current = $window.scrollTop();
 
-		headers.forEach(function(header, index) {
+		headers.forEach(function(header) {
 			// Recompute the start position of element not yet sticky
 			// This might be not really performant but way easier than trying to guess when the element's offset is going to change
 			if (!header.$element.hasClass("sticky")) {

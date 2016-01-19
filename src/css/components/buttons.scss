@@ -18,59 +18,56 @@
 
 	@extend %font-proxima;
 	@include font-weight-bold("proxima");
-	font-size: 0.8125rem; // Always 13px (1rem = 16px)
+	font-size: .8125rem; // Always 13px (1rem = 16px)
 
 	text-align: center;
-	text-decoration: none; // For links
 	text-transform: uppercase;
 
 	color: inherit; // For links
 }
 
 .btn-round {
-	width:       3.5em;
+	width: 3.5em;
+	position: relative;
 	line-height: 3.5em;
 
-	position: relative;
-
-	color: $color-white;
-}
-
-	.btn-round:before {
+	&::before {
 		background: $color-brand;
 
 		width:  100%;
 		height: 100%;
 		border-radius: 50%;
 
-		display: block;
 		content: "";
+		display: block;
 		position: absolute;
 
 		transition: transform .3s;
 		backface-visibility: hidden;
 	}
 
-	.btn-round:hover:before,
-	.btn-round:focus:before { transform: scale(0.9); }
+	&:hover::before,
+	&:focus::before { transform: scale(.9); }
 
-	.btn-round > i,
-	.btn-round > span {
-		//display: block; // Recommended if you want to animate with firefox
+	> i,
+	> span {
+		display: block;
 		position: relative;
 		top: 1px; // Seriously…
 
 		font-style: normal;
+		color: $color-white;
 	}
+}
 
 .btn-square {
 	padding: 2px .5em 0;
 	border:  2px solid transparent;
 	line-height: 19px;
-}
 
-.btn-square:hover,
-.btn-square:focus { border-color: inherit; }
+	&:hover,
+	&:focus { border-color: inherit; }
+}
 
 .btn-primary {
 	background: $color-brand;
@@ -81,10 +78,18 @@
 	color: $color-white;
 }
 
-.btn-reverse            { color:      $color-brand; }
-.btn-reverse:before     { background: $color-white; }
-.btn-transparent        { color:      currentColor; }
-.btn-transparent:before { content:    none; }
-.btn-white              { color:      inherit; }
-.btn-white:before       { background: $color-white; }
+.btn-reverse {
+	color: $color-brand;
+	&::before { background: $color-white; }
+}
+
+.btn-transparent {
+	color: inherit;
+	&::before { content: none; }
+}
+
+.btn-white {
+	color: inherit;
+	&::before { background: $color-white; }
+}
 /* @end Buttons */

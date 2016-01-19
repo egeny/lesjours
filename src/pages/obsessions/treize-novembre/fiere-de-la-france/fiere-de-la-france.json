@@ -3,8 +3,8 @@
 
 	"href": "fiere-de-la-france",
 
-	"number": 7,
-	"date": "2016-01-01T10:00+01:00",
+	"number": 9,
+	"date": "2015-11-27T10:00+01:00",
 
 	"title": "#fierdelafrance ?",
 	"intro": "<strong>Journal de bord du XIe.</strong> L’injonction gouvernementale à pavoiser sa fenêtre en bleu-blanc-rouge n’a pas vraiment d’écho dans le quartier.",
@@ -20,7 +20,7 @@
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"prev":  "episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
-		"next":  "episode:treize-novembre/pratique-fondamentaliste",
+		"next":  "episode:treize-novembre/videos-apres",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

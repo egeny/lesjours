@@ -1,0 +1,126 @@
+/* @group .cover */
+.cover {
+	background-size:  cover;
+	background-color: $color-brand;
+
+	height: 100%;
+	overflow: hidden;   // Hide the ::before overlay
+	position: relative; // Used by the ::before overlay
+	text-shadow: 0 0 3px $color-black;
+	color: $color-white;
+
+	&::before {
+		background-color: inherit;
+
+		content: "";
+		display: block;
+
+		@include overlay;
+
+		transition: transform .3s;
+		transform: translateY(100%); // Start hidden, will be displayed using the .expanded class
+	}
+
+	.style-meta { line-height: inherit; }
+
+	.cover-container { overflow: hidden; } // Will be changed in expanded mode to allow scrolling
+
+	.snake-container {
+		.h4.text-overflow {
+			padding: .25em 0; // Add a padding to avoid some characters ("q", "p", "g", etc.) to be cropped with the overflow
+			margin-bottom: 0;
+		}
+
+		.btn { position: absolute; } // The button must not be in the flux
+
+		.btn i {
+			display: block;
+			animation: bounce .5s cubic-bezier(.4, 0, 1, 1) infinite alternate-reverse;
+		}
+
+		> :last-child { margin-bottom: $gutter / 2; }
+	}
+
+	.desc {
+		opacity: 0;
+		transition: opacity .5s, transform .3s;
+		transform: translateY(-1em);
+	}
+
+	.more {
+		opacity: 0;
+		transition: opacity .3s;
+	}
+
+	&.expanded {
+		&::before { transform: none; }
+		.cover-container { overflow: auto; }
+		.snake-1  { border-color: $color-white; }
+		.snake-container .btn { display: none; }
+		.desc, .more { opacity: 1; }
+		.desc { transform: none; }
+	}
+
+	&.no-pattern .pattern { display: none; }
+
+	&.small {
+		min-height: 350px;
+
+		// Keep a given aspect ratio
+		&::before {
+			background: transparent;
+			padding-top: 125%;
+			position: static;
+			transform: none;
+		}
+
+		a {
+			transition: background-color .3s;
+			&:hover,
+			&:focus {
+				background-color: inherit;
+				color: inherit;
+				.snake-1 { border-color: $color-white; }
+			}
+		}
+
+		.snake-1::before,
+		.snake-1::after  { width: 113px; }
+		.snake-1::before { height: 14px; }
+		.snake-1::after  { height: 24px; }
+	}
+}
+
+@keyframes bounce {
+	to { transform: translateY(.75em); }
+}
+
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "main");
+
+	.obsession-#{$i} {
+		 .cover,
+		&.cover { background-color: rgba($color, .9); }
+	}
+}
+
+@include media("md") {
+	$gutter: grid-gutter("md");
+
+	.cover.small .snake-container { padding-left: $gutter * .75; }
+
+	@if $gutter != grid-gutter("sm") {
+		.cover .snake-container > :last-child { margin-bottom: $gutter / 2; }
+	}
+}
+
+@include media("lg") {
+	$gutter: grid-gutter("lg");
+
+	@if $gutter != grid-gutter("md") {
+		.cover.small .snake-container { padding-left: $gutter * .75; }
+		.cover .snake-container > :last-child { margin-bottom: $gutter / 2; }
+	}
+}
+/* @end .cover */

@@ -1,4 +1,7 @@
 $document.ready(function() {
+	"use strict";
+
+	// Close the modal when clicking on its background
 	$(".modal").each(function() {
 		var $this = $(this);
 		$this.click(function(e) {
@@ -6,9 +9,5 @@ $document.ready(function() {
 				window.location.hash = "";
 			}
 		});
-	});
-
-	$(".modal .close").click(function() {
-		window.location.hash = "";
 	});
 });

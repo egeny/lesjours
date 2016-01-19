@@ -1,4 +1,6 @@
 $document.ready(function() {
+	"use strict";
+
 	var timer, $share = $(".share");
 
 	function stop() { window.clearTimeout(timer); }

@@ -2,9 +2,16 @@
 	<header class="container mt-2g">
 		<div class="row">
 			<div class="col">
-				<div class="wall expanded">
-					{% include "partials/wall.html" %}
-				</div>
+				{%
+					set cover = {
+						class: "expanded",
+						img: "/obsessions/" + obsession.href + "/" + obsession.href + ".jpg",
+						href: "/obsessions/" + obsession.href,
+						title: obsession.title,
+						subtitle: obsession.subtitle
+					}
+				%}
+				{% include "partials/cover.html" %}
 			</div>
 		</div>
 	</header>

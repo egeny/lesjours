@@ -3,8 +3,8 @@
 
 	"href": "transport-terrorisme",
 
-	"number": 12,
-	"date": "2016-01-06T10:00+01:00",
+	"number": 17,
+	"date": "2015-12-10T10:00+01:00",
 
 	"title": "Train de mesures sécuritaires sur les rails",
 	"intro": "<strong>Députés en état d’urgence.</strong> Confusion et précipitation post-attentats. Ou comment une loi sur la fraude dans les transport en commun est entièrement réécrite pour devenir un fourre-tout paranoïaque contre le risque terroriste.",
@@ -19,8 +19,8 @@
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/urvoas-urgence",
-		"next":  "episode:treize-novembre/assigne-conversation",
+		"prev":  "episode:treize-novembre/assigne-conversation",
+		"next":  "episode:treize-novembre/un-an-charlie",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

@@ -1,0 +1,40 @@
+/* @group .lettrine */
+.lettrine {
+	background-color: $color-brand;
+
+	width: 1.6em;
+	border-radius: 50%;
+	margin: -.25em .15em 0 0;
+
+	display: inline-block;
+	float: left;
+
+	@extend %font-brandon;
+	@include font-weight-regular("brandon");
+	font-size: 3.75em;
+
+	line-height: 1.6em;
+	text-align: center;
+
+	color: $color-white;
+
+	&::selection { background: transparent; }
+
+	&.with-quote {
+		@extend %quote;
+		background-position: .1875em 50%;
+		background-size: .25em .25em;
+	}
+}
+
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "main");
+
+	.obsession-#{$i} .lettrine { background-color: $color; }
+}
+
+@include media("md") {
+	.lettrine { margin-left: -.5em; }
+}
+/* @end .lettrine */

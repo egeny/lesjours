@@ -1,0 +1,11 @@
+/* @group .dialogue */
+.dialogue {
+	margin-top:    1.5em;
+	margin-bottom: .75em;
+
+	p {
+		margin-bottom: .75em;
+		&::before { content: "— "; }
+	}
+}
+/* @end .dialogue */

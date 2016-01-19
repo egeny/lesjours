@@ -2,7 +2,8 @@
 @import "mixins/mixins";
 @import "framework/framework";
 
-// Some defaults are inspired by HTML5 Boilerplate — https://html5boilerplate.com
+$margin: grid-margin("sm");
+$gutter: grid-gutter("sm");
 
 html {
 	background: $color-white;
@@ -17,9 +18,10 @@ html {
 }
 
 body {
+	height: 100%;
 	max-width: $max-width;
 	margin: 0 auto;
-	font-size: 0.875em;
+	font-size: .875em;
 }
 
 @include media("md") {
@@ -31,7 +33,16 @@ blockquote, figure, p, ul, ol, dl, dd,
 h1, h2, h3, h4, h5, h6 { margin: 0; }
 
 /* Remove the gap between audio, canvas, iframes, images, videos and the bottom of their containers */
-audio, canvas, iframe, img, svg, video { vertical-align: middle; }
+audio, canvas, iframe, img, picture, svg, video { vertical-align: middle; }
+
+/* Default styles for <a> (unstyled) */
+a {
+	text-decoration: none;
+	color: inherit;
+
+	&:hover,
+	&:focus { color: $color-brand; }
+}
 
 /* Add a nice cursor for abbreviations */
 abbr {
@@ -42,6 +53,68 @@ abbr {
 /* Disable the default italic for address */
 address { font-style: inherit; }
 
+/* Default styles for <aside> */
+aside {
+	p {
+		margin: 0;
+		@extend .h2;
+		@include font-weight-bold("brandon");
+		font-size: 2em;
+	}
+
+	span {
+		font-size: 1.333333em;
+		color: $color-brand;
+	}
+}
+
+// Archer's bold is actually bolder than the default "bold" (its font-weights seems wrong)
+b, strong { @include font-weight-bold("archer"); }
+
+/* Default styles for <blockquote> */
+blockquote {
+	position: relative;
+
+	&::before {
+		@extend %quote;
+		background-position: 50% 50%;
+		background-size: .7em .7em;
+		background-color: $color-brand;
+
+		width:  2.5em;
+		height: 2.5em;
+		border-radius: 50%;
+
+		content: "";
+
+		position: absolute;
+		top:  -.75em;
+		left: 4px;
+		z-index: -1;
+
+		font-size: 1.85em;
+	}
+
+	p {
+		padding-left: 1.75em;
+		margin-bottom: .125em;
+
+		@extend %font-brandon;
+		@include font-weight-light("brandon");
+		font-size: 1.85em;
+		line-height: 1.15;
+
+		&:last-of-type {
+			&::after { content: " »"; }
+		}
+	}
+
+	footer {
+		padding-left: 4em;
+		@extend .style-meta;
+	}
+}
+
 /* Remove default fieldset styles */
 fieldset {
 	padding: 0;
@@ -49,33 +122,84 @@ fieldset {
 	margin:  0;
 }
 
+/* Default styles for <figcaption> */
+figcaption {
+	@extend .snake-2;
+	@extend .style-meta;
+	margin-top: .75em;
+	margin-left: $gutter * 2.25;
+
+	line-height: inherit;
+	color:       inherit;
+
+	&::before {
+		height: auto;
+		top: -30px;
+	}
+
+	> span { @extend .snake-container; }
+
+	.credits {
+		@include font-weight-regular("proxima");
+		&::before { content: "— "; }
+
+		a {
+			background-position: 0 1.125em;
+			font-weight: inherit;
+		}
+	}
+}
+
 /* Set figure's content as responsive */
-figure audio,
-figure canvas,
-figure iframe,
-figure img,
-figure picture,
-figure svg,
-figure table,
-figure video { @include responsive; }
+figure {
+	audio, canvas, iframe, img, picture, svg, table, video { @include responsive; }
+}
+
+/* Default styles for <hr/> */
+hr {
+	@extend .pattern-alpha;
+
+	height: $gutter;
+	border: 0;
+	margin: $gutter $margin;
+}
 
 /* The <h1> is reserved for the page's title */
 h1 { font-size: 1em; }
 
+// Just to be sure
+i, em { font-style: italic; }
+
+label { cursor: pointer; }
+
+/* Default styles for <ol> and <ul> */
+ol, ul {
+	padding: 0;
+	list-style: none;
+}
+
 /* Set a default margin for <p> */
 p { margin-bottom: 1.5em; }
 
+/* Set the correct quotes */
+q {
+	quotes: "« " " »" "“" "”";
+	font-style: italic;
+
+	blockquote & { quotes: "“" "”"; }
+}
+
 /* Allow only vertical resizing of textareas */
 textarea { resize: vertical; }
-
-/* Remove default padding for lists */
-ul, ol { padding: 0; }
 
 /* Remove text-shadow in selection highlight */
 ::selection {
 	background: $color-external;
 	text-shadow: none;
 }
+
+/* ARIA FTW */
+[aria-hidden=true] { display: none; }
 
 /* Default style for UI elements */
 [class^=ui-] {
@@ -84,8 +208,68 @@ ul, ol { padding: 0; }
 	display: inline-block;
 }
 
-/* ARIA FTW */
-[aria-hidden=true] { display: none; }
+/* Add an asterisk for links pointing to a note */
+[href^="#note"]::after { content: "*"; }
+
+@each $colors in $colors-obsessions {
+	$i:     index($colors-obsessions, $colors);
+	$color: map-get($colors, "main");
+
+	.obsession-#{$i} {
+		aside span { color: $color; }
+		blockquote::before { background-color: rgba($color, .75); }
+		figcaption::before { border-color: $color; }
+	}
+}
+
+@include media("md") {
+	$margin: grid-margin("md");
+	$gutter: grid-gutter("md");
+
+	blockquote {
+		p      { padding-left: 1.25em; }
+		footer { padding-left: 3em; }
+	}
+
+	figcaption { margin-left: 0; }
+
+	@if $margin != grid-margin("sm") {
+		blockquote::before { left: $margin / -2; }
+		hr {
+			margin-right: $margin;
+			margin-left:  $margin;
+		}
+	}
+
+	@if $gutter != grid-gutter("sm") {
+		hr {
+			height:        $gutter;
+			margin-top:    $gutter;
+			margin-bottom: $gutter;
+		}
+	}
+}
+
+@include media("lg") {
+	$margin: grid-margin("lg");
+	$gutter: grid-gutter("lg");
+
+	@if $margin != grid-margin("md") {
+		blockquote::before { left: $margin / -2; }
+		hr {
+			margin-right: $margin;
+			margin-left:  $margin;
+		}
+	}
+
+	@if $gutter != grid-gutter("md") {
+		hr {
+			height:        $gutter;
+			margin-top:    $gutter;
+			margin-bottom: $gutter;
+		}
+	}
+}
 
 @import "components/components";
 @import "partials/partials";
