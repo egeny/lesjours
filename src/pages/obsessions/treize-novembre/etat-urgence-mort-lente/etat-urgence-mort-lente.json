@@ -6,7 +6,7 @@
 	"number": 20,
 	"date": "2016-01-14T08:00+01:00",
 
-	"title": "L'état d'urgence, de mort lente",
+	"title": "L'état d'urgence ne sert plus à rien",
 	"subtitle": "<strong>Députés en état d’urgence.</strong> Au bout de deux mois, la commission de contrôle parlementaire constate l’extinction progressive des mesures exceptionnelles de police.",
 	"intro":   "",
 
@@ -14,12 +14,13 @@
 
 	"rel": {
 		"authors": [
-			{ "text":  "author:charlotte-rotman" },
+			{ "text":  "author:sylvie-regensburg" },
 			{ "photo": "author:sebastien-calvet"}
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"prev":  "episode:treize-novembre/commemorations-plaques",
+		"next":	"episode:treize-novembre/legitime-defense-revient",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }
