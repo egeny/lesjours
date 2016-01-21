@@ -46,6 +46,8 @@ $margin: grid-margin("sm");
 .full-height { height: 100%; }
 .calc-height { height: calc(100% - 64px - #{$margin}); } // 100% - header's height - one margin at bottom
 
+.hidden { display: none; }
+
 /* Quick line-height: inherit */
 .lh-inherit { line-height: inherit; }
 
