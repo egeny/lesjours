@@ -268,7 +268,7 @@ gulp.task('build:assets', function(cb) {
 
 gulp.task('build:html', function() {
 	var streams = glob
-		.sync(path.join(paths.pages, '**/*.{html,json}'))
+		.sync(path.join(paths.pages, '**/*.{html,php,json}'))
 		.filter(function(file, index, files) {
 			var parsed = path.parse(file);
 			return (parsed.ext === '.html') ? (files.indexOf(path.join(parsed.dir, parsed.name + '.json')) < 0) : true;
@@ -602,10 +602,10 @@ gulp.task('watch', ['build'], function() {
 		});
 	}
 
-	gulp.watch(path.join(paths.partials,      '**/*.html'),                           partials);
-	gulp.watch(path.join(paths.templates,     '**/*.html'),                           templates);
-	gulp.watch(path.join(paths.pages,         '**/*.{html,json}'),                    html);
 	gulp.watch(path.join(paths.pages,         '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'), assets);
+	gulp.watch(path.join(paths.partials,  '**/*.html'),            partials);
+	gulp.watch(path.join(paths.templates, '**/*.html'),            templates);
+	gulp.watch(path.join(paths.pages,     '**/*.{html,php,json}'), html);
 
 	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'),     ['build:css']);
 	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),       ['build:css:img']);
