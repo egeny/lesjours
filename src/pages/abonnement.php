@@ -8,8 +8,7 @@
 
 {% block php -%}
 <?php
-	set_include_path(dirname(__FILE__).'/../../lj');
-	require('wp-load.php');
+	require('wp.php');
 
 	$hidden = array(
 		'amount'        => null,
