@@ -47,7 +47,6 @@
 	<link rel="stylesheet" href="/css/global.min.css" />
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
-	{% include "img/ui.svg" %}
 	{%- from "partials/_macro.html" import icon -%}
 	{% include "partials/_header.html" %}
 	{% block content %}{% endblock %}

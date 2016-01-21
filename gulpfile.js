@@ -49,10 +49,7 @@ var
 	config = {
 		spriter: {
 			mode: {
-				symbol: {
-					inline: true,
-					dest:   '.'
-				}
+				symbol: { dest: '.' }
 			}
 		},
 		svgmin: {
@@ -514,7 +511,7 @@ gulp.task('optimize:js', function() {
 
 gulp.task('build:js', ['optimize:js'], function() {
 	var
-		files = ['libs/modernizr', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
+		files = ['libs/modernizr', 'libs/svg4everybody', 'libs/svg4everybody.init', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
 		streams = merge();
 
 	streams.add(gulp
