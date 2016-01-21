@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^(_account|abonnement).html$ /$1.php [L]

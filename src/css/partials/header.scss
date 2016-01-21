@@ -33,7 +33,12 @@ $gutter: grid-gutter("sm");
 	height: 64px;
 	color: $color-brand;
 
-	h1 a { padding: 11px; }
+	h1 {
+		z-index: 1;
+		a { padding: 11px; }
+	}
+
+	iframe { border: 0; }
 }
 
 #burger {
@@ -43,6 +48,7 @@ $gutter: grid-gutter("sm");
 	position: absolute;
 	top: 12px;
 	left: 0;
+	z-index: 1;
 
 	&::before,
 	> span,
@@ -132,11 +138,12 @@ $gutter: grid-gutter("sm");
 	right: 0;
 
 	line-height: 64px;
+	color: $color-brand;
 
-	> a { line-height: initial; }
-
-	[href="#login"] {
+	.login {
 		display: inline-block;
+		line-height: initial;
+
 		&:focus .btn-square { border-color: inherit; }
 
 		svg {
