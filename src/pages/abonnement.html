@@ -12,7 +12,7 @@
 		<div class="col full-height">
 			<div class="subscription full-height overflow-auto">
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Devenir jouriste</h2>
-				<form action="#" class="mb-2g md-w-6c md-ml-1c relative">
+				<form action="/abonnement.php" method="post" class="mb-2g md-w-6c md-ml-1c relative">
 					<fieldset id="formule" class="mb-4g">
 						<legend class="style-meta-large relative">Choisir ma formule</legend>
 						<ul class="plans row text-center">
@@ -68,8 +68,8 @@
 							<input id="firstname" class="check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" required />
 						</div>
 						<div class="field">
-							<label for="mail">Adresse e-mail</label>
-							<input id="mail" class="check md-white-check lg-white-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
+							<label for="email">Adresse e-mail</label>
+							<input id="email" class="check md-white-check lg-white-check" name="email" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
 						</div>
 						<div class="field">
 							<label for="password">Mot de passe</label>
@@ -81,7 +81,7 @@
 						</div>
 						<div class="field">
 							<label for="zip">Code postal</label>
-							<input id="zip" class="check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" required />
+							<input id="zip" class="check md-white-check lg-white-check" name="zip" type="text" minlength="5" maxlength="5" placeholder="75008" autocomplete="postal-code" required />
 						</div>
 						<div class="field">
 							<label for="city">Ville</label>
@@ -90,13 +90,13 @@
 					</fieldset>
 					<fieldset id="mode-de-paiement">
 						<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
-						<div class="gift style-meta lh-inherit">
+						<div class="gift style-meta lh-inherit color-dark">
 							<i class="pull-left">{{ icon("bag") }}</i>
 							<p><strong class="block text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
 						</div>
 						<div class="field row mb-1g">
-							<label class="col md-w-auto pr-2g pl-0">
-								<input class="radio" type="radio" name="payment" value="bank" required>
+							<label class="col md-w-auto pr-2g pl-0 color-dark">
+								<input class="radio" type="radio" name="payment" value="bank" required disabled>
 								<span class="radio"></span>
 								Prélèvement
 							</label>
@@ -108,20 +108,22 @@
 						</div>
 					</fieldset>
 					<div>
-						<label class="mb-2g style-meta text-upper">
+						<label class="mb-2g relative style-meta text-upper">
 							<input class="checkbox" type="checkbox" name="allowed" required>
 							<span class="checkbox"></span>
-							J’accepte les conditions générales de vente. <a class="color-brand" href="#">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
+							J’accepte les conditions générales de vente. <a class="color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
 						</label>
-						<p class="summary mv-4g pa-2g style-meta lh-inherit text-upper color-main">Vous avez choisi la formule « Jouriste » à 9 €/mois. <a class="color-brand" href="#formule">Modifier</a></p>
-						<div class="relative text-center">
+						<p class="summary hidden mv-4g pa-2g style-meta lh-inherit text-upper color-main">Vous avez choisi la formule « <span>Jouriste</span> » à <span>9</span> €/<span>mois<span>. <a class="color-brand" href="#formule">Modifier</a></p>
+						<div class="mt-2g relative text-center">
 							<button class="btn-primary sm-w-4c md-w-5c lg-w-5c" type="submit">
-								<i class="sm-hidden">{{ icon("check") }}</i>
+								<i class="legend-before sm-hidden">{{ icon("check") }}</i>
 								<span>Accéder au paiement</span>
 							</button>
 						</div>
 					</div>
-					<div class="progress"></div>
+					<div class="progress sm-hidden">
+						<div></div>
+					</div>
 				</form>
 			</div>
 		</div><!-- end of .col -->
