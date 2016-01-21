@@ -6,11 +6,123 @@
 %}
 {% extends "partials/_layout.html" %}
 
+{% block php -%}
+<?php
+	set_include_path(dirname(__FILE__).'/../../lj');
+	require('wp-load.php');
+
+	$hidden = array(
+		'amount'        => null,
+		'cardfullname'  => null,
+		'clientemail'   => null,
+		'clientident'   => null,
+		'createalias'   => 'yes',
+		'description'   => 'Abonnement',
+		'identifier'    => 'LES JOURS TEST',
+		'operationtype' => 'payment',
+		'orderid'       => null,
+		'version'       => '2.0',
+	);
+
+	$prices = array(
+		'jouriste'            => 9,
+		'jouriste-cash'       => 90,
+		'jouriste-desargente' => 5
+	);
+
+	$secret = '<P?[E}D4pRBGl%qO';
+	$state  = null;
+
+	$subscriptions = array(
+		'9'  => '+1 month',
+		'90' => '+1 year',
+		'5'  => '+1 month'
+	);
+
+	if (isset($_GET['result'])) {
+		// TODO: /!\ check hash
+		if ($_GET['EXECCODE'] == '0000') {
+			$expire  = date('Y-m-d', strtotime($subscriptions[substr($_GET['AMOUNT'], 0, -2)]));
+			$user_id = $_GET['CLIENTIDENT'];
+
+			// Update the user's account
+			update_user_meta($user_id, 'alias',  $_GET['ALIAS']);
+			update_user_meta($user_id, 'expire', $expire);
+			update_user_meta($user_id, 'paid',   true);
+
+			die(header('Location: /merci.html'));
+		} else {
+			echo $_GET['MESSAGE'];
+			die();
+		}
+	}
+
+	if (!empty($_POST)) {
+		// TODO: check inputs
+		// TODO: sanitize
+
+		// Try to create a new user
+		$user_id = wp_insert_user(array(
+			'user_email' => $_POST['email'],
+			'user_login' => $_POST['email'],
+			'user_pass'  => $_POST['password'],
+			'first_name' => $_POST['firstname'],
+			'last_name'  => $_POST['name']
+		));
+
+		// If everything went fine
+		if (!is_wp_error($user_id)) {
+			// Add additionnal metadata
+			foreach (array('plan', 'address', 'zip', 'city', 'payment') as $field) {
+				add_user_meta($user_id, $field, $_POST[$field], true);
+			}
+
+			// Mark as "unpaid" for now
+			add_user_meta($user_id, 'paid', false, true);
+
+			// Complete the payload for the payment service
+			$hidden['amount']       = $prices[$_POST['plan']] * 100;
+			$hidden['cardfullname'] = $_POST['name'].' '.$_POST['firstname'];
+			$hidden['clientemail']  = $_POST['email'];
+			$hidden['clientident']  = $user_id;
+			$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
+
+			$hash = array();
+			foreach ($hidden as $name => $value) {
+				$hash[] = strtoupper($name).'='.$value;
+			}
+
+			sort($hash);
+			$hidden['hash'] = $secret.implode($secret, $hash).$secret;
+			$hidden['hash'] = hash('sha256', $hidden['hash']);
+
+			$state = 'redirect';
+		} else {
+			// TODO: Handle existing users
+			print_r($user_id);
+			die();
+		}
+	}
+?>
+{% endblock %}
+
 {% block content %}
 <div class="container">
 	<div class="row full-height">
 		<div class="col full-height">
 			<div class="subscription full-height overflow-auto">
+			<?php if ($state == 'redirect') : ?>
+				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Redirection vers le paiement</h2>
+				<form id="redirect" class="md-ml-1c lg-ml-1c" action="https://secure-test.be2bill.com/front/form/process.php" method="post">
+				<?php foreach ($hidden as $name => $value) : ?>
+					<input type="hidden" name="<?php echo strtoupper($name) ?>" value="<?php echo $value ?>" />
+				<?php endforeach ?>
+					<p>Si vous n'êtes pas redirigé automatiquement <button class="btn-blank" type="submit">cliquez-ici</button>.</p>
+				</form>
+				<script>
+					document.getElementById("redirect").submit();
+				</script>
+			<?php else : ?>
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Devenir jouriste</h2>
 				<form method="post" class="mb-2g md-w-6c md-ml-1c relative">
 					<fieldset id="formule" class="mb-4g">
@@ -125,6 +237,7 @@
 						<div></div>
 					</div>
 				</form>
+			<?php endif ?>
 			</div>
 		</div><!-- end of .col -->
 	</div><!-- end of .row -->
