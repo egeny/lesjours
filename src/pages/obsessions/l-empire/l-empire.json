@@ -10,11 +10,13 @@
 	"desc": "<p>Il a déjà fixé la date&nbsp;: le 17 février 2022, Vincent Bolloré lèguera sa petite épicerie à sa dynastie. Du transport et de la logistique, du fioul et des batteries électriques, du plastique et des palmiers en Afrique. Et Havas. Et Vivendi. Et Canal+.</p><p>Depuis l’été dernier, l’homme d’affaires mène un raid sur le groupe crypté dont il a viré la quasi-totalité des dirigeants. Désormais, Vincent Bolloré fait sa loi à Canal+ et ça ne fait que commencer.</p>",
 
 	"episodes": [
-		"episode:l-empire/ep5-jour-de-deug",
-		"episode:l-empire/ep4-journal-hard",
-		"episode:l-empire/ep3-portrait-belmer",
+		"episode:l-empire/ep1-guignols",
 		"episode:l-empire/ep2-plug-canal",
-		"episode:l-empire/ep1-guignols"
+		"episode:l-empire/ep3-portrait-belmer",
+		"episode:l-empire/ep4-journal-hard",
+		"episode:l-empire/ep5-jour-de-deug"
+		
+		
 	],
 
 	"people": [
@@ -23,16 +25,14 @@
 			"img":      "img/belmer-portrait.jpg",
 			"alt":      "",
 			"title":    "Rodolphe Belmer",
-			"subtitle": "46 ans, ex-numéro 2 de Canal+",
-			"minor":    true
+			"subtitle": "46 ans, ex-numéro 2 de Canal+"
 		},
 		{
 			"href":     "ep1-guignols",
 			"img":      "img/bollore-portrait.jpg",
 			"alt":      "",
 			"title":    "Vincent Bolloré",
-			"subtitle": "63 ans, patron (de Vivendi, d'Havas, de Canal+…)",
-			"minor":    true
+			"subtitle": "63 ans, patron (de Vivendi, d'Havas, de Canal+…)"
 		},
 		{
 			"href":     "ep2-plug-canal",
@@ -48,6 +48,22 @@
 			"alt":      "",
 			"title":    "Ara Aprikian",
 			"subtitle": "49 ans, ex-chef du pôle gratuit de Canal+",
+			"minor":    true
+		},
+		{
+			"href":     "#",
+			"img":      "img/portrait-saada.jpg",
+			"alt":      "",
+			"title":    "Maxime Saada",
+			"subtitle": "45 ans, nouveau numéro 2 de Canal+",
+			"minor":    true
+		},
+		{
+			"href":     "#",
+			"img":      "img/degreef-header.jpg",
+			"alt":      "",
+			"title":    "Alain de Greef",
+			"subtitle": "Défunt directeur des programmes de Canal+",
 			"minor":    true
 		}
 	],

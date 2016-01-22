@@ -3,8 +3,8 @@
 
 	"href": "pratique-fondamentaliste",
 
-	"number": 8,
-	"date": "2016-01-03T10:00+01:00",
+	"number": 14,
+	"date": "2015-12-03T10:00+01:00",
 
 	"title": "« L’intéressé adopte une pratique fondamentaliste de l’islam »",
 	"intro": "<strong>Vies d’assignés.</strong> Musulman converti, Vincent s’est retrouvé assigné à résidence après le vote de l'état d'urgence. Une note blanche des renseignements l’accuse d’avoir des fréquentations dangereuses.",
@@ -19,7 +19,7 @@
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/fiere-de-la-france",
+		"prev":  "episode:treize-novembre/uvoas-urgence",
 		"next":  "episode:treize-novembre/foi-sous-les-bombes",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}

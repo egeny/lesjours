@@ -3,8 +3,8 @@
 
 	"href": "a-l-intention-des-victimes",
 
-	"number": 5,
-	"date": "2015-12-30T13:50+01:00",
+	"number": 7,
+	"date": "2015-11-20T13:50+01:00",
 
 	"title": "« À l’intention des victimes et des impliqués »",
 	"intro": "<strong>Journal de bord du XIe.</strong> Chaque jour depuis les attentats, 200 personnes se rendent à la cellule d’aide psychologique de la mairie d’arrondissement.",
@@ -19,7 +19,7 @@
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/content-de-vous-avoir-revu",
+		"prev":  "episode:treize-novembre/romagnan-choix-non",
 		"next":  "episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
