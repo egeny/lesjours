@@ -10,6 +10,7 @@
 	"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, «Les Jours» racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>",
 
 	"episodes": [
+		"episode:treize-novembre/legitime-defense-revient",
 		"episode:treize-novembre/etat-urgence-mort-lente",
 		"episode:treize-novembre/un-an-charlie",
 		"episode:treize-novembre/transport-terrorisme",
@@ -78,7 +79,7 @@
 			"img":      "img/tuyen-voisin.jpg",
 			"alt":      "",
 			"title":    "Tuyen",
-			"subtitle": "X ans, voisin",
+			"subtitle": "44 ans, voisin du Bataclan",
 			"minor":    true
 		},
 		{
@@ -86,13 +87,13 @@
 			"img":      "img/sophie-bataclan.jpg",
 			"alt":      "",
 			"title":    "Sophie",
-			"subtitle": "38 ans, en terrasse du Bataclan le 13 novembre"
+			"subtitle": "39 ans, en terrasse du Bataclan le 13 novembre"
 		},
 		{
 			"href":     "un-an-charlie",
 			"img":      "img/brigitte-institutrice.jpg",
 			"alt":      "",
-			"title":    "Brigitte",
+			"title":    "Brigitte Baudelot",
 			"subtitle": "X ans, institutrice dans le XIe",
 			"minor":    true
 		}

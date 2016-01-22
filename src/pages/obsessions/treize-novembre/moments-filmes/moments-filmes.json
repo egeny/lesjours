@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "moments-filmes",
+
+	"number": 10,
+	"date": "2015-11-28T10:00+01:00",
+
+	"title": "L'après 13,<br/>moments filmés",
+	"intro": "Le cinéaste Alexandre Liebert a posé sa caméra et son regard sur des instants du quotidien post-attentats.",
+	"subtitle":  "",
+
+	"tags": ["attentats", "Bataclan"],
+
+	"rel": {
+		"authors": [
+			{ "text": "author:sebastien-calvet" },
+			{ "vidéo :": ["Alexandre Liebert"]  }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/fiere-de-la-france",
+		"next":  "episode:treize-novembre/montfermeil-musulmans",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}

@@ -39,13 +39,20 @@
 			background-size: 1em 1.4em;
 		}
 
+		&:invalid { box-shadow: none; } // Disable default box-shadow in Firefox
 		&.check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
 		&.white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
 	}
 }
 
 .checkbox[type],
-.radio[type] { @extend .sr; }
+.radio[type] {
+	@extend .sr;
+
+	// Position the input so the browser's invalid message is correctly positionned
+	bottom: 0;
+	left: .75em;
+}
 
 .checkbox[type] + .checkbox,
 .radio[type]    + .radio {
@@ -75,6 +82,9 @@
 }
 
 .radio[type] + .radio { border-radius: 50%; }
+
+.checkbox[disabled] + .checkbox,
+.radio[disabled]    + .radio { color: $color-dark; }
 
 .checkbox[type]:active  + .checkbox,
 .checkbox[type]:focus   + .checkbox,

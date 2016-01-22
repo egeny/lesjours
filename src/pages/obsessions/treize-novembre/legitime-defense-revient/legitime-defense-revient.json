@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "legitime-defense-revient",
+
+	"number": 21,
+	"date": "2016-01-16T08:00+01:00",
+
+	"title": "La légitime défense<br/>revient aux affaires",
+	"subtitle": "Le procès d'un policier, accusé d’avoir tué un homme d’une balle dans le dos, se tient alors que le ministre de l'Intérieur souhaite étendre l'irresponsabilité pénale des forces de l'ordre.",
+	"intro":   "Le procès d'un policier, accusé d’avoir tué un homme d’une balle dans le dos, se tient alors que le ministre de l'Intérieur souhaite étendre l'irresponsabilité pénale des forces de l'ordre.",
+
+	"tags": ["attentats", "état d'urgence", "Amine Bentounsi", "légitime défense"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sylvie-regensburg" },
+			{ "photo": "author:sebastien-calvet"}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/etat-urgence-mort-lente",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}

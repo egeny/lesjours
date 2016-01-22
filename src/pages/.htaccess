@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteRule ^(_account|abonnement).html$ /$1.php [L]
+
+#RewriteCond %{REQUEST_URI} ^/lesjours/obsessions
+#RewriteCond %{REQUEST_URI} !jpg$
+#RewriteCond %{HTTP_COOKIE} !lucky=boy
+#RewriteRule .* http://%{HTTP_HOST}/lesjours/abonnement.html [R,L]
