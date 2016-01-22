@@ -11,7 +11,7 @@
 	<div class="full-height mh-1m relative">
 		<div id="account">
 		<?php if ($connected) : ?>
-			<a class="btn-round btn-transparent" href="/profile.html">
+			<a class="btn-round btn-transparent" href="/session.php?out">
 				<img class="responsive" src="/img/profile.svg" alt="Accéder à mon profil" />
 			</a>
 		<?php else : ?>
@@ -19,7 +19,7 @@
 			{# An anchor link won't open in the parent's frame #}
 			{# We have to set the parent's URL (referer) on the link #}
 			<a class="login" href="<?php echo $_SERVER['HTTP_REFERER'] ?>#login">
-				<i class="md-hidden lg-hidden btn-round btn-transparent">{{ icon("ui-login") }}</i>
+				<i class="md-hidden lg-hidden btn-round btn-transparent">{{ icon("login") }}</i>
 				<span class="sm-sr btn-square">Se connecter</span>
 			</a>
 		<?php endif ?>
