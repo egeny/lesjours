@@ -49,10 +49,7 @@ var
 	config = {
 		spriter: {
 			mode: {
-				symbol: {
-					inline: true,
-					dest:   '.'
-				}
+				symbol: { dest: '.' }
 			}
 		},
 		svgmin: {
@@ -260,18 +257,26 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build:assets', function(cb) {
-	var streams = glob
-		.sync(path.join(paths.pages, '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'))
-		.map(function(file) {
-			return assets(file);
-		});
+	var streams = [];
+
+	streams = streams.concat(
+		glob
+			.sync(path.join(paths.pages, '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'))
+			.map(function(file) { return assets(file); })
+	);
+
+	streams = streams.concat(
+		glob
+			.sync(path.join(paths.pages, '.htaccess'))
+			.map(function(file) { return assets(file); })
+	);
 
 	return streams.length ? merge(streams) : null;
 });
 
 gulp.task('build:html', function() {
 	var streams = glob
-		.sync(path.join(paths.pages, '**/*.{html,json}'))
+		.sync(path.join(paths.pages, '**/*.{html,php,json}'))
 		.filter(function(file, index, files) {
 			var parsed = path.parse(file);
 			return (parsed.ext === '.html') ? (files.indexOf(path.join(parsed.dir, parsed.name + '.json')) < 0) : true;
@@ -514,7 +519,7 @@ gulp.task('optimize:js', function() {
 
 gulp.task('build:js', ['optimize:js'], function() {
 	var
-		files = ['libs/modernizr', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
+		files = ['libs/modernizr', 'libs/svg4everybody', 'libs/svg4everybody.init', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
 		streams = merge();
 
 	streams.add(gulp
@@ -605,10 +610,14 @@ gulp.task('watch', ['build'], function() {
 		});
 	}
 
-	gulp.watch(path.join(paths.partials,      '**/*.html'),                           partials);
-	gulp.watch(path.join(paths.templates,     '**/*.html'),                           templates);
-	gulp.watch(path.join(paths.pages,         '**/*.{html,json}'),                    html);
-	gulp.watch(path.join(paths.pages,         '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'), assets);
+	gulp.watch(path.join(paths.partials,  '**/*.html'),            partials);
+	gulp.watch(path.join(paths.templates, '**/*.html'),            templates);
+	gulp.watch(path.join(paths.pages,     '**/*.{html,php,json}'), html);
+
+	gulp.watch([
+		path.join(paths.pages, '**/*.{gif,png,jpg,m4a,webm,mp4,pdf}'),
+		path.join(paths.pages, '.htaccess')
+	], assets);
 
 	gulp.watch(path.join(paths.css.input,     '**/*.{css,scss,sass}'),     ['build:css']);
 	gulp.watch(path.join(paths.css.img.input, '**/*.{gif,jpg,png}'),       ['build:css:img']);

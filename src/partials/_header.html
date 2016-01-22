@@ -1,21 +1,19 @@
 <header id="header-container">
-	<div id="header" class="mh-1m text-center relative">
-		<h1><a class="inline-block" href="/"><img width="55" height="42" src="/img/logo-text.svg" alt="Les Jours" /></a></h1>
+	<div id="header" class="relative">
+		<div class="full-height mh-1m relative text-center">
+			<h1 class="inline-block relative">
+				<a class="block" href="/">
+					<img width="55" height="42" src="/img/logo-text.svg" alt="Les Jours" />
+				</a>
+			</h1>
 
-		<a id="burger" class="initial" href="#menu">
-			<span><span class="sr">menu</span></span>
-		</a>
-
-		<div id="account">
-			<a class="sm-hidden btn-square" href="/abonnement.html">S’abonner</a>
-			<a href="#login">
-				<i class="md-hidden lg-hidden btn-round btn-transparent">{{ icon("ui-login") }}</i>
-				<span class="sm-sr btn-square">Se connecter</span>
+			<a id="burger" class="initial" href="#menu">
+				<span><span class="sr">menu</span></span>
 			</a>
-			<!--<a class="btn-round btn-transparent" href="#">
-				<img class="responsive" src="/img/profile.svg" alt="Accéder à mon profil" />
-			</a>-->
 		</div>
+		{# Use an iframe to check if the user is logged-in #}
+		{# Also, don't include in #header since it has to have a full-width in order to match the page's media queries #}
+		<iframe src="/_account.html" class="full-width full-height overlay"></iframe>
 	</div>
 
 	<nav id="menu" class="container" tabindex="-1">

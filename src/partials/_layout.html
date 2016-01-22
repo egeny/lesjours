@@ -1,4 +1,4 @@
-{% from "partials/_macro.html" import icon %}
+{%- block php %}{% endblock -%}
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -29,24 +29,25 @@
 	<script src="https://use.typekit.net/cyq3qtt.js"></script>
 	<script>
 		try {
+			/* eslint no-empty:0 */
 			Typekit.handler = function(event) {
 				return function() {
 					if (window.$) { $(window).trigger("font-" + event); }
-				}
+				};
 			};
 
 			Typekit.load({
 				async: true,
 				active:   Typekit.handler("active"),
-				inactive: Typekit.handler("inactive"),
+				inactive: Typekit.handler("inactive")
 			});
-		} catch(e) {}
+		} catch (e) {}
 	</script>
 
-	<link rel="stylesheet" href="/css/global.css" />
+	<link rel="stylesheet" href="/css/global.min.css" />
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
-	{% include "img/ui.svg" %}
+	{%- from "partials/_macro.html" import icon -%}
 	{% include "partials/_header.html" %}
 	{% block content %}{% endblock %}
 
