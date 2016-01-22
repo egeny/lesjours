@@ -12,7 +12,7 @@
 		<div id="account">
 		<?php if ($connected) : ?>
 			<a class="btn-round btn-transparent" href="/session.php?out">
-				<img class="responsive" src="/img/profile.svg" alt="Accéder à mon profil" />
+				<img class="responsive" src="<?php echo get_avatar_url(get_current_user_id(), array('default' => '/img/profile.svg')); ?>" alt="Accéder à mon profil" />
 			</a>
 		<?php else : ?>
 			<a class="sm-hidden btn-square" href="/abonnement.html">S’abonner</a>
