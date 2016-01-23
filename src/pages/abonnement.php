@@ -56,8 +56,24 @@
 
 	// Receiving a notification from the payment service
 	if (isset($_GET['notification'])) {
-		// TODO (have to be online)
-		file_put_contents('notification.log', print_r($_GET, true)."\n".print_r($_POST, true));
+		unset($_GET['notification']); // Exclude for the hash computation
+		$hash  = signature($_GET);
+
+		$error = !$error && $hash != $_GET['HASH']      ? 'hash'            : $error;
+		$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
+
+		if (!$error) {
+			$expire  = date('Y-m-d', strtotime($subscriptions[substr($_GET['AMOUNT'], 0, -2)]));
+			$user_id = $_GET['CLIENTIDENT'];
+
+			// Update the user's account
+			update_user_meta($user_id, 'alias',  $_GET['ALIAS']);
+			update_user_meta($user_id, 'expire', $expire);
+			update_user_meta($user_id, 'paid',   true);
+
+			// FIXME: what does the email needs to contains?
+			mail($_GET['CLIENTEMAIL'], 'Les Jours — activation de votre compte', 'Votre paiement a bien été reçu, vous êtes maintenant un jouriste. Merci.', 'From: contact@lesjours.fr');
+		}
 	}
 
 	// Receiving a result from the payment service
@@ -72,18 +88,8 @@
 			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 			if (!$error) {
-				// TODO: should be done in the notification
-				// TODO: should send email (in notification)
-				$expire  = date('Y-m-d', strtotime($subscriptions[substr($_GET['AMOUNT'], 0, -2)]));
-				$user_id = $_GET['CLIENTIDENT'];
-
-				// Update the user's account
-				update_user_meta($user_id, 'alias',  $_GET['ALIAS']);
-				update_user_meta($user_id, 'expire', $expire);
-				update_user_meta($user_id, 'paid',   true);
-
-				// TODO: login
-				wp_set_auth_cookie($user_id, true, false);
+				// If the hash is correct and we received an "execcode" 0000 we may log-in the user
+				wp_set_auth_cookie($_GET['CLIENTIDENT'], true, false);
 			}
 
 			// Prefer redirecting to remove informations in the URL
