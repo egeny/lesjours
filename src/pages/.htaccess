@@ -1,7 +1,18 @@
 RewriteEngine On
-RewriteRule ^(_account|abonnement).html$ /$1.php [L]
+RewriteBase /
 
-#RewriteCond %{REQUEST_URI} ^/lesjours/obsessions
-#RewriteCond %{REQUEST_URI} !jpg$
-#RewriteCond %{HTTP_COOKIE} !lucky=boy
-#RewriteRule .* http://%{HTTP_HOST}/lesjours/abonnement.html [R,L]
+# Fix some URLs to hide that they are handled by PHP
+RewriteRule ^(_account|abonnement).html$ $1.php [L]
+RewriteRule ^session$ session.php [L]
+
+# Protect the /obsession folder
+# Still, allows URL ending with jpg
+# Then, the tricky part starts:
+#   Rewrite only if this is the main request (not a sub-request)
+#   The script will check if the user is authorized
+#   If so, it will make a sub-request to the request URI
+#   If not, it will redirect to something else
+RewriteCond %{REQUEST_URI} ^/obsessions
+RewriteCond %{REQUEST_URI} !jpg$
+RewriteCond %{IS_SUBREQ}   false
+RewriteRule .* session.php [L]

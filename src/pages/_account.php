@@ -11,7 +11,7 @@
 	<div class="full-height mh-1m relative">
 		<div id="account">
 		<?php if ($connected) : ?>
-			<a class="btn-round btn-transparent" href="/session.php?out">
+			<a class="btn-round btn-transparent" href="/session?close">
 				<img class="responsive" src="<?php echo get_avatar_url(get_current_user_id(), array('default' => '/img/profile.svg')); ?>" alt="Accéder à mon profil" />
 			</a>
 		<?php else : ?>
