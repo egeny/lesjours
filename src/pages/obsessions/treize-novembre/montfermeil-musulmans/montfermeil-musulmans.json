@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "montfermeil-musulmans",
+
+	"number": 11,
+	"date": "2015-11-29T08:00+01:00",
+
+	"title": "A Montfermeil, le malaise des musulmans",
+	"subtitle": "<strong>L'après des musulmans.</strong> Ce samedi soir, à la mosquée, on échange pour parler des attentats et de la lassitude <q>de devoir se justifier</q>",
+	"intro":   "",
+
+	"tags": ["attentats", "état d'urgence", "islam", "musulmans", "islamophobie"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud" },
+			{ "photo": "Albert Facelly / Divergence-images"}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/moments-filmes",
+		"next":	"episode:treize-novembre/routine-impossible",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}
