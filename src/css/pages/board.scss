@@ -81,7 +81,7 @@ $gutter: grid-gutter("sm");
 		.mosaic .overlay.no-content { padding: 0; }
 
 		.mosaic .snake {
-			border-color: #FFF;
+			border-color: $color-white;
 			top:    $gutter;
 			right:  $gutter;
 			bottom: $gutter;

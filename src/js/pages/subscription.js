@@ -9,6 +9,7 @@ $document.ready(function() {
 
 	function updateProgress() {
 		if (!$form.length) { return; }
+
 		if ($form.is(":valid")) {
 			// Prefer handling this in JS
 			$fieldsets.addClass("valid");
