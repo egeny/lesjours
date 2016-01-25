@@ -324,7 +324,7 @@
 						</label>
 						<p class="summary hidden mv-4g pa-2g style-meta lh-inherit text-upper color-main">Vous avez choisi la formule « <span>Jouriste</span> » à <span>9</span> €/<span>mois<span>. <a class="color-brand" href="#formule">Modifier</a></p>
 						<div class="mt-2g relative text-center">
-							<button class="btn-primary sm-w-4c md-w-5c lg-w-5c" type="submit">
+							<button class="btn-primary btn-brand sm-w-4c md-w-5c lg-w-5c" type="submit">
 								<i class="legend-before sm-hidden">{{ icon("check") }}</i>
 								<span>Accéder au paiement</span>
 							</button>

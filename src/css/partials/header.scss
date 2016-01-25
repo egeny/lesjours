@@ -140,8 +140,6 @@ $gutter: grid-gutter("sm");
 	line-height: 64px;
 	color: $color-brand;
 
-	.btn-round img { border-radius: 50%; }
-
 	.login {
 		display: inline-block;
 		line-height: initial;
@@ -186,7 +184,11 @@ $gutter: grid-gutter("sm");
 		line-height: 1;
 		color: $color-white;
 
-		&::before { @extend .btn-round::before }
+		&::before {
+			@extend .btn-round::before;
+			@extend .btn-brand::before;
+		}
+
 		svg { position: relative; }
 	}
 

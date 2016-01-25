@@ -39,7 +39,10 @@ audio, canvas, iframe, img, picture, svg, video { vertical-align: middle; }
 a {
 	text-decoration: none;
 	color: inherit;
+}
 
+/* Default states for interactive elements */
+a, button {
 	&:hover,
 	&:focus { color: $color-brand; }
 }
