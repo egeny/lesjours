@@ -3,7 +3,8 @@ $document.ready(function() {
 
 	var
 		$container = $("#header-container"),
-		$burger    = $("#burger");
+		$burger    = $("#burger"),
+		timer;
 
 	$window.bind("hashchange", function() {
 		var hash = window.location.hash;
@@ -18,7 +19,7 @@ $document.ready(function() {
 			$burger.removeClass("close");
 
 			// Bonus: Revert the "initial" class so the transition on the burger will work again
-			window.setTimeout(function() {
+			timer = window.setTimeout(function() {
 				$burger.addClass("initial");
 			}, 300);
 		}
@@ -28,6 +29,7 @@ $document.ready(function() {
 	$window.trigger("hashchange");
 
 	$burger.click(function(e) {
+		window.clearTimeout(timer);
 		if ($burger.hasClass("close")) {
 			window.location.hash = "";
 			e.preventDefault();
