@@ -249,10 +249,10 @@
 			left: calc(-1.5em - #{$gutter});
 		}
 
-		> :first-child .legend-before::before {
+		> :first-of-type .legend-before::before {
 			background: currentColor;
 			width:  1px;
-			height: 110px; // Arbitrary
+			height: 120px; // Arbitrary
 
 			content: "";
 			position: absolute;

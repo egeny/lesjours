@@ -191,17 +191,24 @@
 					document.getElementById("redirect").submit();
 				</script>
 			<?php elseif ($state == 'result') : ?>
+				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Devenir jouriste</h2>
 				<?php if ($_GET['result'] == 'success') : ?>
-					<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c relative style-meta-larger"><i class="legend-before color-brand">{{ icon("check") }}</i>Confirmation d’abonnement</h2>
-					<div class="default-content md-ml-1c lg-ml-1c">
-						<p>Félicitations ! Vous êtes désormais jouriste. <a class="text-upper" href="#">Voir mon profil</a></p>
-						<p>Vous pouvez maintenant naviguer sur le site.</p>
-						<a class="btn-primary" href="/">Voir la une</a>
+					<div class="md-ml-1c lg-ml-1c">
+						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("check") }}</i>Confirmation d’abonnement</h3>
+						<div class="default-content">
+							<p class="mt-0">Félicitations ! Vous êtes désormais jouriste. <a class="link-unstyled" href="#">Accéder à mon profil</a>.</p>
+							<p>Vous pouvez maintenant naviguer sur le site.</p>
+						</div>
+					</div>
+					<div class="mh-auto md-w-4c lg-w-4c">
+						<a class="btn-primary btn-brand full-width" href="/">Voir la une</a>
 					</div>
 				<?php else : ?>
-					<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c relative style-meta-larger"><i class="legend-before color-brand">{{ icon("cross") }}</i>Erreur</h2>
-					<div class="default-content md-ml-1c lg-ml-1c">
-						<p><?php echo $_GET['result'] == 'hash' ? 'bad HASH' : $_GET['result'] ?></p>
+					<div class="md-ml-1c lg-ml-1c">
+						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("cross") }}</i>Erreur</h3>
+						<div class="default-content">
+							<p class="mt-0"><?php echo $_GET['result'] == 'hash' ? 'bad HASH' : $_GET['result'] ?></p>
+						</div>
 					</div>
 				<?php endif ?>
 			<?php else : ?>

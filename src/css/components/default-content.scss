@@ -9,7 +9,7 @@ $gutter: grid-gutter("sm");
 	> *            { margin-bottom: $gutter; }
 
 	a {
-		@extend %link;
+		@extend .link;
 		text-transform: inherit;
 	}
 
@@ -66,6 +66,7 @@ $gutter: grid-gutter("sm");
 	}
 
 	ol, ul { @extend .list; }
+	.link-unstyled { @extend .link-unstyled; }
 }
 
 @include media("md") {
