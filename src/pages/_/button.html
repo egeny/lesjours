@@ -1,0 +1,202 @@
+{% set page = { title: "LesJours — Buttons" } %}
+{% extends "partials/_layout.html" %}
+
+{% block content %}
+<style>
+	table { background: aliceblue; }
+</style>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<table class="full-width mb-2g text-center">
+				<tr>
+					<td style="width: 100px">
+						<button type="button">&lt;button&gt;</button>
+					</td>
+					<td>
+						<button class="btn-blank" type="button">.btn-blank</button>
+					</td>
+					<td>
+						<button class="btn" type="button">.btn</button>
+					</td>
+					<td>
+						<button class="btn-round" type="button"><i>{{ icon("check") }}</i></button>
+					</td>
+					<td>
+						<button class="btn-round" type="button"><span style="white-space: nowrap; text-shadow: 0 0 1px #000">.btn-round</span></button>
+					</td>
+					<td>
+						<button class="btn-square" type="button">.btn-square</button>
+					</td>
+					<td>
+						<button class="btn-primary" type="button">.btn-primary</button>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 100px">
+						<a href="#">&lt;a&gt;</a>
+					</td>
+					<td>
+						<a class="btn-blank" href="#">a.btn-blank</a>
+					</td>
+					<td>
+						<a class="btn" href="#">a.btn</a>
+					</td>
+					<td>
+						<a class="btn-round" href="#"><i>{{ icon("check") }}</i></a>
+					</td>
+					<td>
+						<a class="btn-round" href="#"><span style="white-space: nowrap; text-shadow: 0 0 1px #000">a.btn-round</span></a>
+					</td>
+					<td>
+						<a class="btn-square" href="#">a.btn-square</a>
+					</td>
+					<td>
+						<a class="btn-primary" href="#">a.btn-primary</a>
+					</td>
+				</tr>
+			</table>
+
+			<table class="full-width mb-2g text-center">
+				<caption>.btn-reverse</caption>
+				<tr>
+					<td style="width: 100px">
+						<button type="button">&lt;button&gt;</button>
+					</td>
+					<td>
+						<button class="btn-blank btn-reverse" type="button">.btn-blank</button>
+					</td>
+					<td>
+						<button class="btn btn-reverse" type="button">.btn</button>
+					</td>
+					<td>
+						<button class="btn-round btn-reverse" type="button"><i>{{ icon("check") }}</i></button>
+					</td>
+					<td>
+						<button class="btn-round btn-reverse" type="button"><span style="white-space: nowrap; text-shadow: 0 0 1px #000">.btn-round</span></button>
+					</td>
+					<td>
+						<button class="btn-square btn-reverse" type="button">.btn-square</button>
+					</td>
+					<td>
+						<button class="btn-primary btn-reverse" type="button">.btn-primary</button>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 100px">
+						<a href="#">&lt;a&gt;</a>
+					</td>
+					<td>
+						<a class="btn-blank btn-reverse" href="#">a.btn-blank</a>
+					</td>
+					<td>
+						<a class="btn btn-reverse" href="#">a.btn</a>
+					</td>
+					<td>
+						<a class="btn-round btn-reverse" href="#"><i>{{ icon("check") }}</i></a>
+					</td>
+					<td>
+						<a class="btn-round btn-reverse" href="#"><span style="white-space: nowrap; text-shadow: 0 0 1px #000">a.btn-round</span></a>
+					</td>
+					<td>
+						<a class="btn-square btn-reverse" href="#">a.btn-square</a>
+					</td>
+					<td>
+						<a class="btn-primary btn-reverse" href="#">a.btn-primary</a>
+					</td>
+				</tr>
+			</table>
+
+			<table class="full-width mb-2g text-center">
+				<caption>.btn-brand</caption>
+				<tr>
+					<td style="width: 100px">
+						<button type="button">&lt;button&gt;</button>
+					</td>
+					<td>
+						<button class="btn-round btn-brand" type="button"><i>{{ icon("check") }}</i></button>
+					</td>
+					<td>
+						<button class="btn-round btn-brand" type="button"><span style="white-space: nowrap; text-shadow: 0 0 1px #000">.btn-round</span></button>
+					</td>
+					<td>
+						<button class="btn-square btn-brand" type="button">.btn-square</button>
+					</td>
+					<td>
+						<button class="btn-primary btn-brand" type="button">.btn-primary</button>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 100px">
+						<a href="#">&lt;a&gt;</a>
+					</td>
+					<td>
+						<a class="btn-round btn-brand" href="#"><i>{{ icon("check") }}</i></a>
+					</td>
+					<td>
+						<a class="btn-round btn-brand" href="#"><span style="white-space: nowrap; text-shadow: 0 0 1px #000">a.btn-round</span></a>
+					</td>
+					<td>
+						<a class="btn-square btn-brand" href="#">a.btn-square</a>
+					</td>
+					<td>
+						<a class="btn-primary btn-brand" href="#">a.btn-primary</a>
+					</td>
+				</tr>
+			</table>
+
+			<table class="full-width mb-2g text-center">
+				<caption>.btn-brand.btn-reverse</caption>
+				<tr>
+					<td style="width: 100px">
+						<button type="button">&lt;button&gt;</button>
+					</td>
+					<td>
+						<button class="btn-square btn-brand btn-reverse" type="button">.btn-square</button>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 100px">
+						<a href="#">&lt;a&gt;</a>
+					</td>
+					<td>
+						<a class="btn-square btn-brand btn-reverse" href="#">a.btn-square</a>
+					</td>
+				</tr>
+			</table>
+
+			<table class="full-width mb-2g text-center">
+				<caption>.btn-white</caption>
+				<tr>
+					<td style="width: 100px">
+						<button type="button">&lt;button&gt;</button>
+					</td>
+					<td>
+						<button class="btn-round btn-white" type="button"><i>{{ icon("check") }}</i></button>
+					</td>
+					<td>
+						<button class="btn-round btn-white" type="button"><span style="white-space: nowrap; text-shadow: 0 0 1px #000">.btn-round</span></button>
+					</td>
+					<td>
+						<button class="btn-primary btn-white" type="button">.btn-primary</button>
+					</td>
+				</tr>
+				<tr>
+					<td style="width: 100px">
+						<a href="#">&lt;a&gt;</a>
+					</td>
+					<td>
+						<a class="btn-round btn-white" href="#"><i>{{ icon("check") }}</i></a>
+					</td>
+					<td>
+						<a class="btn-round btn-white" href="#"><span style="white-space: nowrap; text-shadow: 0 0 1px #000">a.btn-round</span></a>
+					</td>
+					<td>
+						<a class="btn-primary btn-white" href="#">a.btn-primary</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}
