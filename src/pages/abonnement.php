@@ -192,15 +192,15 @@
 				</script>
 			<?php elseif ($state == 'result') : ?>
 				<?php if ($_GET['result'] == 'success') : ?>
-					<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><i class="legend-before">{{ icon("check") }}</i>Confirmation d’abonnement</h2>
-					<div class="md-ml-1c lg-ml-1c">
+					<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c relative style-meta-larger"><i class="legend-before color-brand">{{ icon("check") }}</i>Confirmation d’abonnement</h2>
+					<div class="default-content md-ml-1c lg-ml-1c">
 						<p>Félicitations ! Vous êtes désormais jouriste. <a class="text-upper" href="#">Voir mon profil</a></p>
 						<p>Vous pouvez maintenant naviguer sur le site.</p>
 						<a class="btn-primary" href="/">Voir la une</a>
 					</div>
 				<?php else : ?>
-					<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><i class="legend-before">{{ icon("check") }}</i>Erreur</h2>
-					<div class="md-ml-1c lg-ml-1c">
+					<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c relative style-meta-larger"><i class="legend-before color-brand">{{ icon("cross") }}</i>Erreur</h2>
+					<div class="default-content md-ml-1c lg-ml-1c">
 						<p><?php echo $_GET['result'] == 'hash' ? 'bad HASH' : $_GET['result'] ?></p>
 					</div>
 				<?php endif ?>

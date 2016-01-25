@@ -1,5 +1,7 @@
 /* @group Subscription */
 .subscription {
+	.default-content { padding-left: 34px; }
+
 	fieldset { counter-increment: fieldset; }
 
 	legend::before,
@@ -23,6 +25,7 @@
 		line-height: 1.5;
 
 		text-align: center;
+		vertical-align: middle;
 	}
 
 	// Prefer manually handling "valid" states for fieldset
@@ -52,8 +55,9 @@
 		pointer-events: none;
 
 		svg {
+			width:  14px;
+			height: 14px;
 			margin-top: -4px;
-			font-size: 10px;
 		}
 	}
 }
@@ -231,6 +235,7 @@
 			url("img/back/subscription.jpg") center/cover;
 		color: $color-white;
 
+		.default-content { padding-left: 0; }
 
 		legend::before,
 		.legend-before {
@@ -240,6 +245,17 @@
 			position: absolute;
 			top: 50%;
 			left: calc(-1.5em - #{$gutter});
+		}
+
+		> :first-child .legend-before::before {
+			background: currentColor;
+			width:  1px;
+			height: 110px; // Arbitrary
+
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			left:   50%;
 		}
 
 		.gift,
