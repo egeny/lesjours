@@ -539,6 +539,13 @@ gulp.task('build:js', ['optimize:js'], function() {
 		.pipe(livereload())
 	);
 
+	streams.add(gulp
+		.src(path.join(paths.js.input, 'pages', '*.js'))
+		.pipe(header(banner, context))
+		.pipe(gulp.dest(path.join(paths.js.output, 'pages')))
+		.pipe(livereload())
+	);
+
 	return streams;
 });
 
