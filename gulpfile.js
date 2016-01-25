@@ -463,6 +463,7 @@ function html(e) {
 		.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
 		.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
 		.pipe(replace('href="/"',                 'href="' + root + '/"'))
+		.pipe(replace('Location: /',          'Location: ' + root + '/'))
 		.pipe(gulp.dest(paths.dist))
 		.pipe(livereload());
 }
