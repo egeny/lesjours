@@ -488,7 +488,7 @@ gulp.task('build:css', function() {
 		.pipe(header(banner, context))
 		.pipe(gulp.dest(paths.css.output))
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(minify())
+		.pipe(minify({ mergeIdents: false }))
 		.pipe(gulp.dest(paths.css.output))
 		.pipe(livereload());
 });
