@@ -1,28 +1,19 @@
 {
 	"template": "home",
 
-	"master": "episode:good-com-bad-cop/com-contre-com",
+	"master": "episode:treize-novembre/legitime-defense-revient",
 
 	"articles": [
-		"episode:l-empire/ep5-jour-de-deug",
+		"episode:l-empire/ep1-guignols",
 		"episode:les-annees-college/ingenieur-pourquoi-pas",
-		"episode:good-com-bad-cop/papou-est-dans-le-petrole"
+		"episode:good-com-bad-cop/la-pantoufle-de-vert"
 	],
 
 	"master2": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 
 	"articles2": [
 		"episode:treize-novembre/un-perimetre-de-desolation",
-		"episode:treize-novembre/l-empreinte-de-la-peur",
-		"episode:treize-novembre/content-de-vous-avoir-revu",
-		"episode:treize-novembre/a-l-intention-des-victimes"
-	],
-
-	"articles3": [
-		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
-		"episode:treize-novembre/fiere-de-la-france",
-		"episode:treize-novembre/pratique-fondamentaliste",
-		"episode:treize-novembre/foi-sous-les-bombes"
+		"episode:treize-novembre/l-empreinte-de-la-peur"
 	],
 
 	"obsessions": [
