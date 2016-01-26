@@ -68,13 +68,21 @@
 			"img":      "img/tdecormon.jpg",
 			"alt":      "",
 			"title":    "Tiphaine Decormon",
-			"subtitle": "La conseillère d'orientation"
+			"subtitle": "La conseillère d'orientation",
+			"minor": true
 		},
 		{
 			"href":     "#",
 			"img":      "img/delphine.jpg",
 			"alt":      "",
 			"title":    "Delphine",
+			"subtitle": "14 ans, élève en 3e&nbsp;B"
+		},
+		{
+			"href":     "#",
+			"img":      "img/delphine.jpg",
+			"alt":      "",
+			"title":    "Spewell",
 			"subtitle": "14 ans, élève en 3e&nbsp;B"
 		}
 	],
