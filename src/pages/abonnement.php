@@ -293,7 +293,7 @@
 						</div>
 						<div class="field">
 							<label for="zip">Code postal</label>
-							<input id="zip" class="check md-white-check lg-white-check" name="zip" type="text" minlength="5" maxlength="5" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
+							<input id="zip" class="check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
 							<?php if ($error['zip']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
