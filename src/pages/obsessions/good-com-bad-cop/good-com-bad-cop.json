@@ -70,7 +70,7 @@
 	"soundtrack": [
 		{
 			"id": "ambiances",
-			"title": "Sons",
+			"title": "Téléchargements",
 			"icon": "wave",
 			"items": [
 				{
@@ -90,7 +90,7 @@
 				{
 					"href": "le-charbon-l-ennemi-utile/audio/pouyanne.m4a",
 					"title": "« Je suis sorti du charbon »",
-					"desc": "Patrick Pouyanné répond à Jean-Marc Jancovici lors du World Efficiency",
+					"desc": "Patrick Pouyanné répond à Jean-Marc Jancovici lors du World Efficiency.",
 					"date": "2015-10-15",
 					"meta": "Nicolas Cori"
 				}
