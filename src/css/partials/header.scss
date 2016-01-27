@@ -140,16 +140,16 @@ $gutter: grid-gutter("sm");
 	line-height: 64px;
 	color: $color-brand;
 
+	svg {
+		width:  initial;
+		height: initial;
+	}
+
 	.login {
 		display: inline-block;
 		line-height: initial;
 
 		&:focus .btn-square { border-color: inherit; }
-
-		svg {
-			width:  initial;
-			height: initial;
-		}
 	}
 }
 

@@ -71,6 +71,7 @@
 		background: $color-white;
 
 		width: 254px;
+		min-height: 230px;
 		border: 1px solid $color-brand;
 
 		display: inline-flex;
@@ -249,7 +250,7 @@
 			left: calc(-1.5em - #{$gutter});
 		}
 
-		> :first-of-type .legend-before::before {
+		.style-meta-large .legend-before::before {
 			background: currentColor;
 			width:  1px;
 			height: 120px; // Arbitrary
