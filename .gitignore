@@ -2,6 +2,9 @@ dist/
 src/img/ui.svg
 **/*.min.js
 
+scripts/*.csv
+scripts/*.sql
+
 # Bower
 bower_components/
 
