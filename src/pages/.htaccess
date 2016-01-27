@@ -2,7 +2,7 @@ RewriteEngine On
 RewriteBase /
 
 # Fix some URLs to hide that they are handled by PHP
-RewriteRule ^(_account|abonnement).html$ $1.php [L]
+RewriteRule ^(_account|abonnement|compte).html$ $1.php [L]
 RewriteRule ^session$ session.php [L]
 
 # Disallow direct access on PHP files
