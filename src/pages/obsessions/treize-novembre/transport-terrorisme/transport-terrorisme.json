@@ -3,7 +3,7 @@
 
 	"href": "transport-terrorisme",
 
-	"number": 17,
+	"number": 15,
 	"date": "2015-12-10T10:00+01:00",
 
 	"title": "Train de mesures sécuritaires sur les rails",
@@ -14,7 +14,7 @@
 
 	"rel": {
 		"authors": [
-			{ "text":  "author:sylive-regensburg" },
+			{ "text":  "author:camille-polloni" },
 			{ "photo": "author:sebastien-calvet" }
 		],
 

@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "impossible-routine",
+
+	"number": 12,
+	"date": "2015-12-01T13:50+01:00",
+
+	"title": "La routine impossible ",
+	"intro": "<strong>Journal de bord du XIe.</strong> Le quotidien est gangréné par de nouveaux réflexes, plus ou moins assumés. Comme mettre quotidiennement des baskets pour pouvoir courir, au cas où.",
+	"lead":  "",
+
+	"tags": ["attentats", "Bataclan", "soutien"],
+
+	"rel": {
+		"authors": [
+			{ "text": "author:charlotte-rotman" },
+			{ "photo": ["Michel Slomka/Hans Lucas", "author:charlotte-rotman"]}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/montfermeil-musulmans",
+		"next":  "episode:treize-novembre/urvoas-urgence",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}

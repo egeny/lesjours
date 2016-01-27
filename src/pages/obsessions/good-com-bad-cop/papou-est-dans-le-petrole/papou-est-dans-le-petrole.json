@@ -4,7 +4,7 @@
 	"href": "papou-est-dans-le-petrole",
 
 	"number": 4,
-	"date": "2015-12-23T10:00+01:00",
+	"date": "2015-12-05T10:00+01:00",
 
 	"title": "Papou est dans le pétrole",
 	"intro": "À la tête de Total depuis décembre 2014, Patrick Pouyanné s’affiche comme un homme sympa et ouvert aux questions climatiques. Mais l’intérêt de son entreprise passe avant tout.",
@@ -18,9 +18,9 @@
 			{ "photo": "author:pierre-morel" }
 		],
 
-		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"first": "episode:good-com-bad-cop/la-girouette-du-solaire",
 		"prev":  "episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
 		"next":  "episode:good-com-bad-cop/la-pantoufle-de-vert",
-		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
+		"last":  "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent"
 	}
 }

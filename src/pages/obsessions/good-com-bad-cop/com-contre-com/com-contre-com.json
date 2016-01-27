@@ -4,7 +4,7 @@
 	"href": "com-contre-com",
 
 	"number": 6,
-	"date": "2016-01-12T13:50+01:00",
+	"date": "2015-12-10T10:00+01:00",
 
 	"title": "Com contre com",
 	"intro": "Pendant la COP21, entreprises et ONG ont cherché à séduire l’opinion publique<br/>en diffusant des messages simples mais elles ont évité les débats qui pourraient les mettre en porte-à-faux.",
@@ -18,8 +18,9 @@
 			{ "photo": "author:pierre-morel" }
 		],
 
-		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"first": "episode:good-com-bad-cop/la-girouette-du-solaire",
 		"prev":  "episode:good-com-bad-cop/la-pantoufle-de-vert",
-		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
+		"next": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent"
+		"last":  "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent"
 	}
 }
