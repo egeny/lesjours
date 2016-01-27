@@ -1,12 +1,12 @@
 {
 	"template": "home",
 
-	"master": "episode:treize-novembre/legitime-defense-revient",
+	"master": "episode:treize-novembre/urvoas-taubira",
 
 	"articles": [
-		"episode:l-empire/ep1-guignols",
-		"episode:les-annees-college/ingenieur-pourquoi-pas",
-		"episode:good-com-bad-cop/la-pantoufle-de-vert"
+		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"episode:treize-novembre/urvoas-urgence",
+		"episode:treize-novembre/etat-urgence-mort-lente"
 	],
 
 	"master2": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
