@@ -27,8 +27,9 @@
 	<div class="full-height mh-1m relative">
 		<div id="account">
 		<?php if ($connected) : ?>
-			<a class="btn-round" href="/session?close">
-				<img class="responsive full-height" src="<?php echo $avatar; ?>" alt="Accéder à mon profil" />
+			<a class="btn-round" href="/session?close">{{ icon("logout", "Se déconnecter") }}</a>
+			<a class="btn-round" href="/compte.html">
+				<img class="responsive full-height" src="<?php echo $avatar; ?>" alt="Accéder à mon compte" />
 			</a>
 		<?php else : ?>
 			<a class="btn-square sm-hidden" href="/abonnement.html">S’abonner</a>
