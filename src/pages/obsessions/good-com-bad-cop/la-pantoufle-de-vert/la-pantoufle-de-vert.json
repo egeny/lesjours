@@ -4,7 +4,7 @@
 	"href": "la-pantoufle-de-vert",
 
 	"number": 5,
-	"date": "2015-12-30T13:50+01:00",
+	"date": "2015-12-07T10:00+01:00",
 
 	"title": "The Shift Project, la pantoufle de vert des entreprises",
 	"intro": "Ce think tank veut lutter contre le réchauffement climatique en « décarbonant » l’économie. Financé par les entreprises, il est surtout un outil bien pratique pour communiquer sur leurs engagements climatiques.",
@@ -18,9 +18,9 @@
 			{ "photo": "author:pierre-morel" }
 		],
 
-		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"first": "episode:good-com-bad-cop/la-girouette-du-solaire",
 		"prev":  "episode:good-com-bad-cop/papou-est-dans-le-petrole",
 		"next": "episode:good-com-bad-cop/com-contre-com",
-		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
+		"last":  "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent"
 	}
 }

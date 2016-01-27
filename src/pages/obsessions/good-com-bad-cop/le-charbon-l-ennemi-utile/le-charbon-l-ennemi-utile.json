@@ -4,7 +4,7 @@
 	"href": "le-charbon-l-ennemi-utile",
 
 	"number": 2,
-	"date": "2015-12-23T10:00+01:00",
+	"date": "2015-12-03T10:00+01:00",
 
 	"title": "Le charbon, l’ennemi utile",
 	"intro": "La plupart des entreprises françaises disent se désengager de l’énergie fossile la plus polluante. Des promesses à relativiser, qui leur servent surtout à apparaître irréprochables le temps de la COP.",
@@ -18,9 +18,9 @@
 			{ "photo": "author:pierre-morel" }
 		],
 
-		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
-		"prev":  "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
+		"first": "episode:good-com-bad-cop/la-girouette-du-solaire",
+		"prev":  "episode:good-com-bad-cop/la-girouette-du-solaire",
 		"next":  "episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
-		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
+		"last":  "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent"
 	}
 }
