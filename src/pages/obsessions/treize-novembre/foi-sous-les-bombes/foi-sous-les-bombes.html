@@ -1,4 +1,4 @@
-<p><span class="lettrine">V</span>incent<sup><a href="#note-1">1</a></sup> a toujours été pratiquant, de près ou de loin. <q>Ma mère nous emmenait à la messe le dimanche</q>, se souvient-il. <q>C’est elle qui m’a fait croire en Dieu. Elle interprétait les choses comme des signes. Au Liban, un bombardement était tombé juste à côté de nous. Ça donne la foi en une puissance au-dessus.</q> Enfant, il allait au catéchisme, il a été enfant de chœur et fait sa première communion. Difficile à imaginer aujourd’hui, face à ce colosse barbu et calme, archétype du musulman très pieux.</p>
+<p><span class="lettrine">V</span><a href="#note-1">incent</a> a toujours été pratiquant, de près ou de loin. <q>Ma mère nous emmenait à la messe le dimanche</q>, se souvient-il. <q>C’est elle qui m’a fait croire en Dieu. Elle interprétait les choses comme des signes. Au Liban, un bombardement était tombé juste à côté de nous. Ça donne la foi en une puissance au-dessus.</q> Enfant, il allait au catéchisme, il a été enfant de chœur et fait sa première communion. Difficile à imaginer aujourd’hui, face à ce colosse barbu et calme, archétype du musulman très pieux.</p>
 
 <p>Né à Beyrouth d’une mère bretonne d’origine martiniquaise et d’un père issu d’une famille de <q>chrétiens orthodoxes</q> qui lui donnent un prénom français, <a href="#" data-mini="1">Vincent</a>  a vécu au Liban jusqu’à l’âge de 5 ans. Arrivée en France, la famille déménage de cité en cité, à Creil (Oise), près de Grenoble (Isère), puis en Bretagne, à Saint-Brieuc et Rennes. Les parents divorcent quand il est encore enfant. Son père, coiffeur, vit aujourd'hui de nouveau au Liban. <q>J’y retournais les étés.</q> Il n’y a plus mis les pieds depuis 16 ans.</p>
 
@@ -28,9 +28,11 @@
 
 <p>Sa femme <q>n’était pas trop d’accord</q> pour qu’il raconte sa vie à un journal. <q>Elle a peur de la police, de la justice et des journalistes.</q> Il n’a pas dit à sa mère qu’il se retrouvait assigné à résidence, <q>elle est fragile, je la ménage</q>. Seul l’un de ses frères est au courant.</p>
 
-<div id="notes" class="notes">
-	<h3 class="style-meta">Notes</h3>
-	<ol>
-		<li id="note-1">Le prénom a été changé</li>
-	</ol>
-</div>
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Vincent",
+caption: "Son prénom a été modifié."
+})
+}}

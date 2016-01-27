@@ -1,4 +1,6 @@
-<p><span class="lettrine">D</span>éjà un mois que <a href="#" data-mini="4">Vincent</a><sup><a href="#note-1">1</a></sup>est assigné à résidence. S’il avait été privé de liberté par une décision de justice, l’accusation aurait dû prouver sa culpabilité. Pas là. L’état d’urgence a sa logique propre, extra-judiciaire. Puisque le ministère de l’Intérieur l’a déclaré potentiellement dangereux sur <a href="/obsessions/treize-novembre/pratique-fondamentaliste" target="_blank">la foi d’une note blanche des services de renseignement</a>, il sera traité comme un coupable.</p>
+<p><span class="lettrine">D</span>éjà un mois que <a href="#note-1">Vincent</a>est assigné à résidence. S’il avait été privé de liberté par une décision de justice, l’accusation aurait dû prouver sa culpabilité. Pas là. L’état d’urgence a sa logique propre, extra-judiciaire. Puisque le ministère de l’Intérieur l’a déclaré potentiellement dangereux sur <a href="/obsessions/treize-novembre/pratique-fondamentaliste" target="_blank">la foi d’une note blanche des services de renseignement</a>, il sera traité comme un coupable.</p>
+
+<p>Certes, des voies de recours existent. Lorsque <a href="#" data-mini="1">Vincent</a> tente – sans succès – de faire lever son assignation à résidence par le tribunal administratif, le requérant, c’est lui. Pourtant, il parle de <q>[son] procès</q>. Une petite phrase, l’air de rien : <q>Ma femme me disait de raser ma barbe avant d’aller à mon procès.</q> Elle voulait éviter qu’il ait l’air trop musulman. Vincent n’a pas suivi son conseil. De toute façon, il n’imaginait pas <q>qu’un juge irait à l’encontre d’une décision du ministère</q>. Pour lui, les choses sont claires : c’est l’exécutif qui commande. Vu le contexte, difficile de lui donner tort sur ce point. Au moment de la publication de cet article, sur les 103 référés déposés depuis le début de l’état d’urgence, les tribunaux administratifs n’en ont suspendu que cinq, selon <a href="#" data-mini="2">le décompte établi</a> par la commission parlementaire de contrôle de l'état d'urgence, sur la base de chiffres du ministère de l'Intérieur.</a></p>
 
 <aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
 <a class="link-unstyled" href="#" />
@@ -8,7 +10,13 @@
 </a>
 </aside>
 
-<p>Certes, des voies de recours existent. Lorsque Vincent tente – sans succès – de faire lever son assignation à résidence par le tribunal administratif, le requérant, c’est lui. Pourtant, il parle de <q>[son] procès</q>. Une petite phrase, l’air de rien : <q>Ma femme me disait de raser ma barbe avant d’aller à mon procès.</q> Elle voulait éviter qu’il ait l’air trop musulman. Vincent n’a pas suivi son conseil. De toute façon, il n’imaginait pas <q>qu’un juge irait à l’encontre d’une décision du ministère</q>. Pour lui, les choses sont claires : c’est l’exécutif qui commande. Vu le contexte, difficile de lui donner tort sur ce point. Au moment de la publication de cet article, sur les 103 référés déposés depuis le début de l’état d’urgence, les tribunaux administratifs n’en ont suspendu que cinq, selon <a href="http://www2.assemblee-nationale.fr/14/commissions-permanentes/commission-des-lois/controle-parlementaire-de-l-etat-d-urgence/controle-parlementaire-de-l-etat-d-urgence/donnees-de-synthese/mesures-administratives-prises-en-application-de-la-loi-n-55-385-du-3-avril-1955-depuis-le-14-novembre-2015-au-28-decembre-2015" target="_blank">le décompte établi par la commission parlementaire de contrôle de l'état d'urgence, sur la base de chiffres du ministère de l'Intérieur.</a></p>
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www2.assemblee-nationale.fr/14/commissions-permanentes/commission-des-lois/controle-parlementaire-de-l-etat-d-urgence/controle-parlementaire-de-l-etat-d-urgence/%28block%29/27350/"target="_blank">
+<span class="image"><img class="responsive" src="img/logo-assemblee.jpg" alt="" /></span>
+<p class="title">Le contrôle parlementaire de l'état d'urgence</p>
+<p class="subtitle">A consulter sur le site de l'Assemblée nationale</p>
+</a>
+</aside>
 
 <h3>Éléments contradictoires</h3>
 
@@ -37,10 +45,11 @@
 
 <p>A l’hôtel où il travaille, Vincent lit encore <i>Le Parisien</i>, <i>Libération</i>, Le Figaro</i>. Mais rien à voir avec <q>avant</q>, quand il lisait tout ce qui lui passait sous la main et des bouquins sur l’actualité en prime. Aujourd'hui, sa vision des choses est davantage façonnée par ses discussions avec les gens de son quartier et ses lectures sur internet. On croit apercevoir, dans son discours, des traces de la « contre-information » complotiste type Soral ou Panamza. On n’est pas d’accord avec lui. On lui dit. Il sourit, pas étonné. Et poursuit. Il sait que ses opinions jouent contre lui, mais il assume.</p>
 
-
-<div id="notes" class="notes">
-	<h3 class="style-meta">Notes</h3>
-	<ol>
-		<li id="note-1">Le prénom a été changé.</li>
-	</ol>
-</div>
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Vincent",
+caption: "Son prénom a été modifié."
+})
+}}
