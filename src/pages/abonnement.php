@@ -10,6 +10,8 @@
 <?php
 	require('wp.php');
 
+	$connected = is_user_logged_in();
+
 	$data  = $_POST;
 	$error = null;
 
@@ -70,6 +72,7 @@
 			update_user_meta($user_id, 'alias',  $_GET['ALIAS']);
 			update_user_meta($user_id, 'expire', $expire);
 			update_user_meta($user_id, 'paid',   true);
+			// TODO: add subscription date
 
 			// FIXME: what does the email needs to contains?
 			mail($_GET['CLIENTEMAIL'], 'Les Jours — activation de votre compte', 'Votre paiement a bien été reçu, vous êtes maintenant un jouriste. Merci.', 'From: contact@lesjours.fr');
@@ -191,7 +194,7 @@
 					document.getElementById("redirect").submit();
 				</script>
 			<?php elseif ($state == 'result') : ?>
-				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Devenir jouriste</h2>
+				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if ($connected) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
 				<?php if ($_GET['result'] == 'success') : ?>
 					<div class="md-ml-1c lg-ml-1c">
 						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("check") }}</i>Confirmation d’abonnement</h3>
@@ -216,7 +219,7 @@
 					// FIXME: errors are disabled for now
 					$error = null;
 				?>
-				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Devenir jouriste</h2>
+				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if ($connected) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
 				<form method="post" class="mb-2g md-w-6c md-ml-1c relative">
 					<fieldset id="formule" class="mb-4g">
 						<legend class="style-meta-large relative">Choisir ma formule</legend>
@@ -226,7 +229,6 @@
 									<span class="price">9<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois</span></span></span>
 									<span class="name">Jouriste</span>
 									<span class="desc">Sans engagement de durée</span>
-									<small>2 profils par abonnement</small>
 									<input class="sr" type="radio" name="plan" value="jouriste" required <?php if ($data['plan'] == 'jouriste') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
@@ -236,7 +238,6 @@
 									<span class="price">90<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par an<sup>*</sup></span></span></span>
 									<span class="name">Jouriste cash</span>
 									<span class="desc">Sans engagement de durée</span>
-									<small>2 profils par abonnement</small>
 									<input class="sr" type="radio" name="plan" value="jouriste-cash" required <?php if ($data['plan'] == 'jouriste-cash') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
@@ -263,6 +264,7 @@
 						</ul>
 						<!-- TODO: error message -->
 					</fieldset>
+					<?php if (!$connected) : ?>
 					<fieldset id="coordonnees" class="lg-w-6c">
 						<legend class="mb-2g style-meta-large relative">Mes coordonnées</legend>
 						<div class="field">
@@ -302,6 +304,7 @@
 							<?php if ($error['city']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
 						</div>
 					</fieldset>
+					<?php endif ?>
 					<fieldset id="mode-de-paiement">
 						<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
 						<div class="gift style-meta lh-inherit color-dark">
