@@ -5,6 +5,10 @@ RewriteBase /
 RewriteRule ^(_account|abonnement).html$ $1.php [L]
 RewriteRule ^session$ session.php [L]
 
+# Disallow direct access on PHP files
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule php$ - [R=404,L]
+
 # Protect the /obsession folder
 # Still, allows URL ending with jpg
 # Then, the tricky part starts:
