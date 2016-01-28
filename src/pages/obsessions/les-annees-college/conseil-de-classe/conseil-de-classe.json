@@ -3,8 +3,8 @@
 
 	"href": "conseil-de-classe",
 
-	"number": 7,
-	"date": "2015-12-08T10:00+01:00",
+	"number": 6,
+	"date": "2015-12-04T10:00+01:00",
 
 	"title": "Le conseil de classe",
 	"intro": "Début décembre se tient le conseil de classe du premier trimestre des 3e B. Un exercice très codifié.",
@@ -19,8 +19,8 @@
 		],
 
 		"first": "episode:les-annees-college/retour-au-college",
-		"prev":  "episode:les-annees-college/madame-front-national",
-		"next":  "episode:les-annees-college/parents-prof",
+		"prev":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde",
+		"next":  "episode:les-annees-college/madame-front-national",
 		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
 	}
 }

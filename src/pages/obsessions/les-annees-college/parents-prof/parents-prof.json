@@ -19,8 +19,8 @@
 		],
 
 		"first": "episode:les-annees-college/retour-au-college",
-		"prev":  "episode:les-annees-college/conseil-de-classe",
-		"next":  "episode:les-annees-college/parents-prof",
+		"prev":  "episode:les-annees-college/madame-front-national",
+		"next":  "episode:les-annees-college/ingenieur-pourquoi-pas",
 		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
 	}
 }

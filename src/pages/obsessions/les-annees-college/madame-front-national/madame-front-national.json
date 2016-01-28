@@ -3,7 +3,7 @@
 
 	"href": "madame-front-national",
 
-	"number": 6,
+	"number": 7,
 	"date": "2015-12-07T10:00+01:00",
 
 	"title": "« Madame, le Front national,<br/>c’est le parti où il y a Marine Le Pen&nbsp;? »",
@@ -19,8 +19,8 @@
 		],
 
 		"first": "episode:les-annees-college/retour-au-college",
-		"prev":  "episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde",
-		"next":  "episode:les-annees-college/conseil-de-classe",
+		"prev":  "episode:les-annees-college/conseil-de-classe",
+		"next":  "episode:les-annees-college/parents-prof",
 		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
 	}
 }
