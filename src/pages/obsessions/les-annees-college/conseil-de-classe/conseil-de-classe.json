@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "conseil-de-classe",
+
+	"number": 7,
+	"date": "2015-12-08T10:00+01:00",
+
+	"title": "Le conseil de classe",
+	"intro": "Début décembre se tient le conseil de classe du premier trimestre des 3e B. Un exercice très codifié.",
+	"lead":  "",
+
+	"tags": ["Education", "Collège", "Paris", "Mixité", "Orientation"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/madame-front-national",
+		"next":  "episode:les-annees-college/parents-prof",
+		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
+	}
+}
