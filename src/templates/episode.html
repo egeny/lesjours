@@ -16,12 +16,12 @@
 					<time class="mb-2g style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
 					<address class="mb-1g">
 						<ul class="list list-inline style-meta">
-						{% for group in episode.rel.authors %}
+						{% for group in episode.rel.authors|expand %}
 							{% for kind, authors in group %}
 								{% set kind = "Texte"  if kind == "text"  else kind %}
 								{% set kind = "Photos" if kind == "photo" else kind %}
 								{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
-								<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+								<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
 							{% endfor %}
 						{% endfor %}
 						</ul>
