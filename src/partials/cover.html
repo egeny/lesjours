@@ -3,6 +3,7 @@
 
 	Placeholders:
 		- cover.tag (optional, default to div)
+		- cover.id (optional)
 		- cover.class (optional)
 		- cover.img
 		- cover.href
@@ -18,7 +19,7 @@
 #}
 {% from "partials/_macro.html" import authors %}
 {% set class = "bg-center " + cover.class if not r/bg-(?:left|center|right)/g|test(cover.class) else cover.class %}
-<{{ cover.tag|default("div") }} class="cover {{ class }}" style="background-image: url({{ cover.img }})">
+<{{ cover.tag|default("div") }} {% if cover.id %}id="{{ cover.id }}" {% endif %}class="cover {{ class }}" style="background-image: url({{ cover.img }})">
 	{% if "small"|in(cover.class|split(" ")) %}
 		<a href="{{ cover.href }}" class="overlay">
 			<div class="overlay pattern"></div>
