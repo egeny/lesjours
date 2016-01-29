@@ -253,7 +253,7 @@
 								</label>
 							</li>
 							<li class="ma-1g">
-								<a href="#">
+								<a href="mailto:abonnement@lesjours.fr">
 									<img width="202" height="39" src="img/jouristes.svg" alt="" />
 									<span class="name">Jouristes groupés</span>
 									<span class="desc">Tarifs sur mesure</span>
