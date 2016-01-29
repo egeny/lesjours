@@ -221,6 +221,10 @@ env.addFilter('removeBR', function(input) {
 	return (input || '').replace(/<br\/?>/g, ' ');
 });
 
+env.addFilter('slice', function(array, begin, end) {
+	return array.slice(begin, end);
+});
+
 env.addFilter('split', function(input, separator) {
 	return (input || "").split(separator);
 });
