@@ -5,6 +5,9 @@ $document.ready(function() {
 		$carousel = $(".carousel"),
 		$covers   = $carousel.find(".cover");
 
+	// Don't bother if there is no carousel (avoid an error with Hammer)
+	if (!$carousel.length) { return; }
+
 	function expand(i) {
 		var $cover = $covers.eq(i);
 
