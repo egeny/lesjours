@@ -524,7 +524,7 @@ gulp.task('optimize:js', function() {
 
 gulp.task('build:js', ['optimize:js'], function() {
 	var
-		files = ['libs/modernizr', 'libs/svg4everybody', 'libs/svg4everybody.init', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
+		files = ['libs/modernizr', 'libs/svg4everybody', 'libs/svg4everybody.init', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*', 'libs/analytics'],
 		streams = merge();
 
 	streams.add(gulp
