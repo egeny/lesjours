@@ -15,11 +15,11 @@
 	"rel": {
 		"authors": [
 			{ "text": "author:camille-polloni" },
-			{ "photo": "author:sebastien-calvet"}
+			{ "photo": "Marc Chaumeil / Divergences-images"}
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/retour-vie-normale",
+		"prev":  "episode:treize-novembre/impossible-routine",
 		"next":  "episode:treize-novembre/pratique-fondamentaliste",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}

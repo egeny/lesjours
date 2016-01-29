@@ -3,8 +3,8 @@
 
 	"href": "la-cop-passe-les-entreprises-carburent",
 
-	"number": 1,
-	"date": "2015-12-23T13:50+01:00",
+	"number": 7,
+	"date": "2015-12-12T10:00+01:00",
 
 	"title": "La COP passe, les entreprises carburent",
 	"intro": "Très présentes à la conférence de Paris, les multinationales ont adopté une communication subtile. Ce qui leur a permis de «greenwasher» en toute tranquillité.",
@@ -18,8 +18,8 @@
 			{ "photo": "author:pierre-morel" }
 		],
 
-		"first": "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent",
-		"next":  "episode:good-com-bad-cop/le-charbon-l-ennemi-utile",
-		"last":  "episode:good-com-bad-cop/la-pantoufle-de-vert"
+		"first": "episode:good-com-bad-cop/la-girouette-du-solaire",
+		"prev":  "episode:good-com-bad-cop/com-contre-com",
+		"last":  "episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent"
 	}
 }

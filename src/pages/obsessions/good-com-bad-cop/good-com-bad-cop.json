@@ -10,11 +10,12 @@
 	"desc": "<p>Les multinationales qui polluent sont mises en cause pour leur rôle dans le dérèglement climatique. Elles aimeraient nous faire croire qu’elles ont la solution pour diminuer les émissions de CO2 tandis que les ONG s’attachent à enrayer cette belle communication.</p>",
 
 	"episodes": [
-		"episode:good-com-bad-cop/com-contre-com",
-		"episode:good-com-bad-cop/la-pantoufle-de-vert",
-		"episode:good-com-bad-cop/papou-est-dans-le-petrole",
-		"episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
+		"episode:good-com-bad-cop/la-girouette-du-solaire",
 		"episode:good-com-bad-cop/le-charbon-l-ennemi-utile",
+		"episode:good-com-bad-cop/houille-les-ecolos-passent-a-la-banque",
+		"episode:good-com-bad-cop/papou-est-dans-le-petrole",
+		"episode:good-com-bad-cop/la-pantoufle-de-vert",
+		"episode:good-com-bad-cop/com-contre-com",
 		"episode:good-com-bad-cop/la-cop-passe-les-entreprises-carburent"
 	],
 
@@ -32,7 +33,7 @@
 			"img":      "img/pouyanne.jpg",
 			"alt":      "",
 			"title":    "Patrick Pouyanné",
-			"subtitle": "52 ans, directeur général de Total"
+			"subtitle": "52 ans, PDG de Total"
 		},
 		{
 			"href":     "houille-les-ecolos-passent-a-la-banque",
@@ -70,7 +71,7 @@
 	"soundtrack": [
 		{
 			"id": "ambiances",
-			"title": "Sons",
+			"title": "Téléchargements",
 			"icon": "wave",
 			"items": [
 				{
@@ -90,7 +91,7 @@
 				{
 					"href": "le-charbon-l-ennemi-utile/audio/pouyanne.m4a",
 					"title": "« Je suis sorti du charbon »",
-					"desc": "Patrick Pouyanné répond à Jean-Marc Jancovici lors du World Efficiency",
+					"desc": "Patrick Pouyanné répond à Jean-Marc Jancovici lors du World Efficiency.",
 					"date": "2015-10-15",
 					"meta": "Nicolas Cori"
 				}

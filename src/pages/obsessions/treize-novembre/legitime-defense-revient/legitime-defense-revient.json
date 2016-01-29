@@ -3,7 +3,7 @@
 
 	"href": "legitime-defense-revient",
 
-	"number": 21,
+	"number": 20,
 	"date": "2016-01-16T08:00+01:00",
 
 	"title": "La légitime défense<br/>revient aux affaires",
@@ -20,6 +20,7 @@
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"prev":  "episode:treize-novembre/etat-urgence-mort-lente",
+		"next": "episode:treize-novembre/urvoas-taubira",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}
 }

@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "urvoas-taubira",
+
+	"number": 21,
+	"date": "2016-01-27T10:00+01:00",
+
+	"title": "Urvoas<br/>efface Taubira",
+	"intro": "Christiane Taubira a fini par dire non. Le député PS du Finistère, lui, a encore dit oui et devient garde des Sceaux.",
+	"subtitle":  "Christiane Taubira a fini par dire non. Le député PS du Finistère, lui, a encore dit oui et devient garde des Sceaux.",
+
+	"tags": ["13 Novembre", "Etat d'urgence", "Parti socialiste", "sécurité", "Jean-Jacques Urvoas", "Christiane Taubira"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/legitime-defense-revient",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}
