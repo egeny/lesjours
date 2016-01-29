@@ -1,5 +1,5 @@
 {% from "partials/_macro.html" import authors %}
-<section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episode" aria-hidden="false">
+<section id="episodes" class="tab" role="tabpanel" aria-labelledby="tab-episodes" aria-hidden="false">
 	<h3 class="pl-1g mb-2g style-meta-larger">Les épisodes</h3>
 	{% set episodes = obsession.episodes|expand|published %}
 	{% set episode  = episodes[0] %}

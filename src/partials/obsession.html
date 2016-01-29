@@ -16,14 +16,53 @@
 		</div>
 	</header>
 
+	{%
+		set tabs = [
+			{
+				"id": "episodes",
+				"icon": "files",
+				"label": "Les épisodes"
+			},
+			{
+				"id": "personnages",
+				"key": "people",
+				"icon": "people",
+				"label": "Les personnages"
+			},
+			{
+				"id": "images",
+				"icon": "camera",
+				"label": "Les images"
+			},
+			{
+				"id": "data",
+				"icon": "graph",
+				"label": "Les data"
+			},
+			{
+				"id": "lieux",
+				"key": "places",
+				"icon": "marker",
+				"label": "Les lieux"
+			},
+			{
+				"id": "bande-originale",
+				"key": "soundtrack",
+				"icon": "headphones",
+				"label": "La bande originale"
+			},
+			{
+				"id": "documents",
+				"icon": "folder",
+				"label": "Les documents"
+			}
+		]
+	%}
+
 	<ul class="mb-1g md-ml-1c lg-ml-1c lg-mr-1c list-inline text-center sticky-header" role="tablist">
-		<li role="presentation"><a role="tab" id="tab-episode" aria-controls="episodes" href="#episodes" aria-selected="true" tabindex="0">{{ icon("files") }} <span>Les épisodes</span></a></li>
-		<li role="presentation"><a role="tab" id="tab-personnages" aria-controls="personnages" href="#personnages" aria-selected="false" tabindex="-1">{{ icon("people") }} <span>Les personnages</span></a></li>
-		<li role="presentation"><a role="tab" id="tab-images" aria-controls="images" href="#images" aria-selected="false" tabindex="-1">{{ icon("camera") }} <span>Les images</span></a></li>
-		<li role="presentation"><a role="tab" id="tab-data" aria-controls="data" href="#data" aria-selected="false" tabindex="-1">{{ icon("graph") }} <span>Les data</span></a></li>
-		<li role="presentation"><a role="tab" id="tab-lieux" aria-controls="lieux" href="#lieux" aria-selected="false" tabindex="-1">{{ icon("marker") }} <span>Les lieux</span></a></li>
-		<li role="presentation"><a role="tab" id="tab-bande-originale" aria-controls="bande-originale" href="#bande-originale" aria-selected="false" tabindex="-1">{{ icon("headphones") }} <span>La bande originale</span></a></li>
-		<li role="presentation"><a role="tab" id="tab-documents" aria-controls="documents" href="#documents" aria-selected="false" tabindex="-1">{{ icon("folder") }} <span>Les documents</span></a></li>
+	{% for tab in tabs %}
+		<li role="presentation"><a role="tab" id="tab-{{ tab.id }}" {{ 'class="disabled"' if not obsession[tab.key|default(tab.id)]|length }} aria-controls="{{ tab.id }}" href="#{{ tab.id }}" aria-selected="{{ "true" if loop.first else "false" }}" tabindex="{{ "0" if loop.first else "-1" }}">{{ icon(tab.icon) }} <span>{{ tab.label }}</span></a></li>
+	{% endfor %}
 	</ul>
 
 	<div class="container">

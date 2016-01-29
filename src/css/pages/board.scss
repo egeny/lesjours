@@ -34,6 +34,11 @@ $gutter: grid-gutter("sm");
 				color: $color-brand-light;
 			}
 
+			.board [role="tab"].disabled {
+				pointer-events: none;
+				color: $color-light;
+			}
+
 			.board [role="tab"]:before {
 				content: "●";
 				display: block;
