@@ -34,9 +34,9 @@ $document.ready(function() {
 			index  = $cover.length ? $covers.index($cover) : 0;
 
 		if (e.type === "swipedown") {
-			expand(index);
-		} else {
 			resume(index);
+		} else {
+			expand(index);
 		}
 	}
 

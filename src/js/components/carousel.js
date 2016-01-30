@@ -179,8 +179,8 @@ $document.ready(function() {
 	$buttons.filter("[data-direction=backward]").click(backward);
 
 	// Bind some swipe effects
-	$carousel.hammer().bind("swiperight", forward);
-	$carousel.hammer().bind("swipeleft",  backward);
+	$carousel.hammer().bind("swiperight", backward);
+	$carousel.hammer().bind("swipeleft",  forward);
 
 	// Bind some keys
 	$window.keydown(function(e) {
