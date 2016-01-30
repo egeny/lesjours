@@ -29,7 +29,7 @@
 
 		// Allow if the user has paid and its subscription isn't expired
 		if ($meta['paid'] == 1 && strtotime($meta['expire']) > time()) {
-			// Make a sub-request so Apache will handle the request
+			// Make a sub-request so Apache will handle the request (see .htaccess)
 			die(virtual($_SERVER['REQUEST_URI']));
 		}
 	}
