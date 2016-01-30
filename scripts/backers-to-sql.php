@@ -29,6 +29,7 @@ while (($data = fgetcsv($input, 1000, ';'))) {
 		'last_name'  => $name,
 		'wp_capabilities' => 'a:1:{s:10:\"subscriber\";b:1;}',
 		'paid' => '1',
+		'subscription' => 'NOW()',
 		'expire' => 'NOW() + INTERVAL 1 YEAR',
 		'backer' => '1',
 		'backer_reward' => $gift,
@@ -41,7 +42,7 @@ while (($data = fgetcsv($input, 1000, ';'))) {
 
 	foreach ($meta as $key => $value) {
 		if ($key == 'address' && empty(trim($value))) { continue; }
-		if ($key != 'expire') { $value = '"'.$value.'"'; }
+		if (array_search($key, array('subscription', 'expire')) === false) { $value = '"'.$value.'"'; }
 
 		$insert = 'INSERT INTO `wp_usermeta` (user_id, meta_key, meta_value) VALUES(@ID, "'.$key.'", '.$value.');';
 		fwrite($output, $insert."\n");
