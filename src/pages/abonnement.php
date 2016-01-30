@@ -10,8 +10,6 @@
 <?php
 	require('wp.php');
 
-	$connected = is_user_logged_in();
-
 	$data  = $_POST;
 	$error = null;
 
@@ -22,29 +20,17 @@
 		'clientident'   => null,
 		'createalias'   => 'yes',
 		'description'   => 'Abonnement',
-		'identifier'    => 'LES JOURS TEST',
+		'identifier'    => BE2BILL_IDENTIFIER,
+		'language'      => 'FR',
 		'operationtype' => 'payment',
 		'orderid'       => null,
 		'version'       => '2.0',
 	);
 
-	$prices = array(
-		'jouriste'            => 9,
-		'jouriste-cash'       => 90,
-		'jouriste-desargente' => 5
-	);
-
 	$state = null;
-
-	$subscriptions = array(
-		'9'  => '+1 month',
-		'90' => '+1 year',
-		'5'  => '+1 month'
-	);
 
 	function signature($array) {
 		$hash = array();
-		$secret = '<P?[E}D4pRBGl%qO'; // FIXME: should be external (const in another file)
 
 		foreach ($array as $name => $value) {
 			$name = strtoupper($name);
@@ -53,7 +39,7 @@
 		}
 
 		sort($hash);
-		return hash('sha256', $secret.implode($secret, $hash).$secret);
+		return hash('sha256', BE2BILL_PASSWORD.implode(BE2BILL_PASSWORD, $hash).BE2BILL_PASSWORD);
 	}
 
 	// Receiving a notification from the payment service
@@ -65,14 +51,14 @@
 		$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 		if (!$error) {
-			$expire  = date('Y-m-d', strtotime($subscriptions[substr($_GET['AMOUNT'], 0, -2)]));
 			$user_id = $_GET['CLIENTIDENT'];
+			$expire  = date('Y-m-d', strtotime('+'.$PLANS[get_user_meta($user_id, 'plan')]['duration']));
 
 			// Update the user's account
-			update_user_meta($user_id, 'alias',  $_GET['ALIAS']);
-			update_user_meta($user_id, 'expire', $expire);
-			update_user_meta($user_id, 'paid',   true);
-			// TODO: add subscription date
+			update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
+			update_user_meta($user_id, 'expire',       $expire);
+			update_user_meta($user_id, 'subscription', date('Y-m-d'));
+			update_user_meta($user_id, 'paid',         '0');
 
 			// FIXME: what does the email needs to contains?
 			mail($_GET['CLIENTEMAIL'], 'Les Jours — activation de votre compte', 'Votre paiement a bien été reçu, vous êtes maintenant un jouriste. Merci.', 'From: contact@lesjours.fr');
@@ -120,7 +106,7 @@
 
 				case 'plan':
 					$value = sanitize_text_field($_POST[$field]);
-					$value = in_array($value, array_keys($prices)) ? $value : null;
+					$value = in_array($value, array_keys($PLANS)) ? $value : null;
 				break;
 
 				case 'password': $value = $_POST[$field];
@@ -155,11 +141,11 @@
 				}
 
 				// Mark as "unpaid" for now
-				add_user_meta($user_id, 'paid', false, true);
+				add_user_meta($user_id, 'paid', '0', true);
 
 				if ($data['payment'] == 'card') {
 					// Complete the payload for the payment service
-					$hidden['amount']       = $prices[$data['plan']] * 100;
+					$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
 					$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
 					$hidden['clientemail']  = $data['email'];
 					$hidden['clientident']  = $user_id;
@@ -194,7 +180,7 @@
 					document.getElementById("redirect").submit();
 				</script>
 			<?php elseif ($state == 'result') : ?>
-				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if ($connected) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
+				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if (is_user_logged_in()) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
 				<?php if ($_GET['result'] == 'success') : ?>
 					<div class="md-ml-1c lg-ml-1c">
 						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("check") }}</i>Confirmation d’abonnement</h3>
@@ -219,7 +205,7 @@
 					// FIXME: errors are disabled for now
 					$error = null;
 				?>
-				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if ($connected) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
+				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if (is_user_logged_in()) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
 				<form method="post" class="mb-2g md-w-6c md-ml-1c relative">
 					<fieldset id="formule" class="mb-4g">
 						<legend class="style-meta-large relative">Choisir ma formule</legend>
@@ -264,7 +250,7 @@
 						</ul>
 						<!-- TODO: error message -->
 					</fieldset>
-					<?php if (!$connected) : ?>
+					<?php if (!is_user_logged_in()) : ?>
 					<fieldset id="coordonnees" class="lg-w-6c">
 						<legend class="mb-2g style-meta-large relative">Mes coordonnées</legend>
 						<div class="field">
