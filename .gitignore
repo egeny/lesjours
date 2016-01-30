@@ -4,6 +4,7 @@ src/img/ui.svg
 
 scripts/*.csv
 scripts/*.sql
+scripts/*.sql.gz
 
 # Bower
 bower_components/
