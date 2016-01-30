@@ -46,6 +46,13 @@ $document.ready(function() {
 		e.preventDefault();
 	});
 
+	// Expand the cover if, on page load, there is an hash
+	if (window.location.hash) {
+		window.setTimeout(function() {
+			$covers.filter(window.location.hash).addClass("expanded");
+		}, 300);
+	}
+
 	$carousel.on("changed", function() {
 		$covers.removeClass("expanded");
 	});
