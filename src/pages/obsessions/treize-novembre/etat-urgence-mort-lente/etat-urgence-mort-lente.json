@@ -3,7 +3,7 @@
 
 	"href": "etat-urgence-mort-lente",
 
-	"number": 20,
+	"number": 19,
 	"date": "2016-01-14T08:00+01:00",
 
 	"title": "L'état d'urgence ne sert plus à rien",
@@ -19,7 +19,7 @@
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/commemorations-plaques",
+		"prev":  "episode:treize-novembre/un-an-charlie",
 		"next":	"episode:treize-novembre/legitime-defense-revient",
 		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
 	}

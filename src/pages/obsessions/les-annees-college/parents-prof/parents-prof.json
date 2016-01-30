@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "parents-prof",
+
+	"number": 8,
+	"date": "2015-12-16T10:00+01:00",
+
+	"title": "La rencontre</br>parents-prof",
+	"intro": "Juste avant les vacances de Noël, les parents de la 3e B viennent chacun leur tour discuter avec le professeur principal.",
+	"lead":  "",
+
+	"tags": ["Education", "Collège", "Paris", "Mixité", "Orientation"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/madame-front-national",
+		"next":  "episode:les-annees-college/ingenieur-pourquoi-pas",
+		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
+	}
+}
