@@ -46,6 +46,10 @@ $document.ready(function() {
 		e.preventDefault();
 	});
 
+	$carousel.on("changed", function() {
+		$covers.removeClass("expanded");
+	});
+
 	$carousel.hammer().bind("swipedown", swiped);
 	$carousel.hammer().bind("swipeup",   swiped);
 

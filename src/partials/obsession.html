@@ -6,7 +6,7 @@
 					set cover = {
 						class: "expanded",
 						img: "/obsessions/" + obsession.href + "/" + obsession.href + ".jpg",
-						href: "/obsessions/" + obsession.href,
+						href: "/obsessions/#" + obsession.href,
 						title: obsession.title,
 						subtitle: obsession.subtitle
 					}
@@ -68,7 +68,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col ph-0 md-ml-1c md-w-6c lg-ml-1c lg-w-10c">
-				<h2 class="pl-1g style-meta"><a href="/obsessions/{{ obsession.href }}" class="link obsession">{{ obsession.name }}</a></h2>
+				<h2 class="pl-1g style-meta"><a href="/obsessions/#{{ obsession.href }}" class="link obsession">{{ obsession.name }}</a></h2>
 				<div class="tab-container">
 					{% include "partials/obsession/episodes.html"   %}
 					{% include "partials/obsession/people.html"     %}

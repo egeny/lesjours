@@ -10,7 +10,7 @@
 <div class="container">
 	<div class="col">
 		<div class="carousel-container">
-			<ul class="carousel" data-interval="5000" data-state="paused" role="listbox">
+			<ul class="carousel" data-interval="5000" data-state="running" role="listbox">
 			{% set obsessions = obsessions|expand %}
 			{% for obsession in obsessions %}
 				{%
@@ -38,7 +38,7 @@
 				</li>
 			{% endfor %}
 			</ul>
-			<button class="btn"><i>{{ icon("angle-right", "Obsession suivante") }}</i></button>
+			<button class="btn" data-direction="forward"><i>{{ icon("angle-right", "Obsession suivante") }}</i></button>
 		</div>
 	</div>
 </div>

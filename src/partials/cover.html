@@ -42,7 +42,7 @@
 						<p class="p-larger mb-1g">{{ cover.subtitle }}</p>
 						{% if cover.episode %}
 							{% set obsession = cover.episode.obsession|expand %}
-							<p class="style-meta color-inherit"><a href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ cover.episode.number }} | Par {{ authors(cover.episode.rel.authors, class="text-upper") }}</p>
+							<p class="style-meta color-inherit"><a href="/obsessions/#{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ cover.episode.number }} | Par {{ authors(cover.episode.rel.authors, class="text-upper") }}</p>
 						{% endif %}
 						{% if cover.desc %}
 							<a href="{{ cover.href }}" class="btn"><i>{{ icon("chevron-down", "Lire") }}</i></a>
