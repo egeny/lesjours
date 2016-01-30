@@ -33,6 +33,12 @@
 		&:active,
 		&:focus { border-color: $color-brand; }
 
+		&:disabled {
+			border-color: inherit;
+			cursor: not-allowed;
+			color: $color-dark;
+		}
+
 		&:valid {
 			background-repeat: no-repeat;
 			background-position: 100% 50%;

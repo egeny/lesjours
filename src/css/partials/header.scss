@@ -4,6 +4,7 @@ $gutter: grid-gutter("sm");
 #header-container {
 	background: $color-white;
 	max-width: $max-width;
+	margin: 0 auto; // FIXME
 }
 
 // FIXME: temporary (also, change burger.js/menu.js)
