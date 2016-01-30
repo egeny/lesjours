@@ -3,7 +3,7 @@
 
 {% block php -%}
 <?php
-	require('wp.php');
+	require('_bootstrap.php');
 
 	$meta = get_user_meta($current_user->ID);
 	$meta = array_map(function($array) { return $array[0]; }, $meta);

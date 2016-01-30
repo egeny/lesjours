@@ -8,7 +8,7 @@
 
 {% block php -%}
 <?php
-	require('wp.php');
+	require('_bootstrap.php');
 
 	$data  = $_POST;
 	$error = null;

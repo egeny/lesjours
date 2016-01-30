@@ -1,5 +1,5 @@
 <?php
-	require('wp.php');
+	require('_bootstrap.php');
 
 	// When receiving data, try to log the user
 	if (!empty($_POST)) {

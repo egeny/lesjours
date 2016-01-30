@@ -1,7 +1,7 @@
 {% extends "partials/_layout-iframe.html" %}
 
 {% block php -%}
-<?php require('wp.php'); ?>
+<?php require('_bootstrap.php'); ?>
 {% endblock %}
 
 {% block content %}
