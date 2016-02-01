@@ -75,7 +75,7 @@
 	</div>
 
 	{% if home.selected|length > 1 %}
-	<div class="row mt-2g lg-mh-1c lg-w-10c">
+	<div class="row mt-2g">
 		{% set selected = home.selected|slice(1) %}
 		{% for article in selected %}
 			{% set article   = article|expand %}
