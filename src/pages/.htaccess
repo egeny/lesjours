@@ -1,13 +1,12 @@
+# Prevent sending a Content-Location when trying to access a PHP page without extension (calling /_account, the server will respond with a Content-Location set to /_account.php)
+Options -MultiViews
+
 RewriteEngine On
 RewriteBase /
 
 # Fix some URLs to hide that they are handled by PHP
 RewriteRule ^(_account|abonnement|compte).html$ $1.php [L]
 RewriteRule ^session$ session.php [L]
-
-# Disallow direct access on PHP files
-RewriteCond %{ENV:REDIRECT_STATUS} ^$
-RewriteRule php$ - [R=404,L]
 
 # Protect the /obsession folder
 # Still, allows URL ending with jpg
@@ -19,4 +18,8 @@ RewriteRule php$ - [R=404,L]
 RewriteCond %{REQUEST_URI} ^/obsessions
 RewriteCond %{REQUEST_URI} !jpg$
 RewriteCond %{IS_SUBREQ}   false
-RewriteRule .* session.php [L]
+RewriteRule .* session [L]
+
+# Disallow direct access on PHP files
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule php$ - [R=404,L]
