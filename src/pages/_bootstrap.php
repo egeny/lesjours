@@ -1,13 +1,12 @@
 <?php
-	set_include_path(dirname(__FILE__).'/../../lj');
-	require('wp-load.php');
+	require('_env.php');
+	require(WP_PATH.'/wp-load.php');
 
 	// Locale to use (mainly for dates)
 	setlocale(LC_ALL, 'fr_FR');
 
-	// be2bill credentials (payment service)
-	define('BE2BILL_IDENTIFIER', 'LES JOURS TEST');
-	define('BE2BILL_PASSWORD',   '<P?[E}D4pRBGl%qO');
+	// For security reasons, remove the X-Powered-By header
+	header_remove('X-Powered-By');
 
 	// Get the avatar's URL (check the URL first to provide an SVG fallback — not possible with gravatar)
 	function avatar_url() {
