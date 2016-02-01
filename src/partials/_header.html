@@ -1,5 +1,5 @@
-<header id="header-container">
-	<div id="header" class="relative">
+<header id="header">
+	<div class="header relative">
 		<div class="full-height mh-1m relative text-center">
 			<h1 class="inline-block relative">
 				<a class="block" href="/">
@@ -14,7 +14,7 @@
 		{# Use an iframe to check if the user is logged-in #}
 		{# Also, don't include in #header since it has to have a full-width in order to match the page's media queries #}
 		<iframe src="/_account.html" class="full-width full-height overlay"></iframe>
-	</div>
+	</div><!-- end of .header -->
 
 	<nav id="menu" class="container" tabindex="-1">
 		<div class="col md-ml-1c md-w-7c lg-ml-2c lg-w-10c">
@@ -40,7 +40,8 @@
 				<li class="col sm-w-auto md-w-1c"><a href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
 			</ul>
 		</div>
-	</nav>
+	</nav><!-- end of #menu -->
+
 	<div id="login" class="modal" role="dialog" tabindex="-1">
 		<form action="/session" method="post" role="document">
 			<fieldset>
@@ -59,5 +60,6 @@
 				<p class="style-meta mb-0 text-upper color-main">Pas encore jouriste ? <a class="color-brand" href="/abonnement.html">Abonnez-vous maintenant</a>.</p>
 			</fieldset>
 		</form>
-	</div>
-</header><!-- end of #header -->
+	</div><!-- end of #login -->
+</header>
+<div class="header"></div>
