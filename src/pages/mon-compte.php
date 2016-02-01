@@ -4,22 +4,61 @@
 {% block php -%}
 <?php
 	require('_bootstrap.php');
+	require(WP_PATH.'/wp-admin/includes/user.php'); // This file needs to be included in order to delete an user
+
+	// Prevent accessing this URL if there is no logged-in user
+	if (!$current_user->ID) { die(header('Location: /')); }
 
 	$meta = get_user_meta($current_user->ID);
 	$meta = array_map(function($array) { return $array[0]; }, $meta);
 
-	//print_r($current_user);
-	//print_r($meta);
-
-	$data = array(
-		'email' => $current_user->user_email,
-		'name' => $meta['last_name'],
+	$error = null;
+	$data  = array(
+		'email'     => $current_user->user_email,
+		'name'      => $meta['last_name'],
 		'firstname' => $meta['first_name'],
-		'address' => $meta['address'],
-		'zip' => $meta['zip'],
-		'city' => $meta['city'],
-		'country' => !empty($meta['country']) ? $meta['country'] : 'fr'
+		'address'   => $meta['address'],
+		'zip'       => $meta['zip'],
+		'city'      => $meta['city'],
+		'country'   => !empty($meta['country']) ? $meta['country'] : 'fr'
 	);
+
+	if (isset($_GET['delete'])) {
+		// TODO: Should send an email
+		wp_delete_user($current_user->ID);
+		die(header('Location: /'));
+	}
+
+	if (!empty($_POST)) {
+		if (!empty($_POST['password'])) {
+			wp_set_password($_POST['password'], $current_user->ID);
+			wp_set_auth_cookie($current_user->ID, true, false);
+		} else {
+			// Sanitize and check received data
+			foreach ($_POST as $field => $value) {
+				$data[$field] = $value = sanitize_text_field($value);
+
+				// Set an error flag if necessary
+				if (empty($value)) {
+					$error = is_array($error) ? $error : array();
+					$error[$field] = true;
+				}
+			}
+
+			if (!$error) {
+				// Prefer wp_update_user for the name and firstname since it will generate the display name
+				wp_update_user(array(
+					'ID'         => $current_user->ID,
+					'first_name' => $data['firstname'],
+					'last_name'  => $data['name']
+				));
+
+				foreach (array('address', 'zip', 'city', 'country') as $field) {
+					update_user_meta($current_user->ID, $field, $data[$field]);
+				}
+			}
+		}
+	}
 
 	$plan         = $PLANS[$meta['plan']];
 	$expire       = strtotime($meta['expire']);
@@ -318,6 +357,10 @@
 					<a class="md-w-1c mb-2g block" href="https://gravatar.com">
 						<img class="responsive full-height radius" src="<?php echo avatar_url(); ?>" alt="" />
 					</a>
+					<?php
+						// FIXME: errors are disabled for now
+						$error = null;
+					?>
 					<form method="post">
 						<div class="field">
 							<label for="name">Nom</label>
@@ -362,7 +405,7 @@
 						<p>Vous avez souscrit un abonnement le <?php $day = strftime('%e', $subscription); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $subscription) ?>. <a href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a></p>
 						<h4>Votre formule</h4>
 						<p><?php echo $plan['name'] ?> — <?php echo $plan['price'] ?> € par <?php echo $plan['duration'] == '1 year' ? 'an' : 'mois' ?> (expire le <?php $day = strftime('%e', $expire); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $expire) ?>)</p>
-						<a href="?unsubscribe" class="btn-primary btn-brand md-w-6c md-mh-1c" type="submit">Se désabonner</a>
+						<a href="?delete" class="btn-primary btn-brand md-w-6c md-mh-1c" type="submit">Se désabonner</a>
 					<?php else : ?>
 						<p>Vous n’avez pas d’abonnement.</p>
 					<?php endif ?>
