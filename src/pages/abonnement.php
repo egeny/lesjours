@@ -76,11 +76,6 @@
 			$error = !$error && $hash != $_GET['HASH']      ? 'hash'            : $error;
 			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
-			if (!$error) {
-				// If the hash is correct and we received an "execcode" 0000 we may log-in the user
-				wp_set_auth_cookie($_GET['CLIENTIDENT'], true, false);
-			}
-
 			// Prefer redirecting to remove informations in the URL
 			die(header('Location: /abonnement.html?result='.($error ? $error : 'success')));
 		}
@@ -142,6 +137,9 @@
 
 				// Mark as "unpaid" for now
 				add_user_meta($user_id, 'paid', '0', true);
+
+				// We may now log-in the user
+				wp_set_auth_cookie($user_id, true, false);
 
 				if ($data['payment'] == 'card') {
 					// Complete the payload for the payment service
