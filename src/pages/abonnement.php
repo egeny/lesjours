@@ -52,13 +52,13 @@
 
 		if (!$error) {
 			$user_id = $_GET['CLIENTIDENT'];
-			$expire  = date('Y-m-d', strtotime('+'.$PLANS[get_user_meta($user_id, 'plan')]['duration']));
+			$expire  = date('Y-m-d', strtotime('+'.$PLANS[get_user_meta($user_id, 'plan')[0]]['duration']));
 
 			// Update the user's account
 			update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
 			update_user_meta($user_id, 'expire',       $expire);
-			update_user_meta($user_id, 'subscription', date('Y-m-d'));
-			update_user_meta($user_id, 'paid',         '0');
+			update_user_meta($user_id, 'subscription', date('Y-m-d H:i:s'));
+			update_user_meta($user_id, 'paid',         '1');
 
 			// FIXME: what does the email needs to contains?
 			mail($_GET['CLIENTEMAIL'], 'Les Jours — activation de votre compte', 'Votre paiement a bien été reçu, vous êtes maintenant un jouriste. Merci.', 'From: contact@lesjours.fr');
