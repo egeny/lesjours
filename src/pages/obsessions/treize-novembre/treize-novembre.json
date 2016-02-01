@@ -39,8 +39,7 @@
 			"img":      "img/blocheportrait2.jpg",
 			"alt":      "",
 			"title":    "Patrick Bloche",
-			"subtitle": "59 ans, député et ancien maire du XIe",
-			"minor":    true
+			"subtitle": "59 ans, député et ancien maire du XIe"
 		},
 		{
 			"href":     "foi-sous-les-bombes",
@@ -61,8 +60,7 @@
 			"img":      "img/sandrine-voisine.jpg",
 			"alt":      "",
 			"title":    "Sandrine",
-			"subtitle": "X ans, voisine",
-			"minor":    true
+			"subtitle": "X ans, voisine"
 		},
 		{
 			"href":     "urvoas-le-deuxieme-flic-de-france",
@@ -76,16 +74,14 @@
 			"img":      "img/nathalie-riveraine.jpg",
 			"alt":      "",
 			"title":    "Nathalie",
-			"subtitle": "45 ans, riveraine du Bataclan",
-			"minor":    true
+			"subtitle": "45 ans, riveraine du Bataclan"
 		},
 		{
 			"href":     "un-perimetre-de-desolation",
 			"img":      "img/tuyen-voisin.jpg",
 			"alt":      "",
 			"title":    "Tuyen",
-			"subtitle": "44 ans, voisin du Bataclan",
-			"minor":    true
+			"subtitle": "44 ans, voisin du Bataclan"
 		},
 		{
 			"href":     "j-ai-vu-le-tireur-jeune-calme-tranquille",
@@ -99,8 +95,7 @@
 			"img":      "img/brigitte-institutrice.jpg",
 			"alt":      "",
 			"title":    "Brigitte Baudelot",
-			"subtitle": "X ans, institutrice dans le XIe",
-			"minor":    true
+			"subtitle": "X ans, institutrice dans le XIe"
 		}
 	],
 

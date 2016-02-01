@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "the-course-of-maths",
+
+	"number": 11,
+	"date": "2016-01-29T10:00+01:00",
+
+	"title": "The course of maths",
+	"intro": "Comme un avant-goût de la réforme de collège qui sera mise en place à la rentrée 2016, les 3e B testent le cours en math en anglais.",
+	"lead":  "<q>Sorry for my english. It’s difficult for me.</q> Le prof de maths des 3e B prend une courte respiration pour se donner du courage, et se lance, en anglais, dans une explication sur le calcul de l’indice de masse corporel, <em>the body mass index</em> donc. Quand il bute, il demande au prof d’anglais, à côté de lui, <q>How do you say that ?</q>",
+
+	"tags": ["Education", "Collège", "Paris", "Réforme du collège"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/etre-charlie",
+		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
+	}
+}

@@ -79,8 +79,7 @@
 			"img":      "img/tdecormon.jpg",
 			"alt":      "",
 			"title":    "Tiphaine Decormon",
-			"subtitle": "La conseillère d'orientation",
-			"minor": true
+			"subtitle": "La conseillère d'orientation"
 		},
 		{
 			"href":     "#",
@@ -91,10 +90,24 @@
 		},
 		{
 			"href":     "#",
-			"img":      "img/delphine.jpg",
+			"img":      "img/spewel.jpg",
 			"alt":      "",
 			"title":    "Spewell",
 			"subtitle": "14 ans, élève en 3e&nbsp;B"
+		},
+		{
+			"href":     "#",
+			"img":      "img/louanne.jpg",
+			"alt":      "",
+			"title":    "Louanne",
+			"subtitle": "14 ans, élève en 3e&nbsp;B"
+		},
+		{
+			"href":     "#",
+			"img":      "img/seny.jpg",
+			"alt":      "",
+			"title":    "Seny",
+			"subtitle": "15 ans, élève en 3e&nbsp;B"
 		}
 	],
 
