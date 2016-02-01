@@ -25,7 +25,7 @@
 			"img":      "img/mestrallet.jpg",
 			"alt":      "",
 			"title":    "Gérard Mestrallet",
-			"subtitle": "66 ans, PDG d’Engie (ex-GDF Suez)",
+			"subtitle": "66 ans, PDG d’Engie (ex-GDF Suez)"
 		},
 		{
 			"href":     "papou-est-dans-le-petrole",
@@ -39,14 +39,14 @@
 			"img":      "img/lucie-pinson.jpg",
 			"alt":      "",
 			"title":    "Lucie Pinson",
-			"subtitle": "29 ans, chargée de campagne finance privée aux Amis de la Terre",
+			"subtitle": "29 ans, chargée de campagne finance privée aux Amis de la Terre"
 		},
 		{
 			"href":     "la-pantoufle-de-vert",
 			"img":      "img/jancovici.jpg",
 			"alt":      "",
 			"title":    "Jean-Marc Jancovici",
-			"subtitle": "53 ans, président du think tank The Shift Project",
+			"subtitle": "53 ans, président du think tank The Shift Project"
 			
 		},
 		{
@@ -54,7 +54,7 @@
 			"img":      "img/levy.jpg",
 			"alt":      "",
 			"title":    "Jean-Bernard Lévy",
-			"subtitle": "60 ans, PDG d’EDF",
+			"subtitle": "60 ans, PDG d’EDF"
 			
 		}
 	],
