@@ -185,7 +185,7 @@
 					<div class="md-ml-1c lg-ml-1c">
 						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("check") }}</i>Confirmation d’abonnement</h3>
 						<div class="default-content">
-							<p class="mt-0">Félicitations ! Vous êtes désormais jouriste. <a class="link-unstyled" href="#">Accéder à mon profil</a>.</p>
+							<p class="mt-0">Félicitations ! Vous êtes désormais jouriste. <a class="link-unstyled" href="/mon-compte.html">Accéder à mon compte</a>.</p>
 							<p>Vous pouvez maintenant naviguer sur le site.</p>
 						</div>
 					</div>
