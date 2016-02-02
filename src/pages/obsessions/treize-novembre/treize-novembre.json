@@ -10,26 +10,26 @@
 	"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, «Les Jours» racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>",
 
 	"episodes": [
-		"episode:treize-novembre/urvoas-taubira",
-		"episode:treize-novembre/legitime-defense-revient",
-		"episode:treize-novembre/etat-urgence-mort-lente",
-		"episode:treize-novembre/un-an-charlie",
+		"episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"episode:treize-novembre/un-perimetre-de-desolation",
+		"episode:treize-novembre/l-empreinte-de-la-peur",
+		"episode:treize-novembre/content-de-vous-avoir-revu",
+		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"episode:treize-novembre/a-l-intention-des-victimes",
+		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
+		"episode:treize-novembre/fiere-de-la-france",
+		"episode:treize-novembre/moments-filmes",
+		"episode:treize-novembre/montfermeil-musulmans",
+		"episode:treize-novembre/impossible-routine",
+		"episode:treize-novembre/urvoas-urgence",
+		"episode:treize-novembre/pratique-fondamentaliste",
+		"episode:treize-novembre/foi-sous-les-bombes",
 		"episode:treize-novembre/assigne-conversation",
 		"episode:treize-novembre/transport-terrorisme",
-		"episode:treize-novembre/foi-sous-les-bombes",
-		"episode:treize-novembre/pratique-fondamentaliste",
-		"episode:treize-novembre/urvoas-urgence",
-		"episode:treize-novembre/impossible-routine",
-		"episode:treize-novembre/montfermeil-musulmans",
-		"episode:treize-novembre/moments-filmes",
-		"episode:treize-novembre/fiere-de-la-france",
-		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
-		"episode:treize-novembre/a-l-intention-des-victimes",
-		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
-		"episode:treize-novembre/content-de-vous-avoir-revu",
-		"episode:treize-novembre/l-empreinte-de-la-peur",
-		"episode:treize-novembre/un-perimetre-de-desolation",
-		"episode:treize-novembre/vendredi-ou-la-nuit-sauvage"
+		"episode:treize-novembre/un-an-charlie",
+		"episode:treize-novembre/etat-urgence-mort-lente",
+		"episode:treize-novembre/legitime-defense-revient",
+		"episode:treize-novembre/urvoas-taubira"		
 		
 	],
 
@@ -39,8 +39,7 @@
 			"img":      "img/blocheportrait2.jpg",
 			"alt":      "",
 			"title":    "Patrick Bloche",
-			"subtitle": "59 ans, député et ancien maire du XIe",
-			"minor":    true
+			"subtitle": "59 ans, député et ancien maire du XIe"
 		},
 		{
 			"href":     "foi-sous-les-bombes",
@@ -61,8 +60,7 @@
 			"img":      "img/sandrine-voisine.jpg",
 			"alt":      "",
 			"title":    "Sandrine",
-			"subtitle": "X ans, voisine",
-			"minor":    true
+			"subtitle": "X ans, voisine"
 		},
 		{
 			"href":     "urvoas-le-deuxieme-flic-de-france",
@@ -76,16 +74,14 @@
 			"img":      "img/nathalie-riveraine.jpg",
 			"alt":      "",
 			"title":    "Nathalie",
-			"subtitle": "45 ans, riveraine du Bataclan",
-			"minor":    true
+			"subtitle": "45 ans, riveraine du Bataclan"
 		},
 		{
 			"href":     "un-perimetre-de-desolation",
 			"img":      "img/tuyen-voisin.jpg",
 			"alt":      "",
 			"title":    "Tuyen",
-			"subtitle": "44 ans, voisin du Bataclan",
-			"minor":    true
+			"subtitle": "44 ans, voisin du Bataclan"
 		},
 		{
 			"href":     "j-ai-vu-le-tireur-jeune-calme-tranquille",
@@ -99,8 +95,7 @@
 			"img":      "img/brigitte-institutrice.jpg",
 			"alt":      "",
 			"title":    "Brigitte Baudelot",
-			"subtitle": "X ans, institutrice dans le XIe",
-			"minor":    true
+			"subtitle": "X ans, institutrice dans le XIe"
 		}
 	],
 
