@@ -186,7 +186,7 @@ ol, ul {
 }
 
 /* Set a default margin for <p> */
-p { margin-bottom: 1.5em; }
+p { margin-bottom: $gutter; }
 
 /* Set the correct quotes */
 q {
@@ -254,6 +254,8 @@ textarea { resize: vertical; }
 			margin-top:    $gutter;
 			margin-bottom: $gutter;
 		}
+
+		p { margin-bottom: $gutter; }
 	}
 }
 
@@ -275,6 +277,8 @@ textarea { resize: vertical; }
 			margin-top:    $gutter;
 			margin-bottom: $gutter;
 		}
+
+		p { margin-bottom: $gutter; }
 	}
 }
 
