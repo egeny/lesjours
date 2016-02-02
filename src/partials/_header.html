@@ -1,5 +1,5 @@
-<header id="header-container">
-	<div id="header" class="relative">
+<header id="header">
+	<div class="header relative">
 		<div class="full-height mh-1m relative text-center">
 			<h1 class="inline-block relative">
 				<a class="block" href="/">
@@ -14,16 +14,16 @@
 		{# Use an iframe to check if the user is logged-in #}
 		{# Also, don't include in #header since it has to have a full-width in order to match the page's media queries #}
 		<iframe src="/_account.html" class="full-width full-height overlay"></iframe>
-	</div>
+	</div><!-- end of .header -->
 
 	<nav id="menu" class="container" tabindex="-1">
 		<div class="col md-ml-1c md-w-7c lg-ml-2c lg-w-10c">
 			<a href="/"><i>{{ icon("angle-right") }}</i> À la une</a>
 			<span class="mv-1g block style-meta-larger">Les obsessions :</span>
 			<ul>
-				<li><a href="/obsessions/treize-novembre"><i>{{ icon("angle-right") }}</i> Treize Novembre</a></li>
-				<li><a href="/obsessions/good-com-bad-cop"><i>{{ icon("angle-right") }}</i> Good com, bad COP</a></li>
-				<li><a href="/obsessions/les-annees-college"><i>{{ icon("angle-right") }}</i> Les années collège</a></li>
+				<li><a href="/obsessions/#treize-novembre"><i>{{ icon("angle-right") }}</i> Treize Novembre</a></li>
+				<li><a href="/obsessions/#good-com-bad-cop"><i>{{ icon("angle-right") }}</i> Good com, bad COP</a></li>
+				<li><a href="/obsessions/#les-annees-college"><i>{{ icon("angle-right") }}</i> Les années collège</a></li>
 				<li><a href="/obsessions"><i>{{ icon("angle-right") }}</i> Toutes les obsessions</a></li>
 			</ul>
 			<hr class="mh-0" />
@@ -31,7 +31,7 @@
 				<li><a href="http://lesjours.fr"><i>{{ icon("angle-right") }}</i> Qui sommes-nous ?</a></li>
 				<li><a href="/abonnement.html"><i>{{ icon("angle-right") }}</i> Abonnement</a></li>
 				<li><a href="/mentions-legales.html"><i>{{ icon("angle-right") }}</i> Mentions légales</a></li>
-				<li><a href="#"><i>{{ icon("angle-right") }}</i> Conditions d’utilisation</a></li>
+				<li><a href="/abonnement-conditions-generales.html"><i>{{ icon("angle-right") }}</i> Conditions d’utilisation</a></li>
 			</ul>
 			<hr class="mh-0" />
 			<ul class="row mb-1g list-inline">
@@ -40,24 +40,26 @@
 				<li class="col sm-w-auto md-w-1c"><a href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
 			</ul>
 		</div>
-	</nav>
+	</nav><!-- end of #menu -->
+
 	<div id="login" class="modal" role="dialog" tabindex="-1">
-		<form action="/session.php" method="post" role="document">
+		<form action="/session" method="post" role="document">
 			<fieldset>
 				<legend class="style-meta-larger mb-2g">Se connecter</legend>
 				<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
 				<div class="field">
 					<label for="mail">Adresse e-mail</label>
-					<input id="mail" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
+					<input id="mail" class="check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
 				</div>
 				<div class="field">
 					<label for="password">Mot de passe</label>
-					<input id="password" name="password" type="password" placeholder="××××××××" required />
+					<input id="password" class="check" name="password" type="password" placeholder="××××××××" required />
 				</div>
-				<a class="link external style-meta" href="#">J’ai oublié mon e-mail ou mon mot de passe</a>
-				<button class="btn-primary full-width mv-4g" type="submit">Valider</button>
+				<a class="link external style-meta" href="#">J’ai oublié mon mot de passe</a>
+				<button class="btn-primary btn-brand full-width mv-4g" type="submit">Valider</button>
 				<p class="style-meta mb-0 text-upper color-main">Pas encore jouriste ? <a class="color-brand" href="/abonnement.html">Abonnez-vous maintenant</a>.</p>
 			</fieldset>
 		</form>
-	</div>
-</header><!-- end of #header -->
+	</div><!-- end of #login -->
+</header>
+<div class="header"></div>

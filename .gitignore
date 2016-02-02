@@ -1,11 +1,15 @@
+# Do not version generated files
 dist/
 src/img/ui.svg
 **/*.min.js
 
-# Bower
-bower_components/
+# Avoid versionning generated/formatted customer data
+scripts/*.csv
+scripts/*.sql
+scripts/*.sql.gz
 
-# NodeJS
+# Dependencies
+bower_components/
 node_modules/
 
 # OS X

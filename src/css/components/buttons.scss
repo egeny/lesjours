@@ -22,19 +22,15 @@
 
 	text-align: center;
 	text-transform: uppercase;
-
-	color: inherit; // For links
 }
 
 .btn-round {
-	width: 3.5em;
+	width:  3.5em;
+	height: 3.5em;
 	position: relative;
 	line-height: 3.5em;
-	color: $color-white;
 
 	&::before {
-		background: $color-brand;
-
 		width:  100%;
 		height: 100%;
 		border-radius: 50%;
@@ -52,48 +48,91 @@
 
 	> i,
 	> span {
+		box-sizing: border-box;
+		height: 100%;
+		padding-top: 1px;
+
 		display: block;
 		position: relative;
-		top: 1px; // Seriously…
 
 		font-style: normal;
+	}
+
+	> img { border-radius: 50%; }
+
+	&.btn-brand {
+		color: $color-white;
+		&::before { background: $color-brand; }
+	}
+
+	&.btn-white {
+		&::before { background: $color-white; }
+
+		&:hover,
+		&:focus { color: inherit; }
 	}
 }
 
 .btn-square {
 	padding: 2px .5em 0;
 	border:  2px solid transparent;
-	line-height: 19px;
+	line-height: 1.1875;
 
 	&:hover,
 	&:focus { border-color: inherit; }
+
+	&.btn-brand {
+		border-color: inherit;
+		color: $color-brand;
+
+		&:hover,
+		&:focus { color: inherit; }
+
+		&.btn-reverse {
+			border-color: inherit;
+			color: inherit;
+
+			&:hover,
+			&:focus { color: $color-brand; }
+		}
+	}
 }
 
 .btn-primary {
-	background: $color-brand;
+	box-sizing: border-box;
+	padding: .5em;
 
 	font-size: 1rem; // Always 16px (1rem = 16px)
-	line-height: 4.5;
+	line-height: 3.5;
 
-	color: $color-white;
+	transition: color .3s;
 
-	// For links (avoid default hover/focus)
-	&:hover,
-	&:focus { color: inherit; }
+	&.btn-brand {
+		background: $color-brand;
+		color: $color-white;
+
+		&:hover,
+		&:focus { color: $color-light; }
+	}
+
+	&.btn-white { background: $color-white; }
 }
 
 .btn-reverse {
 	color: $color-brand;
-	&::before { background: $color-white; }
+
+	&:hover,
+	&:focus { color: inherit; }
 }
 
-.btn-transparent {
+
+/*.btn-transparent {
 	color: inherit;
 	&::before { content: none; }
-}
+}*/
 
-.btn-white {
+/*.btn-white {
 	color: inherit;
 	&::before { background: $color-white; }
-}
+}*/
 /* @end Buttons */

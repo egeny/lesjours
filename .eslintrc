@@ -38,7 +38,8 @@
 		"$document":  true,
 		"$window":    true,
 		"throttle":   true,
-		"Stickyfill": true,
-		"Typekit":    true
+		"Hammer":     true,
+		"Typekit":    true,
+		"Stickyfill": true
 	}
 }

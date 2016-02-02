@@ -1,4 +1,9 @@
-{% set page = { title: "Obsessions — Les Jours", class: "page-obsessions" } %}
+{%
+	set page = {
+		title: "Obsessions — Les Jours",
+		class: "page-obsessions"
+	}
+%}
 {% extends "partials/_layout.html" %}
 
 {% block content %}
@@ -6,11 +11,12 @@
 	<div class="col">
 		<div class="carousel-container">
 			<ul class="carousel" data-interval="5000" data-state="running" role="listbox">
+			{% set obsessions = obsessions|expand %}
 			{% for obsession in obsessions %}
-				{% set obsession = obsession|expand %}
 				{%
 					set cover = {
 						tag: "li",
+						id: obsession.href,
 						class: "obsession-" + obsession.color,
 						img: "/obsessions/" + obsession.href + "/" + obsession.href + ".jpg",
 						href: "/obsessions/" + obsession.href,
@@ -27,10 +33,12 @@
 			<button class="btn" data-direction="backward"><i>{{ icon("angle-left", "Obsession précédente") }}</i></button>
 			<ul class="list-inline" role="presentation">
 			{% for obsession in obsessions %}
-				<li{% if loop.first %} class="selected"{% endif %}>●</li>
+				<li>
+					<a{% if loop.first %} class="selected"{% endif %} href="#{{ obsession.href }}">●</a>
+				</li>
 			{% endfor %}
 			</ul>
-			<button class="btn"><i>{{ icon("angle-right", "Obsession suivante") }}</i></button>
+			<button class="btn" data-direction="forward"><i>{{ icon("angle-right", "Obsession suivante") }}</i></button>
 		</div>
 	</div>
 </div>

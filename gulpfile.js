@@ -221,6 +221,10 @@ env.addFilter('removeBR', function(input) {
 	return (input || '').replace(/<br\/?>/g, ' ');
 });
 
+env.addFilter('slice', function(array, begin, end) {
+	return array.slice(begin, end);
+});
+
 env.addFilter('split', function(input, separator) {
 	return (input || "").split(separator);
 });
@@ -463,6 +467,7 @@ function html(e) {
 		.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
 		.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
 		.pipe(replace('href="/"',                 'href="' + root + '/"'))
+		.pipe(replace('\'/img',                       '\'' + root + '/img'))
 		.pipe(replace('Location: /',          'Location: ' + root + '/'))
 		.pipe(gulp.dest(paths.dist))
 		.pipe(livereload());
@@ -488,7 +493,7 @@ gulp.task('build:css', function() {
 		.pipe(header(banner, context))
 		.pipe(gulp.dest(paths.css.output))
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(minify())
+		.pipe(minify({ mergeIdents: false }))
 		.pipe(gulp.dest(paths.css.output))
 		.pipe(livereload());
 });
@@ -520,7 +525,7 @@ gulp.task('optimize:js', function() {
 
 gulp.task('build:js', ['optimize:js'], function() {
 	var
-		files = ['libs/modernizr', 'libs/svg4everybody', 'libs/svg4everybody.init', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
+		files = ['libs/modernizr', 'libs/svg4everybody', 'libs/svg4everybody.init', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*', 'libs/analytics'],
 		streams = merge();
 
 	streams.add(gulp
@@ -536,6 +541,13 @@ gulp.task('build:js', ['optimize:js'], function() {
 		.pipe(concat('global.min.js'))
 		.pipe(header(banner, context))
 		.pipe(gulp.dest(paths.js.output))
+		.pipe(livereload())
+	);
+
+	streams.add(gulp
+		.src(path.join(paths.js.input, 'pages', '*.js'))
+		.pipe(header(banner, context))
+		.pipe(gulp.dest(path.join(paths.js.output, 'pages')))
 		.pipe(livereload())
 	);
 

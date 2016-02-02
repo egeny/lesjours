@@ -39,7 +39,10 @@ audio, canvas, iframe, img, picture, svg, video { vertical-align: middle; }
 a {
 	text-decoration: none;
 	color: inherit;
+}
 
+/* Default states for interactive elements */
+a, button {
 	&:hover,
 	&:focus { color: $color-brand; }
 }
@@ -124,7 +127,7 @@ fieldset {
 
 /* Default styles for <figcaption> */
 figcaption {
-	@extend .snake-2;
+	//@extend .snake-2; // TODO
 	@extend .style-meta;
 	margin-top: .75em;
 	margin-left: $gutter * 2.25;
@@ -137,7 +140,7 @@ figcaption {
 		top: -30px;
 	}
 
-	> span { @extend .snake-container; }
+	//> span { @extend .snake-container; }
 
 	.credits {
 		@include font-weight-regular("proxima");
@@ -166,6 +169,8 @@ hr {
 
 /* The <h1> is reserved for the page's title */
 h1 { font-size: 1em; }
+
+// TODO: h2, h3, h4, h5, h6
 
 // Just to be sure
 i, em { font-style: italic; }

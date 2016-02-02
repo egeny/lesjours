@@ -8,10 +8,11 @@ $gutter: grid-gutter("sm");
 	> :first-child { margin-top:    $gutter; }
 	> *            { margin-bottom: $gutter; }
 
-	a {
-		@extend %link;
+	// FIXME
+	/*a {
+		@extend .link;
 		text-transform: inherit;
-	}
+	}*/
 
 	h2 {
 		@include font-weight-light("proxima");
@@ -65,7 +66,9 @@ $gutter: grid-gutter("sm");
 		}
 	}
 
-	ol, ul { @extend .list; }
+	// FIXME
+	//ol, ul { @extend .list; }
+	//.link-unstyled { @extend .link-unstyled; }
 }
 
 @include media("md") {
