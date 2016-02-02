@@ -1,5 +1,19 @@
 /* @group #header */
-$gutter: grid-gutter("sm");
+#bar {
+	a, button {
+		&:hover,
+		&:focus { color: inherit; }
+	}
+
+	button {
+		width:  20px;
+		height: 20px;
+
+		position: absolute;
+		top:    1em;
+		right:  0;
+	}
+}
 
 #header {
 	background: $color-white;
@@ -213,6 +227,11 @@ $gutter: grid-gutter("sm");
 }
 
 @include media("md") {
+	#bar button {
+		margin-top: -10px;
+		top: 50%;
+	}
+
 	.header {
 		height: 85px;
 

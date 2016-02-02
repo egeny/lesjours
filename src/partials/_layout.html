@@ -48,6 +48,7 @@
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
 	{%- from "partials/_macro.html" import icon -%}
+	{% if home %}{% include "partials/_bar.html" %}{% endif %}
 	{% include "partials/_header.html" %}
 	{% block content %}{% endblock %}
 
