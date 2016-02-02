@@ -1,0 +1,23 @@
+{
+	"template": "episode",
+
+	"href": "bilel-episode-1",
+
+	"number": 1,
+	"date": "2016-02-02T10:00+01:00",
+
+	"title": "L'appel à l'ambassade",
+	"intro": "Décapités puis revenus pour vanter les produits Vivendi, « Les Guignols » façon Bolloré ne font plus d'info. Ni d'humour.",
+	"lead":  "Johnny est à la machine à café. Et là, il la confond avec un distributeur : <q>Ah que je veux pas un macchiato, ah que je veux 30 euros en billets de 20.</q> Ceci n’est pas une parodie, ceci est un sketch des <i>Guignols de l’info</i>.",
+
+	"tags": ["Bolloré", "Canal+", "Belmer", "Guignols"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "David Thomson" },
+			{ "Dessin": "Matthieu Méron" }
+		],
+
+		"first": "episode:les-revenants/bilel-episode-1"
+	}
+}
