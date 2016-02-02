@@ -39,32 +39,28 @@
 			"img":      "img/meheut-portrait.jpg",
 			"alt":      "",
 			"title":    "Bertrand Méheut",
-			"subtitle": "64 ans, ex-président du groupe Canal+",
-			"minor":    true
+			"subtitle": "64 ans, ex-président du groupe Canal+"
 		},
 		{
 			"href":     "#",
 			"img":      "img/aprikian-portrait.jpg",
 			"alt":      "",
 			"title":    "Ara Aprikian",
-			"subtitle": "49 ans, ex-chef du pôle gratuit de Canal+",
-			"minor":    true
+			"subtitle": "49 ans, ex-chef du pôle gratuit de Canal+"
 		},
 		{
 			"href":     "#",
 			"img":      "img/portrait-saada.jpg",
 			"alt":      "",
 			"title":    "Maxime Saada",
-			"subtitle": "45 ans, nouveau numéro 2 de Canal+",
-			"minor":    true
+			"subtitle": "45 ans, nouveau numéro 2 de Canal+"
 		},
 		{
 			"href":     "#",
 			"img":      "img/degreef-header.jpg",
 			"alt":      "",
 			"title":    "Alain de Greef",
-			"subtitle": "Défunt directeur des programmes de Canal+",
-			"minor":    true
+			"subtitle": "Défunt directeur des programmes de Canal+"
 		}
 	],
 
