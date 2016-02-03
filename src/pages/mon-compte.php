@@ -30,9 +30,13 @@
 	}
 
 	if (!empty($_POST)) {
-		if (!empty($_POST['password'])) {
-			wp_set_password($_POST['password'], $current_user->ID);
-			wp_set_auth_cookie($current_user->ID, true, false);
+		if (isset($_POST['password'])) {
+			if (empty($_POST['password'])) {
+				$error['password'] = true;
+			} else {
+				wp_set_password($_POST['password'], $current_user->ID);
+				wp_set_auth_cookie($current_user->ID, true, false);
+			}
 		} else {
 			// Sanitize and check received data
 			foreach ($_POST as $field => $value) {
@@ -89,6 +93,7 @@
 						<div class="field">
 							<label for="account-password">Mot de passe</label>
 							<input id="account-password" class="input check" name="password" type="password" placeholder="××××××××" required />
+							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<button class="btn-primary btn-brand md-w-6c md-mh-1c" type="submit">Valider</button>
 					</form>
@@ -99,35 +104,31 @@
 					<a class="md-w-1c mb-2g block" href="https://gravatar.com">
 						<img class="responsive full-height radius" src="<?php echo avatar_url(); ?>" alt="" />
 					</a>
-					<?php
-						// FIXME: errors are disabled for now
-						$error = null;
-					?>
 					<form method="post">
 						<div class="field">
 							<label for="name">Nom</label>
 							<input id="name" class="input check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if ($data['name']) { echo 'value="'.$data['name'].'" '; } ?>required />
-							<?php if ($error['name']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['name']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="firstname">Prénom</label>
 							<input id="firstname" class="input check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if ($data['firstname']) { echo 'value="'.$data['firstname'].'" '; } ?>required />
-							<?php if ($error['firstname']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="address">Adresse</label>
 							<input id="address" class="input check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if ($data['address']) { echo 'value="'.$data['address'].'" '; } ?>required />
-							<?php if ($error['address']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['address']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="zip">Code postal</label>
 							<input id="zip" class="input check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
-							<?php if ($error['zip']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['zip']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="city">Ville</label>
 							<input id="city" class="input check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
-							<?php if ($error['city']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['city']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="country">Pays</label>
