@@ -13,6 +13,9 @@
 	$data  = $_POST;
 	$error = null;
 
+	// Makes sure to have a default country, for the <select>
+	$data['country'] = !empty($data['country']) ? $data['country'] : 'fr';
+
 	$hidden = array(
 		'amount'        => null,
 		'cardfullname'  => null,
