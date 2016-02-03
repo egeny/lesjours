@@ -82,55 +82,55 @@
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mon-abonnement"   class="link external" aria-controls="mon-abonnement"   href="#mon-abonnement"   aria-selected="false" tabindex="-1">Mon abonnement</a></li>
 			</ul>
 
-			<div class="tab-container">
-				<section id="mes-identifiants" class="tab md-w-6c md-ml-1c"  role="tabpanel" aria-labelledby="tab-mes-identifiants" aria-hidden="false">
+			<div class="tab-container md-w-6c md-ml-1c lg-w-10c lg-ml-1c">
+				<section id="mes-identifiants" role="tabpanel" aria-labelledby="tab-mes-identifiants" aria-hidden="false">
 					<h3 class="mb-4g style-meta-large">Mes identifiants</h3>
 					<form method="post">
-						<div class="field">
+						<div class="field lg-w-½">
 							<label for="account-mail">Adresse e-mail</label>
 							<input id="account-mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email"  <?php if ($data['email']) { echo 'value="'.$data['email'].'" '; } ?>disabled required />
 						</div>
-						<div class="field">
+						<div class="field lg-w-½">
 							<label for="account-password">Mot de passe</label>
 							<input id="account-password" class="input check" name="password" type="password" placeholder="××××××××" required />
 							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
-						<button class="btn-primary btn-brand md-w-6c md-mh-1c" type="submit">Valider</button>
+						<button class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c" type="submit">Valider</button>
 					</form>
 				</section>
 
-				<section id="mes-informations" class="tab md-w-6c md-ml-1c"  role="tabpanel" aria-labelledby="tab-mes-informations" aria-hidden="true">
+				<section id="mes-informations" role="tabpanel" aria-labelledby="tab-mes-informations" aria-hidden="true">
 					<h3 class="mb-4g style-meta-large">Mes informations</h3>
-					<a class="md-w-1c mb-2g block" href="https://gravatar.com">
-						<img class="responsive full-height radius" src="<?php echo avatar_url(); ?>" alt="" />
+					<a class="mb-2g sm-w-1c md-w-1c lg-w-1c block" href="https://gravatar.com" target="_blank">
+						<img class="responsive full-height radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
 					</a>
 					<form method="post">
-						<div class="field">
+						<div class="field lg-w-½">
 							<label for="name">Nom</label>
 							<input id="name" class="input check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if ($data['name']) { echo 'value="'.$data['name'].'" '; } ?>required />
 							<?php if ($error['name']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
-						<div class="field">
+						<div class="field lg-w-½">
 							<label for="firstname">Prénom</label>
 							<input id="firstname" class="input check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if ($data['firstname']) { echo 'value="'.$data['firstname'].'" '; } ?>required />
 							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
-						<div class="field">
+						<div class="field lg-w-½">
 							<label for="address">Adresse</label>
 							<input id="address" class="input check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if ($data['address']) { echo 'value="'.$data['address'].'" '; } ?>required />
 							<?php if ($error['address']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
-						<div class="field">
+						<div class="field lg-w-½">
 							<label for="zip">Code postal</label>
 							<input id="zip" class="input check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
 							<?php if ($error['zip']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
-						<div class="field">
+						<div class="field lg-w-½">
 							<label for="city">Ville</label>
 							<input id="city" class="input check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
 							<?php if ($error['city']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
-						<div class="field">
+						<div class="field lg-w-½">
 							<label for="country">Pays</label>
 							<select id="country" name="country" class="select">
 							{% for value, label in countries %}
@@ -138,17 +138,17 @@
 							{% endfor %}
 							</select>
 						</div>
-						<button class="btn-primary btn-brand md-w-6c md-mh-1c" type="submit">Valider</button>
+						<button class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c" type="submit">Valider</button>
 					</form>
 				</section>
 
-				<section id="mon-abonnement" class="tab md-w-6c md-ml-1c"  role="tabpanel" aria-labelledby="tab-mon-abonnement" aria-hidden="true">
-					<h3 class="style-meta-large">Mon abonnement</h3>
+				<section id="mon-abonnement" role="tabpanel" aria-labelledby="tab-mon-abonnement" aria-hidden="true">
+					<h3 class="mb-4g style-meta-large">Mon abonnement</h3>
 					<?php if ($plan) : ?>
-						<p>Vous avez souscrit un abonnement le <?php $day = strftime('%e', $subscription); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $subscription) ?>. <a href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a></p>
-						<h4>Votre formule</h4>
+						<p>Vous avez souscrit un abonnement le <?php $day = strftime('%e', $subscription); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $subscription) ?>. <a class="text-upper fw-bold color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a></p>
+						<h4 class="h5">Votre formule</h4>
 						<p><?php echo $plan['name'] ?> — <?php echo $plan['price'] ?> € par <?php echo $plan['duration'] == '1 year' ? 'an' : 'mois' ?> (expire le <?php $day = strftime('%e', $expire); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $expire) ?>)</p>
-						<a href="?delete" class="btn-primary btn-brand md-w-6c md-mh-1c" type="submit">Se désabonner</a>
+						<a href="?delete" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c" type="submit">Se désabonner</a>
 					<?php else : ?>
 						<p>Vous n’avez pas d’abonnement.</p>
 					<?php endif ?>
