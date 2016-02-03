@@ -184,10 +184,12 @@ ol.list > li {
 	}
 }
 
-.text-left   { text-align: left;   }
-.text-center { text-align: center; }
-.text-right  { text-align: right;  }
-.text-upper  { text-transform: uppercase; }
+.text-left    { text-align: left;   }
+.text-center  { text-align: center; }
+.text-right   { text-align: right;  }
+.text-lower   { text-transform: lowercase; }
+.text-upper   { text-transform: uppercase; }
+.text-inherit { text-transform: inherit; }
 .text-overflow {
 	overflow: hidden;
 	text-overflow: ellipsis;
