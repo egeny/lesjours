@@ -15,7 +15,6 @@
 }
 
 .input,
-.input + .error,
 .select {
 	background: none;
 
@@ -41,7 +40,7 @@
 	&:focus { box-shadow: inset 0 -6px $color-brand; }
 
 	&:disabled {
-		border-color: inherit;
+		box-shadow: inset 0 -2px $color-dark;
 		cursor: not-allowed;
 		color: $color-dark;
 	}
@@ -49,15 +48,21 @@
 
 .input {
 	+ .error {
-		border-color: transparent;
+		padding: .5em 0;    // Same as .input (ease the positioning)
+		margin-bottom: 2em; // Same as .input (ease the positioning)
 
 		position: absolute;
 		bottom: 0;
-		left:   0;
+		right:  0;
 
 		transition: opacity .3s;
 		pointer-events: none;
-		text-align: right;
+
+		// Same as .input
+		@extend %font-proxima;
+		@include font-weight-regular("proxima");
+		line-height: 1.333333;
+
 		color: $color-brand;
 	}
 
