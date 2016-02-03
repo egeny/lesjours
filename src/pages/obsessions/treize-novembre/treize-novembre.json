@@ -15,6 +15,7 @@
 		"episode:treize-novembre/l-empreinte-de-la-peur",
 		"episode:treize-novembre/content-de-vous-avoir-revu",
 		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"episode:treize-novembre/romagnan-non",
 		"episode:treize-novembre/a-l-intention-des-victimes",
 		"episode:treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille",
 		"episode:treize-novembre/fiere-de-la-france",
@@ -29,7 +30,7 @@
 		"episode:treize-novembre/un-an-charlie",
 		"episode:treize-novembre/etat-urgence-mort-lente",
 		"episode:treize-novembre/legitime-defense-revient",
-		"episode:treize-novembre/urvoas-taubira"		
+		"episode:treize-novembre/urvoas-taubira"
 		
 	],
 
@@ -39,7 +40,7 @@
 			"img":      "img/blocheportrait2.jpg",
 			"alt":      "",
 			"title":    "Patrick Bloche",
-			"subtitle": "59 ans, député et ancien maire du XIe"
+			"subtitle": "59 ans, député PS et ancien maire du XIe"
 		},
 		{
 			"href":     "foi-sous-les-bombes",
@@ -67,7 +68,7 @@
 			"img":      "img/urvoasportrait.jpg",
 			"alt":      "",
 			"title":    "Jean-Jacques Urvoas",
-			"subtitle": "56 ans, deuxième flic de France"
+			"subtitle": "56 ans, député PS, contrôle l'état d'urgence"
 		},
 		{
 			"href":     "content-de-vous-avoir-revu",
