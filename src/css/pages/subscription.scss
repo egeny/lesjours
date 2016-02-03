@@ -120,7 +120,10 @@
 		line-height: 100px; // Prefer px since the font-size might vary
 	}
 
-	img { margin: 35px 0 30px; }
+	> :last-child a {
+		background: url(img/jouristes.svg) 50% 35px / 202px 39px no-repeat;
+		padding-top: 105px;
+	}
 
 	.currency {
 		margin-left: .25em;
