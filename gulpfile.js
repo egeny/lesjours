@@ -237,6 +237,8 @@ env.addFilter('test', function(pattern, input) {
 	return pattern.test(input || '');
 });
 
+env.addGlobal('countries', JSON.parse(fs.readFileSync(path.join(paths.partials, 'countries.json'))));
+
 gulp.task('default', function() {
 	sequence('clean', 'build');
 });

@@ -131,7 +131,7 @@
 
 			if (!$error) {
 				// Add additionnal metadata
-				foreach (array('plan', 'address', 'zip', 'city', 'payment') as $field) {
+				foreach (array('plan', 'address', 'zip', 'city', 'country', 'payment') as $field) {
 					add_user_meta($user_id, $field, $data[$field], true);
 				}
 
@@ -289,6 +289,14 @@
 							<label for="city">Ville</label>
 							<input id="city" class="input check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
 							<?php if ($error['city']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+						</div>
+						<div class="field">
+							<label for="country">Pays</label>
+							<select id="country" name="country" class="select">
+							{% for value, label in countries %}
+								<option value="{{ value }}"<?php if ($data['country'] == '{{ value }}') { echo ' selected'; } ?>>{{ label }}</option>
+							{% endfor %}
+							</select>
 						</div>
 					</fieldset>
 					<?php endif ?>
