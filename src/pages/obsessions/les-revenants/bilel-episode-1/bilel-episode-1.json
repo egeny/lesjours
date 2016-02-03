@@ -7,10 +7,11 @@
 	"date": "2016-02-02T10:00+01:00",
 
 	"title": "L'appel à l'ambassade",
-	"intro": "Décapités puis revenus pour vanter les produits Vivendi, « Les Guignols » façon Bolloré ne font plus d'info. Ni d'humour.",
-	"lead":  "Johnny est à la machine à café. Et là, il la confond avec un distributeur : <q>Ah que je veux pas un macchiato, ah que je veux 30 euros en billets de 20.</q> Ceci n’est pas une parodie, ceci est un sketch des <i>Guignols de l’info</i>.",
+	"intro": "Après plus d’un an au sein de l'Etat islamique et les attentats de novembre, un jihadiste de 27 ans a décidé de rentrer en France avec sa femme et leurs trois enfants.",
+	"subtitle": "Après plus d’un an au sein de l'Etat islamique et les attentats de novembre, un jihadiste de 27 ans a décidé de rentrer en France avec sa femme et leurs trois enfants.",
+	"lead":  "C’est un appel téléphonique qui pourrait ressembler à n’importe quel autre entre un Français lambda et une administration quelconque. L’homme demande des renseignements. Le fonctionnaire répond. A une nuance près. Il s’agit d’une communication téléphonique entre un jihadiste membre de l’Etat islamique (EI) en Syrie et un fonctionnaire du consulat de France à Istanbul.",
 
-	"tags": ["Bolloré", "Canal+", "Belmer", "Guignols"],
+	"tags": ["Jihadisme", "13 novembre"],
 
 	"rel": {
 		"authors": [
