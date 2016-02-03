@@ -38,7 +38,7 @@
 		$expired = get_user_meta($current_user->ID, 'expire');
 
 		// Found an expiration (meaning the user has previously subscribed)
-		if (is_array($expired)) {
+		if (is_array($expired) && isset($expired[0])) {
 			$expired = time() > strtotime($expired[0]);
 			$state   = !$expired ? 'subscribed' : $state;
 			$title   = 'Renouveler mon abonnement';
