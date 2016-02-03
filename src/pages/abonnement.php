@@ -80,7 +80,7 @@
 			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 			// Prefer redirecting to remove informations in the URL
-			die(header('Location: /abonnement.html?result='.($error ? $error : 'success')));
+			die(header('Location: ?result='.($error ? $error : 'success')));
 		}
 	}
 
