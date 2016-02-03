@@ -223,10 +223,6 @@
 					</div>
 				</div>
 			<?php else : ?>
-				<?php
-					// FIXME: errors are disabled for now
-					$error = null;
-				?>
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php echo $title ?></h2>
 				<form method="post" class="mb-2g md-w-6c md-ml-1c relative">
 					<fieldset id="formule" class="mb-4g">
@@ -280,38 +276,38 @@
 						<div class="field">
 							<label for="name">Nom</label>
 							<input id="name" class="input check md-white-check lg-white-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if ($data['name']) { echo 'value="'.$data['name'].'" '; } ?>required />
-							<?php if ($error['name']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['name']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="firstname">Prénom</label>
 							<input id="firstname" class="input check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if ($data['firstname']) { echo 'value="'.$data['firstname'].'" '; } ?>required />
-							<?php if ($error['firstname']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="email">Adresse e-mail</label>
 							<input id="email" class="input check md-white-check lg-white-check" name="email" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['email']) { echo 'value="'.$data['email'].'" '; } ?>required />
-							<?php if ($error['email']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
-							<?php if ($error['account']) : ?><span class="error color-brand">Ce compte existe</span><?php endif ?>
+							<?php if ($error['email'])   : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['account']) : ?><span class="error">Ce compte existe</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="password">Mot de passe</label>
 							<input id="password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
-							<?php if ($error['password']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="address">Adresse</label>
 							<input id="address" class="input check md-white-check lg-white-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if ($data['address']) { echo 'value="'.$data['address'].'" '; } ?>required />
-							<?php if ($error['address']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['address']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="zip">Code postal</label>
 							<input id="zip" class="input check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
-							<?php if ($error['zip']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['zip']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="city">Ville</label>
 							<input id="city" class="input check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
-							<?php if ($error['city']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['city']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="country">Pays</label>
