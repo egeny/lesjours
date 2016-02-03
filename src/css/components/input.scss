@@ -1,16 +1,21 @@
 /* @group Input */
-.field label {
-	margin-bottom: .5em;
-	display: inline-block;
-	cursor: pointer;
+.field {
+	position: relative; // Used to position the .error message
 
-	@extend %font-brandon;
-	@include font-weight-black("brandon");
-	font-size: 1.25em;
-	line-height: 1.25;
+	label {
+		margin-bottom: .5em;
+		display: inline-block;
+		cursor: pointer;
+
+		@extend %font-brandon;
+		@include font-weight-black("brandon");
+		font-size: 1.25em;
+		line-height: 1.25;
+	}
 }
 
 .input,
+.input + .error,
 .select {
 	background: none;
 
@@ -39,6 +44,22 @@
 }
 
 .input {
+	+ .error {
+		border-color: transparent;
+
+		position: absolute;
+		bottom: 0;
+		left:   0;
+
+		transition: opacity .3s;
+		pointer-events: none;
+		text-align: right;
+		color: $color-brand;
+	}
+
+	&:focus + .error,
+	&:valid + .error { opacity: 0; }
+
 	&:valid {
 		background-repeat: no-repeat;
 		background-position: 100% 50%;
@@ -124,7 +145,10 @@
 }
 
 @include media("md") {
-	.field label { font-size: 1.5em;   }
-	.input       { font-size: 1.125em; }
+	.field label { font-size: 1.5em; }
+
+	.input,
+	.input + .error,
+	.select { font-size: 1.125em; }
 }
 /* @end Input */
