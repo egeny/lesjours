@@ -31,6 +31,19 @@
 	);
 
 	$state = null;
+	$title = 'Devenir jouriste';
+
+	// Check if we need to use another $title or $state
+	if (is_user_logged_in()) {
+		$expired = get_user_meta($current_user->ID, 'expire');
+
+		// Found an expiration (meaning the user has previously subscribed)
+		if (is_array($expired)) {
+			$expired = time() > strtotime($expired[0]);
+			$state   = !$expired ? 'subscribed' : $state;
+			$title   = 'Renouveler mon abonnement';
+		}
+	}
 
 	function signature($array) {
 		$hash = array();
@@ -181,7 +194,7 @@
 					document.getElementById("redirect").submit();
 				</script>
 			<?php elseif ($state == 'result') : ?>
-				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if (is_user_logged_in()) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
+				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Devenir jouriste</h2>
 				<?php if ($_GET['result'] == 'success') : ?>
 					<div class="md-ml-1c lg-ml-1c">
 						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("check") }}</i>Confirmation d’abonnement</h3>
@@ -201,12 +214,20 @@
 						</div>
 					</div>
 				<?php endif ?>
+			<?php elseif ($state == 'subscribed') : ?>
+				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Renouveler mon abonnement</h2>
+				<div class="md-ml-1c lg-ml-1c">
+					<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("check") }}</i>Vous êtes déjà abonné</h3>
+					<div class="default-content">
+						<p>Vous pouvez naviguer sur le site.</p>
+					</div>
+				</div>
 			<?php else : ?>
 				<?php
 					// FIXME: errors are disabled for now
 					$error = null;
 				?>
-				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if (is_user_logged_in()) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
+				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php echo $title ?></h2>
 				<form method="post" class="mb-2g md-w-6c md-ml-1c relative">
 					<fieldset id="formule" class="mb-4g">
 						<legend class="style-meta-large relative">Choisir ma formule</legend>
