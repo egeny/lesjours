@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "making-of-college",
+
+	"number": 5,
+	"date": "2016-02-02T13:50+01:00",
+
+	"title": "« Si ma famille le sait, ils me tuent »",
+	"intro": "Dans l'obsession Les années collège, le photographe Simon Lambert suit la 3e B du collège Aimé-Césaire. Il apporte un éclairage sur certaines de ses images.",
+	"lead":  "Lorsque la rédaction des <i>Jours</i> a rencontré Simon Lambert, ce dernier s’est déclaré à l’aise dans <q>les lieux fermés et avec les gamins.</q> Nous n’avons donc pas hésité à lui confier le reportage au long cours que nous menons au collège Aimé-Césaire à Paris avec la classe de 3e B.</q>",
+
+	"tags": ["Photographie", "Education", "Identité"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sebastian-calvet" },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-jours-a-l-oeil/ep1-munshi-et-abul",
+		"next":  "episode:les-jours-a-l-oeil/ep2-bana-alum",
+		"prev": "episode:les-jours-a-l-oeil/making-of-college",
+		"last":  "episode:les-jours-a-l-oeil/ep4-makingof"
+	}
+}
