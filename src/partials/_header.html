@@ -43,17 +43,17 @@
 	</nav><!-- end of #menu -->
 
 	<div id="login" class="modal" role="dialog" tabindex="-1">
-		<form action="/session" method="post" role="document">
+		<form class="sm-w-100 md-w-4c lg-w-4c" action="/session" method="post" role="document">
 			<fieldset>
 				<legend class="style-meta-larger mb-2g">Se connecter</legend>
 				<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
 				<div class="field">
 					<label for="mail">Adresse e-mail</label>
-					<input id="mail" class="check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
+					<input id="mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
 				</div>
 				<div class="field">
 					<label for="password">Mot de passe</label>
-					<input id="password" class="check" name="password" type="password" placeholder="××××××××" required />
+					<input id="password" class="input check" name="password" type="password" placeholder="××××××××" required />
 				</div>
 				<a class="link external style-meta" href="#">J’ai oublié mon mot de passe</a>
 				<button class="btn-primary btn-brand full-width mv-4g" type="submit">Valider</button>

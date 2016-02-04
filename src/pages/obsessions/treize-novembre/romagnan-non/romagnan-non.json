@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "romagnan-non",
+
+	"number": 6,
+	"date": "2015-11-19T10:00+01:00",
+
+	"title": "Barbara Romagnan vote non",
+	"intro": "<strong>Députés en état d’urgence.</strong> L’élue socialiste du Doubs fait partie des 6 députés sur 577 à voter contre la prolongation de cet état d’exception.",
+	"subtitle": "<strong>Députés en état d’urgence.</strong> L’élue socialiste du Doubs fait partie des 6 députés sur 577 à voter contre la prolongation de cet état d’exception.",
+	"lead": "Jeudi 19 novembre, moins d’une semaine après les attentats, les députés doivent voter le prolongement de l’état d’urgence pour trois mois. Lorsqu’elle arrive à l’Assemblée nationale le matin, Barbara Romagnan est convaincue mais pas tout à fait décidée.",
+	"tags": ["13 Novembre", "Etat d'urgence", "Parti socialiste", "sécurité", "Jean-Jacques Urvoas"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": "Albert Facelly / Divergence-images" }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"next":  "episode:treize-novembre/a-l-intention-des-victimes",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}

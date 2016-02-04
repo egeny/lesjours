@@ -28,8 +28,7 @@
 
 	/* Use an inline SVG as a mask */
 	&::after {
-		/* Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox) */
-		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 105'><path fill='white' fill-rule='evenodd' d='M54.04 95.624C77.7 92.654 96 72.464 96 48 96 21.49 74.51 0 48 0S0 21.49 0 48c0 24.832 18.856 45.26 43.032 47.746L48.5 105l5.54-9.376zM0 0h96.552v105H0V0z' /></svg>");
+		background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 96 105'><path fill='#{hex-to-rgb($color-white)}' fill-rule='evenodd' d='M54.04 95.624C77.7 92.654 96 72.464 96 48 96 21.49 74.51 0 48 0S0 21.49 0 48c0 24.832 18.856 45.26 43.032 47.746L48.5 105l5.54-9.376zM0 0h96.552v105H0V0z' /></svg>");
 
 		content: "";
 		@include overlay;
@@ -55,7 +54,7 @@
 		outline: 0;
 
 		&::before {
-			background: rgba($color-black, .6) url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='white' d='M8.75 3.5l22 12.503-22 12.5V3.5z' /></svg>") no-repeat center;
+			background: rgba($color-black, .6) url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='#{hex-to-rgb($color-white)}' d='M8.75 3.5l22 12.503-22 12.5V3.5z' /></svg>") no-repeat center;
 			background-size: 50%;
 
 			width:  inherit;
@@ -69,7 +68,7 @@
 		}
 
 		&::after {
-			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'><path fill='white' d='M9.735 0L5.007 8 .28 0h9.455z' /></svg>");
+			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 8'><path fill='#{hex-to-rgb($color-white)}' d='M9.735 0L5.007 8 .28 0h9.455z' /></svg>");
 
 			width:  10px;
 			height: 8px;
@@ -114,7 +113,7 @@
 
 	&.playing {
 		&::before { animation-play-state: running; }
-		button::before { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='white' d='M12.5 29.5v-27h-9v27h9zm7 0h9v-27h-9v27z' /></svg>"); }
+		button::before { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='#{hex-to-rgb($color-white)}' d='M12.5 29.5v-27h-9v27h9zm7 0h9v-27h-9v27z' /></svg>"); }
 	}
 }
 

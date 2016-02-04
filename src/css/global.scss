@@ -175,6 +175,8 @@ h1 { font-size: 1em; }
 // Just to be sure
 i, em { font-style: italic; }
 
+ins { text-decoration: none; }
+
 label { cursor: pointer; }
 
 /* Default styles for <ol> and <ul> */
@@ -184,7 +186,7 @@ ol, ul {
 }
 
 /* Set a default margin for <p> */
-p { margin-bottom: 1.5em; }
+p { margin-bottom: $gutter; }
 
 /* Set the correct quotes */
 q {
@@ -252,6 +254,8 @@ textarea { resize: vertical; }
 			margin-top:    $gutter;
 			margin-bottom: $gutter;
 		}
+
+		p { margin-bottom: $gutter; }
 	}
 }
 
@@ -273,6 +277,8 @@ textarea { resize: vertical; }
 			margin-top:    $gutter;
 			margin-bottom: $gutter;
 		}
+
+		p { margin-bottom: $gutter; }
 	}
 }
 

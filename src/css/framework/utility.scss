@@ -16,15 +16,17 @@ $margin: grid-margin("sm");
 
 .responsive { @include responsive; }
 
-.alpha-10, .α-10 { opacity: .1; }
-.alpha-20, .α-20 { opacity: .2; }
-.alpha-30, .α-30 { opacity: .3; }
-.alpha-40, .α-40 { opacity: .4; }
-.alpha-50, .α-50 { opacity: .5; }
-.alpha-60, .α-60 { opacity: .6; }
-.alpha-70, .α-70 { opacity: .7; }
-.alpha-80, .α-80 { opacity: .8; }
-.alpha-90, .α-90 { opacity: .9; }
+.alpha-10, .α-10 { opacity: .1;  }
+.alpha-20, .α-20 { opacity: .2;  }
+.alpha-25, .α-25 { opacity: .25; }
+.alpha-30, .α-30 { opacity: .3;  }
+.alpha-40, .α-40 { opacity: .4;  }
+.alpha-50, .α-50 { opacity: .5;  }
+.alpha-60, .α-60 { opacity: .6;  }
+.alpha-70, .α-70 { opacity: .7;  }
+.alpha-75, .α-75 { opacity: .75; }
+.alpha-80, .α-80 { opacity: .8;  }
+.alpha-90, .α-90 { opacity: .9;  }
 
 .bg-left-top      { background-position: 0 0;       }
 .bg-left          { background-position: 0 50%;     }
@@ -143,7 +145,7 @@ ol.list > li {
 
 // Same as previous, but with a 20% alpha fill
 .pattern-alpha {
-	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='rgba(0, 0, 0, .2)' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path fill='#{rgba($color-black, .2)}' d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>");
 	background-size: 2px 4px;
 }
 
@@ -153,8 +155,7 @@ ol.list > li {
 
 
 %quote {
-	// Please note that the fill color have to be "white" instead of #FFF (otherwise it won't work in firefox)
-	background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='white' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>");
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='#{hex-to-rgb($color-white)}' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>");
 	background-repeat: no-repeat;
 }
 
@@ -183,10 +184,12 @@ ol.list > li {
 	}
 }
 
-.text-left   { text-align: left;   }
-.text-center { text-align: center; }
-.text-right  { text-align: right;  }
-.text-upper  { text-transform: uppercase; }
+.text-left    { text-align: left;   }
+.text-center  { text-align: center; }
+.text-right   { text-align: right;  }
+.text-lower   { text-transform: lowercase; }
+.text-upper   { text-transform: uppercase; }
+.text-inherit { text-transform: inherit; }
 .text-overflow {
 	overflow: hidden;
 	text-overflow: ellipsis;

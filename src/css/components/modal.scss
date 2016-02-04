@@ -16,11 +16,17 @@ $gutter: grid-gutter("sm");
 	left:   0;
 	z-index: 20000;
 
+	@extend %font-proxima;
+	@include font-weight-regular("proxima");
+
 	&:target { display: block; }
 
 	[role="document"] {
 		background: $color-white;
+
+		box-sizing: border-box;
 		padding: $gutter;
+
 		color: $color-main;
 	}
 

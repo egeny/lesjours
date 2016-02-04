@@ -1,5 +1,7 @@
 /* @group Input */
 .field {
+	position: relative; // Used to position the .error message
+
 	label {
 		margin-bottom: .5em;
 		display: inline-block;
@@ -10,45 +12,84 @@
 		font-size: 1.25em;
 		line-height: 1.25;
 	}
+}
 
-	input[type="email"],
-	input[type="password"],
-	input[type="text"] {
-		background: none;
+.input,
+.select {
+	background: none;
 
-		width: 100%;
-		padding: .5em 0;
-		border: 0;
-		border-bottom: 2px solid $color-brand-light;
-		border-radius: 0; // Some user-agent have a default border-radius
-		margin-bottom: 2em;
+	appearance: none; // Input on iOS are a bit messed-up, this will allow to use a box-shadow
+	width: 100%;
+	padding: .5em 0;
+	border: 0;
+	border-radius: 0; // Some user-agent have a default border-radius
+	margin-bottom: 2em;
 
-		transition: border-color .3s;
-		outline: 0;
+	transition: box-shadow .15s ease-in-out;
 
+	box-shadow: inset 0 -2px $color-brand-light;
+	outline: 0;
+
+	@extend %font-proxima;
+	@include font-weight-regular("proxima");
+	line-height: 1.333333;
+
+	&:hover { box-shadow: inset 0 -6px $color-brand-light; }
+
+	&:active,
+	&:focus { box-shadow: inset 0 -6px $color-brand; }
+
+	&:disabled {
+		box-shadow: inset 0 -2px $color-dark;
+		cursor: not-allowed;
+		color: $color-dark;
+	}
+}
+
+.input {
+	+ .error {
+		padding: .5em 0;    // Same as .input (ease the positioning)
+		margin-bottom: 2em; // Same as .input (ease the positioning)
+
+		position: absolute;
+		bottom: 0;
+		right:  0;
+
+		transition: opacity .3s;
+		pointer-events: none;
+
+		// Same as .input
 		@extend %font-proxima;
 		@include font-weight-regular("proxima");
 		line-height: 1.333333;
 
-		&:active,
-		&:focus { border-color: $color-brand; }
-
-		&:disabled {
-			border-color: inherit;
-			cursor: not-allowed;
-			color: $color-dark;
-		}
-
-		&:valid {
-			background-repeat: no-repeat;
-			background-position: 100% 50%;
-			background-size: 1em 1.4em;
-		}
-
-		&:invalid { box-shadow: none; } // Disable default box-shadow in Firefox
-		&.check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
-		&.white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+		color: $color-brand;
 	}
+
+	&:focus + .error,
+	&:valid + .error { opacity: 0; }
+
+	&:valid {
+		background-repeat: no-repeat;
+		background-position: 100% 50%;
+		background-size: 1em 1.4em;
+	}
+
+	&.check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{hex-to-rgb($color-main)}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+	&.white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{hex-to-rgb($color-white)}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+}
+
+.select {
+	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 7'><path fill='#{hex-to-rgb($color-brand-light)}' d='M0 0h13L6.5 7 0 0z'/></svg>") calc(100% - 8px) 50% / 13px 7px no-repeat;
+
+	&:active,
+	&:focus { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 7'><path fill='#{hex-to-rgb($color-brand)}' d='M0 0h13L6.5 7 0 0z'/></svg>"); }
+
+	// Remove the focus ring on firefox
+	/*&:-moz-focusring {
+		color: transparent; // It seems to be the only way :/
+		text-shadow: 0 0 0 $color-main; // Now we lost the color inheritance :/
+	}*/
 }
 
 .checkbox[type],
@@ -103,24 +144,18 @@
 
 @each $device, $grid in $grids {
 	@include media($device, $strict: true) {
-		.field {
-			input[type="email"],
-			input[type="password"],
-			input[type="text"] {
-				&.#{$device}-check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{$color-main}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
-				&.#{$device}-white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
-			}
+		.input {
+			&.#{$device}-check:valid       { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{hex-to-rgb($color-main)}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
+			&.#{$device}-white-check:valid { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{hex-to-rgb($color-white)}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>"); }
 		}
 	}
 }
 
 @include media("md") {
-	.field {
-		label { font-size: 1.5em; }
+	.field label { font-size: 1.5em; }
 
-		input[type="email"],
-		input[type="password"],
-		input[type="text"] { font-size: 1.125em; }
-	}
+	.input,
+	.input + .error,
+	.select { font-size: 1.125em; }
 }
 /* @end Input */

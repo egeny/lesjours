@@ -13,6 +13,9 @@
 	$data  = $_POST;
 	$error = null;
 
+	// Makes sure to have a default country, for the <select>
+	$data['country'] = !empty($data['country']) ? $data['country'] : 'fr';
+
 	$hidden = array(
 		'amount'        => null,
 		'cardfullname'  => null,
@@ -28,6 +31,19 @@
 	);
 
 	$state = null;
+	$title = 'Devenir jouriste';
+
+	// Check if we need to use another $title or $state
+	if (is_user_logged_in()) {
+		$expired = get_user_meta($current_user->ID, 'expire');
+
+		// Found an expiration (meaning the user has previously subscribed)
+		if (is_array($expired) && isset($expired[0])) {
+			$expired = time() > strtotime($expired[0]);
+			$state   = !$expired ? 'subscribed' : $state;
+			$title   = 'Renouveler mon abonnement';
+		}
+	}
 
 	function signature($array) {
 		$hash = array();
@@ -77,7 +93,7 @@
 			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 			// Prefer redirecting to remove informations in the URL
-			die(header('Location: /abonnement.html?result='.($error ? $error : 'success')));
+			die(header('Location: ?result='.($error ? $error : 'success')));
 		}
 	}
 
@@ -131,7 +147,7 @@
 
 			if (!$error) {
 				// Add additionnal metadata
-				foreach (array('plan', 'address', 'zip', 'city', 'payment') as $field) {
+				foreach (array('plan', 'address', 'zip', 'city', 'country', 'payment') as $field) {
 					add_user_meta($user_id, $field, $data[$field], true);
 				}
 
@@ -178,7 +194,7 @@
 					document.getElementById("redirect").submit();
 				</script>
 			<?php elseif ($state == 'result') : ?>
-				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if (is_user_logged_in()) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
+				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Devenir jouriste</h2>
 				<?php if ($_GET['result'] == 'success') : ?>
 					<div class="md-ml-1c lg-ml-1c">
 						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("check") }}</i>Confirmation d’abonnement</h3>
@@ -198,12 +214,16 @@
 						</div>
 					</div>
 				<?php endif ?>
+			<?php elseif ($state == 'subscribed') : ?>
+				<h2 class="mt-4g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Renouveler mon abonnement</h2>
+				<div class="md-ml-1c lg-ml-1c">
+					<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("check") }}</i>Vous êtes déjà abonné</h3>
+					<div class="default-content">
+						<p>Vous pouvez naviguer sur le site.</p>
+					</div>
+				</div>
 			<?php else : ?>
-				<?php
-					// FIXME: errors are disabled for now
-					$error = null;
-				?>
-				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php if (is_user_logged_in()) : ?>Renouveler mon abonnement<?php else : ?>Devenir jouriste<?php endif ?></h2>
+				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger"><?php echo $title ?></h2>
 				<form method="post" class="mb-2g md-w-6c md-ml-1c relative">
 					<fieldset id="formule" class="mb-4g">
 						<legend class="style-meta-large relative">Choisir ma formule</legend>
@@ -241,7 +261,6 @@
 							</li>
 							<li class="ma-1g">
 								<a href="mailto:abonnement@lesjours.fr">
-									<img width="202" height="39" src="img/jouristes.svg" alt="" />
 									<span class="name">Jouristes groupés</span>
 									<span class="desc">Tarifs sur mesure</span>
 									<small>Réservé aux entreprises, collectivités, communautés, sectes</small>
@@ -256,39 +275,47 @@
 						<legend class="mb-2g style-meta-large relative">Mes coordonnées</legend>
 						<div class="field">
 							<label for="name">Nom</label>
-							<input id="name" class="check md-white-check lg-white-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if ($data['name']) { echo 'value="'.$data['name'].'" '; } ?>required />
-							<?php if ($error['name']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<input id="name" class="input check md-white-check lg-white-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if ($data['name']) { echo 'value="'.$data['name'].'" '; } ?>required />
+							<?php if ($error['name']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="firstname">Prénom</label>
-							<input id="firstname" class="check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if ($data['firstname']) { echo 'value="'.$data['firstname'].'" '; } ?>required />
-							<?php if ($error['firstname']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<input id="firstname" class="input check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if ($data['firstname']) { echo 'value="'.$data['firstname'].'" '; } ?>required />
+							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="email">Adresse e-mail</label>
-							<input id="email" class="check md-white-check lg-white-check" name="email" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['email']) { echo 'value="'.$data['email'].'" '; } ?>required />
-							<?php if ($error['email']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
-							<?php if ($error['account']) : ?><span class="error color-brand">Ce compte existe</span><?php endif ?>
+							<input id="email" class="input check md-white-check lg-white-check" name="email" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['email']) { echo 'value="'.$data['email'].'" '; } ?>required />
+							<?php if ($error['email'])   : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<?php if ($error['account']) : ?><span class="error">Ce compte existe</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="password">Mot de passe</label>
-							<input id="password" class="check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
-							<?php if ($error['password']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<input id="password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
+							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="address">Adresse</label>
-							<input id="address" class="check md-white-check lg-white-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if ($data['address']) { echo 'value="'.$data['address'].'" '; } ?>required />
-							<?php if ($error['address']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<input id="address" class="input check md-white-check lg-white-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if ($data['address']) { echo 'value="'.$data['address'].'" '; } ?>required />
+							<?php if ($error['address']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="zip">Code postal</label>
-							<input id="zip" class="check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
-							<?php if ($error['zip']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<input id="zip" class="input check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
+							<?php if ($error['zip']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="city">Ville</label>
-							<input id="city" class="check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
-							<?php if ($error['city']) : ?><span class="error color-brand">Vérifiez ce champ</span><?php endif ?>
+							<input id="city" class="input check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
+							<?php if ($error['city']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+						</div>
+						<div class="field">
+							<label for="country">Pays</label>
+							<select id="country" name="country" class="select">
+							{% for value, label in countries %}
+								<option value="{{ value }}"<?php if ($data['country'] == '{{ value }}') { echo ' selected'; } ?>>{{ label }}</option>
+							{% endfor %}
+							</select>
 						</div>
 					</fieldset>
 					<?php endif ?>
@@ -305,7 +332,7 @@
 								Prélèvement
 							</label>
 							<label class="col md-w-auto pr-2g pl-0">
-								<input class="radio" type="radio" name="payment" value="card" <?php if ($data['payment'] == 'card') : ?>checked <?php endif ?>required />
+								<input class="radio" type="radio" name="payment" value="card" checked required />
 								<span class="radio"></span>
 								Carte bancaire
 							</label>

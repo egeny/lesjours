@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "bilel-episode-2",
+
+	"number": 2,
+	"date": "2016-02-02T10:00+01:00",
+
+	"title": "« Ici, je fais plus de mal que de bien »",
+	"intro": "En 2014, Bilel est parti pour la Syrie où il a rejoint une unité de jihadistes d'Al Qaeda puis l'Etat islamique. Il raconte son parcours et les raisons de son retour en France.",
+	"subtitle": "En 2014, Bilel est parti pour la Syrie où il a rejoint une unité de jihadistes d'Al Qaeda puis l'Etat islamique. Il raconte son parcours et les raisons de son retour en France.",
+	"lead":  "La décision de quitter l’Etat islamique (EI), est venue progressivement. D’abord, dit Bilel, en raison d’une spirale de violence dans laquelle le groupe s’est engagé. <q>Je suis pas venu en Syrie pour faire du mal, je suis venu faire du bien</q>",
+
+	"tags": ["Jihadisme", "13 novembre"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "David Thomson" },
+			{ "Illustrations": "Matthieu Méron" }
+		],
+
+		"first": "episode:les-revenants/bilel-episode-1",
+		"prev": "episode:les-revenants/bilel-episode-1"
+	}
+}

@@ -120,7 +120,10 @@
 		line-height: 100px; // Prefer px since the font-size might vary
 	}
 
-	img { margin: 35px 0 30px; }
+	> :last-child a {
+		background: url(img/jouristes.svg) 50% 35px / 202px 39px no-repeat;
+		padding-top: 105px;
+	}
 
 	.currency {
 		margin-left: .25em;
@@ -180,7 +183,7 @@
 		color: $color-brand;
 
 		&::after {
-			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") 0 / 100%;
+			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{hex-to-rgb($color-white)}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") 0 / 100%;
 
 			width:  28px;
 			height: 20px;
@@ -235,7 +238,7 @@
 		background:
 			url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>") left/2px 4px,
 			linear-gradient(to bottom, rgba($color-black, .6), rgba($color-black, .6)),
-			url("img/back/subscription.jpg") center/cover;
+			url("img/back/subscription.jpg") center / cover $color-black;
 		color: $color-white;
 
 		.default-content { padding-left: 0; }
