@@ -107,7 +107,7 @@ var
 		}
 	},
 
-	root = '',
+	root = argv.root || '',
 
 	// A set of tasks to launch on different contexts
 	tasks = {
