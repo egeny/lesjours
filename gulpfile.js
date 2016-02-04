@@ -109,7 +109,7 @@ var
 	tasks = {
 		'copy:img': function(context) {
 			return function() {
-				return gulp.src(path.join(context.input, '/**/*.{ico,gif,jpg,png}'))
+				return gulp.src(path.join(context.input, '**/*.{ico,gif,jpg,png}'))
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
@@ -125,7 +125,7 @@ var
 
 		'copy:svg': function(context) {
 			return function() {
-				return gulp.src([path.join(context.input, '*.svg')])
+				return gulp.src(path.join(context.input, '**/*.svg'))
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
