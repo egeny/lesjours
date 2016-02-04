@@ -18,46 +18,39 @@
 
 	"people": [
 		{
-			"href":     "ep3-portrait-belmer",
-			"img":      "img/belmer-portrait.jpg",
+			"href":     "",
+			"img":      "img/bilel.jpg",
 			"alt":      "",
-			"title":    "Rodolphe Belmer",
-			"subtitle": "46 ans, ex-numéro 2 de Canal+"
+			"title":    "Bilel",
+			"subtitle": "27 ans, "
 		},
 		{
-			"href":     "ep1-guignols",
-			"img":      "img/bollore-portrait.jpg",
+			"href":     "",
+			"img":      "img/nabia.jpg",
 			"alt":      "",
-			"title":    "Vincent Bolloré",
-			"subtitle": "63 ans, patron (de Vivendi, d'Havas, de Canal+…)"
+			"title":    "Nabia",
+			"subtitle": "22 ans, la femme de Bilel"
 		},
 		{
-			"href":     "ep2-plug-canal",
-			"img":      "img/meheut-portrait.jpg",
+			"href":     "",
+			"img":      "img/abumaryam.jpg",
 			"alt":      "",
-			"title":    "Bertrand Méheut",
-			"subtitle": "64 ans, ex-président du groupe Canal+"
-		},
-		{
-			"href":     "#",
-			"img":      "img/aprikian-portrait.jpg",
-			"alt":      "",
-			"title":    "Ara Aprikian",
-			"subtitle": "49 ans, ex-chef du pôle gratuit de Canal+"
+			"title":    "Abu Maryam",
+			"subtitle": "Le jihadiste avec lequel Bilel a rejoint l'EI"
 		},
 		{
 			"href":     "#",
-			"img":      "img/portrait-saada.jpg",
+			"img":      "img/ibrahim-benchekroun.jpg",
 			"alt":      "",
-			"title":    "Maxime Saada",
-			"subtitle": "45 ans, nouveau numéro 2 de Canal+"
+			"title":    "Ibrahim Benchekroun",
+			"subtitle": "Fondateur de la brigade Harakat Sham al Islam, liée à Al Qaeda"
 		},
 		{
 			"href":     "#",
-			"img":      "img/degreef-header.jpg",
+			"img":      "img/al-bagdadi.jpg",
 			"alt":      "",
-			"title":    "Alain de Greef",
-			"subtitle": "Défunt directeur des programmes de Canal+"
+			"title":    "Abu Bakr al Bagdadi",
+			"subtitle": "44 ans, calife autoproclamé de l'Etat islamique"
 		}
 	],
 
@@ -71,9 +64,9 @@
 
 	"places": [
 		{
-			"img":   "img/carte-l-empire.jpg",
-			"title": "Les cinq royaumes de Bolloré",
-			"href":  "https://www.google.com/maps/d/edit?mid=zEN87Ui19vGI.kn86OklBgDys&usp=sharing"
+			"img":   "",
+			"title": "",
+			"href":  ""
 		}
 	],
 
@@ -84,9 +77,9 @@
 			"icon": "download",
 			"items": [
 				{
-					"href": "doc/tract-libre.pdf",
-					"title": "L'inquiétude de +Libres",
-					"desc": "Le syndicat autonome de Canal+ dresse un bilan des 100 premiers jours de Vincent Bolloré à la tête du groupe."
+					"href": "doc/rapport-caillet.pdf",
+					"title": "Les jihadistes marocains",
+					"desc": "Un rapport du chercheur indépendant Romain Caillet sur les jihadistes marocains en Syrie."
 				}
 			]
 		}
