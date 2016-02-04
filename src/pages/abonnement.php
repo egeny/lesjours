@@ -332,7 +332,7 @@
 								Prélèvement
 							</label>
 							<label class="col md-w-auto pr-2g pl-0">
-								<input class="radio" type="radio" name="payment" value="card" <?php if ($data['payment'] == 'card') : ?>checked <?php endif ?>required />
+								<input class="radio" type="radio" name="payment" value="card" checked required />
 								<span class="radio"></span>
 								Carte bancaire
 							</label>
