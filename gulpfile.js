@@ -3,6 +3,7 @@
 // Inspired by Kraken — http://cferdinandi.github.io/kraken/
 
 var
+	argv       = require('yargs').argv,
 	del        = require('del'),
 	finder     = require('find-in-files'),
 	fs         = require('fs'),
@@ -67,39 +68,42 @@ var
 		}
 	},
 
+	// The destination folder, default to "dist" but can be overriden with the "dist" parameter
+	dist = argv.dist || 'dist',
+
 	// Nunjucks environment
 	env,
 
 	paths = {
-		dist: 'dist/',
+		dist: dist,
 
 		partials:  'src/partials',
 		templates: 'src/templates',
 		pages:     'src/pages',
 
 		css: {
-			input:  'src/css/',
-			output: 'dist/css/',
+			input: 'src/css',
+			output: path.join(dist, 'css'),
 			img: {
-				input:  'src/css/img/',
-				output: 'dist/css/img/'
+				input: 'src/css/img',
+				output: path.join(dist, 'css/img')
 			},
 			svg: {
-				input:  'src/css/img/',
-				output: 'dist/css/img/'
+				input: 'src/css/img',
+				output: path.join(dist, 'css/img')
 			}
 		},
 		img: {
-			input:  'src/img/',
-			output: 'dist/img/'
+			input: 'src/img',
+			output: path.join(dist, 'img')
 		},
 		svg: {
-			input:  'src/img/',
-			output: 'dist/img/'
+			input: 'src/img',
+			output: path.join(dist, 'img')
 		},
 		js: {
-			input:  'src/js/',
-			output: 'dist/js/'
+			input: 'src/js',
+			output: path.join(dist, 'js')
 		}
 	},
 
