@@ -3,7 +3,7 @@
 
 	"href": "les-revenants",
 
-	"color": 3,
+	"color": 8,
 	"name":  "Les revenants",
 	"title": "Les revenants",
 	"subtitle": "Ils reviennent et ils sont contents.",
@@ -11,8 +11,6 @@
 
 	"episodes": [
 		"episode:les-revenants/bilel-episode-1"
-		
-		
 	],
 
 	"people": [
