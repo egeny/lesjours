@@ -7,75 +7,10 @@ $gutter: grid-gutter("sm");
 
 	> :first-child { margin-top:    $gutter; }
 	> *            { margin-bottom: $gutter; }
-
-	a {
-		@extend %link;
-		text-transform: inherit;
-	}
-
-	h2 {
-		@include font-weight-light("proxima");
-		font-size: 2em;
-		line-height: 1.25;
-	}
-
-	h3 {
-		counter-increment: h3;
-		counter-reset: h4;
-
-		font-weight: inherit;
-		font-size: 1.428571em; // FIXME
-		line-height: 1.25;
-
-		&.with-bullet {
-		padding-left: 1.583333em; // FIXME
-		position: relative;
-
-			&::before {
-				background: $color-external;
-
-				width: 1.333333em; // FIXME
-				border-radius: 50%;
-
-				content: counter(h3, upper-alpha);
-
-				position: absolute;
-				top: -1px;
-				left: 0;
-
-				line-height: 1.333333em; // FIXME
-				text-align: center;
-
-				color: $color-white;
-
-				&::selection { background: transparent; }
-			}
-		}
-	}
-
-	h4 {
-		counter-increment: h4;
-
-		@include font-weight-bold("proxima");
-		font-size: 1.071428em; // FIXME
-
-		&.with-bullet::before {
-			content: counter(h3, upper-alpha) "•" counter(h4) " ";
-			color: $color-external;
-		}
-	}
-
-	ol, ul { @extend .list; }
 }
 
 @include media("md") {
 	$gutter: grid-gutter("md");
-
-	.default-content {
-		h2 { font-size: 2.25em;  }
-		h3 { font-size: 1.5em;   }
-		h4 { font-size: 1.125em; }
-	}
 
 	@if $gutter != grid-gutter("sm") {
 		.default-content {

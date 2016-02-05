@@ -1,5 +1,7 @@
 /* @group Subscription */
 .subscription {
+	.default-content { padding-left: 34px; }
+
 	fieldset { counter-increment: fieldset; }
 
 	legend::before,
@@ -23,6 +25,7 @@
 		line-height: 1.5;
 
 		text-align: center;
+		vertical-align: middle;
 	}
 
 	// Prefer manually handling "valid" states for fieldset
@@ -51,9 +54,12 @@
 		outline: 0;
 		pointer-events: none;
 
+		color: $color-white;
+
 		svg {
+			width:  14px;
+			height: 14px;
 			margin-top: -4px;
-			font-size: 10px;
 		}
 	}
 }
@@ -65,6 +71,7 @@
 		background: $color-white;
 
 		width: 254px;
+		min-height: 230px;
 		border: 1px solid $color-brand;
 
 		display: inline-flex;
@@ -113,7 +120,10 @@
 		line-height: 100px; // Prefer px since the font-size might vary
 	}
 
-	img { margin: 35px 0 30px; }
+	> :last-child a {
+		background: url(img/jouristes.svg) 50% 35px / 202px 39px no-repeat;
+		padding-top: 105px;
+	}
 
 	.currency {
 		margin-left: .25em;
@@ -173,7 +183,7 @@
 		color: $color-brand;
 
 		&::after {
-			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='white' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") 0 / 100%;
+			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 20'><path fill='#{hex-to-rgb($color-white)}' d='M28 2.78L25.22 0 10.748 14.5 2.8 6.5 0 9.3 10.747 20 28 2.78z'/></svg>") 0 / 100%;
 
 			width:  28px;
 			height: 20px;
@@ -228,9 +238,10 @@
 		background:
 			url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2 4'><path d='M1 0h1v1H1zM0 2h1v1H0z'/></svg>") left/2px 4px,
 			linear-gradient(to bottom, rgba($color-black, .6), rgba($color-black, .6)),
-			url("img/back/subscription.jpg") center/cover;
+			url("img/back/subscription.jpg") center / cover $color-black;
 		color: $color-white;
 
+		.default-content { padding-left: 0; }
 
 		legend::before,
 		.legend-before {
@@ -240,6 +251,17 @@
 			position: absolute;
 			top: 50%;
 			left: calc(-1.5em - #{$gutter});
+		}
+
+		.style-meta-large .legend-before::before {
+			background: currentColor;
+			width:  1px;
+			height: 120px; // Arbitrary
+
+			content: "";
+			position: absolute;
+			bottom: 100%;
+			left:   50%;
 		}
 
 		.gift,

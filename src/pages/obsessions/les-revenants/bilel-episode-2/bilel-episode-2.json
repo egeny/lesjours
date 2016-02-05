@@ -15,8 +15,8 @@
 
 	"rel": {
 		"authors": [
-			{ "text":  "David Thomson" },
-			{ "Illustrations": "Matthieu Méron" }
+			{ "text":  "author:david-thomson" },
+			{ "draw": "author:atthieu-meron" }
 		],
 
 		"first": "episode:les-revenants/bilel-episode-1",

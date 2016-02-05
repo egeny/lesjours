@@ -26,7 +26,7 @@
 	<div class="col mb-2g{% if article.layout %} {{ article.layout }}{% endif %}">
 		<h2 class="{{ titleClass }}"><a class="snake-container" href="{{ article.href }}">{{ article.title }}</a></h2>
 		<p class="mb-1g">{{ article.intro }}</p>
-		<p class="mb-0 style-meta lh-inherit color-main"><a href="/obsessions/{{ article.obsession.href }}">{{ article.obsession.name }}</a> • épisode n°{{ article.number }}</p>
+		<p class="mb-0 style-meta lh-inherit color-main"><a href="/obsessions/#{{ article.obsession.href }}">{{ article.obsession.name }}</a> • épisode n°{{ article.number }}</p>
 		<p class="mb-0 style-meta lh-inherit">Par {{ authors(article.authors, class="text-upper") }}</p>
 	</div>
 </div>

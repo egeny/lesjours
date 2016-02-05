@@ -3,6 +3,7 @@
 // Inspired by Kraken — http://cferdinandi.github.io/kraken/
 
 var
+	argv       = require('yargs').argv,
 	del        = require('del'),
 	finder     = require('find-in-files'),
 	fs         = require('fs'),
@@ -67,49 +68,52 @@ var
 		}
 	},
 
+	// The destination folder, default to "dist" but can be overriden with the "dist" parameter
+	dist = argv.dist || 'dist',
+
 	// Nunjucks environment
 	env,
 
 	paths = {
-		dist: 'dist/',
+		dist: dist,
 
 		partials:  'src/partials',
 		templates: 'src/templates',
 		pages:     'src/pages',
 
 		css: {
-			input:  'src/css/',
-			output: 'dist/css/',
+			input: 'src/css',
+			output: path.join(dist, 'css'),
 			img: {
-				input:  'src/css/img/',
-				output: 'dist/css/img/'
+				input: 'src/css/img',
+				output: path.join(dist, 'css/img')
 			},
 			svg: {
-				input:  'src/css/img/',
-				output: 'dist/css/img/'
+				input: 'src/css/img',
+				output: path.join(dist, 'css/img')
 			}
 		},
 		img: {
-			input:  'src/img/',
-			output: 'dist/img/'
+			input: 'src/img',
+			output: path.join(dist, 'img')
 		},
 		svg: {
-			input:  'src/img/',
-			output: 'dist/img/'
+			input: 'src/img',
+			output: path.join(dist, 'img')
 		},
 		js: {
-			input:  'src/js/',
-			output: 'dist/js/'
+			input: 'src/js',
+			output: path.join(dist, 'js')
 		}
 	},
 
-	root = '',
+	root = argv.root || '',
 
 	// A set of tasks to launch on different contexts
 	tasks = {
 		'copy:img': function(context) {
 			return function() {
-				return gulp.src(path.join(context.input, '/**/*.{ico,gif,jpg,png}'))
+				return gulp.src(path.join(context.input, '**/*.{ico,gif,jpg,png}'))
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
@@ -125,7 +129,7 @@ var
 
 		'copy:svg': function(context) {
 			return function() {
-				return gulp.src([path.join(context.input, '*.svg')])
+				return gulp.src(path.join(context.input, '**/*.svg'))
 					.pipe(gulp.dest(context.output))
 					.pipe(livereload());
 			}
@@ -221,6 +225,10 @@ env.addFilter('removeBR', function(input) {
 	return (input || '').replace(/<br\/?>/g, ' ');
 });
 
+env.addFilter('slice', function(array, begin, end) {
+	return array.slice(begin, end);
+});
+
 env.addFilter('split', function(input, separator) {
 	return (input || "").split(separator);
 });
@@ -232,6 +240,8 @@ env.addFilter('startsWith', function(input, pattern) {
 env.addFilter('test', function(pattern, input) {
 	return pattern.test(input || '');
 });
+
+env.addGlobal('countries', JSON.parse(fs.readFileSync(path.join(paths.partials, 'countries.json'))));
 
 gulp.task('default', function() {
 	sequence('clean', 'build');
@@ -463,6 +473,7 @@ function html(e) {
 		.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
 		.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
 		.pipe(replace('href="/"',                 'href="' + root + '/"'))
+		.pipe(replace('\'/img',                       '\'' + root + '/img'))
 		.pipe(replace('Location: /',          'Location: ' + root + '/'))
 		.pipe(gulp.dest(paths.dist))
 		.pipe(livereload());
@@ -488,7 +499,7 @@ gulp.task('build:css', function() {
 		.pipe(header(banner, context))
 		.pipe(gulp.dest(paths.css.output))
 		.pipe(rename({ suffix: '.min' }))
-		.pipe(minify())
+		.pipe(minify({ mergeIdents: false }))
 		.pipe(gulp.dest(paths.css.output))
 		.pipe(livereload());
 });
@@ -520,7 +531,7 @@ gulp.task('optimize:js', function() {
 
 gulp.task('build:js', ['optimize:js'], function() {
 	var
-		files = ['libs/modernizr', 'libs/svg4everybody', 'libs/svg4everybody.init', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*'],
+		files = ['libs/modernizr', 'libs/svg4everybody', 'libs/svg4everybody.init', 'libs/jquery', 'libs/stickyfill', 'libs/hammer', 'libs/jquery.hammer', 'global', 'components/*', 'libs/analytics'],
 		streams = merge();
 
 	streams.add(gulp
@@ -536,6 +547,13 @@ gulp.task('build:js', ['optimize:js'], function() {
 		.pipe(concat('global.min.js'))
 		.pipe(header(banner, context))
 		.pipe(gulp.dest(paths.js.output))
+		.pipe(livereload())
+	);
+
+	streams.add(gulp
+		.src(path.join(paths.js.input, 'pages', '*.js'))
+		.pipe(header(banner, context))
+		.pipe(gulp.dest(path.join(paths.js.output, 'pages')))
 		.pipe(livereload())
 	);
 

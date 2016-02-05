@@ -16,11 +16,17 @@ $gutter: grid-gutter("sm");
 	left:   0;
 	z-index: 20000;
 
+	@extend %font-proxima;
+	@include font-weight-regular("proxima");
+
 	&:target { display: block; }
 
 	[role="document"] {
 		background: $color-white;
+
+		box-sizing: border-box;
 		padding: $gutter;
+
 		color: $color-main;
 	}
 
@@ -34,6 +40,18 @@ $gutter: grid-gutter("sm");
 			height: 24px;
 		}
 	}
+}
+
+.has-modal {
+	overflow: hidden;
+
+	// Fix some problems problems with iOS
+	// See http://stackoverflow.com/questions/14270084/overflow-xhidden-doesnt-prevent-content-from-overflowing-in-mobile-browsers#answer-24727026
+	position: fixed;
+
+	// Fix an issue if the body has a max-width
+	right: 0;
+	left:  0;
 }
 
 @include media("md") {

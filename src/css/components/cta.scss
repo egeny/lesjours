@@ -1,0 +1,83 @@
+/* @group cta */
+#cta-subscription > div {
+	background: url(img/sm-cta-subscription.png) no-repeat;
+
+	min-height:  104px; // Do not cut the image
+	padding-left: 92px; // Same as one column with a viewport having a width of 320px
+
+	.btn-primary {
+		padding-right: 1em;
+		padding-left:  1em;
+		line-height: 2;
+	}
+}
+
+#cta-project > div {
+	background: url(img/sm-cta-project.jpg) 50% 100% no-repeat #CB4836;
+	padding-bottom: 250px;
+	color: $color-white;
+
+	li {
+		line-height: 1.75;
+		&::before { content: "☉ "; }
+
+		a {
+			background-image: linear-gradient(to bottom, rgba($color-white, .25), rgba($color-white, .25));
+			text-transform: none;
+			color: inherit;
+		}
+	}
+
+	.btn-round {
+		position: absolute;
+		bottom: 16px;
+		right:  30%;
+
+		color: $color-brand;
+
+		svg {
+			width:  24px;
+			height: 24px;
+		}
+	}
+}
+
+@include media("md") {
+	#cta-subscription > div {
+		background-image: url(img/md-cta-subscription.png);
+
+		min-height:   207px;
+		padding-left: 180px; // Same as two columns with a viewport having a width of 768px
+	}
+
+	#cta-project > div {
+		background-image: url(img/md-cta-project.jpg);
+		background-position: 100% 100%;
+
+		min-height: 220px;
+		padding-bottom: 0;
+
+		.btn-round { right: 40px; }
+	}
+}
+
+@include media("lg") {
+	#cta-subscription,
+	#cta-project {
+		display: inline-flex;
+		> div { flex: 1; }
+	}
+
+	#cta-subscription > div {
+		background-image: url(img/lg-cta-subscription.png);
+
+		min-height:   250px;
+		padding-left: 232px; // Same as two columns with a viewport having a width of 1440px
+	}
+
+	#cta-project {
+		.h4 { max-width: 5em; }
+		.btn-round { bottom: 24px; }
+	}
+}
+/* @end cta */

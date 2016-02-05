@@ -1,17 +1,15 @@
 {
 	"template": "home",
 
-	"master": "episode:treize-novembre/urvoas-taubira",
-
-	"articles": [
+	"une": [
+		"episode:treize-novembre/urvoas-taubira",
 		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
 		"episode:treize-novembre/urvoas-urgence",
 		"episode:treize-novembre/etat-urgence-mort-lente"
 	],
 
-	"master2": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-
-	"articles2": [
+	"selected": [
+		"episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"episode:treize-novembre/un-perimetre-de-desolation",
 		"episode:treize-novembre/l-empreinte-de-la-peur"
 	],

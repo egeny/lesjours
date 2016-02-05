@@ -84,6 +84,7 @@ rules:
       - 'background-blend-mode'
 
       # Box size
+      - 'appearance'
       - 'box-sizing'
       - 'width'
       - 'height'

@@ -3,6 +3,7 @@
 
 	Placeholders:
 		- cover.tag (optional, default to div)
+		- cover.id (optional)
 		- cover.class (optional)
 		- cover.img
 		- cover.href
@@ -18,7 +19,7 @@
 #}
 {% from "partials/_macro.html" import authors %}
 {% set class = "bg-center " + cover.class if not r/bg-(?:left|center|right)/g|test(cover.class) else cover.class %}
-<{{ cover.tag|default("div") }} class="cover {{ class }}" style="background-image: url({{ cover.img }})">
+<{{ cover.tag|default("div") }} {% if cover.id %}id="{{ cover.id }}" {% endif %}class="cover {{ class }}" style="background-image: url({{ cover.img }})">
 	{% if "small"|in(cover.class|split(" ")) %}
 		<a href="{{ cover.href }}" class="overlay">
 			<div class="overlay pattern"></div>
@@ -41,7 +42,7 @@
 						<p class="p-larger mb-1g">{{ cover.subtitle }}</p>
 						{% if cover.episode %}
 							{% set obsession = cover.episode.obsession|expand %}
-							<p class="style-meta color-inherit"><a href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ cover.episode.number }} | Par {{ authors(cover.episode, class="text-upper") }}</p>
+							<p class="style-meta color-inherit"><a href="/obsessions/#{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ cover.episode.number }} | Par {{ authors(cover.episode.rel.authors, class="text-upper") }}</p>
 						{% endif %}
 						{% if cover.desc %}
 							<a href="{{ cover.href }}" class="btn"><i>{{ icon("chevron-down", "Lire") }}</i></a>
@@ -54,7 +55,7 @@
 					{{ cover.desc }}
 				</div>
 				<div class="more mb-2g text-center">
-					<a href="{{ cover.href }}" class="btn-round btn-reverse"><i>{{ icon("chevron-down", "Lire") }}</i></a>
+					<a href="{{ cover.href }}" class="btn-round btn-white color-brand"><i>{{ icon("chevron-down", "Lire") }}</i></a>
 				</div>
 			{% endif %}
 		</div>

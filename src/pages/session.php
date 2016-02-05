@@ -1,20 +1,49 @@
 <?php
-	require('wp.php');
+	require('_bootstrap.php');
 
+	// When receiving data, try to log the user
 	if (!empty($_POST)) {
 		$user = wp_signon(array(
 			'user_login'    => $_POST['mail'],
 			'user_password' => $_POST['password'],
 			'remember'      => true
 		), false);
-		// TODO: paid?
-		// TODO: adjust the cookie's expire?
+
+		// TODO: display a message in case of error
+		die(header('Location: '.$_SERVER['HTTP_REFERER']));
 	}
 
-	if (isset($_GET['out'])) {
+	// Well, when asked to close the session…
+	if (isset($_GET['close'])) {
 		wp_logout();
 		die(header('Location: /'));
 	}
 
-	header('Location: '.$_SERVER['HTTP_REFERER']);
+	// $current_user is always an object, check if it has an ID
+	if ($current_user->ID) {
+		$meta = get_user_meta($current_user->ID);
+		$meta = array_map(function($array) { return $array[0]; }, $meta);
+
+		// TODO: redirect to a page if not paid (or pending)
+		// TODO: redirect to a page if expired
+
+		// Allow if the user has paid and its subscription isn't expired
+		if ($meta['paid'] == 1 && strtotime($meta['expire']) > time()) {
+			// Make a sub-request so Apache will handle the request (see .htaccess)
+
+			$uri  = $_SERVER['REQUEST_URI'];
+			$info = apache_lookup_uri($uri);
+
+			// We have to handle 404 "manually", virtual will fail otherwise
+			if (!$info->content_type) {
+				http_response_code(404);
+				$uri = '/404.html';
+			}
+
+			virtual($uri); // Will return a boolean so don't wrap in die()
+			die();
+		}
+	}
+
+	header('Location: /abonnement.html');
 ?>

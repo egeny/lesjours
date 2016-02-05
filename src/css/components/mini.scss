@@ -79,7 +79,7 @@
 
 	&[id^="note"] {
 		.title {
-			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 19'><path fill='rgb(243,223,147)' d='M15.834 10.3c2.064-.096 3.456-1.296 2.832-3.168-.528-1.632-2.4-1.872-4.08-.768l-4.416 2.88 1.392-5.136C12.09 2.188 11.466.46 9.498.46S6.906 2.188 7.434 4.108l1.392 5.136-4.416-2.88C2.73 5.26.858 5.5.33 7.132c-.624 1.872.768 3.072 2.832 3.168l5.328.288-4.128 3.264c-1.584 1.248-2.064 3.12-.48 4.224s3.12.144 3.84-1.776l1.776-4.752 1.776 4.752c.72 1.92 2.256 2.88 3.84 1.776 1.584-1.104 1.104-2.976-.48-4.224l-4.128-3.264 5.328-.288z' /></svg>") no-repeat 0 0/19px 19px;
+			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 19 19'><path fill='#{hex-to-rgb($color-media)}' d='M15.834 10.3c2.064-.096 3.456-1.296 2.832-3.168-.528-1.632-2.4-1.872-4.08-.768l-4.416 2.88 1.392-5.136C12.09 2.188 11.466.46 9.498.46S6.906 2.188 7.434 4.108l1.392 5.136-4.416-2.88C2.73 5.26.858 5.5.33 7.132c-.624 1.872.768 3.072 2.832 3.168l5.328.288-4.128 3.264c-1.584 1.248-2.064 3.12-.48 4.224s3.12.144 3.84-1.776l1.776-4.752 1.776 4.752c.72 1.92 2.256 2.88 3.84 1.776 1.584-1.104 1.104-2.976-.48-4.224l-4.128-3.264 5.328-.288z' /></svg>") no-repeat 0 0/19px 19px;
 			padding-top: 30px;
 			margin-top: 0;
 		}
@@ -88,7 +88,7 @@
 			display: inline;
 
 			&::after {
-				background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='rgb(243,223,147)' fill-rule='evenodd' d='M6.5 6.5H4v3h2.5V12h3V9.5H12v-3H9.5V4h-3v2.5zM8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /></svg>") no-repeat;
+				background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='#{hex-to-rgb($color-media)}' fill-rule='evenodd' d='M6.5 6.5H4v3h2.5V12h3V9.5H12v-3H9.5V4h-3v2.5zM8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /></svg>") no-repeat;
 
 				width:  1em;
 				height: 1em;

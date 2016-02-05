@@ -2,32 +2,34 @@ $document.ready(function() {
 	"use strict";
 
 	var
-		$container = $("#header-container"),
-		$burger    = $("#burger");
+		$header = $("#header"),
+		$burger = $("#burger"),
+		timer;
 
-	$window.bind("hashchange", function() {
+	function hashchange() {
 		var hash = window.location.hash;
 
 		if (hash === "#menu") {
-			$body.css("overflow", "hidden"); // Prefer inline style, the body may already have a "no-overflow" class and it shouldn't be removed
-			$container.addClass("fixed");
+			$body.addClass("has-modal"); // Use a class to disable scrolling
+			$header.addClass("fixed");
 			$burger.removeClass("initial").addClass("close"); // The "initial" class is used to disable the animation (when the page load)
 		} else {
-			$body.css("overflow", ""); // Remove the inline style
-			$container.removeClass("fixed");
+			$body.removeClass("has-modal");
+			$header.removeClass("fixed");
 			$burger.removeClass("close");
 
 			// Bonus: Revert the "initial" class so the transition on the burger will work again
-			window.setTimeout(function() {
+			timer = window.setTimeout(function() {
 				$burger.addClass("initial");
 			}, 300);
 		}
-	});
+	}
 
-	// Trigger a hashchange on loading to check if there is already a hash
-	$window.trigger("hashchange");
+	$window.bind("hashchange", hashchange);
+	window.location.hash && hashchange();
 
 	$burger.click(function(e) {
+		window.clearTimeout(timer);
 		if ($burger.hasClass("close")) {
 			window.location.hash = "";
 			e.preventDefault();

@@ -3,7 +3,7 @@
 
 	"href": "l-empire",
 
-	"color": 3,
+	"color": 7,
 	"name":  "L'empire",
 	"title": "L'empire",
 	"subtitle": "Comment Vincent Bolloré a mangé Canal+.",
@@ -15,8 +15,6 @@
 		"episode:l-empire/ep3-portrait-belmer",
 		"episode:l-empire/ep4-journal-hard",
 		"episode:l-empire/ep5-jour-de-deug"
-		
-		
 	],
 
 	"people": [
@@ -74,7 +72,7 @@
 
 	"places": [
 		{
-			"img":   "img/carte-l-empire.jpg",
+			"img":   "img/carte-l-empire.png",
 			"title": "Les cinq royaumes de Bolloré",
 			"href":  "https://www.google.com/maps/d/edit?mid=zEN87Ui19vGI.kn86OklBgDys&usp=sharing"
 		}

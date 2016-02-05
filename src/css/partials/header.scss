@@ -1,13 +1,28 @@
 /* @group #header */
-$gutter: grid-gutter("sm");
+#bar {
+	a, button {
+		&:hover,
+		&:focus { color: inherit; }
+	}
 
-#header-container {
-	background: $color-white;
-	max-width: $max-width;
+	button {
+		width:  20px;
+		height: 20px;
+
+		position: absolute;
+		top:    1em;
+		right:  0;
+	}
 }
 
-// FIXME: temporary (also, change burger.js/menu.js)
-#header-container.fixed {
+#header {
+	background: $color-white;
+	max-width: $max-width;
+	margin: 0 auto;
+}
+
+// FIXME: temporary (also, change menu.js)
+#header.fixed {
 	overflow: auto;
 	position: fixed;
 	top:    0;
@@ -16,6 +31,9 @@ $gutter: grid-gutter("sm");
 	left:   0;
 	z-index: 10000;
 }
+
+#header       + .header { display: none;  }
+#header.fixed + .header { display: block; }
 
 /*.sticky-header.sticky {
 	z-index: 10000;
@@ -29,7 +47,7 @@ $gutter: grid-gutter("sm");
 .sticky-header.show     { transform: none; }
 */
 
-#header {
+.header {
 	height: 64px;
 	color: $color-brand;
 
@@ -49,6 +67,9 @@ $gutter: grid-gutter("sm");
 	top: 12px;
 	left: 0;
 	z-index: 1;
+
+	backface-visibility: hidden;
+	will-change: transform;
 
 	&::before,
 	> span,
@@ -140,18 +161,16 @@ $gutter: grid-gutter("sm");
 	line-height: 64px;
 	color: $color-brand;
 
-	.btn-round img { border-radius: 50%; }
+	svg {
+		width:  initial;
+		height: initial;
+	}
 
 	.login {
 		display: inline-block;
 		line-height: initial;
 
 		&:focus .btn-square { border-color: inherit; }
-
-		svg {
-			width:  initial;
-			height: initial;
-		}
 	}
 }
 
@@ -186,7 +205,11 @@ $gutter: grid-gutter("sm");
 		line-height: 1;
 		color: $color-white;
 
-		&::before { @extend .btn-round::before }
+		&::before {
+			@extend .btn-round::before;
+			@extend .btn-brand::before;
+		}
+
 		svg { position: relative; }
 	}
 
@@ -204,7 +227,12 @@ $gutter: grid-gutter("sm");
 }
 
 @include media("md") {
-	#header {
+	#bar button {
+		margin-top: -10px;
+		top: 50%;
+	}
+
+	.header {
 		height: 85px;
 
 		h1 img {
@@ -219,11 +247,6 @@ $gutter: grid-gutter("sm");
 	#menu {
 		padding-top: 85px;
 		margin-top: -85px;
-	}
-
-	#login [role="document"] {
-		box-sizing: border-box;
-		width: 400px;
 	}
 }
 /* @end #header */

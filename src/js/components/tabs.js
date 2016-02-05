@@ -29,7 +29,7 @@ $document.ready(function() {
 	// Check if a hash is present so we could switch to it
 	if (window.location.hash) {
 		var $target = $(window.location.hash);
-		if ($target.hasClass("tab")) {
+		if ($target.attr("role") === "tabpanel") {
 			$("#" + $target.attr("aria-labelledby")).click();
 		}
 	}

@@ -12,8 +12,6 @@
 	"episodes": [
 		"episode:les-revenants/bilel-episode-1",
 		"episode:les-revenants/bilel-episode-2"
-		
-		
 	],
 
 	"people": [
@@ -51,22 +49,6 @@
 			"alt":      "",
 			"title":    "Abu Bakr al Bagdadi",
 			"subtitle": "44 ans, calife autoproclamé de l'Etat islamique"
-		}
-	],
-
-	"images": [
-		{ "href": "#", "img": "img/les-guignols-header.jpg" },
-		{ "href": "#", "img": "img/le-plug-canal-header.jpg" },
-		{ "href": "#", "img": "img/le-plug-canal-1.jpg" },
-		{ "href": "#", "img": "img/les-guignols-1.jpg" },
-		{ "href": "#", "img": "img/degreef-header.jpg" }
-	],
-
-	"places": [
-		{
-			"img":   "",
-			"title": "",
-			"href":  ""
 		}
 	],
 

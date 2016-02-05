@@ -5,3 +5,7 @@
 @function em-to-px($em, $base) {
 	@return (length($em) * $base);
 }
+
+@function hex-to-rgb($color) {
+	@return unquote("rgb(#{round(red($color))}, #{round(green($color))}, #{round(blue($color))})");
+}

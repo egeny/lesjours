@@ -10,18 +10,19 @@
 		<div class="container ph-0">
 			<div class="row">
 				<div class="col sm-ph-4g md-ml-1c md-w-5c lg-ml-2c lg-w-6c">
-					<p class="mv-2g style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="link obsession" href="/obsessions/{{ obsession.href }}">{{ obsession.name }}</a></p>
+					<p class="mv-2g style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="link obsession" href="/obsessions/#{{ obsession.href }}">{{ obsession.name }}</a></p>
 					<h2 class="h2">{{ episode.title|removeBR }}</h2>
 					<p>{{ episode.intro }}</p>
 					<time class="mb-2g style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
 					<address class="mb-1g">
 						<ul class="list list-inline style-meta">
-						{% for group in episode.rel.authors %}
+						{% for group in episode.rel.authors|expand %}
 							{% for kind, authors in group %}
 								{% set kind = "Texte"  if kind == "text"  else kind %}
 								{% set kind = "Photos" if kind == "photo" else kind %}
+								{% set kind = "Illustrations" if kind == "drawing" else kind %}
 								{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
-								<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+								<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
 							{% endfor %}
 						{% endfor %}
 						</ul>
@@ -37,11 +38,11 @@
 			</div>
 		</div>
 		{# This must be outside of the .article-container otherwise it won't be sticky due to the overflow: hidden #}
-		<div class="share col md-w-1c lg-w-2c text-center show" data-fade="3000">
+		<div class="share hidden col md-w-1c lg-w-2c text-center show" data-fade="3000">
 			<ul class="sticky">
-				<li class="sm-mb-0 mb-2g"><a class="btn-round" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
-				<li class="sm-mb-0 mb-2g"><a class="btn-round" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
-				<li><a class="btn-round" href="#"><i>{{ icon("plane", "Partager") }}</i></a></li>
+				<li class="sm-mb-0 mb-2g"><a class="btn-round btn-brand" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
+				<li class="sm-mb-0 mb-2g"><a class="btn-round btn-brand" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
+				<li><a class="btn-round btn-brand" href="#"><i>{{ icon("plane", "Partager") }}</i></a></li>
 			</ul>
 		</div>
 	</div>
@@ -55,6 +56,7 @@
 						{% for kind, authors in group %}
 							{% set kind = "Texte"  if kind == "text"  else kind %}
 							{% set kind = "Photos" if kind == "photo" else kind %}
+							{% set kind = "Illustrations" if kind == "drawing" else kind %}
 							{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
 							<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
 						{% endfor %}

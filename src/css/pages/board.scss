@@ -34,6 +34,11 @@ $gutter: grid-gutter("sm");
 				color: $color-brand-light;
 			}
 
+			.board [role="tab"].disabled {
+				pointer-events: none;
+				color: $color-light;
+			}
+
 			.board [role="tab"]:before {
 				content: "●";
 				display: block;
@@ -81,7 +86,7 @@ $gutter: grid-gutter("sm");
 		.mosaic .overlay.no-content { padding: 0; }
 
 		.mosaic .snake {
-			border-color: #FFF;
+			border-color: $color-white;
 			top:    $gutter;
 			right:  $gutter;
 			bottom: $gutter;
