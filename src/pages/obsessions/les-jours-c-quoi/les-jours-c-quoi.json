@@ -7,13 +7,15 @@
 	"name":  "« Les Jours », c'est quoi ?",
 	"title": "« Les Jours », c'est quoi ?",
 	"subtitle": "C'est qui ? Comment ça marche ? Combien ça coûte ?",
-	"desc": "<p>sdq</p>",
+	"desc": "<p>Oui, on n'a pas encore écrit le descriptif de cette obsession mais ça va venir.</p>",
 
 	"episodes": [
-		"episode:les-jours-c-quoi/les-jours-l-equipe",
-		"episode:les-jours-c-quoi/les-jours-le-pilote",
 		"episode:les-jours-c-quoi/les-jours-le-projet",
-		"episode:les-jours-c-quoi/les-jours-tuto-obsession"
+		"episode:les-jours-c-quoi/les-jours-le-pilote",
+		"episode:les-jours-c-quoi/les-jours-tuto-obsession",
+		"episode:les-jours-c-quoi/les-jours-navigation",
+		"episode:les-jours-c-quoi/les-jours-combien",
+		"episode:les-jours-c-quoi/les-jours-l-equipe"
 	],
 
 	"people": [
