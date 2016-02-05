@@ -89,10 +89,9 @@ article .share { margin-bottom: 1.5em; }
 .article-container > table,
 .article-container > ol,
 .article-container > p,
-.article-container > ul {
-	margin-top:    1.5em;
-	margin-bottom: 1.5em;
-}
+.article-container > ul { margin-bottom: $gutter; }
+
+.article-container > :first-child { margin-top: $gutter; }
 
 	.article-container .mini { margin: 0; }
 	.article-container .share li::before { content: none; }
@@ -262,6 +261,14 @@ article .share { margin-bottom: 1.5em; }
 	}
 
 	@if $gutter != grid-gutter("sm") {
+		.article-container > aside,
+		.article-container > blockquote,
+		.article-container > figure,
+		.article-container > table,
+		.article-container > ol,
+		.article-container > p,
+		.article-container > ul { margin-bottom: $gutter; }
+		.article-container > :first-child { margin-top: $gutter; }
 		//article figure .snake { left: #{-$gutter}; }
 	}
 }
@@ -303,6 +310,15 @@ article .share { margin-bottom: 1.5em; }
 	}
 
 	@if $gutter != grid-gutter("md") {
+		.article-container > aside,
+		.article-container > blockquote,
+		.article-container > figure,
+		.article-container > table,
+		.article-container > ol,
+		.article-container > p,
+		.article-container > ul { margin-bottom: $gutter; }
+		.article-container > :first-child { margin-top: $gutter; }
+
 		//article figure .snake { left: #{-$gutter}; }
 		.article-container .mini { margin-bottom: $gutter; }
 	}
