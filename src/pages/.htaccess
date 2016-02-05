@@ -37,7 +37,7 @@ ErrorDocument 404 /404.html
 	ExpiresByType application/javascript "access plus 1 day"
 	ExpiresByType text/javascript        "access plus 1 day"
 
-	ExpiresByType text/html "access plus 1 hour"
+	ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
 # Prevent sending a Content-Location when trying to access a PHP page without extension (calling /_account, the server will respond with a Content-Location set to /_account.php)
