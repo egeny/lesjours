@@ -3,6 +3,8 @@
 
 	"href": "bilel-episode-1",
 
+	"img": "img/les-revenants-1.gif",
+
 	"number": 1,
 	"date": "2016-02-02T10:00+01:00",
 
@@ -15,8 +17,8 @@
 
 	"rel": {
 		"authors": [
-			{ "text":  "author:david-thomson" },
-			{ "draw": "author:atthieu-meron" }
+			{ "text":    "author:david-thomson" },
+			{ "drawing": "author:atthieu-meron" }
 		],
 
 		"first": "episode:les-revenants/bilel-episode-1"
