@@ -281,6 +281,14 @@ gulp.task('build:assets', function(cb) {
 			.map(function(file) { return assets(file); })
 	);
 
+	streams = streams.concat(
+		gulp
+			.src(path.join(paths.css.input, 'fonts/**/*'), { base: paths.css.input })
+			.pipe(changed(paths.css.output))
+			.pipe(gulp.dest(paths.css.output))
+			.pipe(livereload())
+	);
+
 	return streams.length ? merge(streams) : null;
 });
 
