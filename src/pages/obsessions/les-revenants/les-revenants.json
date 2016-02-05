@@ -10,7 +10,60 @@
 	"desc": "<p>Depuis 2012, des centaines de Français sont partis rejoindre des groupes jihadistes en Syrie. Plus de 500 sont toujours sur place, près de 150 ont déjà été tués, mais 250 ont fait le chemin inverse, souvent usés par la réalité découverte sur place.</p>",
 
 	"episodes": [
-		"episode:les-revenants/bilel-episode-1"
-	]
+		"episode:les-revenants/bilel-episode-1",
+		"episode:les-revenants/bilel-episode-2"
+	],
 
+	"people": [
+		{
+			"href":     "",
+			"img":      "img/bilel.jpg",
+			"alt":      "",
+			"title":    "Bilel",
+			"subtitle": "27 ans, "
+		},
+		{
+			"href":     "",
+			"img":      "img/nabia.jpg",
+			"alt":      "",
+			"title":    "Nabia",
+			"subtitle": "22 ans, la femme de Bilel"
+		},
+		{
+			"href":     "",
+			"img":      "img/abumaryam.jpg",
+			"alt":      "",
+			"title":    "Abu Maryam",
+			"subtitle": "Le jihadiste avec lequel Bilel a rejoint l'EI"
+		},
+		{
+			"href":     "#",
+			"img":      "img/ibrahim-benchekroun.jpg",
+			"alt":      "",
+			"title":    "Ibrahim Benchekroun",
+			"subtitle": "Fondateur de la brigade Harakat Sham al Islam, liée à Al Qaeda"
+		},
+		{
+			"href":     "#",
+			"img":      "img/al-bagdadi.jpg",
+			"alt":      "",
+			"title":    "Abu Bakr al Bagdadi",
+			"subtitle": "44 ans, calife autoproclamé de l'Etat islamique"
+		}
+	],
+
+	"documents": [
+		{
+			"id": "telechargements",
+			"title": "Téléchargements",
+			"icon": "download",
+			"items": [
+				{
+					"href": "doc/rapport-caillet.pdf",
+					"title": "Les jihadistes marocains",
+					"desc": "Un rapport du chercheur indépendant Romain Caillet sur les jihadistes marocains en Syrie."
+				}
+			]
+		}
+	]
 }
