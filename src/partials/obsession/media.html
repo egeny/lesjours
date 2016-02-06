@@ -1,0 +1,21 @@
+<section class="obsession-{{ obsession.color }}">
+<!-- TODO: This section is a work in progress, you might find ugly things (like yo mama) -->
+{% for item in obsession.people %}
+	<div id="{{ item.href }}" class="modal" role="dialog" tabindex="-1" style="background: #FFF">
+		<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
+		<div class="container full-height pt-6g pb-2g" style="box-sizing: border-box; display: flex; flex-direction: column">
+			<h2 class="ml-1g style-meta"><a href="/obsessions/#{{ obsession.href }}" class="link obsession">{{ obsession.name }}</a></h2>
+			<h3 class="ml-1g mb-2g style-meta-large">{{ item.title }}</h3>
+			<div class="relative" style="flex: 1">
+				<div class="row overlay">
+					<img style="max-width: 100%; min-width: 300px; object-fit: cover" class="col w-auto full-height inline-block" src="/obsessions/{{ obsession.href }}/{{ item.img }}" alt="{{ item.alt }}" />
+					<div class="col col-bottom" style="flex: 1">
+						<p class="style-meta mb-0">{{ item.subtitle }}</p>
+						{% if item.desc %}<p class="mb-0 fs-italic">{{ item.desc }}</p>{% endif %}
+					</div>
+				</div>
+			</div>
+		</div><!-- end of .container -->
+	</div><!-- end of .modal -->
+{% endfor %}
+</section>
