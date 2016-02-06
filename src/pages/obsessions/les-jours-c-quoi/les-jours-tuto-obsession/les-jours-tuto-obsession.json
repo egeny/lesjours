@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "les-jours-tuto-obsession",
+
+	"number": 3,
+	"date": "2016-02-11T10:00+01:00",
+
+	"title": "C’est quoi, une obsession ?",
+	"intro": "Une obsession, c’est un sujet que l’on ne lâche pas, un lieu où l’on reste, des personnages que l’on suit au long cours, même quand plus personne n’en parle.",
+	"lead":  "Non, l’obsession n’est pas une maladie. Ou alors c’est une déformation professionnelle qui pousse les journalistes des <i>Jours</i> à vouloir en savoir toujours plus, à aller au fond de l’actualité.",
+
+	"tags": ["Les Jours", "journalisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "Les Jours" },
+			{ "photo": "Eleonora Strano / Hans Lucas" }
+		],
+
+		"first": "episode:les-jours-c-quoi/les-jours-le-projet",
+		"next":  "episode:les-jours-c-quoi/les-jours-navigation",
+		"prev": "episode:les-jours-c-quoi/les-jours-le-pilote",
+		"last":  "episode:les-jours-c-quoi/les-jours-l-equipe"
+	}
+}

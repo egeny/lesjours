@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "making-of-treize-novembre",
+
+	"number": 3,
+	"date": "2016-02-02T13:50+01:00",
+
+	"title": "Mémoire du traumatisme",
+	"intro": "Habitué à travailler sur les souvenirs de conflits, Michel Slomka a photographié la foule qui, les jours d'après le 13 novembre, s’est rendue sur les lieux des attentats.",
+	"lead":  "Que faire lorsque votre obsession photographique vient frapper à votre propre porte ? Le photographe Michel Slomka a dû répondre à cette question après les attentats de Paris.</q>",
+
+	"tags": ["Photographie", "13 novembre", "Mémoire"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sebastian-calvet" },
+			{ "photo": "Michel Slomka" }
+		],
+
+		"first": "episode:les-jours-a-l-oeil/ep1-politique-photo",
+		"next":  "episode:les-jours-a-l-oeil/making-of-cop",
+		"prev": "episode:les-jours-a-l-oeil/making-of-college",
+		"last":  "episode:les-jours-a-l-oeil/making-of-cop"
+	}
+}
