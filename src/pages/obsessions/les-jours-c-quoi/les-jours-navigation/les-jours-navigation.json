@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "les-jours-navigation",
+
+	"number": 4,
+	"date": "2016-02-11T10:00+01:00",
+
+	"title": "Comment naviguer sur « Les Jours » ?",
+	"intro": "Vous êtes perdus sur le site ? On ne panique pas, on respire. Tout est expliqué ici : suivez le guide.",
+	"lead":  "Non, l’obsession n’est pas une maladie. Ou alors c’est une déformation professionnelle qui pousse les journalistes des <i>Jours</i> à vouloir en savoir toujours plus, à aller au fond de l’actualité.",
+
+	"tags": ["Les Jours", "journalisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "Les Jours" },
+			{ "photo": "Eleonora Strano / Hans Lucas" }
+		],
+
+		"first": "episode:les-jours-c-quoi/les-jours-le-projet",
+		"next":  "episode:les-jours-c-quoi/les-jours-combien",
+		"prev": "episode:les-jours-c-quoi/les-jours-tuto-obsession",
+		"last":  "episode:les-jours-c-quoi/les-jours-l-equipe"
+	}
+}
