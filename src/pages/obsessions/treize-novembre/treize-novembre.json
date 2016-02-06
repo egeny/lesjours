@@ -31,68 +31,68 @@
 		"episode:treize-novembre/etat-urgence-mort-lente",
 		"episode:treize-novembre/legitime-defense-revient",
 		"episode:treize-novembre/urvoas-taubira"
-		
 	],
 
 	"people": [
 		{
-			"href":     "vendredi-ou-la-nuit-sauvage",
+			"href":     "patrick-bloche",
 			"img":      "img/blocheportrait2.jpg",
 			"alt":      "",
 			"title":    "Patrick Bloche",
 			"subtitle": "59 ans, député PS et ancien maire du XIe"
 		},
 		{
-			"href":     "foi-sous-les-bombes",
+			"href":     "vincent",
 			"img":      "img/assigne-3.jpg",
 			"alt":      "",
 			"title":    "Vincent",
 			"subtitle": "32 ans, assigné à résidence"
 		},
 		{
-			"href":     "romagnan-non",
+			"href":     "barbara-romagnan",
 			"img":      "img/romagnanportrait.jpg",
 			"alt":      "",
 			"title":    "Barbara Romagnan",
 			"subtitle": "41 ans, députée PS anti-état d'urgence"
 		},
 		{
-			"href":     "l-empreinte-de-la-peur",
+			"href":     "sandrine",
 			"img":      "img/sandrine-voisine.jpg",
 			"alt":      "",
 			"title":    "Sandrine",
 			"subtitle": "X ans, voisine"
 		},
 		{
-			"href":     "urvoas-le-deuxieme-flic-de-france",
+			"href":     "jean-jacques-urvoas",
 			"img":      "img/urvoasportrait.jpg",
 			"alt":      "",
 			"title":    "Jean-Jacques Urvoas",
-			"subtitle": "56 ans, député PS, contrôle l'état d'urgence"
+			"subtitle": "56 ans, député PS, contrôle l'état d'urgence",
+			"desc":     "Sur la photo de classe, sa silhouette se distingue de ses camarades par une pose particulière, un trois-quart savamment étudié. En général, Nina aime bien se distinguer. Elue déléguée de classe (« comme l’année dernière »), elle est aussi déléguée suppléante au conseil des élèves du collège. Elle adore « être au courant de tout ». Etre là. Le doigt toujours levé pour participer. La bouche toujours ouverte pour lire un texte ou juste commenter la vie de la classe. Elle se définit elle-même comme « un très fort caractère ». « Les autres disent que je suis lunatique, faut pas m’embêter, c’est tout ». Plutôt bonne élève, elle ira l’an prochain en seconde générale. Plus tard, elle voudrait être pédiatre, « chirurgien pédiatre » plus précisément. Parce qu’elle a envie d’être « utile ». Et, aussi, parce qu’elle voudrait voir « à l’intérieur du corps ». En classe, Nina est inséparable de Faema."
 		},
 		{
-			"href":     "content-de-vous-avoir-revu",
+			"href":     "nathalie",
 			"img":      "img/nathalie-riveraine.jpg",
 			"alt":      "",
 			"title":    "Nathalie",
 			"subtitle": "45 ans, riveraine du Bataclan"
 		},
 		{
-			"href":     "un-perimetre-de-desolation",
+			"href":     "tuyen",
 			"img":      "img/tuyen-voisin.jpg",
 			"alt":      "",
 			"title":    "Tuyen",
 			"subtitle": "44 ans, voisin du Bataclan"
 		},
 		{
-			"href":     "j-ai-vu-le-tireur-jeune-calme-tranquille",
+			"href":     "sophie",
 			"img":      "img/sophie-bataclan.jpg",
 			"alt":      "",
 			"title":    "Sophie",
 			"subtitle": "39 ans, en terrasse du Bataclan le 13 novembre"
 		},
 		{
-			"href":     "un-an-charlie",
+			"href":     "brigitte-baudelot",
 			"img":      "img/brigitte-institutrice.jpg",
 			"alt":      "",
 			"title":    "Brigitte Baudelot",

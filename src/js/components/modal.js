@@ -9,9 +9,11 @@ $document.ready(function() {
 			modal = cache[hash] || $(hash + "[role=dialog]");
 
 		if (hash) {
+			cache.scroll = $window.scrollTop();
 			modal.length && $body.addClass("has-modal");
 		} else {
 			$body.removeClass("has-modal");
+			$window.scrollTop(cache.scroll || 0);
 		}
 	}
 

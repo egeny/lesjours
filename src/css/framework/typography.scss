@@ -45,6 +45,10 @@
 .fw-semi-bold-archer { @include font-weight-semi-bold("archer"); }
 .fw-bold-archer      { @include font-weight-bold("archer");      }
 
+// While we are at it, add some classes for font-style
+.fs-normal { font-style: normal; }
+.fs-italic { font-style: italic; }
+
 /* Headings */
 .h2, .h3, .h4, .h5, .h6 {
 	@extend %font-brandon;
