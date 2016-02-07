@@ -3,8 +3,8 @@
 
 	"href": "ep2-plug-canal",
 
-	"number": 2,
-	"date": "2015-12-24T10:00+01:00",
+	"number": 1,
+	"date": "2016-01-11T10:00+01:00",
 
 	"title": "Bolloré, le plug Canal",
 	"intro": "<strong>Flash-back.</strong> Arrivé chez Vivendi en lui vendant la chaîne Direct 8, l'homme d'affaires a patienté avant de s'attaquer à sa première cible&nbsp;: Rodolphe Belmer, le numéro 2 de Canal+.",
@@ -18,8 +18,7 @@
 			{ "photo": "author:sebastien-calvet" }
 		],
 
-		"first": "episode:l-empire/ep1-guignols",
-		"prev":  "episode:l-empire/ep1-guignols",
+		"first": "episode:l-empire/ep2-plug-canal",
 		"next":  "episode:l-empire/ep3-portrait-belmer",
 		"last":  "episode:l-empire/ep6-portrait-bollore"
 	}
