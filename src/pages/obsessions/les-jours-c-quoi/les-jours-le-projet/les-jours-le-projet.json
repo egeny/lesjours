@@ -4,10 +4,11 @@
 	"href": "les-jours-le-projet",
 
 	"number": 1,
-	"date": "2016-02-11T10:00+01:00",
+	"date": "2016-02-07T10:00+01:00",
 
 	"title": "« Les Jours », le projet",
 	"intro": "<q>Obsessions, actualité, journalisme en séries</q> clamons-nous sur la page d'accueil des <i>Jours</i> mais il y a encore beaucoup à dire.",
+	"subtitle": "<q>Obsessions, actualité, journalisme en séries</q> clamons-nous sur la page d'accueil des <i>Jours</i> mais il y a encore beaucoup à dire.",
 	"lead":  "Face au torrent de l’info éphémère, <i>Les Jours</i>, c’est le nouveau média en ligne qui creuse ses obsessions au cœur de l’actualité et ne les lâche pas.",
 
 	"tags": ["Les Jours", "journalisme"],
