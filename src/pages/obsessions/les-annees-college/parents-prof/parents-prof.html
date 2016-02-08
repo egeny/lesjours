@@ -1,6 +1,45 @@
-<p><span class="lettrine">L</span>e marathon commence en milieu d’après-midi pour se terminer largement après 20 heures, dans une petite salle de cours du troisième étage du collège Aimé-Césaire. Une dizaine de jours après <a href="/obsessions/les-annees-college/conseil-de-classe/">le conseil de classe</a>, le professeur principal reçoit individuellement les parents d’élèves pour la remise des bulletins. Un quart d’heure est prévu pour chaque rendez-vous. Un moment privilégié pour <a href="#" data-mini="1">Antoine Labaere</a> qui permet de discuter en tête-à-tête avec les parents, d’expliquer les résultats, de préparer à l’orientation et, souvent, pour l’enseignant, d’apprendre et de comprendre pas mal de choses sur ses élèves. Tel que l’on pensait se la coulant douce, dont on découvre qu’il passe en fait des heures en cours de soutien privés le soir et le week-end. Telle autre qui connaît des difficultés familiales. Tel autre encore dont le père est un peu dur avec son enfant.</p>
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
 
-<p>Quatre tables ont été rassemblées pour en faire une grande. D’un côté, il y a les parents avec leur enfant ; de l’autre, l’enseignant. Il fait chaud dans la salle. La remise des bulletins est un défilé de parents dans leurs petits souliers, et d’élèves dont a l’impression de découvrir la face B. Flanqués de son père ou de sa mère, l’ado n’a souvent pas grand-chose à voir avec l’élève qu’il est en classe. <a href="#" data-mini="2">Nina</a>, par exemple, ne dira presque rien de tout l’entretien. Droite comme un « i », elle passera ce moment immobile, bouche cousue, tenant son carnet de correspondance contre son torse, à écouter son père converser avec son professeur principal. Mariama, qui au contraire parle habituellement très peu, défendra son cas avec ferveur lorsque Antoine Labaere lui reprochera une certaine passivité en cours.</p>
+{% set person = obsession.people[0] %}
+
+<p><span class="lettrine">L</span>e marathon commence en milieu d’après-midi pour se terminer largement après 20 heures, dans une petite salle de cours du troisième étage du collège Aimé-Césaire. Une dizaine de jours après <a href="/obsessions/les-annees-college/conseil-de-classe/">le conseil de classe</a>, le professeur principal reçoit individuellement les parents d’élèves pour la remise des bulletins. Un quart d’heure est prévu pour chaque rendez-vous. Un moment privilégié pour <a href="#{{ person.href }}" data-mini="1">Antoine Labaere</a> qui permet de discuter en tête-à-tête avec les parents, d’expliquer les résultats, de préparer à l’orientation et, souvent, pour l’enseignant, d’apprendre et de comprendre pas mal de choses sur ses élèves. Tel que l’on pensait se la coulant douce, dont on découvre qu’il passe en fait des heures en cours de soutien privés le soir et le week-end. Telle autre qui connaît des difficultés familiales. Tel autre encore dont le père est un peu dur avec son enfant.</p>
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[5] %}
+<p>Quatre tables ont été rassemblées pour en faire une grande. D’un côté, il y a les parents avec leur enfant ; de l’autre, l’enseignant. Il fait chaud dans la salle. La remise des bulletins est un défilé de parents dans leurs petits souliers, et d’élèves dont a l’impression de découvrir la face B. Flanqués de leur père ou de leur mère, les ados n’ont souvent pas grand-chose à voir avec les élèves qu’il sont en classe. <a href="#{{ person.href }}" data-mini="2">Nina</a>, par exemple, ne dira presque rien de tout l’entretien. Droite comme un « i », elle passera ce moment immobile, bouche cousue, tenant son carnet de correspondance contre son torse, à écouter son père converser avec son professeur principal. {% set person = obsession.people[16] %} <a href="#{{ person.href }}" data-mini="3">Mariama</a>, qui au contraire parle habituellement très peu, défendra son cas avec ferveur lorsque Antoine Labaere lui reprochera une certaine passivité en cours.</p>
+
+{% set person = obsession.people[5] %}
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[16] %}
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <figure>
 <img src="img/la-rencontre-parents-prof-1.jpg" alt="" />
@@ -9,7 +48,7 @@
 
 <p>Les parents attendent leur tour dans le couloir d’intercours qui prend en fin d’après-midi des allures de salle d’attente. Il y flotte une fébrilité similaire. Aucune famille ne sèche ce rendez-vous. Antoine Labaere les relance un par un les jours précédents, voire les heures pour certains, afin de s’assurer qu’ils viennent. Leur trouvant s’il le faut un autre créneau pour les recevoir. Lorsque les parents ne sont pas disponibles, exceptionnellement, un grand frère ou une grande sœur fait office d’adulte référent.</p>
 
-<p>Particularité dans ce collège du XVIIIe arrondissement de Paris, un tiers des élèves de la 3e B a des parents non francophones. Le prof parle alors à l’élève et l’élève traduit. Souvent, le prof parle longtemps. L’élève traduit en quelques mots. Et le parent présent remercie d’un sourire ou de quelques mots. En dehors de ces petites saynètes où l’on ne peut s’empêcher de s’interroger sur la traduction des intéressés, les entretiens avec les parents non francophones demeurent avant tout des échanges prof-élève. Dialikatou est venue avec sa mère, mais c’est elle qui a besoin de parler à son enseignant. Ce trimestre, elle a eu les encouragements mais elle est déçue de ses résultats, inquiète pour la suite. Antoine Labaere le sait. Il voudrait surtout qu’elle ne se décourage pas. Durant ces quelques minutes, il répètera au moins quatre fois <q>ne t’inquiète pas</q>, lui assurant que les efforts qu’elle fournit vont lui permettre de progresser. A la fin de chaque entretien avec ces parents non francophones, Antoine Labaere demande toujours s’ils ont des questions. Mais il n’y en a pas. Avant qu’ils ne partent, il les informe systématiquement des cours de français gratuits proposés aux parents dans les écoles environnantes. Ils prennent le papier. Et l’on enchaîne.</p>
+<p>Particularité dans ce collège du XVIIIe arrondissement de Paris, un tiers des élèves de la 3e B a des parents non francophones. Le prof parle alors à l’élève et l’élève traduit. Souvent, le prof parle longtemps. L’élève traduit en quelques mots. Et le parent présent remercie d’un sourire. En dehors de ces petites saynètes où l’on ne peut s’empêcher de s’interroger sur la traduction lapidaire des intéressés, les entretiens avec les parents non francophones demeurent avant tout des échanges prof-élève. Dialikatou est venue avec sa mère, mais c’est elle qui a besoin de parler à son enseignant. Ce trimestre, elle a eu les encouragements mais elle est déçue de ses résultats, inquiète pour la suite. Antoine Labaere le sait. Il voudrait surtout qu’elle ne se décourage pas. Durant ces quelques minutes, il répètera au moins quatre fois <q>ne t’inquiète pas</q>, lui assurant que les efforts qu’elle fournit vont lui permettre de progresser. A la fin de chaque entretien avec ces parents non francophones, Antoine Labaere demande toujours s’ils ont des questions. Mais il n’y en a jamais. Avant qu’ils ne partent, il les informe systématiquement des cours de français gratuits proposés aux parents dans les écoles environnantes. Ils prennent le papier. Et l’on enchaîne.</p>
 
 <blockquote>
 <p>Je ne vois pas ce que tu vas faire dans la vie</p>
@@ -34,27 +73,12 @@
 
 <p>Durant ces quatre heures d’entretiens avec les familles, aucun parent n’aura remis en cause la parole du prof, la qualité des enseignements, la quantité de travail personnel à fournir, le fonctionnement du collège, les absences… Seule une mère trouve que son fils n’a pas les récompenses méritées. <q>Personnellement, je lui aurais mis les félicitations</q>, dit-elle dans un franc sourire. Une autre évoque ses craintes quant aux phénomènes de violence dans le quartier, elle est elle-même enseignante.</p>
 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/antoinelabaere.jpg" alt="" /></span>
-<p class="title">Antoine Labaere</p>
-<p class="subtitle">32 ans, professeur principal de la 3e&nbsp;B</p>
-</a>
-</aside>
-
-<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/nina.jpg" alt="" /></span>
-<p class="title">Nina</p>
-<p class="subtitle">14 ans, la déléguée de la 3e&nbsp;B</p>
-</a>
-</aside>
 
 {% from "partials/_macro.html" import note %}
 {{
 note({
 number: 1,
-title: "Quel lycée choisir pour la 3e B?",
+title: "Quel lycée choisir pour la 3e B ?",
 caption: "Paris est divisé en quatre secteurs. Les élèves émettent des vœux pour choisir leur lycée dans le secteur dont ils dépendent."
 })
 }}
