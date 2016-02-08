@@ -232,8 +232,8 @@
 								<label>
 									<span class="price">9<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois<sup>*</sup></span></span></span>
 									<span class="name">Jouriste</span>
-									<span class="desc">Sans engagement de durée*</span>
-									<small>1 €/mois pendant la version pilote</small>
+									<span class="desc">* 1€/mois pendant le pilote</span>
+									<small>Sans engagement de durée</small>
 									<input class="sr" type="radio" name="plan" value="jouriste" required <?php if ($data['plan'] == 'jouriste') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
@@ -242,8 +242,8 @@
 								<label>
 									<span class="price">90<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par an<sup>*</sup></span></span></span>
 									<span class="name">Jouriste cash</span>
-									<span class="desc">Sans engagement de durée*</span>
-									<small>Un an à compter de la fin de la version pilote</small>
+									<span class="desc">* Un an à compter de la fin du pilote</span>
+									<small>Sans engagement de durée</small>
 									<input class="sr" type="radio" name="plan" value="jouriste-cash" required <?php if ($data['plan'] == 'jouriste-cash') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
@@ -252,8 +252,8 @@
 								<label>
 									<span class="price">5<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois<sup>*</sup></span></span></span>
 									<span class="name">Jouriste désargenté</span>
-									<span class="desc">Sans engagement de durée*</span>
-									<small>1 €/mois pendant la version pilote</small>
+									<span class="desc">* 1€/mois pendant le pilote</span>
+									<small>Sans engagement de durée</small>
 									<small>Étudiant, chômeur, fauché</small>
 									<input class="sr" type="radio" name="plan" value="jouriste-desargente" required <?php if ($data['plan'] == 'jouriste-desargente') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
