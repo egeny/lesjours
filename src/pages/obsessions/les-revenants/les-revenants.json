@@ -16,39 +16,49 @@
 
 	"people": [
 		{
-			"href":     "",
+			"href":     "bilel",
 			"img":      "img/bilel.jpg",
 			"alt":      "",
 			"title":    "Bilel",
-			"subtitle": "27 ans, "
+			"subtitle": "27 ans, de retour de l'Etat islamique",
+			"desc": "Bilel (son prénom a été modifié) a 27 ans et il est désormais, depuis qu’il a passé la frontière avec la Syrie, le premier Français poursuivi sur le sol turc pour des faits de terrorisme. Titulaire d’un bac, Bilel vivait du RSA er enchaînait les boulots d’interim. Il explique avoir basculé dans l’idéologie jihadiste après un bref passage par le salafisme quiétiste. Il raconte être arrivé en Syrie au printemps 2014. Bilel a d’abord rallié une brigade proche d’Al Qaeda avant de rejoindre l’Etat islamique où, affirme-t-il, il n’a jamais combattu. Ce sont les attentats du 13 novembre qui l’ont, explique-t-il, décidé à rentrer en France.",
+			"minor": true
 		},
 		{
-			"href":     "",
+			"href":     "nabia",
 			"img":      "img/nabia.jpg",
 			"alt":      "",
 			"title":    "Nabia",
-			"subtitle": "22 ans, la femme de Bilel"
+			"subtitle": "22 ans, la femme de Bilel",
+			"desc": "Nabia (son prénom a été modifié) est une jeune Français d’origine algérienne âgée de 22 ans. Elle a connu Bilel via Facebook et elle a quitté la France pour rejoindre l’Etat islamique (EI) en compagnie de ses deux filles. A son arrivée, elle a été envoyée dans l’une des maisons pour femmes de Raqqa. Bilel et Nabia se sont mariés à Raqqa et ont donné naissance à un garçon. Après avoir quitté l’EI, Nabia et ses trois enfants ont été expulsés de Turquie vers la France.",
+			"minor": true
 		},
 		{
-			"href":     "",
+			"href":     "abumaryam",
 			"img":      "img/abumaryam.jpg",
 			"alt":      "",
 			"title":    "Abu Maryam",
-			"subtitle": "Le jihadiste avec lequel Bilel a rejoint l'EI"
+			"subtitle": "Le jihadiste avec lequel Bilel a rejoint l'EI",
+			"desc": "Kevin, de son vrai prénom, est un converti de 25 ans, originaire du quartier du Miral à Toulouse, connu en France pour son addiction à la fumette, des faits de petite délinquance, trafic de drogue et cambriolages. En 2013 il a rejoint la Syrie et Harakat Sham al Islam, l’unité de jihadistes marocains où il a fait la connaissance de Bilel. Une fois rallié à l’Etat islamique, Abu Maryam s’est fait connaître dans une vidéo où il brûlait son passeport avec un message de menace pour les Français, sabre et kalachnikov à la main. Il a trouvé la mort dans un attentat suicide en précipitant un camion bourré d’explosifs contre une base de l’armée irakienne.",
+			"minor": true
 		},
 		{
-			"href":     "#",
+			"href":     "ibrahim-benchekroun",
 			"img":      "img/ibrahim-benchekroun.jpg",
 			"alt":      "",
 			"title":    "Ibrahim Benchekroun",
-			"subtitle": "Fondateur de la brigade Harakat Sham al Islam, liée à Al Qaeda"
+			"subtitle": "Fondateur de la brigade Harakat Sham al Islam, liée à Al Qaeda",
+			"desc": "Ibrahim Benchekroun est l’un des fondateurs d’Harakat Sham al Islam, une brigade jihadiste proche d’Al Qaeda composée essentiellement de combattants marocains. Ce groupe a été créé en 2013 par des anciens du jihad en Afghanistan et notamment par Ibrahim Benchekroun. Ancien détenu des prisons américaines de Bagram en Afghanistan, puis de Guantanamo, il a été libéré en 2004, puis réincarcéré au Maroc pour terrorisme. Il est ensuite parti en Syrie en 2012 où il a formé et dirigé le groupe Harakat Sham al Islam. Avant ses 40 ans, Benchekroun a été annoncé tué au combat en Syrie en 2014 pendant la bataille de Kassab contre le régime syrien, dans la région du littoral de Lattaquié. Classé terroriste par les Etats-Unis, cette brigade a largement perdu de son influence après la mort de son émir fondateur, une partie ayant fusionné avec d’autres groupe jihadistes pro-Al Qaeda tandis que d’autres de ses membres ont préféré rejoindre les rivaux de l’Etat islamique.",
+			"minor": true
 		},
 		{
-			"href":     "#",
+			"href":     "al-bagdadi",
 			"img":      "img/al-bagdadi.jpg",
 			"alt":      "",
 			"title":    "Abu Bakr al Bagdadi",
-			"subtitle": "44 ans, calife autoproclamé de l'Etat islamique"
+			"subtitle": "44 ans, calife autoproclamé de l'Etat islamique",
+			"desc": "Âgé d’une quarantaine d’années, inconnu du grand public avant 2014, Abu Bakr al Bagdadi est l’émir de l’Etat islamique depuis 2010, date de la mort de son prédécesseur Abu Omar al Bagdadi. Depuis la proclamation du califat le 29 juin 2014, il a pris le nom de calife Ibrahim. Ancien détenu des prisons américaines en Irak, il était avant l’invasion américaine de 2003 imam à Fallouja, diplômé d’un doctorat de sciences islamiques de l’université de Bagdad. Il appartient à la tribu des Bou Badri de Samara, qui se dit descendante du Prophète.",
+			"minor": true
 		}
 	],
 
