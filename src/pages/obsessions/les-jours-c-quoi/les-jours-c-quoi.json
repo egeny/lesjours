@@ -25,7 +25,7 @@
 			"alt":      "",
 			"title":    "Olivier Bertrand",
 			"subtitle": "Obsession Turquie",
-			"desc":     "J’aime la Turquie",
+			"desc":     "Pour Les Jours ma première obsession sera la Turquie. Raconter la société turque aujourd'hui, au-delà de ses actualités, dramatiques et très denses. Les débats qui la traversent, les combats, les dépressions collectives. Un enjeu au-delà du pays car la Turquie reste cette agrafe fragile entre Europe et orient. Se jouent là-bas des questions qui nous concernent de près. La proximité des frontières chaotiques du Moyen-Orient. Les millions de migrants, que les dilplomaties européennes tentent de contenir en Turquie, fermant pour cela les yeux sur la dictature qui s'installe, et la guerre imposée au Kurdistan. La montée de l'autorité et des conservatismes. Les menaces terroristes. Le face-à-face entre Islam et laïcité. Les dérives ubuesques d'un président qui rassurait l'Europe… Je suis journaliste depuis 28 ans. Mon travail est attiré depuis toujours par les questions d'exil et de racines, d'identités, assignées ou choisies. Cela m'a conduit longtemps dans les cités françaises, que je couvrais pour Libération, essayant de comprendre les mécanismes de violences urbaines, la montée de l'islam radical, les discriminations, la relégation, les politiques qui peuvent reconstruire des villes. J'ai également écrit et réalisé deux premiers films documentaires. Un soir d'été, un étranger (Ateliers Varan, nombreux festivals), pour comprendre les mécanismes de résistance dans un village cossu qui avait caché un clandestin dans ses greniers. Et Vaulx-en-Velin la cité retrouvée (France 3, LCP), qui raconte l'histoire de la politique de la ville au travers d'un quartier emblématique emporté par les premières émeutes urbaines en 1990.",
 			"minor": true
 		},
 		{
@@ -42,95 +42,107 @@
 			"img":      "img/jbg.jpg",
 			"alt":      "",
 			"title":    "Jérôme Bourreau-Guggenheim",
+			"desc":     "J’aime la Turquie",
 			"subtitle": "Obsession",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "sebastien-calvet",
 			"img":      "img/sebastien-calvet.jpg",
 			"alt":      "",
 			"title":    "Sébastien Calvet",
 			"subtitle": "Obsession photo",
+			"desc":     "Photographe – du bestiaire politique notamment –, je change (un peu) de métier pour prendre en charge la politique photo des Jours, un poste crucial. Après 14 ans de reportage à Libération, je vais montrer la richesse des images d’autres photographes. En 2014, j’ai reçu le prix du Livre numérique pour Retour à Béziers, un reportage photographique accompagné d’un récit de Didier Daeninckx.Les images ont des choses à dire, les photographes aussi. Dans l’obsession Les Jours à l’œil, je présente les coulisses des images produites par les photographes des Jours, mais aussi les sujets qui nous ont interpellés, surpris, emballés. Une obsession portée par l’envie de partager les histoires des photos et des photographes.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "nicolas-cori",
 			"img":      "img/nicolas-cori.jpg",
 			"alt":      "",
 			"title":    "Nicolas Cori",
 			"subtitle": "Obsession jonglage",
+			"desc":     "Dans un monde où les multinationales prennent le pouvoir sur les états, m’intéresse aux zones grises des grandes entreprises. Scandales, affaires…, j’aime aller chercher et raconter, des histoires qui dérangent la belle communication des sociétés. Pour Les Jours, je me suis intéressé aux stratégies d’image des grands groupes énergétiques français au moment de la COP21, c'est l’obsession Good com, bad COP. A Libération (2000-2015), j’ai suivi l’affaire Kerviel, couvert la crise des subprimes, les scandales de golden parachutes et l’évasion fiscale. J’ai aussi animé un blog, Les cordons de la bourse, sur la finance. Enfin, je suis l’auteur de plusieurs ouvrages, notamment Dexia, une banque toxique (La Découverte, 2013), une enquête sur les emprunts toxiques vendus par la banque aux villes et aux hôpitaux.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "sophian-fanen",
 			"img":      "img/sophian-fanen.jpg",
 			"alt":      "",
 			"title":    "Sophian Fanen",
 			"subtitle": "Obsession Adele",
+			"desc":     "J'écris sur la musique, de sa composition à sa distribution : la vie des artistes a été trop transformée par internet pour ne l'aborder que d'un point de vue artistique. Je m'intéresse donc aux disques, mais aussi à leur économie et en particulier au streaming – ma première obsession, intitulée A qui profite le stream ?. Cette nouvelle technologie change tout : la façon de produire des tubes et de les proposer à un public ciblé, mais aussi les habitudes d'écoute, remises en question par un accès illimité et mobile à la quasi-totalité des œuvres produites depuis un siècle. Après des études d'histoire et de journalisme, je poursuis une carrière qui se partage entre presse écrite (Dernières nouvelles d'Alsace, divers magazines puis Libération) et radio (France bleu, FIP, France Culture). J'étais chef adjoint du service culture de Libération avant de cofonder Les Jours. Je suis l'auteur de Barbara Dane, le chant partisan, un documentaire écrit et dessiné (RF8, 2013) et de Træna, le son du Nørsk (Arte, 2013). Surtout, j'adore faire des playlists.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "garriberts",
 			"img":      "img/garriberts.jpg",
 			"alt":      "",
 			"title":    "Les Garriberts",
 			"subtitle": "Obsession obsession",
+			"desc":     "Traquer la faille, le détail qui assassine, raconter le réel et l’irréel, avec rythme, distance et velleité humoristique, sans jamais lâcher. C’est ce que nous tenté de faire pendant quinze ans à <i>Libération</i> sur la télévision et les médias (poil aux bras). Comme journalistes puis chefs de la rubrique Ecrans-Médias mais toujours en tant que Garriberts, nous avons vu naître des Hanouna, disparaître des PPDA, s’émietter les audiences, valser les patrons de chaînes. Nous avons débité des bûchettes cathodiques dans notre chronique télé Bourre-Paf chaque samedi pendant treize ans. Et nous avons bien rigolé. Aux Jours, nous entamons L'empire, une obsession consacrée à la conquête de Canal+ par Vincent Bolloré. Parce qu'on y parle de télévision, de pouvoir, d'argent, d'humain. Et aussi de Cyril Hanouna. Aux Jours, nous avons envie d'écrire sur la télé et les médias bien sûr, mais pas que. La politique nous titille et nous sommes affectés de graves obsessions pour Jane Austen, les sous-marins et l'Ecosse. Nous avons quitté Libération en 2015 pour fonder Les Jours avec sept des plus fous de nos collègues et un DAF punk. Nous avons écrit un livre, La Bonne Soupe, consacré au JT de 13 heures de Jean-Pierre Pernaut (Les Arènes, 2007).",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "alice-geraud",
 			"img":      "img/louis-garrel.jpg",
 			"alt":      "",
 			"title":    "Alice Géraud",
 			"subtitle": "Obsession Louis Garrel",
+			"desc":     "Je travaille depuis des années sur les questions de discriminations, de racisme et d’inégalités des chances. Une question m’obsède : comment fait-on en 2016 en France pour séparer encore aussi sûrement les noirs des blancs, les riches des pauvres ? Je me suis arrêtée cette année sur un de ces points qui font souvent office de gare de triage social : la classe de troisième, celle de l’orientation vers les filières pro ou générales. Durant un an, je suis chaque semaine la classe de 3e B du collège Aimé-Césaire, un collège en éducation prioritaire du XVIIIe arrondissement de Paris. Une classe où une majorité d’élèves sont issus de milieux défavorisés et pour la plupart enfants d’immigrés. Comment fonctionne la mixité sociale dans cet établissement ? Comment l’institution scolaire, les profs parviennent-ils à lutter contre les déterminismes et construire cette fameuse « égalité des chances » ? Quelles sont les rêves et les angoisses de ces adolescents ? Auparavant, j’ai travaillé au service Société de Libération, collaboré avec de nombreux titres de presse (M le magazine, Associated Press, Le Journal du dimanche, La Tribune de Genève, Marianne…), écrit un livre sur un convoyeur de fond (Toni, 11.6, histoire du convoyeur, Stock, 2011) adapté au cinéma par Philippe Godeau (11.6, avec François Cluzet), un autre sur Lyon (éditions Autrement), ville où j’ai longtemps vécu et où j’ai commencé le journalisme. J’aime, entre toutes choses journalistiques, raconter des histoires.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "antoine-guiral",
 			"img":      "img/antoine-guiral.jpg",
 			"alt":      "",
 			"title":    "Antoine Guiral",
 			"subtitle": "Obsession politique et chaîne de vélo",
+			"desc":     "J’aime la Turquie",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "nicolas-le-gall",
 			"img":      "img/nicolas-le-gall.jpg",
 			"alt":      "",
 			"title":    "Nicolas Le Gall",
 			"subtitle": "Obsession Japon",
+			"desc":     "J’aime la Turquie",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "augustin-naepels",
 			"img":      "img/augustin-naepels.jpg",
 			"alt":      "",
 			"title":    "Augustin Naepels",
 			"subtitle": "Obsession outre-mer",
+			"desc":     "J’aime la Turquie",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "camille-polloni",
 			"img":      "img/camille-polloni.jpg",
 			"alt":      "",
 			"title":    "Camille Polloni",
 			"subtitle": "Obsession chercher",
+			"desc":     "J’aime la Turquie",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "charlotte-rotman",
 			"img":      "img/charlotte-rotman.jpg",
 			"alt":      "",
 			"title":    "Charlotte Rotman",
 			"subtitle": "Obsession curiosité",
+			"desc":     "J’aime la Turquie",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "david-thomson",
 			"img":      "img/david-thomson.jpg",
 			"alt":      "",
 			"title":    "David Thomson",
 			"subtitle": "Obsession jihadiste",
+			"desc":     "J’aime la Turquie",
 			"minor": true
 		}
 	],
