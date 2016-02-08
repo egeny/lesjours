@@ -164,7 +164,7 @@
 </div><!-- end of .container -->
 
 <div id="unsubscribe" class="modal" role="dialog" tabindex="-1">
-	<div class="sm-w-100 md-w-4c lg-w-4c" role="document">
+	<div class="sm-w-100 md-w-4c lg-w-4c pa-1m" role="document">
 		<h2 class="style-meta-larger mb-2g">Se désabonner</h2>
 		<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
 		<p>Êtes-vous sûr de vouloir vous désabonner ?</p>
@@ -173,7 +173,7 @@
 	</div>
 </div>
 <div id="unsubscribed" class="modal" role="dialog" tabindex="-1">
-	<div class="sm-w-100 md-w-4c lg-w-4c" role="document">
+	<div class="sm-w-100 md-w-4c lg-w-4c pa-1m" role="document">
 		<h2 class="style-meta-larger mb-2g">Se désabonner</h2>
 		<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
 		<p>Vous êtes à présent désabonné.<br/>

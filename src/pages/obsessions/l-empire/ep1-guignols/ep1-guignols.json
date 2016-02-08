@@ -3,8 +3,8 @@
 
 	"href": "ep1-guignols",
 
-	"number": 1,
-	"date": "2015-12-23T10:00+01:00",
+	"number": 5,
+	"date": "2016-02-15T10:00+01:00",
 
 	"title": "Ainsi fondent les marionnettes",
 	"intro": "Décapités puis revenus pour vanter les produits Vivendi, « Les Guignols » façon Bolloré ne font plus d'info. Ni d'humour.",
@@ -18,8 +18,8 @@
 			{ "photo": "author:sebastien-calvet" }
 		],
 
-		"first": "episode:l-empire/ep1-guignols",
-		"next":  "episode:l-empire/ep2-plug-canal",
+		"first": "episode:l-empire/ep2-plug-canal",
+		"prev":  "episode:l-empire/ep5-jour-de-deug",
 		"last":  "episode:l-empire/ep6-portrait-bollore"
 	}
 }

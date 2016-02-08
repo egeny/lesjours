@@ -14,7 +14,20 @@ $margin: grid-margin("sm");
 
 %fadable-active { @include fadable-active; }
 
+// FIXME
 .responsive { @include responsive; }
+/*.responsive {
+	width: 100%;
+	height: auto;
+	max-heigth: 100%;
+	object-fit: cover;
+}*/
+.responsive-vertical {
+	width: auto; // Set to auto for aspect ratio (override html's width attribute)
+	max-width: 100%; // Avoid overflowing the container
+	height: 100%;
+	object-fit: cover;
+}
 
 .alpha-10, .α-10 { opacity: .1;  }
 .alpha-20, .α-20 { opacity: .2;  }
@@ -43,10 +56,18 @@ $margin: grid-margin("sm");
 
 .color-inherit { color: inherit; }
 
+.fit-cover,   .sm-fit-cover   { object-fit: cover;   }
+.fit-contain, .sm-fit-contain { object-fit: contain; }
+
+// FIXME
+.flex-0 { flex: 0; }
+.flex-1 { flex: 1; }
+
 /* Quick width or height */
-.full-width  { width:  100%; }
-.full-height { height: 100%; }
+.full-width  { width:  100%; } // FIXME: deprecated
+.full-height { height: 100%; } // FIXME: deprecated
 .calc-height { height: calc(100% - 64px - #{$margin}); } // 100% - header's height - one margin at bottom
+// FIXME: replace calc-height with flex in column mode?
 
 .hidden { display: none; }
 
@@ -212,10 +233,16 @@ ol.list > li {
 	$margin: grid-margin("md");
 	.calc-height { height: calc(100% - 85px - #{$margin}); }
 	.link { background-position: 0 1em; }
+	.md-fit-cover   { object-fit: cover;   }
+	.md-fit-contain { object-fit: contain; }
 }
 
 @include media("lg") {
 	$margin: grid-margin("lg");
+
+	.lg-fit-cover   { object-fit: cover;   }
+	.lg-fit-contain { object-fit: contain; }
+	.lg-flex-0 { flex: 0; }
 
 	@if $margin != grid-margin("md") {
 		.calc-height { height: calc(100% - 85px - #{$margin}); }

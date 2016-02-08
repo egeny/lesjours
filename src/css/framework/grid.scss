@@ -15,9 +15,9 @@
 	}
 }
 
-.row-top     { align-items: flex-start;     }
-.row-center  { align-items: center;         }
-.row-bottom  { align-items: flex-end;       }
+.row-top     { align-items: flex-start; }
+.row-center  { align-items: center;     }
+.row-bottom  { align-items: flex-end;   }
 
 .row-reverse {
 	flex-direction: row-reverse;
@@ -50,6 +50,42 @@
 .w-33, .w-⅓ { width: (100% / 3); }
 .w-66, .w-⅔ { width: (100% / 3) * 2; }
 .w-100 { width: 100%; }
+
+.min-w-25, .min-w-¼ { min-width: 25%; }
+.min-w-50, .min-w-½ { min-width: 50%; }
+.min-w-75, .min-w-¾ { min-width: 75%; }
+.min-w-33, .min-w-⅓ { min-width: (100% / 3); }
+.min-w-66, .min-w-⅔ { min-width: (100% / 3) * 2; }
+.min-w-100 { min-width: 100%; }
+
+.max-w-25, .max-w-¼ { max-width: 25%; }
+.max-w-50, .max-w-½ { max-width: 50%; }
+.max-w-75, .max-w-¾ { max-width: 75%; }
+.max-w-33, .max-w-⅓ { max-width: (100% / 3); }
+.max-w-66, .max-w-⅔ { max-width: (100% / 3) * 2; }
+.max-w-100 { max-width: 100%; }
+
+.h-auto     { height: auto; }
+.h-25, .h-¼ { height: 25%; }
+.h-50, .h-½ { height: 50%; }
+.h-75, .h-¾ { height: 75%; }
+.h-33, .h-⅓ { height: (100% / 3); }
+.h-66, .h-⅔ { height: (100% / 3) * 2; }
+.h-100      { height: 100%; }
+
+.min-h-25, .min-h-¼ { min-height: 25%; }
+.min-h-50, .min-h-½ { min-height: 50%; }
+.min-h-75, .min-h-¾ { min-height: 75%; }
+.min-h-33, .min-h-⅓ { min-height: (100% / 3); }
+.min-h-66, .min-h-⅔ { min-height: (100% / 3) * 2; }
+.min-h-100 { min-height: 100%; }
+
+.max-h-25, .max-h-¼ { max-height: 25%; }
+.max-h-50, .max-h-½ { max-height: 50%; }
+.max-h-75, .max-h-¾ { max-height: 75%; }
+.max-h-33, .max-h-⅓ { max-height: (100% / 3); }
+.max-h-66, .max-h-⅔ { max-height: (100% / 3) * 2; }
+.max-h-100 { max-height: 100%; }
 
 .ma-0, .m-0  { margin:        0 !important; }
 .mt-0, .mv-0 { margin-top:    0 !important; }
@@ -145,6 +181,42 @@ $last-gutter:     null;
 		.#{$device}-w-33, .#{$device}-w-⅓ { width: (100% / 3); }
 		.#{$device}-w-66, .#{$device}-w-⅔ { width: (100% / 3) * 2; }
 		.#{$device}-w-100 { width: 100%; }
+
+		.#{$device}-min-w-25, .#{$device}-min-w-¼ { min-width: 25%; }
+		.#{$device}-min-w-50, .#{$device}-min-w-½ { min-width: 50%; }
+		.#{$device}-min-w-75, .#{$device}-min-w-¾ { min-width: 75%; }
+		.#{$device}-min-w-33, .#{$device}-min-w-⅓ { min-width: (100% / 3); }
+		.#{$device}-min-w-66, .#{$device}-min-w-⅔ { min-width: (100% / 3) * 2; }
+		.#{$device}-min-w-100 { min-width: 100%; }
+
+		.#{$device}-max-w-25, .#{$device}-max-w-¼ { max-width: 25%; }
+		.#{$device}-max-w-50, .#{$device}-max-w-½ { max-width: 50%; }
+		.#{$device}-max-w-75, .#{$device}-max-w-¾ { max-width: 75%; }
+		.#{$device}-max-w-33, .#{$device}-max-w-⅓ { max-width: (100% / 3); }
+		.#{$device}-max-w-66, .#{$device}-max-w-⅔ { max-width: (100% / 3) * 2; }
+		.#{$device}-max-w-100 { max-width: 100%; }
+
+		.#{$device}-h-auto { height: auto; }
+		.#{$device}-h-25, .#{$device}-h-¼ { height: 25%; }
+		.#{$device}-h-50, .#{$device}-h-½ { height: 50%; }
+		.#{$device}-h-75, .#{$device}-h-¾ { height: 75%; }
+		.#{$device}-h-33, .#{$device}-h-⅓ { height: (100% / 3); }
+		.#{$device}-h-66, .#{$device}-h-⅔ { height: (100% / 3) * 2; }
+		.#{$device}-h-100 { height: 100%; }
+
+		.#{$device}-min-h-25, .#{$device}-min-h-¼ { min-height: 25%; }
+		.#{$device}-min-h-50, .#{$device}-min-h-½ { min-height: 50%; }
+		.#{$device}-min-h-75, .#{$device}-min-h-¾ { min-height: 75%; }
+		.#{$device}-min-h-33, .#{$device}-min-h-⅓ { min-height: (100% / 3); }
+		.#{$device}-min-h-66, .#{$device}-min-h-⅔ { min-height: (100% / 3) * 2; }
+		.#{$device}-min-h-100 { min-height: 100%; }
+
+		.#{$device}-max-h-25, .#{$device}-max-h-¼ { max-height: 25%; }
+		.#{$device}-max-h-50, .#{$device}-max-h-½ { max-height: 50%; }
+		.#{$device}-max-h-75, .#{$device}-max-h-¾ { max-height: 75%; }
+		.#{$device}-max-h-33, .#{$device}-max-h-⅓ { max-height: (100% / 3); }
+		.#{$device}-max-h-66, .#{$device}-max-h-⅔ { max-height: (100% / 3) * 2; }
+		.#{$device}-max-h-100 { max-height: 100%; }
 
 		// Generate .$device-$property-$amount-c(olumns)
 		@for $i from 1 through $columns {

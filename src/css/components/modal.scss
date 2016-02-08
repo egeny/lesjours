@@ -23,10 +23,7 @@ $gutter: grid-gutter("sm");
 
 	[role="document"] {
 		background: $color-white;
-
 		box-sizing: border-box;
-		padding: $gutter;
-
 		color: $color-main;
 	}
 
@@ -67,8 +64,6 @@ $gutter: grid-gutter("sm");
 
 	@if $gutter != grid-gutter("sm") {
 		.modal {
-			[role="document"] { padding: $gutter; }
-
 			.close {
 				top:   $gutter;
 				right: $gutter;
@@ -81,8 +76,6 @@ $gutter: grid-gutter("sm");
 	$gutter: grid-gutter("lg");
 	@if $gutter != grid-gutter("md") {
 		.modal {
-			[role="document"] { padding: $gutter; }
-
 			.close {
 				top:   $gutter;
 				right: $gutter;

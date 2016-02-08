@@ -3,8 +3,8 @@
 
 	"href": "ep4-journal-hard",
 
-	"number": 4,
-	"date": "2016-01-04T13:50+01:00",
+	"number": 3,
+	"date": "2016-01-25T13:50+01:00",
 
 	"title": "Bolloré à Canal+, le journal du hard",
 	"intro":  "<strong>Flash-back.</strong> Après avoir écarté Rodolphe Belmer, le nouveau patron de Canal + a mené une séance d'humiliation dont se souviennent encore les cadres de la chaîne.",
@@ -18,8 +18,9 @@
 			{ "photo": "author:sebastien-calvet" }
 		],
 
-		"first": "episode:l-empire/ep1-guignols",
+		"first": "episode:l-empire/ep2-plug-canal",
 		"prev": "episode:l-empire/ep3-portrait-belmer",
+		"next": "episode:l-empire/ep5-jour-de-deug",
 		"last":  "episode:l-empire/ep6-portrait-bollore"
 	}
 }
