@@ -45,5 +45,5 @@
 		}
 	}
 
-	header('Location: /abonnement.html');
+	header('Location: /abonnement.html#login');
 ?>
