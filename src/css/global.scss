@@ -215,6 +215,11 @@ textarea { resize: vertical; }
 	display: inline-block;
 }
 
+[class^=ui-].initial {
+	width:  initial;
+	height: initial;
+}
+
 /* Add an asterisk for links pointing to a note */
 [href^="#note"]::after { content: "*"; }
 
