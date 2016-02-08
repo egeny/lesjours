@@ -1,4 +1,7 @@
-<p><span class="lettrine">I</span>l est 8h25 lundi&nbsp;; dans la cour, les élèves ont les yeux gonflés des petits matins. Hier soir, le Front national est arrivé en tête aux élections régionales&nbsp;; il peut remporter six régions sur treize. Le séisme ne fait pas trembler les murs du collège. Dans la cour de récréation où l’on se raconte surtout le week-end, sans surprise, ce n’est pas un sujet.</p>
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+<p><span class="lettrine">I</span>l est 8h25 lundi. Dans la cour, les élèves ont les yeux gonflés des petits matins. Hier soir, le Front national est arrivé en tête aux élections régionales. Il peut remporter six régions sur treize. Le séisme ne fait pas trembler les murs du collège. Dans la cour de récréation où l’on se raconte surtout le week-end, sans surprise, ce n’est pas un sujet.</p>
 
 <p>Salle numéro trois, quelques minutes plus tard. Éléonore Garcia, la prof de français des 3e&nbsp;B, le pose tout de même sur la table. Chaque lundi matin, elle travaille avec sa classe sur l’analyse de l’actualité. Chacun doit préparer la présentation d’un fait d’actualité de son choix. Souvent, ils choisissent des faits scientifiques ou insolites, la plupart du temps attrapés au vol sur internet ou une chaine d’info en continu. L’exercice consiste à les pousser à s’interroger sur le sens et les enjeux de l’actualité qui leur parvient, mais aussi à travailler leur oral en vue du brevet. À utiliser un vocabulaire précis. À sourcer les informations qu’ils captent.</p>
 
@@ -13,22 +16,44 @@
 	<figcaption><span>Spewell et Nina dans la classe de 3e&nbsp;B <span class="credits">Photo Simon Lambert pour <i>Les Jours</i></span>.</span></figcaption>
 </figure>
 
-<p>Ce matin de gueule de bois FN, Soumiga a retenu un sujet astronomie, les Russes qui entendent bien construire une base sur la Lune. <a href="#" data-mini="1">Louanne</a> fait partie de ceux qui ont choisi les élections régionales. Mais, dans sa présentation orale, elle ne dit mot des résultats. Ils sont tombés la veille au soir, les élèves n’ont pas vraiment regardé. L’enseignante l’interroge sur le score du Front national. <q>Ils ont fait un maximum de voix</q>, dit-elle. <q>27%</q>, précise Dialikatou depuis sa chaise. Derrière elle, au fond de la classe, <a href="#" data-mini="2">Spewell</a>, lève le doigt&nbsp;: <q>Madame, le Front national, c’est le parti où il y a Marine Le Pen&nbsp;?</q> Il semble connaître la réponse. L’enseignante ne répond pas.</p>
+{% set person = obsession.people[14] %}
+
+<p>Ce matin de gueule de bois FN, Soumiga a retenu un sujet astronomie, les Russes qui entendent bien construire une base sur la Lune. {% set person = obsession.people[11] %} <a href="#{{ person.href }}" data-mini="1">Louanne</a> fait partie de ceux qui ont choisi les élections régionales. Mais, dans sa présentation orale, elle ne dit mot des résultats. Ils sont tombés la veille au soir, les élèves n’ont pas vraiment regardé. L’enseignante l’interroge sur le score du Front national. <q>Ils ont fait un maximum de voix</q>, dit-elle. <q>27%</q>, précise <a href="#{{ person.href }}" data-mini="2">Dialikatou</a> depuis sa chaise. Derrière elle, au fond de la classe, {% set person = obsession.people[10] %} <a href="#{{ person.href }}" data-mini="3">Spewell</a>, lève le doigt&nbsp;: <q>Madame, le Front national, c’est le parti où il y a Marine Le Pen&nbsp;?</q> Il semble connaître la réponse. L’enseignante ne répond pas.</p>
+
+{% set person = obsession.people[14] %}
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[11] %}
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[10] %}
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
 
 <p>Eléonore Garcia les interroge sur les principaux partis en France. À gauche, ils savent. <q>Le Parti socialiste.</q> À droite&nbsp;? Silence. Aucun ne semble connaître l’existence des Républicains. Ils disent plutôt l’UMP. Le changement de nom leur a échappé. <q>Comment pourrait-on qualifier le Front national&nbsp;?</q>, demande encore l’enseignante. <q>Un parti communiste</q>, tente une voix. La majorité corrige&nbsp;: <q>Un parti d’extrême droite.</q></p>
 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/louanne.jpg" alt="" /></span>
-<p class="title">Louanne</p>
-<p class="subtitle">14 ans, élève en 3e&nbsp;B</p>
-</a>
-</aside>
-
-<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/spewel.jpg" alt="" /></span>
-<p class="title">Spewell</p>
-<p class="subtitle">14 ans, élève en 3e&nbsp;B</p>
-</a>
-</aside>

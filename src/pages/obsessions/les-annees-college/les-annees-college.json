@@ -150,7 +150,7 @@
 			"img":      "img/dialikatou.jpg",
 			"alt":      "",
 			"title":    "Dialikatou",
-			"subtitle": "X ans, élève en 3e&nbsp;B",
+			"subtitle": "15 ans, élève en 3e&nbsp;B",
 			"desc": ""
 		},
 		{
@@ -198,7 +198,7 @@
 			"img":      "img/eleonore-garcia.jpg",
 			"alt":      "",
 			"title":    "Eléonore Garcia",
-			"subtitle": "39 ans ans, professeur de Français",
+			"subtitle": "39 ans, professeur de français",
 			"desc": "On entre dans sa classe en silence, on attend pour s’asseoir et on enlève sa doudoune. Eléonore Garcia a une sorte d’autorité calme, assez efficace avec les 3è B, faite d’un respect mutuel imposé. Elle est depuis quatre ans à Aimé Césaire. Auparavant, elle a enseigné dans d’autres établissements en éducation prioritaire, notamment à Colombes (Hauts-de-Seine). A Aimé-Césaire, elle apprécie les conditions de travail, l’équipement numérique, l’équipe, la mixité sociale… Même si, reconnaît-elle, « on manque de solutions pour faire progresser les élèves les plus en difficulté qui n’ont pas les bases ». Eléonore Garcia est exigente avec ses élèves. Elle n’aime pas le terme « compétences » employé à tout bout de champ dans l’Education nationale. Comme beaucoup d’enseignants ici, elle expérimente beaucoup autour de sa matière. Tous les lundis, par exemple,  elle travaille avec les 3è B sur des faits d’actualité. Un exercice qui lui permet de les faire progresser en expression orale. Au collège, Eléonore Garcia s’occupe aussi du club cinéma et… de l’atelier tricot."
 		},
 		{
@@ -206,9 +206,17 @@
 			"img":      "img/enzo.jpg",
 			"alt":      "",
 			"title":    "Enzo",
-			"subtitle": "14 ans ans, élève en 3e&nbsp;B",
+			"subtitle": "14 ans, élève en 3e&nbsp;B",
 			"desc": ""
-		}			
+		},
+		{
+			"href":     "rayan",
+			"img":      "img/rayan.jpg",
+			"alt":      "",
+			"title":    "Rayan",
+			"subtitle": "14 ans, élève en 3e&nbsp;B",
+			"desc": ""
+		}						
 
 	],
 
