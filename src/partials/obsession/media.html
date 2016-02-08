@@ -1,17 +1,22 @@
 <section class="obsession-{{ obsession.color }}">
-<!-- TODO: This section is a work in progress, you might find ugly things (like yo mama) -->
+{# TODO: This section is a work in progress, you might find ugly things (like yo mama) #}
 {% for item in obsession.people %}
-	<div id="{{ item.href }}" class="modal" role="dialog" tabindex="-1" style="background: #FFF">
-		<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
-		<div class="container full-height pt-6g pb-2g" style="box-sizing: border-box; display: flex; flex-direction: column">
-			<h2 class="ml-1g style-meta"><a href="/obsessions/#{{ obsession.href }}" class="link obsession">{{ obsession.name }}</a></h2>
-			<h3 class="ml-1g mb-2g style-meta-large">{{ item.title }}</h3>
-			<div class="relative" style="flex: 1">
-				<div class="row overlay">
-					<img style="max-width: 100%; min-width: 300px; object-fit: cover" class="col w-auto full-height inline-block" src="/obsessions/{{ obsession.href }}/{{ item.img }}" alt="{{ item.alt }}" />
-					<div class="col col-bottom" style="flex: 1">
-						<p class="style-meta mb-0">{{ item.subtitle }}</p>
+	<div id="{{ item.href }}" class="modal" role="dialog" tabindex="-1">
+		<div class="w-100 h-100 pt-3m pb-1m" role="document" style="display: flex; flex-direction: column">
+			<h2 class="ml-1m style-meta"><a href="/obsessions/#{{ obsession.href }}" class="link obsession">{{ obsession.name }}</a></h2>
+			<h3 class="ml-1m mb-2g style-meta-large">{{ item.title }}</h3>
+			<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
+			<div class="flex-1 relative overflow-auto">
+				<div class="container row overlay">
+					<img class="col lg-w-auto lg-min-w-33 lg-max-w-75 sm-h-100 md-h-75 lg-h-100 sm-mb-2g md-mb-2g sm-fit-cover md-fit-contain lg-fit-cover" src="/obsessions/{{ obsession.href }}/{{ item.img }}" alt="{{ item.alt }}" />
+					<div class="col flex-1 lg-col-bottom md-mh-1c md-w-6c lg-mh-0 lg-w-auto">
+						<p class="mb-0 style-meta">{{ item.subtitle }}</p>
 						{% if item.desc %}<p class="mb-0 fs-italic">{{ item.desc }}</p>{% endif %}
+						<!--<div class="row row-center mt-2g">
+							<a class="btn-round btn-brand" href="#"><i>{{ icon("angle-left", title="Précédent", class="initial") }}</i></a>
+							<span class="flex-1 lg-flex-0 mh-1g style-meta-large text-center color-brand">2/12</span>
+							<a class="btn-round btn-brand" href="#"><i>{{ icon("angle-right", title="Suivant", class="initial") }}</i></a>
+						</div>-->
 					</div>
 				</div>
 			</div>
