@@ -1,3 +1,5 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
 <p><span class="lettrine">B</span>rigitte Baudelot est institutrice en CM2 dans une école située à mi-chemin entre <i>Charlie Hebdo</i> et le Bataclan, dans l'est de Paris. Il y a un an, l’attaque de l'hebdomadaire satirique, qui a fait 12 morts, s’était déroulée un mercredi vers 11h 30, l’heure de la sortie d’école. Des nounous affolées avaient prévenu que ça tirait sur le boulevard Richard-Lenoir et qu’il ne fallait pas passer par là. Les enfants qui restaient à la cantine et au centre aéré le mercredi après-midi avaient été regroupés, sans rien comprendre, et l’école fermée jusqu’au milieu de l’après-midi. Les enseignants avaient quant à eux déjà quitté les lieux.</p>
 
 <figure>
@@ -5,15 +7,20 @@
 	<figcaption><span>Après Charlie comme après le Bataclan, les élèves ont voulu dessiner.</figcaption>
 </figure>
 
-<p><a href="#" data-mini="1">Brigitte Baudelot</a> est la maîtresse de mon fils. L’an dernier, elle avait les mêmes élèves, qu’elle a gardés pour leur dernière année de primaire. Avec eux, elle avait déjà «&nbsp;partagé&nbsp;» les attentats de Charlie. Le lendemain, elle avait préparé des caricatures datant de la Révolution française pour expliquer ce qu’est la liberté de la presse, et comment, au fil des siècles, des gens sont morts pour la conquérir. <q>Mon rôle d’enseignante était de transmettre. Pas de rassurer les élèves. Ils n’étaient pas visés</q>, explique-t-elle aujourd’hui. Mais en novembre, <q>la jeunesse était dans la rue, au concert. Et la jeunesse, c’est eux.</q></p>
+{% set person = obsession.people[6] %}
 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/brigitte-institutrice.jpg" alt="" /></span>
-<p class="title">Brigitte Baudelot</p>
-<p class="subtitle">X ans, institutrice dans le XIe</p>
-</a>
-</aside>
+<p><a href="#{{ person.href }}" data-mini="1">Brigitte Baudelot</a> est la maîtresse de mon fils. L’an dernier, elle avait les mêmes élèves, qu’elle a gardés pour leur dernière année de primaire. Avec eux, elle avait déjà «&nbsp;partagé&nbsp;» les attentats de Charlie. Le lendemain, elle avait préparé des caricatures datant de la Révolution française pour expliquer ce qu’est la liberté de la presse, et comment, au fil des siècles, des gens sont morts pour la conquérir. <q>Mon rôle d’enseignante était de transmettre. Pas de rassurer les élèves. Ils n’étaient pas visés</q>, explique-t-elle aujourd’hui. Mais en novembre, <q>la jeunesse était dans la rue, au concert. Et la jeunesse, c’est eux.</q></p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <blockquote>
 	<p>En orthographe, on a le dictionnaire, le “Bescherelle”&nbsp;; internet pour vérifier des informations en histoire ou en géo. Mais là&nbsp;?</p>

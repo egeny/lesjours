@@ -24,8 +24,8 @@
 			"img":      "img/olivier-bertrand.jpg",
 			"alt":      "",
 			"title":    "Olivier Bertrand",
-			"subtitle": "Obsession Turquie",
-			"desc":     "J’aime la Turquie",
+			"subtitle": "Journaliste",
+			"desc":     "Pour Les Jours ma première obsession sera la Turquie. Raconter la société turque aujourd'hui, au-delà de ses actualités, dramatiques et très denses. Les débats qui la traversent, les combats, les dépressions collectives. Un enjeu au-delà du pays car la Turquie reste cette agrafe fragile entre Europe et orient. Se jouent là-bas des questions qui nous concernent de près. La proximité des frontières chaotiques du Moyen-Orient. Les millions de migrants, que les dilplomaties européennes tentent de contenir en Turquie, fermant pour cela les yeux sur la dictature qui s'installe, et la guerre imposée au Kurdistan. La montée de l'autorité et des conservatismes. Les menaces terroristes. Le face-à-face entre Islam et laïcité. Les dérives ubuesques d'un président qui rassurait l'Europe… Je suis journaliste depuis 28 ans. Mon travail est attiré depuis toujours par les questions d'exil et de racines, d'identités, assignées ou choisies. Cela m'a conduit longtemps dans les cités françaises, que je couvrais pour Libération, essayant de comprendre les mécanismes de violences urbaines, la montée de l'islam radical, les discriminations, la relégation, les politiques qui peuvent reconstruire des villes. J'ai également écrit et réalisé deux premiers films documentaires. Un soir d'été, un étranger (Ateliers Varan, nombreux festivals), pour comprendre les mécanismes de résistance dans un village cossu qui avait caché un clandestin dans ses greniers. Et Vaulx-en-Velin la cité retrouvée (France 3, LCP), qui raconte l'histoire de la politique de la ville au travers d'un quartier emblématique emporté par les premières émeutes urbaines en 1990.",
 			"minor": true
 		},
 		{
@@ -34,7 +34,7 @@
 			"alt":      "",
 			"title":    "Jean-Christophe Besson",
 			"subtitle": "Obsession snake",
-			"desc":     "J’aime torturer les développeurs",
+			"desc":     "Directeur artistique",
 			"minor": true
 		},
 		{
@@ -42,95 +42,107 @@
 			"img":      "img/jbg.jpg",
 			"alt":      "",
 			"title":    "Jérôme Bourreau-Guggenheim",
-			"subtitle": "Obsession",
+			"desc":     "Obsession",
+			"subtitle": "Directeur technique",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "sebastien-calvet",
 			"img":      "img/sebastien-calvet.jpg",
 			"alt":      "",
 			"title":    "Sébastien Calvet",
-			"subtitle": "Obsession photo",
+			"subtitle": "Directeur photo",
+			"desc":     "Photographe – du bestiaire politique notamment –, je change (un peu) de métier pour prendre en charge la politique photo des Jours, un poste crucial. Après 14 ans de reportage à Libération, je vais montrer la richesse des images d’autres photographes. En 2014, j’ai reçu le prix du Livre numérique pour Retour à Béziers, un reportage photographique accompagné d’un récit de Didier Daeninckx.Les images ont des choses à dire, les photographes aussi. Dans l’obsession Les Jours à l’œil, je présente les coulisses des images produites par les photographes des Jours, mais aussi les sujets qui nous ont interpellés, surpris, emballés. Une obsession portée par l’envie de partager les histoires des photos et des photographes.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "nicolas-cori",
 			"img":      "img/nicolas-cori.jpg",
 			"alt":      "",
 			"title":    "Nicolas Cori",
-			"subtitle": "Obsession jonglage",
+			"subtitle": "Journaliste",
+			"desc":     "Dans un monde où les multinationales prennent le pouvoir sur les états, m’intéresse aux zones grises des grandes entreprises. Scandales, affaires…, j’aime aller chercher et raconter, des histoires qui dérangent la belle communication des sociétés. Pour Les Jours, je me suis intéressé aux stratégies d’image des grands groupes énergétiques français au moment de la COP21, c'est l’obsession Good com, bad COP. A Libération (2000-2015), j’ai suivi l’affaire Kerviel, couvert la crise des subprimes, les scandales de golden parachutes et l’évasion fiscale. J’ai aussi animé un blog, Les cordons de la bourse, sur la finance. Enfin, je suis l’auteur de plusieurs ouvrages, notamment Dexia, une banque toxique (La Découverte, 2013), une enquête sur les emprunts toxiques vendus par la banque aux villes et aux hôpitaux.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "sophian-fanen",
 			"img":      "img/sophian-fanen.jpg",
 			"alt":      "",
 			"title":    "Sophian Fanen",
-			"subtitle": "Obsession Adele",
+			"subtitle": "Journaliste",
+			"desc":     "J'écris sur la musique, de sa composition à sa distribution : la vie des artistes a été trop transformée par internet pour ne l'aborder que d'un point de vue artistique. Je m'intéresse donc aux disques, mais aussi à leur économie et en particulier au streaming – ma première obsession, intitulée A qui profite le stream ?. Cette nouvelle technologie change tout : la façon de produire des tubes et de les proposer à un public ciblé, mais aussi les habitudes d'écoute, remises en question par un accès illimité et mobile à la quasi-totalité des œuvres produites depuis un siècle. Après des études d'histoire et de journalisme, je poursuis une carrière qui se partage entre presse écrite (Dernières nouvelles d'Alsace, divers magazines puis Libération) et radio (France bleu, FIP, France Culture). J'étais chef adjoint du service culture de Libération avant de cofonder Les Jours. Je suis l'auteur de Barbara Dane, le chant partisan, un documentaire écrit et dessiné (RF8, 2013) et de Træna, le son du Nørsk (Arte, 2013). Surtout, j'adore faire des playlists.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "garriberts",
 			"img":      "img/garriberts.jpg",
 			"alt":      "",
 			"title":    "Les Garriberts",
-			"subtitle": "Obsession obsession",
+			"subtitle": "Co-directeur de la rédaction et présidente",
+			"desc":     "Traquer la faille, le détail qui assassine, raconter le réel et l’irréel, avec rythme, distance et velleité humoristique, sans jamais lâcher. C’est ce que nous tenté de faire pendant quinze ans à <i>Libération</i> sur la télévision et les médias (poil aux bras). Comme journalistes puis chefs de la rubrique Ecrans-Médias mais toujours en tant que Garriberts, nous avons vu naître des Hanouna, disparaître des PPDA, s’émietter les audiences, valser les patrons de chaînes. Nous avons débité des bûchettes cathodiques dans notre chronique télé Bourre-Paf chaque samedi pendant treize ans. Et nous avons bien rigolé. Aux Jours, nous entamons L'empire, une obsession consacrée à la conquête de Canal+ par Vincent Bolloré. Parce qu'on y parle de télévision, de pouvoir, d'argent, d'humain. Et aussi de Cyril Hanouna. Aux Jours, nous avons envie d'écrire sur la télé et les médias bien sûr, mais pas que. La politique nous titille et nous sommes affectés de graves obsessions pour Jane Austen, les sous-marins et l'Ecosse. Nous avons quitté Libération en 2015 pour fonder Les Jours avec sept des plus fous de nos collègues et un DAF punk. Nous avons écrit un livre, La Bonne Soupe, consacré au JT de 13 heures de Jean-Pierre Pernaut (Les Arènes, 2007).",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
-			"img":      "img/louis-garrel.jpg",
+			"href":     "alice-geraud",
+			"img":      "img/alice-geraud.jpg",
 			"alt":      "",
 			"title":    "Alice Géraud",
-			"subtitle": "Obsession Louis Garrel",
+			"subtitle": "Co-directrice de la rédaction",
+			"desc":     "Je travaille depuis des années sur les questions de discriminations, de racisme et d’inégalités des chances. Une question m’obsède : comment fait-on en 2016 en France pour séparer encore aussi sûrement les noirs des blancs, les riches des pauvres ? Je me suis arrêtée cette année sur un de ces points qui font souvent office de gare de triage social : la classe de troisième, celle de l’orientation vers les filières pro ou générales. Durant un an, je suis chaque semaine la classe de 3e B du collège Aimé-Césaire, un collège en éducation prioritaire du XVIIIe arrondissement de Paris. Une classe où une majorité d’élèves sont issus de milieux défavorisés et pour la plupart enfants d’immigrés. Comment fonctionne la mixité sociale dans cet établissement ? Comment l’institution scolaire, les profs parviennent-ils à lutter contre les déterminismes et construire cette fameuse « égalité des chances » ? Quelles sont les rêves et les angoisses de ces adolescents ? Auparavant, j’ai travaillé au service Société de Libération, collaboré avec de nombreux titres de presse (M le magazine, Associated Press, Le Journal du dimanche, La Tribune de Genève, Marianne…), écrit un livre sur un convoyeur de fond (Toni, 11.6, histoire du convoyeur, Stock, 2011) adapté au cinéma par Philippe Godeau (11.6, avec François Cluzet), un autre sur Lyon (éditions Autrement), ville où j’ai longtemps vécu et où j’ai commencé le journalisme. J’aime, entre toutes choses journalistiques, raconter des histoires.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "antoine-guiral",
 			"img":      "img/antoine-guiral.jpg",
 			"alt":      "",
 			"title":    "Antoine Guiral",
-			"subtitle": "Obsession politique et chaîne de vélo",
+			"subtitle": "Directeur général",
+			"desc":     "Tout est politique et la question du pouvoir - petit ou immense - me fascine. Pourquoi et comment on le conquiert ? Qu’en fait-on ensuite ? Par quelles mécaniques incertaines le conserve-t-on ou le perd-on… Durant deux décennies à Libération, j'ai travaillé avec l’obsession d’exercer un contre-pouvoir. Ce qui implique de tout dire. Toujours. Avant de diriger le service politique de ce journal, j’ai couvert l’Elysée sous Chirac et Sarkozy, ai rencontré des centaines d’élus en France et dans le monde, fait plusieurs tours de planète dans des avions de la République (on payait les billets, rassurez vous). Souvent, je me suis senti sali et affecté par la politique telle qu’elle s’exerce. Voter est devenu pour moi un exercice difficile. Aux Jours, j’aimerais raconter la politique en étant au plus proche du lecteur souvent aussi passionné que désespéré et avec qui je partage une même exigence insatisfaite. Sinon, j’ai été correspondant aux Etats-Unis (New York), j’enseigne comme professeur associé à l’Université de Montpellier et j’aime beaucoup les Ramones, les chaînes de vélo, la Nouvelle-Calédonie.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
-			"img":      "img/nicolas-le-gall.jpg",
+			"href":     "nicolas-le-gall",
+			"img":      "img/neovov.jpg",
 			"alt":      "",
 			"title":    "Nicolas Le Gall",
 			"subtitle": "Obsession Japon",
+			"desc":     "Développeur",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "augustin-naepels",
 			"img":      "img/augustin-naepels.jpg",
 			"alt":      "",
 			"title":    "Augustin Naepels",
-			"subtitle": "Obsession outre-mer",
+			"subtitle": "DG finances",
+			"desc":     "Un stage de troisième au Nouvel Obs, développeur à mi-temps dans une startup de presse en ligne pendant mes études : on peut dire que j’étais en quelque sorte prédestiné à cofonder Les Jours avec une équipe de journalistes… Après des études de finance à Paris IX Dauphine et à la London School of Economics, j'ai été, pendant sept ans, auditeur pour PricewaterhouseCoopers, puis consultant chez Accenture. Avant de décider d’appliquer mes conseils à moi-même et de rejoindre la startup de billeterie en ligne Moxity.com, dont j'ai été co-dirigeant pendant 5 ans. En 2014, j’ai rencontré une équipe de journalistes qui étaient en train d’élaborer un projet de pure player d’information et avaient besoin de conseils business ; depuis ils n’ont pas réussi à se débarrasser de moi. J’ai revendu mes parts de Moxity.com pour les rejoindre et créér Les Jours avec eux. J’ai quelques obsessions personnelles : les libertés publiques et numériques, l’outre-mer, le chenin de Loire… Et une que je partage avec le reste de l’équipe : la rentabilité des Jours.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "camille-polloni",
 			"img":      "img/camille-polloni.jpg",
 			"alt":      "",
 			"title":    "Camille Polloni",
-			"subtitle": "Obsession chercher",
+			"subtitle": "Journaliste",
+			"desc":     "En 1995, le journal télévisé montre les derniers instants de Khaled Kelkal, l'un des responsables des attentats cette année-là. Il est déjà à terre quand un gendarme crie à son collègue finis-le, finis-le. J'ai neuf ans et je rêve d'enquêter sur sa mort. Ce n'est pas l'amour de l'écriture qui m'a amenée au journalisme, mais le goût de chercher. Aux Jours, je raconte l'état d'urgence à travers ceux qui le décident, ceux qui l'appliquent et ceux qui le subissent : Jean-Jacques Urvoas, passé de l'Assemblée nationale à la place Vendôme, les policiers et magistrats chargés de le mettre en œuvre et deux assignés à résidence, forcés de s'y intéresser malgré eux. Mon ancien rédac chef disait que mon truc, c'est le petit homme face au système. J'aime la part d'irréconciliable dans un affrontement, qu'il ait lieu dans une salle d'audience, dans la rue ou sur une ZAD. Pendant sept ans, aux Inrockuptibles puis à Rue89, j'ai écrit sur les libertés publiques, l'antiterrorisme, le maintien de l'ordre et la contestation. Ces sujets ont un mérite de plus en plus rare : ils ne sont pas (encore) vérolés par la com. Pour qui veut bien les voir, les histoires sont à portée de main. L'une d'elles m'a donné l'occasion d'écrire un livre, La lente évasion (Premier parallèle, 2015), racontant le parcours d'un détenu en semi-liberté.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "charlotte-rotman",
 			"img":      "img/charlotte-rotman.jpg",
 			"alt":      "",
 			"title":    "Charlotte Rotman",
-			"subtitle": "Obsession curiosité",
+			"subtitle": "Journaliste",
+			"desc":     "Je préparais un reportage dans le Nord-Pas-de-Calais sur le FN les jours qui ont précédé les attentats du 13 novembre. Et tout a été chamboulé. J’habite à Paris, dans le XIe arrondissement, à côté du Bataclan, j’étais chez moi le soir des attentats. Il n’était plus question de partir sur les terres FN, pas tout de suite. L’équipe des Jours m’a proposé de tenir un journal de bord du XIe, et de raconter l’après 13 novembre dans ce quartier meurtri. J’ai accepté de faire ce récit intime, en pensant qu’il ferait écho chez d’autres, dans le quartier, et au-delà. J’ai travaillé près de quinze ans à Libération au service Société puis Politique, comme reporter. J’ai suivi de près l’immigration, l’asile, les questions de genre, le mariage homo, le féminisme… J’ai passé mes deux dernières années à Libé à travailler sur le FN, ce qui m’a menée de Fréjus à Hénin-Beaumont en passant par la Bretagne ou le Vaucluse. Cela m’a donné l’envie de raconter la politique autrement. J’ai rencontré des abstentionnistes, des électeurs et militants FN, des gens de plus en plus éloignés de la politique. Je n’ai aucun appétit pour les querelles de courants, les petites phrases et les lèches micros mais beaucoup de curiosité pour des élus qui essaient de renouer avec des citoyens de plus en plus défiants. C’est ce que je voudrais raconter aux Jours. J’ai écrit plusieurs livres dont 20 ans et au Front, les nouveaux visages du Front National (Robert Laffont, 2014), Retourne à la maison ! Les femmes politiques face au sexisme ordinaire (Robert Laffont, 2016), et suis l’auteure d’un documentaire diffusé sur Canal+, Macho politico.",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "david-thomson",
 			"img":      "img/david-thomson.jpg",
 			"alt":      "",
 			"title":    "David Thomson",
-			"subtitle": "Obsession jihadiste",
+			"subtitle": "Journaliste à RFI",
+			"desc":     "Je suis journaliste à Radio France Internationale (RFI). J’ai couvert « les révolutions arabes » et leurs transitions politiques en tant que correspondant régional en Tunisie et en Libye de 2011 à 2013. Depuis 2011, je me suis spécialisé sur les mouvements jihadistes en Tunisie et en France. Après plus d’un an d’enquête, j’ai publié le livre Les Français jihadistes aux éditions Les Arènes en mars 2014. C'est un ouvrage basé sur des entretiens directs avec les jihadistes eux-mêmes, qui retrace le parcours d’une vingtaine de jeunes français ayant décidé de partir combattre ou de s’installer en Syrie. Ma démarche journalistique est particulière, j’ai fait le choix depuis quatre ans de ne jamais consulter de sources policières ou judiciaires et de tirer mes informations exclusivement de sources jihadistes francophones (présentes en France, en Tunisie, en Syrie, en Irak et en Libye), avec lesquelles je conserve un lien permanent, sur la durée. Pour Les Jours, dans l'obsession Les revenants, je raconte le retour au pays de Français partis faire le jihad.",
 			"minor": true
 		}
 	],

@@ -39,28 +39,27 @@
 			"img":      "img/blocheportrait2.jpg",
 			"alt":      "",
 			"title":    "Patrick Bloche",
-			"subtitle": "59 ans, député PS et ancien maire du XIe"
+			"subtitle": "59 ans, député PS et ancien maire du XIe",
+			"desc": "Patrick Bloche aime le XIe arrondissement, « c’est toute ma vie », dit l’homme politique. Il en a été le maire, de 2008 à 2014. Elu de la 7e circonscription, il en est encore le député. Et il demeure le référent du quartier République-Saint-Ambroise où se situe le Bataclan dont il connaît bien les propriétaires. Voilà près de 40 ans qu’il y habite, y fréquente les cafés, les habitants, en cultive la mémoire. Patrick Bloche est socialiste, il a été l’un des artisans du Pacs, il préside actuellement la commission des Affaires culturelles. Le soir du 13 novembre, il a quitté l’Assemblée nationale pour rejoindre le commissariat du XIe puis la mairie pour accueillir les premières victimes.",
+			"minor": true
 		},
 		{
-			"href":     "vincent",
+			"href":     "vincent-assigne",
 			"img":      "img/assigne-3.jpg",
 			"alt":      "",
 			"title":    "Vincent",
-			"subtitle": "32 ans, assigné à résidence"
+			"subtitle": "32 ans, assigné à résidence à Aubervilliers",
+			"desc": "Réceptionniste dans un hôtel, graffeur et converti à l’islam, Vincent (son prénom a été modifié) est assigné à résidence depuis le 27 novembre. Ce Franco-Libanais de 32 ans vit à Aubervilliers avec sa femme et son fils d’un an et demi. Il pointe au commissariat trois fois par jour et doit rester chez lui de 20 heures à 6 heures du matin alors qu’il travaille de nuit. Le ministère de l’Intérieur lui reproche une pratique religieuse « fondamentaliste » et des fréquentations radicales. Très pieux, Vincent se défend de toute intention jihadiste.",
+			"minor": true
 		},
 		{
 			"href":     "barbara-romagnan",
-			"img":      "img/romagnanportrait.jpg",
+			"img":      "img/barbara-romagnan.jpg",
 			"alt":      "",
 			"title":    "Barbara Romagnan",
-			"subtitle": "41 ans, députée PS anti-état d'urgence"
-		},
-		{
-			"href":     "sandrine",
-			"img":      "img/sandrine-voisine.jpg",
-			"alt":      "",
-			"title":    "Sandrine",
-			"subtitle": "X ans, voisine"
+			"subtitle": "41 ans, députée PS anti-état d'urgence",
+			"desc": "Barbara Romagnan est une personnalité atypique dans le milieu politique. Femme, élue députée à 38 ans en 2012, elle est docteure en sciences politiques et a été enseignante. Cela imprègne sa manière de penser et de s’exprimer : elle formule régulièrement ses doutes et les assume, ce qui est plutôt rare dans l’arène politique. Entre loyauté au PS dont elle est une militante depuis vingt ans et libre arbitre, elle essaie de tracer sa voie. Elle se range parmi les rénovateurs, on l’étiquette « frondeuse ». Souvent minoritaire, elle dit ne pas chercher à contester l’autorité. Elle a voté non au maintien de l’état d’urgence (seuls six députés ont fait ce choix) et ne décolère pas de la proposition de la déchéance de nationalité qu’elle juge honteuse. Barbara Romagnan fait également partie des parlementaires que Les Jours suivent dans l’obsession Politique année zéro.",
+			"minor": true
 		},
 		{
 			"href":     "jean-jacques-urvoas",
@@ -68,35 +67,44 @@
 			"alt":      "",
 			"title":    "Jean-Jacques Urvoas",
 			"subtitle": "56 ans, député PS, contrôle l'état d'urgence",
-			"desc":     "Sur la photo de classe, sa silhouette se distingue de ses camarades par une pose particulière, un trois-quart savamment étudié. En général, Nina aime bien se distinguer. Elue déléguée de classe (« comme l’année dernière »), elle est aussi déléguée suppléante au conseil des élèves du collège. Elle adore « être au courant de tout ». Etre là. Le doigt toujours levé pour participer. La bouche toujours ouverte pour lire un texte ou juste commenter la vie de la classe. Elle se définit elle-même comme « un très fort caractère ». « Les autres disent que je suis lunatique, faut pas m’embêter, c’est tout ». Plutôt bonne élève, elle ira l’an prochain en seconde générale. Plus tard, elle voudrait être pédiatre, « chirurgien pédiatre » plus précisément. Parce qu’elle a envie d’être « utile ». Et, aussi, parce qu’elle voudrait voir « à l’intérieur du corps ». En classe, Nina est inséparable de Faema."
+			"desc":     "Ancien « monsieur Sécurité » du Parti socialiste sous Nicolas Sarkozy, Jean-Jacques Urvoas préside la commission des lois de l’Assemblée nationale, chargée de contrôler l’application de l’état d’urgence. Pressenti deux fois au ministère de l’Intérieur, le député socialiste du Finistère reste pour l’instant la « doublure » parlementaire de Bernard Cazeneuve. Il incarne la conversion de la gauche aux politiques sécuritaires, tout en faisant preuve d’un légalisme appuyé, au nom de la balance des pouvoirs. Quelques semaines avant l’ouverture du vote au Parlement sur la réforme de la Constitution, Manuel Valls lui a confié la sensible mission de trouver une solution pour faire accepter la déchéance de nationalité aux parlementaires socialistes.",
+			"minor": true
 		},
 		{
-			"href":     "nathalie",
-			"img":      "img/nathalie-riveraine.jpg",
-			"alt":      "",
-			"title":    "Nathalie",
-			"subtitle": "45 ans, riveraine du Bataclan"
-		},
-		{
-			"href":     "tuyen",
+			"href":     "tuyen-voisin",
 			"img":      "img/tuyen-voisin.jpg",
 			"alt":      "",
 			"title":    "Tuyen",
-			"subtitle": "44 ans, voisin du Bataclan"
+			"subtitle": "44 ans, voisin du Bataclan",
+			"desc":   "Tuyen a aménagé dans un appartement voisin du Bataclan à la naissance du premier de ses trois enfants, il y a dix ans. Il habite le XIe arrondissement de Paris depuis 1998. Il est né à Saïgon et a grandi à Caen. Ses frères et sœurs vietnamiens ont été éparpillés aux quatre coins du monde lors de la guerre du Vietnam. L’offensive communiste a conduit son père en prison pendant huit ans. Ici, Tuyen s’emploie à construire une famille solide et solidaire. Son métier de consultant le passionne moins que la cuisine. Il adore la BD et collectionne les dédicaces. Il est frileux, disparaissant l’hiver sous bonnet et écharpes et chaleureux, toujours à offrir un verre de blanc pour l’apéro.",
+			"minor": true
 		},
 		{
-			"href":     "sophie",
+			"href":     "sophie-bataclan",
 			"img":      "img/sophie-bataclan.jpg",
 			"alt":      "",
 			"title":    "Sophie",
-			"subtitle": "39 ans, en terrasse du Bataclan le 13 novembre"
+			"subtitle": "39 ans, en terrasse du Bataclan le 13 novembre",
+			"desc": "Elle aime aller au concert et depuis le 13 novembre elle pleure quand elle écoute The Partisan, de Leonard Cohen. Sophie était attablée à la terrasse du café du Bataclan le vendredi des attentats quand les terroristes ont fait irruption. Elle est consultante, a deux enfants et vit dans le XIe arrondissement. Elle s’était installée dehors, pour travailler et fumer tranquillement, ce qu’elle aime bien faire une fois ses enfants couchés. Elle a entendu les coups de feu, avant de voir le tireur. Puis elle s’est cachée. Depuis, pas à pas, elle retrouve sa vie, les cafés, et les concerts. Pas l’insouciance.",
+			"minor": true
 		},
 		{
 			"href":     "brigitte-baudelot",
 			"img":      "img/brigitte-institutrice.jpg",
 			"alt":      "",
 			"title":    "Brigitte Baudelot",
-			"subtitle": "X ans, institutrice dans le XIe"
+			"subtitle": "52 ans, institutrice dans le XIe",
+			"desc": "Brigitte Baudelot est enseignante dans le XIè arrondissement de Paris, dans une école située non loin du Bataclan, à proximité des lieux des attentats du 13 novembre, mais également à quelques rues des locaux de Charlie Hebdo attaqués en janvier 2015. Elle se retrouve avec une classe d’enfants de ce quartier meurtri, dont beaucoup ont entendu les fusillades ou vu des blessés, le vendredi 13 novembre au soir. Avec eux, elle parle de la liberté, de la laïcité, de l’avenir. Elle a été nommée il y a 10 ans, en 2006. Elle est maître formateur. Auparavant elle a enseigné à Paris, dans les IXe, XVIIIe, XIIe, et 10 ans, en REP, dans le XXe. Elle aime son métier.",
+			"minor": true
+		},
+		{
+			"href":     "brahim-assigne",
+			"img":      "img/brahim-assigne.jpg",
+			"alt":      "",
+			"title":    "Brahim J.",
+			"subtitle": "37 ans, assigné à résidence à Grenoble",
+			"desc": "Brahim vit depuis toujours à Echirolles, en banlieue de Grenoble. Dans sa jeunesse, ses « conneries » (du trafic de stupéfiants) l'ont conduit en prison, une dizaine d'années au total. Le ministère de l'Intérieur, qui le trouve « radicalisé », l'a perquisitionné puis assigné à résidence. Ce maçon intérimaire et père de deux petites filles se définit comme « musulman pratiquant », « de gauche ». Brahim pointe trois fois par jour au commissariat de Grenoble. Il condamne sans ambiguïté les attentats de novembre et conteste le traitement qui lui est réservé.",
+			"minor": true
 		}
 	],
 

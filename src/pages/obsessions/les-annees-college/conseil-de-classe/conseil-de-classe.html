@@ -1,9 +1,59 @@
-<p><span class="lettrine">A</span>imé-Césaire, salle 3, 17h30.  Les tables la salle de classe ont été disposées en U. Autour : Pascale Guillemin, la principale adjointe en charge des troisièmes et <a href="#" data-mini="1">Antoine Labaere</a>, le prof principal (et prof d’histoire-géographie) font office de maîtres de cérémonie. Sont également là ce soir cinq autres enseignants de la classe, les profs de français, maths, sciences et vie de la terre (SVT), sport et anglais. La fatigue marque les visages. En cette fin de trimestre, les profs enchaînent quasiment tous les soirs les conseils de classe, ce qui explique d’ailleurs que seule une partie d’entre eux soit présente. Autour de la table en U, il y a aussi <a href="#" data-mini="2">la conseillère d’orientation</a>, l’enseignant en charge de la <a href="#note-1">section Ulis</a>, Caroline Morot la CPE,les deux parents délégués -&nbsp;la mère d’Enzo et le père de Lucie&nbsp;-, et les deux délégués de classe, Rayan et <a href="#" data-mini="3">Nina</a>.</p>
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
 
-<p>Le conseil de classe est un exercice très codifié. Comme dans un tribunal ou une assemblée générale, la parole y est distribuée avec un ordre de parole bien précis. Les premiers invités à prendre la parole sont les élèves délégués. Rayan a préparé une intervention au nom de ses camarades. Il félicite la classe, <q>une bonne classe</q> dit-il. A côté, Nina acquiesce. Mais Rayan veut relayer des incompréhensions entre les élèves et certains enseignants qu’ils estiment <q>mal organisés</q> ou <q>mal compris des élèves</q>. Les enseignants en question ne sont pas présents au moment où Rayan s’exprime et la principale adjointe leur demande s’ils en ont parlé directement avec ces enseignants. Nina explique que <q>c’est compliqué</q>, qu’ils <q>ne sont comprennent pas</q>. Ce problème sera abordé plus tard en <a href="#note-2">« vie de classe »</a> par le professeur principal. Il ne sera pas vraiment réglé. Dans chaque classe, chaque année, les élèves ont des enseignants avec qui cela <q>ne passe pas</q>.</p>
+{% set person = obsession.people[0] %}
+<p><span class="lettrine">A</span>imé-Césaire, salle 3, 17h30.  Les tables la salle de classe ont été disposées en U. {% set person = obsession.people[3] %} Autour : <a href="#{{ person.href }}" data-mini="1">Pascale Guillemin</a>, la principale adjointe en charge des troisièmes et <a href="#{{ person.href }}" data-mini="2">Antoine Labaere</a>, le prof principal (et prof d’histoire-géographie) font office de maîtres de cérémonie. Sont également là ce soir cinq autres enseignants de la classe, les profs de français, maths, sciences et vie de la terre (SVT), sport et anglais. La fatigue marque les visages. En cette fin de trimestre, les profs enchaînent quasiment tous les soirs les conseils de classe, ce qui explique d’ailleurs que seule une partie d’entre eux soit présente. Autour de la table en U, il y a aussi la conseillère d’orientation, l’enseignant en charge de la <a href="#note-1">section Ulis</a>, Cécile Morot la CPE, les deux parents délégués -&nbsp;la mère d’Enzo et le père de Lucie&nbsp;-, et les deux délégués de classe, {% set person = obsession.people[22] %} <a href="#{{ person.href }}" data-mini="3">Rayan</a> et {% set person = obsession.people[5] %} <a href="#{{ person.href }}" data-mini="4">Nina</a>.</p>
+
+{% set person = obsession.people[3] %}
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[0] %}
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[22] %}
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[5] %}
+{{
+	mini({
+		number: 4,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+
+<p>Le conseil de classe est un exercice très codifié. Comme dans un tribunal ou une assemblée générale, la parole y est distribuée avec un ordre de parole bien précis. Les premiers invités à prendre la parole sont les élèves délégués. Rayan a préparé une intervention au nom de ses camarades. Il félicite la classe, <q>une bonne classe</q> dit-il. A côté, Nina acquiesce. Mais Rayan veut relayer des incompréhensions entre les élèves et certains enseignants qu’ils estiment <q>mal organisés</q> ou <q>mal compris des élèves</q>. Les enseignants en question ne sont pas présents au moment où Rayan s’exprime et la principale adjointe leur demande s’ils en ont parlé directement avec ces enseignants. Nina explique que <q>c’est compliqué</q>, qu’ils <q>ne comprennent pas</q>. Ce problème sera abordé plus tard en « <a href="#note-2">vie de classe</a> » par le professeur principal. Il ne sera pas vraiment réglé. Dans chaque classe, chaque année, les élèves ont des enseignants avec qui cela <q>ne passe pas</q>.</p>
 
 <blockquote>
-<p>Classe agréable et sympa [malgré] un manque de travail à la maison</p>
+<p>Classe agréable et sympa malgré un manque de travail à la maison</p>
 <footer>L'avis général du conseil de classe sur la 3e B</footer>
 </blockquote>
 
@@ -24,36 +74,13 @@
 
 <p>Au bout d’une heure et demie, on sent l’attention se relâcher. Les profs, parfois, ressemblent à leurs élèves. Surtout enfermés en fin de journée en groupe dans une salle de classe. Il y en a qui bavardent et rigolent avec le voisin. D’autres qui se passent un petit mot et n’écoutent plus qu’à moitié ce qui se dit.</p>
 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/antoinelabaere.jpg" alt="" /></span>
-<p class="title">Antoine Labaere</p>
-<p class="subtitle">32 ans, professeur principal de la 3e&nbsp;B</p>
-</a>
-</aside>
-
-<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/tdecormon.jpg" alt="" /></span>
-<p class="title">Tiphaine Decormon</p>
-<p class="subtitle">La conseillère d'orientation</p>
-</a>
-</aside>
-
-<aside id="mini-3" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/nina.jpg" alt="" /></span>
-<p class="title">Nina</p>
-<p class="subtitle">14 ans, la déléguée de la 3e&nbsp;B</p>
-</a>
-</aside>
 
 {% from "partials/_macro.html" import note %}
 {{
 note({
 number: 1,
 title: "Ulis",
-caption: "Unités locales pour l’inclusion scolaire. Ce dispositif prend en charge des enfants en situation de handicap. A Aimé-Césaire, les Ulis s’occupent d’élèves souffrant d’un retard intellectuel. Ces élèves bénéficient d’enseignements spécifiques mais sont aussi, pour certains cours, intégrés dans la classe. Un élève de 3e B bénéficie de ce dispositif."
+caption: "Unités locales pour l’inclusion scolaire. Ce dispositif prend en charge des enfants en situation de handicap (notamment de retard intellectuel). Ces élèves bénéficient d’enseignements spécifiques mais sont aussi, pour certains cours, intégrés dans la classe. Un élève de 3e B bénéficie de ce dispositif."
 })
 }}
 {{

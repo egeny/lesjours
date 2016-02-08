@@ -18,9 +18,7 @@
 			{ "photo": "Michel Slomka" }
 		],
 
-		"first": "episode:les-jours-a-l-oeil/ep1-politique-photo",
-		"next":  "episode:les-jours-a-l-oeil/making-of-cop",
-		"prev": "episode:les-jours-a-l-oeil/making-of-college",
-		"last":  "episode:les-jours-a-l-oeil/making-of-cop"
+		"first": "episode:les-jours-a-l-oeil/making-of-lesjoursaloeil",
+		"prev": "episode:les-jours-a-l-oeil/making-of-college"
 	}
 }
