@@ -74,8 +74,20 @@
 }}
 
 
+{% set person = obsession.people[20] %}
 
-<p>Entre midi et deux, dans la salle des profs, on ne chuchote plus. Un prof de sport peste parce que des filles ont badigeonné les murs des vestiaires avec du lait corporel. Ses collègues ne peuvent s’empêcher de sourire. La vie du collège reprend le dessus. Eléonore Garcia, la professeur de français des 3e B, explique que, <q>contrairement à l’année passée</q>, il n’y a pas <q>d’enjeux communautaires</q> vis-à-vis des attentats. Les élèves se sentent <q>davantage concernés</q>. <q>Aller au Stade de France, à un concert, être en terrasse avec des amis, même si eux c’est plutôt chez le grec qu’au bar, ça leur parle.</q> Sur le plan de l’agglomération parisienne, le collège Aimé-Césaire est un point situé entre le Stade de France et le Bataclan. Les attentats ont eu lieu dans le périmètre de vie des profs comme des élèves. Une élève a perdu un oncle au Bataclan. Une enseignante était au-dessus du bar Le Carillon au moment des tirs.</p>
+<p>Entre midi et deux, dans la salle des profs, on ne chuchote plus. Un prof de sport peste parce que des filles ont badigeonné les murs des vestiaires avec du lait corporel. Ses collègues ne peuvent s’empêcher de sourire. La vie du collège reprend le dessus. <a href="#{{ person.href }}" data-mini="5">Eléonore Garcia</a>, la professeur de français des 3e B, explique que, <q>contrairement à l’année passée</q>, il n’y a pas <q>d’enjeux communautaires</q> vis-à-vis des attentats. Les élèves se sentent <q>davantage concernés</q>. <q>Aller au Stade de France, à un concert, être en terrasse avec des amis, même si eux c’est plutôt chez le grec qu’au bar, ça leur parle.</q> Sur le plan de l’agglomération parisienne, le collège Aimé-Césaire est un point situé entre le Stade de France et le Bataclan. Les attentats ont eu lieu dans le périmètre de vie des profs comme des élèves. Une élève a perdu un oncle au Bataclan. Une enseignante était au-dessus du bar Le Carillon au moment des tirs.</p>
+{{
+	mini({
+		number: 5,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
 
 <figure>
 	<img src="img/minute-main.jpg" alt="" />

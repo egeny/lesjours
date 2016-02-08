@@ -59,7 +59,7 @@
 		},
 		{
 			"href":     "pascale-guillemin",
-			"img":      "img/pguillemin.jpg",
+			"img":      "img/pascale-guillemin.jpg",
 			"alt":      "",
 			"title":    "Pascale Guillemin",
 			"subtitle": "38 ans, la principale adjointe d'Aimé-Césaire",
@@ -119,7 +119,7 @@
 			"alt":      "",
 			"title":    "Spewell",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "Le jour où nous l’interwievons, Spewell a un peigne fixé dans les cheveux. C’est exprès. Plus souvent, il a un bandeau autour de la tête, parfois assorti à son jogging. Bref, Spewell est assez looké. Mais ses profs n’en profitent pas tout le temps. Cette année, il est pas mal absent. Les après-midi particulièrement. «Je rentre manger chez moi et puis… je ne reviens pas», dit-il juste. Parfois il reste chez lui, parfois il va dehors, «à Max Dormoy» (station de métro juste à côté), parfois chez son grand-père en banlieue. L’an prochain, il voudrait faire un bac pro commerce. Tout en sachant qu’il faudra qu’il remonte sa moyenne pour y arriver. Il a du mal à se projeter dans quelques années. Alors il dit des choses un peu en l’air pour répondre quand même à nos questions. Qu’il aimerait «être chef» et vivre  «dans une villa à Rio avec des voitures de luxe», «des Porsche», précisément. Spewell est arrivé à Aimé-Césaire à la rentrée 2015. En 4ème, il était à Livry-Gargan, en Seine-Saint-Denis, chez son père. Auparavant, il avait fait trois collèges différents dans le nord de Paris, s’est fait exclure plusieures fois. Aujourd’hui, ce qu’il aime, c’est la musique, le rap particulièrement. Spewell en écoute beaucoup. Mais, surtout, il écrit et réalise des clips avec ses copains de Livry-Gargan. Clips qui lui assurent une certaine aura chez une partie des garçons de la classe. "
+			"desc": "Le jour où nous l’interwievons, Spewell a un peigne fixé dans les cheveux. C’est exprès. Plus souvent, il a un bandeau autour de la tête, parfois assorti à son jogging. Bref, Spewell est assez looké. Mais ses profs n’en profitent pas tout le temps. Cette année, il est pas mal absent. Les après-midi particulièrement. «Je rentre manger chez moi et puis… je ne reviens pas», dit-il juste. Parfois il reste chez lui, parfois il va dehors, «à Max Dormoy» (station de métro juste à côté), parfois chez son grand-père en banlieue. L’an prochain, il voudrait faire un bac pro commerce. Tout en sachant qu’il faudra qu’il remonte sa moyenne pour y arriver. Il a du mal à se projeter dans quelques années. Alors il dit des choses un peu en l’air pour répondre quand même à nos questions. Qu’il aimerait «être chef» et vivre  «dans une villa à Rio avec des voitures de luxe», «des Porsche», précisément. Spewell est arrivé à Aimé-Césaire à la rentrée 2015. En 4ème, il était à Livry-Gargan, en Seine-Saint-Denis, chez son père. Auparavant, il avait fait trois collèges différents dans le nord de Paris, s’est fait exclure plusieures fois. Aujourd’hui, ce qu’il aime, c’est la musique, le rap particulièrement. Spewell en écoute beaucoup. Mais, surtout, il tourne des clips ambiance gangsta rap avec ses copains du 93. Clips qui lui assurent une certaine aura chez une partie des garçons de la classe. Mais dont un, particulièrement violent, a inquiété cet hiver la direction du collège."
 		},
 		{
 			"href":     "louanne",
@@ -151,7 +151,7 @@
 			"alt":      "",
 			"title":    "Dialikatou",
 			"subtitle": "15 ans, élève en 3e&nbsp;B",
-			"desc": ""
+			"desc": "Assez curieusement, Dialikatou se définit comme « colérique, maniaque et gentille ». Elle adore le collège. Elle a l’impression que le système français est « une chance », même si l’Afrique et les amis qu’elle a laissé là-bas lui manquent. Dialikatou ne s’est pas beaucoup posée dans sa jeune vie. Née en Guinée, elle a été à l’école là-bas jusqu’en CM1. Puis est venu faire son année de CM2 en France, où vit son père, retraité, avant de repartir pour le Sénégal de la 6ème à la 4ème. Elle est revenue en France il y a quelques mois, pour la rentrée de 3ème, à la demande de son père, avec sa mère et son petit frère. Plus tard, Dialikatou voudrait être expert comptable, parce qu’elle adore les maths. Elle veut aller en seconde générale, mais s’inquiète toujours de ne pas y arriver, malgré sa détermination et les encouragements constants de ses profs. Cette année, grâce à sa copine Alexandra, elle a découvert la lecture. Et, quand elle a du temps libre, elle échange par Messenger avec ses amis en Afrique."
 		},
 		{
 			"href":     "adrien-zask",
@@ -228,12 +228,7 @@
 	],
 
 	"data": [
-		{
-			"img":      "img/carte-segregation.jpg",
-			"title":    "L'apartheid du collège",
-			"subtitle": "Paris est le département français où la ségrégation scolaire est la plus forte",
-			"href":     "http://www.assemblee-nationale.fr/14/rap-info/i3292.asp#P1136_269512"
-		}
+
 	],
 
 	"places": [
