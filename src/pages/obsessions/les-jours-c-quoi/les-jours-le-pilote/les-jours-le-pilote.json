@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "les-jours-le-pilote",
+
+	"number": 2,
+	"date": "2016-02-07T10:00+01:00",
+
+	"title": "Une première version pilote",
+	"intro": "Avant leur lancement, <i>les Jours</i> présentent depuis le 11 février leur version pilote. Mais c'est quoi ?",
+	"subtitle": "Avant leur lancement, <i>les Jours</i> présentent depuis le 11 février leur version pilote. Mais c'est quoi ?",
+	"lead":  "Dans le monde des séries télé, on appelle « pilote » le premier épisode d’une série qui présente les personnages, leur univers et donne le ton de l’histoire à venir.",
+
+	"tags": ["Les Jours", "journalisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "Les Jours" },
+			{ "photo": "Eleonora Strano / Hans Lucas" }
+		],
+
+		"first": "episode:les-jours-c-quoi/les-jours-le-projet",
+		"next": "episode:les-jours-c-quoi/les-jours-tuto-obsession",
+		"prev":  "episode:les-jours-c-quoi/les-jours-le-projet",
+		"last":  "episode:les-jours-c-quoi/les-jours-l-equipe"
+	}
+}

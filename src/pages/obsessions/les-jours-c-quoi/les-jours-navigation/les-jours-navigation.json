@@ -4,10 +4,11 @@
 	"href": "les-jours-navigation",
 
 	"number": 4,
-	"date": "2016-02-11T10:00+01:00",
+	"date": "2016-02-07T10:00+01:00",
 
 	"title": "Comment naviguer sur « Les Jours » ?",
 	"intro": "Vous êtes perdus sur le site ? On ne panique pas, on respire. Tout est expliqué ici : suivez le guide.",
+	"subtitle": "Vous êtes perdus sur le site ? On ne panique pas, on respire. Tout est expliqué ici : suivez le guide.",
 	"lead":  "Non, l’obsession n’est pas une maladie. Ou alors c’est une déformation professionnelle qui pousse les journalistes des <i>Jours</i> à vouloir en savoir toujours plus, à aller au fond de l’actualité.",
 
 	"tags": ["Les Jours", "journalisme"],

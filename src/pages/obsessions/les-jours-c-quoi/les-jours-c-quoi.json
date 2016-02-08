@@ -7,7 +7,7 @@
 	"name":  "« Les Jours », c'est quoi ?",
 	"title": "« Les Jours », c'est quoi ?",
 	"subtitle": "C'est qui ? Comment ça marche ? Combien ça coûte ?",
-	"desc": "<p>Oui, on n'a pas encore écrit le descriptif de cette obsession mais ça va venir.</p>",
+	"desc": "<p>Face au torrent de l’info éphémère, <i>Les Jours</i>, c’est le nouveau média en ligne qui creuse ses obsessions au cœur de l’actualité et ne les lâche pas.<p><p><i>Les Jours</i> défendent un journalisme singulier, curieux, tenace, emmené par des têtes de pioche.</p>",
 
 	"episodes": [
 		"episode:les-jours-c-quoi/les-jours-le-projet",
@@ -20,62 +20,133 @@
 
 	"people": [
 		{
-			"href":     "ep3-portrait-belmer",
-			"img":      "img/belmer-portrait.jpg",
+			"href":     "les-jours-l-equipe",
+			"img":      "img/olivier-bertrand.jpg",
 			"alt":      "",
-			"title":    "Rodolphe Belmer",
-			"subtitle": "46 ans, ex-numéro 2 de Canal+"
+			"title":    "Olivier Bertrand",
+			"subtitle": "Obsession Turquie",
+			"minor": true
 		},
 		{
-			"href":     "ep1-guignols",
-			"img":      "img/bollore-portrait.jpg",
+			"href":     "les-jours-l-equipe",
+			"img":      "img/jc-besson.jpg",
 			"alt":      "",
-			"title":    "Vincent Bolloré",
-			"subtitle": "63 ans, patron (de Vivendi, d'Havas, de Canal+…)"
+			"title":    "Jean-Christophe Besson",
+			"subtitle": "Obsession snake",
+			"minor": true
 		},
 		{
-			"href":     "ep2-plug-canal",
-			"img":      "img/meheut-portrait.jpg",
+			"href":     "les-jours-l-equipe",
+			"img":      "img/jbg.jpg",
 			"alt":      "",
-			"title":    "Bertrand Méheut",
-			"subtitle": "64 ans, ex-président du groupe Canal+"
+			"title":    "Jérôme Bourreau-Guggenheim",
+			"subtitle": "Obsession",
+			"minor": true
 		},
 		{
-			"href":     "#",
-			"img":      "img/aprikian-portrait.jpg",
+			"href":     "les-jours-l-equipe",
+			"img":      "img/sebastien-calvet.jpg",
 			"alt":      "",
-			"title":    "Ara Aprikian",
-			"subtitle": "49 ans, ex-chef du pôle gratuit de Canal+"
+			"title":    "Sébastien Calvet",
+			"subtitle": "Obsession photo",
+			"minor": true
 		},
 		{
-			"href":     "#",
-			"img":      "img/portrait-saada.jpg",
+			"href":     "les-jours-l-equipe",
+			"img":      "img/nicolas-cori.jpg",
 			"alt":      "",
-			"title":    "Maxime Saada",
-			"subtitle": "45 ans, nouveau numéro 2 de Canal+"
+			"title":    "Nicolas Cori",
+			"subtitle": "Obsession jonglage",
+			"minor": true
 		},
 		{
-			"href":     "#",
-			"img":      "img/degreef-header.jpg",
+			"href":     "les-jours-l-equipe",
+			"img":      "img/sophian-fanen.jpg",
 			"alt":      "",
-			"title":    "Alain de Greef",
-			"subtitle": "Défunt directeur des programmes de Canal+"
+			"title":    "Sophian Fanen",
+			"subtitle": "Obsession Adele",
+			"minor": true
+		},
+		{
+			"href":     "les-jours-l-equipe",
+			"img":      "img/garriberts.jpg",
+			"alt":      "",
+			"title":    "Les Garriberts",
+			"subtitle": "Obsession obsession",
+			"minor": true
+		},
+		{
+			"href":     "les-jours-l-equipe",
+			"img":      "img/louis-garrel.jpg",
+			"alt":      "",
+			"title":    "Alice Géraud",
+			"subtitle": "Obsession Louis Garrel",
+			"minor": true
+		},
+		{
+			"href":     "les-jours-l-equipe",
+			"img":      "img/antoine-guiral.jpg",
+			"alt":      "",
+			"title":    "Antoine Guiral",
+			"subtitle": "Obsession politique et chaîne de vélo",
+			"minor": true
+		},
+		{
+			"href":     "les-jours-l-equipe",
+			"img":      "img/nicolas-le-gall.jpg",
+			"alt":      "",
+			"title":    "Nicolas Le Gall",
+			"subtitle": "Obsession Japon",
+			"minor": true
+		},
+		{
+			"href":     "les-jours-l-equipe",
+			"img":      "img/augustin-naepels.jpg",
+			"alt":      "",
+			"title":    "Augustin Naepels",
+			"subtitle": "Obsession outre-mer",
+			"minor": true
+		},
+		{
+			"href":     "les-jours-l-equipe",
+			"img":      "img/camille-polloni.jpg",
+			"alt":      "",
+			"title":    "Camille Polloni",
+			"subtitle": "Obsession chercher",
+			"minor": true
+		},
+		{
+			"href":     "les-jours-l-equipe",
+			"img":      "img/charlotte-rotman.jpg",
+			"alt":      "",
+			"title":    "Charlotte Rotman",
+			"subtitle": "Obsession curiosité",
+			"minor": true
+		},
+		{
+			"href":     "les-jours-l-equipe",
+			"img":      "img/david-thomson.jpg",
+			"alt":      "",
+			"title":    "David Thomson",
+			"subtitle": "Obsession jihadiste",
+			"minor": true
 		}
 	],
 
 	"images": [
-		{ "href": "#", "img": "img/les-guignols-header.jpg" },
-		{ "href": "#", "img": "img/le-plug-canal-header.jpg" },
-		{ "href": "#", "img": "img/le-plug-canal-1.jpg" },
-		{ "href": "#", "img": "img/les-guignols-1.jpg" },
-		{ "href": "#", "img": "img/degreef-header.jpg" }
+		{ "href": "#", "img": "img/header-projet.jpg" },
+		{ "href": "#", "img": "img/header-pilote.jpg" },
+		{ "href": "#", "img": "img/header-obsession.jpg" },
+		{ "href": "#", "img": "img/header-navigation.jpg" },
+		{ "href": "#", "img": "img/header-combien.jpg" },
+		{ "href": "#", "img": "img/header-equipe.jpg" }
 	],
 
 	"places": [
 		{
-			"img":   "img/carte-l-empire.png",
-			"title": "Les cinq royaumes de Bolloré",
-			"href":  "https://www.google.com/maps/d/edit?mid=zEN87Ui19vGI.kn86OklBgDys&usp=sharing"
+			"img":   "img/header-projet.jpg",
+			"title": "Les « Jours », c'est ici",
+			"href":  "https://www.google.fr/maps/place/14+Rue+de+Rouen,+75019+Paris/@48.8877697,2.3719155,17z/data=!3m1!4b1!4m2!3m1!1s0x47e66dd72345392d:0xf4956a1d12fd644"
 		}
 	],
 
@@ -86,9 +157,9 @@
 			"icon": "download",
 			"items": [
 				{
-					"href": "doc/tract-libre.pdf",
-					"title": "L'inquiétude de +Libres",
-					"desc": "Le syndicat autonome de Canal+ dresse un bilan des 100 premiers jours de Vincent Bolloré à la tête du groupe."
+					"href": "doc/article-le-monde-fevrier.pdf",
+					"title": "« L’aube va se lever très vite sur Les Jours »",
+					"desc": "Un article du <i>Monde</> consacré aux <i>Jours</i>."
 				}
 			]
 		}
