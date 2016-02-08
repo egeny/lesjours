@@ -20,23 +20,25 @@
 
 	"people": [
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "olivier-bertrand",
 			"img":      "img/olivier-bertrand.jpg",
 			"alt":      "",
 			"title":    "Olivier Bertrand",
 			"subtitle": "Obsession Turquie",
+			"desc":     "J’aime la Turquie",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "jean-christophe-besson",
 			"img":      "img/jc-besson.jpg",
 			"alt":      "",
 			"title":    "Jean-Christophe Besson",
 			"subtitle": "Obsession snake",
+			"desc":     "J’aime torturer les développeurs",
 			"minor": true
 		},
 		{
-			"href":     "les-jours-l-equipe",
+			"href":     "jerome-bourreau-guggenheim",
 			"img":      "img/jbg.jpg",
 			"alt":      "",
 			"title":    "Jérôme Bourreau-Guggenheim",

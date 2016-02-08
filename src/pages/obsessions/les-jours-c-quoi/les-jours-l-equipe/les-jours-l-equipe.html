@@ -1,50 +1,61 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
 <p><span class="lettrine">A</span> l’aube des <i>Jours</i>, il y a un collectif de huit journalistes venus de <i>Libération</i>, couvrant de nombreux champs de l’actualité (société, politique, économie, culture, médias…) : Olivier Bertrand, Nicolas Cori, Sophian Fanen, Raphaël Garrigos et Isabelle Roberts, Alice Géraud, Antoine Guiral et Charlotte Rotman. Aux huit fondateurs journalistes s’est joint Augustin Naepels, notre directeur administratif et financier. <i>Les Jours</i> ont également été renforcés par Sébastien Calvet, notre directeur photo, et Jérôme Bourreau-Guggenheim, notre directeur technique. Jean-Christophe Besson (agence Stigmates) s’est chargé de la direction artistique du site et Nicolas Le Gall (basé à Osaka) de son développement. Tous, nous sommes obsédés par l’info, nous sommes aussi légèrement têtes de pioche, mais surtout nous sommes taraudés par la même envie d’un journalisme de révélations exigeant, innovant, grinçant.</p>
 
 <hr>
 
 <h3>Olivier Bertrand</h3>
+{% set person = obsession.people[0] %}
 
 <p>Pour <i>Les Jours</i> ma première obsession sera la Turquie. Raconter la société turque aujourd'hui, au-delà de ses actualités, dramatiques et très denses. Les débats qui la traversent, les combats, les dépressions collectives. Un enjeu au-delà du pays car la Turquie reste cette agrafe fragile entre Europe et orient. Se jouent là-bas des questions qui nous concernent de près. La proximité des frontières chaotiques du Moyen-Orient. Les millions de migrants, que les dilplomaties européennes tentent de contenir en Turquie, fermant pour cela les yeux sur la dictature qui s'installe, et la guerre imposée au Kurdistan. La montée de l'autorité et des conservatismes. Les menaces terroristes. Le face-à-face entre Islam et laïcité. Les dérives ubuesques d'un président qui rassurait l'Europe…<p>
 
-<p><a href="#" data-mini="1">Je</a> suis journaliste depuis 28 ans. Mon travail est attiré depuis toujours par les questions d'exil et de racines, d'identités, assignées ou choisies. Cela m'a conduit longtemps dans les cités françaises, que je couvrais pour <i>Libération</i>, essayant de comprendre les mécanismes de violences urbaines, la montée de l'islam radical, les discriminations, la relégation, les politiques qui peuvent reconstruire des villes.</p>
+<p><a href="#{{ person.href }}" data-mini="1">Je</a> suis journaliste depuis 28 ans. Mon travail est attiré depuis toujours par les questions d'exil et de racines, d'identités, assignées ou choisies. Cela m'a conduit longtemps dans les cités françaises, que je couvrais pour <i>Libération</i>, essayant de comprendre les mécanismes de violences urbaines, la montée de l'islam radical, les discriminations, la relégation, les politiques qui peuvent reconstruire des villes.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <p>J'ai également écrit et réalisé deux premiers films documentaires. <i>Un soir d'été, un étranger</i> (Ateliers Varan, nombreux festivals), pour comprendre les mécanismes de résistance dans un village cossu qui avait caché un clandestin dans ses greniers. Et <i>Vaulx-en-Velin la cité retrouvée</i> (France 3, LCP), qui raconte l'histoire de la politique de la ville au travers d'un quartier emblématique emporté par les premières émeutes urbaines en 1990.</p>
 
-<p>Ecrivez-moi à l'adresse suivante <A HREF="mailto:obertrand@lesjours.fr">obertrand@lesjours.fr</a> et retrouvez-moi sur <a href="https://twitter.com/Ol_Bertrand">Twitter.</a></p>
- 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/olivier-bertrand.jpg" alt="" /></span>
-<p class="title">Olivier Bertrand</p>
-<p class="subtitle">Obsession Turquie</p>
-</a>
-</aside>
+<p>Ecrivez-moi à l'adresse suivante <a href="mailto:obertrand@lesjours.fr">obertrand@lesjours.fr</a> et retrouvez-moi sur <a href="https://twitter.com/Ol_Bertrand">Twitter.</a></p>
 
 <hr>
 
 <h3>Jean-Christophe Besson</h3>
+{% set person = obsession.people[1] %}
 
-<p><a href="#" data-mini="2">JC</a>Pour <i>Les Jours</i> ma première obsession sera la Turquie. Raconter la société turque aujourd'hui, au-delà de ses actualités, dramatiques et très denses. Les débats qui la traversent, les combats, les dépressions collectives. Un enjeu au-delà du pays car la Turquie reste cette agrafe fragile entre Europe et orient. Se jouent là-bas des questions qui nous concernent de près. La proximité des frontières chaotiques du Moyen-Orient. Les millions de migrants, que les dilplomaties européennes tentent de contenir en Turquie, fermant pour cela les yeux sur la dictature qui s'installe, et la guerre imposée au Kurdistan. La montée de l'autorité et des conservatismes. Les menaces terroristes. Le face-à-face entre Islam et laïcité. Les dérives ubuesques d'un président qui rassurait l'Europe…<p>
+<p><a href="#{{ person.href }}" data-mini="2">JC</a> pour <i>Les Jours</i> ma première obsession sera la Turquie. Raconter la société turque aujourd'hui, au-delà de ses actualités, dramatiques et très denses. Les débats qui la traversent, les combats, les dépressions collectives. Un enjeu au-delà du pays car la Turquie reste cette agrafe fragile entre Europe et orient. Se jouent là-bas des questions qui nous concernent de près. La proximité des frontières chaotiques du Moyen-Orient. Les millions de migrants, que les dilplomaties européennes tentent de contenir en Turquie, fermant pour cela les yeux sur la dictature qui s'installe, et la guerre imposée au Kurdistan. La montée de l'autorité et des conservatismes. Les menaces terroristes. Le face-à-face entre Islam et laïcité. Les dérives ubuesques d'un président qui rassurait l'Europe…<p>
+
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <p>Je suis journaliste depuis 28 ans. Mon travail est attiré depuis toujours par les questions d'exil et de racines, d'identités, assignées ou choisies. Cela m'a conduit longtemps dans les cités françaises, que je couvrais pour <i>Libération</i>, essayant de comprendre les mécanismes de violences urbaines, la montée de l'islam radical, les discriminations, la relégation, les politiques qui peuvent reconstruire des villes.</p>
 
 <p>J'ai également écrit et réalisé deux premiers films documentaires. <i>Un soir d'été, un étranger</i> (Ateliers Varan, nombreux festivals), pour comprendre les mécanismes de résistance dans un village cossu qui avait caché un clandestin dans ses greniers. Et <i>Vaulx-en-Velin la cité retrouvée</i> (France 3, LCP), qui raconte l'histoire de la politique de la ville au travers d'un quartier emblématique emporté par les premières émeutes urbaines en 1990.</p>
 
 <p>Ecrivez-moi à l'adresse suivante <A HREF="mailto:obertrand@lesjours.fr">obertrand@lesjours.fr</a> et retrouvez-moi sur <a href="https://twitter.com/Ol_Bertrand">Twitter.</a></p>
-
-<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/jc-besson.jpg" alt="" /></span>
-<p class="title">Jean-Christophe Besson</p>
-<p class="subtitle">Obsession snake</p>
-</a>
-</aside>
 
 <hr>
 
 <h3>Jérôme Bourreau-Guggenheim</h3>
+{% set person = obsession.people[2] %}
 
-<p><a href="#" data-mini="3">JBG</a>Pour <i>Les Jours</i> ma première obsession sera la Turquie. Raconter la société turque aujourd'hui, au-delà de ses actualités, dramatiques et très denses. Les débats qui la traversent, les combats, les dépressions collectives. Un enjeu au-delà du pays car la Turquie reste cette agrafe fragile entre Europe et orient. Se jouent là-bas des questions qui nous concernent de près. La proximité des frontières chaotiques du Moyen-Orient. Les millions de migrants, que les dilplomaties européennes tentent de contenir en Turquie, fermant pour cela les yeux sur la dictature qui s'installe, et la guerre imposée au Kurdistan. La montée de l'autorité et des conservatismes. Les menaces terroristes. Le face-à-face entre Islam et laïcité. Les dérives ubuesques d'un président qui rassurait l'Europe…<p>
+<p><a href="#{{ person.href }}" data-mini="3">JBG</a> pour <i>Les Jours</i> ma première obsession sera la Turquie. Raconter la société turque aujourd'hui, au-delà de ses actualités, dramatiques et très denses. Les débats qui la traversent, les combats, les dépressions collectives. Un enjeu au-delà du pays car la Turquie reste cette agrafe fragile entre Europe et orient. Se jouent là-bas des questions qui nous concernent de près. La proximité des frontières chaotiques du Moyen-Orient. Les millions de migrants, que les dilplomaties européennes tentent de contenir en Turquie, fermant pour cela les yeux sur la dictature qui s'installe, et la guerre imposée au Kurdistan. La montée de l'autorité et des conservatismes. Les menaces terroristes. Le face-à-face entre Islam et laïcité. Les dérives ubuesques d'un président qui rassurait l'Europe…<p>
 
 <p>Je suis journaliste depuis 28 ans. Mon travail est attiré depuis toujours par les questions d'exil et de racines, d'identités, assignées ou choisies. Cela m'a conduit longtemps dans les cités françaises, que je couvrais pour <i>Libération</i>, essayant de comprendre les mécanismes de violences urbaines, la montée de l'islam radical, les discriminations, la relégation, les politiques qui peuvent reconstruire des villes.</p>
 
@@ -52,13 +63,16 @@
 
 <p>Ecrivez-moi à l'adresse suivante <A HREF="mailto:obertrand@lesjours.fr">obertrand@lesjours.fr</a> et retrouvez-moi sur <a href="https://twitter.com/Ol_Bertrand">Twitter.</a></p>
 
-<aside id="mini-3" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/jbg.jpg" alt="" /></span>
-<p class="title">Jérôme Bourreau-Guggenheim</p>
-<p class="subtitle">Obsession design</p>
-</a>
-</aside>
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <hr>
 
