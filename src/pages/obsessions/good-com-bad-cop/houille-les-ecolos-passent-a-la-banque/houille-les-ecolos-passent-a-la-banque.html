@@ -1,6 +1,20 @@
-<p><span class="lettrine">L</span>e rendez-vous avait été fixé par <a href="http://www.amisdelaterre.org/" data-mini="1">Amis de la Terre</a> un samedi d’octobre dernier, à 11 heures, devant une agence BNP Paribas située place Félix-Eboué, dans le XIIe arrondissement de Paris, en <q>présence de citoyens et de porteurs d’alternatives</q>. Il s’agissait de <q>montrer qu’il est possible d’épargner le climat avec notre argent</q>. BNP Paribas sponsorise la COP21 et, selon Pierre Sagot, responsable communication de la branche française de l’ONG qui se veut protectrice de l’homme et de l’environnement dans 76 pays, la banque <q>est la première en France à financer le secteur du charbon</q>. Pire, elle <q>n’a toujours pas pris un seul engagement climat crédible à deux mois de la conférence</q> – elle ne l’a fait qu’après l’action de l’ONG, <a href="/obsessions/good-com-bad-cop/le-charbon-l-ennemi-utile">lire l'épisode 2</a>. Les Amis de la Terre avaient donc décidé de la viser.</p>
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+<p><span class="lettrine">L</span>e rendez-vous avait été fixé par <a href="http://www.amisdelaterre.org/" data-mini="1">Les Amis de la Terre</a> un samedi d’octobre dernier, à 11 heures, devant une agence BNP Paribas située place Félix-Eboué, dans le XIIe arrondissement de Paris, en <q>présence de citoyens et de porteurs d’alternatives</q>. Il s’agissait de <q>montrer qu’il est possible d’épargner le climat avec notre argent</q>. BNP Paribas sponsorise la COP21 et, selon Pierre Sagot, responsable communication de la branche française de l’ONG qui se veut protectrice de l’homme et de l’environnement dans 76 pays, la banque <q>est la première en France à financer le secteur du charbon</q>. Pire, elle <q>n’a toujours pas pris un seul engagement climat crédible à deux mois de la conférence</q> – elle ne l’a fait qu’après l’action de l’ONG, <a href="/obsessions/good-com-bad-cop/le-charbon-l-ennemi-utile">lire l'épisode 2</a>. Les Amis de la Terre avaient donc décidé de la viser.</p>
 
-<p>Avec quelques minutes de retard sur l’horaire prévu, une vingtaine d’hommes et de femmes, plutôt jeunes, déboulent depuis une rue adjacente. La plupart porte un t-shirt avec le logo des Amis de la Terre, certains brandissent des cochons en carton-pâte. Deux photographes ont leur appareil en bandoulière, tandis qu’un preneur de son tient un mini-enregistreur. <a href="#" data-mini="2">Lucie Pinson</a>, chargée de campagne « finance privée » pour l’ONG, dirige les militants, un gros sac Leroy Merlin à l’épaule, où est rangé le matériel pour l’action à venir. Celle-ci démarre immédiatement, une sorte de pièce de théâtre où rien n’est improvisé.</p>
+{% set person = obsession.people[2] %}
+<p>Avec quelques minutes de retard sur l’horaire prévu, une vingtaine d’hommes et de femmes, plutôt jeunes, déboulent depuis une rue adjacente. La plupart porte un t-shirt avec le logo des Amis de la Terre, certains brandissent des cochons en carton-pâte. Deux photographes ont leur appareil en bandoulière, tandis qu’un preneur de son tient un mini-enregistreur. <a href="#{{ person.href }}" data-mini="2">Lucie Pinson</a>, chargée de campagne « finance privée » pour l’ONG, dirige les militants, un gros sac Leroy Merlin à l’épaule, où est rangé le matériel pour l’action à venir. Celle-ci démarre immédiatement, une sorte de pièce de théâtre où rien n’est improvisé.</p>
+
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <blockquote>
 	<p>C’est comme la vente d’armes. On sait que ce n’est pas très bien, mais si on ne le fait pas, les emplois vont ailleurs.</p>
@@ -32,17 +46,9 @@
 <p>Le lendemain, l’ONG publie un communiqué pour inciter à changer de banque avec une photo de militante en train de découper sa carte bancaire de la BNP. Une semaine plus tard, c‘est une vidéo de l’action qui est mise en ligne sur YouTube. Titrée <q>Leur banque pollue ? Ils changent de banque !</q>, elle dure une minute trente. Son montage est rapide et une musique nerveuse accompagne l’action. Du travail de professionnels de la communication, jusqu’au bout.</p>
 
 <aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="http://www.amisdelaterre.org/" target="_blank">
+<a class="link-unstyled" href="http://www.amisdelaterre.org/">
 <span class="image"><img class="responsive" src="img/logoamisdelaterre.jpg" alt="" /></span>
 <p class="title">Les Amis de la Terre</p>
 <p class="subtitle">Le site de l'ONG</p>
-</a>
-</aside>
-
-<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/lucie-pinson.jpg" alt="" /></span>
-<p class="title">Lucie Pinson</p>
-<p class="subtitle">29 ans, chargée de campagne aux Amis de la Terre</p>
 </a>
 </aside>
