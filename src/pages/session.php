@@ -25,8 +25,8 @@
 			die(header('Location: '.$_SERVER['HTTP_REFERER'].'#forgot-mailed'));
 		}
 
-		// If something went bad, redirect to the ** page
-		die(); // TODO
+		// If something went bad, redirect to the error page
+		die(header('Location: /erreur.html?forgot'));
 	}
 
 	if (isset($_GET['reset'])) {
@@ -47,11 +47,11 @@
 			), false);
 
 			// Finally, redirect to the previous page (build the URL using $parsed to discard query parameters)
-			die(header('Location: '.$parsed['scheme'].'://'.$parsed['host'].$parsed['path']));
+			die(header('Location: '.$parsed['scheme'].'://'.$parsed['host'].(!preg_match('/erreur\.html/', $parsed['path']) ? $parsed['path'] : '/')));
 		}
 
-		// If something went bad, redirect to the ** page
-		die(); // TODO
+		// If something went bad, redirect to the error page (don't forget to include the mail an key)
+		die(header('Location: /erreur.html?mail='.urlencode($_GET['mail']).'&key='.$_GET['key'].'&reset'));
 	}
 
 	// When receiving data, try to log the user
@@ -62,8 +62,12 @@
 			'remember'      => true
 		), false);
 
-		// TODO: display a message in case of error
-		die(header('Location: '.$_SERVER['HTTP_REFERER']));
+		if (!is_wp_error($user)) {
+			die(header('Location: '.(!preg_match('/erreur\.html/', $_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/')));
+		}
+
+		// Display an evasive message in case of error
+		die(header('Location: /erreur.html?login'));
 	}
 
 	// $current_user is always an object, check if it has an ID
