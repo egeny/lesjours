@@ -41,37 +41,6 @@
 			"subtitle": "Franck Riester",
 			"minor": true
 		}
-	],
-
-	"images": [
-		{ "href": "#", "img": "img/header-projet.jpg" },
-		{ "href": "#", "img": "img/header-pilote.jpg" },
-		{ "href": "#", "img": "img/header-obsession.jpg" },
-		{ "href": "#", "img": "img/header-navigation.jpg" },
-		{ "href": "#", "img": "img/header-combien.jpg" },
-		{ "href": "#", "img": "img/header-equipe.jpg" }
-	],
-
-	"places": [
-		{
-			"img":   "img/header-projet.jpg",
-			"title": "Les « Jours », c'est ici",
-			"href":  "https://www.google.fr/maps/place/14+Rue+de+Rouen,+75019+Paris/@48.8877697,2.3719155,17z/data=!3m1!4b1!4m2!3m1!1s0x47e66dd72345392d:0xf4956a1d12fd644"
-		}
-	],
-
-	"documents": [
-		{
-			"id": "telechargements",
-			"title": "Téléchargements",
-			"icon": "download",
-			"items": [
-				{
-					"href": "doc/article-le-monde-fevrier.pdf",
-					"title": "« L’aube va se lever très vite sur Les Jours »",
-					"desc": "Un article du <i>Monde</> consacré aux <i>Jours</i>."
-				}
-			]
-		}
 	]
+
 }
