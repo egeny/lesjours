@@ -1,0 +1,46 @@
+{
+	"template": "obsession",
+
+	"href": "politique-annee-zero",
+
+	"color": 7,
+	"name":  "Politique année zéro",
+	"title": "Politique année zéro",
+	"subtitle": "Nouvelles pratiques et vieilles ficelles.",
+	"desc": "<p>Après le choc des régionales, plus rien ne devait être comme avant. A gauche comme à droite. Mais dans un climat de défiance généralisée, qui l’emportera entre le vieux monde politique et ceux qui voudraient le changer ?</p><p>« Les Jours » racontent le quotidien de trois députés nouvelle génération pris entre désirs de renouvellement et habituels compromis.</p>",
+
+	"episodes": [
+		"episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire"
+	],
+
+	"people": [
+		{
+			"href":     "barbara-romagnan",
+			"img":      "img/barbara-romagnan.jpg",
+			"alt":      "",
+			"title":    "Barbara Romagnan",
+			"subtitle": "41 ans, députée PS anti-état d'urgence",
+			"desc":     "Barbara Romagnan est une personnalité atypique dans le milieu politique. Femme, élue députée à 38 ans en 2012, elle est docteure en sciences politiques et a été enseignante. Cela imprègne sa manière de penser et de s’exprimer : elle formule régulièrement ses doutes et les assume, ce qui est plutôt rare dans l’arène politique. Entre loyauté au PS dont elle est une militante depuis vingt ans et libre arbitre, elle essaie de tracer sa voie. Elle se range parmi les rénovateurs, on l’étiquette « frondeuse ». Souvent minoritaire, elle dit ne pas chercher à contester l’autorité. Elle a voté non au maintien de l’état d’urgence (seuls six députés ont fait ce choix) et ne décolère pas de la proposition de la déchéance de nationalité qu’elle juge honteuse. Barbara Romagnan fait également partie des parlementaires que Les Jours suivent dans l’obsession Politique année zéro.",
+			"minor": true
+		},
+		{
+			"href":     "olivier-faure",
+			"img":      "img/olivier-faure.jpg",
+			"alt":      "",
+			"title":    "Olivier Faure",
+			"subtitle": "X ans, député PS de Seine-et-Marne",
+			"desc":     "Olivier Faure",
+			"minor": true
+		},
+		{
+			"href":     "franck-riester",
+			"img":      "img/franck-riester.jpg",
+			"alt":      "",
+			"title":    "Franck Riester",
+			"desc":     "X ans, députés LR ",
+			"subtitle": "Franck Riester",
+			"minor": true
+		}
+	]
+
+}

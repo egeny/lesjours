@@ -20,14 +20,8 @@
 		"episode:les-annees-college/parents-prof",
 		"episode:les-annees-college/ingenieur-pourquoi-pas",
 		"episode:les-annees-college/etre-charlie",
-		"episode:les-annees-college/the-course-of-maths"
-		
-		
-		
-		
-		
-		
-		
+		"episode:les-annees-college/the-course-of-maths",
+		"episode:les-annees-college/making-of-college-lambert"
 		
 		
 	],
@@ -39,7 +33,8 @@
 			"alt":      "",
 			"title":    "Antoine Labaere",
 			"subtitle": "32 ans, le professeur principal",
-			"desc":		"Antoine Labaere est un stakhanoviste cool, tendance optimiste. Ce qui n’est pas tout à fait étranger au fait qu’il ait accepté de participer à cette expérience journalistique. Il n’est pas aisé pour un professeur d’ouvrir le huis-clos de sa classe à des personnes extérieures, particulièrement à une journaliste et un photographe, de bousculer parfois son emploi du temps, de prendre celui de répondre à nos questions et, surtout, de convaincre ses collègues, ses élèves et leurs parents de faire de même. Nous le remercions donc ici. Antoine Labaere enseigne l’histoire et la géographie, mais il est aussi le professeur principal – le « PP », comme il dit – des 3e B. Il gère les problèmes de vie de classe, les relations avec les autres enseignants, prépare l’orientation scolaire, les conseils de classes, aide à la recherche de stages, est en lien avec les parents d’élèves… Autrement dit, il passe beaucoup de temps à faire remplir des papiers et organiser des rendez-vous. Pour la moindre réunion avec les parents, il les appellent un par un. En classe, assez détendu, Antoine Labaere n’est pas le genre à s’offusquer d’un élève en doudoune en cours, mais pas le genre non plus à laisser passer un travail non fait. La ligne jaune à ne pas franchir est invisible mais suffisamment claire pour qu’il évite de se faire « bordéliser », comme disent les profs. Cette année, en histoire-géo, les 3e B étudient le XXe siècle."
+			"desc":		"Antoine Labaere est un stakhanoviste cool, tendance optimiste. Ce qui n’est pas tout à fait étranger au fait qu’il ait accepté de participer à cette expérience journalistique. Il n’est pas aisé pour un professeur d’ouvrir le huis-clos de sa classe à des personnes extérieures, particulièrement à une journaliste et un photographe, de bousculer parfois son emploi du temps, de prendre celui de répondre à nos questions et, surtout, de convaincre ses collègues, ses élèves et leurs parents de faire de même. Nous le remercions donc ici. Antoine Labaere enseigne l’histoire et la géographie, mais il est aussi le professeur principal – le « PP », comme il dit – des 3e B. Il gère les problèmes de vie de classe, les relations avec les autres enseignants, prépare l’orientation scolaire, les conseils de classes, aide à la recherche de stages, est en lien avec les parents d’élèves… Autrement dit, il passe beaucoup de temps à faire remplir des papiers et organiser des rendez-vous. Pour la moindre réunion avec les parents, il les appellent un par un. En classe, assez détendu, Antoine Labaere n’est pas le genre à s’offusquer d’un élève en doudoune en cours, mais pas le genre non plus à laisser passer un travail non fait. La ligne jaune à ne pas franchir est invisible mais suffisamment claire pour qu’il évite de se faire « bordéliser », comme disent les profs. Cette année, en histoire-géo, les 3e B étudient le XXe siècle.",
+			"minor": true
 		},
 		{
 			"href":     "jessika",
@@ -47,7 +42,8 @@
 			"alt":      "",
 			"title":    "Jessika",
 			"subtitle": "13 ans, élève en 3e&nbsp;B",
-			"desc":		"Jessika est l’excellente élève de la classe. Elle est calme, discrète. Sans être effacée. Jessika a souvent les yeux qui sourit derrière les grandes lunettes qu’elle porte en classe. Elle fait partie des élèves qui savent où ils vont. Plus tard, elle aimerait être « maitresse au 1er dégré », parce qu’elle aime « les enfants » et « apprendre aux autres ». Comme Agita et Soumiga, elle a été sélectionnée pour le programme « Les cordées de la réussite », une prépa permettant aux élèves des collège en éducation prioritaire d’intégrer le prestigieux lycée Louis-le-Grand. Elle n’est pas sûre de vouloir intégrer un établissement aussi élitiste mais veut se préparer à un bon lycée. Jusqu’ici, elle a été rarement confrontée à des difficultés scolaire, elle voudrait s’y préparer pour la seconde. Jessika aime le sport (« sauf au collège »), elle fait du taikwendo. Elle adore lire des manga et dessiner. Et déteste parler anglais."
+			"desc":		"Jessika est l’excellente élève de la classe. Elle est calme, discrète. Sans être effacée. Jessika a souvent les yeux qui sourit derrière les grandes lunettes qu’elle porte en classe. Elle fait partie des élèves qui savent où ils vont. Plus tard, elle aimerait être « maitresse au 1er dégré », parce qu’elle aime « les enfants » et « apprendre aux autres ». Comme Agita et Soumiga, elle a été sélectionnée pour le programme « Les cordées de la réussite », une prépa permettant aux élèves des collège en éducation prioritaire d’intégrer le prestigieux lycée Louis-le-Grand. Elle n’est pas sûre de vouloir intégrer un établissement aussi élitiste mais veut se préparer à un bon lycée. Jusqu’ici, elle a été rarement confrontée à des difficultés scolaire, elle voudrait s’y préparer pour la seconde. Jessika aime le sport (« sauf au collège »), elle fait du taikwendo. Elle adore lire des manga et dessiner. Et déteste parler anglais.",
+			"minor": true
 		},
 		{
 			"href":     "jean-louis-terrana",
@@ -55,7 +51,8 @@
 			"alt":      "",
 			"title":    "Jean-Louis Terrana",
 			"subtitle": "50 ans, le principal d'Aimé-Césaire",
-			"desc": "Il est l'homme en costume-cravate de la maison (sauf le vendredi où il pratique scrupuleusement le friday wear). Il est aussi celui qu'on a l'impression de croiser partout et tout le temps. Le matin, attendant à 8h25 les élèves devant les grilles du collège. Au détour d'un couloir durant les intercours, une voix grave adoucie d’un léger accent du sud surgissant soudainement au milieu d'une bousculade pour rappeler à l'ordre. Ou simplement dans son bureau dont la porte est presque toujours ouverte. Il appelle chacun des 450 élèves du collège par son prénom. Connaît les histoires personnelles, les parcours scolaires, les familles. Il connaît aussi le quartier comme sa poche. C’est un paternaliste. Il dit souvent « mes élèves » et même « mes enseignants ». Jean-Louis Terrana est arrivé l'an dernier à Aimé-Césaire. Il a l'habitude des quartiers populaires. Auparavant, il a passé trois ans à Jean-Zay, au cœur d'une cité de Bondy dans le 93 ou par des établissements plus huppés comme “le petit Condorcet” dans le 9ème arrondissement de Paris. Avant d’être principal, était en enseignant en lycée professionnel."
+			"desc": "Il est l'homme en costume-cravate de la maison (sauf le vendredi où il pratique scrupuleusement le friday wear). Il est aussi celui qu'on a l'impression de croiser partout et tout le temps. Le matin, attendant à 8h25 les élèves devant les grilles du collège. Au détour d'un couloir durant les intercours, une voix grave adoucie d’un léger accent du sud surgissant soudainement au milieu d'une bousculade pour rappeler à l'ordre. Ou simplement dans son bureau dont la porte est presque toujours ouverte. Il appelle chacun des 450 élèves du collège par son prénom. Connaît les histoires personnelles, les parcours scolaires, les familles. Il connaît aussi le quartier comme sa poche. C’est un paternaliste. Il dit souvent « mes élèves » et même « mes enseignants ». Jean-Louis Terrana est arrivé l'an dernier à Aimé-Césaire. Il a l'habitude des quartiers populaires. Auparavant, il a passé trois ans à Jean-Zay, au cœur d'une cité de Bondy dans le 93 ou par des établissements plus huppés comme « le petit Condorcet » dans le 9ème arrondissement de Paris. Avant d’être principal, était en enseignant en lycée professionnel.",
+			"minor": true
 		},
 		{
 			"href":     "pascale-guillemin",
@@ -63,7 +60,8 @@
 			"alt":      "",
 			"title":    "Pascale Guillemin",
 			"subtitle": "38 ans, la principale adjointe d'Aimé-Césaire",
-			"desc": ""
+			"desc": "",
+			"minor": true
 		},
 		{
 			"href":     "vithuran",
@@ -71,7 +69,8 @@
 			"alt":      "",
 			"title":    "Vithuran",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "Vithuran est un garçon souriant. Il a dans la vie une passion devenue peu commune dans cette deuxième décennie des années 2000 : l’automobile. Sous toutes ces formes. Le design, la mécanique, l’électronique… Avec un petit faible pour les anciennes sportives. « La dodge challenger 69 », précise-t-il. La voiture lui prend beaucoup de temps. Il traine dans les garages, va au salon de l’automobile, lit toutes sortes de magazines et de sites spécialisés. Vithuran ne se voit pas faire d’études trop longues. Sa mère aimerait bien qu’il devienne ingénieur. Lui se verrait bien avoir « un bon poste » dans l’automobile, ou l’aéronautique. Mais redoute l’idée « d’avoir des responsabilités ». Jusqu’en 3è, il avoue ne pas avoir trop travaillé. Mais, l’orientation approchant, il essaie de se « reprendre en main ». Il aime Michael Jackson et... Le Petit Prince (qu’il relit souvent)."
+			"desc": "Vithuran est un garçon souriant. Il a dans la vie une passion devenue peu commune dans cette deuxième décennie des années 2000 : l’automobile. Sous toutes ces formes. Le design, la mécanique, l’électronique… Avec un petit faible pour les anciennes sportives. « La dodge challenger 69 », précise-t-il. La voiture lui prend beaucoup de temps. Il traine dans les garages, va au salon de l’automobile, lit toutes sortes de magazines et de sites spécialisés. Vithuran ne se voit pas faire d’études trop longues. Sa mère aimerait bien qu’il devienne ingénieur. Lui se verrait bien avoir « un bon poste » dans l’automobile, ou l’aéronautique. Mais redoute l’idée « d’avoir des responsabilités ». Jusqu’en 3è, il avoue ne pas avoir trop travaillé. Mais, l’orientation approchant, il essaie de se « reprendre en main ». Il aime Michael Jackson et... Le Petit Prince (qu’il relit souvent).",
+			"minor": true
 		},
 		{
 			"href":     "nina",
@@ -79,7 +78,8 @@
 			"alt":      "",
 			"title":    "Nina",
 			"subtitle": "14 ans, la déléguée de la 3e B",
-			"desc": "Sur la photo de classe, sa silhouette se distingue de ses camarades par une pose particulière, un trois-quart savamment étudié. En général, Nina aime bien se distinguer. Elue déléguée de classe (« comme l’année dernière »), elle est aussi déléguée supléante au conseil des élèves du collège. Elle adore « être au courant de tout ». Etre là. Le doigt toujours levé pour participer. La bouche toujours ouverte pour lire un texte ou juste commenter la vie de la classe. Elle se définit elle-même comme « un très fort caractère ». « Les autres disent que je suis lunatique, faut pas m’embêter, c’est tout ». Plutôt bonne élève, elle ira l’an prochain en seconde générale. Plus tard, elle voudrait être pédiatre, « chirurgien pédiatre » plus précisément. Parce qu’elle a envie d’être « utile ». Et, aussi, parce qu’elle voudrait voir « à l’intérieur du corps ». En classe, Nina est inséparable de Faema."
+			"desc": "Sur la photo de classe, sa silhouette se distingue de ses camarades par une pose particulière, un trois-quart savamment étudié. En général, Nina aime bien se distinguer. Elue déléguée de classe (« comme l’année dernière »), elle est aussi déléguée supléante au conseil des élèves du collège. Elle adore « être au courant de tout ». Etre là. Le doigt toujours levé pour participer. La bouche toujours ouverte pour lire un texte ou juste commenter la vie de la classe. Elle se définit elle-même comme « un très fort caractère ». « Les autres disent que je suis lunatique, faut pas m’embêter, c’est tout ». Plutôt bonne élève, elle ira l’an prochain en seconde générale. Plus tard, elle voudrait être pédiatre, « chirurgien pédiatre » plus précisément. Parce qu’elle a envie d’être « utile ». Et, aussi, parce qu’elle voudrait voir « à l’intérieur du corps ». En classe, Nina est inséparable de Faema.",
+			"minor": true
 		},
 		{
 			"href":     "matea",
@@ -87,7 +87,8 @@
 			"alt":      "",
 			"title":    "Matéa",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "L’an prochain, Matéa doit aller en CAP pâtisserie. L’affaire est entendue depuis le début de l’année, ce qui est assez rare et semble soulager tout le monde autour de lui (parents et profs). Sa mère lui a trouvé un stage pour le mois de février chez un pâtissier de bonne réputation pas trop loin du XVIIIème. Matéa explique qu’à la maison, il fait de la pâtisserie avec sa tante. Et qu’il regarde l’émission Le meilleur pâtissier sur M6. Cependant, quand  il s’agit de parler de lui, il préfère nous raconter sa passion pour les jeux videos. «Je suis un vrai geek », répète-il, expliquant de lui-même qu’il peut passer des soirées entières scotché sur sa PS3 à jouer aux jeux videos, à Call of Duty et Minecraft surtout. Plus l’année avance, moins il a envie d’aller en pâtisserie. Il préfèrerait apprendre l’informatique. Cela fait deux ans que Matéa est à Aimé Césaire. Avant, il était dans un collège privé, à Saint-Georges, mais il trouvait le niveau trop dur. Ici, ses notes ont remonté. Ça lui a redonné du courage."
+			"desc": "L’an prochain, Matéa doit aller en CAP pâtisserie. L’affaire est entendue depuis le début de l’année, ce qui est assez rare et semble soulager tout le monde autour de lui (parents et profs). Sa mère lui a trouvé un stage pour le mois de février chez un pâtissier de bonne réputation pas trop loin du XVIIIème. Matéa explique qu’à la maison, il fait de la pâtisserie avec sa tante. Et qu’il regarde l’émission Le meilleur pâtissier sur M6. Cependant, quand  il s’agit de parler de lui, il préfère nous raconter sa passion pour les jeux videos. «Je suis un vrai geek », répète-il, expliquant de lui-même qu’il peut passer des soirées entières scotché sur sa PS3 à jouer aux jeux videos, à Call of Duty et Minecraft surtout. Plus l’année avance, moins il a envie d’aller en pâtisserie. Il préfèrerait apprendre l’informatique. Cela fait deux ans que Matéa est à Aimé Césaire. Avant, il était dans un collège privé, à Saint-Georges, mais il trouvait le niveau trop dur. Ici, ses notes ont remonté. Ça lui a redonné du courage.",
+			"minor": true
 		},
 		{
 			"href":     "tiphaine-decormon",
@@ -95,7 +96,8 @@
 			"alt":      "",
 			"title":    "Tiphaine Decormon",
 			"subtitle": "32 ans, la conseillère d'orientation",
-			"desc": "Elle reçoit tous les jeudis. Son bureau est au bout d’un couloir au rez-de-chaussée, juste avant la sortie de secours. Les élèves s’y rendent pour des entretiens individuels d’une demie-heure. A leur initiative ou poussés par leur prof principal. La plupart sont en troisième, année clé pour l’orientation. « Je les aide à se poser des questions. Ce qu’ils aiment, ce qu’ils n’aiment pas, comment ils se sentent au collège, à la maison, leurs centres d’intérêt, leurs personnalités». Durant l’année, elle organise avec la direction de l’établissement des réunions collectives, avec les parents pour « sensibiliser » sur l’orientation. Elle est aussi présente aux conseils de classe où seront validés les voeux d’orientation formulés par les élèves. Tiphaine Decormon est conseillère d’orientation depuis six ans, et depuis deux ans à Aimé Césaire. Mais elle se partage entre plusieurs établissements. Ici, comme souvent en collège REP, elle voit moins les parents qu’ailleurs et les élèves ont besoin d’être « davantage accompagnés » parce que leurs parents connaissent moins le système éducatif. Il y a également plus d’élèves qui sont orientés en filière professionnelle."
+			"desc": "Elle reçoit tous les jeudis. Son bureau est au bout d’un couloir au rez-de-chaussée, juste avant la sortie de secours. Les élèves s’y rendent pour des entretiens individuels d’une demie-heure. A leur initiative ou poussés par leur prof principal. La plupart sont en troisième, année clé pour l’orientation. « Je les aide à se poser des questions. Ce qu’ils aiment, ce qu’ils n’aiment pas, comment ils se sentent au collège, à la maison, leurs centres d’intérêt, leurs personnalités». Durant l’année, elle organise avec la direction de l’établissement des réunions collectives, avec les parents pour « sensibiliser » sur l’orientation. Elle est aussi présente aux conseils de classe où seront validés les voeux d’orientation formulés par les élèves. Tiphaine Decormon est conseillère d’orientation depuis six ans, et depuis deux ans à Aimé Césaire. Mais elle se partage entre plusieurs établissements. Ici, comme souvent en collège REP, elle voit moins les parents qu’ailleurs et les élèves ont besoin d’être « davantage accompagnés » parce que leurs parents connaissent moins le système éducatif. Il y a également plus d’élèves qui sont orientés en filière professionnelle.",
+			"minor": true
 		},
 		{
 			"href":     "delphine",
@@ -103,15 +105,17 @@
 			"alt":      "",
 			"title":    "Delphine",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "Son filet de voix presque chuchoté le raconte à sa place : Delphine est très timide. Elle est celle que l’on n’entend pas. L’an prochain, elle devrait aller en seconde générale et, plus tard, elle aimerait faire une école de photo, ou de stylisme. Elle aime tout ce qui est manuel, “tout ce que l’on peut faire et refaire”, résume-t-elle. Ensuite, elle prend en photo ses créations. Bien que née en France, de parents arrivés lorsqu’ils étaient enfants dans les années 70, Delphine est de nationalité chinoise et parle couramment le Mandarin. Elle devrait bientôt prendre la nationalité française, à ses 16 ans. Elle a fait son stage de troisième... aux Jours."
+			"desc": "Son filet de voix presque chuchoté le raconte à sa place : Delphine est très timide. Elle est celle que l’on n’entend pas. L’an prochain, elle devrait aller en seconde générale et, plus tard, elle aimerait faire une école de photo, ou de stylisme. Elle aime tout ce qui est manuel, « tout ce que l’on peut faire et refaire », résume-t-elle. Ensuite, elle prend en photo ses créations. Bien que née en France, de parents arrivés lorsqu’ils étaient enfants dans les années 70, Delphine est de nationalité chinoise et parle couramment le Mandarin. Elle devrait bientôt prendre la nationalité française, à ses 16 ans. Elle a fait son stage de troisième... aux Jours.",
+			"minor": true
 		},
 		{
 			"href":     "Sribavalan",
 			"img":      "img/sri.jpg",
 			"alt":      "",
 			"title":    "Sribavalan",
-			"subtitle": "X ans, élève en 3e&nbsp;B",
-			"desc": ""
+			"subtitle": "15 ans, élève en 3e&nbsp;B",
+			"desc": "Il est l’ultra geek de la classe. Le week-end et pendant les vacances, « Sri », comme l’appelle tous ses copains (et parfois même certains profs) explique passer une dizaine d’heures par jour devant son ordinateur. En semaine, il commence vers 18h, mange devant l’ordi et peut y rester jusqu’à tard le soir. Il s’arrange pour faire ses devoirs en cours de soutien scolaire, ou à 6 heures du matin avant le collège. « Je joue et je m’informe des nouvelles technologies ». Ce qui, explique-t-il, le différencie des « no life » . « Les jeux videos me calment. Cela me permet d’être cool dans la vie, avec mes copains ». Il a commencé vers l’âge de 12 ans, en découvrant qu’on pouvait tricher à un jeu video, il a essayé de comprendre, s’est mis en lien avec d’autres tripatouilleurs de code et ne s’est plus arrêté. Sri est capable de hacker «pas mal de trucs». « J’ai les bases », dit-il modestement. L’an prochain, il veut aller en seconde générale. Pour plus tard être informaticien, faire de la programmation ou développer des jeux videos. ",
+			"minor": true
 		},
 		{
 			"href":     "spewel",
@@ -119,7 +123,8 @@
 			"alt":      "",
 			"title":    "Spewell",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "Le jour où nous l’interwievons, Spewell a un peigne fixé dans les cheveux. C’est exprès. Plus souvent, il a un bandeau autour de la tête, parfois assorti à son jogging. Bref, Spewell est assez looké. Mais ses profs n’en profitent pas tout le temps. Cette année, il est pas mal absent. Les après-midi particulièrement. «Je rentre manger chez moi et puis… je ne reviens pas», dit-il juste. Parfois il reste chez lui, parfois il va dehors, «à Max Dormoy» (station de métro juste à côté), parfois chez son grand-père en banlieue. L’an prochain, il voudrait faire un bac pro commerce. Tout en sachant qu’il faudra qu’il remonte sa moyenne pour y arriver. Il a du mal à se projeter dans quelques années. Alors il dit des choses un peu en l’air pour répondre quand même à nos questions. Qu’il aimerait «être chef» et vivre  «dans une villa à Rio avec des voitures de luxe», «des Porsche», précisément. Spewell est arrivé à Aimé-Césaire à la rentrée 2015. En 4ème, il était à Livry-Gargan, en Seine-Saint-Denis, chez son père. Auparavant, il avait fait trois collèges différents dans le nord de Paris, s’est fait exclure plusieures fois. Aujourd’hui, ce qu’il aime, c’est la musique, le rap particulièrement. Spewell en écoute beaucoup. Mais, surtout, il tourne des clips ambiance gangsta rap avec ses copains du 93. Clips qui lui assurent une certaine aura chez une partie des garçons de la classe. Mais dont un, particulièrement violent, a inquiété cet hiver la direction du collège."
+			"desc": "Le jour où nous l’interwievons, Spewell a un peigne fixé dans les cheveux. C’est exprès. Plus souvent, il a un bandeau autour de la tête, parfois assorti à son jogging. Bref, Spewell est assez looké. Mais ses profs n’en profitent pas tout le temps. Cette année, il est pas mal absent. Les après-midi particulièrement. «Je rentre manger chez moi et puis… je ne reviens pas», dit-il juste. Parfois il reste chez lui, parfois il va dehors, «à Max Dormoy» (station de métro juste à côté), parfois chez son grand-père en banlieue. L’an prochain, il voudrait faire un bac pro commerce. Tout en sachant qu’il faudra qu’il remonte sa moyenne pour y arriver. Il a du mal à se projeter dans quelques années. Alors il dit des choses un peu en l’air pour répondre quand même à nos questions. Qu’il aimerait «être chef» et vivre  «dans une villa à Rio avec des voitures de luxe», «des Porsche», précisément. Spewell est arrivé à Aimé-Césaire à la rentrée 2015. En 4ème, il était à Livry-Gargan, en Seine-Saint-Denis, chez son père. Auparavant, il avait fait trois collèges différents dans le nord de Paris, s’est fait exclure plusieures fois. Aujourd’hui, ce qu’il aime, c’est la musique, le rap particulièrement. Spewell en écoute beaucoup. Mais, surtout, il tourne des clips ambiance gangsta rap avec ses copains du 93. Clips qui lui assurent une certaine aura chez une partie des garçons de la classe. Mais dont un, particulièrement violent, a inquiété cet hiver la direction du collège.",
+			"minor": true
 		},
 		{
 			"href":     "louanne",
@@ -127,7 +132,8 @@
 			"alt":      "",
 			"title":    "Louanne",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "En classe, Louanne est toujours assise à côté de sa copine Lucie. Elles se dessinent parfois sur les mains et ont la papote facile. Mais comme elles sont toutes deux très bonnes élèves,, les profs ne leur disent généralement rien. Louanne adore la couture et voudrait devenir « modéliste ». Elle explique : « c’est quelqu’un qui fait des patrons, qui découpe, qui crée des prototypes ». Elle a commencé toute petite en jouant à la poupée. Depuis qu’elle est au collège, elle est passée à la vitesse supérieure. Chez elle, elle crée des vêtements pour elle, pour ses parents, ses amies. En février, elle fait son stage de 3ème dans un magasin de robes de mariées. Louanne adore les séries américaines policières."
+			"desc": "En classe, Louanne est toujours assise à côté de sa copine Lucie. Elles se dessinent parfois sur les mains et ont la papote facile. Mais comme elles sont toutes deux très bonnes élèves,, les profs ne leur disent généralement rien. Louanne adore la couture et voudrait devenir « modéliste ». Elle explique : « c’est quelqu’un qui fait des patrons, qui découpe, qui crée des prototypes ». Elle a commencé toute petite en jouant à la poupée. Depuis qu’elle est au collège, elle est passée à la vitesse supérieure. Chez elle, elle crée des vêtements pour elle, pour ses parents, ses amies. En février, elle fait son stage de 3ème dans un magasin de robes de mariées. Louanne adore les séries américaines policières.",
+			"minor": true
 		},
 		{
 			"href":     "seny",
@@ -135,7 +141,8 @@
 			"alt":      "",
 			"title":    "Seny",
 			"subtitle": "15 ans, élève en 3e&nbsp;B",
-			"desc": "Seny a 15 ans et rêve d’être footballeur. Mais comme on lui a dit que c’était une carrière incertaine, sur la fiche que je lui ai fait remplir, il a préféré écrire « coach sportif ». Sans avoir l’air d’être plus motivé que cela par cette alternative de raison.  Il ne sait d’ailleurs pas réellement comment l’on devient coach sportif. On lui propose d’autres filières professionnelles, mais il trouve que c’est tôt “pour choisir un métier”. Au premier trimestre, Seny a presque eu les encouragements."
+			"desc": "Seny a 15 ans et rêve d’être footballeur. Mais comme on lui a dit que c’était une carrière incertaine, sur la fiche que je lui ai fait remplir, il a préféré écrire « coach sportif ». Sans avoir l’air d’être plus motivé que cela par cette alternative de raison.  Il ne sait d’ailleurs pas réellement comment l’on devient coach sportif. On lui propose d’autres filières professionnelles, mais il trouve que c’est tôt « pour choisir un métier ». Au premier trimestre, Seny a presque eu les encouragements.",
+			"minor": true
 		},
 		{
 			"href":     "alexandra",
@@ -143,7 +150,8 @@
 			"alt":      "",
 			"title":    "Alexandra",
 			"subtitle": "15 ans, élève en 3e&nbsp;B",
-			"desc": "Alexandra se tient toujours très droite et parle très peu. Elle est sérieuse et timide. Elle lit des romans d’ados et des mangas parce qu’elle “aime les histoires”, et surtout le calme. Alexandra passe beaucoup de temps à la bibliothèque municipale Vaclav Havel à côté du collège. Plus tard, elle voudrait être bibliothécaire, ou peut-être institutrice. Pour cela, il faudra qu’elle aille en seconde générale l’an prochain. C’est son objectif et c’est pour cela qu’elle travaille beaucoup. Ses profs l’encouragent. Alexandra est arrivée de Roumanie il y a cinq ans. Elle a une petite soeur également scolarisée à Aimé Césaire. Comme nombre d’élèves de la 3è B, elle est parfaitement bilingue. A la maison, avec son père et sa petite soeur, elle parle roumain. Sa meilleure amie dans la classe est Dialikatou."
+			"desc": "Alexandra se tient toujours très droite et parle très peu. Elle est sérieuse et timide. Elle lit des romans d’ados et des mangas parce qu’elle « aime les histoires », et surtout le calme. Alexandra passe beaucoup de temps à la bibliothèque municipale Vaclav Havel à côté du collège. Plus tard, elle voudrait être bibliothécaire, ou peut-être institutrice. Pour cela, il faudra qu’elle aille en seconde générale l’an prochain. C’est son objectif et c’est pour cela qu’elle travaille beaucoup. Ses profs l’encouragent. Alexandra est arrivée de Roumanie il y a cinq ans. Elle a une petite soeur également scolarisée à Aimé Césaire. Comme nombre d’élèves de la 3è B, elle est parfaitement bilingue. A la maison, avec son père et sa petite soeur, elle parle roumain. Sa meilleure amie dans la classe est Dialikatou.",
+			"minor": true
 		},
 		{
 			"href":     "Dialikatou",
@@ -151,7 +159,8 @@
 			"alt":      "",
 			"title":    "Dialikatou",
 			"subtitle": "15 ans, élève en 3e&nbsp;B",
-			"desc": "Assez curieusement, Dialikatou se définit comme « colérique, maniaque et gentille ». Elle adore le collège. Elle a l’impression que le système français est « une chance », même si l’Afrique et les amis qu’elle a laissé là-bas lui manquent. Dialikatou ne s’est pas beaucoup posée dans sa jeune vie. Née en Guinée, elle a été à l’école là-bas jusqu’en CM1. Puis est venu faire son année de CM2 en France, où vit son père, retraité, avant de repartir pour le Sénégal de la 6ème à la 4ème. Elle est revenue en France il y a quelques mois, pour la rentrée de 3ème, à la demande de son père, avec sa mère et son petit frère. Plus tard, Dialikatou voudrait être expert comptable, parce qu’elle adore les maths. Elle veut aller en seconde générale, mais s’inquiète toujours de ne pas y arriver, malgré sa détermination et les encouragements constants de ses profs. Cette année, grâce à sa copine Alexandra, elle a découvert la lecture. Et, quand elle a du temps libre, elle échange par Messenger avec ses amis en Afrique."
+			"desc": "Assez curieusement, Dialikatou se définit comme « colérique, maniaque et gentille ». Elle adore le collège. Elle a l’impression que le système français est « une chance », même si l’Afrique et les amis qu’elle a laissé là-bas lui manquent. Dialikatou ne s’est pas beaucoup posée dans sa jeune vie. Née en Guinée, elle a été à l’école là-bas jusqu’en CM1. Puis est venu faire son année de CM2 en France, où vit son père, retraité, avant de repartir pour le Sénégal de la 6ème à la 4ème. Elle est revenue en France il y a quelques mois, pour la rentrée de 3ème, à la demande de son père, avec sa mère et son petit frère. Plus tard, Dialikatou voudrait être expert comptable, parce qu’elle adore les maths. Elle veut aller en seconde générale, mais s’inquiète toujours de ne pas y arriver, malgré sa détermination et les encouragements constants de ses profs. Cette année, grâce à sa copine Alexandra, elle a découvert la lecture. Et, quand elle a du temps libre, elle échange par Messenger avec ses amis en Afrique.",
+			"minor": true
 		},
 		{
 			"href":     "adrien-zask",
@@ -159,7 +168,8 @@
 			"alt":      "",
 			"title":    "Adrien Zask",
 			"subtitle": "31 ans, professeur d'anglais ",
-			"desc": "Adrien Zask enseigne pour la première année. Stagiaire, il est à mi-temps en formation à l’Espé (anciennement les IUFM), à mi-temps au collège Aimé-Césaire. Pour l’accompagner et le conseiller, il a une tutrice, une autre enseignante en anglais du collège. Adrien Zask est intéressé par les pédagogies alternatives où l’on mise sur l’autonomie des élèves. Il aimerait que ses élèves sortent de cette année « en ayant pris plaisir à être en cours et à apprendre ». Avant de s’intéresser à l’éducation, Adrien Zask a fait tout un tas de métiers, essentiellement dans le monde la culture. Il a été manager de groupes de musique, a organisé des concerts, des tournées. Il a été secrétaire particulier d’un grand architecte, assistant d’artistes contemporains, a monté des expos… Aujourd’hui, il est ravi d’être prof. Particulièrement dans ce collège en plein Paris, « ultra bien équipé » , « bien géré » avec « une bonne ambiance ». « Je suis le stagiaire à l’opposé de celui dont on parle d’habitude : celui que l’on propulse dans une banlieue difficile sans aucun accompagnement »."
+			"desc": "Adrien Zask enseigne pour la première année. Stagiaire, il est à mi-temps en formation à l’Espé (anciennement les IUFM), à mi-temps au collège Aimé-Césaire. Pour l’accompagner et le conseiller, il a une tutrice, une autre enseignante en anglais du collège. Adrien Zask est intéressé par les pédagogies alternatives où l’on mise sur l’autonomie des élèves. Il aimerait que ses élèves sortent de cette année « en ayant pris plaisir à être en cours et à apprendre ». Avant de s’intéresser à l’éducation, Adrien Zask a fait tout un tas de métiers, essentiellement dans le monde la culture. Il a été manager de groupes de musique, a organisé des concerts, des tournées. Il a été secrétaire particulier d’un grand architecte, assistant d’artistes contemporains, a monté des expos… Aujourd’hui, il est ravi d’être prof. Particulièrement dans ce collège en plein Paris, « ultra bien équipé » , « bien géré » avec « une bonne ambiance ». « Je suis le stagiaire à l’opposé de celui dont on parle d’habitude : celui que l’on propulse dans une banlieue difficile sans aucun accompagnement ».",
+			"minor": true
 		},
 		{
 			"href":     "mariama",
@@ -167,7 +177,8 @@
 			"alt":      "",
 			"title":    "mariama",
 			"subtitle": "15 ans, élève en 3e&nbsp;B",
-			"desc": ""
+			"desc": "",
+			"minor": true
 		},
 		{
 			"href":     "junior",
@@ -175,7 +186,8 @@
 			"alt":      "",
 			"title":    "junior",
 			"subtitle": "15 ans, élève en 3e&nbsp;B",
-			"desc": ""
+			"desc": "",
+			"minor": true
 		},
 		{
 			"href":     "faema",
@@ -183,7 +195,8 @@
 			"alt":      "",
 			"title":    "Faema",
 			"subtitle": "élève en 3e&nbsp;B",
-			"desc": ""
+			"desc": "",
+			"minor": true
 		},
 		{
 			"href":     "moussa",
@@ -191,7 +204,8 @@
 			"alt":      "",
 			"title":    "Moussa",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": ""
+			"desc": "",
+			"minor": true
 		},
 		{
 			"href":     "eleonore-garcia",
@@ -199,7 +213,8 @@
 			"alt":      "",
 			"title":    "Eléonore Garcia",
 			"subtitle": "39 ans, professeur de français",
-			"desc": "On entre dans sa classe en silence, on attend pour s’asseoir et on enlève sa doudoune. Eléonore Garcia a une sorte d’autorité calme, assez efficace avec les 3è B, faite d’un respect mutuel imposé. Elle est depuis quatre ans à Aimé Césaire. Auparavant, elle a enseigné dans d’autres établissements en éducation prioritaire, notamment à Colombes (Hauts-de-Seine). A Aimé-Césaire, elle apprécie les conditions de travail, l’équipement numérique, l’équipe, la mixité sociale… Même si, reconnaît-elle, « on manque de solutions pour faire progresser les élèves les plus en difficulté qui n’ont pas les bases ». Eléonore Garcia est exigente avec ses élèves. Elle n’aime pas le terme « compétences » employé à tout bout de champ dans l’Education nationale. Comme beaucoup d’enseignants ici, elle expérimente beaucoup autour de sa matière. Tous les lundis, par exemple,  elle travaille avec les 3è B sur des faits d’actualité. Un exercice qui lui permet de les faire progresser en expression orale. Au collège, Eléonore Garcia s’occupe aussi du club cinéma et… de l’atelier tricot."
+			"desc": "On entre dans sa classe en silence, on attend pour s’asseoir et on enlève sa doudoune. Eléonore Garcia a une sorte d’autorité calme, assez efficace avec les 3è B, faite d’un respect mutuel imposé. Elle est depuis quatre ans à Aimé Césaire. Auparavant, elle a enseigné dans d’autres établissements en éducation prioritaire, notamment à Colombes (Hauts-de-Seine). A Aimé-Césaire, elle apprécie les conditions de travail, l’équipement numérique, l’équipe, la mixité sociale… Même si, reconnaît-elle, « on manque de solutions pour faire progresser les élèves les plus en difficulté qui n’ont pas les bases ». Eléonore Garcia est exigente avec ses élèves. Elle n’aime pas le terme « compétences » employé à tout bout de champ dans l’Education nationale. Comme beaucoup d’enseignants ici, elle expérimente beaucoup autour de sa matière. Tous les lundis, par exemple,  elle travaille avec les 3è B sur des faits d’actualité. Un exercice qui lui permet de les faire progresser en expression orale. Au collège, Eléonore Garcia s’occupe aussi du club cinéma et… de l’atelier tricot.",
+			"minor": true
 		},
 		{
 			"href":     "enzo",
@@ -207,7 +222,8 @@
 			"alt":      "",
 			"title":    "Enzo",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": ""
+			"desc": "",
+			"minor": true
 		},
 		{
 			"href":     "rayan",
@@ -215,7 +231,8 @@
 			"alt":      "",
 			"title":    "Rayan",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": ""
+			"desc": "Rayan est délégué de classe avec Nina. Il aime jouer au foot. Et à des jeux videos, de foot ou de guerre. Il aime aussi les langues vivantes, son point fort. L’an prochain, Rayan veut aller en seconde générale. “Parce que c’est mieux qu’en pro pour choisir son métier”. Plus tard, il aimerait bien être avocat, “pour défendre des gens” explique-t-il. Mais, cette année, il a préféré faire son stage de 3ème aux Galeries Lafayette où travaille une de ses tantes, “parce que c’était plus simple”. En plus du foot, à l’extérieur du collège, Rayan prend des cours de soutien scolaire privés. Ses profs le poussent à travailler aussi. Mais lui trouve qu’il donne déjà beaucoup. Rayan est très copain avec Enzo.",
+			"minor": true
 		}						
 
 	],

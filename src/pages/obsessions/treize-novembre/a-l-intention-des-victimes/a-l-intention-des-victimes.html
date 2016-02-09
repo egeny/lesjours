@@ -1,6 +1,7 @@
 {% from "partials/_macro.html" import mini %}
 {% set obsession = episode.obsession|expand %}
-<p><span class="lettrine">D</span>ans ma boîte aux lettres, la veille, j’ai trouvé l’information : un courrier du maire du XIe et une note « à l’intention des victimes et des impliqués ». Nous sommes « des impliqués », alors. <q>Vous avez peut-être eu peur ou ressenti un danger, vous êtes peut-être blessé. Vous avez pu éprouver un choc ou un stress psychologique…</q> La cellule de soutien psychologique <q>restera ouverte à tous tant que le besoin s’en fera ressentir.</q></p>
+
+<p><span class="lettrine">D</span>ans ma boîte aux lettres, la veille, j’ai trouvé l’information : un <a href="doc/note-impliques.jpg" data-mini="1">courrier</a> du maire du XIe et une note « à l’intention des victimes et des impliqués ». Nous sommes « des impliqués », alors. <q>Vous avez peut-être eu peur ou ressenti un danger, vous êtes peut-être blessé. Vous avez pu éprouver un choc ou un stress psychologique…</q> La cellule de soutien psychologique <q>restera ouverte à tous tant que le besoin s’en fera ressentir.</q></p>
 
 <p>Cela se passe dans la salle des fêtes, à la mairie du XIe. Personne ne relève l’ironie : quand c’est la crise, on squatte même les lieux dédiés à la célébration du bonheur. Je m’installe parmi d’autres dans le vaste couloir qui sert de salle d’attente. Je suis étonnée du monde. J’apprendrai que, chaque jour, 200 personnes viennent voir cette « cellule d’appui médico-psychologique pour les riverains et témoins ». En moins de trois semaines, 1 700 habitants vont solliciter ici l’écoute d’un médecin ou d’un psychologue. Une cellule a également été installée dans le Xe arrondissement, pour les riverains du Petit Cambodge, du Carillon, et de la Bonne bière, trois lieux attaqués par les terroristes.</p>
 
@@ -15,11 +16,11 @@
 	<p><span>Pas blessés</span> mais meurtris</p>
 </aside>
 {% set person = obsession.people[5] %}
-<p>En entrant, je me demande si je suis bien à ma place. Je me sens un peu honteuse d’aller chercher une aide psychologique quand d’autres ont perdu une amie, un frère, ou échappé au massacre. Je pense à <a href="#{{ person.href }}" data-mini="1">Sophie</a>, qui était en terrasse du Bataclan café et a pu s’enfuir. En jetant machinalement un coup d’œil aux fiches d’enregistrement, je repère une adresse éloignée des lieux des attentats. J’en éprouve une forme de soulagement immédiat, comme si ma démarche devenait acceptable, d’un coup.</p>
+<p>En entrant, je me demande si je suis bien à ma place. Je me sens un peu honteuse d’aller chercher une aide psychologique quand d’autres ont perdu une amie, un frère, ou échappé au massacre. Je pense à <a href="#{{ person.href }}" data-mini="2">Sophie</a>, qui était en terrasse du Bataclan café et a pu s’enfuir. En jetant machinalement un coup d’œil aux fiches d’enregistrement, je repère une adresse éloignée des lieux des attentats. J’en éprouve une forme de soulagement immédiat, comme si ma démarche devenait acceptable, d’un coup.</p>
 
 {{
 	mini({
-		number: 1,
+		number: 2,
 		img: "/obsessions/" + obsession.href + "/" + person.img,
 		alt:      person.alt,
 		href:     "#" + person.href,
@@ -40,3 +41,11 @@
 <h3>Paravent de fortune</h3>
 
 <p>Quand vient mon tour au bout de deux heures, je m’installe avec une psychologue derrière un paravent de fortune. Ce n’est guère intime. Elle prend des notes, m’écoute très gentiment, puis m’explique que c’est bien normal d’être sous le choc : j’étais seule avec mes enfants tout près des attentats et de la prise d’otage, avec des informations parcellaires et angoissantes. Vingt à trente minutes et puis je sens, même si elle ne laisse rien paraître, qu’il faut que je laisse ma place. Il y a beaucoup d’« impliqués » à rassurer. En sortant, je décide de prendre rendez-vous avec une psychologue que je connais. Quand elle me rappelle pour me proposer un créneau horaire, elle me prévient : son cabinet a changé d’adresse ; il est maintenant juste à coté du Carillon.</p>
+
+<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="doc/note-impliques.jpg"/>
+<span class="image"><img class="responsive" src="img/logo-mairie-11.png" alt="" /></span>
+<p class="title">La note d'information à l'intention des victimes et des impliqués</p>
+<p class="subtitle">A télécharger</p>
+</a>
+</aside>

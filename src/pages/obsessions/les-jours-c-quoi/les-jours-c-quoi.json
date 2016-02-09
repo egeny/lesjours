@@ -3,7 +3,7 @@
 
 	"href": "les-jours-c-quoi",
 
-	"color": 7,
+	"color": 9,
 	"name":  "« Les Jours », c'est quoi ?",
 	"title": "« Les Jours », c'est quoi ?",
 	"subtitle": "C'est qui ? Comment ça marche ? Combien ça coûte ?",
@@ -61,7 +61,7 @@
 			"alt":      "",
 			"title":    "Nicolas Cori",
 			"subtitle": "Journaliste",
-			"desc":     "Dans un monde où les multinationales prennent le pouvoir sur les états, m’intéresse aux zones grises des grandes entreprises. Scandales, affaires…, j’aime aller chercher et raconter, des histoires qui dérangent la belle communication des sociétés. Pour Les Jours, je me suis intéressé aux stratégies d’image des grands groupes énergétiques français au moment de la COP21, c'est l’obsession Good com, bad COP. A Libération (2000-2015), j’ai suivi l’affaire Kerviel, couvert la crise des subprimes, les scandales de golden parachutes et l’évasion fiscale. J’ai aussi animé un blog, Les cordons de la bourse, sur la finance. Enfin, je suis l’auteur de plusieurs ouvrages, notamment Dexia, une banque toxique (La Découverte, 2013), une enquête sur les emprunts toxiques vendus par la banque aux villes et aux hôpitaux.",
+			"desc":     "Dans un monde où les multinationales prennent le pouvoir sur les états, je m’intéresse aux zones grises des grandes entreprises. Scandales, affaires, dessous cachées d'une opération…, j’aime aller chercher et raconter des histoires qui dérangent la belle communication des sociétés. Une de mes spécialités est d'aller dénicher l'information dans des bilans comptables ou dans les rapports internes des entreprises. Pour Les Jours, j'ai enquêté sur les stratégies d’image des grands groupes énergétiques français au moment de la COP21. C'est l’obsession Good com, bad COP. A Libération (2000-2015), j’ai suivi l’affaire Kerviel, couvert la crise des subprimes, les scandales de golden parachutes et l’évasion fiscale. J’ai aussi animé un blog, Les cordons de la bourse, sur la finance. Enfin, je suis l’auteur de plusieurs ouvrages, notamment Dexia, une banque toxique (La Découverte, 2013), une enquête sur les emprunts toxiques vendus par la banque aux villes et aux hôpitaux.",
 			"minor": true
 		},
 		{
@@ -96,7 +96,7 @@
 			"img":      "img/antoine-guiral.jpg",
 			"alt":      "",
 			"title":    "Antoine Guiral",
-			"subtitle": "Directeur général",
+			"subtitle": "Directeur général - journaliste",
 			"desc":     "Tout est politique et la question du pouvoir - petit ou immense - me fascine. Pourquoi et comment on le conquiert ? Qu’en fait-on ensuite ? Par quelles mécaniques incertaines le conserve-t-on ou le perd-on… Durant deux décennies à Libération, j'ai travaillé avec l’obsession d’exercer un contre-pouvoir. Ce qui implique de tout dire. Toujours. Avant de diriger le service politique de ce journal, j’ai couvert l’Elysée sous Chirac et Sarkozy, ai rencontré des centaines d’élus en France et dans le monde, fait plusieurs tours de planète dans des avions de la République (on payait les billets, rassurez vous). Souvent, je me suis senti sali et affecté par la politique telle qu’elle s’exerce. Voter est devenu pour moi un exercice difficile. Aux Jours, j’aimerais raconter la politique en étant au plus proche du lecteur souvent aussi passionné que désespéré et avec qui je partage une même exigence insatisfaite. Sinon, j’ai été correspondant aux Etats-Unis (New York), j’enseigne comme professeur associé à l’Université de Montpellier et j’aime beaucoup les Ramones, les chaînes de vélo, la Nouvelle-Calédonie.",
 			"minor": true
 		},
