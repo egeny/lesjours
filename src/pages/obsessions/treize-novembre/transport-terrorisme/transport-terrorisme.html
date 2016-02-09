@@ -1,7 +1,7 @@
 {% from "partials/_macro.html" import mini %}
 {% set obsession = episode.obsession|expand %}
 {% set person = obsession.people[3] %}
-<p><span class="lettrine">«L</span>a guerre contre le terrorisme sera longue et nous savons que c’est sur le terrain qu’elle se gagnera», démarre le rapporteur pour avis Sébastien Pietrasanta (PS, Hauts-de-Seine), sur un ton solennel. Et de nos jours, pourrait-on ajouter, les terroristes ne fraudent-ils pas le métro&nbsp;? Face à une commission des Lois plutôt détendue en cette matinée du 16 décembre, le président <a href="#{{ person.href }}" ata-mini="1">Jean-Jacques Urvoas</a> se frotte le visage pour finir de se réveiller et distribue calmement la parole.</p>
+<p><span class="lettrine">«L</span>a guerre contre le terrorisme sera longue et nous savons que c’est sur le terrain qu’elle se gagnera», démarre le rapporteur pour avis Sébastien Pietrasanta (PS, Hauts-de-Seine), sur un ton solennel. Et de nos jours, pourrait-on ajouter, les terroristes ne fraudent-ils pas le métro&nbsp;? Face à une commission des Lois plutôt détendue en cette matinée du 8 décembre, le président <a href="#{{ person.href }}" data-mini="1">Jean-Jacques Urvoas</a> se frotte le visage pour finir de se réveiller et distribue calmement la parole.</p>
 
 {{
 	mini({
@@ -14,7 +14,7 @@
 	})
 }}
 
-<p>Gilles Savary le reconnaît, sa proposition de loi a connu <q>un parcours un peu chaotique</q>. Bel euphémisme. Au printemps dernier, le député socialiste de la Gironde commence tranquillement à travailler sur la fraude dans les transports en commun, qui menace avant tout l’économie de la SNCF et de la RATP. Mais en août, son texte se retrouve une première fois <q>percuté par l’attentat manqué dans le Thalys</q>, et quelques semaines plus tard par les attentats du 13 novembre. La proposition de loi est entièrement réécrite avec le terrorisme en toile de fond. Le gouvernement, qui a engagé la procédure accélérée en octobre, espère la voir entrer en vigueur début mars 2016. En plein état d’urgence, la commission des Lois puis celle du Développement durable de l’Assemblée nationale l’ont examinée mardi 8 décembre.</p> 
+<p>Gilles Savary le reconnaît, sa <a href="#note-2">proposition de loi</a> a connu <q>un parcours un peu chaotique</q>. Bel euphémisme. Au printemps dernier, le député socialiste de la Gironde commence tranquillement à travailler sur la fraude dans les transports en commun, qui menace avant tout l’économie de la SNCF et de la RATP. Mais en août, son texte se retrouve une première fois <q>percuté par l’attentat manqué dans le Thalys</q>, et quelques semaines plus tard par les attentats du 13 novembre. La proposition de loi est entièrement réécrite avec le terrorisme en toile de fond. Le gouvernement, qui a engagé la procédure accélérée en octobre, espère la voir entrer en vigueur début mars 2016. En plein état d’urgence, la commission des Lois puis celle du Développement durable de l’Assemblée nationale l’ont examinée mardi 8 décembre.</p> 
 
 <blockquote>
 	<p>Je ne voulais pas que les Français pensent qu’on est en train de leur faire les poches sur un tas de cadavres.</p>
@@ -35,7 +35,7 @@
 
 <p>Vaillamment représentés, les députés des Républicains tentent sans succès d’en obtenir davantage&nbsp;: supprimer le consentement à la fouille et rendre obligatoire le port d’une pièce d’identité dans les transports en commun. Gérald Darmanin et Jacques-Alain Bénisti (Val-de-Marne), tenaces jusqu’en fin de soirée, sont gentiment éconduits par Gilles Savary et Sébastien Pietrasanta, qui se disent néanmoins toujours <q>d’accord sur le fond</q> avec leurs adversaires politiques. Mais comme l’explique le député de Gironde&nbsp;: <q>On flirte déjà au maximum, dans ce texte, avec les principes généraux du droit. Je ne suis pas sûr que tout passe la rampe.</q> En l’occurrence, la rampe du Conseil constitutionnel.</p>
 
-<p>La proposition de loi a été adoptée en première lecture à l’Assemblée nationale le 16 décembre.</p>
+<p>La proposition de loi devrait être examinée à l’Assemblée nationale le 16 décembre.</p>
 
 {% from "partials/_macro.html" import note %}
 {{
@@ -43,5 +43,14 @@ note({
 number: 1,
 title: "Le PNR",
 caption: "Depuis les attentats du 11 septembre 2001, le <i>Passenger Name Record</i> assure l'échange des données sur les passagers venus d'Europe à destination des États-Unis. Il s'est depuis largement étendu et l'Europe souhaite se doter d'un fichier central à son tour."
+})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Mise à jour",
+caption: "La proposition de loi a été adoptée en première lecture à l'Assemblée nationale, le 16 décembre, puis par le Sénat le 28 janvier."
 })
 }}
