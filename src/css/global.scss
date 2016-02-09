@@ -22,6 +22,19 @@ body {
 	max-width: $max-width;
 	margin: 0 auto;
 	font-size: .875em;
+
+	// On some pages or when using a modal, we have to fix the body
+	&.fixed {
+		overflow: hidden;
+
+		// Fix some problems problems with iOS
+		// See http://stackoverflow.com/questions/14270084/overflow-xhidden-doesnt-prevent-content-from-overflowing-in-mobile-browsers#answer-24727026
+		position: fixed;
+
+		// Fix an issue if the body has a max-width
+		right: 0;
+		left:  0;
+	}
 }
 
 @include media("md") {
