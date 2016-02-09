@@ -1,7 +1,11 @@
 /* @group .page-obsessions */
 $margin: grid-margin("sm");
 
-.page-obsessions { overflow: hidden; } // I am going to hell for that, thanks to the designer
+.page-obsessions {
+	overflow: hidden; // I am going to hell for that, thanks to the designer
+	position: fixed;
+}
+
 .page-obsessions > .container { height: calc(100% - 64px - #{$margin * 2}); }
 
 .page-obsessions,
