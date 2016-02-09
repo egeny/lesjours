@@ -232,7 +232,7 @@
 								<label>
 									<span class="price">9<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois<sup>*</sup></span></span></span>
 									<span class="name">Jouriste</span>
-									<span class="desc">* 1€/mois pendant le pilote</span>
+									<span class="desc">* 1 €/mois pendant le pilote</span>
 									<small>Sans engagement de durée</small>
 									<input class="sr" type="radio" name="plan" value="jouriste" required <?php if ($data['plan'] == 'jouriste') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
@@ -252,7 +252,7 @@
 								<label>
 									<span class="price">5<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois<sup>*</sup></span></span></span>
 									<span class="name">Jouriste désargenté</span>
-									<span class="desc">* 1€/mois pendant le pilote</span>
+									<span class="desc">* 1 €/mois pendant le pilote</span>
 									<small>Sans engagement de durée</small>
 									<small>Étudiant, chômeur, fauché</small>
 									<input class="sr" type="radio" name="plan" value="jouriste-desargente" required <?php if ($data['plan'] == 'jouriste-desargente') : ?>checked <?php endif ?>/>

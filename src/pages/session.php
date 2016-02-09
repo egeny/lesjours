@@ -45,5 +45,5 @@
 		}
 	}
 
-	header('Location: /abonnement.html#login');
+	header('Location: '.$_SERVER['HTTP_REFERER'].'#login');
 ?>
