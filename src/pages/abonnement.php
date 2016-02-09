@@ -76,7 +76,7 @@
 			update_user_meta($user_id, 'subscription', date('Y-m-d H:i:s'));
 			update_user_meta($user_id, 'paid',         '1');
 
-			// FIXME: what does the email needs to contains?
+			// FIXME: what does the mail needs to contains?
 			mail($_GET['CLIENTEMAIL'], 'Les Jours — activation de votre compte', 'Votre paiement a bien été reçu, vous êtes maintenant un jouriste. Merci.', 'From: contact@lesjours.fr');
 		}
 	}
@@ -105,7 +105,7 @@
 		// Sanitize and check received data
 		foreach ($data as $field => $value) {
 			switch ($field) {
-				case 'email':
+				case 'mail':
 					$value = sanitize_email($_POST[$field]);
 					$value = is_email($value) ? $value : null;
 				break;
@@ -136,8 +136,8 @@
 		if (!$error) {
 			// Try to create a new user
 			$user_id = wp_insert_user(array(
-				'user_email' => $data['email'],
-				'user_login' => $data['email'],
+				'user_email' => $data['mail'],
+				'user_login' => $data['mail'],
 				'user_pass'  => $data['password'],
 				'first_name' => $data['firstname'],
 				'last_name'  => $data['name']
@@ -161,7 +161,7 @@
 					// Complete the payload for the payment service
 					$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
 					$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
-					$hidden['clientemail']  = $data['email'];
+					$hidden['clientemail']  = $data['mail'];
 					$hidden['clientident']  = $user_id;
 					$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
 					$hidden['hash']         = signature($hidden);
@@ -284,14 +284,14 @@
 							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
-							<label for="email">Adresse e-mail</label>
-							<input id="email" class="input check md-white-check lg-white-check" name="email" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['email']) { echo 'value="'.$data['email'].'" '; } ?>required />
-							<?php if ($error['email'])   : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<label for="subscription-mail">Adresse e-mail</label>
+							<input id="subscription-mail" class="input check md-white-check lg-white-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['mail']) { echo 'value="'.$data['mail'].'" '; } ?>required />
+							<?php if ($error['mail'])    : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 							<?php if ($error['account']) : ?><span class="error">Ce compte existe</span><?php endif ?>
 						</div>
 						<div class="field">
-							<label for="password">Mot de passe</label>
-							<input id="password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
+							<label for="subscription-password">Mot de passe</label>
+							<input id="subscription-password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
 							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
