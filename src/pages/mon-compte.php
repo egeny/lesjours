@@ -106,7 +106,7 @@
 				<section id="mes-informations" role="tabpanel" aria-labelledby="tab-mes-informations" aria-hidden="true">
 					<h3 class="mb-4g style-meta-large">Mes informations</h3>
 					<a class="mb-2g sm-w-1c md-w-1c lg-w-1c block" href="https://gravatar.com" target="_blank">
-						<img class="responsive full-height radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
+						<img class="responsive h-100 radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
 					</a>
 					<form method="post">
 						<div class="field lg-w-½">

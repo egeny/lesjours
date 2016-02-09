@@ -179,9 +179,9 @@
 
 {% block content %}
 <div class="container">
-	<div class="row full-height">
-		<div class="col full-height">
-			<div class="subscription full-height overflow-auto">
+	<div class="row h-100">
+		<div class="col h-100">
+			<div class="subscription h-100 overflow-auto">
 			<?php if ($state == 'redirect') : ?>
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Redirection vers le paiement</h2>
 				<form id="redirect" class="md-ml-1c lg-ml-1c" action="https://secure-test.be2bill.com/front/form/process.php" method="post">
@@ -204,7 +204,7 @@
 						</div>
 					</div>
 					<div class="mh-auto md-w-4c lg-w-4c">
-						<a class="btn-primary btn-brand full-width" href="/">Voir la une</a>
+						<a class="btn-primary btn-brand w-100" href="/">Voir la une</a>
 					</div>
 				<?php else : ?>
 					<div class="md-ml-1c lg-ml-1c">

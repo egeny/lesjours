@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block content %}
-	<div class="full-height mh-1m relative">
+	<div class="h-100 mh-1m relative">
 		<div id="account">
 		<?php if (is_user_logged_in()) : ?>
 			<a class="btn-round" href="/session?close">{{ icon("logout", "Se déconnecter") }}</a>
 			<a class="btn-round" href="/mon-compte.html">
-				<img class="responsive full-height" src="<?php echo avatar_url(); ?>" alt="Accéder à mon compte" />
+				<img class="responsive h-100" src="<?php echo avatar_url(); ?>" alt="Accéder à mon compte" />
 			</a>
 		<?php else : ?>
 			<a class="btn-square sm-hidden" href="/abonnement.html">S’abonner</a>
