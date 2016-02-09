@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "content-de-vous-avoir-revu",
+
+	"number": 4,
+	"date": "2015-11-18T10:00+01:00",
+
+	"title": "« Content de vous avoir revu »",
+	"intro": "<strong>Journal de bord du XIe.</strong> Lundi matin, l’école reprend. L’après-midi, François Hollande déclare que la France est en guerre.",
+	"lead":  "Ce matin, les enfants retournent à l’école. Nous décidons d’y aller tous ensemble. La route habituelle est barrée. Nous descendons par la rue Oberkampf. Je tiens mes enfants fermement par la main, alors que d’ordinaire mon fils aîné, qui a 10 ans, nous lâche au moindre prétexte pour faire le chemin tout seul. J’espère qu’ils ne remarqueront pas les traces de la fusillade autour d’eux.",
+
+	"tags": ["attentats", "Bataclan", "retrouvailles"],
+
+	"rel": {
+		"authors": [
+			{ "text": "author:charlotte-rotman" },
+			{ "photo": ["Michel Slomka/Hans Lucas", "author:charlotte-rotman"]}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/l-empreinte-de-la-peur",
+		"next":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
+		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+	}
+}
