@@ -113,5 +113,20 @@
 		{ "href": "#", "img": "img/un-perimetre-de-desolation-header.jpg" },
 		{ "href": "#", "img": "img/l-empreinte-de-la-peur-header.jpg" },
 		{ "href": "#", "img": "img/content-de-vous-avoir-revu-header.jpg" }
+	],
+
+	"documents": [
+		{
+			"id": "telechargements",
+			"title": "Téléchargements",
+			"icon": "download",
+			"items": [
+				{
+					"href": "",
+					"title": "",
+					"desc": ""
+				}
+			]
+		}
 	]
 }
