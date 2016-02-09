@@ -1,10 +1,24 @@
-<p><span class="lettrine">Q</span>uand Christophe de Margerie, l’ex-PDG moustachu de Total, est mort dans le crash de son avion, en octobre 2014, le conseil d’administration du groupe pétrolier avait le choix entre deux successeurs: Philippe Boisseau, le responsable du marketing, et Patrick Pouyanné, patron de la branche chimie-raffinage. Les deux hommes sont polytechniciens et ingénieurs des mines, sont passés par des cabinets ministériels de droite dans les années 1990, puis ont rejoint le groupe pétrolier avant de progresser parallèlement dans sa hiérarchie. Le premier ressemble à un patron lambda, costume gris et air sérieux ; le deuxième a un côté nounours, grand et enveloppé, et a toujours le sourire aux lèvres. C’est lui qui a été choisi.</p>
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+{% set person = obsession.people[1] %}
+<p><span class="lettrine">Q</span>uand Christophe de Margerie, l’ex-PDG moustachu de Total, est mort dans le crash de son avion, en octobre 2014, le conseil d’administration du groupe pétrolier avait le choix entre deux successeurs: Philippe Boisseau, le responsable du marketing, et <a href="#{{ person.href }}" data-mini="1">Patrick Pouyanné</a>, patron de la branche chimie-raffinage. Les deux hommes sont polytechniciens et ingénieurs des mines, sont passés par des cabinets ministériels de droite dans les années 1990, puis ont rejoint le groupe pétrolier avant de progresser parallèlement dans sa hiérarchie. Le premier ressemble à un patron lambda, costume gris et air sérieux ; le deuxième a un côté nounours, grand et enveloppé, et a toujours le sourire aux lèvres. C’est lui qui a été choisi.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <p>Comme si Total avait pris la décision, après les désastreuses années de communication de l’ère Desmarest, de ne recruter que des patrons à l’allure bonhomme. Car Thierry Desmarest, pour les plus jeunes, c’est le PDG qui a construit le groupe actuel (grâce à son OPA réussie sur Elf, en 1999), mais qui a été incapable de montrer la moindre compassion, en décembre de la même année, lors du naufrage de l’Erika, un navire affrété par Total qui a causé l’une des plus grandes marées noires en France. En se réfugiant derrière un argument juridique – le groupe n’est pas responsable, puisque le bateau ne lui appartient pas –, Thierry Desmarest avait fait, et pour longtemps, de Total l’entreprise la plus impopulaire auprès des Français.</p>
 
 <figure>
 	<img src="img/pouyanne-tribune.jpg" alt="" />
-	<figcaption><span>Patrick Pouyanné, PDG de Total, lors de la  Conférence de presse de Oil and Gas Climate Initiative à Paris le 16 octobre 2015 <span class="credits">Photo Pierre Morel pour « Les Jours ».</span></span></figcaption>
+	<figcaption><span>Patrick Pouyanné, PDG de Total, lors de la  Conférence de presse de Oil and Gas Climate Initiative à Paris le 16 octobre 2015 <span class="credits">Photo Pierre Morel pour <i>Les Jours</i>.</span></span></figcaption>
 </figure>
 
 <p>Après <q>Big Moustache</q>, le surnom de Christophe de Margerie, voila donc <q>Papou</q> (c’est ainsi qu’on appelle Pouyanné en interne) pour vendre le nouveau visage de Total ami du climat. Et l’intéressé joue très bien le jeu. Il dit <q>je</q> plutôt que <q>Total</q> pour personnaliser l’entreprise, se présente comme le <q>super bad guy</q> des énergies fossiles pour mettre les rieurs de son côté, reconnaît qu’il <q>fait partie du problème</q> du réchauffement climatique, mais avance tout de suite qu’il est <q>convaincu de pouvoir apporter des solutions</q>. Quand <em>Les Jours</em>, en marge d’une conférence, l’interrogent sur l’origine de cet <q>engagement</q> climatique, Pouyanné se met en avant, citant son expérience comme conseiller environnement à Matignon entre 1993 et 1995.</p>
@@ -25,7 +39,7 @@
 		<source src="video/photoshoot.webm" type="video/webm" />
 		<source src="video/photoshoot.mp4"  type="video/mp4" />
 	</video>
-	<figcaption><span>Isabelle Desmet, directrice des relations médias de Total, encadre la séance photo de Patrick Pouyanné après la conférence de presse de l'Oil and Gas Climate Initiative à Paris, le 16 octobre 2015 <span class="credits">Vidéo Pierre Morel pour « Les Jours ».</span></span></figcaption>
+	<figcaption><span>Isabelle Desmet, directrice des relations médias de Total, encadre la séance photo de Patrick Pouyanné après la conférence de presse de l'Oil and Gas Climate Initiative à Paris, le 16 octobre 2015 <span class="credits">Vidéo Pierre Morel pour <i>Les Jours</i>.</span></span></figcaption>
 </figure>
 
 <p>En tant que manager, Patrick Pouyanné est guidé par un seul objectif : maintenir le profit de son entreprise et satisfaire ses actionnaires. Depuis un an qu’il dirige Total, il a ainsi passé son temps à réduire les coûts alors que les prix du pétrole baissaient : il a stoppé de nombreux projets jugés trop chers dans la branche exploration-production, puis décidé de supprimer 180 postes dans la branche raffinage-France. Ce souci d’économie, associé au maintien d’un dividende élevé, fait qu’il est très bien vu par la communauté financière. Et c’est dans ce cadre-là qu’il faut comprendre ses déclarations pro-climat. L’intérêt général, d’accord, mais à condition que cela serve l’intérêt financier de Total.</p>
