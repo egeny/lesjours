@@ -3,7 +3,7 @@
 	require(WP_PATH.'/wp-load.php');
 
 	// Locale to use (mainly for dates)
-	setlocale(LC_ALL, 'fr_FR');
+	setlocale(LC_ALL, LOCALE);
 
 	// For security reasons, remove the X-Powered-By header
 	header_remove('X-Powered-By');
