@@ -10,12 +10,7 @@
 	"desc": "<p>Après le choc des régionales, plus rien ne devait être comme avant. A gauche comme à droite. Mais dans un climat de défiance généralisée, qui l’emportera entre le vieux monde politique et ceux qui voudraient le changer ?</p><p>« Les Jours » racontent le quotidien de trois députés nouvelle génération pris entre désirs de renouvellement et habituels compromis.</p>",
 
 	"episodes": [
-		"episode:les-jours-c-quoi/les-jours-le-projet",
-		"episode:les-jours-c-quoi/les-jours-le-pilote",
-		"episode:les-jours-c-quoi/les-jours-tuto-obsession",
-		"episode:les-jours-c-quoi/les-jours-navigation",
-		"episode:les-jours-c-quoi/les-jours-combien",
-		"episode:les-jours-c-quoi/les-jours-l-equipe"
+		"episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire"
 	],
 
 	"people": [
@@ -24,8 +19,8 @@
 			"img":      "img/barbara-romagnan.jpg",
 			"alt":      "",
 			"title":    "Barbara Romagnan",
-			"subtitle": "Journaliste",
-			"desc":     "Pour Les Jours ma première obsession sera la Turquie. Raconter la société turque aujourd'hui, au-delà de ses actualités, dramatiques et très denses. Les débats qui la traversent, les combats, les dépressions collectives. Un enjeu au-delà du pays car la Turquie reste cette agrafe fragile entre Europe et orient. Se jouent là-bas des questions qui nous concernent de près. La proximité des frontières chaotiques du Moyen-Orient. Les millions de migrants, que les dilplomaties européennes tentent de contenir en Turquie, fermant pour cela les yeux sur la dictature qui s'installe, et la guerre imposée au Kurdistan. La montée de l'autorité et des conservatismes. Les menaces terroristes. Le face-à-face entre Islam et laïcité. Les dérives ubuesques d'un président qui rassurait l'Europe… Je suis journaliste depuis 28 ans. Mon travail est attiré depuis toujours par les questions d'exil et de racines, d'identités, assignées ou choisies. Cela m'a conduit longtemps dans les cités françaises, que je couvrais pour Libération, essayant de comprendre les mécanismes de violences urbaines, la montée de l'islam radical, les discriminations, la relégation, les politiques qui peuvent reconstruire des villes. J'ai également écrit et réalisé deux premiers films documentaires. Un soir d'été, un étranger (Ateliers Varan, nombreux festivals), pour comprendre les mécanismes de résistance dans un village cossu qui avait caché un clandestin dans ses greniers. Et Vaulx-en-Velin la cité retrouvée (France 3, LCP), qui raconte l'histoire de la politique de la ville au travers d'un quartier emblématique emporté par les premières émeutes urbaines en 1990.",
+			"subtitle": "41 ans, députée PS anti-état d'urgence",
+			"desc":     "Barbara Romagnan est une personnalité atypique dans le milieu politique. Femme, élue députée à 38 ans en 2012, elle est docteure en sciences politiques et a été enseignante. Cela imprègne sa manière de penser et de s’exprimer : elle formule régulièrement ses doutes et les assume, ce qui est plutôt rare dans l’arène politique. Entre loyauté au PS dont elle est une militante depuis vingt ans et libre arbitre, elle essaie de tracer sa voie. Elle se range parmi les rénovateurs, on l’étiquette « frondeuse ». Souvent minoritaire, elle dit ne pas chercher à contester l’autorité. Elle a voté non au maintien de l’état d’urgence (seuls six députés ont fait ce choix) et ne décolère pas de la proposition de la déchéance de nationalité qu’elle juge honteuse. Barbara Romagnan fait également partie des parlementaires que Les Jours suivent dans l’obsession Politique année zéro.",
 			"minor": true
 		},
 		{
@@ -33,8 +28,8 @@
 			"img":      "img/olivier-faure.jpg",
 			"alt":      "",
 			"title":    "Olivier Faure",
-			"subtitle": "Obsession snake",
-			"desc":     "Directeur artistique",
+			"subtitle": "X ans, député PS de Seine-et-Marne",
+			"desc":     "Olivier Faure",
 			"minor": true
 		},
 		{
@@ -42,8 +37,8 @@
 			"img":      "img/franck-riester.jpg",
 			"alt":      "",
 			"title":    "Franck Riester",
-			"desc":     "Obsession",
-			"subtitle": "Directeur technique",
+			"desc":     "X ans, députés LR ",
+			"subtitle": "Franck Riester",
 			"minor": true
 		}
 	],
