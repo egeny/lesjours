@@ -20,6 +20,7 @@
 
 		"first": "episode:les-annees-college/retour-au-college",
 		"prev":  "episode:les-annees-college/etre-charlie",
-		"last":  "episode:les-annees-college/ingenieur-pourquoi-pas"
+		"next": "episode:les-annees-college/making-of-college-lambert",
+		"last": "episode:les-annees-college/making-of-college-lambert"
 	}
 }
