@@ -45,6 +45,7 @@
 	</script>
 
 	<link rel="stylesheet" href="/css/global.min.css" />
+	{% block css %}{% endblock %}
 </head>
 <body{% if page.class %} class="{{ page.class }}"{% endif %}>
 	{%- from "partials/_macro.html" import icon -%}

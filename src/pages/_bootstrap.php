@@ -46,4 +46,7 @@
 			'duration' => '1 month'
 		)
 	);
+
+	// In "pilot" mode monthly subscription cost 1€
+	$PLANS['jouriste']['price'] = $PLANS['jouriste-desargente']['price'] = 1;
 ?>

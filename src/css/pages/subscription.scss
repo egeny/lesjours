@@ -231,7 +231,6 @@
 	$gutter: grid-gutter("md");
 	$margin: grid-margin("md");
 
-	.page-subscription              { overflow: hidden; }
 	.page-subscription > .container { height: calc(100% - 85px - #{$margin}); }
 
 	.subscription {

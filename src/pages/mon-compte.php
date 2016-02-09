@@ -106,7 +106,7 @@
 				<section id="mes-informations" role="tabpanel" aria-labelledby="tab-mes-informations" aria-hidden="true">
 					<h3 class="mb-4g style-meta-large">Mes informations</h3>
 					<a class="mb-2g sm-w-1c md-w-1c lg-w-1c block" href="https://gravatar.com" target="_blank">
-						<img class="responsive full-height radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
+						<img class="responsive h-100 radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
 					</a>
 					<form method="post">
 						<div class="field lg-w-½">
@@ -152,7 +152,7 @@
 						<p>Vous avez souscrit un abonnement le <?php $day = strftime('%e', $subscription); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $subscription) ?>. <a class="text-upper fw-bold color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a></p>
 						<h4 class="h5">Votre formule</h4>
 						<p><?php echo $plan['name'] ?> — <?php echo $plan['price'] ?> € par <?php echo $plan['duration'] == '1 year' ? 'an' : 'mois' ?> (expire le <?php $day = strftime('%e', $expire); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $expire) ?>)</p>
-						<a href="#unsubscribe" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">Se désabonner</a>
+						<a href="mailto:abonnes@lesjours.fr" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">Se désabonner</a>
 					<?php else : ?>
 						<p>Vous n’avez aucun abonnement en cours.</p>
 						<a href="/abonnement.html" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">S’abonner</a>

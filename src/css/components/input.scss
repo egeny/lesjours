@@ -82,6 +82,11 @@
 .select {
 	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 7'><path fill='#{hex-to-rgb($color-brand-light)}' d='M0 0h13L6.5 7 0 0z'/></svg>") calc(100% - 8px) 50% / 13px 7px no-repeat;
 
+	option {
+		background: $color-white;
+		color:      $color-main;
+	}
+
 	&:active,
 	&:focus { background-image: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13 7'><path fill='#{hex-to-rgb($color-brand)}' d='M0 0h13L6.5 7 0 0z'/></svg>"); }
 
