@@ -1,3 +1,5 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
 <p><span class="lettrine">D</span>ans ma boîte aux lettres, la veille, j’ai trouvé l’information : un courrier du maire du XIe et une note « à l’intention des victimes et des impliqués ». Nous sommes « des impliqués », alors. <q>Vous avez peut-être eu peur ou ressenti un danger, vous êtes peut-être blessé. Vous avez pu éprouver un choc ou un stress psychologique…</q> La cellule de soutien psychologique <q>restera ouverte à tous tant que le besoin s’en fera ressentir.</q></p>
 
 <p>Cela se passe dans la salle des fêtes, à la mairie du XIe. Personne ne relève l’ironie : quand c’est la crise, on squatte même les lieux dédiés à la célébration du bonheur. Je m’installe parmi d’autres dans le vaste couloir qui sert de salle d’attente. Je suis étonnée du monde. J’apprendrai que, chaque jour, 200 personnes viennent voir cette « cellule d’appui médico-psychologique pour les riverains et témoins ». En moins de trois semaines, 1 700 habitants vont solliciter ici l’écoute d’un médecin ou d’un psychologue. Une cellule a également été installée dans le Xe arrondissement, pour les riverains du Petit Cambodge, du Carillon, et de la Bonne bière, trois lieux attaqués par les terroristes.</p>
@@ -12,16 +14,19 @@
 <aside>
 	<p><span>Pas blessés</span> mais meurtris</p>
 </aside>
+{% set person = obsession.people[5] %}
+<p>En entrant, je me demande si je suis bien à ma place. Je me sens un peu honteuse d’aller chercher une aide psychologique quand d’autres ont perdu une amie, un frère, ou échappé au massacre. Je pense à <a href="#{{ person.href }}" data-mini="1">Sophie</a>, qui était en terrasse du Bataclan café et a pu s’enfuir. En jetant machinalement un coup d’œil aux fiches d’enregistrement, je repère une adresse éloignée des lieux des attentats. J’en éprouve une forme de soulagement immédiat, comme si ma démarche devenait acceptable, d’un coup.</p>
 
-<p>En entrant, je me demande si je suis bien à ma place. Je me sens un peu honteuse d’aller chercher une aide psychologique quand d’autres ont perdu une amie, un frère, ou échappé au massacre. Je pense à <a href="#" data-mini="1">Sophie</a>, qui était en terrasse du Bataclan café et a pu s’enfuir. En jetant machinalement un coup d’œil aux fiches d’enregistrement, je repère une adresse éloignée des lieux des attentats. J’en éprouve une forme de soulagement immédiat, comme si ma démarche devenait acceptable, d’un coup.</p>
-
- <aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/sophie-bataclan.jpg" alt="" /></span>
-<p class="title">Sophie</p>
-<p class="subtitle">39 ans, à la terrasse du Bataclan le 13 novembre</p>
-</a>
-</aside>
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <figure>
 	<img src="img/impact-balles-colonne.jpg" alt="" />

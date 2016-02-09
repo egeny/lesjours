@@ -1,17 +1,23 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+{% set person = obsession.people[1] %}
 <p><span class="lettrine">D</span>éjà un mois que <a href="#note-1">Vincent</a>est assigné à résidence. S’il avait été privé de liberté par une décision de justice, l’accusation aurait dû prouver sa culpabilité. Pas là. L’état d’urgence a sa logique propre, extra-judiciaire. Puisque le ministère de l’Intérieur l’a déclaré potentiellement dangereux sur <a href="/obsessions/treize-novembre/pratique-fondamentaliste" target="_blank">la foi d’une note blanche des services de renseignement</a>, il sera traité comme un coupable.</p>
 
-<p>Certes, des voies de recours existent. Lorsque <a href="#" data-mini="1">Vincent</a> tente – sans succès – de faire lever son assignation à résidence par le tribunal administratif, le requérant, c’est lui. Pourtant, il parle de <q>[son] procès</q>. Une petite phrase, l’air de rien : <q>Ma femme me disait de raser ma barbe avant d’aller à mon procès.</q> Elle voulait éviter qu’il ait l’air trop musulman. Vincent n’a pas suivi son conseil. De toute façon, il n’imaginait pas <q>qu’un juge irait à l’encontre d’une décision du ministère</q>. Pour lui, les choses sont claires : c’est l’exécutif qui commande. Vu le contexte, difficile de lui donner tort sur ce point. Au moment de la publication de cet article, sur les 103 référés déposés depuis le début de l’état d’urgence, les tribunaux administratifs n’en ont suspendu que cinq, selon <a href="http://www2.assemblee-nationale.fr/14/commissions-permanentes/commission-des-lois/controle-parlementaire-de-l-etat-d-urgence/controle-parlementaire-de-l-etat-d-urgence/%28block%29/27350/"target="_blank" data-mini="2">le décompte établi</a> par la commission parlementaire de contrôle de l'état d'urgence, sur la base de chiffres du ministère de l'Intérieur.</a></p>
+<p>Certes, des voies de recours existent. Lorsque <a href="#{{ person.href }}" data-mini="1">Vincent</a> tente – sans succès – de faire lever son assignation à résidence par le tribunal administratif, le requérant, c’est lui. Pourtant, il parle de <q>[son] procès</q>. Une petite phrase, l’air de rien : <q>Ma femme me disait de raser ma barbe avant d’aller à mon procès.</q> Elle voulait éviter qu’il ait l’air trop musulman. Vincent n’a pas suivi son conseil. De toute façon, il n’imaginait pas <q>qu’un juge irait à l’encontre d’une décision du ministère</q>. Pour lui, les choses sont claires : c’est l’exécutif qui commande. Vu le contexte, difficile de lui donner tort sur ce point. Au moment de la publication de cet article, sur les 103 référés déposés depuis le début de l’état d’urgence, les tribunaux administratifs n’en ont suspendu que cinq, selon <a href="http://www2.assemblee-nationale.fr/14/commissions-permanentes/commission-des-lois/controle-parlementaire-de-l-etat-d-urgence/controle-parlementaire-de-l-etat-d-urgence/%28block%29/27350/" data-mini="2">le décompte établi</a> par la commission parlementaire de contrôle de l'état d'urgence, sur la base de chiffres du ministère de l'Intérieur.</a></p>
 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/assigne-3.jpg" alt="" /></span>
-<p class="title">Vincent</p>
-<p class="subtitle">32 ans, assigné à résidence</p>
-</a>
-</aside>
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="http://www2.assemblee-nationale.fr/14/commissions-permanentes/commission-des-lois/controle-parlementaire-de-l-etat-d-urgence/controle-parlementaire-de-l-etat-d-urgence/%28block%29/27350/"target="_blank">
+<a class="link-unstyled" href="http://www2.assemblee-nationale.fr/14/commissions-permanentes/commission-des-lois/controle-parlementaire-de-l-etat-d-urgence/controle-parlementaire-de-l-etat-d-urgence/%28block%29/27350/">
 <span class="image"><img class="responsive" src="img/logo-assemblee.png" alt="" /></span>
 <p class="title">Le contrôle parlementaire de l'état d'urgence</p>
 <p class="subtitle">A consulter sur le site de l'Assemblée nationale</p>
@@ -20,7 +26,7 @@
 
 <h3>Éléments contradictoires</h3>
 
-<p>Comment rendre compte de ce climat ? <i>Les Jours</i> n’ont pas organisé de casting pour trouver le « bon client » parmi les 381 assignés à résidence de l’état d’urgence. On n’a pas cherché le mec bien sous tous rapports, l’erreur d’appréciation manifeste, le sympathique écolo privé de COP 21, le musulman-oui-mais-modéré, jamais condamné, bon père de famille et lecteur de <i>Charlie Hebdo</i>. On a lancé des perches un peu partout, auprès d’avocats, d’associatifs, d’un blogueur musulman très populaire, et finalement on a trouvé Vincent. Qui n’est <a href="/obsessions/treize-novembre/foi-sous-les-bombes" target="_blank"> rien de tout cela.</a></p>
+<p>Comment rendre compte de ce climat ? <i>Les Jours</i> n’ont pas organisé de casting pour trouver le « bon client » parmi les 381 assignés à résidence de l’état d’urgence. On n’a pas cherché le mec bien sous tous rapports, l’erreur d’appréciation manifeste, le sympathique écolo privé de COP 21, le musulman-oui-mais-modéré, jamais condamné, bon père de famille et lecteur de <i>Charlie Hebdo</i>. On a lancé des perches un peu partout, auprès d’avocats, d’associatifs, d’un blogueur musulman très populaire, et finalement on a trouvé Vincent. Qui n’est rien de tout cela <a href="/obsessions/treize-novembre/foi-sous-les-bombes">(lire son portrait).</a></p>
 
 <p>Avec nous, Vincent est sympa. C’est bizarre de dire ça, non ? Le mec fait flipper la DGSI mais il sourit, discute de tout sans se braquer et est ravi de nous montrer son book de graffeur. Est-ce que c’est un « vrai » gentil ? Est-ce un dissimulateur ? Un homme capable de tirer sur des gens du même âge que lui attablés à une terrasse ? Impossible de savoir. Les éléments dont nous disposons sont contradictoires. D’un côté sa version et celle de son avocate. De l’autre, les notes blanches alarmistes mais non-étayées de la DGSI.</q> </p>
 
@@ -33,7 +39,7 @@
 	<footer>Vincent, assigné à résidence</footer>
 </blockquote>
 
-<p>À notre deuxième rencontre, à notre demande, Vincent retrace rapidement <a href="/obsessions/treize-novembre/vendredi-ou-la-nuit-sauvage" target="_blank"> sa soirée du 13 novembre</a>. Mais lors de cet entretien, il a surtout envie de dénoncer le traitement médiatique des attentats. <q>Il y a des morts plus intéressants pour la presse que d’autres</q>, commence-t-il, en ramenant la conversation sur la Birmanie, la Syrie, la Palestine, pour lesquelles il faudrait aussi <q>faire des minutes de silence</q>. <q>Sans vouloir faire du quantitatif dans l’horreur</q>, ces morts-là, <q>on n’en parle pas</q>, dit-il. <q>Ce qui m’a le plus dégoûté, c’est qu’aujourd’hui les gens ne sont solidaires qu’à l’intérieur de leurs frontières. Quand j’étais petit, il y avait un gros élan de solidarité pour la Somalie. On en parlait à l’école, on avait envoyé du riz.</q></p>
+<p>À notre deuxième rencontre, à notre demande, Vincent retrace rapidement <a href="/obsessions/treize-novembre/vendredi-ou-la-nuit-sauvage"> sa soirée du 13 novembre</a>. Mais lors de cet entretien, il a surtout envie de dénoncer le traitement médiatique des attentats. <q>Il y a des morts plus intéressants pour la presse que d’autres</q>, commence-t-il, en ramenant la conversation sur la Birmanie, la Syrie, la Palestine, pour lesquelles il faudrait aussi <q>faire des minutes de silence</q>. <q>Sans vouloir faire du quantitatif dans l’horreur</q>, ces morts-là, <q>on n’en parle pas</q>, dit-il. <q>Ce qui m’a le plus dégoûté, c’est qu’aujourd’hui les gens ne sont solidaires qu’à l’intérieur de leurs frontières. Quand j’étais petit, il y avait un gros élan de solidarité pour la Somalie. On en parlait à l’école, on avait envoyé du riz.</q></p>
 
 <p>Vincent part facilement dans des théories complotistes. Il souligne ce qu'il appelle des <q>incohérences</q> dans le récit des attentats de novembre – les papiers d’identité retrouvés près d’un corps, des assaillants sans barbes, la difficulté de revenir à Paris depuis la Syrie <q>sans l’aide des services secrets</q>, des kamikazes qui explosent sans tuer personne au Stade de France. Pour lui, il faut évaluer si la <q>version officielle</q> est <q>plausible</Q>, trouver <q>à qui ça profite</q>. Nous sommes alors juste avant les fêtes de Noël et les élections.</p>
 

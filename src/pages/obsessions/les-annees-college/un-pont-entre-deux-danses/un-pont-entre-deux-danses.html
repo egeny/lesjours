@@ -1,31 +1,39 @@
-<p><span class="lettrine">C</span>e 12 novembre, dernière douce soirée d’automne, dernière soirée avant que Paris ne bascule dans autre chose, les 3e B vont voir un spectacle au Cent-Quatre, lieu culturel parisien plutôt branché situé à quelques centaines de mètres de leur collège. Durant toute l’année de troisième, les élèves étudient des œuvres pour l’épreuve d’histoire des arts du brevet. Le programme est libre et les enseignants en profitent pour organiser des sorties autour de ces œuvres, des rencontres avec les artistes. Récemment, les troisièmes sont ainsi allés à Versailles voir les sculptures géantes d’Anish Kapoor. Là, <a href="#" data-mini="1">Antoine Labaere</a>, leur professeur principal, a choisi le spectacle d’un chorégraphe qu’il aime particulièrement, Aurélien Bory. Un spectacle d’abord pas facile, abstrait et lent, surtout pour des élèves de 15 ans. <q>On verra bien</q>, sourit-il.</p>
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+{% set person = obsession.people[0] %}
+<p><span class="lettrine">C</span>e 12 novembre, dernière douce soirée d’automne, dernière soirée avant que Paris ne bascule dans autre chose, les 3e B vont voir un spectacle au Cent-Quatre, lieu culturel parisien plutôt branché situé à quelques centaines de mètres de leur collège. Durant toute l’année de troisième, les élèves étudient des œuvres pour l’épreuve d’histoire des arts du brevet. Le programme est libre et les enseignants en profitent pour organiser des sorties autour de ces œuvres, des rencontres avec les artistes. Récemment, les troisièmes sont ainsi allés à Versailles voir les sculptures géantes d’Anish Kapoor. Là, <a href="#{{ person.href }}" data-mini="1">Antoine Labaere</a>, leur professeur principal, a choisi le spectacle d’un chorégraphe qu’il aime particulièrement, Aurélien Bory. Un spectacle pas facile, abstrait et lent, surtout pour des élèves de 15 ans. <q>On verra bien</q>, sourit-il.</p>
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-	<a class="link-unstyled" href="#" />
-		<span class="image"><img class="responsive" src="img/antoinelabaere.jpg" alt="" /></span>
-		<p class="title">Antoine Labaere</p>
-		<p class="subtitle">32 ans, professeur principal de la 3e&nbsp;B</p>
-	</a>
-</aside>
+{% set person = obsession.people[2] %}
+<p>Pour se rendre au Cent-Quatre, il suffit d’enjamber le pont de la rue Riquet, qui permet de traverser les voies ferroviaires partant de la gare de l’Est. Mais <a href="#{{ person.href }}" data-mini="2">Jean-Louis Terrana</a>, le principal, est tendu. Depuis plusieurs semaines, ces voies ferrées, ligne de démarcation entre les XVIIIe et XIXe arrondissements de Paris, sont le théâtre de bagarres de plus en plus violentes entre bandes d’adolescents. Jean-Louis Terrana a rappelé deux jours plus tôt le bilan aux parents de la 3e B, pour qu’ils comprennent la nécessité de ne pas laisser leurs enfants rentrer seuls après le spectacle et plus largement pour qu’ils ne les laissent pas traîner dans le quartier : un jeune dans le coma, un autre défiguré par des coups, un dernier au poumon perforé.</p>
 
-<p>Pour se rendre au Cent-Quatre, il suffit d’enjamber le pont de la rue Riquet, qui permet de traverser les voies ferroviaires partant de la gare de l’Est. Mais <a href="#" data-mini="2">Jean-Louis Terrana</a>, le principal, est tendu. Depuis plusieurs semaines, ces voies ferrées, ligne de démarcation entre les XVIIIe et XIXe arrondissements de Paris, sont le théâtre de bagarres de plus en plus violentes entre bandes d’adolescents. Jean-Louis Terrana a rappelé deux jours plus tôt le bilan aux parents de la 3e B, pour qu’ils comprennent la nécessité de ne pas laisser leurs enfants rentrer seuls après le spectacle et plus largement pour qu’ils ne les laissent pas traîner dans le quartier : un jeune dans le coma, un autre défiguré par des coups, un dernier au poumon perforé.</p>
-
-<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
-	<a class="link-unstyled" href="#" />
-		<span class="image"><img class="responsive" src="img/jlterrana.jpg" alt="" /></span>
-		<p class="title">Jean-Louis Terrana</p>
-		<p class="subtitle">50 ans, le principal d'Aimé-Césaire</p>
-	</a>
-</aside>
-
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 <figure>
 	<img src="img/bory-face.jpg" alt="" />
-	<figcaption><span>Le lendemain de la sortie au Cent-Quatre, les élèves vont rencontrer le metteur en scène Aurélien Bory <span class="credits">Photo Simon Lambert pour <i>Les Jours</i></span>.</span></figcaption>
+	<figcaption><span>Le lendemain du spectacle, les élèves vont rencontrer le metteur en scène Aurélien Bory <span class="credits">Photo Simon Lambert pour <i>Les Jours</i></span>.</span></figcaption>
 </figure>
 
 <p>L’un des élèves de la 3e B a été personnellement menacé. Quelques jours avant la sortie au Cent-Quatre, ses parents sont venus voir Antoine Labaere pour demander à changer leur fils de collège. Mais l'élève concerné est là ce soir. Le principal le garde à l’œil.</p>
 
-<p>Dans cette ambiance, ce qui devait être une tranquille escapade culturelle de l’autre côté du pont prend l’allure d’un convoi de diligence. Une voiture de police escorte la classe le long du trajet et des agents de médiation de la ville encadrent les élèves. Le commissariat du XVIIIe a prévenu que, sans ce dispositif, il n’y aurait plus de sortie. Le principal est préoccupé. Il ne comprend pas <q>ce que se veulent ces gamins</q>, pourquoi cette violence, pourquoi des élèves si jeunes. Depuis des semaines, il ressasse ces interrogations sans trouver de réponses.</p>
+<p>Dans cette ambiance, ce qui devait être une tranquille escapade culturelle de l’autre côté du pont prend l’allure d’un convoi de diligence. Une voiture de police escorte la classe le long du trajet et des agents de médiation de la ville encadrent les élèves. Le commissariat a prévenu que c'était ça ou pas de sortie du tout. Le principal est préoccupé. Il ne comprend pas <q>ce que se veulent ces gamins</q>, pourquoi cette violence, pourquoi des élèves si jeunes. Depuis des semaines, il ressasse ces interrogations sans trouver de réponses.</p>
 
 <blockquote>
 	<p>Contemplatif, ça veut dire qu’il va y avoir des longueurs. Donc je ne veux pas vous entendre. Compris ?</p>
@@ -41,12 +49,41 @@
 	<figcaption><span>Louanne, Lucie, Dialikatou, Alexandra écoutent Aurélien Bory <span class="credits">Photo Simon Lambert pour <i>Les Jours</i></span>.</span></figcaption>
 </figure>
 
-<p>Au sortir du spectacle, <a href="#" data-mini="3">Delphine</a> et Isabelle, les deux élèves d’origine chinoise, expliquent aux autres la signification des chants traditionnels chinois qu’ils ont entendus. Dialikatou répète, littéralement transportée : <q>C’était tellement beau</q>. D’autres sont plus sceptiques. Le principal, après avoir piqué un sprint pour récupérer Moussa qui entendait rentrer tout seul malgré les consignes de sécurité, avoue <q>ne pas être certain d’avoir tout compris</q>. Il est d’autant plus heureux d’avoir vu ses élèves se tenir à peu près à carreau. Le lendemain, lors d’une rencontre avec le metteur en scène organisée par le prof principal, les élèves de la 3e B se montreront assez curieux de l’œuvre de Bory, ses processus de création. Ils posent des questions sur l’utile <q>inutilité de l’art</q>, et aussi – quand même – sur le salaire du metteur en scène.</p>
+{% set person = obsession.people[8] %}
+<p>Au sortir du spectacle, <a href="#{{ person.href }}" data-mini="3">Delphine</a> et {% set person = obsession.people[9] %} Isabelle, les deux élèves d’origine chinoise, expliquent aux autres la signification des chants traditionnels chinois qu’ils ont entendus. {% set person = obsession.people[14] %} <a href="#{{ person.href }}" data-mini="4">Dialikatou</a> répète, littéralement transportée : <q>C’était tellement beau</q>.</p>
 
-<aside id="mini-3" class="mini md-w-2c lg-w-3c lg-ph-0">
-	<a class="link-unstyled" href="#" />
-		<span class="image"><img class="responsive" src="img/delphine.jpg" alt="" /></span>
-		<p class="title">Delphine</p>
-		<p class="subtitle">14 ans, élève en 3e&nbsp;B</p>
-	</a>
-</aside>
+<p>D’autres sont plus sceptiques. Le principal, après avoir piqué un sprint pour récupérer {% set person = obsession.people[19] %} <a href="#{{ person.href }}" data-mini="5">Moussa</a> qui entendait rentrer tout seul malgré les consignes de sécurité, avoue <q>ne pas être certain d’avoir tout compris</q>. Il est d’autant plus heureux d’avoir vu ses élèves se tenir à peu près à carreau. Le lendemain, lors d’une rencontre avec le metteur en scène organisée par le prof principal, les élèves de la 3e B se montreront assez curieux de l’œuvre de Bory, ses processus de création. Ils posent des questions sur l’utile <q>inutilité de l’art</q>, et aussi – quand même – sur le salaire du metteur en scène.</p>
+
+{% set person = obsession.people[8] %}
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[14] %}
+{{
+	mini({
+		number: 4,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[19] %}
+{{
+	mini({
+		number: 5,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}

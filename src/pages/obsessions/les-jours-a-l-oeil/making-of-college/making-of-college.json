@@ -14,13 +14,12 @@
 
 	"rel": {
 		"authors": [
-			{ "text":  "author:sebastian-calvet" },
+			{ "text":  "author:sebastien-calvet" },
 			{ "photo": "author:simon-lambert" }
 		],
 
-		"first": "episode:les-jours-a-l-oeil/ep1-politique-photo",
-		"prev": "episode:les-jours-a-l-oeil/ep1-politique-photo",
-		"next":  "episode:les-jours-a-l-oeil/making-of-treize-novembre",
-		"last":  "episode:les-jours-a-l-oeil/making-of-cop"
+		"first": "episode:les-jours-a-l-oeil/making-of-photo",
+		"prev": "episode:les-jours-a-l-oeil/making-of-photo",
+		"next":  "episode:les-jours-a-l-oeil/making-of-treize-novembre"
 	}
 }

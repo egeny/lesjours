@@ -1,11 +1,8 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
 <p><span class="lettrine">L</span>’odeur de cire est tenace. Dès qu’on regagne le quartier du Bataclan, avant même d’arriver sur les lieux des attentats et des commémorations, le parfum sucré des bougies emplit l’air. Je baigne malgré moi dans ce halo particulier. L’atmosphère n’est plus la même. Nous n’avons plus d’habitudes.</p>
 
-<p>Comment reprendre le quotidien de la vie de quartier d’avant ? J’en discute avec <a href="#" data-mini="1">Sandrine</a>, dont les enfants vont à la même école que les miens et dont le chemin passe devant la salle de concert attaquée, où 80 personnes ont perdu la vie. <q>Ce qui était le plus quotidien devient le plus exceptionnel, comme de se rendre à l’école</q>, me fait-elle remarquer. Sandrine habite à quelques immeubles du Bataclan, un impact de balle a creusé le mur à droite de la porte de chez elle. Un blessé a été recueilli dans son hall le vendredi soir par sa voisine du premier étage. Pendant plusieurs jours, il y restait du sang et une serviette tâchée : <q>On voulait nettoyer mais la police a donné pour consigne de ne toucher à rien.</q></p>
-
-<figure>
-	<img src="img/l-impossible-routine-1.jpg" alt="" />
-	<figcaption><span>Impact dans le mur, passage Saint-Pierre-Amelot <span class="credits">Photo Charlotte Rotman pour <i>Les Jours</i></span>.</span></figcaption>
-</figure>
+<p>Comment reprendre le quotidien de la vie de quartier d’avant ? J’en discute avec Sandrine, dont les enfants vont à la même école que les miens et dont le chemin passe devant la salle de concert attaquée, où 80 personnes ont perdu la vie. <q>Ce qui était le plus quotidien devient le plus exceptionnel, comme de se rendre à l’école</q>, me fait-elle remarquer. Sandrine habite à quelques immeubles du Bataclan, un impact de balle a creusé le mur à droite de la porte de chez elle. Un blessé a été recueilli dans son hall le vendredi soir par sa voisine du premier étage. Pendant plusieurs jours, il y restait du sang et une serviette tâchée : <q>On voulait nettoyer mais la police a donné pour consigne de ne toucher à rien.</q></p>
 
 <p>Le retour à la normale est chaotique. Ces rues demeurent pour elle <q>une zone anxiogène</q>. <q>Tout pose question, tout nous affecte. La première fois où je suis sortie de chez moi pour acheter du pain, j’ai eu l’impression d’être un soldat, un combattant ou un résistant, je devais vaincre quelque chose</q>, se souvient-elle. Au début, elle n’arrivait pas à laisser ses enfants, même pour une course rapide. <q>Normalement quand je les quitte, je n’ai pas de doute, je sais que je vais les retrouver. Intellectuellement je sais que je vais revenir, que je suis juste allée chercher du pain, mais dans mon bide, non… ce n’est pas fini</q>, dit encore Sandrine. Le soir des attentats, elle n’était pas avec eux, elle était sortie avec des copains, dans le XVIIIe, laissant son compagnon avec les enfants. Elle n’a pas pu rentrer avant tard dans la nuit. <q>J’en ai éprouvé beaucoup de culpabilité, comme si j’avais mis en danger l’intégrité de ma famille : Pourquoi j’étais allée boire des coups ce soir-là ? J’ai besoin qu’on soit rassemblés, en famille</q>, m’explique-t-elle. </p>
 
@@ -23,22 +20,19 @@
 	<figcaption><span>Des restes de bougies près du Bataclan, rue Oberkampf <span class="credits">Photo Charlotte Rotman pour <i>Les Jours</i></span>.</span></figcaption>
 </figure>
 
-<p>J’envie beaucoup ceux qui ne sont pas effrayés ou n’ont pas déformé le cours de leur vie. <a href="#" data-mini="2">Tuyen</a> est l’un d’eux. Il pense pourtant que des attentats se reproduiront en France mais il ne vit pas sous la coupe de la menace. Il est né au Vietnam, sa famille, des opposants au régime communiste, s’est éparpillée dans le monde entier et a souvent échappé à la mort. Sa mère l’a confié bébé à un couple de Français qui quittait le Vietnam en catastrophe. Il explique que ce destin familial l’a rendu <q>fataliste</q>. Je mesure que cela le protège aussi d’une peur envahissante que je connais trop bien.</p>
+{% set person = obsession.people[4] %}
+
+<p>J’envie beaucoup ceux qui ne sont pas effrayés ou n’ont pas déformé le cours de leur vie. <a href="#{{ person.href }}" data-mini="1">Tuyen</a> est l’un d’eux. Il pense pourtant que des attentats se reproduiront en France mais il ne vit pas sous la coupe de la menace. Il est né au Vietnam, sa famille, des opposants au régime communiste, s’est éparpillée dans le monde entier et a souvent échappé à la mort. Sa mère l’a confié bébé à un couple de Français qui quittait le Vietnam en catastrophe. Il explique que ce destin familial l’a rendu <q>fataliste</q>. Je mesure que cela le protège aussi d’une peur envahissante que je connais trop bien.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <p>Pour l’instant, j’assume mes stratégies d’évitement même si elles me paraissent peu glorieuses : prendre l’Autolib’ et le Velib', plutôt que les transports en commun. Déserter les cinémas et les terrasses des cafés, contourner les lieux d’hommage. Mettre des baskets tous les jours, au cas où il faudrait se mettre à courir. Fuir les attroupements. Attendre que ça passe, que les bougies se consument.</p>
-
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/sandrine-voisine.jpg" alt="" /></span>
-<p class="title">Sandrine</p>
-<p class="subtitle">40 ans, voisine du Bataclan</p>
-</a>
-</aside>
-
-<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/tuyen-voisin.jpg" alt="" /></span>
-<p class="title">Tuyen</p>
-<p class="subtitle">44 ans, voisin du Bataclan</p>
-</a>
-</aside>
