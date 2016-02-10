@@ -19,23 +19,11 @@
 	<img src="img/un-an-apres-1.jpg" alt="" />
 	<figcaption><span>Sribalavan, Junior, Souhimbou, Moussa et Matea après un cours d'histoire-géo consacré au débat sur les attentats du 13 novembre 2015 à Paris <span class="credits">Photo Simon Lambert pour <i>Les Jours</i></span>.</span></figcaption>
 </figure>
-
-{% set person = obsession.people[18] %}
-<p>L’attentat à l’Hyper Cacher les a marqués et interrogés. Un élève ne comprend pas pourquoi les terroristes tuent spécifiquement des Juifs. <a href="#{{ person.href }}" data-mini="1">Faema</a> tente une explication. <q>A ce qui parait, ce serait marqué dans le Coran que les musulmans ne devraient pas aimer les juifs, mais je ne sais pas trop.</q> Derrière elle, Moussa et Souhimbou paraissent sceptiques sur l’explication.{% set person = obsession.people[4] %} <a href="#{{ person.href }}" data-mini="2">Vithuran</a>, conclut : <q>On dirait que les Juifs sont toujours les boucs émissaires.</q> En ce moment, en histoire, les 3e&nbsp;B étudient la seconde guerre mondiale. Au trimestre précédent, ils ont vu l’installation du régime nazi et les premières lois antisémites en Allemagne. La semaine suivante, ils apprendront les camps d’extermination. La question de l’antisémitisme est complexe pour eux. Ils condamnent, s’étonnent parfois et apparaissent profondément choqués par ce que les cours d’histoire leur apprennent. Difficile pourtant d’ôter de la tête de certains des clichés antisémites comme « les Juifs ont de l’argent ». <q>Ils ont des magasins de téléphonie</q>, dit par exemple un élève sur le ton de la preuve. Mais le lien éventuel entre clichés antisémites, délit d’antisémitisme et violence terroriste n’a pas de sens pour eux.</p>
-
-{% set person = obsession.people[18] %}
-{{
-	mini({
-		number: 1,
-		img: "/obsessions/" + obsession.href + "/" + person.img,
-		alt:      person.alt,
-		href:     "#" + person.href,
-		title:    person.title,
-		subtitle: person.subtitle
-	})
-}}
-
 {% set person = obsession.people[4] %}
+
+<p>L’attentat à l’Hyper Cacher les a marqués et interrogés. Un élève ne comprend pas pourquoi les terroristes tuent spécifiquement des Juifs. Faema tente une explication. <q>A ce qui parait, ce serait marqué dans le Coran que les musulmans ne devraient pas aimer les juifs, mais je ne sais pas trop.</q> Derrière elle, Moussa et Souhimbou paraissent sceptiques sur l’explication. <a href="#{{ person.href }}" data-mini="2">Vithuran</a>, conclut : <q>On dirait que les Juifs sont toujours les boucs émissaires.</q> En ce moment, en histoire, les 3e&nbsp;B étudient la seconde guerre mondiale. Au trimestre précédent, ils ont vu l’installation du régime nazi et les premières lois antisémites en Allemagne. La semaine suivante, ils apprendront les camps d’extermination. La question de l’antisémitisme est complexe pour eux. Ils condamnent, s’étonnent parfois et apparaissent profondément choqués par ce que les cours d’histoire leur apprennent. Difficile pourtant d’ôter de la tête de certains des clichés antisémites comme « les Juifs ont de l’argent ». <q>Ils ont des magasins de téléphonie</q>, dit par exemple un élève sur le ton de la preuve. Mais le lien éventuel entre clichés antisémites, délit d’antisémitisme et violence terroriste n’a pas de sens pour eux.</p>
+
+
 {{
 	mini({
 		number: 2,
