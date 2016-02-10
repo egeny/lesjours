@@ -26,6 +26,15 @@
 		return $code == '200' ? $url : '/img/profile.svg';
 	}
 
+	// Get all meta related to the given user
+	function get_all_user_meta($id) {
+		$meta = get_user_meta($id);
+		$meta = array_map(function($value) { return count($value) == 1 ? $value[0] : $value; }, $meta);
+		$meta['invoices'] = array_map(function($value) { return json_decode($value, true); }, $meta['invoices'] ? $meta['invoices'] : array());
+
+		return $meta;
+	}
+
 	global $PLANS;
 	$PLANS = array(
 		'jouriste' => array(

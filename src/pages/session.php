@@ -80,8 +80,7 @@
 
 	// $current_user is always an object, check if it has an ID
 	if ($current_user->ID) {
-		$meta = get_user_meta($current_user->ID);
-		$meta = array_map(function($array) { return $array[0]; }, $meta);
+		$meta = get_all_user_meta($current_user->ID);
 
 		// TODO: redirect to a page if not paid (or pending)
 		// TODO: redirect to a page if expired

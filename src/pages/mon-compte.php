@@ -4,13 +4,11 @@
 {% block php -%}
 <?php
 	require('_bootstrap.php');
-	require(WP_PATH.'/wp-admin/includes/user.php'); // This file needs to be included in order to delete an user
 
 	// Prevent accessing this URL if there is no logged-in user
 	if (!$current_user->ID) { die(header('Location: /')); }
 
-	$meta = get_user_meta($current_user->ID);
-	$meta = array_map(function($array) { return $array[0]; }, $meta);
+	$meta = get_all_user_meta($current_user->ID);
 
 	$error = null;
 	$data  = array(
