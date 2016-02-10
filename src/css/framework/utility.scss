@@ -90,7 +90,8 @@ $margin: grid-margin("sm");
 		color: $color-main;
 	}
 
-	&.external { background-image: linear-gradient(to bottom, $color-external, $color-external); }
+	&.external  { background-image: linear-gradient(to bottom, $color-external,    $color-external);    }
+	&.obsession { background-image: linear-gradient(to bottom, $color-brand-light, $color-brand-light); }
 }
 
 .link-unstyled {

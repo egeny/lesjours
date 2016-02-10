@@ -1,7 +1,7 @@
 /* @group .cover */
 .cover {
 	background-size:  cover;
-	background-color: $color-brand;
+	background-color: rgba($color-brand, .9);
 
 	height: 100%;
 	overflow: hidden;   // Hide the ::before overlay
