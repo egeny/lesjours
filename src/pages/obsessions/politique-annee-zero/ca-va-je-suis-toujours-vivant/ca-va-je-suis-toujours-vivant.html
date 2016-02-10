@@ -2,7 +2,7 @@
 {% set obsession = episode.obsession|expand %}
 
 {% set person = obsession.people[1] %}
-<p><span class="lettrine">C</span>es jours-ci ressemblent <q>à une guerre des nerfs</q>, raconte Olivier Faure, attablé devant un jus, au Bourbon, café cossu proche de l’Assemblée nationale qui accueille les rendez-vous des politiques. C’est le jour du conseil des ministres, le 3 février, et <a href="#{{ person.href }}" data-mini="1"> Olivier Faure</a>, le député socialiste de Seine et Marne, que <i>Les Jours</i> suivent, attend de voir, comme l’ensemble des parlementaires, quelle nouvelle rédaction sera proposée par l’exécutif. Il surveille d’un oeil son téléphone. Il vapote sans cesse, je ne le connais pas encore assez pour savoir si c’est son habitude où un signe de tension particulière. Sa collaboratrice lui fait passer par texto une version du texte qui exclut de la déchéance de nationalité ceux qu’elle pourrait rendre apatrides, ce qui revient à cibler les bi-nationaux. Il soupire. <q>Ca ne change rien</q>. 
+<p><span class="lettrine">C</span>es jours-ci ressemblent <q>à une guerre des nerfs</q>, raconte Olivier Faure, attablé devant un jus, au Bourbon, café cossu proche de l’Assemblée nationale qui accueille les rendez-vous des politiques. C’est le jour du conseil des ministres, le 3 février, et <a href="#{{ person.href }}" data-mini="1"> Olivier Faure</a>, le député socialiste de Seine-et-Marne, que <i>Les Jours</i> suivent, attend de voir, comme l’ensemble des parlementaires, quelle nouvelle rédaction sera proposée par l’exécutif. Il surveille d’un oeil son téléphone. Il vapote sans cesse, je ne le connais pas encore assez pour savoir si c’est son habitude où un signe de tension particulière. Sa collaboratrice lui fait passer par texto une version du texte qui exclut de la déchéance de nationalité ceux qu’elle pourrait rendre apatrides, ce qui revient à cibler les bi-nationaux. Il soupire. <q>Ca ne change rien</q>. 
 {{
 	mini({
 		number: 1,
@@ -13,33 +13,39 @@
 		subtitle: person.subtitle
 	})
 }} 
-<p>Il a l’impression de ne plus rien comprendre. Dans quel bourbier s’est mis l’exécutif ? <q>Le pays entend qu’il y a 8000 personnes radicalisées. Qu’on puisse perquisitionner chez eux entre 22 h et 6 h, grâce à l’état d’urgence, ils le comprennent bien, mais pourquoi remettre un euro dans le bastringue sur la déchéance ?</q>, se désespère-t-il. Puis il reçoit un texto d’un député socialiste : le <a href="#note-1"><q>PM</q></a> a dit autre chose à <q>Bruno<q>. En langage normal : le Premier Ministre a présenté une autre version  à Bruno Leroux, le chef des députés socialistes. Olivier Faure vérifie l’origine du texte qu’il a reçu. Ce n’est qu’une version initiale. Finalement le texte issu du Conseil des ministres <q>unifie les régimes de déchéance applicables aux personnes condamnées quelle que soit l’origine de leur appartenance à la Nation</q>. La discussion traîne depuis des semaines, et, en même temps, ça change tout le temps. A quoi se fier ? Comment décrypter les intentions ? Les stratégies ?</p>
+<p>Il a l’impression de ne plus rien comprendre. Dans quel bourbier s’est mis l’exécutif ? <q>Le pays entend qu’il y a 8000 personnes radicalisées. Qu’on puisse perquisitionner chez eux entre 22 h et 6 h, grâce à l’état d’urgence, ils le comprennent bien, mais pourquoi remettre un euro dans le bastringue sur la déchéance ?</q>, se désespère-t-il. Puis il reçoit un texto d’un député socialiste : le <a href="#note-1"><q>PM</q></a> a dit autre chose à <q>Bruno</q>. En langage normal : le Premier ministre a présenté une autre version  à Bruno Leroux, le chef des députés socialistes. Olivier Faure vérifie l’origine du texte qu’il a reçu. Ce n’est qu’une version initiale. Finalement le texte issu du Conseil des ministres <q>unifie les régimes de déchéance applicables aux personnes condamnées quelle que soit l’origine de leur appartenance à la Nation</q>. La discussion traîne depuis des semaines, et, en même temps, ça change tout le temps. A quoi se fier ? Comment décrypter les intentions ? Les stratégies ?</p>
 {% from "partials/_macro.html" import note %}
 {{
 note({
 number: 1,
 title: "Le PM, le PR et la novlangue",
-caption: "Dans les cercles politiques et proches du pouvoirs, le Président de la République est désigné par les initiales PR, le Premier ministre par PM."
+caption: "Dans les cercles politiques et proches du pouvoir, le Président de la République est désigné par les initiales PR, le Premier ministre par PM."
 })
 }}
  
  <figure>
-	<img src="img/zig-zags-dans-les-tetes-a-l-assemblee.jpg" alt="" />
-	<figcaption><span>La salle des quatre colonnes, pendant l'intervention de Manuel Vals à la tribune de l'Assemblée nationale <span class="credits">Photo Albert Facelly pour <i>Les Jours</i></span>.</span></figcaption>
+	<img src="img/ca-va-je-suis-toujours-vivant.jpg" alt="" />
+	<figcaption><span> Les couloirs de l'Assemblée nationale, le 5 février <span class="credits">Photo Albert Facelly pour <i>Les Jours</i></span>.</span></figcaption>
 </figure>
 
-<p>Les députés avancent sur des sables mouvants. Olivier Faure essaie de tracer son chemin sur ce terrain glissant. Sa stratégie est de convaincre un maximum de députés de ne pas toucher à la nationalité, mais de prévoir à la place une <q>déchéance nationale</q>, sorte de peine d’indignité. Il a rédigé un amendement qui prévoit des privations de droits civiques (vote, éligibilité), sociaux (allocations), familiaux (suppression de l’autorité parentale), la limitation à la liberté d’aller et venir, la confiscation d’une part des biens, etc. <q>C’est une peine infâmante</q>, détaille-t-il, mais cette mesure de répression pénale vise <q>tous ceux qui s’en prennent à la Nation, indépendamment de leurs origines</q>. <q>On a envoyé l’amendement à 6 heures du matin, par mail ; à 8h30 à l’assemblée, les Hollandais historiques, furieux, hurlaient à la mort et m’accusaient de <q>haute trahison</q>, <a href="#note-2">Jean-Marie Le Guen</a> me dit : <q>Cela ne correspond pas au verbatim du Président</q>. On en est là.</q> Le « verbatim ».
+<p>Les députés avancent sur des sables mouvants. Olivier Faure essaie de tracer son chemin sur ce terrain glissant. Sa stratégie est de convaincre un maximum de députés de ne pas toucher à la nationalité, mais de prévoir à la place une <q>déchéance nationale</q>, sorte de peine d’indignité. Il a rédigé un amendement qui prévoit des privations de droits civiques (vote, éligibilité), sociaux (allocations), familiaux (suppression de l’autorité parentale), la limitation à la liberté d’aller et venir, la confiscation d’une part des biens, etc. <q>C’est une peine infâmante</q>, détaille-t-il, mais cette mesure de répression pénale vise <q>tous ceux qui s’en prennent à la Nation, indépendamment de leurs origines</q>. <q>On a envoyé l’amendement à 6 heures du matin, par mail ; à 8h30 à l’assemblée, les Hollandais historiques, furieux, hurlaient à la mort et m’accusaient de <q>haute trahison</q>, <a href="#note-2">Jean-Marie Le Guen</a> me dit : <q>Cela ne correspond pas au verbatim du Président</q>. On en est là.</q> Le <q>verbatim</q>.
 </p>
 {% from "partials/_macro.html" import note %}
 {{
 note({
-number: 1,
+number: 2,
 title: "Jean-Marie Le Guen",
-caption: "Cet apparatchik du parti socialiste , proche de Manuel Valls, est secrétaire d’état chargé des relations avec le Parlement."
+caption: "Cet apparatchik du parti socialiste , proche de Manuel Valls, est secrétaire d’Etat chargé des relations avec le Parlement."
 })
 }} 
+
+
+<aside>
+<p><span>Si le gouvernement persiste, </span> la désunion de la gauche, elle, est certaine</p>
+</aside>
 {% set person = obsession.people[0] %}
-<p>A 11 h, il y avait la réunion hebdomadaire du groupe socialiste. A huis-clos, les opposants gênés par la mesure, de plus en plus nombreux, se sont exprimés devant le nouveau Garde des Sceaux Jean-Jacques Urvoas. Olivier Faure, veut convaincre ceux qui se tâtent, hésitent. Il a un argument sur le coût politique de la réforme: Qui peut garantir que le Sénat dont la majorité est à droite votera un texte conforme à celui des députés, ce qui est une condition pour une réforme constitutionnelle ? Il n’y a aucune  assurance mais si le gouvernement persiste, la désunion de la gauche, elle, est certaine. L’amendement de compromis qu’il propose est signé par 77 personnes. Des frondeurs, qui comme <a href="#{{ person.href }}" data-mini="2">Barbara Romagnan</a>, préfèrent demander pour l’instant la suppression pure et simple de l’article de loi, pourraient s’y rallier, ainsi que les écolos hostiles...
+
+<p>A 11 h, il y avait la réunion hebdomadaire du groupe socialiste. A huis-clos, les opposants gênés par la mesure, de plus en plus nombreux, se sont exprimés devant le nouveau garde des Sceaux Jean-Jacques Urvoas. Olivier Faure, veut convaincre ceux qui se tâtent, hésitent. Il a un argument sur le coût politique de la réforme: Qui peut garantir que le Sénat dont la majorité est à droite votera un texte conforme à celui des députés, ce qui est une condition pour une réforme constitutionnelle ? Il n’y a aucune  assurance mais si le gouvernement persiste, la désunion de la gauche, elle, est certaine. L’amendement de compromis qu’il propose est signé par 77 personnes. Des frondeurs qui, comme <a href="#{{ person.href }}" data-mini="2">Barbara Romagnan</a>, préfèrent demander pour l’instant la suppression pure et simple de l’article de loi, pourraient s’y rallier, ainsi que les écolos hostiles...
 </p>
 {{
 	mini({
@@ -52,29 +58,20 @@ caption: "Cet apparatchik du parti socialiste , proche de Manuel Valls, est secr
 	})
 }} 
 
-<aside>
-<p><span>Perte de repères, cynisme, démagogie, confusion </span> et, au final, lassitude générale</p>
-</aside>
-
  
 <p>L’hypothèse ne plaît pas du tout au gouvernement. Ce mercredi, Olivier Faure est <q>invité</q> à déjeuner avec Manuel Valls et les leaders de la majorité. Il s’attend à se faire rappeler à son sens des responsabilités, à entendre qu’il ne faut pas mettre en danger le chef de l’Etat. Lui se sent responsable, justement. Il pense que c’est une erreur pour le président de la République de s’engager là dedans. Il ne comprend pas la course  au centre droit: <q>On perd tous nos soutiens à gauche de plus en plus divisée sans en gagner le moindre à droite.</q> En proposant son amendement, il n’a <q>pas l’impression de créer un problème</q>, mais plutôt d’esquisser une solution.
 </p>
- 
-<p>Après le déjeuner, je le rappelle : <q>Ca va, je suis toujours vivant, j’ai mes deux mains, 5 doigts de chaque côté</q>, plaisante-t-il. A déjeuner, aux côtés de Manuel Valls, les ministres Jean-Marie Le  Guen et Jean-Jacques Urvoas ainsi que les parlementaires Pascal Popelin, Christophe Borgel, Dominique Raimbourg, Patrick Mennucci, Bruno Leroux, etc. Je remarque en passant qu’il ne cite pas une seule femme dans ce tour de table viril. <i>On m’a demandé de retirer mon amendement</i>, rapporte Olivier Faure. <i>Mais j’ai refusé : cela correspond à des convictions profondes et puis je n’ai pas du tout l’impression de faire campagne contre le premier ministre ou le président de la République.</i> Je lui demande quels arguments ils ont utilisés pour tenter de le convaincre. <q>On se connaît tous bien, ils savent qu’ils ne peuvent pas me faire <q>le loup va te manger</q> pour que je rentre dans ma coquille, mais ils en appellent à la majorité, aux efforts réalisés, à la nécessité de sortir de la nasse et de trouver un accord</q>, répond-il plutôt sûr de lui.  
-</p>
 
 <blockquote>
-<p>On naît avec un nom, un prénom, un état civil, une nationalité</p>
+<p>On m'a demandé de retirer mon amendement, mais j'ai refusé</p>
 <footer>Olivier Faure</footer>
 </blockquote>
+
+<p>Après le déjeuner, je le rappelle : <q>Ca va, je suis toujours vivant, j’ai mes deux mains, 5 doigts de chaque côté</q>, plaisante-t-il. A déjeuner, aux côtés de Manuel Valls, les ministres Jean-Marie Le  Guen et Jean-Jacques Urvoas ainsi que les parlementaires Pascal Popelin, Christophe Borgel, Dominique Raimbourg, Patrick Mennucci, Bruno Leroux, etc. Je remarque en passant qu’il ne cite pas une seule femme dans ce tour de table viril. <i>« On m’a demandé de retirer mon amendement</i>, rapporte Olivier Faure. <i>Mais j’ai refusé : cela correspond à des convictions profondes et puis je n’ai pas du tout l’impression de faire campagne contre le Premier ministre ou le président de la République. »</i> Je lui demande quels arguments ils ont utilisés pour tenter de le convaincre. <q>On se connaît tous bien, ils savent qu’ils ne peuvent pas me faire <q>le loup va te manger</q> pour que je rentre dans ma coquille, mais ils en appellent à la majorité, aux efforts réalisés, à la nécessité de sortir de la nasse et de trouver un accord</q>, répond-il plutôt sûr de lui.  
+</p>
 
 <p>C’est exactement ça : comment faire entre loyauté, logique de parti, et convictions ? Et surtout dans des moments graves où personne n’a envie de voir à l’oeuvre les tactiques politiciennes. Le travail de persuasion se fait pied à pied, sous la pression, avec discussions informelles, amendements subtils et aussi quelques coups de gueule.
  </p>
  
-<p>Le jeudi, une réunion du groupe socialiste devait fixer les prises de paroles lors de la discussion générale, qui doit s’ouvrir le lendemain. <q>Je n’étais pas sur la liste des orateurs, il n’y avait pratiquement que ceux qui défendent le compromis du gouvernement, je me suis énervé il n’y a pas d’unanimité dans le groupe, pas de ligne tranchée, les interventions doivent refléter un pluralisme. Je suis parti.</q>  Vendredi, Olivier Faure était inscrit parmi les orateurs.
+<p>Le jeudi, une réunion du groupe socialiste devait fixer les prises de paroles lors de la discussion générale, qui doit s’ouvrir le lendemain. <q>Je n’étais pas sur la liste des orateurs, il n’y avait pratiquement que ceux qui défendent le compromis du gouvernement. Je me suis énervé : il n’y a pas d’unanimité dans le groupe, pas de ligne tranchée, les interventions doivent refléter un pluralisme. Je suis parti.</q> Vendredi, Olivier Faure était inscrit parmi les orateurs.
 </p>
-
-<aside>
-<p><span>On peut faire la déchéance pour tous, </span>puis non. Puis si.</p>
-</aside>
-
