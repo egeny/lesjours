@@ -2,24 +2,19 @@
 	"template": "home",
 
 	"une": [
-		"episode:treize-novembre/urvoas-taubira",
-		"episode:treize-novembre/urvoas-le-deuxieme-flic-de-france",
-		"episode:treize-novembre/urvoas-urgence",
-		"episode:treize-novembre/etat-urgence-mort-lente"
-	],
-
-	"selected": [
-		"episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"episode:treize-novembre/un-perimetre-de-desolation",
-		"episode:treize-novembre/l-empreinte-de-la-peur"
+		"episode:les-revenants/bilel-episode-1",
+		"episode:les-jours-c-quoi/les-jours-le-pilote",
+		"episode:les-annees-college/parents-prof",
+		"episode:treize-novembre/assigne-conversation"
 	],
 
 	"obsessions": [
 		"obsession:treize-novembre",
 		"obsession:les-annees-college",
-		"obsession:l-empire",
 		"obsession:les-revenants",
-		"obsession:les-jours-a-l-oeil",
-		"obsession:good-com-bad-cop"
+		"obsession:l-empire",
+		"obsession:politique-annee-zero",
+		"obsession:les-jours-a-l-oeil"
+		
 	]
 }

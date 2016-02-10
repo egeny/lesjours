@@ -1,3 +1,5 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
 <p><span class="lettrine">D</span>écouvrir un nouveau site, c'est aussi découvrir une nouvelle navigation. A vous de sauter d'<a href="/obsessions/les-jours-c-quoi/les-jours-tuto-obsession">obsession</a> en obsession, d'article en article, d'épisode en épisode. A vous aussi de nous aider à améliorer la navigation dans cette <a href="/obsessions/les-jours-c-quoi/les-jours-pilote">version pilote</a> des <i>Jours</i>, histoire de ne pas trop godiller de page en page. Mais c'est à nous de jouer les boussoles pour vous orienter sur le site.</p>
 
 <hr>
@@ -32,15 +34,19 @@ caption: "C'est un dérivé du « binge watching », cette pratique addictive q
 })
 }}
 
-<p>En cours de lecture sur tablette et sur ordinateur, vous verrez apparaître à droite du texte différents éléments, et c'est d'ailleurs ce qui vient de vous arriver avec la définition du <i>binge reading</i>. Ces enrichissements approfondissent, complètent, éclairent la lecture de l'article. Ils délivrent la définition d'un mot, d'un acronyme. Ils vous expliquent par exemple qui est tel personnage. Ah oui, tiens, au fait, vous dites-vous en lisant un article de l'obsession L'empire, c'est qui, déjà, <a href="#" data-mini="1">Rodolphe Belmer</a>. Et le voilà qui apparaît dans la marge.</p>
+{% set person = obsession.people[14] %}
+<p>En cours de lecture sur tablette et sur ordinateur, vous verrez apparaître à droite du texte différents éléments, et c'est d'ailleurs ce qui vient de vous arriver avec la définition du <i>binge reading</i>. Ces enrichissements approfondissent, complètent, éclairent la lecture de l'article. Ils délivrent la définition d'un mot, d'un acronyme. Ils vous expliquent par exemple qui est tel personnage. Exemple, vous vous demandez qui est Charlotte Rotman, eh bien <a href="#{{ person.href }}" data-mini="1">la voilà</a> qui apparaît dans la marge, oui, là, à droite. Un clic ou un tapotement plus tard, et vous accédez à sa fiche. Fiche que vous refermez en cliquant sur la croix en haut à droite.</p>
 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
-<a class="link-unstyled" href="#" />
-<span class="image"><img class="responsive" src="img/belmer-portrait.jpg" alt="" /></span>
-<p class="title">Rodolphe Belmer</p>
-<p class="subtitle">46 ans, ex-numéro 2 de Canal+</p>
-</a>
-</aside>
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <p>De la même façon, quand Alice Géraud <a href="/obsessions/les-annees-college/encore-un-matin">explore</a> le collège Aimé-Césaire et qu'elle décrit le carillon de l'établissement comme une <q>curiosité sonore</q>, voilà qu'apparaît <a href="#" data-mini="2">le petit lecteur audio</a> des <i>Jours</i> qui vous permet, d'un clic ou d'un tapotis, d'écouter ladite sonnerie. Ce peut aussi être une interview, un son d'ambiance, de la musique…</p>
 
