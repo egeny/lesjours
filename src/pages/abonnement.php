@@ -76,8 +76,16 @@
 			update_user_meta($user_id, 'subscription', date('Y-m-d H:i:s'));
 			update_user_meta($user_id, 'paid',         '1');
 
-			// FIXME: what does the mail needs to contains?
-			mail($_GET['CLIENTEMAIL'], 'Les Jours — activation de votre compte', 'Votre paiement a bien été reçu, vous êtes maintenant un jouriste. Merci.', 'From: contact@lesjours.fr');
+			// Prepare an email and send it
+			$subject = 'Confirmation de votre abonnement aux « Jours »';
+			$content = file_get_contents('emails/abonnement.html');
+
+			$headers   = array();
+			$headers[] = 'MIME-Version: 1.0';
+			$headers[] = 'Content-type: text/html; charset=UTF-8';
+			$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+
+			mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
 		}
 	}
 
