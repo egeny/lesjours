@@ -3,7 +3,7 @@
 
 	"href": "les-jours-c-quoi",
 
-	"color": 9,
+	"color": 0,
 	"name":  "« Les Jours », c'est quoi ?",
 	"title": "« Les Jours », c'est quoi ?",
 	"subtitle": "C'est qui ? Comment ça marche ? Combien ça coûte ?",
@@ -42,7 +42,7 @@
 			"img":      "img/jbg.jpg",
 			"alt":      "",
 			"title":    "Jérôme Bourreau-Guggenheim",
-			"desc":     "Obsession",
+			"desc":     "J'ai l'obsession d'aller à l'essentiel et l'exigence de faire simple. Mon goût pour les nouveaux défis m'a naturellement amené à embarquer dans l'aventure des Jours, convaincu que la Liberté a un prix, celui de l'information.",
 			"subtitle": "Directeur technique",
 			"minor": true
 		},

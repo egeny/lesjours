@@ -1,7 +1,7 @@
 {%
 	set page = {
 		title: "Abonnement — Les Jours",
-		class: "page-subscription fixed"
+		class: "page-subscription md-fixed lg-fixed"
 	}
 %}
 {% extends "partials/_layout.html" %}
@@ -63,21 +63,50 @@
 		unset($_GET['notification']); // Exclude for the hash computation
 		$hash  = signature($_GET);
 
-		$error = !$error && $hash != $_GET['HASH']      ? 'hash'            : $error;
-		$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
-
-		if (!$error) {
+		if ($hash == $_GET['HASH']) {
 			$user_id = $_GET['CLIENTIDENT'];
-			$expire  = date('Y-m-d', strtotime('+'.$PLANS[get_user_meta($user_id, 'plan')[0]]['duration']));
+			$date    = date('Y-m-d H:i:s');
+			$plan    = get_user_meta($user_id, 'plan')[0];
 
-			// Update the user's account
-			update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
-			update_user_meta($user_id, 'expire',       $expire);
-			update_user_meta($user_id, 'subscription', date('Y-m-d H:i:s'));
-			update_user_meta($user_id, 'paid',         '1');
+			// Add a transaction trace (debugging purpose, should NOT be unique)
+			$transaction = add_user_meta($user_id, 'transactions', json_encode(array(
+				'date' => $date,
+				'_get' => $_GET
+			)));
 
-			// FIXME: what does the mail needs to contains?
-			mail($_GET['CLIENTEMAIL'], 'Les Jours — activation de votre compte', 'Votre paiement a bien été reçu, vous êtes maintenant un jouriste. Merci.', 'From: contact@lesjours.fr');
+			if ($_GET['EXECCODE'] == '0000') {
+				// Retrieve the global invoice number and increment it
+				$number  = intval(get_option('invoice_number', 0)) + 1;
+
+				// Add an invoice (warning: should NOT be unique, obviously)
+				add_user_meta($user_id, 'invoices', json_encode(array(
+					'date'        => $date,
+					'number'      => $number,
+					'plan'        => $plan,
+					'price'       => $PLANS[$plan]['price'],
+					'transaction' => $transaction
+				)));
+
+				// Don't forget to update the invoice_number
+				update_option('invoice_number', $number);
+
+				// Update the user's account
+				update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
+				update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$PLANS[$plan]['duration'])));
+				update_user_meta($user_id, 'subscription', $date);
+				update_user_meta($user_id, 'paid',         '1');
+
+				// Prepare an email and send it
+				$subject = 'Confirmation de votre abonnement aux « Jours »';
+				$content = file_get_contents('emails/abonnement.html');
+
+				$headers   = array();
+				$headers[] = 'MIME-Version: 1.0';
+				$headers[] = 'Content-type: text/html; charset=UTF-8';
+				$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+
+				mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
+			}
 		}
 	}
 
@@ -89,7 +118,7 @@
 			unset($_GET['result']); // Exclude for the hash computation
 			$hash  = signature($_GET);
 
-			$error = !$error && $hash != $_GET['HASH']      ? 'hash'            : $error;
+			$error = !$error && $hash != $_GET['HASH']      ? '1003'            : $error;
 			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 			// Prefer redirecting to remove informations in the URL
@@ -178,6 +207,35 @@
 {% endblock %}
 
 {% block content %}
+<?php if ($error) : ?>
+<p class="flash mh-1m sm-mh-0 style-meta">
+	<?php
+		foreach ($error as $name => $value) {
+			switch ($name) {
+				case 'plan': $value = 'de choisir une formule';
+				break;
+
+				case 'payment': $value = 'de choisir un mode de paiement';
+				break;
+
+				case 'accept': $value = 'd’accepter les conditions générales de vente';
+				break;
+
+				default: $value = 'de vérifier les champs';
+			}
+
+			$error[$name] = $value;
+		}
+
+		if (count($error) == 1) {
+			$error = implode(', ', $error);
+		} else {
+			$error = implode(', ', array_splice($error, 0, count($error) - 1)).' et '.end($error);
+		}
+	?>
+	Merci <?php echo $error; ?>.
+</p>
+<?php endif ?>
 <div class="container">
 	<div class="row h-100">
 		<div class="col h-100">
@@ -210,7 +268,14 @@
 					<div class="md-ml-1c lg-ml-1c">
 						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("cross") }}</i>Erreur</h3>
 						<div class="default-content">
-							<p class="mt-0"><?php echo $_GET['result'] == 'hash' ? 'bad HASH' : $_GET['result'] ?></p>
+							<?php $code = intval($_GET['result']); ?>
+							<?php if ($code == 3) : ?>
+								<p class="mt-0">Votre transaction est en cours. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php elseif ($code > 3000 && !in_array($code, array(4017, 5001, 5002, 5004))) : ?>
+								<p class="mt-0">Suite à un incident de paiement (<?php echo $_GET['result'] ?>) votre transaction n'a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php else : ?>
+								<p class="mt-0">Suite à une erreur technique (<?php echo $_GET['result'] ?>) votre transaction n’a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php endif ?>
 						</div>
 					</div>
 				<?php endif ?>
