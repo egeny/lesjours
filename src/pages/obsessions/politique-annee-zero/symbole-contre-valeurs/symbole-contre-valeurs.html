@@ -1,0 +1,63 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[1] %}
+<p><span class="lettrine">O</span>livier Faure arrive en séance à l’heure pile, prend une feuille jaune que lui tend un huissier, qui indique l’ordre et le temps des prises de parole. 9h30, vendredi 5 février, la discussion générale sur le projet de loi constitutionnel prévoyant la déchéance de nationalité s’ouvre. Jean-Jacques Urvoas est assis au banc des ministres, au premier rang, une nouveauté pour lui. A droite, je compte seulement une dizaine d’élus. Les rangs de la gauche sont plus peuplés. <a href="#{{ person.href }}" data-mini="1"> Olivier Faure</a> s’assoit à coté de <a href="#note-1">Bernard Roman</a>, place 425. C’est le siège qui lui a été attribué dans l’hémicycle, mais il doit certainement apprécier ce compagnonnage : le député du Nord, lui non plus, ne veut pas accepter la déchéance de nationalité proposée par le gouvernement.
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}} 
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Bernard Roman",
+caption: "Député PS du Nord, il est aussi questeur de l’Assemblée (chargé de l’administration et des finances)."
+})
+}}
+
+<p>En séance publique, les discussions générales ne sont pas décisives mais elles permettent aux députés de se positionner. <q>Chacun parle pour le <a href="#note-2">Journal officiel</a> et personne ne se répond, mais cela permet d’observer les nuances</q>, confirme Olivier Faure. Au micro, solennel, Manuel Valls vient rappeler que la menace terroriste est là <q>inédite, globale, durable</q>. Il insiste : nous sommes <q>dans un nouveau monde</q>,  <q>Nous sommes en guerre</q>, répète-t-il, réclamant autour de lui <q>l’unité nationale</q>. Le Premier ministre affirme que l’état d’urgence est <q>efficace, indispensable pour la sécurité de nos compatriotes</q>. <q>En trois mois, 3 289 perquisitions administratives ont permis la saisie de 560 armes, dont 42 armes de guerre ; 341 personnes ont été placées en garde à vue et 571 procédures judiciaires ont été ouvertes ; 407 personnes ont été assignées à résidence. Des mosquées radicales et des salles de prière ont été fermées. Des associations ont été dissoutes par le Conseil des ministres. Les filières sont déstabilisées. De nombreux individus sont identifiés et placés sous surveillance. D’ailleurs, un des projets terroristes déjoués a pu l’être grâce à une perquisition administrative, menée dans le cadre de l’état d’urgence</q>, égrène le Premier ministre.</p>
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Retranscription des débats",
+caption: "Toutes les interventions en séance publique sont retranscrites par les rédacteurs de l’Assemblée et publiés dans le Journal officiel."
+})
+}}
+
+ <figure>
+	<img src="img/symbole-contre-valeurs.gif" alt="" />
+	<figcaption><span>A l’Assemblée nationale lors du débat sur la révision constitutionnelle portant sur l'état d'urgence et sur la déchéance de nationalité, le 5 février 2016 <span class="credits">Photos Albert Facelly pour <i>Les Jours</i></span>.</span></figcaption>
+</figure>
+
+<p>Il défend ensuite la déchéance de nationalité : <q>Comment ceux qui rejettent nos valeurs, qui déchirent avec rage et violence le pacte républicain, qui s’engagent dans une armée terroriste pour tuer leurs propres compatriotes, pourraient-ils rester français ?</q> Il insiste : <q>Aujourd’hui, comme à ses origines, la déchéance de nationalité est la réponse collective des Français vis-à-vis d’autres Français qui ont choisi de porter gravement atteinte à la vie de la Nation. C’est un geste qui marque l’union de tous ceux qui respectent le pacte républicain contre tous ceux qui le brisent. Ce n’est pas une manière de distinguer ; c’est, au contraire, une manière d’affirmer ce qui nous unit.</q></p> 
+
+<p>Ce matin là, Cécile Duflot plaide en vent contraire pendant une demi-heure, contre la révision constitutionnelle <q>inutile</q> et <q>dangereuse</q>, avec, à l’appui, arguments juridiques et citations de Montesquieu, Germaine Tillion ou Geneviève de Gaulle-Anthonioz. Elle est sans cesse approuvée bruyamment par la droite, Bernard Debré : <q>Elle a raison !</q>, Jean-Frédéric Poisson: <q>très juste</q>, Pierre Lellouche : <q>c’est évident</q>. Des soutiens de ce côté de l’hémicycle, auxquels elle n’est pas habituée. Elle énerve <a href="#note-3">Manuel Valls</a> lorsqu’elle rappelle <q>que le dernier régime à avoir massivement utilisé (la déchéance, ndlr) fut le régime de Vichy</q>. Dans un SMS, Olivier Faure, à qui je demande ce qu’il pense de son intervention, me fait comprendre qu’il la trouve trop clivante et caricaturale. Il avait déjà expliqué qu’à ses yeux <q>il est absurde de comparer ce gouvernement à celui de Vichy et François Hollande à Pétain (…). Non, ceux qui sont contre ne s’égarent pas avec de grandes valeurs, et non, ceux qui sont pour ne sont pas de dangereux vichystes</q>. La discussion se poursuit, je le vois qui s’éclipse.</p>
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Manuel Valls piqué",
+caption: "Le Premier ministre répondra vertement à Cécile Duflot, lui demandant <q>de ne pas associer la démarche et la volonté du gouvernement et de quiconque dans cette assemblée avec cette période que chacun d'entre nous ne peut pas supporter</q>)."
+})
+}}
+
+
+<aside>
+<p><span>Une femme métissée, émerge, et symbolise une Marianne moderne. </span> Voilà son idée de la Nation.</p>
+</aside>
+{% set person = obsession.people[0] %}
+
+
+<p>Je le suis jusqu’à son bureau où il doit préparer son intervention de cet après midi. Il désigne deux photos noir et blanc encadrées, dont ce passionné de photo mitraillant au Leica est l’auteur. La première, très officielle, montre des gardes républicains, garants des institutions. La seconde, prise à Paris, est un gros plan sur le visage de plusieurs jeunes femmes dont l’une, métissée, émerge, et symbolise une Marianne moderne. Voilà son idée de la Nation. Olivier Faure jette quelques notes au stylo plume sur des bristols du Palais Bourbon pour nourrir sa prise de parole. Ce matin la droite est restée assez silencieuse : <q>Ils ont la tentation de nous laisser nous écharper et de relever les compteurs</q>, regrette Olivier Faure.</p> 
+
+<p>Comment déchoir la déchéance ? Comment arriver à l’unité ? Son intervention est truffée  d’appels au rassemblement: Elle s’ouvre avec la <q>condamnation  unanime</q> des attentats par les Français <q>quelles que soient leurs opinions philosophiques ou religieuses, leurs origines</q> qui <q>ont fait corps derrière le président de la République, le gouvernement, leurs élus, de la majorité comme de l’opposition</q>. Le terme même <q>d’unité</q> revient à dix reprises, c’est <q>déjà une réponse aux fanatiques qui ont précisément pour projet de nous diviser, une dette que nous avons vis-à-vis de nos victimes, des survivants, mutilés dans leur chair ou dans leurs esprits, de leurs familles endeuillées</q>. Le verbe <q>rassembler</q>, le nom <q>entente</q>, l’adjectif <q>commun</q> viennent conforter cet appel à l’union autour d’une <q>déchéance nationale</q>, c’est à dire une perte des droits mais non de la nationalité, proposition qui jetterait aux oubliettes de l’histoire ce débat piégé.</p>
