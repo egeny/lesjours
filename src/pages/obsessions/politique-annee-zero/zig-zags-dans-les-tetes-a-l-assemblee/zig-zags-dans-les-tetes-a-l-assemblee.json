@@ -1,0 +1,24 @@
+{
+	"template": "episode",
+
+	"href": "zig-zags-dans-les-tetes-a-l-assemblee",
+
+	"number": 3,
+	"date": "2016-01-27T10:00+01:00",
+
+	"title": "Zig-zags dans les têtes à l'Assemblée",
+	"intro": "Première rencontre avec Olivier Faure, député suivi par <i>Les Jours</i>, alors que Manuel Valls tente de le convaincre de voter la déchéance de la nationalité.",
+	"lead":  "",
+
+	"tags": ["Politique", "", "", ""],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman"  },
+			{ "photo": "author:albert-facelly" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"last":  "episode:politique-annee-zero/zig-zags-dans-les-tetes-a-l-assemblee"
+	}
+}

@@ -10,7 +10,9 @@
 	"desc": "<p>Après le choc des régionales, plus rien ne devait être comme avant. A gauche comme à droite. Mais dans un climat de défiance généralisée, qui l’emportera entre le vieux monde politique et ceux qui voudraient le changer ?</p><p>« Les Jours » racontent le quotidien de trois députés nouvelle génération pris entre désirs de renouvellement et habituels compromis.</p>",
 
 	"episodes": [
-		"episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire"
+		"episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"episode:politique-annee-zero/romagnan-assemblee",
+		"episode:politique-annee-zero/zig-zags-dans-les-tetes-a-l-assemblee"
 	],
 
 	"people": [
@@ -28,7 +30,7 @@
 			"img":      "img/olivier-faure.jpg",
 			"alt":      "",
 			"title":    "Olivier Faure",
-			"subtitle": "X ans, député PS de Seine-et-Marne",
+			"subtitle": "47 ans, député PS de Seine-et-Marne",
 			"desc":     "Olivier Faure",
 			"minor": true
 		},
