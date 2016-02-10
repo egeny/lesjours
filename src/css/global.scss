@@ -247,6 +247,36 @@ textarea { resize: vertical; }
 	}
 }
 
+// FIXME
+@include media("sm", $strict: true) {
+	body.sm-fixed {
+		overflow: hidden;
+		position: fixed;
+		right: 0;
+		left:  0;
+	}
+}
+
+// FIXME
+@include media("md", $strict: true) {
+	body.md-fixed {
+		overflow: hidden;
+		position: fixed;
+		right: 0;
+		left:  0;
+	}
+}
+
+// FIXME
+@include media("lg", $strict: true) {
+	body.lg-fixed {
+		overflow: hidden;
+		position: fixed;
+		right: 0;
+		left:  0;
+	}
+}
+
 @include media("md") {
 	$margin: grid-margin("md");
 	$gutter: grid-gutter("md");

@@ -1,7 +1,7 @@
 {%
 	set page = {
 		title: "Abonnement — Les Jours",
-		class: "page-subscription fixed"
+		class: "page-subscription md-fixed lg-fixed"
 	}
 %}
 {% extends "partials/_layout.html" %}
