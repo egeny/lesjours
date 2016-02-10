@@ -66,8 +66,8 @@
 			"img":      "img/urvoasportrait.jpg",
 			"alt":      "",
 			"title":    "Jean-Jacques Urvoas",
-			"subtitle": "56 ans, député PS, contrôle l'état d'urgence",
-			"desc":     "Ancien « monsieur Sécurité » du Parti socialiste sous Nicolas Sarkozy, Jean-Jacques Urvoas préside la commission des lois de l’Assemblée nationale, chargée de contrôler l’application de l’état d’urgence. Pressenti deux fois au ministère de l’Intérieur, le député socialiste du Finistère reste pour l’instant la « doublure » parlementaire de Bernard Cazeneuve. Il incarne la conversion de la gauche aux politiques sécuritaires, tout en faisant preuve d’un légalisme appuyé, au nom de la balance des pouvoirs. Quelques semaines avant l’ouverture du vote au Parlement sur la réforme de la Constitution, Manuel Valls lui a confié la sensible mission de trouver une solution pour faire accepter la déchéance de nationalité aux parlementaires socialistes.",
+			"subtitle": "56 ans, ancien président de la commission des lois, il est devenu garde des Sceaux",
+			"desc":     "Depuis les attentats de novembre, le « monsieur Sécurité » du Parti socialiste est sur tous les fronts. Rapporteur de la loi sur l’état d’urgence, le 20 novembre, il en assure ensuite le contrôle et constate “l’essoufflement” des mesures dès la mi-janvier. Le gouvernement compte alors sur le président de la commission des lois, bosseur et diplomate, pour faire avaler la pilule de la déchéance de nationalité (à laquelle il ne croit pas lui-même). Quelques jours plus tard, ce proche de Manuel Valls est finalement appelé à rejoindre le gouvernement lorsque Christiane Taubira pose sa démission. Artisan de la loi renseignement, son nom est plutôt associé aux services de police qu’à la magistrature. Il rêvait de l’Intérieur, il est à la Justice. ",
 			"minor": true
 		},
 		{
@@ -113,5 +113,20 @@
 		{ "href": "#", "img": "img/un-perimetre-de-desolation-header.jpg" },
 		{ "href": "#", "img": "img/l-empreinte-de-la-peur-header.jpg" },
 		{ "href": "#", "img": "img/content-de-vous-avoir-revu-header.jpg" }
+	],
+
+	"documents": [
+		{
+			"id": "telechargements",
+			"title": "Téléchargements",
+			"icon": "download",
+			"items": [
+				{
+					"href": "",
+					"title": "",
+					"desc": ""
+				}
+			]
+		}
 	]
 }

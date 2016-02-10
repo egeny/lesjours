@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "making-of-college",
+
+	"number": 12,
+	"date": "2016-02-02T10:00+01:00",
+
+	"title": "« Pour se faire oublier dans une classe, il faut passer du temps »",
+	"intro": "Dans l'obsession Les années collège, le photographe Simon Lambert suit la 3e B du collège Aimé-Césaire. Il apporte un éclairage sur certaines de ses images.",
+	"lead":  "Lorsque la rédaction des <i>Jours</i> a rencontré Simon Lambert, ce dernier s’est déclaré à l’aise dans <q>les lieux fermés et avec les gamins.</q> Nous n’avons donc pas hésité à lui confier le reportage au long cours que nous menons au collège Aimé-Césaire à Paris avec la classe de 3e B.</q>",
+
+	"tags": ["Photographie", "Education", "Identité", "Mixité"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sebastien-calvet" },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/the-course-of-maths",
+		"last":  "episode:les-annees-college/making-of-college-lambert"
+	}
+}
