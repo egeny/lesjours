@@ -186,6 +186,35 @@
 {% endblock %}
 
 {% block content %}
+<?php if ($error) : ?>
+<p class="flash mh-1m sm-mh-0 style-meta">
+	<?php
+		foreach ($error as $name => $value) {
+			switch ($name) {
+				case 'plan': $value = 'de choisir une formule';
+				break;
+
+				case 'payment': $value = 'de choisir un mode de paiement';
+				break;
+
+				case 'accept': $value = 'd’accepter les conditions générales de vente';
+				break;
+
+				default: $value = 'de vérifier les champs';
+			}
+
+			$error[$name] = $value;
+		}
+
+		if (count($error) == 1) {
+			$error = implode(', ', $error);
+		} else {
+			$error = implode(', ', array_splice($error, 0, count($error) - 1)).' et '.end($error);
+		}
+	?>
+	Merci <?php echo $error; ?>.
+</p>
+<?php endif ?>
 <div class="container">
 	<div class="row h-100">
 		<div class="col h-100">

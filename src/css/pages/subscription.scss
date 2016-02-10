@@ -1,4 +1,23 @@
 /* @group Subscription */
+.page-subscription {
+	// FIXME
+	.flash {
+		background: $color-brand;
+		padding: 10px 0;
+		margin-bottom: 0;
+
+		position: absolute;
+		right: 0;
+		left:  0;
+		z-index: 10;
+
+		text-align: center;
+		text-transform: uppercase;
+
+		color: $color-white;
+	}
+}
+
 .subscription {
 	.default-content { padding-left: 34px; }
 
