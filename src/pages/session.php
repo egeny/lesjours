@@ -15,11 +15,19 @@
 		if ($user) {
 			// Generate a verification token and send a mail
 			$key = get_password_reset_key($user);
-			$headers = array();
+
+			// Prepare an email and send it
+			$subject = 'Vous avez oublié votre mot de passe';
+			$content = file_get_contents('emails/forgot.html');
+			$content = str_replace('mail=', 'mail='.urlencode($_POST['mail']), $content);
+			$content = str_replace('key=',  'key='.$key, $content);
+
+			$headers   = array();
 			$headers[] = 'MIME-Version: 1.0';
-			$headers[] = 'Content-type: text/html; charset=iso-8859-1';
-			$headers[] = 'From: Les Jours <contact@lesjours.fr>';
-			mail($_POST['mail'], 'Les Jours — j’ai oublié mon mot de passe', 'Tout va bien se passer, rendez vous ici : http://lesjours.fr/?mail='.urlencode($_POST['mail']).'&key='.$key.'#reset', implode("\r\n", $headers));
+			$headers[] = 'Content-type: text/html; charset=UTF-8';
+			$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+
+			mail($_POST['mail'], $subject, $content, implode("\r\n", $headers));
 
 			// Redirect to the referer and display the appropriate modal
 			die(header('Location: '.$_SERVER['HTTP_REFERER'].'#forgot-mailed'));
