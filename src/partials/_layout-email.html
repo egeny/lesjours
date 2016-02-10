@@ -1,3 +1,54 @@
+{% set base   = "http://lesjours.fr" %}
+{% set margin = 24 %}
+{%
+	set colors = {
+		brand:   "#C83E2C",
+		gray:    "#D6D6D6",
+		main:    "#414141",
+		warning: "#F90",
+		white:   "#FFF"
+	}
+%}
+{%
+	set styles = {
+		a:  "text-decoration: none; color: " + colors.brand + ";",
+		h1: "margin: 0; margin-bottom: " + margin + "px; text-align: center;",
+		h2: "margin: 0; margin-bottom: " + margin + "px; font-size: 16px; line-height: 1.25;",
+		hr: "border: 0 dotted #CCC; border-bottom-width: 1px; margin: 0; margin-bottom: " + margin + "px;",
+		p:  "margin:0; margin-bottom: " + margin + "px;",
+		ul: "padding: 0; padding-left: 1em; margin: 0; margin-bottom: " + margin + "px;",
+
+		"btn":         "background: " + colors.brand + "; width: 192px; padding: 1em 0; border: 4px solid " + colors.brand + "; display: inline-block; font-weight: bold; text-decoration: none; text-transform: uppercase; color: " + colors.white + ";",
+		"btn-reverse": "background: " + colors.white + "; color: " + colors.brand + ";",
+		"btn-rounded": "background: " + colors.brand + "; width: 48px; height: 48px; line-height: 48px; border-radius: 50%; display: inline-block; color: " + colors.white + ";",
+		"rect": "padding: " + margin * 0.75 + "px; border: 4px solid " + colors.gray + "; margin-bottom: " + margin * 1.5 + "px;",
+
+		"pa-0":  "padding: 0;",
+		"pl-1m": "padding-left: "  + margin + "px;",
+		"pr-1m": "padding-right: " + margin + "px;",
+
+		"ma-0":  "margin: 0;",
+		"mb-1m": "margin-bottom: " + margin + "px;",
+
+		"inline-block": "display: inline-block;",
+
+		"fw-bold":     "font-weight: bold;",
+		"text-center": "text-align: center;",
+
+		"color-brand":   "color: " + colors.brand   + ";",
+		"color-gray":    "color: " + colors.gray    + ";",
+		"color-main":    "color: " + colors.main    + ";",
+		"color-warning": "color: " + colors.warning + ";",
+		"color-white":   "color: " + colors.white   + ";"
+	}
+%}
+{% macro style(names) -%}
+	{% set rules = "" %}
+	{% for name in names|split(" ") %}
+		{% set rules = rules + " " + styles[name] %}
+	{% endfor %}
+	style="{{ rules|trim }}"
+{%- endmacro %}
 {%- block php %}{% endblock -%}
 <!DOCTYPE html>
 <html lang="fr">
@@ -5,7 +56,46 @@
 	<meta charset="UTF-8" />
 	<title>{{ page.title }}</title>
 </head>
-<body style="margin: 0">
-	{% block content %}{% endblock %}
+<body style="margin: 0; padding: {{ margin / 2 }}px {{ margin }}px {{ margin * 1.5 }}px; font-family: Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.5; color: {{ colors.main }}">
+	<div {{ style("pr-1m pl-1m") }}>
+		<h1 {{ style("h1") }}>
+			<a href="{{ base }}">
+				<img width="56" src="{{ base }}/img/logo-text.png" alt="Les Jours">
+			</a>
+		</h1>
+
+		{% block content %}{% endblock %}
+	</div>
+
+	<hr {{ style("hr") }}/>
+
+	<div {{ style("text-center") }}>
+		<p {{ style("p")}}>Au fil des jours</p>
+		<ul {{ style("ul pa-0") }}>
+			<li {{ style("inline-block") }}>
+				<a {{ style("btn-rounded") }} href="https://twitter.com/Lesjoursfr">
+					<img style="vertical-align: sub" width="16" src="{{ base }}/img/ui/twitter.png" alt="Twitter" />
+				</a>
+			</li>
+			<li {{ style("inline-block pl-1m pr-1m") }}>
+				<a {{ style("btn-rounded") }} href="https://www.facebook.com/LesJoursfr/">
+					<img style="vertical-align: sub" width="16" src="{{ base }}/img/ui/facebook.png" alt="Facebook" />
+				</a>
+			</li>
+			<li {{ style("inline-block") }}>
+				<a {{ style("btn-rounded") }} href="https://www.instagram.com/lesjoursfr/">
+					<img style="vertical-align: sub" width="16" src="{{ base }}/img/ui/instagram.png" alt="Instagram" />
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<hr {{ style("hr") }}/>
+
+	<div {{ style("text-center") }}>
+		<a href="{{ base }}">
+			<img width="52" src="{{ base }}/img/logo.png" alt="Les Jours" />
+		</a>
+	</div>
 </body>
 </html>
