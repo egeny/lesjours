@@ -174,15 +174,6 @@
 		}
 	],
 
-	"images": [
-		{ "href": "#", "img": "img/header-projet.jpg" },
-		{ "href": "#", "img": "img/header-pilote.jpg" },
-		{ "href": "#", "img": "img/header-obsession.jpg" },
-		{ "href": "#", "img": "img/header-navigation.jpg" },
-		{ "href": "#", "img": "img/header-combien.jpg" },
-		{ "href": "#", "img": "img/header-equipe.jpg" }
-	],
-
 	"places": [
 		{
 			"img":   "img/header-projet.jpg",
