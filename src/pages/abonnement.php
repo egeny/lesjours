@@ -63,29 +63,50 @@
 		unset($_GET['notification']); // Exclude for the hash computation
 		$hash  = signature($_GET);
 
-		$error = !$error && $hash != $_GET['HASH']      ? '1003'            : $error;
-		$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
-
-		if (!$error) {
+		if ($hash == $_GET['HASH']) {
 			$user_id = $_GET['CLIENTIDENT'];
-			$expire  = date('Y-m-d', strtotime('+'.$PLANS[get_user_meta($user_id, 'plan')[0]]['duration']));
+			$date    = date('Y-m-d H:i:s');
+			$plan    = get_user_meta($user_id, 'plan')[0];
 
-			// Update the user's account
-			update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
-			update_user_meta($user_id, 'expire',       $expire);
-			update_user_meta($user_id, 'subscription', date('Y-m-d H:i:s'));
-			update_user_meta($user_id, 'paid',         '1');
+			// Add a transaction trace (debugging purpose, should NOT be unique)
+			$transaction = add_user_meta($user_id, 'transactions', json_encode(array(
+				'date' => $date,
+				'_get' => $_GET
+			)));
 
-			// Prepare an email and send it
-			$subject = 'Confirmation de votre abonnement aux « Jours »';
-			$content = file_get_contents('emails/abonnement.html');
+			if ($_GET['EXECCODE'] == '0000') {
+				// Retrieve the global invoice number and increment it
+				$number  = intval(get_option('invoice_number', 0)) + 1;
 
-			$headers   = array();
-			$headers[] = 'MIME-Version: 1.0';
-			$headers[] = 'Content-type: text/html; charset=UTF-8';
-			$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+				// Add an invoice (warning: should NOT be unique, obviously)
+				add_user_meta($user_id, 'invoices', json_encode(array(
+					'date'        => $date,
+					'number'      => $number,
+					'plan'        => $plan,
+					'price'       => $PLANS[$plan]['price'],
+					'transaction' => $transaction
+				)));
 
-			mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
+				// Don't forget to update the invoice_number
+				update_option('invoice_number', $number);
+
+				// Update the user's account
+				update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
+				update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$PLANS[$plan]['duration'])));
+				update_user_meta($user_id, 'subscription', $date);
+				update_user_meta($user_id, 'paid',         '1');
+
+				// Prepare an email and send it
+				$subject = 'Confirmation de votre abonnement aux « Jours »';
+				$content = file_get_contents('emails/abonnement.html');
+
+				$headers   = array();
+				$headers[] = 'MIME-Version: 1.0';
+				$headers[] = 'Content-type: text/html; charset=UTF-8';
+				$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+
+				mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
+			}
 		}
 	}
 
