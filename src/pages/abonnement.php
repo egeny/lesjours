@@ -63,7 +63,7 @@
 		unset($_GET['notification']); // Exclude for the hash computation
 		$hash  = signature($_GET);
 
-		$error = !$error && $hash != $_GET['HASH']      ? 'hash'            : $error;
+		$error = !$error && $hash != $_GET['HASH']      ? '1003'            : $error;
 		$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 		if (!$error) {
@@ -97,7 +97,7 @@
 			unset($_GET['result']); // Exclude for the hash computation
 			$hash  = signature($_GET);
 
-			$error = !$error && $hash != $_GET['HASH']      ? 'hash'            : $error;
+			$error = !$error && $hash != $_GET['HASH']      ? '1003'            : $error;
 			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 			// Prefer redirecting to remove informations in the URL
@@ -218,7 +218,14 @@
 					<div class="md-ml-1c lg-ml-1c">
 						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("cross") }}</i>Erreur</h3>
 						<div class="default-content">
-							<p class="mt-0"><?php echo $_GET['result'] == 'hash' ? 'bad HASH' : $_GET['result'] ?></p>
+							<?php $code = intval($_GET['result']); ?>
+							<?php if ($code == 3) : ?>
+								<p class="mt-0">Votre transaction est en cours. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php elseif ($code > 3000 && !in_array($code, array(4017, 5001, 5002, 5004))) : ?>
+								<p class="mt-0">Suite à un incident de paiement (<?php echo $_GET['result'] ?>) votre transaction n'a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php else : ?>
+								<p class="mt-0">Suite à une erreur technique (<?php echo $_GET['result'] ?>) votre transaction n’a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php endif ?>
 						</div>
 					</div>
 				<?php endif ?>
