@@ -249,7 +249,7 @@
 			<div class="subscription h-100 overflow-auto">
 			<?php if ($state == 'redirect') : ?>
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Redirection vers le paiement</h2>
-				<form id="redirect" class="md-ml-1c lg-ml-1c" action="https://secure-test.be2bill.com/front/form/process.php" method="post">
+				<form id="redirect" class="md-ml-1c lg-ml-1c" action="https://secure-magenta1.be2bill.com/front/form/process" method="post">
 				<?php foreach ($hidden as $name => $value) : ?>
 					<input type="hidden" name="<?php echo strtoupper($name) ?>" value="<?php echo $value ?>" />
 				<?php endforeach ?>
