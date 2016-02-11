@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "la-decheance-a-devore",
+
+	"number": 6,
+	"date": "2016-02-11T14:00+01:00",
+
+	"title": "La déchéance a dévoré trop de «&nbsp;temps utile&nbsp;»",
+	"intro": "Mercredi, Franck Riester, député Les Républicains suivi par «&nbsp;Les Jours&nbsp;», a voté la réforme constitutionnelle, parce que «&nbsp;c'est la guerre&nbsp;».",
+	"lead":  "",
+
+	"tags": ["Politique", "", "", ""],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman"  },
+			{ "photo": "author:julien-muguet" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/symboles-contre-valeurs",
+		"last":  "episode:politique-annee-zero/la-decheance-a-devore"
+	}
+}
