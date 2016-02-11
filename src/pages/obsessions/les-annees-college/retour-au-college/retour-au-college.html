@@ -4,7 +4,15 @@
 
 <p>Nous avons voulu raconter l'endroit et le moment où tout se décide, mais aussi ce qu'il se passe dans la vie des adolescents durant cette année. Une classe de troisième dans un quartier populaire qui ne soit pas non plus un ghetto social, un collège classé REP (réseau d’éducation prioritaire) où subsiste une étincelle de mixité.</p>
 
-<p>Au collège Aimé-Césaire, dans le XVIIIe arrondissement de Paris, 52% des élèves sont boursiers. C’est beaucoup. À Paris, la moyenne est de 23% au collège. Sur les 24 élèves de la classe de 3e&nbsp;B que nous suivons, 8 sont de nationalité étrangère (chinoise, guinéenne, sri-lankaise, congolaise), 12 ont au moins un parent immigré. Une bonne partie d’entre eux est parfaitement bilingue. Un atout pour ces élèves que l'Education nationale, de la maternelle au bac, ignorera totalement. Dans la cour du collège, on croise aussi quelques enfants de bobos, qui commencent à investir ce quartier de La Chapelle en pleine rénovation, les familles résidant dans les nombreux logements sociaux du secteur (plus de 20&nbsp;% dans le quartier), des étrangers tout juste arrivés en France pour certains. À la fin de l’année, s’ils suivent les statistiques du collège, 82&nbsp;% des élèves de la classe auront leur brevet, un taux proche de la moyenne parisienne. Mais ils seront proportionnellement presque deux fois plus nombreux que les autres Parisiens à rejoindre une filière professionnelle l’an prochain. Un choix qu’ils redoutent souvent.</p>
+<p>Au <a href="https://www.ac-paris.fr/serail/jcms/s2_594019/accueil" data-mini="1">collège Aimé-Césaire</a>, dans le XVIIIe arrondissement de Paris, 52% des élèves sont boursiers. C’est beaucoup. À Paris, la moyenne est de 23% au collège. Sur les 24 élèves de la classe de 3e&nbsp;B que nous suivons, 8 sont de nationalité étrangère (chinoise, guinéenne, sri-lankaise, congolaise), 12 ont au moins un parent immigré. Une bonne partie d’entre eux est parfaitement bilingue. Un atout pour ces élèves que l'Education nationale, de la maternelle au bac, ignorera totalement. Dans la cour du collège, on croise aussi quelques enfants de bobos, qui commencent à investir ce quartier de La Chapelle en pleine rénovation, les familles résidant dans les nombreux logements sociaux du secteur (plus de 20&nbsp;% dans le quartier), des étrangers tout juste arrivés en France pour certains. À la fin de l’année, s’ils suivent les statistiques du collège, 82&nbsp;% des élèves de la classe auront leur brevet, un taux proche de la moyenne parisienne. Mais ils seront proportionnellement presque deux fois plus nombreux que les autres Parisiens à rejoindre une filière professionnelle l’an prochain. Un choix qu’ils redoutent souvent.</p>
+
+<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="https://www.ac-paris.fr/serail/jcms/s2_594019/accueil" />
+<span class="image"><img class="responsive" src="img/site-college.jpg" alt="" /></span>
+<p class="title">Aimé-Césaire</p>
+<p class="subtitle">Consulter le site du collège</p>
+</a>
+</aside>
 
 <figure>
 	<img src="img/retour-au-college-1.jpg" alt="" />
@@ -12,23 +20,12 @@
 </figure>
 
 {% set person = obsession.people[2] %}
-<p>Le collège Aimé-Césaire, en particulier <a href="#{{ person.href }}" data-mini="1">Jean-Louis Terrana</a>, et {% set person = obsession.people[3] %} <a href="#{{ person.href }}" data-mini="2">Pascale Guillemin</a>, 
-principal et principale adjointe, {% set person = obsession.people[0] %} <a href="#{{ person.href }}" data-mini="3">Antoine Labaere</a>, professeur d’histoire-géographie et professeur principal des 3e&nbsp;B, ont accepté de nous ouvrir leurs portes pour cette expérience journalistique un peu particulière. Les enseignants et les élèves, avec l'accord des parents, de nous faire rentrer dans leurs salles de classe, de nous laisser traîner dans les couloirs, en salle des profs, dans la cour de récré…</p>
+<p>Le collège Aimé-Césaire, en particulier <a href="#{{ person.href }}" data-mini="2">Jean-Louis Terrana</a>, et {% set person = obsession.people[3] %} <a href="#{{ person.href }}" data-mini="3">Pascale Guillemin</a>, 
+principal et principale adjointe, {% set person = obsession.people[0] %} <a href="#{{ person.href }}" data-mini="4">Antoine Labaere</a>, professeur d’histoire-géographie et professeur principal des 3e&nbsp;B, ont accepté de nous ouvrir leurs portes pour cette expérience journalistique un peu particulière. Les enseignants et les élèves, avec l'accord des parents, de nous faire rentrer dans leurs salles de classe, de nous laisser traîner dans les couloirs, en salle des profs, dans la cour de récré…</p>
 
 <p>Durant toute cette année scolaire, nous allons raconter le parcours de ces élèves, leurs doutes, leurs envies. Nous parlerons du brevet, de l'orientation mais aussi des rapports entre filles et garçons, de leur perception de l'actualité, de la vie d'ados, du travail des enseignants, de la réforme du collège en cours et même de Rihanna.</p>
 
 {% set person = obsession.people[2] %}
-{{
-	mini({
-		number: 1,
-		img: "/obsessions/" + obsession.href + "/" + person.img,
-		alt:      person.alt,
-		href:     "#" + person.href,
-		title:    person.title,
-		subtitle: person.subtitle
-	})
-}}
-{% set person = obsession.people[3] %}
 {{
 	mini({
 		number: 2,
@@ -39,10 +36,21 @@ principal et principale adjointe, {% set person = obsession.people[0] %} <a href
 		subtitle: person.subtitle
 	})
 }}
-{% set person = obsession.people[0] %}
+{% set person = obsession.people[3] %}
 {{
 	mini({
 		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[0] %}
+{{
+	mini({
+		number: 4,
 		img: "/obsessions/" + obsession.href + "/" + person.img,
 		alt:      person.alt,
 		href:     "#" + person.href,

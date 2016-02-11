@@ -69,13 +69,6 @@
 		}
 	],
 
-	"images": [
-		{ "href": "#", "img": "img/houille-les-ecolos-header.jpg" },
-		{ "href": "#", "img": "img/la-cop-passe-les-entreprises-carburent-header.jpg" },
-		{ "href": "#", "img": "img/la-pantoufle-de-vert-header.jpg" },
-		{ "href": "#", "img": "img/le-charbon-l-ennemi-utile-header.jpg" }
-	],
-
 	"soundtrack": [
 		{
 			"id": "ambiances",

@@ -106,27 +106,5 @@
 			"desc": "Brahim vit depuis toujours à Echirolles, en banlieue de Grenoble. Dans sa jeunesse, ses « conneries » (du trafic de stupéfiants) l'ont conduit en prison, une dizaine d'années au total. Le ministère de l'Intérieur, qui le trouve « radicalisé », l'a perquisitionné puis assigné à résidence. Ce maçon intérimaire et père de deux petites filles se définit comme « musulman pratiquant », « de gauche ». Brahim pointe trois fois par jour au commissariat de Grenoble. Il condamne sans ambiguïté les attentats de novembre et conteste le traitement qui lui est réservé.",
 			"minor": true
 		}
-	],
-
-	"images": [
-		{ "href": "#", "img": "img/vendredi-ou-la-nuit-sauvage-header.jpg" },
-		{ "href": "#", "img": "img/un-perimetre-de-desolation-header.jpg" },
-		{ "href": "#", "img": "img/l-empreinte-de-la-peur-header.jpg" },
-		{ "href": "#", "img": "img/content-de-vous-avoir-revu-header.jpg" }
-	],
-
-	"documents": [
-		{
-			"id": "telechargements",
-			"title": "Téléchargements",
-			"icon": "download",
-			"items": [
-				{
-					"href": "",
-					"title": "",
-					"desc": ""
-				}
-			]
-		}
 	]
 }
