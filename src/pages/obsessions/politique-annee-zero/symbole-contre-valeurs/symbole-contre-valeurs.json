@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "symbole-contre-valeurs",
+
+	"number": 5,
+	"date": "2016-02-05T10:00+01:00",
+
+	"title": "Symbole contre valeurs",
+	"intro": "Ultimes tentatives pour amender la réforme constitutionnelle. Avec un mot partagé entre élus pro et anti déchéance : unité.",
+	"lead":  "",
+
+	"tags": ["Politique", "", "", ""],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman"  },
+			{ "photo": "author:albert-facelly" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/ca-va-je-suis-toujours-vivant",
+		"last":  "episode:politique-annee-zero/symboles-contre-valeurs"
+	}
+}

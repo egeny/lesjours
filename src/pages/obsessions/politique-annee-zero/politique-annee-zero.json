@@ -10,7 +10,11 @@
 	"desc": "<p>Après le choc des régionales, plus rien ne devait être comme avant. A gauche comme à droite. Mais dans un climat de défiance généralisée, qui l’emportera entre le vieux monde politique et ceux qui voudraient le changer ?</p><p>« Les Jours » racontent le quotidien de trois députés nouvelle génération pris entre désirs de renouvellement et habituels compromis.</p>",
 
 	"episodes": [
-		"episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire"
+		"episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"episode:politique-annee-zero/romagnan-assemblee",
+		"episode:politique-annee-zero/zig-zags-dans-les-tetes-a-l-assemblee",
+		"episode:politique-annee-zero/ca-va-je-suis-toujours-vivant",
+		"episode:politique-annee-zero/symbole-contre-valeurs"
 	],
 
 	"people": [
@@ -20,7 +24,7 @@
 			"alt":      "",
 			"title":    "Barbara Romagnan",
 			"subtitle": "41 ans, députée PS anti-état d'urgence",
-			"desc":     "Barbara Romagnan est une personnalité atypique dans le milieu politique. Femme, élue députée à 38 ans en 2012, elle est docteure en sciences politiques et a été enseignante. Cela imprègne sa manière de penser et de s’exprimer : elle formule régulièrement ses doutes et les assume, ce qui est plutôt rare dans l’arène politique. Entre loyauté au PS dont elle est une militante depuis vingt ans et libre arbitre, elle essaie de tracer sa voie. Elle se range parmi les rénovateurs, on l’étiquette « frondeuse ». Souvent minoritaire, elle dit ne pas chercher à contester l’autorité. Elle a voté non au maintien de l’état d’urgence (seuls six députés ont fait ce choix) et ne décolère pas de la proposition de la déchéance de nationalité qu’elle juge honteuse. Barbara Romagnan fait également partie des parlementaires que Les Jours suivent dans l’obsession Politique année zéro.",
+			"desc":     "Elue pour la première fois en 2012 à l’Assemblée nationale, dans la 1ère circonscription du Doubs, elle a aussitôt fait oeuvre de totale transparence en publiant son usage de la réserve parlementaire et des émoluments liés à sa fonction. Docteure en science politique, elle a enseigné et débuté en politique à Lyon. Critique vis-à-vis du gouvernement, soucieuse de renouveler les pratiques politiques et de tenir les engagements pris lors des campagnes électorales, elle a rejoint le groupe des “frondeurs” du PS. Elle est l’une des six députés à avoir voté en novembre 2015 contre la prolongation de l’état d’urgence et ne manque jamais une occasion d’expliquer ses choix à ses électeurs en circonscription. Barbara Romagnan est donc l’une des députés que Les Jours ont choisi de suivre dans l'obsession Politique année zéro.",
 			"minor": true
 		},
 		{
@@ -28,8 +32,8 @@
 			"img":      "img/olivier-faure.jpg",
 			"alt":      "",
 			"title":    "Olivier Faure",
-			"subtitle": "X ans, député PS de Seine-et-Marne",
-			"desc":     "Olivier Faure",
+			"subtitle": "47 ans, député PS de Seine-et-Marne",
+			"desc":     "Elu pour la première fois à l’Assemblée nationale en 2012, dans la 11e circonscription de Seine-et-Marne, Olivier Faure est un habitué des lieux pour avoir été collaborateur d’un député dès 1991, puis secrétaire général du groupe PS en 2007. Il a par ailleurs été directeur de cabinet adjoint (2000-2007) de François Hollande alors premier secrétaire du Parti socialiste. Né d’une mère vietnamienne et d’un père français, Olivier Faure a, sur le papier, le pedigree d’un pur apparatchik. Fin connaisseur de la politique, des rouages du pouvoir et de tous les acteurs qui peuplent aujourd’hui l’Elysée, Matignon et les ministères, il est un élu loyal mais a toujours su faire preuve d’une totale indépendance d’esprit pour défendre l’idée qu’il se fait de la gauche. Olivier Faure est donc l’un députés que Les Jours ont choisi de suivre dans l'obsession Politique année zéro.",
 			"minor": true
 		},
 		{
@@ -37,8 +41,8 @@
 			"img":      "img/franck-riester.jpg",
 			"alt":      "",
 			"title":    "Franck Riester",
-			"desc":     "X ans, députés LR ",
-			"subtitle": "Franck Riester",
+			"desc":     "Franck Riester est député de la 5e circonscription de Seine-et-Marne et maire de Coulommiers. Elu à l’Assemblée nationale pour la première fois en 2007, il n’a jamais abdiqué sur ses convictions même quand elles étaient contraires à la ligne de sa formation politique. Ce fut le cas avec la loi sur le mariage pour tous, qu’il a votée. Sans jamais mettre en avant sa vie privée, il assume son homosexualité et a conservé une vie professionnelle en dehors de la politique, comme concessionnaire automobile. Porte-parole adjoint de la campagne présidentielle 2012 de Nicolas Sarkozy, il est aujourd’hui proche de Bruno Le Maire, dont il soutient la candidature à la primaire de la droite. Franck Riester est donc l’un des députés que Les Jours ont choisi de suivre dans l'obsession Politique année zéro.",
+			"subtitle": "42 ans, député Les Républicains",
 			"minor": true
 		}
 	]

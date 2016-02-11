@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "ca-va-je-suis-toujours-vivant",
+
+	"number": 4,
+	"date": "2016-02-03T10:00+01:00",
+
+	"title": "«&nbsp;Ça va, je suis toujours vivant, j’ai mes deux mains&nbsp;»",
+	"intro": "Alors que l’exécutif est embourbé, le député PS Olivier Faure, hostile à la déchéance, tente de sauver l’unité de la gauche… ou ce qu’il en reste.",
+	"lead":  "Ces jours-ci ressemblent « à une guerre des nerfs », raconte Olivier Faure, attablé devant un jus, au Bourbon, café cossu proche de l’Assemblée nationale qui accueille les rendez-vous des politiques.",
+
+	"tags": ["Politique"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman"  },
+			{ "photo": "author:albert-facelly" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/zig-zags-dans-les-tetes-a-l-assemblee",
+		"next":  "episode:politique-annee-zero/symbole-contre-valeurs",
+		"last":  "episode:politique-annee-zero/symbole-contre-valeurs"
+	}
+}
