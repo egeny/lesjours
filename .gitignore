@@ -3,6 +3,9 @@ dist/
 src/img/ui.svg
 **/*.min.js
 
+# Ignore sensitive files
+src/pages/_env.php
+
 # Avoid versionning generated/formatted customer data
 scripts/*.csv
 scripts/*.sql
