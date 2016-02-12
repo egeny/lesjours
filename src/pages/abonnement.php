@@ -94,7 +94,6 @@
 				update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
 				update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$PLANS[$plan]['duration'])));
 				update_user_meta($user_id, 'subscription', $date);
-				update_user_meta($user_id, 'paid',         '1');
 
 				// Prepare an email and send it
 				$subject = 'Confirmation de votre abonnement aux « Jours »';

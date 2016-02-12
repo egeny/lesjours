@@ -85,10 +85,10 @@
 		// TODO: redirect to a page if not paid (or pending)
 		// TODO: redirect to a page if expired
 
-		// Allow if the user has paid and its subscription isn't expired
-		if ($meta['paid'] == 1 && strtotime($meta['expire']) > time()) {
 			// Make a sub-request so Apache will handle the request (see .htaccess)
 
+		// Allow if the user if its subscription isn't expired
+		if (strtotime($meta['expire']) > time()) {
 			$uri  = $_SERVER['REQUEST_URI'];
 			$info = apache_lookup_uri($uri);
 

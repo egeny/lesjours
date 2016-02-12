@@ -22,7 +22,6 @@
 	);
 
 	if (isset($_GET['unsubscribe'])) {
-		delete_user_meta($current_user->ID, 'paid');
 		delete_user_meta($current_user->ID, 'plan');
 		delete_user_meta($current_user->ID, 'expire');
 		delete_user_meta($current_user->ID, 'subscription');
