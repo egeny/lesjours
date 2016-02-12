@@ -164,41 +164,54 @@
 			}
 		}
 
+		// If received data is fine, create a new user or use the current one
 		if (!$error) {
-			// Try to create a new user
-			$user_id = wp_insert_user(array(
-				'user_email' => $data['mail'],
-				'user_login' => $data['mail'],
-				'user_pass'  => $data['password'],
-				'first_name' => $data['firstname'],
-				'last_name'  => $data['name']
-			));
+			if ($current_user->ID) {
+				$user_id = $current_user->ID;
+				$meta = get_all_user_meta($user_id);
 
-			$error = is_wp_error($user_id) ? array('account' => $user_id) : null;
+				// Fill $data with some informations for the payment service
+				$data['name']      = $meta['last_name'];
+				$data['firstname'] = $meta['first_name'];
+				$data['mail']      = $current_user->user_email;
+			} else {
+				// Try to create a new user
+				$user_id = wp_insert_user(array(
+					'user_email' => $data['mail'],
+					'user_login' => $data['mail'],
+					'user_pass'  => $data['password'],
+					'first_name' => $data['firstname'],
+					'last_name'  => $data['name']
+				));
 
-			if (!$error) {
-				// Add additionnal metadata
-				foreach (array('plan', 'address', 'zip', 'city', 'country', 'payment') as $field) {
-					add_user_meta($user_id, $field, $data[$field], true);
-				}
+				$error  = is_wp_error($user_id) ? array('account' => $user_id) : null;
+				$fields = array('address', 'zip', 'city', 'country');
+			}
+		}
 
-				// We may now log-in the user
-				wp_set_auth_cookie($user_id, true, false);
+		// Check if an error occured while creating or finding the user
+		if (!$error) {
+			// Add additionnal metadata
+			foreach (array_merge(array('plan', 'payment'), $fields ? $fields : array()) as $field) {
+				update_user_meta($user_id, $field, $data[$field]);
+			}
 
-				if ($data['payment'] == 'card') {
-					// Complete the payload for the payment service
-					$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
-					$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
-					$hidden['clientemail']  = $data['mail'];
-					$hidden['clientident']  = $user_id;
-					$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
-					$hidden['hash']         = signature($hidden);
+			// Look the user if not already logged-in
+			wp_set_auth_cookie($user_id, true, false);
 
-					// Generate an hidden form containing the needed informations for the payment service
-					$state = 'redirect';
-				} else {
-					// TODO: bank
-				}
+			if ($data['payment'] == 'card') {
+				// Complete the payload for the payment service
+				$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
+				$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
+				$hidden['clientemail']  = $data['mail'];
+				$hidden['clientident']  = $user_id;
+				$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
+				$hidden['hash']         = signature($hidden);
+
+				// Generate an hidden form containing the needed informations for the payment service
+				$state = 'redirect';
+			} else {
+				// TODO: bank
 			}
 		}
 	} // end of if (!empty($_POST))
