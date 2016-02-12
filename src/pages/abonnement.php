@@ -305,7 +305,7 @@
 									<span class="name">Jouriste</span>
 									<span class="desc">1 €/mois pendant le pilote*</span>
 									<small>Sans engagement de durée</small>
-									<input class="sr" type="radio" name="plan" value="jouriste" required <?php if ($data['plan'] == 'jouriste') : ?>checked <?php endif ?>/>
+									<input class="sr" type="radio" name="plan" value="jouriste" required <?php if (isset($data['plan']) && $data['plan'] == 'jouriste') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
 							</li>
@@ -315,7 +315,7 @@
 									<span class="name">Jouriste cash</span>
 									<span class="desc">Un an à compter de la fin du pilote*</span>
 									<small>Sans engagement de durée</small>
-									<input class="sr" type="radio" name="plan" value="jouriste-cash" required <?php if ($data['plan'] == 'jouriste-cash') : ?>checked <?php endif ?>/>
+									<input class="sr" type="radio" name="plan" value="jouriste-cash" required <?php if (isset($data['plan']) && $data['plan'] == 'jouriste-cash') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
 							</li>
@@ -326,7 +326,7 @@
 									<span class="desc">1 €/mois pendant le pilote*</span>
 									<small>Sans engagement de durée</small>
 									<small>Étudiant, chômeur, fauché</small>
-									<input class="sr" type="radio" name="plan" value="jouriste-desargente" required <?php if ($data['plan'] == 'jouriste-desargente') : ?>checked <?php endif ?>/>
+									<input class="sr" type="radio" name="plan" value="jouriste-desargente" required <?php if (isset($data['plan']) && $data['plan'] == 'jouriste-desargente') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
 							</li>
@@ -346,39 +346,38 @@
 						<legend class="mb-2g style-meta-large relative">Mes coordonnées</legend>
 						<div class="field">
 							<label for="name">Nom</label>
-							<input id="name" class="input check md-white-check lg-white-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if ($data['name']) { echo 'value="'.$data['name'].'" '; } ?>required />
-							<?php if ($error['name']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="name" class="input check md-white-check lg-white-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if (isset($data['name'])) { echo 'value="'.$data['name'].'" '; } ?>required />
+							<?php if (isset($error['name'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="firstname">Prénom</label>
-							<input id="firstname" class="input check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if ($data['firstname']) { echo 'value="'.$data['firstname'].'" '; } ?>required />
-							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="firstname" class="input check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if (isset($data['firstname'])) { echo 'value="'.$data['firstname'].'" '; } ?>required />
+							<?php if (isset($error['firstname'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="subscription-mail">Adresse e-mail</label>
-							<input id="subscription-mail" class="input check md-white-check lg-white-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['mail']) { echo 'value="'.$data['mail'].'" '; } ?>required />
-							<?php if ($error['mail'])    : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
-							<?php if ($error['account']) : ?><span class="error">Ce compte existe</span><?php endif ?>
+							<input id="subscription-mail" class="input check md-white-check lg-white-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if (isset($data['mail'])) { echo 'value="'.$data['mail'].'" '; } ?>required />
+							<?php if (isset($error['mail'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="subscription-password">Mot de passe</label>
-							<input id="subscription-password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
-							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="subscription-password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if (isset($data['password'])) { echo 'value="'.$data['password'].'" '; } ?>required />
+							<?php if (isset($error['password'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="address">Adresse</label>
-							<input id="address" class="input check md-white-check lg-white-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if ($data['address']) { echo 'value="'.$data['address'].'" '; } ?>required />
-							<?php if ($error['address']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="address" class="input check md-white-check lg-white-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if (isset($data['address'])) { echo 'value="'.$data['address'].'" '; } ?>required />
+							<?php if (isset($error['address'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="zip">Code postal</label>
-							<input id="zip" class="input check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
-							<?php if ($error['zip']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="zip" class="input check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if (isset($data['zip'])) { echo 'value="'.$data['zip'].'" '; } ?>required />
+							<?php if (isset($error['zip'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="city">Ville</label>
-							<input id="city" class="input check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
-							<?php if ($error['city']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="city" class="input check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if (isset($data['city'])) { echo 'value="'.$data['city'].'" '; } ?>required />
+							<?php if (isset($error['city'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="country">Pays</label>
@@ -398,7 +397,7 @@
 						</div>
 						<div class="field row mb-1g">
 							<label class="col md-w-auto pr-2g pl-0 color-dark">
-								<input class="radio" type="radio" name="payment" value="bank" <?php if ($data['payment'] == 'bank') : ?>checked <?php endif ?>required disabled />
+								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required disabled />
 								<span class="radio"></span>
 								Prélèvement
 							</label>
@@ -412,7 +411,7 @@
 					</fieldset>
 					<div>
 						<label class="mb-2g relative style-meta text-upper">
-							<input class="checkbox" type="checkbox" name="accept" <?php if ($data['accept']) : ?>checked <?php endif ?>required>
+							<input class="checkbox" type="checkbox" name="accept" <?php if (isset($data['accept']) && $data['accept']) : ?>checked <?php endif ?>required>
 							<span class="checkbox"></span>
 							J’accepte les conditions générales de vente. <a class="color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
 							<!-- TODO: error message -->
