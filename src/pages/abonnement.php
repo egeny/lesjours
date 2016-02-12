@@ -1,7 +1,7 @@
 {%
 	set page = {
 		title: "Abonnement — Les Jours",
-		class: "page-subscription"
+		class: "page-subscription md-fixed lg-fixed"
 	}
 %}
 {% extends "partials/_layout.html" %}
@@ -63,21 +63,60 @@
 		unset($_GET['notification']); // Exclude for the hash computation
 		$hash  = signature($_GET);
 
-		$error = !$error && $hash != $_GET['HASH']      ? 'hash'            : $error;
-		$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
-
-		if (!$error) {
+		if ($hash == $_GET['HASH']) {
 			$user_id = $_GET['CLIENTIDENT'];
-			$expire  = date('Y-m-d', strtotime('+'.$PLANS[get_user_meta($user_id, 'plan')[0]]['duration']));
+			$date    = date('Y-m-d H:i:s');
+			$plan    = get_user_meta($user_id, 'plan')[0];
 
-			// Update the user's account
-			update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
-			update_user_meta($user_id, 'expire',       $expire);
-			update_user_meta($user_id, 'subscription', date('Y-m-d H:i:s'));
-			update_user_meta($user_id, 'paid',         '1');
+			// Add a transaction trace (debugging purpose, should NOT be unique)
+			$transaction = add_user_meta($user_id, 'transactions', json_encode(array(
+				'date' => $date,
+				'_get' => $_GET
+			)));
 
-			// FIXME: what does the email needs to contains?
-			mail($_GET['CLIENTEMAIL'], 'Les Jours — activation de votre compte', 'Votre paiement a bien été reçu, vous êtes maintenant un jouriste. Merci.', 'From: contact@lesjours.fr');
+			if ($_GET['EXECCODE'] == '0000') {
+				// Retrieve the global invoice number and increment it
+				$number  = intval(get_option('invoice_number', 0)) + 1;
+
+				// Add an invoice (warning: should NOT be unique, obviously)
+				add_user_meta($user_id, 'invoices', json_encode(array(
+					'date'        => $date,
+					'number'      => $number,
+					'plan'        => $plan,
+					'price'       => $PLANS[$plan]['price'],
+					'transaction' => $transaction
+				)));
+
+				// Don't forget to update the invoice_number
+				update_option('invoice_number', $number);
+
+				// Update the user's account
+				update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
+				update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$PLANS[$plan]['duration'])));
+				update_user_meta($user_id, 'subscription', $date);
+				update_user_meta($user_id, 'paid',         '1');
+
+				// Prepare an email and send it
+				$subject = 'Confirmation de votre abonnement aux « Jours »';
+				$content = file_get_contents('emails/abonnement.html');
+
+				$headers   = array();
+				$headers[] = 'MIME-Version: 1.0';
+				$headers[] = 'Content-type: text/html; charset=UTF-8';
+				$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+
+				// Prevent displaying an error message (see below)
+				@mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
+			} else {
+				// If something went bad, remove some meta (WIP)
+				delete_user_meta($user_id, 'plan');
+				delete_user_meta($user_id, 'payment');
+			}
+
+			// As stated in the documentation, the payment service waits for "OK"
+			// Otherwise, it will re-send a notification
+			// See https://developer.be2bill.com/callbacks#c3
+			die('OK');
 		}
 	}
 
@@ -89,7 +128,7 @@
 			unset($_GET['result']); // Exclude for the hash computation
 			$hash  = signature($_GET);
 
-			$error = !$error && $hash != $_GET['HASH']      ? 'hash'            : $error;
+			$error = !$error && $hash != $_GET['HASH']      ? '1003'            : $error;
 			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 			// Prefer redirecting to remove informations in the URL
@@ -105,7 +144,7 @@
 		// Sanitize and check received data
 		foreach ($data as $field => $value) {
 			switch ($field) {
-				case 'email':
+				case 'mail':
 					$value = sanitize_email($_POST[$field]);
 					$value = is_email($value) ? $value : null;
 				break;
@@ -136,8 +175,8 @@
 		if (!$error) {
 			// Try to create a new user
 			$user_id = wp_insert_user(array(
-				'user_email' => $data['email'],
-				'user_login' => $data['email'],
+				'user_email' => $data['mail'],
+				'user_login' => $data['mail'],
 				'user_pass'  => $data['password'],
 				'first_name' => $data['firstname'],
 				'last_name'  => $data['name']
@@ -151,9 +190,6 @@
 					add_user_meta($user_id, $field, $data[$field], true);
 				}
 
-				// Mark as "unpaid" for now
-				add_user_meta($user_id, 'paid', '0', true);
-
 				// We may now log-in the user
 				wp_set_auth_cookie($user_id, true, false);
 
@@ -161,7 +197,7 @@
 					// Complete the payload for the payment service
 					$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
 					$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
-					$hidden['clientemail']  = $data['email'];
+					$hidden['clientemail']  = $data['mail'];
 					$hidden['clientident']  = $user_id;
 					$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
 					$hidden['hash']         = signature($hidden);
@@ -178,13 +214,42 @@
 {% endblock %}
 
 {% block content %}
+<?php if ($error) : ?>
+<p class="flash mh-1m sm-mh-0 style-meta">
+	<?php
+		foreach ($error as $name => $value) {
+			switch ($name) {
+				case 'plan': $value = 'de choisir une formule';
+				break;
+
+				case 'payment': $value = 'de choisir un mode de paiement';
+				break;
+
+				case 'accept': $value = 'd’accepter les conditions générales de vente';
+				break;
+
+				default: $value = 'de vérifier les champs';
+			}
+
+			$error[$name] = $value;
+		}
+
+		if (count($error) == 1) {
+			$error = implode(', ', $error);
+		} else {
+			$error = implode(', ', array_splice($error, 0, count($error) - 1)).' et '.end($error);
+		}
+	?>
+	Merci <?php echo $error; ?>.
+</p>
+<?php endif ?>
 <div class="container">
-	<div class="row full-height">
-		<div class="col full-height">
-			<div class="subscription full-height overflow-auto">
+	<div class="row h-100">
+		<div class="col h-100">
+			<div class="subscription h-100 overflow-auto">
 			<?php if ($state == 'redirect') : ?>
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Redirection vers le paiement</h2>
-				<form id="redirect" class="md-ml-1c lg-ml-1c" action="https://secure-test.be2bill.com/front/form/process.php" method="post">
+				<form id="redirect" class="md-ml-1c lg-ml-1c" action="https://secure-magenta1.be2bill.com/front/form/process" method="post">
 				<?php foreach ($hidden as $name => $value) : ?>
 					<input type="hidden" name="<?php echo strtoupper($name) ?>" value="<?php echo $value ?>" />
 				<?php endforeach ?>
@@ -204,13 +269,20 @@
 						</div>
 					</div>
 					<div class="mh-auto md-w-4c lg-w-4c">
-						<a class="btn-primary btn-brand full-width" href="/">Voir la une</a>
+						<a class="btn-primary btn-brand w-100" href="/">Voir la une</a>
 					</div>
 				<?php else : ?>
 					<div class="md-ml-1c lg-ml-1c">
 						<h3 class="mb-1g relative style-meta-large"><i class="legend-before color-brand">{{ icon("cross") }}</i>Erreur</h3>
 						<div class="default-content">
-							<p class="mt-0"><?php echo $_GET['result'] == 'hash' ? 'bad HASH' : $_GET['result'] ?></p>
+							<?php $code = intval($_GET['result']); ?>
+							<?php if ($code == 3) : ?>
+								<p class="mt-0">Votre transaction est en cours. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php elseif ($code > 3000 && !in_array($code, array(4017, 5001, 5002, 5004))) : ?>
+								<p class="mt-0">Suite à un incident de paiement (<?php echo $_GET['result'] ?>) votre transaction n'a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php else : ?>
+								<p class="mt-0">Suite à une erreur technique (<?php echo $_GET['result'] ?>) votre transaction n’a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+							<?php endif ?>
 						</div>
 					</div>
 				<?php endif ?>
@@ -232,8 +304,8 @@
 								<label>
 									<span class="price">9<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois<sup>*</sup></span></span></span>
 									<span class="name">Jouriste</span>
-									<span class="desc">Sans engagement de durée*</span>
-									<small>1 €/mois pendant la version pilote</small>
+									<span class="desc">1 €/mois pendant le pilote*</span>
+									<small>Sans engagement de durée</small>
 									<input class="sr" type="radio" name="plan" value="jouriste" required <?php if ($data['plan'] == 'jouriste') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
@@ -242,8 +314,8 @@
 								<label>
 									<span class="price">90<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par an<sup>*</sup></span></span></span>
 									<span class="name">Jouriste cash</span>
-									<span class="desc">Sans engagement de durée*</span>
-									<small>Un an à compter de la fin de la version pilote</small>
+									<span class="desc">Un an à compter de la fin du pilote*</span>
+									<small>Sans engagement de durée</small>
 									<input class="sr" type="radio" name="plan" value="jouriste-cash" required <?php if ($data['plan'] == 'jouriste-cash') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
@@ -252,8 +324,8 @@
 								<label>
 									<span class="price">5<span class="sr"> </span><span class="currency"><span>€</span><span class="sr"> </span><span>par mois<sup>*</sup></span></span></span>
 									<span class="name">Jouriste désargenté</span>
-									<span class="desc">Sans engagement de durée*</span>
-									<small>1 €/mois pendant la version pilote</small>
+									<span class="desc">1 €/mois pendant le pilote*</span>
+									<small>Sans engagement de durée</small>
 									<small>Étudiant, chômeur, fauché</small>
 									<input class="sr" type="radio" name="plan" value="jouriste-desargente" required <?php if ($data['plan'] == 'jouriste-desargente') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
@@ -284,14 +356,14 @@
 							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
-							<label for="email">Adresse e-mail</label>
-							<input id="email" class="input check md-white-check lg-white-check" name="email" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['email']) { echo 'value="'.$data['email'].'" '; } ?>required />
-							<?php if ($error['email'])   : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<label for="subscription-mail">Adresse e-mail</label>
+							<input id="subscription-mail" class="input check md-white-check lg-white-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['mail']) { echo 'value="'.$data['mail'].'" '; } ?>required />
+							<?php if ($error['mail'])    : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 							<?php if ($error['account']) : ?><span class="error">Ce compte existe</span><?php endif ?>
 						</div>
 						<div class="field">
-							<label for="password">Mot de passe</label>
-							<input id="password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
+							<label for="subscription-password">Mot de passe</label>
+							<input id="subscription-password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
 							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">

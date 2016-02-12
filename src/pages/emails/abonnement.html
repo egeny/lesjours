@@ -1,0 +1,49 @@
+{% set page = { title: "Les Jours, bonjour !" } %}
+{% extends "partials/_layout-email.html" %}
+
+{% block content %}
+<h2 {{ style("h2") }}>Les Jours, bonjour !</h2>
+
+<p {{ style("p") }}>Eh bien voilà, vous êtes désormais jouriste. Toute l’équipe des Jours vous remercie et vous souhaite la bienvenue sur notre site.</p>
+
+<p {{ style("p") }}>Vous pouvez désormais aller visiter Les Jours et explorer nos premières obsessions.</p>
+
+<div {{ style("mb-1m text-center") }}>
+	<a {{ style("btn") }} href="{{ base }}/obsessions/les-jours-c-quoi/">Découvrir les Jours</a>
+</div>
+
+<ul {{ style("ul color-brand") }}>
+	<li {{ style("mb-1m") }}><span {{ style("color-main") }}><strong>Alice Géraud</strong> passe une année scolaire dans une classe de 3e d’un collège du nord de Paris, reportage au long et au fond de la classe (à côté du radiateur).</span></li>
+	<li {{ style("mb-1m") }}><span {{ style("color-main") }}><strong>Nicolas Cori</strong>, vous ramène dans les <a {{ style("a") }} href="{{ base }}/obsessions/#good-com-bad-cop">coulisses de la Cop 21</a> pour une séance de greenwashing qui devrait vous faire tousser, et pas seulement à cause des particules de charbon.</span></li>
+	<li {{ style("mb-1m") }}><span {{ style("color-main") }}><strong>Charlotte Rotman et Camille Polloni</strong>, elles, racontent la <a {{ style("a") }} href="{{ base }}/obsessions/#treize-novembre">France de l’après 13 novembre</a>, dans un récit où s’entrecroisent riverains et victimes des attentats, députés en état d’urgence et assignés à résidence.</span></li>
+	<li {{ style("mb-1m") }}><span {{ style("color-main") }}><strong>Les Garriberts</strong>, eux, seront vos guides de survie sur le chemin de la <a {{ style("a") }} href="{{ base }}/obsessions/#l-empire">razzia que mène Vincent Bolloré sur Canal+</a>.</span></li>
+</ul>
+
+<p {{ style("p") }}><strong>Vous pouvez aussi aller compléter votre profil</strong> dans Mes Jours, la zone consacrée aux abonnés.</p>
+
+<div {{ style("mb-1m text-center") }}>
+	<a {{ style("btn btn-reverse") }} href="{{ base }}/mon-compte.html">Éditer mon profil</a>
+</div>
+
+<div {{ style("rect") }}>
+	<p {{ style("p") }}><strong {{ style("color-warning") }}>Les Jours sont actuellement dans une phase de test</strong> et vous comptez parmi nos précieux cobayes. Au cours des semaines et des mois qui viennent, Les Jours vont évoluer, grandir, s’étirer, offrir de nouvelles fonctionnalités, tester des idées – les nôtres et les vôtres. N’hésitez donc pas à nous écrire à l’adresse suivante <a {{ style("a") }} href="mailto:pilote@lesjours.fr">pilote@lesjours.fr</a> pour faire part de vos réflexions sur ces grands thèmes essentiels :</p>
+
+	<ul {{ style("ul color-warning") }}>
+		<li><span {{ style("color-main") }}><strong>la navigation</strong>, la prise en main du site ;</span></li>
+		<li><span {{ style("color-main") }}><strong>les bugs</strong>, qu’ils soient d’affichage ou autres ;</span></li>
+		<li><span {{ style("color-main") }}><strong>les articles</strong> et leurs articulation en obsessions ;</span></li>
+		<li><span {{ style("color-main") }}><strong>ce que vous ne comprenez pas</strong>, ce qui n’est pas clair ;</span></li>
+		<li><span {{ style("color-main") }}><strong>ce que vous aimez</strong> en particulier.</span></li>
+	</ul>
+
+	<p {{ style("p fw-bold") }}>Merci de nous préciser à chaque fois l’appareil que vous utilisez (avec sa marque et son modèle), le système d’exploitation et le navigateur internet employé.</p>
+
+	<p {{ style("p") }}>Merci d’avance, ces retours sont très importants pour finaliser le site des Jours au mieux</p>
+
+	<p {{ style("ma-0") }}>Et surtout, n’hésitez pas à nous engueuler (mais gentiment).</p>
+</div>
+
+<p {{ style("p") }}>Les Jours se lèvent et ça ne fait que commencer.</p>
+<p {{ style("p") }}>À tout de suite,</p>
+<p {{ style("p") }}>L’équipe des Jours</p>
+{% endblock %}

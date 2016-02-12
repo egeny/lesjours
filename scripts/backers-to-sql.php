@@ -9,7 +9,7 @@ $row    = 0;
 if (!$input)  { $error = error_get_last(); die('Could not open the '.$file.'.csv file.'."\n\t".$error['message']."\n"); }
 if (!$output) { $error = error_get_last(); die('Could not create the '.$file.'.sql file.'."\n\t".$error['message']."\n"); }
 
-fwrite($output, 'SET @PASS="yeah";'."\n\n");
+fwrite($output, 'SET @PASS="Jeudi11";'."\n\n");
 
 while (($data = fgetcsv($input, 1000, ';'))) {
 	if (!$row++) { continue; } // Skip first line (fields)

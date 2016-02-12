@@ -4,13 +4,11 @@
 {% block php -%}
 <?php
 	require('_bootstrap.php');
-	require(WP_PATH.'/wp-admin/includes/user.php'); // This file needs to be included in order to delete an user
 
 	// Prevent accessing this URL if there is no logged-in user
 	if (!$current_user->ID) { die(header('Location: /')); }
 
-	$meta = get_user_meta($current_user->ID);
-	$meta = array_map(function($array) { return $array[0]; }, $meta);
+	$meta = get_all_user_meta($current_user->ID);
 
 	$error = null;
 	$data  = array(
@@ -84,6 +82,7 @@
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-identifiants" class="link external" aria-controls="mes-identifiants" href="#mes-identifiants" aria-selected="true"  tabindex="0">Mes identifiants</a></li>
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-informations" class="link external" aria-controls="mes-informations" href="#mes-informations" aria-selected="false" tabindex="-1">Mes informations</a></li>
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mon-abonnement"   class="link external" aria-controls="mon-abonnement"   href="#mon-abonnement"   aria-selected="false" tabindex="-1">Mon abonnement</a></li>
+				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-factures"     class="link external disabled" aria-controls="mes-factures"     href="#mes-factures"     aria-selected="false" tabindex="-1">Mes factures</a></li>
 			</ul>
 
 			<div class="tab-container md-w-6c md-ml-1c lg-w-10c lg-ml-1c">
@@ -106,7 +105,7 @@
 				<section id="mes-informations" role="tabpanel" aria-labelledby="tab-mes-informations" aria-hidden="true">
 					<h3 class="mb-4g style-meta-large">Mes informations</h3>
 					<a class="mb-2g sm-w-1c md-w-1c lg-w-1c block" href="https://gravatar.com" target="_blank">
-						<img class="responsive full-height radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
+						<img class="responsive h-100 radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
 					</a>
 					<form method="post">
 						<div class="field lg-w-½">
@@ -152,7 +151,6 @@
 						<p>Vous avez souscrit un abonnement le <?php $day = strftime('%e', $subscription); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $subscription) ?>. <a class="text-upper fw-bold color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a></p>
 						<h4 class="h5">Votre formule</h4>
 						<p><?php echo $plan['name'] ?> — <?php echo $plan['price'] ?> € par <?php echo $plan['duration'] == '1 year' ? 'an' : 'mois' ?> (expire le <?php $day = strftime('%e', $expire); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $expire) ?>)</p>
-						<a href="#unsubscribe" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">Se désabonner</a>
 					<?php else : ?>
 						<p>Vous n’avez aucun abonnement en cours.</p>
 						<a href="/abonnement.html" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">S’abonner</a>

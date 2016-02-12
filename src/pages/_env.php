@@ -1,4 +1,7 @@
 <?php
+	// Define the locale here since it may vary on the server
+	define('LOCALE', 'fr_FR');
+
 	// Path to wordpress
 	define('WP_PATH', dirname(__FILE__).'/../../lj');
 

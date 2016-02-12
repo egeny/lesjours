@@ -1,0 +1,15 @@
+{% set page = { title: "Les Jours, bonjour !" } %}
+{% extends "partials/_layout-email.html" %}
+
+{% block content %}
+<h2 {{ style("h2") }}>Les Jours, bonjour !</h2>
+
+<p {{ style("p") }}>Alors comme ça, tête de linotte, vous avez oublié votre mot de passe ? Ce n’est pas grave, il vous suffit de cliquer sur le lien suivant qui vous permettra de créer un nouveau mot de passe.</p>
+
+<div {{ style("mb-1m text-center") }}>
+	<a {{ style("btn") }} href="{{ base }}/?mail=&amp;key=#reset">Créer un nouveau mot de passe</a>
+</div>
+
+<p {{ style("p") }}>À bientôt,</p>
+<p {{ style("p") }}>L’équipe des Jours</p>
+{% endblock %}

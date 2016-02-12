@@ -39,17 +39,7 @@ $gutter: grid-gutter("sm");
 	}
 }
 
-.has-modal {
-	overflow: hidden;
-
-	// Fix some problems problems with iOS
-	// See http://stackoverflow.com/questions/14270084/overflow-xhidden-doesnt-prevent-content-from-overflowing-in-mobile-browsers#answer-24727026
-	position: fixed;
-
-	// Fix an issue if the body has a max-width
-	right: 0;
-	left:  0;
-}
+.has-modal { @extend body.fixed; }
 
 @include media("md") {
 	$gutter: grid-gutter("md");
