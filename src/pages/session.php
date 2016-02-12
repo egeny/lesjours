@@ -103,5 +103,10 @@
 		}
 	}
 
-	header('Location: '.$_SERVER['HTTP_REFERER'].'#login');
+	// Check if we can use the referer
+	if (preg_match('#^'.preg_quote('http://'.$_SERVER['HTTP_HOST']).'#', $_SERVER['HTTP_REFERER'])) {
+		header('Location: '.$_SERVER['HTTP_REFERER'].'#login');
+	} else {
+		header('Location: /#login');
+	}
 ?>
