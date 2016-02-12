@@ -147,7 +147,7 @@
 
 				<section id="mon-abonnement" role="tabpanel" aria-labelledby="tab-mon-abonnement" aria-hidden="true">
 					<h3 class="mb-3g style-meta-large">Mon abonnement</h3>
-					<?php if ($plan) : ?>
+					<?php if ($plan && $subscription) : ?>
 						<p>Vous avez souscrit un abonnement le <?php $day = strftime('%e', $subscription); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $subscription) ?>. <a class="text-upper fw-bold color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a></p>
 						<h4 class="h5">Votre formule</h4>
 						<p><?php echo $plan['name'] ?> — <?php echo $plan['price'] ?> € par <?php echo $plan['duration'] == '1 year' ? 'an' : 'mois' ?> (expire le <?php $day = strftime('%e', $expire); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $expire) ?>)</p>
