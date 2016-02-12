@@ -218,6 +218,9 @@
 	<?php
 		foreach ($error as $name => $value) {
 			switch ($name) {
+				case 'account': $value = 'd’utiliser une autre adresse e-mail, celle-ci existe déjà';
+				break;
+
 				case 'plan': $value = 'de choisir une formule';
 				break;
 
