@@ -6,7 +6,7 @@
 	"img": "img/les-revenants-2.gif",
 
 	"number": 2,
-	"date": "2016-02-18T10:00+01:00",
+	"date": "2016-02-12T10:00+01:00",
 
 	"title": "L'arrivée en Syrie",
 	"intro": "En 2014, Bilel se retrouve d'abord intégré dans une unité jihadiste proche d'Al&nbsp;Qaeda. « Les Jours » racontent son parcours et les raisons de son retour en France. (2/5)",
@@ -18,7 +18,7 @@
 	"rel": {
 		"authors": [
 			{ "text":  "author:david-thomson" },
-			{ "draw": "author:matthieu-meron" }
+			{ "drawing": "author:matthieu-meron" }
 		],
 
 		"first": "episode:les-revenants/bilel-episode-1",

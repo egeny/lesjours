@@ -21,6 +21,7 @@
 			{ "drawing": "author:matthieu-meron" }
 		],
 
-		"first": "episode:les-revenants/bilel-episode-1"
+		"first": "episode:les-revenants/bilel-episode-1",
+		"next": "episode:les-revenants/bilel-episode-2"
 	}
 }
