@@ -82,11 +82,6 @@
 	if ($current_user->ID) {
 		$meta = get_all_user_meta($current_user->ID);
 
-		// TODO: redirect to a page if not paid (or pending)
-		// TODO: redirect to a page if expired
-
-			// Make a sub-request so Apache will handle the request (see .htaccess)
-
 		// Allow if the user if its subscription isn't expired
 		if (strtotime($meta['expire']) > time()) {
 			$uri  = $_SERVER['REQUEST_URI'];
@@ -98,8 +93,11 @@
 				$uri = '/404.html';
 			}
 
+			// Make a sub-request so Apache will handle the request (see .htaccess)
 			virtual($uri); // Will return a boolean so don't wrap in die()
 			die();
+		} else {
+			die(header('Location: /abonnement.html'));
 		}
 	}
 
