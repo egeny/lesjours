@@ -103,17 +103,13 @@
 
 				// Prevent displaying an error message (see below)
 				@mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
-			} else {
-				// If something went bad, remove some meta (WIP)
-				delete_user_meta($user_id, 'plan');
-				delete_user_meta($user_id, 'payment');
 			}
-
-			// As stated in the documentation, the payment service waits for "OK"
-			// Otherwise, it will re-send a notification
-			// See https://developer.be2bill.com/callbacks#c3
-			die('OK');
 		}
+
+		// As stated in the documentation, the payment service waits for "OK"
+		// Otherwise, it will re-send a notification
+		// See https://developer.be2bill.com/callbacks#c3
+		die('OK');
 	}
 
 	// Receiving a result from the payment service
