@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "romagnan-doute",
+
+	"number": 2,
+	"date": "2016-02-11T10:00+01:00",
+
+	"title": "Barbara Romagnan&nbsp;: elle doute mais ne s’abstient pas",
+	"intro": "La députée PS du Doubs s’interroge beaucoup sur l’exercice de son mandat politique mais ne transige jamais avec ses convictions.",
+	"subtitle": "La députée PS du Doubs s’interroge beaucoup sur l’exercice de son mandat politique mais ne transige jamais avec ses convictions.",
+	"lead":  "Barbara Romagnan est une femme politique que les Jours avaient envie de suivre depuis longtemps. Lors de sa première journée à l’Assemblée nationale, en juin 2012, après son élection à 38 ans comme députée du Doubs, je lui avais emboîté le pas.",
+
+	"tags": ["Politique"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman"},
+			{ "photo": "author:albert-facelly" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"next":  "episode:politique-annee-zero/zig-zags-dans-les-tetes-a-l-assemblee",
+		"last":  "episode:politique-annee-zero/ca-va-je-suis-toujours-vivant"
+	}
+}
