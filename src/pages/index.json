@@ -2,10 +2,10 @@
 	"template": "home",
 
 	"une": [
-		"episode:l-empire/ep4-journal-hard",
+		"episode:les-revenants/bilel-episode-2",
 		"episode:les-jours-c-quoi/les-jours-le-pilote",
-		"episode:les-revenants/bilel-episode-1",
-		"episode:politique-annee-zero/la-decheance-a-devore"
+		"episode:l-empire/ep2-plug-canal",
+		"episode:les-annees-college/ingenieur-pourquoi-pas"
 	],
 
 	"obsessions": [
