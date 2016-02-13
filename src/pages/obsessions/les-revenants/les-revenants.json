@@ -10,7 +10,8 @@
 	"desc": "<p>Depuis 2012, des centaines de Français sont partis rejoindre des groupes jihadistes. Plus de 500 sont toujours sur place, près de 150 ont déjà été tués, mais 250 ont choisi de rentrer, souvent usés par la réalité découverte en Syrie, en Irak ou en Libye. « Les Jours » racontent leurs parcours.</p>",
 
 	"episodes": [
-		"episode:les-revenants/bilel-episode-1"
+		"episode:les-revenants/bilel-episode-1",
+		"episode:les-revenants/bilel-episode-2"
 	],
 
 	"people": [
@@ -68,7 +69,7 @@
 			"icon": "download",
 			"items": [
 				{
-					"href": "doc/rapport-caillet.pdf",
+					"href": "doc/rapportcaillet.pdf",
 					"title": "Les jihadistes marocains",
 					"desc": "Un rapport du chercheur indépendant Romain Caillet sur les jihadistes marocains en Syrie."
 				}

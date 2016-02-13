@@ -15,11 +15,12 @@
 	"rel": {
 		"authors": [
 			{ "text":  "author:alice-geraud" },
-			{ "photo": "Julien Muguet / Hans Lucas" }
+			{ "photo": "author:julien-muguet" }
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/legitime-defense-revient",
-		"last":  "episode:treize-novembre/urvoas-le-deuxieme-flic-de-france"
+		"prev": "episode:treize-novembre/legitime-defense-revient",
+		"next":  "episode:treize-novembre/urvoas-visite-la-justice-en-indigence",
+		"last":  "episode:treize-novembre/urvoas-visite-la-justice-en-indigence"
 	}
 }

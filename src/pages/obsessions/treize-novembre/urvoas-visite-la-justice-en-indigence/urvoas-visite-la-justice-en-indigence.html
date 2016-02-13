@@ -1,0 +1,69 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[3] %}
+<p><span class="lettrine">J</span>ean-Jacques Urvoas n'a plus de circonscription mais des juridictions. Pour son premier déplacement dans un tribunal, il a choisi celui de Chartres (Eure-et-Loir), qui <q>ressemble à ce qu'est aujourd'hui la justice</q> à ses yeux. L'équilibre fragile de ce petit palais de 32 magistrats reposerait, analyse <a href="#{{ person.href }}" data-mini="1">le nouveau ministre</a>, sur <q>le seul engagement des professionnels</q> qui l'animent. Traduction&nbsp;: désolé de vous voir bosser avec trois bouts de ficelle. 
+
+<p>Ici, personne ne lui parle de l’état d’urgence ou de la déchéance de nationalité. Seule la justice du quotidien intéresse. Timidement, le procureur général glisse qu’à Chartres, comme ailleurs, les magistrats sont confrontés à <q>la radicalisation</q>. Il ne développe pas davantage.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+<p><span>14 millions </span> pour des «&nbsp;renforts temporaires&nbsp;» </p>
+</aside>
+
+<p>Jean-Jacques Urvoas a fait savoir que le <a href="#note-1">budget</a> et les effectifs de la Justice seront sa <q>priorité absolue</q>. Dès la passation de pouvoir avec Christine Taubira, il l’avait promis : <q>Je vais faire en sorte que la seule loi d’importance soit votée : la loi de finances.</q> Il faut dire qu'il n'a que quinze mois devant lui, avant l’élection présidentielle. Et il s'y est mis sans tarder&nbsp;: après deux semaines en poste, il annonce le redéploiement immédiat de 14&nbsp;millions d'euros, pour les <q>renforts temporaires de juges</q> et 300 contrats de vacataires supplémentaires.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Le budget de la Justice",
+caption: "Il représente 8&nbsp;milliards d'euros. Jean-Jacques Urvoas espère que ce chiffre devienne <q>un plancher</q>."
+})
+}}
+
+<p>Plus difficile à approcher que lorsqu’il était député, le garde des Sceaux se veut malgré tout abordable et limite la cohue autour de lui. Mais à Chartres, ville charnière entre région parisienne et province, les couloirs du tribunal sont étroits. Accompagné de deux membres de son cabinet et quelques officiels, le ministre en fait le tour. De passage dans un bureau des affaires familiales, on lui raconte que certains justiciables revêches filment les audiences avec leur téléphone et menacent parfois de les publier sur les réseaux sociaux. Jean-Jacques Urvoas s'étonne&nbsp;: <q>Donc, le téléphone n'est pas un problème seulement dans les prisons&nbsp;?</q></p>
+
+<p>Depuis sa prise de fonctions le 27 janvier, le ministre de la Justice a passé beaucoup de temps à l’Assemblée nationale, un écosystème qui lui est familier (comme nous le racontions dans un précédent <a href="/obsessions/treize-novembre/urvoas-urgence">épisode</a>, <i>Les Jours</i> suivant Jean-Jacques Urvoas depuis le début de l’état d’urgence). Il devait y défendre la révision constitutionnelle, suivre les questions au gouvernement, répondre à ses anciens collègues de la commission des Lois sur le projet de loi pénale.</p>
+<h3>La prison la plus proche est à 70 kilomètres</h3>
+<p>Il a découvert à Chartres un autre monde. La deuxième salle d'audience est si petite que les avocats ne peuvent pas se lever sans s'extraire de leur banc. Et gare aux gestes brusques, sous peine d'éborgner, soit le prévenu, soit la victime. On dirait un tribunal de poupées. Le projet de cité judiciaire, où tout le monde pourrait se déplier à son aise, est reporté depuis des années. Les travaux pourraient commencer, au mieux en 2018. En attendant, les services sont dispersés sur plusieurs sites. Il serait bon que le scénario retenu pour la cité judiciaire <q>soit durablement définitif</q>, ironise Jean-Jacques Urvoas, toujours réjoui de ses mots d’esprit. Et de souligner, au passage, <q>les hésitations</q> de ses prédécesseurs.</p>
+
+
+
+<p>En août 2013, Christiane Taubira s'était elle aussi rendue à Chartres, comme le racontait alors <a href="http://www.lechorepublicain.fr/eure-et-loir/actualite/2013/08/05/christiane-taubira-au-tribunal-de-chartres_1649532.html">l'Echo Républicain</a>, quand trois condamnés devant exécuter leur peine avaient été remis en liberté, faute de place en prison. A l’époque, cette affaire avait déclenché une <a href="#note-2">polémique</a> estivale entre Valls, alors ministre de l’intérieur, et Taubira, sur le thème du «&nbsp;laxisme de la Justice versus fermeté de l’Intérieur&nbsp;». Mais la maison d'arrêt, adjacente au tribunal, a fermé l'année suivante, et la situation ne s'est pas arrangée&nbsp;: comment mettre en place des aménagements de peine et organiser les allées et venues jusqu'au tribunal, alors que la prison la plus proche est à 70 kilomètres&nbsp;?</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "La polémique",
+caption: "Cette affaire avait entraîné le report de près d’un an de la réforme pénale défendue Christiane Taubira."
+})
+}}
+
+<blockquote>
+<p>On a besoin de personnel, Monsieur le ministre</p>
+<footer>Une greffière, s'adressant à Jean-Jacques Urvoas</footer>
+</blockquote>
+
+<p>Dans la bibliothèque du palais, <q>bonne illustration de l'exiguïté des locaux</q>, Jean-Jacques Urvoas écoute patiemment les doléances de quelques magistrats et greffiers. La juge des enfants reçoit jusqu'à 15 personnes dans son mini-bureau. Les deux juges d'instructions ont 100 dossiers chacun, et pas du léger&nbsp;: des crimes, du financier et du trafic de stupéfiants. Le procureur général explique que le budget ne permet de faire face que pendant la moitié de l'année. La première présidente confie quant à elle sa honte de payer les prestataires <q>à la petite semaine</q>. <q>Nous sommes bien conscients que vous n'avez pas de baguette magique</q>, glisse-t-elle au ministre, sans illusions.</p>
+
+<p>Quand je vais repartir dans ma voiture, qu'est-ce que je dois garder comme message&nbsp;?</q> demande Jean-Jacques Urvoas à une greffière&nbsp;: <q>On a besoin de personnel, Monsieur le ministre.</q> La semaine dernière, le garde des Sceaux accompagnait François Hollande à l'Ecole nationale de la magistrature (ENM), à Bordeaux, pour la prestation de sermet de la nouvelle prootion. Constituée de  366 auditeurs de Justice, celle-ci est <q>la plus nombreuse depuis le début de la Cinquième République</q>, se réjouit Jean-Jacques Urvoas. Mais, il le sait, ces magistrats ne prendront leur poste que dans 31 mois.</p>
+<blockquote>
+<p>Il faut que vous alliez Place Vendôme. Vous aurez une convalescence tranquille, il y règne le plus grand calme.</p>
+<footer>Guy Mollet à François Mitterrand, nommé à la Justice en 1956</footer>
+</blockquote>
+<p>Dans le hall d'accueil du tribunal de Chartres, un pupitre, des kakemonos aux couleurs du ministère et quelques policiers suffisent à meubler l'espace. Mais à l'heure du discours, tout le tribunal descend des étages, téléphone à la main pour la photo. Plus personne ne se plaint du froid. S'adressant <q>à ceux pour qui je vais travailler dans les mois qui viennent</q>, Jean-Jacques Urvoas évoque son dîner avec Robert Badinter, mercredi, place Vendôme. En 1956, lui a-t-il raconté, Guy Mollet aurait dit à François Mitterrand, alors qu'il le nommait ministre de la Justice: &nbsp;<q>Vous venez de subir une opération. Il faut que vous alliez Place Vendôme. Vous aurez une convalescence tranquille, il y règne le plus grand calme</q>. On sourit, l'opération séduction semble prendre.</p>
+
+<p>Deux juges du siège, qui préfèrent ne pas donner leur nom à une journaliste à cause de leur devoir de réserve, ont trouvé le ministre <q>plutôt accessible, à l'écoute</q>. Elles saluent <q>sa volonté de connaître</q>. Avant que Jean-Jacques Urvoas ne devienne garde des Sceaux, elles avaient vaguement entendu son nom, l'une au moment de la loi renseignement, l'autre parce qu'il présidait la commission des Lois. Pour elles, le quotidien consiste à <q>éteindre des incendies</q>. Il devient <q>impossible de se projeter</q> sur ce terrain <q>mouvant</q>. Certains dossiers s'empilent dans des armoires qui ne ferment pas à clé, dans le couloir. Faute d'agents techniques disponibles, ce sont les magistrates qui les ont portées jusque-là.</p>
+
