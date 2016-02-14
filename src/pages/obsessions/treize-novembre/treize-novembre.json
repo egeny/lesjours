@@ -30,7 +30,8 @@
 		"episode:treize-novembre/un-an-charlie",
 		"episode:treize-novembre/etat-urgence-mort-lente",
 		"episode:treize-novembre/legitime-defense-revient",
-		"episode:treize-novembre/urvoas-taubira"
+		"episode:treize-novembre/urvoas-taubira",
+		"episode:treize-novembre/urvoas-visite-la-justice-en-indigence"
 	],
 
 	"people": [
@@ -66,7 +67,7 @@
 			"img":      "img/urvoasportrait.jpg",
 			"alt":      "",
 			"title":    "Jean-Jacques Urvoas",
-			"subtitle": "56 ans, ancien président de la commission des lois, il est devenu garde des Sceaux",
+			"subtitle": "56 ans, ancien président de la commission des Lois, il est devenu garde des Sceaux",
 			"desc":     "Depuis les attentats de novembre, le « monsieur Sécurité » du Parti socialiste est sur tous les fronts. Rapporteur de la loi sur l’état d’urgence, le 20 novembre, il en assure ensuite le contrôle et constate “l’essoufflement” des mesures dès la mi-janvier. Le gouvernement compte alors sur le président de la commission des lois, bosseur et diplomate, pour faire avaler la pilule de la déchéance de nationalité (à laquelle il ne croit pas lui-même). Quelques jours plus tard, ce proche de Manuel Valls est finalement appelé à rejoindre le gouvernement lorsque Christiane Taubira pose sa démission. Artisan de la loi renseignement, son nom est plutôt associé aux services de police qu’à la magistrature. Il rêvait de l’Intérieur, il est à la Justice. ",
 			"minor": true
 		},
