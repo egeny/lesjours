@@ -28,9 +28,11 @@
 
 	// Get all meta related to the given user
 	function get_all_user_meta($id) {
-		$meta = get_user_meta($id);
+		$meta     = get_user_meta($id);
+		$invoices = isset($meta['invoices']) ? $meta['invoices'] : array(); // Makes sure we have an invoices array
+
 		$meta = array_map(function($value) { return count($value) == 1 ? $value[0] : $value; }, $meta);
-		$meta['invoices'] = array_map(function($value) { return json_decode($value, true); }, $meta['invoices'] ? $meta['invoices'] : array());
+		$meta['invoices'] = array_map(function($value) { return json_decode($value, true); }, $invoices);
 
 		return $meta;
 	}
