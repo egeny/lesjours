@@ -290,7 +290,8 @@
 							<?php if ($code == 3) : ?>
 								<p class="mt-0">Votre transaction est en cours. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
 							<?php elseif ($code > 3000 && !in_array($code, array(4017, 5001, 5002, 5004))) : ?>
-								<p class="mt-0">Suite à un incident de paiement (<?php echo $_GET['result'] ?>) votre transaction n'a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+								<p class="mt-0">Suite à un incident de paiement (<?php echo $_GET['result'] ?>) votre transaction n'a pu être réalisée. 
+								Vous pouvez tenter de vous abonner à nouveau en <a href="/abonnement.html">suivant ce lien</a>. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations si le problème persiste.</p>
 							<?php else : ?>
 								<p class="mt-0">Suite à une erreur technique (<?php echo $_GET['result'] ?>) votre transaction n’a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
 							<?php endif ?>
