@@ -10,7 +10,7 @@
 		<div class="col lg-w-½">
 			<h4 class="h4"><a class="snake-container" href="/obsessions/{{ obsession.href }}/{{ episode.href }}/">{{ episode.title }}</a></h4>
 			<p class="fw-bold-archer">{{ episode.intro }}</p>
-			<p class="style-meta lh-inherit"><time datetime="{{ episode.date }}">{{ episode.date|human }}</time> • épisode n°{{ episode.number }} | {% for group in episode.rel.authors %}
+			<p class="style-meta lh-inherit">Épisode n°{{ episode.number }} • <time datetime="{{ episode.date }}">{{ episode.date|human }}</time> | {% for group in episode.rel.authors %}
 					{% set group = group|expand %}
 					{% for kind, authors in group %}
 						{% set kind = "Texte"  if kind == "text"  else kind %}
@@ -41,7 +41,7 @@
 							<div class="col sm-w-2c md-w-4c lg-w-6c">
 								<h5 class="h5 snake-2"><span class="snake-container">{{ episode.title }}</span></h5>
 								<p>{{ episode.subtitle }}</p>
-								<p class="style-meta"><time datetime="{{ episode.date }}">{{ episode.date|human }}</time> • épisode n°{{ episode.number }}</p>
+								<p class="style-meta">Épisode n°{{ episode.number }} • <time datetime="{{ episode.date }}">{{ episode.date|human }}</time></p>
 							</div>
 						</a>
 					</li>
