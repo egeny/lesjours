@@ -84,8 +84,8 @@
 			<p class="sr">D’autres épisodes</p>
 			<ul class="row">
 				{% if prev|published %}
-				<li class="col sm-w-4c md-w-4c lg-w-4c lg-mr-4c">
-					<a rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}">
+				<li class="col sm-w-4c md-w-4c lg-w-½">
+					<a rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}/">
 						<i>{{ icon("angle-left") }}</i>
 						<div>
 							<span class="style-meta">Épisode n°{{ prev.number }}<span class="sr"> : </span></span>
@@ -95,8 +95,8 @@
 				</li>
 				{% endif %}
 				{% if next|published %}
-				<li class="col sm-w-4c md-w-4c lg-w-4c{% if not prev %} md-ml-4c lg-ml-8c{% endif %}">
-					<a rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}">
+				<li class="col sm-w-4c md-w-4c lg-w-½{% if not prev %} md-ml-4c lg-ml-6c{% endif %}">
+					<a rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}/">
 						<i>{{ icon("angle-right") }}</i>
 						<div class="text-right">
 							<span class="style-meta">Épisode n°{{ next.number }}<span class="sr"> : </span></span>

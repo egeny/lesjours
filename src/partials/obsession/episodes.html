@@ -5,10 +5,10 @@
 	{% set episode  = episodes[0] %}
 	<div class="row">
 		<div class="col mb-2g lg-w-½">
-			<a class="inline-block" href="/obsessions/{{ obsession.href }}/{{ episode.href }}"><img class="responsive" src="/obsessions/{{ obsession.href }}/{{ episode.href }}/{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" /></a>
+			<a class="inline-block" href="/obsessions/{{ obsession.href }}/{{ episode.href }}/"><img class="responsive" src="/obsessions/{{ obsession.href }}/{{ episode.href }}/{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" /></a>
 		</div>
 		<div class="col lg-w-½">
-			<h4 class="h4"><a class="snake-container" href="/obsessions/{{ obsession.href }}/{{ episode.href }}">{{ episode.title }}</a></h4>
+			<h4 class="h4"><a class="snake-container" href="/obsessions/{{ obsession.href }}/{{ episode.href }}/">{{ episode.title }}</a></h4>
 			<p class="fw-bold-archer">{{ episode.intro }}</p>
 			<p class="style-meta lh-inherit"><time datetime="{{ episode.date }}">{{ episode.date|human }}</time> • épisode n°{{ episode.number }} | {% for group in episode.rel.authors %}
 					{% set group = group|expand %}
@@ -24,7 +24,7 @@
 				<p>{{ episode.lead }} (…)</p>
 		</div>
 		<div class="col lg-w-100 text-center">
-			<a class="btn-round btn-brand" href="/obsessions/{{ obsession.href }}/{{ episode.href }}"><span>Lire</span></a>
+			<a class="btn-round btn-brand" href="/obsessions/{{ obsession.href }}/{{ episode.href }}/"><span>Lire</span></a>
 		</div>
 	</div>
 
@@ -36,7 +36,7 @@
 			{% for episode in episodes %}
 				{% if not loop.first %}
 					<li class="lg-w-6c">
-						<a class="row" href="/obsessions/{{ obsession.href }}/{{ episode.href }}">
+						<a class="row" href="/obsessions/{{ obsession.href }}/{{ episode.href }}/">
 							<img class="col col-top sm-w-2c md-w-4c lg-w-6c" src="/obsessions/{{ obsession.href }}/{{ episode.href }}/{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" />
 							<div class="col sm-w-2c md-w-4c lg-w-6c">
 								<h5 class="h5 snake-2"><span class="snake-container">{{ episode.title }}</span></h5>
