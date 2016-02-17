@@ -1,0 +1,135 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+
+<p><span class="lettrine">À</span> son arrivée en Syrie et avant de rejoindre l’État islamique (EI), <a href="#note-1">Bilel</a> a d’abord intégré Harakat Sham al Islam, une unité jihadiste proche d’Al&nbsp;Qaeda composée essentiellement de Marocains (<a href="http://www.lesjours.fr/obsessions/les-revenants/bilel-episode-2/">lire l’épisode précédent</a>). Il y a fait la connaissance d’un autre Français arrivé un an avant lui, en 2013&nbsp;: Abu Maryam. Kevin, de son vrai prénom, est un converti de 25 ans, originaire de Toulouse, connu en France pour son addiction à la fumette, des faits de petite délinquance, trafic de drogue et cambriolages.</p>
+
+
+{% set person = obsession.people[0] %}
+<p>Même s’il est alors encore actif au sein d’Harakat Sham al Islam, mouvement pro-Al Qaeda, Abu Maryam, élevé dans le quartier populaire du Mirail où il faisait aussi du rap dans son autre vie, rêve de rejoindre le camp rival, celui de l’État islamique (EI) et s’en ouvre vite à <a href="#{{ person.href }}" data-mini="1">Bilel</a>. Les deux hommes passent le ramadan ensemble, Abu Maryam héberge Bilel une quinzaine de jours et, peu à peu, le convainc&nbsp;: l’État islamique est mieux géré, dit-il, mieux organisé, il faut installer la charia et il faut l’installer maintenant.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+
+
+<blockquote>
+<p>Dans le rif de Lattaquié, c’est le Far West.</p>
+<footer>Bilel</footer>
+</blockquote>
+
+{% set person = obsession.people[2] %}
+<p><a href="#{{ person.href }}" data-mini="2">Abu Maryam</a> commence à être mal vu par les jihadistes marocains de Harakat Sham al Islam&nbsp;: <q>Ils savaient qu’il était pro-<a href="#note-2">Dawla</a>.</q> Entre les deux tendances jihadistes, il y a des différences. <q>Dans la doctrine, ils sont semblables, mais dans la politique religieuse, dans le fait de vouloir appliquer la charia maintenant, ou après, ou graduellement, c’est pas pareil.</q> Côté Harakat Sham al Islam, on reproche aussi à l’EI de tuer des musulmans. Mais, plaide Abu Maryam auprès de Bilel, l’EI prend soin des combattants étrangers et les installe. Un argument pour Bilel&nbsp;: <q>Parce que dans le rif de Lattaquié, c’est le Far West. Y a pas d’ordre, ils sont sans foi ni loi. […] Pour les étrangers, c’est difficile à vivre parce que voilà, y a pas de sécurité, y a des kidnappings.</q> D’autant que, à l’en croire, les Syriens mettent la guerre sur le dos des étrangers, leur reprochant l’intervention de la coalition arabo-occidentale.</p>
+
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+
+
+{% set person = obsession.people[4] %}
+<p>Une dizaine de jours après cette conversation entre Abu Maryam et Bilel, <a href="#{{ person.href }}" data-mini="3">Abu Bakr al Bagdadi</a> se proclame calife de l’État islamique. <q>Donc nous, on a décidé de rejoindre l’EI.</q></p>
+
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+<p><span>Des Tchétchènes</span> rencontrés dans un kebab</p>
+</aside>
+
+<p>Chez les deux jeunes jihadistes français, la proclamation du califat dans une vidéo diffusée le 29 juin 2014 par Abu Bakr al Bagdadi, du haut du minbar de la grande mosquée de Mossoul en Irak, fait l’effet d’un aimant. Dès lors, tous deux cherchent un moyen de rejoindre ce territoire rêvé. Et c’est d’un groupe de Tchétchènes, désireux eux aussi de rejoindre l’EI et rencontrés par hasard au kebab, que va venir la solution. <q>On a fait un convoi de voitures avec les Tchétchènes et on a rejoint l’EI. On était une douzaine de voitures, on devait être une soixantaine en tout. Y avait des checkpoints, mais on est passés quand même. Et on a tous rejoint Al-Bab.</q> Al-Bab est la plus grande ville contrôlée par l’EI dans la région d’Alep.</p>
+
+<p>A leur arrivée, personne n’est là pour les accueillir. Mais Bilel décrit une atmosphère euphorique, de vacances. <q>On est un peu laissés “open”. A Al-Bab, y a juste un <a href="#note-3">emni</a>. Il nous a vus, il nous a demandé&nbsp;: “Qu’est-ce que vous faites là&nbsp;?” Nous, on lui a dit&nbsp;: “On est là pour rejoindre l’EI.”</q></p>
+
+<blockquote>
+<p>C’était le ramadan, c’était convivial, y a personne qui te restreint ou qui te questionne.</p>
+<footer>Bilel</footer>
+</blockquote>
+
+<p>L’<em>emni</em> les envoie alors à Raqqa se <q>faire enregistrer</q>. Bilel et Abu Maryam y passent <q>une semaine de vacances</q>&nbsp;: <q>On allait se baigner dans l’Euphrate, au grand barrage à Tabqa, c’était le ramadan, c’était convivial, y a personne qui te restreint ou qui te questionne. Tu visites les villes. Nous, on n’est pas syriens, donc on visite. Et comme c’était l’annonce du califat, y avait des centaines et des centaines de personnes qui rentraient en foule, en masse&nbsp;! C’était monumental, des milliers de personnes. Des Français, toutes les nationalités.</q></p>
+
+<figure>
+<img src="img/ei-avec-abu-maryam-2.jpg" alt="" />
+<figcaption><span>La «&nbsp;semaine de vacances&nbsp;» de Bilel et Abu Maryam à Raqqa, en Syrie <span class="credits">Illustration Matthieu Méron pour <em>Les Jours</em></q>.</span></span></figcaption>
+</figure>
+
+<p>Après quelques jours de baignades, de soirées ramadanesques et de détente dans ce pays pourtant en guerre civile depuis quatre ans, les deux compères vont donc s’enregistrer auprès de l’administration de l’EI, dans son fief syrien de Raqqa. Puis c’est la séparation.</p>
+
+
+<p>Une fois enregistré à Raqqa, l’EI envoie à nouveau Bilel dans un <a href="#note-4"><em>muaskar</em></a>, tandis qu’Abu Maryam se destine à d’autres projets. <q>On s’est séparés avec Abu Maryam et je suis retourné encore une fois au muaskar. Et lui, je sais pas du tout où il est allé ensuite. Je l’ai recontacté que y a quelques mois… Il m’a dit&nbsp;: “Je vais aller faire une dogma dans quelques jours en Irak.”</q></p>
+<p>Dans le jargon jihadiste, «&nbsp;une dogma&nbsp;», c’est une opération suicide. Marié à deux femmes, l’ancien délinquant toulousain venait d’être père d’une petite fille née en Syrie. Cela ne l’a pas empêché de se lancer au volant d’un camion chargé de plusieurs tonnes d’explosifs contre une base de l’armée irakienne. Avant son «&nbsp;opération martyr&nbsp;», l’EI lui a offert une semaine de vacances dans un grand hôtel de Mossoul. Sur Twitter, Abu Maryam a posté des photos de lui tout sourire baignant dans le luxe, installé dans les canapés géants de cet hôtel désert et d’autres, avec des jihadistes français, à la fête foraine de Mossoul, entre autos-tamponneuses et grande roue.</p>
+
+
+<aside>
+<p><span>Abu Maryam est toujours en vie</span> selon ses proches </p>
+</aside>
+
+<p>Abu Maryam avait participé aux combat avec Al&nbsp;Qaeda à Kassab contre le régime syrien, il avait été blessé à Kobané dans les rangs de l’EI contre les Kurdes et s’était fait connaître sur les réseaux sociaux pour ses «<em>selfies</em> où, hilare, il posait avec une tête décapitée à la main. Dans une vidéo posthume, il a revendiqué avec son fort accent toulousain son action d’août 2015 drapé dans la bannière de l’EI, sur les bords de l’Euphrate, avec toute la symbolique visuelle qui a fait la réputation des branches médias du groupe.</p>
+<p>Ce Français converti avait déjà accédé à la notoriété des JT et chaînes info en France quelques mois auparavant, avec une autre vidéo dans laquelle il brûlait son passeport avec un message très clair pour les Français, sabre et kalachnikov à la main&nbsp;: <q>Les moudjahidin n’hésiteront pas, chaque fois qu’ils en ont la possibilité, à trancher vos têtes. J’appelle mes frères en France qui n’ont pas encore fait la <a href="#note-5"><em>hijra</em></a>&nbsp;: sachez que le combat est une obligation individuelle. L’ordre vous a été donné de combattre le mécréant où que vous le trouviez.</q></p>
+<p>Sans preuve de son décès, ses proches continuent de penser qu’Abu Maryam est toujours en vie. Ils le soupçonnent d’avoir maquillé sa mort pour rentrer en France plus facilement et commettre un attentat. Depuis septembre 2014, l’EI a en effet donné ordre à tous ses membres partisans dans le monde de tuer, partout et par tous les moyens possibles, des ressortissants des pays membres de la coalition, en particulier des Français.</p>
+
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Bilel",
+caption: "Son prénom a été modifié."
+})
+}}
+{{
+note({
+number: 2,
+title: "Dawla",
+caption: "<em>Dawla</em>, qui signifie «&nbsp;État&nbsp;» en arabe, est l’appellation utilisée par les membres de l’État islamique et ses partisans pour qualifier l’organisation."
+})
+}}
+
+{{
+note({
+number: 3,
+title: "Emni",
+caption: "C’est ainsi que sont désignés les services secrets de l’EI –&nbsp;ainsi que leurs membres&nbsp;– en charge du renseignement au sein du groupe et de la lutte contre les espions."
+})
+}}
+
+{{
+note({
+number: 4,
+title: "Le muaskar",
+caption: "Le «&nbsp;muaskar&nbsp;» est un camp d’entraînement jihadiste."
+})
+}}
+
+{{
+note({
+number: 5,
+title: "La hijra",
+caption: "Signifie «&nbsp;émigration&nbsp;» en arabe courant. Dans l’imaginaire musulman, le mot fait référence à la période de l’hégire au VIIe siècle, lorsque le prophète Mohamed dut quitter la Mecque pour Médine. Pour les jihadistes, c’est une émigration vers la terre d’islam et ceux qui font la <em>hijra</em> sont appelés les <em>muhajirin</em> (littéralement «&nbsp;ceux qui ont émigré&nbsp;») contrairement aux locaux, appelés <em>ansar</em>."
+})
+}}
+

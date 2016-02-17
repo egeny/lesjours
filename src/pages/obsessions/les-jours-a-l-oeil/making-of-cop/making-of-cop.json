@@ -8,13 +8,13 @@
 
 	"title": "Lost in COP",
 	"intro": "Pierre Morel a suivi la COP21 pour <i>Les Jours</i>. Il nous raconte son quotidien durant les douze jours de cet événement.",
-	"lead":  "La COP21 qui s’est tenu fin 2015 fut plus qu’un événement politique ou diplomatique. Une petite ville a émergée au Bourget, non loin de Paris. Une ville dédiée aux débats, négociations entre les délégations des états et celles des ONG, dont Pierre Morel a parcouru les longs couloirs pendant douze jours.",
+	"lead":  "La COP21 qui s’est tenu fin 2015 fut plus qu’un événement politique ou diplomatique. Une petite ville a émergé au Bourget, non loin de Paris. Une ville dédiée aux débats, négociations entre les délégations des états et celles des ONG, dont Pierre Morel a parcouru les longs couloirs pendant douze jours.",
 
 	"tags": ["Photographie", "COP21", "Environnement"],
 
 	"rel": {
 		"authors": [
-			{ "text":  "author:sebastian-calvet" },
+			{ "text":  "author:sebastien-calvet" },
 			{ "photo": "author:pierre-morel" }
 		],
 

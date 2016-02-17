@@ -1,0 +1,113 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+<p><span class="lettrine">E</span>lle est tout le temps sur le qui-vive, l'œil ouvert. Parfois, les maîtres de cérémonie ont du mal à s'effacer. Ils distribuent la parole de manière ostensible, commentent chaque intervention, ramènent la conversation à eux. Barbara Romagnan n'a pas cette manie. Alors qu'autour de la table, tout le monde la connaît, elle se présente&nbsp;: <q>Députée PS très fâchée mais très heureuse que vous soyez là.</q> {% set person = obsession.people[0] %}La nuit est tombée sur Besançon. <a href="#{{ person.href }}" data-mini="1">Barbara Romagnan</a>, la député socialiste de la première circonscription du Doubs, que Les Jours suivent, a invité le sociologue Michel Wieviorka pour la première étape de la primaire des gauches et de l’écologie.</p>
+
+
+{% set person = obsession.people[0] %}
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Dans la ville, 640 personnes ont signé <a href="http://notreprimaire.fr/" data-mini="2">l’appel</a> initié par des personnalités de la société civile, comme les économistes Thomas Piketty et Julia Cagé, la romancière Marie Desplechin, la sociologue Dominique Méda, l’essayiste Raphaël Glucksmann, ou encore les écolos Yannick Jadot et Daniel Cohn-Bendit qui veulent croire qu’il <q>n’y a pas de fatalité à l’impuissance politique</q>. Barbara Romagnan est l’unique députée et la seule socialiste parmi les premiers signataires.</p>
+
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://notreprimaire.fr/"/>
+<span class="image"><img class="responsive" src="img/logo-primaire.jpg" alt="" /></span>
+<p class="title">«&nbsp;Notre primaire&nbsp;»</p>
+<p class="subtitle">Le site appelant à une primaire des gauches et de l'écologie. Ce manifeste a été signé par plus de 70&nbsp;000 personnes en moins de quinze jours.</p>
+</a>
+</aside>
+
+
+<p>Autour d’une table, avant le début du meeting au Kursaal, une salle de spectacle construite à la fin du XIXe siècle, une vingtaine d’hommes et de femmes qui veulent y croire… encore. Ils sont engagés dans la vie sociale, culturelle ou associative locale et désespèrent de n’apercevoir aucun horizon politique. Retraités de l’Education nationale, ancien directeur de théâtre, citoyens, pas encartés, ils sont prêts à mettre les mains dans le cambouis en échange d’un petit peu d’espoir. Pratiquer la politique autrement est une affaire de petites briques assemblées pour former un édifice d’idées qui deviendront peut-être incontournables.</p>
+
+
+<figure>
+<img src="img/romagnan-et-les-primaires-2.gif" alt="" />
+<figcaption><span>Barbara Romagnan lors d’un meeting à Besançon, le 11 février 2016 <span class="credits">Photos Raphaël Helle / Signatures pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+
+<p><q>Au début, on n’était même pas une dizaine, on n’était pas un collectif structuré. On a la conviction que dans notre pays, il y a une attente de respiration, politique, intellectuelle</q>, explique Wieviorka. Comme si une partie de la France avait envie d’ouvrir portes et fenêtres quand le reste du pays ferme les verrous à double tour. <q>Moi, je suis dans le système, j’ai accès aux médias par exemple, mais tout se joue de haut en bas&nbsp;: le Président, le Premier ministre, puis les commentateurs, la communication, les sondages… Il y a peu d’espace pour réfléchir, on se sent écrabouillés.</q> Cette soirée à Besançon rappelle au sociologue <a href="#note-2">les années LIP</a> et les mobilisations des années 70 auxquelles il a participé.</p> 
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "LIP",
+caption: "L’usine de montres LIP à Besançon a été le lieu de grandes mobilisations ouvrières&nbsp;: grève, autogestion, manifestation monstre en 1973."
+})
+}}
+
+<aside>
+<p><span>Romagnan veut parler chômage</span>, inégalités, climat, éducation</p>
+</aside>
+
+<p>Barbara Romagnan prend quelques notes. Michel Wieviorka sourit, sous une solide moustache&nbsp;: <q>On nous a fait comprendre qu’à l’Elysée, on pensait que ce n’était pas parce que trois personnes mangeaient dans un restaurant parisien en en parlant qu’il y aurait une primaire.</q> Pourtant, il sent, lui, après la première réunion publique à Paris le 3 février, <q>une effervescence</q>, il voit des <q>germes</q>.</p>
+
+
+
+<p>Dix-huit départements sont déjà en train de s’organiser, d’après le site officiel NotrePrimaire.fr. À Besançon, les participants sont avides de nouveaux fonctionnements politiques&nbsp;: <q>On ne peut pas rêver d’un programme plutôt que d’un Président&nbsp;?</q> <q>On a l’ambition de construire d’autres fondations, en dehors des partis, et on espère que cela va se poursuivre au-delà de la présidentielle qui semble plutôt cramée.</q> Un autre, militant PS, venu <q>à titre personnel</q>, salue <q>cette innovation démocratique qu’on devrait retrouver dans les institutions si elles pouvaient inclure la base</q>. Un autre peste contre <q>les gens d’expérience</q>&nbsp;: <q>Ça fait 40 ans qu’on les a. Regardez ce qui s’est passé en Espagne, avec Podemos&nbsp;!</q></p>
+
+<p>Barbara Romagnan s’inquiète à voix haute&nbsp;: <q>Même nous, ici, par exemple aux régionales, <a href="#note-3">on a voté</a> contre –&nbsp;contre le FN&nbsp;– plutôt que pour…</q> Elle ne finit pas sa phrase. Pour qui&nbsp;? Pour quoi&nbsp;? <q>La réponse à la crise démocratique, il faut la trouver ensemble, avec cette primaire des idées.</q> Elle veut que ce soit l’occasion de parler chômage, inégalités, climat, éducation, discriminations, réforme des institutions, Europe, migrants. Une militante associative explique que plus personne n’a envie d’entendre parler de politique, sauf que <q>les rythmes scolaires, le boulot du mari, la scolarité des gosses, c’est politique, ça...</q>.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Triangulaire aux régionales",
+caption: "Aux dernières élections, le FN s’était qualifié au second tour en Bourgogne-Franche-Comté. Au final, le PS a gagné avec 34,68&nbsp;% des suffrages. Le Front national n’était pas loin derrière, avec 32,44&nbsp;%."
+})
+}}
+
+<aside>
+<p><span>Des citoyens déçus</span> mais pas résignés</p>
+</aside>
+
+
+<p>Autour de la table, ils sont peut-être déçus, ils parlent de <q>désenchantement</q>, de <q>trahison</q> et même de <q>désamour</q>, mais ils ne se sont pas résignés. J’ai l’impression que la possibilité d’une primaire et le mouvement naissant que cela occasionne les revitalisent. Mais les autres&nbsp;? <q>J’espère que cette dynamique va attirer ceux qui ne votent plus, ne s’inscrivent pas sur les listes, ceux qui sont en dehors du circuit, qui ne s’y intéressent plus. Sinon, c’est sympa, mais on reste entre nous...</q>, résume Michel Wieviorka.</p>
+<p>Jean-Luc Mélenchon a d’ores et déjà indiqué, sur TF1, qu’il refusait de participer à une primaire et serait candidat à la présidentielle. Manière selon lui de garantir que ses idées seront bien présentes dans le débat de 2017 et de ne pas se retrouver contraint de s’aligner derrière la ligne politique actuelle sociale libérale du PS s’il ne remportait pas ladite primaire.</p>
+
+<p>Mais ce qui inquiète surtout les partisans de la primaire, c’est François Hollande. Et si c’était lui&nbsp;? S’il en ressortait vainqueur&nbsp;? Relégitimé&nbsp;? <q>Comment ça se termine la primaire&nbsp;? Je ne veux pas me retrouver avec Hollande ou Valls. Si c’est pour avoir un candidat de gauche, pas de problème, mais les mêmes...</q>, protestera un ancien militant PC, un peu plus tard. Pour Barbara Romagnan, qui choisit d’expliquer en préambule de la soirée son hostilité à la déchéance de nationalité, <a href="#note-4">la primaire</a> doit justement servir à créer les conditions <q>pour que d’autres puissent émerger</q>.</p>
+
+ {% from "partials/_macro.html" import note %}
+{{
+note({
+number: 4,
+title: "Manuel Valls hostile à la primaire",
+caption: "<q>Le problème n’est pas d’organiser une primaire qui irait de Mélenchon à Macron. Parfois, il y a des positions irréconciliables à gauche et il faut l’assumer.</q> Corbeil-Essonnes, le lundi 15 février."
+})
+}}
+
+
+<blockquote>
+<p>Pourquoi la fin du mois, ça commence le 15&nbsp;?</p>
+<footer>Un communiste dans la salle</footer>
+</blockquote>
+
+
+<p>Dans la salle comble, plus tard, Michel Wieviorka, qui n’est pas venu <q>vendre la primaire mais débattre</q>, intervient sur <q>comment peut-on retrouver le goût de l’avenir&nbsp;?</q>. Puis, très vite, les interrogations refont surface. Dans le public, un communiste aimerait qu’on aborde plutôt le présent&nbsp;: <q>Pourquoi la fin du mois, ça commence le 15&nbsp;?</q> Un ancien postier prône <q>un programme de rupture</q>, et <q>sans le PS qui nous a amené dans le mur</q>, alors que Michel Wieviorka pense au contraire que la primaire ne doit pas se tenir <a href="#note-5">sans le Parti socialiste</a>.
+ 
+
+ {% from "partials/_macro.html" import note %}
+{{
+note({
+number: 5,
+title: "Wieviorka confiant",
+caption: "Alors que Solférino fait publiquement la moue, le sociologue a rencontré Jean-Christophe Cambadélis le matin même. Le patron du PS lui a assuré que des militants participeraient à des réunions de coordination de la primaire."
+})
+}}
+
+<p>Un jeune homme qui, pour remuer une assemblée à la moyenne d’âge élevée, se présente comme <q>un étudiant, poil aux dents</q>, engage les partis de gauche à investir Internet et YouTube abandonnés à la <q>fachosphère</q>. Au micro, un militant de SOS Racisme paraît démuni&nbsp;: que faire quand, <q>dans la rue, une personne sur deux que l’on croise baisse les yeux et garde le silence parce qu’elle a voté pour un parti raciste&nbsp;?</q>. On entend du désarroi, de la démotivation. La primaire sera-t-elle un puissant antidote&nbsp;? Plus de 100 personnes vont laisser leur nom pour participer à la campagne. Une partie se donne déjà rendez-vous dès la semaine prochaine pour un premier atelier.<p/>
+
+<p>Voilà, c’était une soirée d’hiver dans le Doubs. A 20&nbsp;heures, 400 personnes se pressaient dans un théâtre pour tester l’hypothèse d’une primaire. Au même moment, à la télévision, le président de la République commentait le remaniement du jour.</p>

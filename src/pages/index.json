@@ -1,11 +1,16 @@
 {
 	"template": "home",
 
+<<<<<<< HEAD
 	"event": [
 		"episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+=======
+	"une": [
+		"episode:politique-annee-zero/romagnan-primaire-campagne-gauche",
+>>>>>>> master
 		"episode:les-jours-c-quoi/les-jours-le-pilote",
-		"episode:les-jours-a-l-oeil/making-of-college",
-		"episode:treize-novembre/urvoas-visite-la-justice-en-indigence"
+		"episode:treize-novembre/la-vie-suspendue-de-brahim",
+		"episode:l-empire/ep2-plug-canal"
 	],
 
 	"obsessions": [

@@ -15,7 +15,7 @@
 	"rel": {
 		"authors": [
 			{ "text": "author:charlotte-rotman" },
-			{ "photo": ["Michel Slomka/Hans Lucas", "author:charlotte-rotman"]}
+			{ "photo": ["author:michel-slomka", "author:charlotte-rotman"]}
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",

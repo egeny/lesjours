@@ -1,0 +1,89 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[1] %}
+<p><span class="lettrine">V</span>u du Parlement, l’état d’urgence peut bien durer trois ou quatre mois de plus, c’est une formalité. Mais pour <a href="#{{ person.href }}" data-mini="1">Vincent</a> et {% set person = obsession.people[7] %} <a href="#{{ person.href }}" data-mini="2">Brahim </a>, assignés à résidence à Aubervilliers et à Échirolles, la situation s’annonce un peu plus compliquée.</p>
+
+{% set person = obsession.people[1] %}
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[7] %}
+
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>L’arrêté qui les oblige depuis plus de deux mois à pointer trois fois par jour et à rentrer chez eux à 20&nbsp;heures ne mentionne aucune date de fin. Dès le premier jour, Brahim s’en était inquiété et avait demandé à la police combien de temps il devrait venir. <q>Ils ne savaient pas. J’ai dit à la commissaire&nbsp;: “Je vais divorcer, je vais perdre mon boulot et je vais devenir SDF, comment ça se passe&nbsp;?”</q></p>
+
+<figure>
+<img src="img/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois.jpg" alt="" />
+<figcaption><span>Brahim (de dos) doit pointer trois fois par jour au commissariat de Grenoble. Il est assigné à résidence depuis décembre 2015 suite à l'instauration de l'état d'urgence. Grenoble, le 1er février 2016 <span class="credits">Photo Pablo Chignard pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+
+
+<p>Au début, optimistes, les assignés espéraient que le ministère de l’Intérieur lèverait la mesure de lui-même, ou que le tribunal administratif s’en chargerait bientôt. Au bout de quelques semaines, ils se sont faits à l’idée qu’ils resteraient coincés jusqu’à la fin de l’état d’urgence, prévue le 25 février à minuit. Aujourd’hui, ils comprennent que la privation de liberté pourrait durer beaucoup plus longtemps.</p>
+
+<blockquote>
+<p>Y a pire sur Terre, mais ça devient chiant.</p>
+<footer>Vincent, assigné à résidence</footer>
+</blockquote>
+
+<p>Quelque part, ils s’habituent. <q>A force, je connais les flics, leurs prénoms, on se voit tous les jours</q>, <a href="http://www.lesjours.fr/obsessions/treize-novembre/pratique-fondamentaliste/">glisse Vincent</a>, blasé. <q>Ils voient que je suis pas méchant.</q> Lorsque, fin janvier, le gouvernement a laissé entendre qu’il voulait remettre le couvert pour trois mois, nous avions rappelé Vincent. Il était encore optimiste et pas très au fait&nbsp;: <q>C’est pas encore renouvelé je crois, si&nbsp;?</q></p>
+<p>Mais au fil de la conversation, il comprend que le Parlement donnera son accord pour la prolongation de l’état d’urgence. Il réalise ce que cela implique pour lui, et s’énerve. <q>J’ai déjà <a href="#note-1">décalé mes billets pour Londres</a> à avril. Si ça dure encore, je vais péter les plombs. Y a pire sur Terre, mais ça devient chiant. Que ce soit à la pharmacie ou au commissariat, c’est relou d’aller quelque part trois fois par jours. C’est une galère.</q></p>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Les vacances repoussées",
+caption: "Vincent avait prévu de partir en vacances à Londres avec un ami mais a dû ajourner ce projet depuis son assignation."
+})
+}}
+
+
+<p>Brahim, assigné dans l’Isère, est plutôt résigné. Il voit venir le truc, gros comme une maison&nbsp;: <q>Je pensais que l’état d’urgence finirait le 25 février, parce que le danger doit être imminent, mais le danger va être imminent tout le temps.</q> Il comprend qu’on ne reviendra pas en arrière si facilement.</p>
+
+
+
+<p>En théorie, le renouvellement des assignations à résidence ne sera pas automatique. La situation des 400 personnes concernées sera même <q>réexaminée</q> avant la prolongation de l’état d’urgence, a promis le porte-parole du gouvernement, Stéphane Le Foll, contraint par <a href="#note-2">un avis du Conseil constitutionnel</a> (comme <a href="http://www.20minutes.fr/politique/1779271-20160203-prolongation-etat-urgence-assignations-residence-reexaminees" target="_blank">le raconte <i>20 Minutes</i></a>). En pratique, c’est la direction des libertés publiques et des affaires juridiques du ministère de l’Intérieur qui devrait jeter un œil aux cas de Vincent et de Brahim, pour décider de lever leurs assignations ou de les prolonger.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Extrait de l’avis du Conseil constitutionnel, 22 décembre",
+caption: "<q>Si le législateur prolonge l’état d’urgence par une nouvelle loi, les mesures d’assignation à résidence prises antérieurement ne peuvent être prolongées sans être renouvelées.</q>"
+})
+}}
+
+
+<aside>
+<p><span>Brahim a l’impression de s’être fait </span> «&nbsp;escroquer par Hollande&nbsp;»</p>
+</aside>
+
+<p>Si la mesure devait s’éterniser, elle les handicaperait de plus en plus dans leur vie quotidienne, surtout au travail. Dès le début, Vincent a prévenu les policiers qu’il continuerait à se rendre à l’hôtel où il est veilleur de nuit. Il n’a pourtant pas le droit de sortir de sa commune, à plus forte raison le soir, quand il est censé rester chez lui. Brahim, lui, peut continuer à aller sur le chantier sans violer les termes de son assignation, mais il perd plusieurs heures de travail chaque semaine pour aller pointer. À quoi bon maintenir cette contrainte&nbsp;? Au bout de deux mois, la mesure n’a eu aucune conséquence judiciaire pour les deux assignés. Elle éveille par contre chez eux un profond sentiment d’injustice.</p>
+<p>Le 8 février, lors d’un colloque organisé par plusieurs ONG à Paris, Yasser Louati, du CCIF (Collectif contre l'islamophobie en France), s’inquiétait de ce que pouvait produire, à long terme, l’état d’urgence. Les musulmans pratiquants, disait-il, ont <q>le sentiment d’être ciblés et désignés comme ennemis internes</q>. <i>«&nbsp;L’exemple que nous sommes en train de donner est très dangereux</i>, renchérissait l’avocat Patrick Baudouin, invité en tant que président d'honneur de la FIDH (Fédération internationale des droits de l'homme). <i>Est-ce que cela a servi à quelque chose&nbsp;? La loi est devenue un instrument de communication politique.&nbsp;»</i></p>
+
+
+
+
+<p>Brahim, qui se sent <q>plutôt de gauche</q> mais n’a jamais voté, a l’impression de s’être fait <q>escroquer par Hollande, encore pire que Sarkozy</q>. <q>Pour réussir en politique en ce moment, c’est celui qui tape le plus sur les musulmans qui prend le plus de voix.</q> Il prévoit de voter en 2017. Pour qui&nbsp;? <q>Sur les nerfs, je pourrais dire FN</q>, glisse-t-il, avant de se reprendre&nbsp;: ce sera <q>Mélenchon, s’il se présente. Je le trouve plus juste et plus sincère.</q></p>
