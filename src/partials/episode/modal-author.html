@@ -1,0 +1,29 @@
+{# TODO: This section is a work in progress, you might find ugly things (like yo mama) #}
+{% for group in episode.rel.authors|expand %}
+	{% for kind, authors in group %}
+		{% set kind = "Texte"         if kind == "text"  else kind %}
+		{% set kind = "Photos"        if kind == "photo" else kind %}
+		{% set kind = "Illustrations" if kind == "drawing" else kind %}
+		{% for author in authors if authors.push else [authors] %}
+			<div id="{{ author.href }}" class="modal" role="dialog" tabindex="-1">
+				<div class="w-100 h-100 ph-0" role="document" style="display: flex; flex-direction: column">
+					<h2 class="ml-1m style-meta">{{ kind }}</h2>
+					<h3 class="ml-1m mb-2g style-meta-large">{{ author.name }}</h3>
+					<a class="btn close" href="#">
+						<span>Fermer<span class="sr"> cette fenêtre</span></span>
+						{{ icon("close") }}
+					</a>
+					<div class="flex-1 relative overflow-auto">
+						<div class="container row overlay">
+							<img class="col lg-w-auto lg-min-w-33 lg-max-w-75 sm-h-100 md-h-75 lg-h-100 sm-mb-2g md-mb-2g sm-fit-cover md-fit-contain lg-fit-cover" src="/obsessions/les-jours-c-quoi/img/{{ author.href }}.jpg" alt="" />
+							<div class="col flex-1 lg-col-bottom md-mh-1c md-w-6c lg-mh-0 lg-w-auto">
+								<p class="mb-0 style-meta">{{ author.subtitle }}</p>
+								{% if author.desc %}<p class="mb-0 fs-italic">{{ author.desc }}</p>{% endif %}
+							</div>
+						</div>
+					</div>
+				</div><!-- end of .container -->
+			</div><!-- end of .modal -->
+		{% endfor %}
+	{% endfor %}
+{% endfor %}
