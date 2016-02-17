@@ -2,8 +2,8 @@
 {% extends "partials/_layout.html" %}
 
 {% block content %}
-<section class="container sm-ph-0">
-	<div class="row">
+<section>
+	<div class="container sm-ph-0">
 		<div class="col sm-ph-0">
 			<h2 class="sr">À la une</h2>
 			{% set episode   = home.une|first|expand %}
@@ -24,29 +24,31 @@
 	</div>
 
 	{% if home.une|length > 1 %}
-	<div class="row mt-2g">
-		{% set une = home.une|slice(1) %}
-		{% set class = "md-w-⅓" if une|length >= 3     else ""    %}
-		{% set class = "md-w-½" if une|length % 2 == 0 else class %}
-		{% for article in une %}
-			{% set article   = article|expand %}
-			{% set obsession = article.obsession|expand %}
-			{%
-				set article = {
-					class: class,
-					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg"),
-					alt: article.alt,
-					href: "/obsessions/" + obsession.href + "/" + article.href + "/",
-					number: article.number,
-					title: article.title,
-					titleClass: "h5 mb-0 snake-3",
-					intro: article.intro,
-					obsession: obsession,
-					authors: article.rel.authors
-				}
-			%}
-			{% include "partials/article.html" %}
-		{% endfor %}
+	<div class="container mt-2g">
+		<div class="row">
+			{% set une = home.une|slice(1) %}
+			{% set class = "md-w-⅓" if une|length >= 3     else ""    %}
+			{% set class = "md-w-½" if une|length % 2 == 0 else class %}
+			{% for article in une %}
+				{% set article   = article|expand %}
+				{% set obsession = article.obsession|expand %}
+				{%
+					set article = {
+						class: class,
+						img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg"),
+						alt: article.alt,
+						href: "/obsessions/" + obsession.href + "/" + article.href + "/",
+						number: article.number,
+						title: article.title,
+						titleClass: "h5 mb-0 snake-3",
+						intro: article.intro,
+						obsession: obsession,
+						authors: article.rel.authors
+					}
+				%}
+				{% include "partials/article.html" %}
+			{% endfor %}
+		</div>
 	</div>
 	{% endif %}
 </section>
