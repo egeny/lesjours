@@ -42,7 +42,7 @@
 						number: article.number,
 						title: article.title,
 						titleClass: "h5 mb-0 snake-3",
-						intro: article.intro,
+						intro: article.subtitle,
 						obsession: obsession,
 						authors: article.rel.authors
 					}
@@ -98,7 +98,7 @@
 					number: article.number,
 					title: article.title,
 					titleClass: "snake-3" if loop.index0 < 2 else "snake-3 snake-margin",
-					intro: article.intro,
+					intro: article.subtitle,
 					obsession: obsession,
 					authors: article.rel.authors
 				}
@@ -126,7 +126,7 @@
 					number: article.number,
 					title: article.title,
 					titleClass: "snake-2" if loop.index0 < 2 else "snake-2 snake-padding",
-					intro: article.intro,
+					intro: article.subtitle,
 					obsession: obsession,
 					authors: article.rel.authors
 				}
