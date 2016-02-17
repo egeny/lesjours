@@ -49,6 +49,10 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+# Prefer to store the favicons to img/favicon
+# Some browsers still look for a favicon at the root
+RewriteRule ^favicon.ico /img/favicon/favicon.ico [L]
+
 # Fix some URLs to hide that they are handled by PHP
 RewriteRule ^(_account|abonnement|erreur|mon-compte).html$ $1.php [L]
 RewriteRule ^session$ session.php [L]
