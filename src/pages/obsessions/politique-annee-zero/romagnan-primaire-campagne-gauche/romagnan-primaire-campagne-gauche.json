@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "romagnan-primaire-campagne-gauche",
+
+	"number": 7,
+	"date": "2016-02-16T10:00+01:00",
+
+	"title": "Besoin primaire de politique",
+	"intro": "Dans le Doubs, la députée PS Barbara Romagnan organise une soirée en faveur de l'initiative lancée notamment par Thomas Piketty.",
+	"subtitle": "Dans le Doubs, la députée PS Barbara Romagnan organise une soirée en faveur de l'initiative lancée par Thomas Piketty.",
+	"lead":  "Elle est tout le temps sur le qui-vive, l'œil ouvert. Parfois, les maîtres de cérémonie ont du mal à s'effacer. Ils distribuent la parole de manière ostensible, commentent chaque intervention, ramènent la conversation à eux.",
+
+	"tags": ["politique", "Romagnan", "primaire", "gauche"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman"  },
+			{ "photo": "Raphaël Helle / Signatures" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/la-decheance-a-devore",
+		"last":  "episode:politique-annee-zero/romagnan-primaire-campagne-gauche"
+	}
+}
