@@ -68,12 +68,14 @@
 			{% set obsession = episode.obsession|expand %}
 			{%
 				set cover = {
-					class: "no-pattern obsession-" + obsession.color,
+					class: "no-pattern with-gradient obsession-" + obsession.color,
 					layout: "pv-5g sm-ph-2g md-pl-1c md-w-4c lg-pl-1c lg-w-5c",
 					img: "/obsessions/" + obsession.href + "/" + episode.href + "/" + episode.img|default("img/header.jpg"),
 					href: "/obsessions/" + obsession.href + "/" + episode.href + "/",
 					title:    episode.title,
+					titleClass: "h3",
 					subtitle: episode.subtitle,
+					subtitleClass: "p-large",
 					episode:  episode
 				}
 			%}
