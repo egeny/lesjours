@@ -5,9 +5,6 @@
 	// Locale to use (mainly for dates)
 	setlocale(LC_ALL, LOCALE);
 
-	// For security reasons, remove the X-Powered-By header
-	header_remove('X-Powered-By');
-
 	// Get the avatar's URL (check the URL first to provide an SVG fallback — not possible with gravatar)
 	function avatar_url() {
 		global $current_user;
