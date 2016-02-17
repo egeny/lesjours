@@ -2,15 +2,16 @@
 {% extends "partials/_layout.html" %}
 
 {% block content %}
+{% if home.event|length %}
 <section>
 	<div class="container sm-ph-0">
 		<div class="col sm-ph-0">
-			<h2 class="sr">À la une</h2>
-			{% set episode   = home.une|first|expand %}
+			<h2 class="sr">Événement</h2>
+			{% set episode   = home.event|first|expand %}
 			{% set obsession = episode.obsession|expand %}
 			{%
 				set cover = {
-					class: "no-pattern obsession-" + obsession.color,
+					class: "no-pattern with-gradient obsession-" + obsession.color,
 					layout: "pv-5g sm-ph-2g md-pl-1c md-w-4c lg-pl-1c lg-w-5c",
 					img: "/obsessions/" + obsession.href + "/" + episode.href + "/" + episode.img|default("img/header.jpg"),
 					href: "/obsessions/" + obsession.href + "/" + episode.href + "/",
@@ -23,10 +24,10 @@
 		</div>
 	</div>
 
-	{% if home.une|length > 1 %}
+	{% if home.event|length > 1 %}
 	<div class="container mt-2g">
 		<div class="row">
-			{% set une = home.une|slice(1) %}
+			{% set une = home.event|slice(1) %}
 			{% set class = "md-w-⅓" if une|length >= 3     else ""    %}
 			{% set class = "md-w-½" if une|length % 2 == 0 else class %}
 			{% for article in une %}
@@ -52,14 +53,18 @@
 	</div>
 	{% endif %}
 </section>
+{% endif %}
 
-{% if home.selected|length %}
+{% if home.event|length and home.une|length %}
 <hr/>
+{% endif %}
+
+{% if home.une|length %}
 <section class="container lg-mh-1c lg-w-10c">
 	<div class="row">
 		<div class="col">
-			<h2 class="sr">Notre sélection</h2>
-			{% set episode   = home.selected|first|expand %}
+			<h2 class="sr">À la une</h2>
+			{% set episode   = home.une|first|expand %}
 			{% set obsession = episode.obsession|expand %}
 			{%
 				set cover = {
@@ -76,10 +81,10 @@
 		</div>
 	</div>
 
-	{% if home.selected|length > 1 %}
+	{% if home.une|length > 1 %}
 	<div class="row mt-2g">
-		{% set selected = home.selected|slice(1) %}
-		{% for article in selected %}
+		{% set articles = home.une|slice(1) %}
+		{% for article in articles %}
 			{% set article   = article|expand %}
 			{% set obsession = article.obsession|expand %}
 			{%
@@ -101,10 +106,10 @@
 	</div>
 	{% endif %}
 
-	{% if home["selected-alt"] %}
+	{% if home["une-alt"] %}
 	<div class="row mt-2g lg-mh-1c lg-w-10c">
 		{% set dir = cycler("", " row-reverse") %}
-		{% for article in home["selected-alt"] %}
+		{% for article in home["une-alt"] %}
 			{% set article   = article|expand %}
 			{% set obsession = article.obsession|expand %}
 			{% set class = "md-w-½" if loop.index > 2 else "mb-1g" %}
