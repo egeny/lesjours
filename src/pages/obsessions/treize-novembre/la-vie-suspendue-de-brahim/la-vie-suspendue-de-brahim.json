@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "la-vie-suspendue-de-brahim",
+
+	"number": 23,
+	"date": "2016-02-16T10:00+01:00",
+
+	"title": "La vie suspendue de Brahim",
+	"intro": "<strong>Assignés.</strong> Soupçonné à tort de détenir des armes de guerre, ce maçon grenoblois pointe trois fois par jour au commissariat depuis deux mois.",
+	"subtitle": "Soupçonné à tort de détenir des armes de guerre, ce Grenoblois pointe trois fois par jour au commissariat depuis deux mois.",
+	"lead": "Depuis qu’il est assigné à résidence, le 3 décembre 2015, Brahim J., 37 ans, passe sa vie au volant. Tous les jours, à 8&nbsp;heures, 15&nbsp;heures et 19&nbsp;heures, il doit pointer à l’hôtel de police de Grenoble. Il vit et travaille à Échirolles.",
+
+	"tags": ["13 Novembre", "Etat d'urgence", "assigné", "justice", "terrorisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": "author:pablo-chignard" }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/urvoas-visite-la-justice-en-indigence",
+		"next":  "episode:treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois",
+		"last":  "episode:treize-novembre/la-vie-suspendue-de-brahim"
+	}
+}

@@ -31,7 +31,10 @@
 		"episode:treize-novembre/etat-urgence-mort-lente",
 		"episode:treize-novembre/legitime-defense-revient",
 		"episode:treize-novembre/urvoas-taubira",
-		"episode:treize-novembre/urvoas-visite-la-justice-en-indigence"
+		"episode:treize-novembre/urvoas-visite-la-justice-en-indigence",
+		"episode:treize-novembre/la-vie-suspendue-de-brahim",
+		"episode:treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois"
+
 	],
 
 	"people": [
@@ -49,7 +52,7 @@
 			"img":      "img/assigne-3.jpg",
 			"alt":      "",
 			"title":    "Vincent",
-			"subtitle": "32 ans, assigné à résidence à Aubervilliers",
+			"subtitle": "32 ans, assigné à résidence à Aubervilliers (Seine-Saint-Denis)",
 			"desc": "Réceptionniste dans un hôtel, graffeur et converti à l’islam, Vincent (son prénom a été modifié) est assigné à résidence depuis le 27 novembre. Ce Franco-Libanais de 32 ans vit à Aubervilliers avec sa femme et son fils d’un an et demi. Il pointe au commissariat trois fois par jour et doit rester chez lui de 20 heures à 6 heures du matin alors qu’il travaille de nuit. Le ministère de l’Intérieur lui reproche une pratique religieuse « fondamentaliste » et des fréquentations radicales. Très pieux, Vincent se défend de toute intention jihadiste.",
 			"minor": true
 		},
@@ -103,8 +106,8 @@
 			"img":      "img/brahim-assigne.jpg",
 			"alt":      "",
 			"title":    "Brahim J.",
-			"subtitle": "37 ans, assigné à résidence à Grenoble",
-			"desc": "Brahim vit depuis toujours à Echirolles, en banlieue de Grenoble. Dans sa jeunesse, ses « conneries » (du trafic de stupéfiants) l'ont conduit en prison, une dizaine d'années au total. Le ministère de l'Intérieur, qui le trouve « radicalisé », l'a perquisitionné puis assigné à résidence. Ce maçon intérimaire et père de deux petites filles se définit comme « musulman pratiquant », « de gauche ». Brahim pointe trois fois par jour au commissariat de Grenoble. Il condamne sans ambiguïté les attentats de novembre et conteste le traitement qui lui est réservé.",
+			"subtitle": "37 ans, assigné à résidence à Échirolles (Isère)",
+			"desc": "Brahim vit depuis toujours à Échirolles, en banlieue de Grenoble. Dans sa jeunesse, ses «&nbsp;conneries&nbsp;» (du trafic de stupéfiants) l'ont conduit en prison, une dizaine d'années au total. Le ministère de l'Intérieur, qui le trouve «&nbsp;radicalisé&nbsp;», l'a perquisitionné puis assigné à résidence. Ce maçon intérimaire et père de deux petites filles se définit comme «&nbsp;musulman pratiquant&nbsp;», «&nbsp;de gauche&nbsp;». Brahim pointe trois fois par jour au commissariat de Grenoble. Il condamne sans ambiguïté les attentats de novembre et conteste le traitement qui lui est réservé.",
 			"minor": true
 		}
 	]

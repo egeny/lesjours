@@ -7,8 +7,9 @@
 	"date": "2016-02-13T10:00+01:00",
 
 	"title": "Urvoas visite la justice en indigence",
-	"intro": "Le nouveau Garde des Sceaux est en déplacement au TGI de Chartres, petit tribunal aux moyens dérisoires. Il annonce le déblocage de 14 millions pour la Justice.",
-	"subtitle": "Jean-Jacques Urvoas n'a plus de circonscription mais des juridictions. Pour son premier déplacement dans un tribunal, il a choisi celui de Chartres (Eure-et-Loir), qui « ressemble à ce qu'est aujourd'hui la justice » à ses yeux. L'équilibre fragile de ce petit palais (32 magistrats) repose, analyse le nouveau ministre, sur «&nbsp;le seul engagement des professionnels&nbsp;» qui l'animent.",
+	"intro": "Le nouveau garde des Sceaux est en déplacement au TGI de Chartres, tribunal aux moyens dérisoires. Et débloque 14 millions pour la justice.",
+	"subtitle": "En virée à Chartres et son TGI aux moyens dérisoires, le nouveau garde des Sceaux débloque 14 millions pour la justice.",
+	"lead": "Jean-Jacques Urvoas n’a plus de circonscription mais des juridictions. Pour son premier déplacement dans un tribunal, il a choisi celui de Chartres (Eure-et-Loir), qui «&nbsp;ressemble à ce qu’est aujourd'hui la justice&nbsp;» à ses yeux.",
 
 	"tags": ["13 Novembre", "Etat d'urgence", "Parti socialiste", "justice", "Jean-Jacques Urvoas"],
 
@@ -20,6 +21,7 @@
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"prev":  "episode:treize-novembre/urvoas-taubira",
-		"last":  "episode:treize-novembre/urvoas-visite-la-justice-en-indigence"
+		"next":  "episode:treize-novembre/la-vie-suspendue-de-brahim",
+		"last":  "episode:treize-novembre/la-vie-suspendue-de-brahim"
 	}
 }
