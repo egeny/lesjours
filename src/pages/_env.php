@@ -3,7 +3,7 @@
 	define('LOCALE', 'fr_FR');
 
 	// Path to wordpress
-	define('WP_PATH', dirname(__FILE__).'/../../lj');
+	define('WP_PATH', dirname(__FILE__).'/../../wp.lesjours.fr');
 
 	// be2bill credentials (payment service)
 	define('BE2BILL_IDENTIFIER', 'LES JOURS TEST');
