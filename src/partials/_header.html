@@ -43,10 +43,13 @@
 	</nav><!-- end of #menu -->
 
 	<div id="login" class="modal" role="dialog" tabindex="-1">
-		<form class="sm-w-100 pa-1m" action="/session" method="post" role="document">
+		<form action="/session" method="post" role="document">
 			<fieldset>
 				<legend class="style-meta-larger mb-2g">Se connecter</legend>
-				<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
+				<a class="btn close" href="#">
+					<span>Fermer<span class="sr"> cette fenêtre</span></span>
+					{{ icon("close") }}
+				</a>
 				<div class="field">
 					<label for="login-mail">Adresse e-mail</label>
 					<input id="login-mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" required />
@@ -63,10 +66,13 @@
 	</div><!-- end of #login -->
 
 	<div id="forgot" class="modal" role="dialog" tabindex="-1">
-		<form class="sm-w-100 pa-1m" action="/session?forgot" method="post" role="document">
+		<form action="/session?forgot" method="post" role="document">
 			<fieldset>
 				<legend class="style-meta-larger mb-2g">Mot de passe oublié</legend>
-				<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
+				<a class="btn close" href="#">
+					<span>Fermer<span class="sr"> cette fenêtre</span></span>
+					{{ icon("close") }}
+				</a>
 				<p>Merci d’indiquer votre adresse e-mail. Un message vous sera envoyé avec un lien vous permettant de créer un nouveau mot de passe personnalisé.</p>
 				<div class="field">
 					<label for="forgot-mail">Adresse e-mail</label>
@@ -78,18 +84,24 @@
 	</div><!-- end of #forgot -->
 
 	<div id="forgot-mailed" class="modal" role="dialog" tabindex="-1">
-		<div class="sm-w-100 pa-1m" role="document">
+		<div role="document">
 			<h2 class="style-meta-larger mb-2g">Mot de passe oublié</h2>
-			<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
+			<a class="btn close" href="#">
+				<span>Fermer<span class="sr"> cette fenêtre</span></span>
+				{{ icon("close") }}
+			</a>
 			<p>Vérifiez votre messagerie pour y trouver un lien vous permettant de redéfinir votre mot de passe.</p>
 		</div>
 	</div><!-- end of #forgot-mailed -->
 
 	<div id="reset" class="modal" role="dialog" tabindex="-1">
-		<form class="sm-w-100 pa-1m" action="/session?reset" method="post" role="document">
+		<form action="/session?reset" method="post" role="document">
 			<fieldset>
 				<legend class="style-meta-larger mb-2g">Créer un nouveau mot de passe</legend>
-				<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
+				<a class="btn close" href="#">
+					<span>Fermer<span class="sr"> cette fenêtre</span></span>
+					{{ icon("close") }}
+				</a>
 				<p>Merci de saisir votre nouveau mot de passe.</p>
 				<div class="field">
 					<label for="reset-password">Nouveau mot de passe</label>
