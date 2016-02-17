@@ -49,6 +49,10 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+# Cache busting: adding a "busted" in a CSS or JS URL will bust the cache
+# The same file (without "busted") will be resolved
+RewriteRule ^(.+)\.busted\.((?:min\.)?(?:css|js))$ $1.$2 [L]
+
 # Prefer to store the favicons to img/favicon
 # Some browsers still look for a favicon at the root
 RewriteRule ^favicon.ico /img/favicon/favicon.ico [L]
