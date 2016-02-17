@@ -18,6 +18,7 @@ var
 	livereload = require('gulp-livereload'),
 	rename     = require('gulp-rename'),
 	replace    = require('gulp-replace'),
+	symlink    = require('gulp-sym'),
 
 	// HTML
 	nunjucks = require('gulp-nunjucks-render'),
@@ -279,6 +280,12 @@ gulp.task('build:assets', function(cb) {
 		glob
 			.sync(path.join(paths.pages, '.htaccess'))
 			.map(function(file) { return assets(file); })
+	);
+
+	streams = streams.concat(
+		gulp
+			.src(path.join(paths.dist, 'img/favicon/favicon.ico'))
+			.pipe(symlink(path.join(paths.dist, 'favicon.ico'), { force: true, relative: true }))
 	);
 
 	streams = streams.concat(
