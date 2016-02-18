@@ -1,13 +1,13 @@
 {
 	"template": "home",
 
+	"event": [],
+
 	"une": [
 		"episode:politique-annee-zero/romagnan-primaire-campagne-gauche",
 		"episode:treize-novembre/la-vie-suspendue-de-brahim",
-		"episode:l-empire/ep2-plug-canal"		
+		"episode:l-empire/ep2-plug-canal"
 	],
-
-	"event": [],
 
 	"obsessions": [
 		"obsession:treize-novembre",
