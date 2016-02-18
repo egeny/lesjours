@@ -26,8 +26,27 @@ ErrorDocument 500 /500.html
 	                              "text/vtt" \
 	                              "text/xml"
 </IfModule>
+
+# Makes sure the MIME types are correct
 <IfModule mod_mime.c>
-	AddEncoding gzip svgz
+	# Data interchange
+	AddType application/atom+xml atom
+	AddType application/rss+xml  rss
+
+	# JavaScript
+	AddType application/javascript js
+
+	# Media files
+	AddType audio/mp4     m4a
+	AddType image/svg+xml svg
+	AddType video/mp4     mp4
+	AddType video/webm    webm
+
+	# Web fonts
+	AddType application/vnd.ms-fontobject eot
+
+	# Other
+	AddType text/vtt vtt
 </IfModule>
 
 <IfModule mod_expires.c>
