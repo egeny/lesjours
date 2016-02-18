@@ -10,18 +10,18 @@
 	"desc": "Ils s’appellent Moussa, Lucie, Rayan, Agita ou Faema. Ils sont en 3e B à Aimé-Césaire, un collège classé REP situé dans un quartier populaire du nord de Paris. « Les Jours » racontent la vie de cette classe durant toute une année scolaire.</p><p>C’est une année charnière pour les adolescents, la dernière passée ensemble avant l’orientation vers des filières générale, technique ou pro qui dessineront en partie leurs vies d’après. Cette chose encore un peu floue qu’on appelle le futur.",
 
 	"episodes": [
-		"episode:les-annees-college/making-of-college-lambert",
-		"episode:les-annees-college/the-course-of-maths",
-		"episode:les-annees-college/etre-charlie",
-		"episode:les-annees-college/ingenieur-pourquoi-pas",
-		"episode:les-annees-college/parents-prof",
-		"episode:les-annees-college/madame-front-national",
-		"episode:les-annees-college/conseil-de-classe",
-		"episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde",
-		"episode:les-annees-college/a-midi-la-classe-se-tait",
-		"episode:les-annees-college/un-pont-entre-deux-danses",
+		"episode:les-annees-college/retour-au-college",
 		"episode:les-annees-college/encore-un-matin",
-		"episode:les-annees-college/retour-au-college"
+		"episode:les-annees-college/un-pont-entre-deux-danses",
+		"episode:les-annees-college/a-midi-la-classe-se-tait",
+		"episode:les-annees-college/louis-le-grand-l-autre-bout-du-monde",
+		"episode:les-annees-college/conseil-de-classe",
+		"episode:les-annees-college/madame-front-national",
+		"episode:les-annees-college/parents-prof",
+		"episode:les-annees-college/ingenieur-pourquoi-pas",
+		"episode:les-annees-college/etre-charlie",
+		"episode:les-annees-college/the-course-of-maths",
+		"episode:les-annees-college/making-of-college-lambert"
 	],
 
 	"people": [
