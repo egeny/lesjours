@@ -58,7 +58,7 @@ RewriteRule ^(.+)\.busted\.((?:min\.)?(?:css|js))$ $1.$2 [L]
 RewriteRule ^favicon.ico /img/favicon/favicon.ico [L]
 
 # Fix some URLs to hide that they are handled by PHP
-RewriteRule ^(_account|abonnement|erreur|mon-compte).html$ $1.php [L]
+RewriteRule ^(_account|abonnement|mon-compte).html$ $1.php [L]
 RewriteRule ^session$ session.php [L]
 
 # Protect the /obsession folder
