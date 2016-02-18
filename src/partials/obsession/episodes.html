@@ -1,7 +1,7 @@
 {% from "partials/_macro.html" import authors %}
 <section id="episodes" role="tabpanel" aria-labelledby="tab-episodes" aria-hidden="false">
 	<h3 class="pl-1g mb-2g style-meta-larger">Les épisodes</h3>
-	{% set episodes = obsession.episodes|expand|published %}
+	{% set episodes = obsession.episodes|reverse|expand|published %}
 	{% set episode  = episodes[0] %}
 	<div class="row">
 		<div class="col mb-2g lg-w-½">

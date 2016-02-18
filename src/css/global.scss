@@ -206,6 +206,10 @@ q {
 	quotes: "« " " »" "“" "”";
 	font-style: italic;
 
+	// Allow to hide a quote (if the lettrine already have one)
+	&.no-quote-before::before,
+	&.no-quote-after::after { @extend .sr; }
+
 	blockquote & { quotes: "“" "”"; }
 }
 
