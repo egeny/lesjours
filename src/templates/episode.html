@@ -1,5 +1,5 @@
 {% set page = { title: episode.title|removeBR + " — Les Jours" } %}
-{% extends "partials/_layout.html" %}
+{% extends "partials/layout/layout.html" %}
 
 {% block content %}
 {% set obsession = episode.obsession|expand %}
@@ -112,5 +112,5 @@
 </article>
 {% include "partials/episode/modal-author.html" %}
 {% include "partials/obsession.html" %}
-{% include "partials/_footer.html"   %}
+{% include "partials/layout/footer.html" %}
 {% endblock %}

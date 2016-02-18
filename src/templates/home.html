@@ -1,5 +1,5 @@
 {% set page = { title: "Les Jours" } %}
-{% extends "partials/_layout.html" %}
+{% extends "partials/layout/layout.html" %}
 
 {% block content %}
 {% if home.event|length %}
@@ -197,5 +197,5 @@
 		<li class="col w-auto"><a class="btn-round btn-brand" href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
 	</ul>
 </section>
-{% include "partials/_footer.html" %}
+{% include "partials/layout/footer.html" %}
 {% endblock %}

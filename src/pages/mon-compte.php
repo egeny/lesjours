@@ -1,5 +1,5 @@
 {% set page = { title: "Mon compte — Les Jours" } %}
-{% extends "partials/_layout.html" %}
+{% extends "partials/layout/layout.html" %}
 
 {% block php -%}
 <?php
@@ -161,8 +161,8 @@
 	</div><!-- end of .row -->
 </div><!-- end of .container -->
 
-{% include "partials/modals/unsubscribe.html" %}
+{% include "partials/modals/unsubscribe.html"  %}
 {% include "partials/modals/unsubscribed.html" %}
 
-{% include "partials/_footer.html" %}
+{% include "partials/layout/footer.html" %}
 {% endblock %}

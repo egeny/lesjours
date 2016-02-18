@@ -4,7 +4,7 @@
 		class: "page-subscription md-fixed lg-fixed"
 	}
 %}
-{% extends "partials/_layout.html" %}
+{% extends "partials/layout/layout.html" %}
 
 {% block php -%}
 <?php
