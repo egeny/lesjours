@@ -93,6 +93,9 @@
 			if (!$info->content_type) {
 				http_response_code(404);
 				$uri = '/404.html';
+			} else {
+				// Force the Content-Type otherwise virtual will serve text/html
+				header('Content-Type: '.$info->content_type);
 			}
 
 			// Make a sub-request so Apache will handle the request (see .htaccess)
