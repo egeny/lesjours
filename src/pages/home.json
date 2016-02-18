@@ -1,12 +1,10 @@
 {
 	"template": "home",
 
-	"event": [],
-
 	"une": [
-		"episode:politique-annee-zero/romagnan-primaire-campagne-gauche",
-		"episode:treize-novembre/la-vie-suspendue-de-brahim",
-		"episode:l-empire/ep2-plug-canal"
+		"episode:l-empire/bollore-29-millions",
+		"episode:les-jours-c-quoi/les-jours-le-pilote",
+		"episode:les-annees-college/the-course-of-maths"
 	],
 
 	"obsessions": [
