@@ -20,6 +20,7 @@
 
 		"first": "episode:l-empire/ep1-guignols",
 		"prev": "episode:l-empire/ep4-journal-hard",
-		"last":  "episode:l-empire/ep6-portrait-bollore"
+		"next" : "episode:l-empire/bollore-29-millions",
+		"last":  "episode:l-empire/bollore-29-millions"
 	}
 }

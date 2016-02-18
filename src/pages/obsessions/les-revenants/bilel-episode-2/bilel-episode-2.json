@@ -22,6 +22,8 @@
 		],
 
 		"first": "episode:les-revenants/bilel-episode-1",
-		"prev": "episode:les-revenants/bilel-episode-1"
+		"prev": "episode:les-revenants/bilel-episode-2",
+		"next": "episode:les-revenants/bilel-episode-3"
+
 	}
 }
