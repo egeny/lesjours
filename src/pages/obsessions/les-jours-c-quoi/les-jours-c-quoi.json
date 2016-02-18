@@ -10,12 +10,12 @@
 	"desc": "<p>Face au torrent de l’info éphémère, <i>Les Jours</i>, c’est le nouveau média en ligne qui creuse ses obsessions au cœur de l’actualité et ne les lâche pas.<p><p><i>Les Jours</i> défendent un journalisme singulier, curieux, tenace, emmené par des têtes de pioche.</p>",
 
 	"episodes": [
-		"episode:les-jours-c-quoi/les-jours-le-projet",
-		"episode:les-jours-c-quoi/les-jours-le-pilote",
-		"episode:les-jours-c-quoi/les-jours-tuto-obsession",
-		"episode:les-jours-c-quoi/les-jours-navigation",
+		"episode:les-jours-c-quoi/les-jours-l-equipe",
 		"episode:les-jours-c-quoi/les-jours-combien",
-		"episode:les-jours-c-quoi/les-jours-l-equipe"
+		"episode:les-jours-c-quoi/les-jours-navigation",
+		"episode:les-jours-c-quoi/les-jours-tuto-obsession",
+		"episode:les-jours-c-quoi/les-jours-le-pilote",
+		"episode:les-jours-c-quoi/les-jours-le-projet"
 	],
 
 	"people": [
