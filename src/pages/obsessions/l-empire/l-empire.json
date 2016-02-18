@@ -10,12 +10,11 @@
 	"desc": " Il a déjà fixé la date&nbsp;: le 17 février 2022, Vincent Bolloré lèguera sa petite épicerie à sa dynastie. Du transport et de la logistique, du fioul et des batteries électriques, du plastique et des palmiers en Afrique. Et Havas. Et Vivendi. Et Canal+.</p> Depuis l’été dernier, l’homme d’affaires mène un raid sur le groupe crypté dont il a viré la quasi-totalité des dirigeants. Désormais, Vincent Bolloré fait sa loi à Canal+ et ça ne fait que commencer.</p>",
 
 	"episodes": [
-		"episode:l-empire/ep2-plug-canal",
-		"episode:l-empire/ep3-portrait-belmer",
-		"episode:l-empire/ep4-journal-hard",
+		"episode:l-empire/bollore-29-millions",
 		"episode:l-empire/ep5-jour-de-deug",
-		"episode:l-empire/bollore-29-millions"
-
+		"episode:l-empire/ep4-journal-hard",
+		"episode:l-empire/ep3-portrait-belmer",
+		"episode:l-empire/ep2-plug-canal"
 	],
 
 	"people": [
