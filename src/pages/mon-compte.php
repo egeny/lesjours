@@ -161,31 +161,8 @@
 	</div><!-- end of .row -->
 </div><!-- end of .container -->
 
-<div id="unsubscribe" class="modal" role="dialog" tabindex="-1">
-	<div role="document">
-		<h2 class="style-meta-larger mb-2g">Se désabonner</h2>
-		<a class="btn close" href="#">
-			<span>Fermer<span class="sr"> cette fenêtre</span></span>
-			{{ icon("close") }}
-		</a>
-		<p>Êtes-vous sûr de vouloir vous désabonner ?</p>
-		<a class="w-100 mb-2g btn-primary btn-brand" href="?unsubscribe">Valider</a>
-		<a class="w-100 btn-primary btn-brand btn-square btn-reverse btn-white" href="#">Annuler</a>
-	</div>
-</div>
-<div id="unsubscribed" class="modal" role="dialog" tabindex="-1">
-	<div role="document">
-		<h2 class="style-meta-larger mb-2g">Se désabonner</h2>
-		<a class="btn close" href="#">
-			<span>Fermer<span class="sr"> cette fenêtre</span></span>
-			{{ icon("close") }}
-		</a>
-		<p>Vous êtes à présent désabonné.<br/>
-		Nous sommes tristes de vous voir partir. :(</p>
-		<p>Vous allez recevoir un e-mail de confirmation.</p>
-		<p>À bientôt ?</p>
-		<p>L’équipe des Jours</p>
-	</div>
-</div>
+{% include "partials/modals/unsubscribe.html" %}
+{% include "partials/modals/unsubscribed.html" %}
+
 {% include "partials/_footer.html" %}
 {% endblock %}
