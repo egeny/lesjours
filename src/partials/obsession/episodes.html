@@ -39,7 +39,7 @@
 						<a class="row" href="/obsessions/{{ obsession.href }}/{{ episode.href }}/">
 							<img class="col col-top sm-w-2c md-w-4c lg-w-6c" src="/obsessions/{{ obsession.href }}/{{ episode.href }}/{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" />
 							<div class="col sm-w-2c md-w-4c lg-w-6c">
-								<h5 class="h5 snake-2"><span class="snake-container">{{ episode.title }}</span></h5>
+								<h5 class="h5 snake-2"><span class="snake-container">{{ episode.title|removeBR }}</span></h5>
 								<p>{{ episode.subtitle }}</p>
 								<p class="style-meta">Épisode n°{{ episode.number }} • <time datetime="{{ episode.date }}">{{ episode.date|human }}</time></p>
 							</div>
