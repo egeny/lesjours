@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "bollore-29-millions",
+
+	"number": 5,
+	"date": "2016-01-17T10:00+01:00",
+
+	"title": "Bolloré&nbsp;: la purge à 29&nbsp;millions",
+	"intro": "Selon les documents que se sont procurés «&nbsp;Les Jours&nbsp;», c’est le coût du coupage de têtes à Canal+ en 2015.",
+	"subtitle": "Selon les documents que se sont procurés «&nbsp;Les Jours&nbsp;», c’est le coût du coupage de têtes à Canal+ en 2015.",
+	"lead": "Allez, allez, tout doit disparaître. Pour un Rodolphe Belmer viré, nous vous offrons également non seulement la tête d’Ara Aprikian, mais aussi celle de Bertrand Meheut et celle de Thierry Thuillier. Allez, il nous en reste un peu.",
+
+	"tags": ["Vincent Bolloré", "Canal+", "Rodolphe Belmer", "Guignols", "Bertrand Meheut", "Vivendi"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:garriberts" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:l-empire/ep2-plug-canal",
+		"prev":  "episode:l-empire/ep5-jour-de-deug",
+		"last":  "episode:l-empire/ep6-portrait-bollore"
+	}
+}

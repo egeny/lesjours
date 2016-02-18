@@ -1,0 +1,89 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+{% set person = obsession.people[0] %}
+<p><span class="lettrine">A</span>llez, allez, tout doit disparaître. Pour un <a href="#{{ person.href }}" data-mini="1">Rodolphe Belmer</a> viré, nous vous offrons également non seulement la tête d’Ara Aprikian, mais aussi celle de Bertrand Meheut et celle de Thierry Thuillier. Allez, il nous en reste un peu, on vous les met quand même&nbsp;? Hop&nbsp;: la directrice du cinéma, ouste la patronne d’i-Télé, dehors celle de CanalSat, tchao le chef de StudioCanal, celui de la régie pub, la secrétaire générale, la DRH, si, si, on insiste, ça nous fait plaisir. Et on vous fait le tout à, allez, 29&nbsp;millions d’euros. Oui, 29&nbsp;millions d’euros. Selon nos informations, c’est ce qu’il en a coûté, en 2015, à Vincent Bolloré, ou plutôt à Canal+ pour faire le ménage en grande partie parmi l’état major du groupe. Ça fait un peu cher la charrette, mais que voulez-vous&nbsp;: quand on n’aime pas, on ne compte pas.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[1] %}
+<p>29&nbsp;millions d’euros, donc. Minimum. Selon les résultats financiers présentés fin 2015 lors d’un «&nbsp;comité de management&nbsp;» de Canal+ que se sont procurés <i>Les Jours</i>, la <q>réorganisation</q> (qu’en termes délicats ces choses-là sont dites…) aura coûté 29&nbsp;millions d’euros à fin novembre. Soit quatre millions de plus qu’annoncé au trimestre précédent, alors que rien n’avait été prévu dans le budget 2015. Pas sûr que <a href="#{{ person.href }}" data-mini="2">Vincent Bolloré</a> se vante de ce chiffre lors de la présentation des comptes annuels de Vivendi qui a lieu ce jeudi 17 février en fin d’après-midi. Les mauvais résultats attendus, tant au niveau des abonnements que des pertes du groupe, devraient être dissimulés derrière l’annonce d’un accord de distribution exclusive de BeIn Sports, la rivale qui lui tond les droits sportifs sur le dos depuis quelques années.</p>
+
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+
+{% set person = obsession.people[3] %}
+<p>Un deal qui camouflera aussi ces fameux 29&nbsp;millions d’euros claqués vite fait. Si Rodolphe Belmer et <a href="#{{ person.href }}" data-mini="3">Ara Aprikian</a>, respectivement numéro deux de Canal+ et patron du pôle gratuit (D8, D17, i-Télé), ont été débarqués en juillet dernier, une bonne partie de la charrette a eu lieu en une seule journée, le 3 septembre, le jour où le proprio de Vivendi (du moins son premier actionnaire avec environ 15&nbsp;% du capital) est également devenu roi de Canal+ (en vrai, on dit président du conseil de surveillance).</q></p>
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<blockquote>
+	<p>J’espère que vous n’avez pas eu trop peur des purges possibles.</p>
+	<footer>Vincent Bolloré aux cadres de Canal+, le 3 septembre 2015, avant de se livrer à ladite purge</footer>
+</blockquote>
+
+
+<p>Ce jeudi 3 septembre est un écho au lundi 6 juillet (dont nous vous entretenions dans un <a href="/obsessions/l-empire/ep4-journal-hard/">épisode précédent</a>) où s’était tenu, déjà, un «&nbsp;comité de management&nbsp;» au cours duquel Bolloré avait infligé une dégelée collective aux cadres. Deux mois plus tard, il passe à l’acte, encore dans un nouveau «&nbsp;comité de management&nbsp;» qui se tient, comme toujours, dans le confortable auditorium de Canal+ à Issy-les-Moulineaux. <i>«&nbsp;Avant l’été je vous avais dit qu’on allait revoir la structure et l’organisation dès le retour de l’été,</i> annonce Vincent Bolloré. <i>J’espère que vous avez quand même pu passer un bon été, que vous n’avez pas eu trop peur des purges possibles.&nbsp;»</i> Et bim, c’est parti.</p>
+
+{% set person = obsession.people[2] %}
+<p><a href="#{{ person.href }}" data-mini="4">Bertrand Meheut</a>, président du groupe, est écarté. Nathalie Coste-Cerdan, directrice du cinéma, Céline Pigalle et Cécilia Ragueneau, patronnes d’i-Télé, Thierry Thuillier, en charge des sports, ou encore Stéphane Tual, directeur des moyens généraux, découvrent en direct non seulement qu’ils sont virés, mais en plus que leurs remplaçants sont déjà là, dans la salle. En fait, la majeure partie des évincés a appris la veille au soir d’une bouche amie que la réunion serait l’occasion d’un jeu de massacre. Comique, certains des remplaçants intronisés par Bolloré n’ont pas exactement compris leurs nouvelles fonctions. Ainsi Guillaume Zeller, bombardé de la rédaction en chef de <i>DirectMatin.fr</i> à celle d’i-Télé, pense travailler avec Céline Pigalle. Eh ben non&nbsp;: elle est virée, faut se renseigner, vieux.</p>
+{{
+	mini({
+		number: 4,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+<p><span>Bolloré scalpe</span> totalement Canal+</p>
+</aside>
+
+<p>Secrétariat général (Delphine d’Amarzit), DRH (Sylvie Guyesse), régie publicitaire (Roger Costes), Studio Canal (Olivier Courson), direction du cinéma (Nathalie Costes-Cerdan), CanalSat (Alice Holzman), i-Télé (outre Céline Pigalle, la DG Cécilia Ragueneau et la secrétaire générale Laure Bezault), sports (Thierry Thuillier), moyens généraux (Stéphane Tual)… Bolloré scalpe totalement Canal+, à de très rares exceptions près. Pour bien marquer son territoire et l’emprise de Vivendi sur sa filiale, il dépêche sur place des cadres de l’avenue de Friedland qui héberge le siège de l’ancienne Générale des eaux. Ils avaient un boulot chez Vivendi&nbsp;? Ils auront le même chez Canal+, mais sans lâcher le premier. Frédéric Crépin, secrétaire général de Vivendi, occupera en sus le même poste à Canal+, idem pour le DRH Mathieu Peyceré (revenu depuis à la case départ), le directeur de l’audit Vincent Vallejo ou encore la directrice des moyens généraux Stéphanie Ferrier.</p>
+
+<figure>
+	<img src="img/coup-de-balai-1.jpg" alt="" />
+	<figcaption><span>Céline Pigalle, Thierry Thuillier, Rodolphe Belmer, Ara Aprikian… Mieux que les disparus aux césar, les disparus de Canal+ <span class="credits">Photomontage Sébastien Calvet/<i>Les Jours</i></span>.</span></figcaption>
+</figure>
+
+<p>Et en <i>gwetur</i>, Simone. Pardon, c’est qu’à force de travailler sur le Breizhou Bollo, ça déteint. En voiture, Simone, donc, pour la nouvelle équipe. Sauf que non. La charrette du 3 septembre a fait beaucoup de bruit mais elle continue son bonhomme de chemin en silence. D’autres cadres ont en effet quitté le groupe depuis et les 29&nbsp;millions d’euros vont faire des petits. Ainsi, selon nos informations, Olivier Le Gallo, directeur commercial de Canal+, Frédéric Vincent, directeur technique et le directeur des achats, Ludovic Mahoudeaux, ont pris leurs cliques et leurs claques. Ou encore, relevait <a href="http://bfmbusiness.bfmtv.com/entreprise/nouveaux-departs-chez-canal-plus-937817.html"><i>BFM Business</i></a> en décembre dernier, François Couton, directeur «&nbsp;finances et performance&nbsp;». Julien Verley, lui, est un cas à part&nbsp;: l’ancien dirigeant de Canal+ Pologne est le seul de l’ancienne équipe à avoir pris du galon, bombardé au directoire du groupe par Vincent Bolloré. Avant de finir lui aussi par quitter Canal+ en décembre dernier. Et nos petits doigts nous disent que d’autres départ sont en cours.</p>
+
+<blockquote>
+	<p>On ne nous demandait pas de réfléchir mais d’obéir. On nous demandait d’être des moutons, pas des talents.</p>
+	<footer>Un ancien cadre de Canal+</footer>
+</blockquote>
+
+<p>C’est bien simple&nbsp;: si vous prenez les cent cadres réunis ce fameux 3 septembre, c’est presqu’un tiers qui a été ratiboisé par Vincent Bolloré. Trente au total, et plus de quarante personnes en comptant les départs collatéraux&nbsp;: assistant(e)s, chauffeurs, auteurs des <a href="obsessions/l-empire/ep4-journal-hard/"><i>Guignols</i></a>, etc. Mais attention, on ne licencie pas&nbsp;: on négocie. Un chèque et salut. <i>«&nbsp;On ne vous dit pas de partir,</i> explique l’un des partants, <i>mais on organise tout pour que vous partiez et quand vous prenez la décision, tout est déjà prêt pour que vous partiez le plus vite possible.&nbsp;»</i> Un ex-cadre analyse ainsi la gouvernance façon Bolloré&nbsp;: <q>On ne nous demandait pas de réfléchir mais d’obéir. On nous demandait d’être des moutons, pas des talents.</q> Et ça, cette caste de directeurs ne l’accepte pas&nbsp;: <q>La pire sanction, quand vous êtes un dirigeant, c’est de devenir un exécutant.</q></p>
+
+<p>Le chèque de départ est conséquent, évidemment, mais sans parachute doré. Même si dans un comité d’entreprise de Canal+, Bolloré a déclaré que <q>les conditions salariales de leur départ ne le font pas pleurer</q>. La clause de non-dénigrement qu’il faut signer en échange, elle, est stricte&nbsp;: interdit de dauber sur Canal+, ses dirigeants, la stratégie, sinon adieu le chèque. <q>Il faut qu’on sorte avec le sourire,</q> grince un viré. Souriez, vous êtes bolloréisés.</p>
+
+
+
