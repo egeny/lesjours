@@ -1,5 +1,6 @@
 <?php
 	require('_bootstrap.php');
+	$referer = $_SERVER['HTTP_REFERER'];
 
 	// Well, when asked to close the session…
 	if (isset($_GET['close'])) {
@@ -30,17 +31,18 @@
 			mail($_POST['mail'], $subject, $content, implode("\r\n", $headers));
 
 			// Redirect to the referer and display the appropriate modal
-			die(header('Location: '.$_SERVER['HTTP_REFERER'].'#forgot-mailed'));
+			die(header('Location: '.$referer.'#forgot-mailed'));
 		}
 
-		// If something went bad, redirect to the error page
-		die(header('Location: /erreur.html?forgot'));
+		// If something went bad, redirect to the referer and display the appropriate modal
+		die(header('Location: '.$referer.'#forgot-error'));
 	}
 
+	// Asking to reset the password
 	if (isset($_GET['reset'])) {
 		// Retrieve the mail and key for the referer's query parameters
-		$parsed = parse_url($_SERVER['HTTP_REFERER']);
-		parse_str($parsed['query'], $_GET); // Overwritte the $_GET parameters, because why not?
+		$parsed = parse_url($referer);
+		parse_str($parsed['query'], $_GET); // Overwrite the $_GET parameters, because why not?
 
 		// Check if the key is matching and still valid
 		$user = check_password_reset_key($_GET['key'], $_GET['mail']);
@@ -55,11 +57,11 @@
 			), false);
 
 			// Finally, redirect to the previous page (build the URL using $parsed to discard query parameters)
-			die(header('Location: '.$parsed['scheme'].'://'.$parsed['host'].(!preg_match('/erreur\.html/', $parsed['path']) ? $parsed['path'] : '/')));
+			die(header('Location: '.$parsed['scheme'].'://'.$parsed['host'].$parsed['path'].'#reset-done'));
 		}
 
-		// If something went bad, redirect to the error page (don't forget to include the mail an key)
-		die(header('Location: /erreur.html?mail='.urlencode($_GET['mail']).'&key='.$_GET['key'].'&reset'));
+		// If something went bad, redirect to the referer and display the appropriate modal (parameters should be included in the referer)
+		die(header('Location: '.$referer.'#reset-error'));
 	}
 
 	// When receiving data, try to log the user
@@ -71,24 +73,19 @@
 		), false);
 
 		if (!is_wp_error($user)) {
-			die(header('Location: '.(!preg_match('/erreur\.html/', $_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '/')));
+			die(header('Location: '.$referer));
 		}
 
 		// Display an evasive message in case of error
-		die(header('Location: /erreur.html?login'));
+		die(header('Location: '.$referer.'#login-error'));
 	}
 
 	// $current_user is always an object, check if it has an ID
 	if ($current_user->ID) {
 		$meta = get_all_user_meta($current_user->ID);
 
-		// TODO: redirect to a page if not paid (or pending)
-		// TODO: redirect to a page if expired
-
-		// Allow if the user has paid and its subscription isn't expired
-		if ($meta['paid'] == 1 && strtotime($meta['expire']) > time()) {
-			// Make a sub-request so Apache will handle the request (see .htaccess)
-
+		// Allow the user if its subscription isn't expired
+		if (strtotime($meta['expire']) > time()) {
 			$uri  = $_SERVER['REQUEST_URI'];
 			$info = apache_lookup_uri($uri);
 
@@ -96,16 +93,22 @@
 			if (!$info->content_type) {
 				http_response_code(404);
 				$uri = '/404.html';
+			} else {
+				// Force the Content-Type otherwise virtual will serve text/html
+				header('Content-Type: '.$info->content_type);
 			}
 
+			// Make a sub-request so Apache will handle the request (see .htaccess)
 			virtual($uri); // Will return a boolean so don't wrap in die()
 			die();
+		} else {
+			die(header('Location: /abonnement.html'));
 		}
 	}
 
 	// Check if we can use the referer
-	if (preg_match('#^'.preg_quote('http://'.$_SERVER['HTTP_HOST']).'#', $_SERVER['HTTP_REFERER'])) {
-		header('Location: '.$_SERVER['HTTP_REFERER'].'#login');
+	if (preg_match('#^'.preg_quote('http://'.$_SERVER['HTTP_HOST']).'#', $referer)) {
+		header('Location: '.$referer.'#login');
 	} else {
 		header('Location: /#login');
 	}

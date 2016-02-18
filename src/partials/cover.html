@@ -8,7 +8,9 @@
 		- cover.img
 		- cover.href
 		- cover.title
+		- cover.titleClass (optional)
 		- cover.subtitle
+		- cover.subtitleClass (optional)
 		- cover.episode (optional)
 		- cover.desc (optional)
 
@@ -19,6 +21,7 @@
 #}
 {% from "partials/_macro.html" import authors %}
 {% set class = "bg-center " + cover.class if not r/bg-(?:left|center|right)/g|test(cover.class) else cover.class %}
+{% set titleClass = "h2 " + cover.titleClass|default("") if not r/h\d/g|test(cover.titleClass) else cover.titleClass %}
 <{{ cover.tag|default("div") }} {% if cover.id %}id="{{ cover.id }}" {% endif %}class="cover {{ class }}" style="background-image: url({{ cover.img }})">
 	{% if "small"|in(cover.class|split(" ")) %}
 		<a href="{{ cover.href }}" class="overlay">
@@ -38,8 +41,8 @@
 			<div class="{{ cover.layout|default("pv-5g sm-pa-2g md-ph-1c lg-ph-1c") }} relative">
 				<div class="snake-1">
 					<div class="snake-container">
-						<h2 class="h2"><a href="{{ cover.href }}">{{ cover.title }}</a></h2>
-						<p class="p-larger mb-1g">{{ cover.subtitle }}</p>
+						<h2 class="{{ titleClass }}"><a href="{{ cover.href }}">{{ cover.title }}</a></h2>
+						<p class="{{ cover.subtitleClass|default("p-larger") }} mb-1g">{{ cover.subtitle }}</p>
 						{% if cover.episode %}
 							{% set obsession = cover.episode.obsession|expand %}
 							<p class="style-meta color-inherit"><a href="/obsessions/#{{ obsession.href }}">{{ obsession.name }}</a> • épisode n°{{ cover.episode.number }} | Par {{ authors(cover.episode.rel.authors, class="text-upper") }}</p>

@@ -1,5 +1,6 @@
 AddDefaultCharset utf-8
 ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
 
 <IfModule mod_headers.c>
 	Header unset ETag
@@ -25,8 +26,27 @@ ErrorDocument 404 /404.html
 	                              "text/vtt" \
 	                              "text/xml"
 </IfModule>
+
+# Makes sure the MIME types are correct
 <IfModule mod_mime.c>
-	AddEncoding gzip svgz
+	# Data interchange
+	AddType application/atom+xml atom
+	AddType application/rss+xml  rss
+
+	# JavaScript
+	AddType application/javascript js
+
+	# Media files
+	AddType audio/mp4     m4a
+	AddType image/svg+xml svg
+	AddType video/mp4     mp4
+	AddType video/webm    webm
+
+	# Web fonts
+	AddType application/vnd.ms-fontobject eot
+
+	# Other
+	AddType text/vtt vtt
 </IfModule>
 
 <IfModule mod_expires.c>
@@ -48,8 +68,16 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+# Cache busting: adding a "busted" in a CSS or JS URL will bust the cache
+# The same file (without "busted") will be resolved
+RewriteRule ^(.+)\.busted\.((?:min\.)?(?:css|js))$ $1.$2 [L]
+
+# Prefer to store the favicons to img/favicon
+# Some browsers still look for a favicon at the root
+RewriteRule ^favicon.ico /img/favicon/favicon.ico [L]
+
 # Fix some URLs to hide that they are handled by PHP
-RewriteRule ^(_account|abonnement|erreur|mon-compte).html$ $1.php [L]
+RewriteRule ^(_account|abonnement|mon-compte).html$ $1.php [L]
 RewriteRule ^session$ session.php [L]
 
 # Protect the /obsession folder

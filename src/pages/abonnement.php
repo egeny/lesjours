@@ -4,7 +4,7 @@
 		class: "page-subscription md-fixed lg-fixed"
 	}
 %}
-{% extends "partials/_layout.html" %}
+{% extends "partials/layout/layout.html" %}
 
 {% block php -%}
 <?php
@@ -12,9 +12,6 @@
 
 	$data  = $_POST;
 	$error = null;
-
-	// Makes sure to have a default country, for the <select>
-	$data['country'] = !empty($data['country']) ? $data['country'] : 'fr';
 
 	$hidden = array(
 		'amount'        => null,
@@ -94,7 +91,6 @@
 				update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
 				update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$PLANS[$plan]['duration'])));
 				update_user_meta($user_id, 'subscription', $date);
-				update_user_meta($user_id, 'paid',         '1');
 
 				// Prepare an email and send it
 				$subject = 'Confirmation de votre abonnement aux « Jours »';
@@ -107,17 +103,13 @@
 
 				// Prevent displaying an error message (see below)
 				@mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
-			} else {
-				// If something went bad, remove some meta (WIP)
-				delete_user_meta($user_id, 'plan');
-				delete_user_meta($user_id, 'payment');
 			}
-
-			// As stated in the documentation, the payment service waits for "OK"
-			// Otherwise, it will re-send a notification
-			// See https://developer.be2bill.com/callbacks#c3
-			die('OK');
 		}
+
+		// As stated in the documentation, the payment service waits for "OK"
+		// Otherwise, it will re-send a notification
+		// See https://developer.be2bill.com/callbacks#c3
+		die('OK');
 	}
 
 	// Receiving a result from the payment service
@@ -172,44 +164,60 @@
 			}
 		}
 
+		// If received data is fine, create a new user or use the current one
 		if (!$error) {
-			// Try to create a new user
-			$user_id = wp_insert_user(array(
-				'user_email' => $data['mail'],
-				'user_login' => $data['mail'],
-				'user_pass'  => $data['password'],
-				'first_name' => $data['firstname'],
-				'last_name'  => $data['name']
-			));
+			if ($current_user->ID) {
+				$user_id = $current_user->ID;
+				$meta = get_all_user_meta($user_id);
 
-			$error = is_wp_error($user_id) ? array('account' => $user_id) : null;
+				// Fill $data with some informations for the payment service
+				$data['name']      = $meta['last_name'];
+				$data['firstname'] = $meta['first_name'];
+				$data['mail']      = $current_user->user_email;
+			} else {
+				// Try to create a new user
+				$user_id = wp_insert_user(array(
+					'user_email' => $data['mail'],
+					'user_login' => $data['mail'],
+					'user_pass'  => $data['password'],
+					'first_name' => $data['firstname'],
+					'last_name'  => $data['name']
+				));
 
-			if (!$error) {
-				// Add additionnal metadata
-				foreach (array('plan', 'address', 'zip', 'city', 'country', 'payment') as $field) {
-					add_user_meta($user_id, $field, $data[$field], true);
-				}
+				$error  = is_wp_error($user_id) ? array('account' => $user_id) : null;
+				$fields = array('address', 'zip', 'city', 'country');
+			}
+		}
 
-				// We may now log-in the user
-				wp_set_auth_cookie($user_id, true, false);
+		// Check if an error occured while creating or finding the user
+		if (!$error) {
+			// Add additionnal metadata
+			foreach (array_merge(array('plan', 'payment'), $fields ? $fields : array()) as $field) {
+				update_user_meta($user_id, $field, $data[$field]);
+			}
 
-				if ($data['payment'] == 'card') {
-					// Complete the payload for the payment service
-					$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
-					$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
-					$hidden['clientemail']  = $data['mail'];
-					$hidden['clientident']  = $user_id;
-					$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
-					$hidden['hash']         = signature($hidden);
+			// Look the user if not already logged-in
+			wp_set_auth_cookie($user_id, true, false);
 
-					// Generate an hidden form containing the needed informations for the payment service
-					$state = 'redirect';
-				} else {
-					// TODO: bank
-				}
+			if ($data['payment'] == 'card') {
+				// Complete the payload for the payment service
+				$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
+				$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
+				$hidden['clientemail']  = $data['mail'];
+				$hidden['clientident']  = $user_id;
+				$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
+				$hidden['hash']         = signature($hidden);
+
+				// Generate an hidden form containing the needed informations for the payment service
+				$state = 'redirect';
+			} else {
+				// TODO: bank
 			}
 		}
 	} // end of if (!empty($_POST))
+
+	// Makes sure to have a default country, for the <select>
+	$data['country'] = !empty($data['country']) ? $data['country'] : 'fr';
 ?>
 {% endblock %}
 
@@ -219,6 +227,9 @@
 	<?php
 		foreach ($error as $name => $value) {
 			switch ($name) {
+				case 'account': $value = 'd’utiliser une autre adresse e-mail, celle-ci existe déjà';
+				break;
+
 				case 'plan': $value = 'de choisir une formule';
 				break;
 
@@ -249,7 +260,7 @@
 			<div class="subscription h-100 overflow-auto">
 			<?php if ($state == 'redirect') : ?>
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Redirection vers le paiement</h2>
-				<form id="redirect" class="md-ml-1c lg-ml-1c" action="https://secure-magenta1.be2bill.com/front/form/process" method="post">
+				<form id="redirect" class="md-ml-1c lg-ml-1c" action="<?php echo BE2BILL_URL; ?>" method="post">
 				<?php foreach ($hidden as $name => $value) : ?>
 					<input type="hidden" name="<?php echo strtoupper($name) ?>" value="<?php echo $value ?>" />
 				<?php endforeach ?>
@@ -279,7 +290,8 @@
 							<?php if ($code == 3) : ?>
 								<p class="mt-0">Votre transaction est en cours. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
 							<?php elseif ($code > 3000 && !in_array($code, array(4017, 5001, 5002, 5004))) : ?>
-								<p class="mt-0">Suite à un incident de paiement (<?php echo $_GET['result'] ?>) votre transaction n'a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
+								<p class="mt-0">Suite à un incident de paiement (<?php echo $_GET['result'] ?>) votre transaction n'a pu être réalisée. 
+								Vous pouvez tenter de vous abonner à nouveau en <a href="/abonnement.html">suivant ce lien</a>. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations si le problème persiste.</p>
 							<?php else : ?>
 								<p class="mt-0">Suite à une erreur technique (<?php echo $_GET['result'] ?>) votre transaction n’a pu être réalisée. Veuillez contacter <a href="mailto:abonnement@lesjours.fr">abonnement@lesjours.fr</a> pour plus d’informations.</p>
 							<?php endif ?>
@@ -306,7 +318,7 @@
 									<span class="name">Jouriste</span>
 									<span class="desc">1 €/mois pendant le pilote*</span>
 									<small>Sans engagement de durée</small>
-									<input class="sr" type="radio" name="plan" value="jouriste" required <?php if ($data['plan'] == 'jouriste') : ?>checked <?php endif ?>/>
+									<input class="sr" type="radio" name="plan" value="jouriste" required <?php if (isset($data['plan']) && $data['plan'] == 'jouriste') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
 							</li>
@@ -316,7 +328,7 @@
 									<span class="name">Jouriste cash</span>
 									<span class="desc">Un an à compter de la fin du pilote*</span>
 									<small>Sans engagement de durée</small>
-									<input class="sr" type="radio" name="plan" value="jouriste-cash" required <?php if ($data['plan'] == 'jouriste-cash') : ?>checked <?php endif ?>/>
+									<input class="sr" type="radio" name="plan" value="jouriste-cash" required <?php if (isset($data['plan']) && $data['plan'] == 'jouriste-cash') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
 							</li>
@@ -327,7 +339,7 @@
 									<span class="desc">1 €/mois pendant le pilote*</span>
 									<small>Sans engagement de durée</small>
 									<small>Étudiant, chômeur, fauché</small>
-									<input class="sr" type="radio" name="plan" value="jouriste-desargente" required <?php if ($data['plan'] == 'jouriste-desargente') : ?>checked <?php endif ?>/>
+									<input class="sr" type="radio" name="plan" value="jouriste-desargente" required <?php if (isset($data['plan']) && $data['plan'] == 'jouriste-desargente') : ?>checked <?php endif ?>/>
 									<span class="action">Choisir</span>
 								</label>
 							</li>
@@ -347,39 +359,38 @@
 						<legend class="mb-2g style-meta-large relative">Mes coordonnées</legend>
 						<div class="field">
 							<label for="name">Nom</label>
-							<input id="name" class="input check md-white-check lg-white-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if ($data['name']) { echo 'value="'.$data['name'].'" '; } ?>required />
-							<?php if ($error['name']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="name" class="input check md-white-check lg-white-check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if (isset($data['name'])) { echo 'value="'.$data['name'].'" '; } ?>required />
+							<?php if (isset($error['name'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="firstname">Prénom</label>
-							<input id="firstname" class="input check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if ($data['firstname']) { echo 'value="'.$data['firstname'].'" '; } ?>required />
-							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="firstname" class="input check md-white-check lg-white-check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if (isset($data['firstname'])) { echo 'value="'.$data['firstname'].'" '; } ?>required />
+							<?php if (isset($error['firstname'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="subscription-mail">Adresse e-mail</label>
-							<input id="subscription-mail" class="input check md-white-check lg-white-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if ($data['mail']) { echo 'value="'.$data['mail'].'" '; } ?>required />
-							<?php if ($error['mail'])    : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
-							<?php if ($error['account']) : ?><span class="error">Ce compte existe</span><?php endif ?>
+							<input id="subscription-mail" class="input check md-white-check lg-white-check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email" <?php if (isset($data['mail'])) { echo 'value="'.$data['mail'].'" '; } ?>required />
+							<?php if (isset($error['mail'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="subscription-password">Mot de passe</label>
-							<input id="subscription-password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if ($data['password']) { echo 'value="'.$data['password'].'" '; } ?>required />
-							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="subscription-password" class="input check md-white-check lg-white-check" name="password" type="password" placeholder="××××××××" autocomplete="new-password" <?php if (isset($data['password'])) { echo 'value="'.$data['password'].'" '; } ?>required />
+							<?php if (isset($error['password'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="address">Adresse</label>
-							<input id="address" class="input check md-white-check lg-white-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if ($data['address']) { echo 'value="'.$data['address'].'" '; } ?>required />
-							<?php if ($error['address']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="address" class="input check md-white-check lg-white-check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if (isset($data['address'])) { echo 'value="'.$data['address'].'" '; } ?>required />
+							<?php if (isset($error['address'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="zip">Code postal</label>
-							<input id="zip" class="input check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
-							<?php if ($error['zip']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="zip" class="input check md-white-check lg-white-check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if (isset($data['zip'])) { echo 'value="'.$data['zip'].'" '; } ?>required />
+							<?php if (isset($error['zip'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="city">Ville</label>
-							<input id="city" class="input check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
-							<?php if ($error['city']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="city" class="input check md-white-check lg-white-check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if (isset($data['city'])) { echo 'value="'.$data['city'].'" '; } ?>required />
+							<?php if (isset($error['city'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field">
 							<label for="country">Pays</label>
@@ -399,7 +410,7 @@
 						</div>
 						<div class="field row mb-1g">
 							<label class="col md-w-auto pr-2g pl-0 color-dark">
-								<input class="radio" type="radio" name="payment" value="bank" <?php if ($data['payment'] == 'bank') : ?>checked <?php endif ?>required disabled />
+								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required disabled />
 								<span class="radio"></span>
 								Prélèvement
 							</label>
@@ -413,7 +424,7 @@
 					</fieldset>
 					<div>
 						<label class="mb-2g relative style-meta text-upper">
-							<input class="checkbox" type="checkbox" name="accept" <?php if ($data['accept']) : ?>checked <?php endif ?>required>
+							<input class="checkbox" type="checkbox" name="accept" <?php if (isset($data['accept']) && $data['accept']) : ?>checked <?php endif ?>required>
 							<span class="checkbox"></span>
 							J’accepte les conditions générales de vente. <a class="color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
 							<!-- TODO: error message -->

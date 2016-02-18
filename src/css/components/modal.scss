@@ -1,5 +1,6 @@
 /* @group Modal */
 $gutter: grid-gutter("sm");
+$margin: grid-margin("sm");
 
 .modal {
 	background:
@@ -23,7 +24,14 @@ $gutter: grid-gutter("sm");
 
 	[role="document"] {
 		background: $color-white;
+
 		box-sizing: border-box;
+		min-height: 100%;
+		padding: ($margin * 3) $margin $margin;
+
+		padding:     $margin;
+		padding-top: $margin * 3;
+
 		color: $color-main;
 	}
 
@@ -31,6 +39,8 @@ $gutter: grid-gutter("sm");
 		position: absolute;
 		top:   $gutter;
 		right: $gutter;
+
+		color: $color-brand;
 
 		svg {
 			width:  24px;
@@ -43,8 +53,12 @@ $gutter: grid-gutter("sm");
 
 @include media("md") {
 	$gutter: grid-gutter("md");
+	$margin: grid-margin("md");
 
 	.modal [role="document"] {
+		width:      400px;
+		min-height: 400px;
+
 		position: absolute;
 		top:  50%;
 		left: 50%;
@@ -53,24 +67,30 @@ $gutter: grid-gutter("sm");
 	}
 
 	@if $gutter != grid-gutter("sm") {
-		.modal {
-			.close {
-				top:   $gutter;
-				right: $gutter;
-			}
+		.modal .close {
+			top:   $gutter;
+			right: $gutter;
 		}
+	}
+
+	@if $margin != grid-margin("sm") {
+		.modal [role="document"] { padding: ($margin * 3) $margin $margin; }
 	}
 }
 
 @include media("lg") {
 	$gutter: grid-gutter("lg");
+	$margin: grid-margin("lg");
+
 	@if $gutter != grid-gutter("md") {
-		.modal {
-			.close {
-				top:   $gutter;
-				right: $gutter;
-			}
+		.modal .close {
+			top:   $gutter;
+			right: $gutter;
 		}
+	}
+
+	@if $margin != grid-margin("md") {
+		.modal [role="document"] { padding: ($margin * 3) $margin $margin; }
 	}
 }
 /* @end Modal*/

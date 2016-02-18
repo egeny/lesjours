@@ -1,0 +1,30 @@
+<header id="header">
+	<div class="header relative">
+		<div class="h-100 mh-1m relative text-center">
+			<h1 class="inline-block relative">
+				<a class="block" href="/">
+					<img width="55" height="42" src="/img/logo-text.svg" alt="Les Jours" />
+				</a>
+			</h1>
+
+			<a id="burger" class="initial" href="#menu">
+				<span><span class="sr">menu</span></span>
+			</a>
+		</div>
+		{# Use an iframe to check if the user is logged-in #}
+		{# Also, don't include in #header since it has to have a full width in order to match the page's media queries #}
+		<iframe src="/_account.html" class="w-100 h-100 overlay"></iframe>
+	</div><!-- end of .header -->
+
+	{% include "partials/layout/menu.html" %}
+
+	{% include "partials/modals/login.html" %}
+	{% include "partials/modals/login-error.html" %}
+	{% include "partials/modals/forgot.html" %}
+	{% include "partials/modals/forgot-error.html" %}
+	{% include "partials/modals/forgot-mailed.html" %}
+	{% include "partials/modals/reset.html" %}
+	{% include "partials/modals/reset-error.html" %}
+	{% include "partials/modals/reset-done.html" %}
+</header>
+<div class="header"></div>

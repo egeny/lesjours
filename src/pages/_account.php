@@ -1,4 +1,4 @@
-{% extends "partials/_layout-iframe.html" %}
+{% extends "partials/layout/layout-iframe.html" %}
 
 {% block php -%}
 <?php require('_bootstrap.php'); ?>

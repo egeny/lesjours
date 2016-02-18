@@ -1,21 +1,81 @@
 {% set page = { title: "Les Jours" } %}
-{% extends "partials/_layout.html" %}
+{% extends "partials/layout/layout.html" %}
 
 {% block content %}
-<section class="container sm-ph-0">
-	<div class="row">
+{% if home.event|length %}
+<section>
+	<div class="container sm-ph-0">
 		<div class="col sm-ph-0">
+			<h2 class="sr">Événement</h2>
+			{% set episode   = home.event|first|expand %}
+			{% set obsession = episode.obsession|expand %}
+			{%
+				set cover = {
+					class: "no-pattern with-gradient obsession-" + obsession.color,
+					layout: "pv-5g sm-ph-2g md-pl-1c md-w-4c lg-pl-1c lg-w-5c",
+					img: "/obsessions/" + obsession.href + "/" + episode.href + "/" + episode.img|default("img/header.jpg"),
+					href: "/obsessions/" + obsession.href + "/" + episode.href + "/",
+					title:    episode.title,
+					subtitle: episode.subtitle,
+					episode:  episode
+				}
+			%}
+			{% include "partials/cover.html" %}
+		</div>
+	</div>
+
+	{% if home.event|length > 1 %}
+	<div class="container mt-2g">
+		<div class="row">
+			{% set une = home.event|slice(1) %}
+			{% set class = "md-w-⅓" if une|length >= 3     else ""    %}
+			{% set class = "md-w-½" if une|length % 2 == 0 else class %}
+			{% for article in une %}
+				{% set article   = article|expand %}
+				{% set obsession = article.obsession|expand %}
+				{%
+					set article = {
+						class: class,
+						img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg"),
+						alt: article.alt,
+						href: "/obsessions/" + obsession.href + "/" + article.href + "/",
+						number: article.number,
+						title: article.title|removeBR,
+						titleClass: "h5 mb-0 snake-3",
+						intro: article.subtitle,
+						obsession: obsession,
+						authors: article.rel.authors
+					}
+				%}
+				{% include "partials/article.html" %}
+			{% endfor %}
+		</div>
+	</div>
+	{% endif %}
+</section>
+{% endif %}
+
+{% if home.event|length and home.une|length %}
+<hr/>
+{% endif %}
+
+{% if home.une|length %}
+<section class="container lg-mh-1c lg-w-10c">
+	<div class="row">
+		<div class="col">
 			<h2 class="sr">À la une</h2>
 			{% set episode   = home.une|first|expand %}
 			{% set obsession = episode.obsession|expand %}
 			{%
 				set cover = {
-					class: "no-pattern obsession-" + obsession.color,
+					class: "no-pattern with-gradient obsession-" + obsession.color,
 					layout: "pv-5g sm-ph-2g md-pl-1c md-w-4c lg-pl-1c lg-w-5c",
 					img: "/obsessions/" + obsession.href + "/" + episode.href + "/" + episode.img|default("img/header.jpg"),
-					href: "/obsessions/" + obsession.href + "/" + episode.href,
+					href: "/obsessions/" + obsession.href + "/" + episode.href + "/",
 					title:    episode.title,
+					titleClass: "h3",
 					subtitle: episode.subtitle,
+					subtitleClass: "p-large",
 					episode:  episode
 				}
 			%}
@@ -25,59 +85,8 @@
 
 	{% if home.une|length > 1 %}
 	<div class="row mt-2g">
-		{% set une = home.une|slice(1) %}
-		{% set class = "md-w-⅓" if une|length >= 3     else ""    %}
-		{% set class = "md-w-½" if une|length % 2 == 0 else class %}
-		{% for article in une %}
-			{% set article   = article|expand %}
-			{% set obsession = article.obsession|expand %}
-			{%
-				set article = {
-					class: class,
-					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg"),
-					alt: article.alt,
-					href: "/obsessions/" + obsession.href + "/" + article.href,
-					number: article.number,
-					title: article.title,
-					titleClass: "h5 mb-0 snake-3",
-					intro: article.intro,
-					obsession: obsession,
-					authors: article.rel.authors
-				}
-			%}
-			{% include "partials/article.html" %}
-		{% endfor %}
-	</div>
-	{% endif %}
-</section>
-
-{% if home.selected|length %}
-<hr/>
-<section class="container lg-mh-1c lg-w-10c">
-	<div class="row">
-		<div class="col">
-			<h2 class="sr">Notre sélection</h2>
-			{% set episode   = home.selected|first|expand %}
-			{% set obsession = episode.obsession|expand %}
-			{%
-				set cover = {
-					class: "no-pattern obsession-" + obsession.color,
-					layout: "pv-5g sm-ph-2g md-pl-1c md-w-4c lg-pl-1c lg-w-5c",
-					img: "/obsessions/" + obsession.href + "/" + episode.href + "/" + episode.img|default("img/header.jpg"),
-					href: "/obsessions/" + obsession.href + "/" + episode.href,
-					title:    episode.title,
-					subtitle: episode.subtitle,
-					episode:  episode
-				}
-			%}
-			{% include "partials/cover.html" %}
-		</div>
-	</div>
-
-	{% if home.selected|length > 1 %}
-	<div class="row mt-2g">
-		{% set selected = home.selected|slice(1) %}
-		{% for article in selected %}
+		{% set articles = home.une|slice(1) %}
+		{% for article in articles %}
 			{% set article   = article|expand %}
 			{% set obsession = article.obsession|expand %}
 			{%
@@ -85,11 +94,11 @@
 					class: "md-w-½",
 					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg") if loop.index0 < 2 else "",
 					alt: article.alt,
-					href: "/obsessions/" + obsession.href + "/" + article.href,
+					href: "/obsessions/" + obsession.href + "/" + article.href + "/",
 					number: article.number,
-					title: article.title,
+					title: article.title|removeBR,
 					titleClass: "snake-3" if loop.index0 < 2 else "snake-3 snake-margin",
-					intro: article.intro,
+					intro: article.subtitle,
 					obsession: obsession,
 					authors: article.rel.authors
 				}
@@ -99,10 +108,10 @@
 	</div>
 	{% endif %}
 
-	{% if home["selected-alt"] %}
+	{% if home["une-alt"] %}
 	<div class="row mt-2g lg-mh-1c lg-w-10c">
 		{% set dir = cycler("", " row-reverse") %}
-		{% for article in home["selected-alt"] %}
+		{% for article in home["une-alt"] %}
 			{% set article   = article|expand %}
 			{% set obsession = article.obsession|expand %}
 			{% set class = "md-w-½" if loop.index > 2 else "mb-1g" %}
@@ -113,11 +122,11 @@
 					layout: "md-w-½" if loop.index0 < 2 else "",
 					img: "/obsessions/" + obsession.href + "/" + article.href + "/" + article.img|default("img/header.jpg") if loop.index0 < 2 else "",
 					alt: article.alt,
-					href: "/obsessions/" + obsession.href + "/" + article.href,
+					href: "/obsessions/" + obsession.href + "/" + article.href + "/",
 					number: article.number,
-					title: article.title,
+					title: article.title|removeBR,
 					titleClass: "snake-2" if loop.index0 < 2 else "snake-2 snake-padding",
-					intro: article.intro,
+					intro: article.subtitle,
 					obsession: obsession,
 					authors: article.rel.authors
 				}
@@ -137,7 +146,7 @@
 				<h2 class="h4">Abonnez-vous aux Jours</h2>
 				<p class="mb-0 fw-bold-archer">Un journalisme singulier, curieux, obsessionnel.</p>
 				<p class="fw-bold-archer">Pour <del>9 €</del> <ins>1 €</ins>, explorez le site pilote.</p>
-				<a class="btn-primary btn-brand" href="/abonnement.html">Je m’abonne</a>
+				<a class="btn-primary btn-brand" href="/abonnement.html">S’abonner</a>
 			</div>
 		</div>
 		<div id="cta-project" class="col mb-2g lg-w-½">
@@ -188,5 +197,5 @@
 		<li class="col w-auto"><a class="btn-round btn-brand" href="https://www.instagram.com/lesjoursfr/"><i>{{ icon("instagram", "Instagram") }}</i></a></li>
 	</ul>
 </section>
-{% include "partials/_footer.html" %}
+{% include "partials/layout/footer.html" %}
 {% endblock %}

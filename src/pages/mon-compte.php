@@ -1,5 +1,5 @@
 {% set page = { title: "Mon compte — Les Jours" } %}
-{% extends "partials/_layout.html" %}
+{% extends "partials/layout/layout.html" %}
 
 {% block php -%}
 <?php
@@ -22,7 +22,6 @@
 	);
 
 	if (isset($_GET['unsubscribe'])) {
-		delete_user_meta($current_user->ID, 'paid');
 		delete_user_meta($current_user->ID, 'plan');
 		delete_user_meta($current_user->ID, 'expire');
 		delete_user_meta($current_user->ID, 'subscription');
@@ -91,12 +90,13 @@
 					<form method="post">
 						<div class="field lg-w-½">
 							<label for="account-mail">Adresse e-mail</label>
-							<input id="account-mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email"  <?php if ($data['email']) { echo 'value="'.$data['email'].'" '; } ?>disabled required />
+							<input id="account-mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email"  <?php if (isset($data['email'])) { echo 'value="'.$data['email'].'" '; } ?>disabled required />
+							<?php if (isset($error['mail'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field lg-w-½">
 							<label for="account-password">Mot de passe</label>
 							<input id="account-password" class="input check" name="password" type="password" placeholder="××××××××" required />
-							<?php if ($error['password']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<?php if (isset($error['password'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<button class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c" type="submit">Valider</button>
 					</form>
@@ -110,28 +110,28 @@
 					<form method="post">
 						<div class="field lg-w-½">
 							<label for="name">Nom</label>
-							<input id="name" class="input check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if ($data['name']) { echo 'value="'.$data['name'].'" '; } ?>required />
-							<?php if ($error['name']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="name" class="input check" name="name" type="text" placeholder="Dupont" autocomplete="family-name" <?php if (isset($data['name'])) { echo 'value="'.$data['name'].'" '; } ?>required />
+							<?php if (isset($error['name'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field lg-w-½">
 							<label for="firstname">Prénom</label>
-							<input id="firstname" class="input check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if ($data['firstname']) { echo 'value="'.$data['firstname'].'" '; } ?>required />
-							<?php if ($error['firstname']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="firstname" class="input check" name="firstname" type="text" placeholder="Jean" autocomplete="given-name" <?php if (isset($data['firstname'])) { echo 'value="'.$data['firstname'].'" '; } ?>required />
+							<?php if (isset($error['firstname'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field lg-w-½">
 							<label for="address">Adresse</label>
-							<input id="address" class="input check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if ($data['address']) { echo 'value="'.$data['address'].'" '; } ?>required />
-							<?php if ($error['address']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="address" class="input check" name="address" type="text" placeholder="1 avenue des Champs-Élysées" autocomplete="street-address" <?php if (isset($data['address'])) { echo 'value="'.$data['address'].'" '; } ?>required />
+							<?php if (isset($error['address'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field lg-w-½">
 							<label for="zip">Code postal</label>
-							<input id="zip" class="input check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if ($data['zip']) { echo 'value="'.$data['zip'].'" '; } ?>required />
-							<?php if ($error['zip']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="zip" class="input check" name="zip" type="text" placeholder="75008" autocomplete="postal-code" <?php if (isset($data['zip'])) { echo 'value="'.$data['zip'].'" '; } ?>required />
+							<?php if (isset($error['zip'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field lg-w-½">
 							<label for="city">Ville</label>
-							<input id="city" class="input check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if ($data['city']) { echo 'value="'.$data['city'].'" '; } ?>required />
-							<?php if ($error['city']) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
+							<input id="city" class="input check" name="city" type="text" placeholder="Paris" autocomplete="address-level2" <?php if (isset($data['city'])) { echo 'value="'.$data['city'].'" '; } ?>required />
+							<?php if (isset($error['city'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field lg-w-½">
 							<label for="country">Pays</label>
@@ -147,10 +147,10 @@
 
 				<section id="mon-abonnement" role="tabpanel" aria-labelledby="tab-mon-abonnement" aria-hidden="true">
 					<h3 class="mb-3g style-meta-large">Mon abonnement</h3>
-					<?php if ($plan) : ?>
+					<?php if ($plan && $subscription) : ?>
 						<p>Vous avez souscrit un abonnement le <?php $day = strftime('%e', $subscription); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $subscription) ?>. <a class="text-upper fw-bold color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a></p>
 						<h4 class="h5">Votre formule</h4>
-						<p><?php echo $plan['name'] ?> — <?php echo $plan['price'] ?> € par <?php echo $plan['duration'] == '1 year' ? 'an' : 'mois' ?> (expire le <?php $day = strftime('%e', $expire); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $expire) ?>)</p>
+						<p><?php echo $plan['name'] ?> — <?php echo $plan['price'] ?> € par <?php echo $plan['duration'] == '1 year' ? 'an' : 'mois' ?> (<?php echo time() > $expire ? 'expiré' : 'expire' ?> le <?php $day = strftime('%e', $expire); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $expire) ?>)</p>
 					<?php else : ?>
 						<p>Vous n’avez aucun abonnement en cours.</p>
 						<a href="/abonnement.html" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">S’abonner</a>
@@ -161,25 +161,8 @@
 	</div><!-- end of .row -->
 </div><!-- end of .container -->
 
-<div id="unsubscribe" class="modal" role="dialog" tabindex="-1">
-	<div class="sm-w-100 md-w-4c lg-w-4c pa-1m" role="document">
-		<h2 class="style-meta-larger mb-2g">Se désabonner</h2>
-		<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
-		<p>Êtes-vous sûr de vouloir vous désabonner ?</p>
-		<a class="w-100 mb-2g btn-primary btn-brand" href="?unsubscribe">Valider</a>
-		<a class="w-100 btn-primary btn-brand btn-square btn-reverse btn-white" href="#">Annuler</a>
-	</div>
-</div>
-<div id="unsubscribed" class="modal" role="dialog" tabindex="-1">
-	<div class="sm-w-100 md-w-4c lg-w-4c pa-1m" role="document">
-		<h2 class="style-meta-larger mb-2g">Se désabonner</h2>
-		<a class="btn close color-brand" href="#">{{ icon("close", "Fermer cette fenêtre") }}</a>
-		<p>Vous êtes à présent désabonné.<br/>
-		Nous sommes tristes de vous voir partir. :(</p>
-		<p>Vous allez recevoir un e-mail de confirmation.</p>
-		<p>À bientôt ?</p>
-		<p>L’équipe des Jours</p>
-	</div>
-</div>
-{% include "partials/_footer.html" %}
+{% include "partials/modals/unsubscribe.html"  %}
+{% include "partials/modals/unsubscribed.html" %}
+
+{% include "partials/layout/footer.html" %}
 {% endblock %}

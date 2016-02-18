@@ -1,0 +1,17 @@
+<div id="reset" class="modal" role="dialog" tabindex="-1">
+	<form action="/session?reset" method="post" role="document">
+		<fieldset>
+			<legend class="style-meta-larger mb-2g">Créer un nouveau mot de passe</legend>
+			<a class="btn close" href="#">
+				<span>Fermer<span class="sr"> cette fenêtre</span></span>
+				{{ icon("close") }}
+			</a>
+			<p>Merci de saisir votre nouveau mot de passe.</p>
+			<div class="field">
+				<label for="reset-password">Nouveau mot de passe</label>
+				<input id="reset-password" class="input check" name="password" type="password" placeholder="××××××××" required />
+			</div>
+			<button class="btn-primary btn-brand w-100" type="submit">Valider</button>
+		</fieldset>
+	</form>
+</div><!-- end of #reset -->

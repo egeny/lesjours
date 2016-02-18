@@ -144,6 +144,13 @@
 	line-height: 1.5;
 }
 
+.p-large {
+	@extend %font-archer;
+	@include font-weight-bold("archer");
+	font-size:   1.071428em; // Roughly +1px (don't ask why)
+	line-height: 1.333333;
+}
+
 .p-larger {
 	@extend %font-archer;
 	@include font-weight-semi-bold("archer");
@@ -190,5 +197,6 @@
 	.h3-alt { font-size: 1.5em;   }
 	.h4-alt { font-size: 1.125em; }
 
+	.p-large  { font-size: 1.375em; }
 	.p-larger { font-size: 1.625em; }
 }

@@ -1,5 +1,5 @@
 {% set page = { title: episode.title|removeBR + " — Les Jours" } %}
-{% extends "partials/_layout.html" %}
+{% extends "partials/layout/layout.html" %}
 
 {% block content %}
 {% set obsession = episode.obsession|expand %}
@@ -10,7 +10,7 @@
 		<div class="container ph-0">
 			<div class="row">
 				<div class="col sm-ph-4g md-ml-1c md-w-5c lg-ml-2c lg-w-6c">
-					<p class="mv-2g style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="link obsession" href="/obsessions/#{{ obsession.href }}">{{ obsession.name }}</a></p>
+					<p class="mv-2g style-meta">Épisode n°{{ episode.number }} de l’obsession <a class="link obsession" href="#obsession">{{ obsession.name }}</a></p>
 					<h2 class="h2">{{ episode.title|removeBR }}</h2>
 					<p>{{ episode.intro }}</p>
 					<time class="mb-2g style-meta" datetime="{{ episode.date }}">{{ episode.date|human }}</time>
@@ -22,7 +22,7 @@
 								{% set kind = "Photos" if kind == "photo" else kind %}
 								{% set kind = "Illustrations" if kind == "drawing" else kind %}
 								{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
-								<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+								<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="#{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
 							{% endfor %}
 						{% endfor %}
 						</ul>
@@ -58,7 +58,7 @@
 							{% set kind = "Photos" if kind == "photo" else kind %}
 							{% set kind = "Illustrations" if kind == "drawing" else kind %}
 							{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
-							<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+							<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="#{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
 						{% endfor %}
 					{% endfor %}
 					</ul>
@@ -84,8 +84,8 @@
 			<p class="sr">D’autres épisodes</p>
 			<ul class="row">
 				{% if prev|published %}
-				<li class="col sm-w-4c md-w-4c lg-w-4c lg-mr-4c">
-					<a rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}">
+				<li class="col sm-w-4c md-w-4c lg-w-½">
+					<a rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}/">
 						<i>{{ icon("angle-left") }}</i>
 						<div>
 							<span class="style-meta">Épisode n°{{ prev.number }}<span class="sr"> : </span></span>
@@ -95,8 +95,8 @@
 				</li>
 				{% endif %}
 				{% if next|published %}
-				<li class="col sm-w-4c md-w-4c lg-w-4c{% if not prev %} md-ml-4c lg-ml-8c{% endif %}">
-					<a rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}">
+				<li class="col sm-w-4c md-w-4c lg-w-½{% if not prev %} md-ml-4c lg-ml-6c{% endif %}">
+					<a rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}/">
 						<i>{{ icon("angle-right") }}</i>
 						<div class="text-right">
 							<span class="style-meta">Épisode n°{{ next.number }}<span class="sr"> : </span></span>
@@ -110,6 +110,7 @@
 		{% endif %}
 	</footer>
 </article>
+{% include "partials/episode/modal-author.html" %}
 {% include "partials/obsession.html" %}
-{% include "partials/_footer.html"   %}
+{% include "partials/layout/footer.html" %}
 {% endblock %}
