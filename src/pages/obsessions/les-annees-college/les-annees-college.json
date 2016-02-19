@@ -21,7 +21,9 @@
 		"episode:les-annees-college/ingenieur-pourquoi-pas",
 		"episode:les-annees-college/etre-charlie",
 		"episode:les-annees-college/the-course-of-maths",
-		"episode:les-annees-college/making-of-college-lambert"
+		"episode:les-annees-college/making-of-college-lambert",
+		"episode:les-annees-college/le-stage-de-troisieme"
+
 	],
 
 	"people": [
@@ -220,7 +222,7 @@
 			"alt":      "",
 			"title":    "Souhimbou",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "Au collège, il aime la <q>récré</q> et <q>les copains</q>. Mais aussi le dessin et les maths, pour lesquelles il a une aptitude certaine. À la fin de son cours, le prof de maths pose toujours une énigme à trouver pour le prochain cours. Souhimbou a tendance à donner la réponse à peine la question posée. <q>Il est rapide</q>, résume son prof, souvent contraint d’en trouver une autre au débotté. L’an prochain, il pourrait aller en seconde générale. Mais il faut qu’il travaille encore. Souhimbou ne sait pas exactement ce qu’il aimerait faire plus tard, <q>peut-être de la comptabilité</q>, à cause des maths. Il a un grand frère en terminale&nbsp;S. Un autre en troisième année de compta. Des modèles qui le motivent. En dehors du collège, il adore jouer au jeu <i>Minecraft</i>. Il cultive discrètement un petit côté vintage, adore <i>Le Petit Nicolas</i>, et écoute Michael Jackson et Eminem. Souhimbou est très copain avec Moussa.",
+			"desc": "Au collège, il aime la <q>récré</q> et <q>les copains</q>. Mais aussi le dessin et les maths, pour lesquelles il a une aptitude certaine. À la fin de son cours, le prof de maths pose toujours une énigme à trouver pour le prochain cours. Souhimbou a tendance à donner la réponse à peine la question posée. <q>Il est rapide</q>, résume son prof, souvent contraint d’en trouver une autre au débotté. L’an prochain, il pourrait aller en seconde générale. Mais il faut qu’il travaille encore. Souhimbou ne sait pas exactement ce qu’il aimerait faire plus tard, <q>peut-être de la comptabilité</q>, les maths encore. Il a un grand frère en terminale&nbsp;S. Un autre en troisième année de compta. Des modèles qui le motivent. En dehors du collège, il adore jouer au jeu <i>Minecraft</i>. Il cultive discrètement un petit côté vintage, adore <i>Le Petit Nicolas</i>, et écoute Michael Jackson et Eminem. Souhimbou est très copain avec Moussa.",
 			"minor": true
 		}
 	],

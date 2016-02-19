@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "le-stage-de-troisieme",
+
+	"number": 13,
+	"date": "2016-02-19T10:00+01:00",
+
+	"title": "Le stage de troisième",
+	"intro": "Cette semaine, les 3e&nbsp;B sont en stage d’observation en entreprise. Première incursion dans l’autre monde, la vie active.",
+	"subtitle": "Cette semaine, les 3e&nbsp;B sont en stage d’observation en entreprise. Première incursion dans la vie active.",
+
+	"lead":  "Le problème avec <q>les jeunes de maintenant</q>, c’est qu’ils ne sont pas comme ceux d’avant, explique le patron de Souhimbou, propriétaire d’un magasin de chaussures bon marché rue Max-Dormoy.",
+
+	"tags": ["Education", "Collège", "Paris", "Stage"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/making-of-college-lambert",
+		"last": "episode:les-annees-college/making-of-college-lambert"
+	}
+}
