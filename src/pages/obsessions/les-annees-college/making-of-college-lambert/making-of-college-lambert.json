@@ -21,6 +21,7 @@
 
 		"first": "episode:les-annees-college/retour-au-college",
 		"prev":  "episode:les-annees-college/the-course-of-maths",
-		"last":  "episode:les-annees-college/making-of-college-lambert"
+		"next":  "episode:les-annees-college/le-stage-de-troisieme",
+		"last":  "episode:les-annees-college/le-stage-de-troisieme"
 	}
 }

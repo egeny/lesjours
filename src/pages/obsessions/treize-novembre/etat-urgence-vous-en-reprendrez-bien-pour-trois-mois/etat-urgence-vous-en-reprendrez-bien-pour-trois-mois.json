@@ -21,6 +21,7 @@
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
 		"prev":  "episode:treize-novembre/la-vie-suspendue-de-brahim",
-		"last":  "episode:treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois"
+		"next":  "episode:treize-novembre/sophie-episode-2",
+		"last":  "episode:treize-novembre/sophie-episode-2"
 	}
 }

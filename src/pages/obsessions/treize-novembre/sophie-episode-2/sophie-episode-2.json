@@ -4,7 +4,7 @@
 	"href": "sophie-episode-2",
 
 	"number": 25,
-	"date": "2016-02-18T10:00+01:00",
+	"date": "2016-02-19T10:00+01:00",
 
 	"title": "La peur de Sophie «&nbsp;ne s’atténue pas&nbsp;»",
 	"intro": "<strong>Journal de bord du XIe.</strong> Sophie était à la terrasse du Bataclan le 13&nbsp;novembre. Trois mois plus tard, elle essaie d’avancer malgré l’angoisse.",
@@ -20,8 +20,7 @@
 		],
 
 		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
-		"prev":  "episode:treize-novembre/urvoas-visite-la-justice-en-indigence",
-		"next":  "episode:treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois",
-		"last":  "episode:treize-novembre/la-vie-suspendue-de-brahim"
+		"prev":  "episode:treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois",
+		"last":  "episode:treize-novembre/sophie-episode-2"
 	}
 }
