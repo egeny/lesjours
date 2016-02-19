@@ -2,6 +2,7 @@
 	"template": "obsessions",
 
 	"obsessions": [
+		"obsession:la-fete-du-stream",
 		"obsession:treize-novembre",
 		"obsession:les-annees-college",
 		"obsession:l-empire",

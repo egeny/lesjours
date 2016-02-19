@@ -2,17 +2,17 @@
 	"template": "home",
 
 	"une": [
-		"episode:les-annees-college/le-stage-de-troisieme",
+		"episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
 		"episode:les-jours-c-quoi/les-jours-le-pilote",
-		"episode:treize-novembre/sophie-episode-2"
+		"episode:les-annees-college/le-stage-de-troisieme"
 	],
 
 	"obsessions": [
+		"obsession:la-fete-du-stream",
 		"obsession:treize-novembre",
 		"obsession:les-annees-college",
 		"obsession:les-revenants",
 		"obsession:l-empire",
-		"obsession:politique-annee-zero",
-		"obsession:les-jours-a-l-oeil"
+		"obsession:politique-annee-zero"		
 	]
 }
