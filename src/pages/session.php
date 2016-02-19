@@ -57,8 +57,9 @@
 				'remember'      => true
 			), false);
 
-			// Finally, redirect to the previous page (build the URL using $parsed to discard query parameters)
-			die(header('Location: '.$parsed['scheme'].'://'.$parsed['host'].$parsed['path'].'#reset-done'));
+			// Finally, redirect to the previous page
+			// Use $parsed['path'] to discard query parameters
+			die(header('Location: '.$parsed['path'].'#reset-done'));
 		}
 
 		// If something went bad, redirect to the referer and display the appropriate modal (parameters should be included in the referer)
