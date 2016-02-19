@@ -1,6 +1,8 @@
 <?php
 	require('_bootstrap.php');
+
 	$referer = $_SERVER['HTTP_REFERER'];
+	$parsed  = parse_url($referer); // Parse the referer, it might be useful
 
 	// Well, when asked to close the session…
 	if (isset($_GET['close'])) {
@@ -41,7 +43,6 @@
 	// Asking to reset the password
 	if (isset($_GET['reset'])) {
 		// Retrieve the mail and key for the referer's query parameters
-		$parsed = parse_url($referer);
 		parse_str($parsed['query'], $_GET); // Overwrite the $_GET parameters, because why not?
 
 		// Check if the key is matching and still valid
@@ -73,7 +74,10 @@
 		), false);
 
 		if (!is_wp_error($user)) {
-			die(header('Location: '.$referer));
+			// Retrieve the "next" query parameters
+			parse_str($parsed['query'], $_GET); // Overwrite the $_GET parameters, because why not?
+
+			die(header('Location: '.(isset($_GET['next']) ? $_GET['next'] : $parsed['path'])));
 		}
 
 		// Display an evasive message in case of error
@@ -107,9 +111,9 @@
 	}
 
 	// Check if we can use the referer
-	if (preg_match('#^'.preg_quote('http://'.$_SERVER['HTTP_HOST']).'#', $referer)) {
-		header('Location: '.$referer.'#login');
+	if ($_SERVER['HTTP_HOST'] == $parsed['host']) {
+		header('Location: '.$parsed['path'].'?next='.$_SERVER['REQUEST_URI'].'#login');
 	} else {
-		header('Location: /#login');
+		header('Location: /?next='.$_SERVER['REQUEST_URI'].'#login');
 	}
 ?>
