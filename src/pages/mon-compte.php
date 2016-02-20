@@ -5,14 +5,23 @@
 <?php
 	require('_bootstrap.php');
 
-	// Prevent accessing this URL if there is no logged-in user
-	if (!$current_user->ID) { die(header('Location: /')); }
+	// Get the current_user (might be overwritten just after)
+	$user = $current_user;
 
-	$meta = get_all_user_meta($current_user->ID);
+	// Prevent accessing this URL if there is no logged-in user
+	if (!$user->ID) { die(header('Location: /')); }
+
+	// Allow super admins to inspect accounts
+	if (isset($_GET['inspect']) && is_super_admin()) {
+		$user = get_user_by(intval($_GET['inspect']) ? 'id' : 'email', $_GET['inspect']);
+		$user = $user ? $user : $current_user; // Fallback to the current_user if couldn't found the requested user
+	}
+
+	$meta = get_all_user_meta($user->ID);
 
 	$error = null;
 	$data  = array(
-		'email'     => $current_user->user_email,
+		'email'     => $user->user_email,
 		'name'      => $meta['last_name'],
 		'firstname' => $meta['first_name'],
 		'address'   => $meta['address'],
@@ -22,9 +31,9 @@
 	);
 
 	if (isset($_GET['unsubscribe'])) {
-		delete_user_meta($current_user->ID, 'plan');
-		delete_user_meta($current_user->ID, 'expire');
-		delete_user_meta($current_user->ID, 'subscription');
+		delete_user_meta($user->ID, 'plan');
+		delete_user_meta($user->ID, 'expire');
+		delete_user_meta($user->ID, 'subscription');
 		// TODO: Should send an email
 
 		die(header('Location: /mon-compte.html#unsubscribed'));
@@ -35,8 +44,8 @@
 			if (empty($_POST['password'])) {
 				$error['password'] = true;
 			} else {
-				wp_set_password($_POST['password'], $current_user->ID);
-				wp_set_auth_cookie($current_user->ID, true, false);
+				wp_set_password($_POST['password'], $user->ID);
+				!isset($_GET['inspect']) && wp_set_auth_cookie($user->ID, true, false);
 			}
 		} else {
 			// Sanitize and check received data
@@ -53,13 +62,13 @@
 			if (!$error) {
 				// Prefer wp_update_user for the name and firstname since it will generate the display name
 				wp_update_user(array(
-					'ID'         => $current_user->ID,
+					'ID'         => $user->ID,
 					'first_name' => $data['firstname'],
 					'last_name'  => $data['name']
 				));
 
 				foreach (array('address', 'zip', 'city', 'country') as $field) {
-					update_user_meta($current_user->ID, $field, $data[$field]);
+					update_user_meta($user->ID, $field, $data[$field]);
 				}
 			}
 		}
@@ -105,7 +114,7 @@
 				<section id="mes-informations" role="tabpanel" aria-labelledby="tab-mes-informations" aria-hidden="true">
 					<h3 class="mb-4g style-meta-large">Mes informations</h3>
 					<a class="mb-2g sm-w-1c md-w-1c lg-w-1c block" href="https://gravatar.com" target="_blank">
-						<img class="responsive h-100 radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
+						<img class="responsive h-100 radius" src="<?php echo avatar_url($user->user_email); ?>" alt="Mon avatar" />
 					</a>
 					<form method="post">
 						<div class="field lg-w-½">

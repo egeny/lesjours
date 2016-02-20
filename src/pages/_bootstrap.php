@@ -6,11 +6,9 @@
 	setlocale(LC_ALL, LOCALE);
 
 	// Get the avatar's URL (check the URL first to provide an SVG fallback — not possible with gravatar)
-	function avatar_url() {
-		global $current_user;
-
+	function avatar_url($mail) {
 		// Simplified version of https://gist.github.com/justinph/5197810
-		$hash = md5(strtolower(trim($current_user->user_email)));
+		$hash = md5(strtolower(trim($mail)));
 		$url  = 'http://www.gravatar.com/avatar/'.$hash.'?s=90';
 		$code = wp_cache_get($hash);
 
