@@ -1,0 +1,99 @@
+{
+	"template": "obsession",
+
+	"href": "la-fete-du-stream",
+
+	"color": 10,
+	"name":  "La fête du stream",
+	"title": "La fête<br />du stream",
+	"subtitle": "Enquête dans l’économie de la musique.",
+	"desc": "<p>Porté par Deezer et Spotify, mais aussi désormais par des géants comme YouTube et Apple, le streaming est en train de signer la fin d’une époque pour la musique, qui ne sera plus vendue mais livrée en flux infini sur abonnement.</p><p>Dans ce nouveau monde, enregistrer une chanson n’est plus qu’une étape parmi d’autres, car l’argent s’éparpille et ne revient pas toujours aux musiciens. Plongée dans une économie de moins en moins artistique.</p>",
+
+	"episodes": [
+		"episode:la-fete-du-stream/ep-1-du-cd-au-streaming"
+	],
+
+	"people": [
+		{
+			"href":     "adami",
+			"img":      "img/adami.jpg",
+			"alt":      "",
+			"title":    "L’Adami",
+			"subtitle": "Société civile pour l’administration des droits des artistes et musiciens interprètes",
+			"desc": "Créée en 1955, l’Adami gère les droits voisins des artistes-interprètes, qui peuvent s’ajouter aux droits des auteurs et compositeurs gérés par la Sacem. Les artistes-interprètes peuvent être des musiciens, des solistes d’orchestre ou des chefs d’orchestre. L’Adami représente aussi des comédiens et des danseurs. Par son statut, l’Adami est l’une des voix des artistes dans le débat public et dans les négociations.",
+			"minor": true
+		},
+		{
+			"href":     "gam",
+			"img":      "img/gam.jpg",
+			"alt":      "",
+			"title":    "La GAM",
+			"subtitle": "Guilde des artistes de la musique",
+			"desc": "Créée en 2013 par des musiciens qui souhaitent se représenter eux-mêmes, la GAM est une représentante française du Worldwide Independent Network (WIN). Notamment portée par le chanteur Axel Bauer, elle est un nouvel acteur dans le paysage français. Ni syndicat, ni société de perception comme l’Adami, elle n’a pas de mandat qui lui donne automatiquement le droit de siéger dans les différentes instances de la musique en France, mais s’est fait une place lors des négociations du protocole Schwartz en 2015, où elle a fait valoir des positions pragmatiques qui ont permis au texte d’aboutir.",
+			"minor": true
+		},
+		{
+			"href":     "pascal-negre",
+			"img":      "img/pascal-negre.jpg",
+			"alt":      "",
+			"title":    "Pascal Nègre",
+			"subtitle": "54 ans, ex-président d’Universal Music France",
+			"desc": "Le flamboyant et fatigant patron d'Universal Music France a été remercié par Vincent Bolloré mi-février, après 18&nbsp;ans à la tête du plus gros label français. Président de la maison de disques Polygram au début des années&nbsp;90, Pascal Nègre est arrivé chez Universal lors du rachat de cette dernière en 1998. L’ancien attaché de presse devenu producteur aux costumes bigarrés a alors été nommé président de la nouvelle entité, qui confirmera sous sa direction sa place de major parmi les majors du disque. Pascal Nègre est par ailleurs membre du conseil syndical du Snep, le syndicat des majors, et président du conseil d’administration de la SCPP, la société qui perçoit les droits des producteurs. Connu du grand public avant tout pour sa quête anti-piratage qui a mené à la mise en place de l'Hadopi, il a été pendant deux décennies la figure centrale de l'économie de la musique en France, parfait connaisseur du droit ou des enjeux politiques et économiques, qu’il manipule à l’envi pour défendre les intérêts à court-terme de l’industrie de la musique et d’Universal en particulier. De l’avis général, Pascal Nègre est un négociateur drôle, usant et sans pitié. Contrairement à beaucoup d’autres patrons de grandes maisons de disques, qui sont aujourd’hui des gestionnaires d’entreprises qui passent d’un secteur à un autre, Pascal Nègre vient du monde du disque et connaît ses métiers, qu’il a exercés ou côtoyés avant de devenir dirigeant. Il a ainsi réussi à traverser les années&nbsp;2000 très chahutées, qui ont vu le modèle économique de la musique enregistrée s’effondrer face aux nouvelles attentes des internautes, à son poste. Pour cela, il a notamment sérieusement réduit les dépenses et les investissements d’Universal, en se recentrant artistiquement sur quelques grands noms et le rap très grand public.",
+			"minor": true
+		},
+		{
+			"href":     "sacem",
+			"img":      "img/sacem.jpg",
+			"alt":      "",
+			"title":    "La Sacem",
+			"subtitle": "Société des auteurs, compositeurs et éditeurs de musique",
+			"desc":     "Cette société assure la collecte et la redistribution des droits des auteurs, compositeurs et éditeurs de musique. Elle représente aussi des comiques ou des auteurs-réalisateurs. Créée en 1851, elle revendique plus de 153&nbsp;000 (chiffre 2014) membres et compte parmi les très gros acteurs du monde de la musique. La Sacem assure notamment pour le monde entier la gestion de l’ensemble du catalogue de la plus grosse major du disque, Universal Music sur YouTube, la plateforme de streaming musical la plus fréquentée. Société à but non lucratif détenue par ses membres, la Sacem n’en est pas moins un lobby puissant qui défend une interprétation restrictive du droit d’auteur et intervient fréquemment pour interdire toute exploitation non-autorisée des œuvres de ses sociétaires.",
+			"minor": true
+		},
+		{
+			"href":     "marc-slyper",
+			"img":      "img/marc-slyper.jpg",
+			"alt":      "",
+			"title":    "Marc Slyper",
+			"subtitle": "66 ans, tromboniste et secrétaire général du Snam-CGT",
+			"desc": "Marc Slyper est une figure des luttes du monde de la musique. Lycéen en 1967, il est à l’origine des comités d’action qui ont agité l’année. Dans la foulée, il adhère à la Ligue communiste révolutionnaire (LCR), qu’il quittera à la fin des années&nbsp;80 pour la CGT. Entre les deux, il est musicien, tromboniste curieux que l’on a pu croiser dans des formations de jazz klezmer, de free jazz, de musique caribéenne ou de chanson française. Passé au militantisme à plein temps –&nbsp;ou presque&nbsp;–, il est depuis 1998 le secrétaire général du Syndicat national des artistes musiciens au sein de la CGT. À ce poste, il a notamment négocié la convention collective de la musique enregistrée, une première mondiale, et mené la fronde des intermittents pendant l’été 2003. Affable toujours, grande gueule au besoin, Marc Slyper a appris au fil des années à manœuvrer au milieu des exigences de l’industrie du disque autant qu’à éviter les pièges tendus par d’autres représentants des artistes.",
+			"minor": true
+		},
+		{
+			"href":     "snep",
+			"img":      "img/snep.jpg",
+			"alt":      "",
+			"title":    "Le Snep",
+			"subtitle": "Syndicat national de l’édition phonographique",
+			"desc": "Le Snep est le représentant des plus grandes maisons de disques en France&nbsp;: Universal Music, Warner Music et Sony. Ses membres représentant près de 80&nbsp;% des revenus de la musique dans le pays, le Snep s’est attribué –&nbsp;faute d’un observatoire indépendant en charge de ce suivi&nbsp;– le rôle de baromètre du secteur en publiant chaque semaine le classement des meilleures ventes dans son réseau et chaque année, un état des lieux de l’industrie. Il distribue aussi les disques d’or ou de platine qui récompensent les disques les plus vendus. Le Snep est un lobby puissant qui trouve régulièrement écho à l’Assemblée nationale ou au Sénat. Il a notamment été un acteur de premier plan lors des débats et de la rédaction de la loi Hadopi, qui a créé le système français de riposte graduée contre les échanges hors marché sur Internet. Il est dirigé par un conseil syndical de six membres élus pour deux ans.",
+			"minor": true
+		},
+		{
+			"href":     "spotify",
+			"img":      "img/spotify.jpg",
+			"alt":      "",
+			"title":    "Spotify",
+			"subtitle": "Plateforme de streaming musical lancée en 2008",
+			"desc": "Spotify a été créé à Stockholm sur une brillante astuce technique choisie par deux de ses fondateurs, Daniel Ek et Ludvig Strigeus, respectivement ancien directeur général et ancien cofondateur de uTorrent, l’un des logiciels de téléchargement de fichiers de pair à pair (<i>peer-to-peer</i>) les plus prisés depuis le milieu des années&nbsp;2000. Alors que ses concurrents déjà en place, comme le Français Deezer, utilisaient une technologie de serveur assez classique (chaque chanson est lue depuis un serveur central), Spotify a décidé d’adopter le <i>peer-to-peer</i> comme base de sa distribution de musique. Dès lors, un fichier n’est pas lu depuis une source unique, mais depuis de multiples sources dispersées, les plus proches possible de l’internaute qui en fait la demande. Cette astuce a permis à Spotify de réaliser de substantielles économies de bande passante. Depuis, l’entreprise partagée entre Stockholm (développement), Londres (direction) et le Luxembourg (finances et optimisation fiscale) est devenue l’un des plus gros acteurs de la musique en ligne, notamment depuis son lancement aux États-Unis en 2011. Spotify revendique 28&nbsp;millions d’abonnés payants début 2016.",
+			"minor": true
+		},
+		{
+			"href":     "youtube",
+			"img":      "img/youtube.jpg",
+			"alt":      "",
+			"title":    "YouTube",
+			"subtitle": "Plateforme de streaming vidéo propriété de Google",
+			"desc": "Personne, dans le petit monde de la musique, n’a vu YouTube venir. Et d’ailleurs personne ne le voulait. Mais la plateforme qui permet à quiconque de diffuser n’importe quelle séquence vidéo était bien entendu un boulevard pour les clip musicaux, puis pour tous les fans d’artistes plus ou moins obscurs. Simplement parce qu’il est plus facile de poster une chanson sur YouTube que de l’envoyer à un ami par mail. Créé en 2005 par des anciens de PayPal, la solution de paiement en ligne, racheté par Google l’année suivante, YouTube est devenu un géant d’Internet dans tous les secteurs. Dans le monde de la musique, il a toutefois fallut attendre 2008 pour lever un handicap&nbsp;: faute d’accords et de rémunération, les maisons de disques ou les artistes demandaient systématiquement le retrait de vidéos utilisant leur musique. Personne n’y gagnait et surtout pas la musique. À partir de 2008, YouTube a donc développé Content ID, un système qui permet à chaque ayant-droit de se déclarer gestionnaire d’une œuvre et de décider si une vidéo qui l’utilise peut exister, en échange d’une part des revenus publicitaires qu’elle génère. Grâce à cet équilibre qui reste très imparfait, YouTube est aujourd’hui, de loin, le plus vaste catalogue de musique en ligne. Néanmoins, Google a à ce jour échoué à transformer sa plateforme vidéo en service de musique à la demande réellement puissant, Play Music, puis YouTube Red (pas encore lancé en France) n’ayant pas encore fait leurs preuves face à des plateformes dédiées uniquement à la musique comme Deezer ou Spotify.",
+			"minor": true
+		},
+			{
+			"href":     "marc-schwartz",
+			"img":      "img/marc-schwartz.jpg",
+			"alt":      "",
+			"title":    "Marc Schwartz",
+			"subtitle": "52 ans, médiateur du protocole d’accord pour un développement équitable de la musique en ligne",
+			"desc":   "On connaît surtout Marc Schwartz pour la médiation délicate qu’il a menée en 2012 entre Google et la presse française. Les médias estimaient que Google, notamment via Google Actualités, profitait d’une façon déséquilibrée du trafic généré par les articles de presse. La médiation a débouché sur la création d’un fonds d’aide à la presse française, élargi depuis à l’ensemble des médias européens via la Digital News Initiative. Conseiller maître à la Cour des comptes, Marc Schwartz a aussi été un temps conseiller de Dominique Strauss-Kahn, alors ministre des Finances, puis directeur général adjoint de France Télévisions, en charge des finances.",
+			"minor": true
+		}
+	]
+}

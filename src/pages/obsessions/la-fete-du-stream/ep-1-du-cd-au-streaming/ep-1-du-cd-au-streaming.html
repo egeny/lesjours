@@ -1,0 +1,159 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+<p><span class="lettrine">L</span>e 24 décembre 2015 au soir, les internautes ont reçu un cadeau que beaucoup attendaient : tous les albums des <a lang="en" hreflang="en" href="http://www.vulture.com/2015/12/beatles-spotify-playlists-extravaganza.html" data-mini="1">Beatles</a>, enfin disponibles sur l’ensemble des plateformes de <a lang="en" href="#note-1">streaming</a> musical. Les hérauts de la pop britannique étaient déjà arrivés tard – en 2010, sept ans après le lancement de l’<span lang="en">iTunes Store</span> d’<span lang="en">Apple</span> – dans le monde du téléchargement légal ; ils se pointent à la fête du <span lang="en">streaming</span> alors que tous les invités sont déjà là. À chaque fois, la présence du groupe le plus important de la musique populaire du XXe siècle est le signe que la structure de l’économie de la musique a changé.</p>
+
+{{
+	mini({
+		number:   1,
+		img:      "img/vulture.jpg",
+		alt:      "",
+		href:     "http://www.vulture.com/2015/12/beatles-spotify-playlists-extravaganza.html",
+		title:    "Les Beatles en streaming",
+		subtitle: 'Les meilleures chansons de John Lennon, les Beatles pour les enfants, les reprises… Le site américain Vulture avait listé 29 playlists pour redécouvrir le catalogue des <i lang="en">Fab Four</i>. À écouter sur Vulture.'
+	})
+}}
+
+{{
+	note({
+		number:  1,
+		title:   "Streaming",
+		caption: "La diffusion de contenus en flux continu sur internet. Cette diffusion peut être vidéo ou sonore."
+	})
+}}
+
+{% set person = obsession.people[5] %}
+<p>Cette fois-ci, le changement est une révolution de fond et rien ne sera plus comme avant, car les disques ne sont plus au centre de la machine. C’est ce que compte expliquer début mars le <a href="#{{ person.href }}" data-mini="2"><abbr title="Syndicat National de l’Édition Phonographique">SNEP</abbr></a>, représentant des majors en France, en publiant des chiffres chargés de prophétiser l’avènement du <span lang="en">streaming</span> pour tous, avec notamment deux fois plus de <span lang="en">streams</span> sur les 200 titres les plus écoutés. L’arrivée des <span lang="en">Beatles</span> est le sous-marin jaune chargé de convaincre le très grand public que ça y est, il peut arrêter d’acheter des CD.</p>
+
+{{
+	mini({
+		number:   2,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+	<p><span>Les années 90 et le CD</span> ont poussé la mécanique jusqu’à la rupture</p>
+</aside>
+
+<p>Depuis l’invention de la musique enregistrée un jour de 1877, lorsque l’Américain <span lang="en">Thomas Edison</span> a gravé des sons sur un cylindre recouvert d’une feuille d’étain, le business du disque a relativement peu changé. Celui qui a l’argent – le producteur – finance l’enregistrement de celui qui a la musique – l’artiste – et se rembourse sur les premières ventes de disques avant de partager les revenus suivants à un taux très variable. Si l’avance n’est jamais remboursée, le producteur perd sa mise.</p>
+
+<p>Le reste tient de la diversité d’un écosystème riche. Des producteurs à succès ont monté des maisons de disques gigantesques et ont peu à peu adopté des pratiques de production de masse, les <a href="#note-2">majors</a> ; d’autres préfèrent un travail plus artisanal, les <a href="#note-3">indépendants</a>. Mais le métier est le même : ce sont les ventes des disques qui financent la production des enregistrements suivants. Les artistes à succès financent donc l’argent placé chez ceux qui n’ont pas trouvé leur public.</p>
+
+{{
+	note({
+		number:  2,
+		title:   "Majors",
+		caption: "Les entreprises internationales qui rassemblent plusieurs maisons de disques. Elles sont trois aujourd’hui – Universal, Sony et Warner – et réalisent environ 70 % de parts de marché dans le monde."
+	})
+}}
+
+{{
+	note({
+		number:  3,
+		title:   "Indépendants",
+		caption: "Les maisons de disques autonomes. Certaines sont distribuées par une major. Elles publient la grande majorité des disques."
+	})
+}}
+
+<p>Les années 90, l’époque du CD roi, ont poussé cette mécanique jusqu’à la rupture. Symbole de modernité clinquante au crépuscule d’un siècle épuisé, aussi peu coûteux à fabriquer que facile à transporter, le <span lang="en">compact disc</span> a permis d’augmenter les marges des labels, de pousser les auditeurs à racheter des disques qu’ils possédaient déjà en format vinyle ou cassette, puis de leur vendre en masse des compilations, <span lang="en">best of</span> ou coffrets à prix copain.</p>
+
+<figure>
+	<img src="img/cd-streaming.jpg" alt="" />
+	<figcaption><span>Les années fastes du disque de 1985 à 1999, puis la chute des ventes au tournant des années 2000 <span class="credits">Source&nbsp;: chiffres de 1973 à 2008 <a hreflang="en" href="https://musicbusinessresearch.wordpress.com/2010/03/29/the-recession-in-the-music-industry-a-cause-analysis/">à consulter sur le site de l’<abbr lang="en" title="International Federation of the Phonographic Industry">IFPI</abbr></a>.</span></span></figcaption>
+</figure>
+
+<p>Les auditeurs de ces années 90 ne le savaient pas encore, mais ils vivaient dans un monde condamné où tout le monde achetait les mêmes disques, voyait les mêmes films, regardait les mêmes émissions à la télévision. C’était l’ère de la consommation de masse indifférenciée – ou différenciée à la marge, puisque la multitude de niches créées par les labels indépendants dans les décennies précédentes ont prospéré elles aussi.</p>
+
+<p>À la fin de la décennie, l’arrivée des connexions internet grand public puis la naissance de <span lang="en">Napster</span> ont tout dynamité. Comme un trou noir, internet a aspiré toute la culture du monde, rassemblée là par les internautes eux-mêmes, pour la mettre à la disposition de tous. Gratuitement, puisqu’aucune structure commerciale n’était à l’origine de ce mouvement spontané venu remettre en cause un écosystème vieux d’un siècle.</p>
+
+<blockquote>
+	<p>L’industrie ne croyait pas à la distribution électronique de la musique.</p>
+	<footer>Le journaliste américain <span lang="en">Stephen Witt</span>, dans son livre <i lang="en">How Music Got Free</i></footer>
+</blockquote>
+
+<p>Pour la musique, ce sont des années fascinantes où le moindre disque oublié a refait surface, où l’on a redessiné la géographie et la chronologie de la création pour remettre en cause la lecture occidentalo-centrée qui la menait jusque-là.</p>
+
+<p>Pour l’écosystème de la musique, ce sont des années d’incompréhension et de chute libre. Dans son passionnant livre <a lang="en" hreflang="en" href="http://stephenwittbooks.com/books/how-music-got-free-hc"><i>How Music Got Free</i></a>, bientôt traduit en français, <a href="#note-4">l’Américain <span lang="en">Stephen Witt</span></a> raconte à plusieurs reprises l’incapacité des grands acteurs de la musique à se projeter au-delà de leurs logiques court-termistes.</p>
+
+{{
+	note({
+		number:  4,
+		title:   '<i lang="en">How Music Got Free</i>',
+		caption: 'Stephen Witt, <i lang="en">How Music Got Free</i>, The Bodley Head, 2015. En anglais. En cours de traduction.'
+	})
+}}
+
+<p><span lang="en">Witt</span> revient notamment sur une rencontre, pendant l’été 1997, entre <span lang="de">Karlheinz Brandenburg</span>, l’ingénieur allemand à la tête de l’équipe qui a inventé le MP3, et la <abbr lang="en" title="Recording Industry Association of America">RIAA</abbr>, la représentante des majors aux États-Unis : <q><span lang="de">Brandenburg</span> est arrivé au rendez-vous avec une technologie améliorée : le MP3 non-copiable. Même si ses récentes expériences avaient montré que cette protection pouvait être désactivée par des experts, il pensait que la majorité des téléchargeurs occasionnels ne s’attaqueraient jamais à cet obstacle. Pendant la rencontre, il fit une démonstration du fichier, puis exhorta [les membres de la] RIAA à adopter cette technologie tous ensemble. Pour lui, la meilleure façon de se protéger du piratage permis par le MP3 était de proposer une alternative légale. Il a alors été informé, diplomatiquement, que l’industrie de la musique ne croyait pas à la distribution électronique de la musique.[…] Il a donc pris un avion pour rentrer chez lui.</q></p>
+
+<aside>
+	<p><span>Vendre la musique</span> dématérialisée</p>
+</aside>
+
+<p>Les maisons de disques – grandes ou petites – ont ainsi passé une bonne partie des années 2000 à se faire péniblement à l’idée qu’un fichier immédiatement accessible depuis chez soi et facile à échanger, qui plus est gratuitement, sera toujours plus attractif qu’un CD qu’il faut aller payer trop cher en magasin. Puis elles ont dû transformer leurs métiers pour apprendre à distribuer et promouvoir la musique sous une forme dématérialisée. Avant la presse, avant le cinéma, avant les taxis ou les locations de vacances, la musique a ainsi été la première économie mondiale intégralement transformée par internet.</p>
+
+<p>Pendant que ce violent chambardement se déroulait, les labels ont défendu comme un condamné leur principale source de revenus, le <span lang="en">compact disc</span>, contre tout autre format. Seul le téléchargement légal a obtenu le droit d’exister lorsqu’<span lang="en">Apple</span> est venu leur fournir clé en main son magasin de vente de fichiers, l’<span lang="en">iTunes Store</span>. Mais cette mutation-là ne faisait que dématérialiser la vente de musique – en même temps qu’elle tuait la notion d’album, une poule aux œufs d’or qui a permis pendant cinquante ans de vendre dix morceaux à ceux qui voulaient n’en écouter qu’un seul. Et encore, les majors ont assassiné d’autres magasins de MP3 avant de se laisser convaincre par celui qui a été créé pour nourrir l’<span lang="en">iPod</span> de <span lang="en">Steve Jobs</span>.</p>
+
+<figure>
+	<div class="iframe-ratio-16-9">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/lyALFqnwyeg" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<figcaption><span><span lang="en">iPod Evolution</span> : L’histoire de l’iPod en 3 minutes</span></figcaption>
+</figure>
+
+<p>C’est finalement la plateforme américaine <span lang="en">Rhapsody</span> (en 2002), puis le Français Blogmusik, <a href="http://www.numerama.com/magazine/4185-la-sacem-attaque-blogmuziknet-bientot-radioblog.html">mort une première fois en justice</a> avant de revenir labelisé par les ayants droit en 2007 sous le nom de <span lang="en">Deezer</span>, qui ont convaincu l’industrie du disque de laisser ses catalogues voguer librement en ligne. <span lang="en">YouTube</span>, racheté par <span lang="en">Google</span>, a aussi joué sa carte à sa façon, en permettant aux internautes de tout publier avant de proposer un deal non-négociable aux artistes et labels une fois sa plateforme devenue incontournable.</p>
+
+<aside>
+	<p><span>Le <span lang="en">streaming</span></span> ouvre l’ère de l’accès à la demande</p>
+</aside>
+
+<p>Technologie de l’illimité, le <span lang="en">streaming</span> a ainsi mis fin au règne de la possession inauguré par <span lang="en">Edison</span> 120 ans auparavant. À la place, il a ouvert l’ère de l’accès à la demande. C’est cette bascule qui change absolument tout. Pour les auditeurs, pour les artistes et pour l’économie de la musique.</p>
+
+<p>Les premières années de ce nouveau monde ont été traversées par des mythes chahutés et des attentes déçues. Parmi eux, l’idée que donner accès à tous à 30 millions de titres allait démultiplier les découvertes et la curiosité – et donc profiter à d’avantage d’artistes et de labels. C’est la thèse sur laquelle s’appuyait la théorie de la <a hreflang="en" href"http://www.longtail.com/about.html">longue traîne</a>, décrite en 2004 par le journaliste américain <span lang="en">Chris Anderson</span> : dans un environnement en ligne qui n’a pas de taille limite, toute chanson (et tout livre, tout film…) est vouée au fil du temps à être écoutée au moins une fois, alors qu’elle n’aura jamais cette chance dans le monde physique. Dès lors, une infinité d’œuvres méconnues – la traîne – formeraient un ensemble plus important qu’un petit nombre de succès massifs – la tête.</p>
+
+<figure>
+	<img src="img/du-cd-au-streaming-1.jpg" alt="" />
+	<figcaption><span>Du vinyle au <span lang="en">streaming</span>, en passant par le CD <span class="credits">Illustration Sébastien Calvet pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Mais ce principe de longue traîne a depuis été mis à mal par la réalité des pratiques, qui montrent plutôt que <a hreflang="en" href"https://www.prsformusic.com/creators/news/research/Documents/Will%20Page%20(2008)%20The%20Long%20Tail%20Interrogated%20Part%202.pdf">80 % des morceaux disponibles ne sont pas écoutés</a> et que 3 % des titres concentrent 80 % des écoutes. Le <span lang="en">streaming</span> serait donc en train d’amplifier la stratégie du <span lang="en">blockbuster</span> (noyer l’espace médiatique et l’espace public pour maximiser les profits à très court terme) autant qu’il donne un avantage substantiel aux labels possédant le plus vaste <span lang="en">back catalogue</span>, les classiques de chaque décennie qui sont perpétuellement très écoutés. Derrière, les petits labels voient leur niche affaiblie. C’est ce processus que décrit notamment <span lang="en">Anita Elberse</span> dans son ouvrage <a lang="en" href"http://www.inaglobal.fr/cinema/note-de-lecture/anita-elberse/blockbusters/pourquoi-il-est-moins-risque-de-parier-gros-dans-l"><i>Blockbuster</i></a>, qui explique comment les plus grands acteurs de l’industrie culturelle misent de plus en plus tout sur quelques œuvres.</p>
+
+<aside>
+	<p><span>Des plateformes</span> pas encore bénéficiaires</p>
+</aside>
+
+{% set person = obsession.people[6] %}
+<p>Une autre piste théorique qui doit encore faire ses preuves n’est pas des moindres, c’est le modèle économique du <span lang="en">streaming</span> lui-même. Même si <a lang="en" href="#{{ person.href }}" data-mini="3">Spotify</a> revendique désormais près de 30 millions d’abonnés payants et qu’<span lang="en">Apple Music</span> a rapidement atteint les 10 millions, aucune des grandes plateformes internationales de la musique n’est aujourd’hui bénéficiaire. Il leur faudra atteindre 70 ou 100 millions d’abonnés pour cela.</p>
+
+{{
+	mini({
+		number:   3,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Sauf qu’elles commencent à s’interroger sur leur capacité à faire s’abonner ceux qui se contentent de découvrir une chanson de temps en temps et ne penseraient pas un instant à payer pour cela. Pour briser ce plafond de verre, il faudra bien plus que les <span lang="en">Beatles</span> en tête de gondole : il faudra une intégration poussée dans la vie quotidienne, de la voiture à la maison en passant par la télévision, et probablement une concentration du secteur autour de deux ou trois noms seulement. Il faudra aussi passer par un combat d’exclusivités : l’un des derniers venus, <span lang="en">Tidal</span>, racheté par le rappeur <span lang="en">Jay Z</span>, a misé sur cette stratégie en s’assurant la primeur sur les nouveaux albums de <span lang="en">Kanye West</span> ou <span lang="en">Taylor Swift</span>. Finie l’époque où les catalogues étaient quasi identiques d’un service à l’autre.</p>
+
+{% set person = obsession.people[2] %}
+<p>Les années qui viennent seront donc cruciales dans la fabrication d’une nouvelle économie de la musique. Comme l’a clamé l’ex-patron d’<span lang="en">Universal Music France</span> <a href="#{{ person.href }}" data-mini="4">Pascal Nègre</a> à travers toute la presse ces dernières semaines, les majors et les grands indépendants, qui profitent de la prime aux artistes les plus visibles, comptent déjà sur le <span lang="en">streaming</span> pour assurer la majeure partie des revenus de la musique enregistrée – tout en ayant acté qu’elle ne sera plus le centre surpuissant, mais un simple composant d’une économie aux sources désormais multiples (éditions, placement de musique au cinéma ou à la télévision, partenariats publicitaires, concerts…).</p>
+
+{{
+	mini({
+		number:   4,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Les petits indépendants, eux, s’inquiètent : ils n’ont que rarement grossi, se sont rarement aventurés dans des nouveaux métiers et dépendent donc encore largement des revenus générés par leurs disques. Or, ces revenus sont pour beaucoup d’entre eux très faibles, voire négligeables dans l’état actuel du <span lang="en">streaming</span>. Il leur faut donc se concentrer sur le CD et le vinyle en attendant de savoir dans quel sens s’engager : continuer à développer un marché physique de niche et abandonner le <span lang="en">streaming</span> aux plus gros ? Négocier au niveau politique les moyens de leur survie dans ce monde de l’écoute éparpillée ? C’était entre autres le sens de la mission confiée en France à <span lang="en">Marc Schwartz</span> à la fin de l’année 2015, qui a abouti sur des engagements bien fragiles qui restent à mettre en œuvre.</p>

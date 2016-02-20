@@ -1,0 +1,24 @@
+{
+	"template": "episode",
+
+	"href": "ep-1-du-cd-au-streaming",
+	"img":  "ep-1-du-cd-au-streaming.jpg",
+
+	"number": 1,
+	"date": "2016-02-20T10:00+01:00",
+
+	"title": "Du CD au streaming, courte histoire d’une révolution",
+	"intro": "L’arrivée d’internet et du streaming a mis fin à l’ère du CD roi, et bouleversé l’écosystème de la musique.",
+	"subtitle": "L’arrivée d’internet et du streaming a mis fin à l’ère du CD roi, et achevé de bouleverser l’écosystème de la musique.",
+	"lead": "Le 24 décembre 2015 au soir, les internautes ont reçu un cadeau que beaucoup attendaient&nbsp;: tous les albums des Beatles, enfin disponibles sur l’ensemble des plateformes de streaming musical.",
+
+	"tags": ["Musique", "Streaming"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sophian-fanen" },
+			{ "photo": "author:karen-assayag" }
+		]
+
+			}
+}
