@@ -90,7 +90,7 @@
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-identifiants" class="link external" aria-controls="mes-identifiants" href="#mes-identifiants" aria-selected="true"  tabindex="0">Mes identifiants</a></li>
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-informations" class="link external" aria-controls="mes-informations" href="#mes-informations" aria-selected="false" tabindex="-1">Mes informations</a></li>
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mon-abonnement"   class="link external" aria-controls="mon-abonnement"   href="#mon-abonnement"   aria-selected="false" tabindex="-1">Mon abonnement</a></li>
-				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-factures"     class="link external disabled" aria-controls="mes-factures"     href="#mes-factures"     aria-selected="false" tabindex="-1">Mes factures</a></li>
+				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-factures"     class="link external" aria-controls="mes-factures"     href="#mes-factures"     aria-selected="false" tabindex="-1">Mes factures</a></li>
 			</ul>
 
 			<div class="tab-container md-w-6c md-ml-1c lg-w-10c lg-ml-1c">
@@ -164,6 +164,33 @@
 						<p>Vous n’avez aucun abonnement en cours.</p>
 						<a href="/abonnement.html" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">S’abonner</a>
 					<?php endif ?>
+				</section>
+
+				<section id="mes-factures" role="tabpanel" aria-labelledby="tab-mes-factures" aria-hidden="true">
+					<h3 class="mb-3g style-meta-large">Mes factures</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>N°</th>
+								<th>Description</th>
+								<th>Prix</th>
+							</tr>
+						</thead>
+						<tbody>
+							<?php foreach ($meta['invoices'] as $invoice) : ?>
+								<?php
+									$plan  = $PLANS[$invoice['plan']];
+									$start = strtotime($invoice['date']);
+									$end   = strtotime('+'.$plan['duration'], $start);
+								?>
+							<tr>
+								<td><?php echo $invoice['number'] ?></td>
+								<td>Abonnement « <?php echo $plan['name'] ?> » (du <?php echo date('d-m-Y', $start); ?> au <?php echo date('d-m-Y', $end); ?>)</td>
+								<td><?php echo $invoice['price'] ?> €</td>
+							</tr>
+							<?php endforeach ?>
+						</tbody>
+					</table>
 				</section>
 			</div>
 		</div><!-- end of .col -->
