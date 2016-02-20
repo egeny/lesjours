@@ -426,7 +426,7 @@
 						<label class="mb-2g relative style-meta text-upper">
 							<input class="checkbox" type="checkbox" name="accept" <?php if (isset($data['accept']) && $data['accept']) : ?>checked <?php endif ?>required>
 							<span class="checkbox"></span>
-							J’accepte les conditions générales de vente. <a class="color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
+							J’accepte les conditions générales de vente. <a class="color-brand" href="/abonnement-conditions-generales.html" target="_blank">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
 							<!-- TODO: error message -->
 						</label>
 						<p class="summary hidden mv-4g pa-2g style-meta lh-inherit text-upper color-main">Vous avez choisi la formule « <span>Jouriste</span> » à <span>9</span> €/<span>mois<span>. <a class="color-brand" href="#formule">Modifier</a></p>
