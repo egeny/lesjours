@@ -14,7 +14,8 @@
 		"episode:l-empire/ep3-portrait-belmer",
 		"episode:l-empire/ep4-journal-hard",
 		"episode:l-empire/ep5-jour-de-deug",
-		"episode:l-empire/bollore-29-millions"
+		"episode:l-empire/bollore-29-millions",
+		"episode:l-empire/trois-septembre-1"
 	],
 
 	"people": [
@@ -92,6 +93,11 @@
 					"href": "doc/tract-libre.pdf",
 					"title": "L'inquiétude de +Libres",
 					"desc": "Le syndicat autonome de Canal+ dresse un bilan des 100 premiers jours de Vincent Bolloré à la tête du groupe."
+				},
+				{
+					"href": "doc/ce-canal.pdf",
+					"title": "«&nbsp;La terreur fait bouger les gens&nbsp;»",
+					"desc": "Le compte-rendu du comité d'entreprise du 3 septembre où Vincent Bolloré ratiboise la direction de Canal+."
 				}
 			]
 		}

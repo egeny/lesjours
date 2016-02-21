@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "trois-septembre-1",
+
+	"number": 6,
+	"date": "2016-02-21T10:00+01:00",
+
+	"title": "Bolloré&nbsp;: «&nbsp;La terreur fait bouger les gens&nbsp;»",
+	"intro": "«&nbsp;Les Jours&nbsp;» publient le compte-rendu inédit du comité d’entreprise où l’homme d'affaires a ratiboisé la direction de Canal+.",
+	"subtitle": "«&nbsp;Les Jours&nbsp;» publient le compte-rendu inédit du comité d’entreprise où l’homme d'affaires a ratiboisé la direction de Canal+.",
+	"lead": "Les Bolloré étaient de hardis marins bretons qui défendaient les embouchures des rivières contres les invasions des pirates anglais ou espagnols.</q> Non, Vincent Bolloré n’a pas décidé de mettre à l’antenne de Canal+ une série sur sa saga",
+
+	"tags": ["Vincent Bolloré", "Canal+", "Rodolphe Belmer", "Bertrand Meheut", "Vivendi"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:garriberts" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:l-empire/ep2-plug-canal",
+		"prev":  "episode:l-empire/bollore-29-millions",
+		"last":  "episode:l-empire/trois-septembre-1"
+	}
+}
