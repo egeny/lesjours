@@ -5,8 +5,8 @@
 <?php
 	require('_bootstrap.php');
 
-	// Get the current_user (might be overwritten just after)
-	$user = $current_user;
+	$inspecting = false;   // Are we inspecting (default to no, obviously)
+	$user = $current_user; // Get the current_user (might be overwritten just after)
 
 	// Prevent accessing this URL if there is no logged-in user
 	if (!$user->ID) { die(header('Location: /')); }
@@ -14,7 +14,9 @@
 	// Allow super admins to inspect accounts
 	if (isset($_GET['inspect']) && is_super_admin()) {
 		$user = get_user_by(intval($_GET['inspect']) ? 'id' : 'email', $_GET['inspect']);
-		$user = $user ? $user : $current_user; // Fallback to the current_user if couldn't found the requested user
+
+		$inspecting = !!$user;
+		$user = $user ? $user : $current_user; // Fallback to the current_user if we couldn't found the requested user
 	}
 
 	$meta = get_all_user_meta($user->ID);
@@ -45,7 +47,7 @@
 				$error['password'] = true;
 			} else {
 				wp_set_password($_POST['password'], $user->ID);
-				!isset($_GET['inspect']) && wp_set_auth_cookie($user->ID, true, false);
+				!$inspecting && wp_set_auth_cookie($user->ID, true, false);
 			}
 		} else {
 			// Sanitize and check received data
