@@ -9,8 +9,8 @@
 	"date": "2016-02-19T10:00+01:00",
 
 	"title": "Le ralliement à l’État islamique",
-	"intro": "Bilel, parti faire le jihad en Syrie, raconte pourquoi après Al&nbsp;Qaeda, il a rejoint l’EI avec un autre Français, Abu Maryam (3/5).",
-	"subtitle": "Bilel, parti faire le jihad en Syrie, raconte pourquoi après Al&nbsp;Qaeda, il a rejoint l’EI avec un autre Français (3/5).",
+	"intro": "Bilel, parti faire le jihad en Syrie, raconte pourquoi après Al&nbsp;Qaeda, il a rejoint l’EI avec un autre Français, Abu Maryam.",
+	"subtitle": "Bilel, parti faire le jihad en Syrie, raconte pourquoi après Al&nbsp;Qaeda, il a rejoint l’EI avec un autre Français.",
 	"lead":  "À son arrivée en Syrie et avant de rejoindre l’État islamique (EI), Bilel a d’abord intégré Harakat Sham al Islam, une unité jihadiste proche d'Al&nbsp;Qaeda composée essentiellement de Marocains. Il y a fait la connaissance d’un autre Français.",
 
 	"tags": ["Jihadisme", "13 novembre", "État islamique"],
@@ -22,6 +22,7 @@
 		],
 
 		"first": "episode:les-revenants/bilel-episode-1",
-		"prev": "episode:les-revenants/bilel-episode-2"
+		"prev": "episode:les-revenants/bilel-episode-2",
+		"last": "episode:les-revenants/bilel-episode-3"
 	}
 }

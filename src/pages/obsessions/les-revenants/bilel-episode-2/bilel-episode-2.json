@@ -9,8 +9,8 @@
 	"date": "2016-02-12T10:00+01:00",
 
 	"title": "L'arrivée en Syrie",
-	"intro": "En 2014, Bilel se retrouve d'abord intégré dans une unité jihadiste proche d'Al&nbsp;Qaeda. « Les Jours » racontent son parcours et les raisons de son retour en France. (2/5)",
-	"subtitle": "En 2014, Bilel se retrouve d'abord intégré dans une unité jihadiste proche d'Al&nbsp;Qaeda. (2/5)",
+	"intro": "En 2014, Bilel se retrouve d'abord intégré dans une unité jihadiste proche d'Al&nbsp;Qaeda. « Les Jours » racontent son parcours et les raisons de son retour en France.",
+	"subtitle": "En 2014, Bilel se retrouve d'abord intégré dans une unité jihadiste proche d'Al&nbsp;Qaeda.",
 	"lead":  "La décision de quitter l’Etat islamique (EI), est venue progressivement. D’abord, dit Bilel, en raison d’une spirale de violence dans laquelle le groupe s’est engagé. <q>Je suis pas venu en Syrie pour faire du mal, je suis venu faire du bien</q>",
 
 	"tags": ["Jihadisme", "13 novembre", "Etat islamique"],
@@ -22,7 +22,9 @@
 		],
 
 		"first": "episode:les-revenants/bilel-episode-1",
-		"prev": "episode:les-revenants/bilel-episode-2"
+		"prev": "episode:les-revenants/bilel-episode-1",
+		"next": "episode:les-revenants/bilel-episode-3",
+		"last": "episode:les-revenants/bilel-episode-3"
 
 	}
 }
