@@ -56,6 +56,9 @@
 
 				// Set an error flag if necessary
 				if (empty($value)) {
+					// Some fields might be empty
+					if (in_array($field, array('plan', 'subscription', 'expire'))) { continue; }
+
 					$error = is_array($error) ? $error : array();
 					$error[$field] = true;
 				}
@@ -69,8 +72,11 @@
 					'last_name'  => $data['name']
 				));
 
-				foreach (array('address', 'zip', 'city', 'country') as $field) {
-					update_user_meta($user->ID, $field, $data[$field]);
+				foreach ($data as $field => $value) {
+					// Ignore some fields
+					if (in_array($field, array('email', 'firstname', 'name'))) { continue; }
+					update_user_meta($user->ID, $field, $value);
+					$meta[$field] = $value; // Makes sure the meta are up to date
 				}
 			}
 		}
@@ -165,6 +171,28 @@
 					<?php else : ?>
 						<p>Vous n’avez aucun abonnement en cours.</p>
 						<a href="/abonnement.html" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">S’abonner</a>
+					<?php endif ?>
+					<?php if ($inspecting) : ?>
+						<form class="row mt-8g" method="post">
+							<div class="col field w-⅓">
+								<label for="plan">Plan</label>
+								<select id="plan" name="plan" class="select">
+								<option value=""<?php if ($meta['plan'] == $name) { echo ' selected'; } ?>>Aucun</option>
+								<?php foreach ($PLANS as $name => $plan) : ?>
+									<option value="<?php echo $name ?>"<?php if ($meta['plan'] == $name) { echo ' selected'; } ?>><?php echo $plan['name'] ?> (<?php echo $plan['duration'] ?>)</option>
+								<?php endforeach ?>
+								</select>
+							</div>
+							<div class="col field w-⅓">
+								<label for="subscription">Subscription</label>
+								<input id="subscription" class="input" name="subscription" type="text" placeholder="<?php echo date('Y-m-d H:i:s') ?>" <?php if ($subscription) { echo 'value="'.date('Y-m-d H:i:s', $subscription).'" '; } ?> />
+							</div>
+							<div class="col field w-⅓">
+								<label for="expire">Expire</label>
+								<input id="expire" class="input" name="expire" type="text" placeholder="<?php echo date('Y-m-d'); ?>" <?php if ($expire) { echo 'value="'.date('Y-m-d', $expire).'" '; } ?> />
+							</div>
+							<button class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c" type="submit">Valider</button>
+						</form>
 					<?php endif ?>
 				</section>
 
