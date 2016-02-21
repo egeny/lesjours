@@ -73,8 +73,9 @@
 				));
 
 				foreach ($data as $field => $value) {
-					// Ignore some fields
-					if (in_array($field, array('email', 'firstname', 'name'))) { continue; }
+					if (in_array($field, array('email', 'firstname', 'name'))) { continue; } // Ignore some fields
+					if (in_array($field, array('plan', 'subscription', 'expire')) && !$inspecting) { continue; } // Constraint subscription edition to inspection mode
+
 					update_user_meta($user->ID, $field, $value);
 					$meta[$field] = $value; // Makes sure the meta are up to date
 				}
