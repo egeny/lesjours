@@ -7,7 +7,7 @@
 	"name":  "Treize Novembre",
 	"title": "Treize Novembre",
 	"subtitle": "Récits de la France d’après.",
-	"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, « Les Jours » racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>",
+	"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, «&nbsp;Les Jours&nbsp;» racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>",
 
 	"episodes": [
 		"episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
@@ -34,7 +34,8 @@
 		"episode:treize-novembre/urvoas-visite-la-justice-en-indigence",
 		"episode:treize-novembre/la-vie-suspendue-de-brahim",
 		"episode:treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois",
-		"episode:treize-novembre/sophie-episode-2"
+		"episode:treize-novembre/sophie-episode-2",
+		"episode:treize-novembre/vincent-tribunal-administratif"
 
 
 	],

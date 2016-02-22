@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "vincent-tribunal-administratif",
+
+	"number": 26,
+	"date": "2016-02-22T10:00+01:00",
+
+	"title": "Au tribunal, Vincent tente le coup",
+	"intro": "<strong>Assignés.</strong> Vendredi 19 février, Vincent demandait au tribunal administratif la levée de son assignation à résidence. Sans illusions.",
+	"subtitle": "<strong>Assignés.</strong> Vendredi, Vincent demandait au tribunal administratif la levée de son assignation à résidence. Sans illusions.",
+	"lead": "Vincent a troqué sa djellaba habituelle contre une veste de costume grise à fines rayures. Ambiance feutrée, pas de gendarmes en vue&nbsp;: le tribunal administratif de Montreuil.",
+
+	"tags": ["13 Novembre", "assignés", "terrorisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/sophie-episode-2",
+		"last":  "episode:treize-novembre/vincent-tribunal-administratif"
+	}
+}
