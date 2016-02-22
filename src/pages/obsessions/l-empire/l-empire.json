@@ -35,25 +35,7 @@
 			"title":    "Vincent Bolloré",
 			"subtitle": "63 ans, patron (de Vivendi, d'Havas, de Canal+…)",
 			"desc": "C’est le Saigneur de Canal+, le Dépeceur de Belmer, l’Etrangleur de Meheut, l’Estourbisseur d’Aprikian, l’Egorgeur de DRH… Faut-il encore présenter Vincent Bolloré? Allez : il a 63 ans et, le 17 février 2022, 200 ans après la création du groupe en 1822, il lèguera son empire à ses enfants. Son empire? Deux-trois bricoles : du transport, de la pub, de l’énergie, des Autolib, quelque trente filiales dont Vivendi, la maison-mère de Canal+.",
-			"minor": true
-		},
-		{
-			"href":     "bertrand-meheut",
-			"img":      "img/meheut-portrait.jpg",
-			"alt":      "",
-			"title":    "Bertrand Meheut",
-			"subtitle": "64 ans, ex-président du groupe Canal+",
-			"desc": "Il est arrivé à Canal+ en même temps que Rodolphe Belmer, surnommé « le gars du marketing ». Lorsqu’il remplace Pierre Lescure en 2002, Bertrand Meheut, lui, a eu droit à « Baygon vert ». Ou, variante, « Baygon jaune ». Ou bien « le gars des pesticides », puisque c’est là, chez Rhône-Poulenc, qu’il a fait une bonne partie de sa carrière. Moins glamour que les médias, certes, mais Bertrand Meheut s’y est fait, petit à petit, on a pu le noter au cours des années, à un changement de lunettes ou à un nouveau costume, plus cintré. Meheut et Belmer ont longtemps formé un couple harmonieux, le numéro 1 au business d’un côté, le numéro 2 aux programmes de l’autre. Et puis Belmer a été promis au fauteuil de Meheut et le couple a commencé à tanguer. Enfin Bolloré est arrivé, virant d’abord Belmer puis Meheut : pas de jaloux.",
-			"minor": true
-		},
-		{
-			"href":     "ara-aprikian",
-			"img":      "img/aprikian-portrait.jpg",
-			"alt":      "",
-			"title":    "Ara Aprikian",
-			"subtitle": "49 ans, ex-chef du pôle gratuit de Canal+",
-			"desc": "Voilà l’homme qui a orchestré la conversion de Canal+ au gratuit. Piqué à TF1 en 2005 (il était directeur des divertissements), Ara Aprikian commence mollo à Canal+ avant de se voir confier ce qui sera son grand-œuvre : la nouvelle grille de D8, fraîchement rachetée à Vincent Bolloré. Le retour de « Nouvelle Star »? C’est lui. Le réchauffage du « Maillon faible » ? C’est lui. Hanouna tous les jours ? C’est lui. Mais autant Cyril Hanouna est, disons, un chouille exubérant, autant son patron Ara Aprikian est discret. Très proche de Rodolphe Belmer, il quitte le groupe après son départ à l’été 2015. Fin septembre, le voilà de retour à TF1 pour un poste de « conseiller spécial ».",
-			"minor": true
+			"minor": false
 		},
 		{
 			"href":     "maxime-saada",
@@ -72,6 +54,24 @@
 			"subtitle": "Défunt directeur des programmes de Canal+",
 			"desc": "Mourir en juin 2015, au moment des premières rumeurs de suppression des Guignols, être enterré le jour où Bolloré vire Belmer, et avoir des amis qui vous organisent une soirée d’hommage au soir d’un comité de management où Bolloré met en scène « une séance de terreur et d’humiliation », on ne peut pas retirer à feu Alain de Greef un certain sens du timing. Jusque dans sa mort, l’historique directeur des programmes de Canal+ aura pesé sur la chaîne, celle dont il ciselé les programmes, fait naître des « Guignols », des « Nulle Part ailleurs », des « Groland »… de 1984 à 2000. De Greef comparait le travail de programmateur avec celui d’un peintre : « S'il faut faire les Nymphéas avec uniquement du rouge et du noir, je le ferai. Comme je suis un provocateur, il m'arrive aussi de faire les Nymphéas avec du caca et du vomi. » C’est sûr qu’entre ça et Bolloré qui se targue de pas être un prix Nobel, il y a une légère baisse de niveau à Canal+.",
 			"minor": true
+		},
+		{
+			"href":     "bertrand-meheut",
+			"img":      "img/meheut-portrait.jpg",
+			"alt":      "",
+			"title":    "Bertrand Meheut",
+			"subtitle": "64 ans, ex-président du groupe Canal+",
+			"desc": "Il est arrivé à Canal+ en même temps que Rodolphe Belmer, surnommé « le gars du marketing ». Lorsqu’il remplace Pierre Lescure en 2002, Bertrand Meheut, lui, a eu droit à « Baygon vert ». Ou, variante, « Baygon jaune ». Ou bien « le gars des pesticides », puisque c’est là, chez Rhône-Poulenc, qu’il a fait une bonne partie de sa carrière. Moins glamour que les médias, certes, mais Bertrand Meheut s’y est fait, petit à petit, on a pu le noter au cours des années, à un changement de lunettes ou à un nouveau costume, plus cintré. Meheut et Belmer ont longtemps formé un couple harmonieux, le numéro 1 au business d’un côté, le numéro 2 aux programmes de l’autre. Et puis Belmer a été promis au fauteuil de Meheut et le couple a commencé à tanguer. Enfin Bolloré est arrivé, virant d’abord Belmer puis Meheut : pas de jaloux.",
+			"minor": true
+		},
+		{
+			"href":     "ara-aprikian",
+			"img":      "img/aprikian-portrait.jpg",
+			"alt":      "",
+			"title":    "Ara Aprikian",
+			"subtitle": "49 ans, ex-chef du pôle gratuit de Canal+",
+			"desc": "Voilà l’homme qui a orchestré la conversion de Canal+ au gratuit. Piqué à TF1 en 2005 (il était directeur des divertissements), Ara Aprikian commence mollo à Canal+ avant de se voir confier ce qui sera son grand-œuvre : la nouvelle grille de D8, fraîchement rachetée à Vincent Bolloré. Le retour de « Nouvelle Star »? C’est lui. Le réchauffage du « Maillon faible » ? C’est lui. Hanouna tous les jours ? C’est lui. Mais autant Cyril Hanouna est, disons, un chouille exubérant, autant son patron Ara Aprikian est discret. Très proche de Rodolphe Belmer, il quitte le groupe après son départ à l’été 2015. Fin septembre, le voilà de retour à TF1 pour un poste de « conseiller spécial ».",
+			"minor": false
 		}
 	],
 
