@@ -1,0 +1,159 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+<p><span class="lettrine">L</span><i>es Bolloré étaient de hardis marins bretons qui défendaient les embouchures des rivières contres les invasions des pirates anglais ou espagnols.&nbsp;»</i> Non, Vincent Bolloré n’a pas décidé de mettre à l’antenne de Canal+ une série sur sa saga familiale –&nbsp;pas encore du moins. C’est lors d’un très sérieux comité d’entreprise (CE) du groupe Canal+ que ses glorieux ancêtres ont fait irruption dans la bouche du seigneur et maître de Vivendi et Canal+. <i>Les Jours</i> ont obtenu le procès-verbal de ce CE que <a href="doc/ce-canal.pdf" data-mini="1">nous publions ici</a>, hardis marins bretons que nous sommes, nous aussi.</p>
+
+<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="doc/ce-canal.pdf" />
+<span class="image"><img class="responsive" src="img/ce-canal.jpg" alt="" /></span>
+<p class="title">Le procès-verbal du CE du 3 septembre</p>
+<p class="subtitle">A télécharger ici (la version définitive de ce PV a été diffusée sur l’intranet du groupe Canal+).</p>
+</a>
+</aside>
+
+{% set person = obsession.people[3] %}
+<p>Nous sommes au matin du 3 septembre 2015, pile poil deux mois après l’éviction brutale de Rodolphe Belmer (<a href="/obsessions/l-empire/ep3-portrait-belmer">lire l’épisode 2</a>, «&nbsp;Belmer, la cible qu’on voit danser&nbsp;»), le numéro deux du groupe par Vincent Bolloré. Pendant l’été, c’est une autre tête que Bolloré a fait rouler, celle d’<a href="#{{ person.href }}" data-mini="2">Ara Aprikian</a>, le chef du pôle gratuit (on vous raconte ça dans un prochain épisode, c’est croustillant). Ce 3 septembre est une journée cruciale où Vincent Bolloré devient, en plus d’y faire la loi au quotidien, grand patron de Canal+ dont il est nommé président du conseil de surveillance à la place de Bertrand Meheut. Une journée d’anthologie où les cadres vont apprendre qu’ils sont virés en direct-live, comme le disaient Les Nuls de ce vieux Canal, dont Bolloré veut faire table rase. La prise de pouvoir se passe en plusieurs étapes&nbsp;: le comité d’entreprise que nous vous racontons ici, un conseil de surveillance du groupe Canal+ en suivant et, pour clore la tragédie en trois actes, un de ces fameux «&nbsp;comités de management&nbsp;» qui rassemble une centaine des cols blancs de la maison.</p>
+
+{% set person = obsession.people[3] %}
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[2] %}
+<p>Il est 8h30, et <a href="#note-1">l’ordre du jour</a> est ainsi libellé&nbsp;: <q>Information sur la gouvernance du groupe Canal+</q>, la séance du comité d’entreprise est ouverte sous la présidence de <a href="#{{ person.href }}" data-mini="3">Bertrand Meheut</a>, qui l’est encore, président. Plus pour longtemps puisque Bolloré le remplacera lors du conseil de surveillance qui suivra.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Direct et indirect",
+caption: "Le procès-verbal est un compte-rendu fidèle de la séance qui s’est tenue ce jour-là. Les dialogues ont été simplement retranscrits au style indirect par la sténotypiste. Exemple&nbsp;: la phrase de Bolloré «&nbsp;J’espère que vous avez passé un bon été&nbsp;» a été retranscrite en «&nbsp;V. Bolloré espère que les élus ont passé un bon été&nbsp;»."
+})
+}}
+
+{% set person = obsession.people[2] %}
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+<blockquote>
+	<p>Je compte y aller à la fois doucement en étant gentil avec tout le monde et en apportant des fleurs, et énergiquement.</p>
+	<footer>Vincent Bolloré lors du comité d’entreprise du 3 septembre 2015</footer>
+</blockquote>
+
+<p>Bolloré attaque par Meheut dont il indique qu’il <q>va passer la main</q>, et l’invite à s’exprimer. Ce qu’il fait <q>avec une certaine émotion</q> et dit le genre de choses qu’on dit dans ces cas-là, parle de <q>grande sérénité</q>, qu’il <q>est fier du chemin parcouru</q>. Il a eu le temps de digérer, Meheut, depuis qu’il s’est fait estourbir en direct, le 6 juillet par Bolloré (<a href="/obsessions/l-empire/ep4-journal-hard">lire l‘épisode 3</a>, «&nbsp;Le journal du hard&nbsp;»). Le lendemain, comme il le précise un peu plus tard aux élus, Bolloré s’installera dans le bureau de Meheut, pardon <q>Bertrand</q>&nbsp;: c’est tellement plus doux quand le bourreau vous appelle par votre prénom. D’ailleurs, Bolloré est la bénévolence même&nbsp;; la preuve, ajoute-t-il lors du même CE, une fois installé dans le bureau de Bertrand, il <q>compte y aller à la fois doucement en étant gentil avec tout le monde et en apportant des fleurs, et énergiquement parce qu’il faut […] donner à Canal les moyens qu’il n’a pas eus et dont il a besoin pour éviter de se retrouver rayé de la carte face aux concurrents</q>.</p>
+
+<p><i>Les Jours</i> ont leurs obsessions&nbsp;? Bolloré a les siennes, dont les prix Nobel. Le fameux 6 juillet, il avait traité les cadres de Canal+ présents d’<q>arrogants</q>, d’<q>insupportables</q>, assénant&nbsp;: <q>Nous, on n’est pas des prix Nobel mais on sait faire du business.</q> Le 3 septembre, il en remet une couche à propos de <q>l’équipe des six</q>, sa garde rapprochée à Vivendi. <i>«&nbsp;Aucun des membres de cette équipe très soudée n’est un prix Nobel</i>, assène-t-il, <i>mais la maison a fait un parcours sans faute.&nbsp;»</i> Du coup, <q>c’est cette même équipe qui va venir chez Canal</q>. Cette équipe de non prix Nobel, donc. On ne peut pas dire, il a l’art de vendre sa came, Bolloré.</p>
+
+{% set person = obsession.people[4] %}
+<p>Autre obsession bolloréenne&nbsp;: le compliment. Tel producteur s’est ainsi vu décerner le titre de <q>génie de la production</q> par Bolloré. Certains l’ont entendu, lors de visites à Canal+, qualifier un salarié de <q>génie de la photocopieuse</q>. Au comité d’entreprise, il remet ça, d’abord au sujet de <a href="#{{ person.href }}" data-mini="4">Maxime Saada </a>, qui succède à Rodolphe Belmer&nbsp;: <q>Ce garçon remarquable connaît la maison, il fait les choses, il n’est pas arrogant, il écoute.</q> <q>Il écoute</q>, c’est certainement là sa qualité principale aux yeux de Bolloré. Surtout si c’est lui qu’il <q>écoute</q>. De même pour ceux que Bolloré installe ce jour-là à la place de l’état-major de Canal+&nbsp;: il y a <q>l’excellent Frédéric Crépin</q> (secrétaire général), <q>l’excellent Mathieu Peyceré</q> (qui est même <q>le plus gentil des DRH</q>), <q>l’excellent Stéphane Roussel</q>, <q>Guillaume Zeller, un Sciences-Po charmant</q> (nommé à la tête d’i-Télé)… Dominique Delport, patron de Havas (autre propriété Bolloré), n’est pas présent lors de ce CE, alors nous lui transmettons cette petite amabilité de Vincent Bolloré qui voit en lui un <q>grand génie des talents</q>. C’est beau comme une pub pour un marabout.</p>
+
+{% set person = obsession.people[4] %}
+{{
+	mini({
+		number: 4,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[1] %}
+<p>Mais il est comme ça, <a href="#{{ person.href }}" data-mini="5">Vincent Bolloré</a>, que voulez-vous&nbsp;: il parle. Du moins, il parle le Bolloré. Il évoque ainsi un mystérieux <q>chasseur de toiles d’araignées</q> croisé dans les locaux et promet que les départs ne déclencheront pas <q>la fête des chéquiers</q>. On notera au passage le goût de Bolloré pour la litote&nbsp;: pas de <q>fête des chéquiers</q>, affirme-t-il, alors que les départs ont coûté la bagatelle de… 29&nbsp;millions d’euros à Canal+, ainsi que l’ont révélé <i>Les Jours</i> (<a href="/obsessions/l-empire/bollore-29-millions">lire l’épisode 5</a>, «&nbsp;Bolloré&nbsp;: 29 millions la purge&nbsp;»).</p>
+
+{% set person = obsession.people[1] %}
+{{
+	mini({
+		number: 5,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+<p><span>Une fable de La Fontaine</span> pour résumer la guéguerre Belmer-Meheut</p>
+</aside>
+
+<p>La guéguerre entre Rodolphe Belmer, le numéro&nbsp;2, et Bertrand Meheut, le numéro&nbsp;1, Bolloré la résume en une fable de La Fontaine, <i>Le Chat, la belette et le petit lapin</i>, oubliant de préciser que le chat qui, à la fin, boulotte belette et lapin, c’est lui. Sa vision pour la maison Canal+&nbsp;? <q>Elle avancera en tâtonnant, un peu comme un banc de poissons.</q> Les articles de presse égratignant la conquête de Canal+ à la schlague&nbsp;? <q>La machine est en marche et ne s’arrêtera pas, elle est comme les Vikings&nbsp;: si le premier est tué, un autre arrive, puis des centaines d’autres&nbsp;!</q> Des Vikings, on en passe tout naturellement aux fameux ancêtres Bolloré dont le sang chaud traverse les générations jusqu’à irriguer les veines de Vincent&nbsp;: <i>«&nbsp;Les Bolloré</i>, déclare-t-il lors du CE, <i>étaient de hardis marins bretons qui défendaient les embouchures des rivières contres les invasions des pirates anglais ou espagnols&nbsp;»</i>. Tremblez, Netflix, Apple et YouTube&nbsp;! Vincent Bolloré fait chauffer l’huile bouillante.</p>
+
+<p>Dans la Bollolangue, Cyril Hanouna est aussi un <q>anabolisant</q> sur lequel repose le «&nbsp;succès&nbsp;» de D8, d’ailleurs, souligne-il, <q>il était au bord de partir car il avait envie d’une chaîne plus grande où il soit mieux considéré</q>. L’occasion pour Bolloré de relever que Canal+ n’est pas assez gentille, il est <q>frappé de voir qu’Arthur, Dany Boon, Gad Elmaleh ou Jamel Debbouze ne viennent plus chez Canal car ils sont considérés comme des Romanichels. Les aimer ou pas est un sujet, mais une chaîne repose sur des talents et il faut être “artist friendly” et les accueillir aimablement.</q> C’est noté. Tout comme est bien notée l’intervention, au cours de ce comité d’entreprise, d’Arnaud de Puyfontaine, installé par Vincent Bolloré dans le fauteuil de président de Vivendi&nbsp;: <q>Il est hors de question de <a href="#note-2">se priver d’Arsenal</a>.</q></p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Oups&nbsp;!",
+caption: "Ce qui fut fait deux mois plus tard, Patrick Drahi raflant, pour le compte de Numéricable et SFR, la ligue de foot anglaise à Canal+."
+})
+}}
+
+<blockquote>
+	<p>Censurer, c’est empêcher quelqu’un de dire des choses vraies, mais attaquer la BNP, LCL, ou le propriétaire de l’immeuble serait une bêtise.</p>
+	<footer>La définition de la censure, selon Vincent Bolloré</footer>
+</blockquote>
+
+<p>C’est cocasse, certes, mais derrière le folklorique Vincent-la-castagne, il y a Bolloré. Interrogé par un élu de la CGT de Canal+ lors du CE au sujet de la <a href="#note-3">censure</a> d’un reportage de <i>Spécial Investigation</i> mettant en cause le Crédit mutuel dirigé par son ami Michel Lucas, Bolloré précise. Il <q>distingue <a href="#note-4">censure et bêtise</a></q>. <q>Hier Canal+ Sport a diffusé une émission contre l’OM et M. Labrune [président de l’Olympique de Marseille, ndlr] a téléphoné. S’il y a dans la maison des gens qui n’arrêtent pas de taper sur ses clients ou partenaires, elle n’en aura bientôt plus du tout. Ce n’est pas un problème de censure. La censure serait de dire tout d’un coup que M. Sarkozy est génial et que M. Hollande est bête.</q> Ah, d’accord. Plus tard, il explicite un peu plus son intéressante conception de la censure&nbsp;: <q>Censurer, c’est empêcher quelqu’un de dire des choses vraies, mais attaquer la BNP, LCL, ou le propriétaire de l’immeuble serait une bêtise.</q></p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Un reportage sur le Crédit mutuel censuré",
+caption: "En juillet 2015, Society et Mediapart révèlent que Vincent Bolloré a fait censurer une enquête de <i>Spécial Investigation</i> sur le Crédit mutuel. Le sujet sera finalement diffusé sur France 3 à la rentrée dernière et largement repris dans… <i>Le Zapping</i> de Canal+."
+})
+}}
+ 
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 4,
+title: "Bêtise et connerie",
+caption: "Selon une des personnes assistant au CE, Bolloré aurait en fait dit «&nbsp;connerie&nbsp;» plutôt que «&nbsp;bêtise&nbsp;» mais le compte-rendu a été lissé."
+})
+}}
+
+<figure>
+	<img src="img/le-comte-rendu-du-ce-1.jpg" alt="" />
+	<figcaption><span>L’immeuble de Canal+ à Boulogne-Billancourt <span class="credits">Photo Sébastien Calvet / <i>Les Jours</i></span>.</span></figcaption>
+</figure>
+
+<p>Qu’on se rassure, Bolloré <a href="http://www.arretsurimages.net/emissions/2016-02-12/Bollore-et-Hollande-ont-un-interet-conjoint-a-etouffer-l-investigation-id8475" data-mini="6"><q>adore les journalistes</q></a>, rapporte la sténotypiste des propos du grand homme dans le procès-verbal du CE&nbsp;: <q>Il en a d’ailleurs une centaine chez Direct Matin, mais ils ne vont pas commencer à faire n’importe quoi, ils ne sont ni la police, ni la justice. Ils font ce qu’ils veulent, mais à l’intérieur d’une ligne éditoriale, ce qui est normal.</q> Genre si la ligne éditoriale interdit de dire du mal de l’OM, les journalistes sont libres de la respecter. George Orwell, si tu nous lis…</p>
+
+<aside id="mini-6" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.arretsurimages.net/emissions/2016-02-12/Bollore-et-Hollande-ont-un-interet-conjoint-a-etouffer-l-investigation-id8475">
+<span class="image"><img class="responsive" src="img/rivoire-asi.jpg" alt="" /></span>
+<p class="title">Sept sujets refusés sur onze</p>
+<p class="subtitle">Invité d’<i>Arrêts sur image</i> le 12 février 2016, Jean-Baptiste Rivoire, rédacteur en chef adjoint de <i>Spécial Investigation</i> et délégué syndical SNJ-CGT à Canal+, affirme que de plus en plus de sujets sont refusés par la direction&nbsp;: sept sur onze proposés lors du dernier comité d’investigation qui valide (ou pas) les enquêtes à venir. Jean-Baptiste Rivoire cite plusieurs exemples d’enquêtes retoquées&nbsp;: Volkswagen, YouTube, Nutella ou encore les dysfonctionnements des services de renseignement pendant les attentats.</p>
+</a>
+</aside>
+
+<p>La terreur qu’il a installée à Canal+, Vincent Bolloré l’assume totalement. <q>Les équipes ont été chamboulées par la façon un peu violente dont se sont déroulés ceux [les départs, ndlr] de Rodolphe [Belmer, ndlr] et d’Ara [Aprikian, ndlr], et du coup elles sont assez craintives</q>, fait remarquer une syndicaliste. <q>Tant mieux</q>, se félicite Bolloré qui ajoute que </q>les conditions salariales de leurs départs ne le font pas pleurer</q>. D’ailleurs, <q>la haute direction d’une grande maison mérite un peu de terreur, un peu de crainte</q>. <q>La terreur fait bouger les gens</q>, dira-t-il plus tard (<q>en souriant</q>, précise le compte-rendu). Ajoutant&nbsp;: <q>Avoir de temps en temps un petit électrochoc permettant aux collaborateurs de voir qu’il y a un problème est une bonne chose pour le bien de tous.</q> Terreur, électrochoc… Vincent Bolloré vient précisément d’en faire la démonstration au cours de ce comité d’entreprise&nbsp;: la DRH de Canal+ Sophie Guieysse a appris en direct et de sa bouche qu’elle était virée, remplacée sur le champs par Mathieu Peyceré. Oups, pardon, <q>l’excellent</q> Matthieu Peyceré. Bolloré a prévenu&nbsp;: <q>Pendant cette période, il y aura une secousse à la tête et une stabilité sur le corps.</q> Ce qui est, il faut le reconnaître, une assez bonne définition de la guillotine.</p>
+
+
+
+
+
+
+
+
+
+
+

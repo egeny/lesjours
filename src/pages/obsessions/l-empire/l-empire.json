@@ -14,7 +14,8 @@
 		"episode:l-empire/ep3-portrait-belmer",
 		"episode:l-empire/ep4-journal-hard",
 		"episode:l-empire/ep5-jour-de-deug",
-		"episode:l-empire/bollore-29-millions"
+		"episode:l-empire/bollore-29-millions",
+		"episode:l-empire/trois-septembre-1"
 	],
 
 	"people": [
@@ -33,16 +34,16 @@
 			"alt":      "",
 			"title":    "Vincent Bolloré",
 			"subtitle": "63 ans, patron (de Vivendi, d'Havas, de Canal+…)",
-			"desc": "C’est le Saigneur de Canal+, le Dépeceur de Belmer, l’Etrangleur de Méheut, l’Estourbisseur d’Aprikian, l’Egorgeur de DRH… Faut-il encore présenter Vincent Bolloré? Allez : il a 63 ans et, le 17 février 2022, 200 ans après la création du groupe en 1822, il lèguera son empire à ses enfants. Son empire? Deux-trois bricoles : du transport, de la pub, de l’énergie, des Autolib, quelque trente filiales dont Vivendi, la maison-mère de Canal+.",
+			"desc": "C’est le Saigneur de Canal+, le Dépeceur de Belmer, l’Etrangleur de Meheut, l’Estourbisseur d’Aprikian, l’Egorgeur de DRH… Faut-il encore présenter Vincent Bolloré? Allez : il a 63 ans et, le 17 février 2022, 200 ans après la création du groupe en 1822, il lèguera son empire à ses enfants. Son empire? Deux-trois bricoles : du transport, de la pub, de l’énergie, des Autolib, quelque trente filiales dont Vivendi, la maison-mère de Canal+.",
 			"minor": true
 		},
 		{
 			"href":     "bertrand-meheut",
 			"img":      "img/meheut-portrait.jpg",
 			"alt":      "",
-			"title":    "Bertrand Méheut",
+			"title":    "Bertrand Meheut",
 			"subtitle": "64 ans, ex-président du groupe Canal+",
-			"desc": "Il est arrivé à Canal+ en même temps que Rodolphe Belmer, surnommé « le gars du marketing ». Lorsqu’il remplace Pierre Lescure en 2002, Bertrand Méheut, lui, a eu droit à « Baygon vert ». Ou, variante, « Baygon jaune ». Ou bien « le gars des pesticides », puisque c’est là, chez Rhône-Poulenc, qu’il a fait une bonne partie de sa carrière. Moins glamour que les médias, certes, mais Bertrand Méheut s’y est fait, petit à petit, on a pu le noter au cours des années, à un changement de lunettes ou à un nouveau costume, plus cintré. Méheut et Belmer ont longtemps formé un couple harmonieux, le numéro 1 au business d’un côté, le numéro 2 aux programmes de l’autre. Et puis Belmer a été promis au fauteuil de Méheut et le couple a commencé à tanguer. Enfin Bolloré est arrivé, virant d’abord Belmer puis Méheut : pas de jaloux.",
+			"desc": "Il est arrivé à Canal+ en même temps que Rodolphe Belmer, surnommé « le gars du marketing ». Lorsqu’il remplace Pierre Lescure en 2002, Bertrand Meheut, lui, a eu droit à « Baygon vert ». Ou, variante, « Baygon jaune ». Ou bien « le gars des pesticides », puisque c’est là, chez Rhône-Poulenc, qu’il a fait une bonne partie de sa carrière. Moins glamour que les médias, certes, mais Bertrand Meheut s’y est fait, petit à petit, on a pu le noter au cours des années, à un changement de lunettes ou à un nouveau costume, plus cintré. Meheut et Belmer ont longtemps formé un couple harmonieux, le numéro 1 au business d’un côté, le numéro 2 aux programmes de l’autre. Et puis Belmer a été promis au fauteuil de Meheut et le couple a commencé à tanguer. Enfin Bolloré est arrivé, virant d’abord Belmer puis Meheut : pas de jaloux.",
 			"minor": true
 		},
 		{
@@ -92,6 +93,11 @@
 					"href": "doc/tract-libre.pdf",
 					"title": "L'inquiétude de +Libres",
 					"desc": "Le syndicat autonome de Canal+ dresse un bilan des 100 premiers jours de Vincent Bolloré à la tête du groupe."
+				},
+				{
+					"href": "doc/ce-canal.pdf",
+					"title": "«&nbsp;La terreur fait bouger les gens&nbsp;»",
+					"desc": "Le compte-rendu du comité d'entreprise du 3 septembre où Vincent Bolloré ratiboise la direction de Canal+."
 				}
 			]
 		}

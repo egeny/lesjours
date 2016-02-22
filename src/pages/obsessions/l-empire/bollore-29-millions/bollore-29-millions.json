@@ -21,6 +21,7 @@
 
 		"first": "episode:l-empire/ep2-plug-canal",
 		"prev":  "episode:l-empire/ep5-jour-de-deug",
-		"last":  "episode:l-empire/ep6-portrait-bollore"
+		"next": "episode:l-empire/trois-septembre-1",
+		"last":  "episode:l-empire/trois-septembre-1"
 	}
 }
