@@ -10,7 +10,8 @@
 	"desc": "<p>Porté par Deezer et Spotify, mais aussi désormais par des géants comme YouTube et Apple, le streaming est en train de signer la fin d’une époque pour la musique, qui ne sera plus vendue mais livrée en flux infini sur abonnement.</p><p>Dans ce nouveau monde, enregistrer une chanson n’est plus qu’une étape parmi d’autres, car l’argent s’éparpille et ne revient pas toujours aux musiciens. Plongée dans une économie de moins en moins artistique.</p>",
 
 	"episodes": [
-		"episode:la-fete-du-stream/ep-1-du-cd-au-streaming"
+		"episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"episode:la-fete-du-stream/ep-2-artistes-stream"
 	],
 
 	"people": [
@@ -29,7 +30,7 @@
 			"alt":      "",
 			"title":    "La GAM",
 			"subtitle": "Guilde des artistes de la musique",
-			"desc": "Créée en 2013 par des musiciens qui souhaitent se représenter eux-mêmes, la GAM est une représentante française du Worldwide Independent Network (WIN). Notamment portée par le chanteur Axel Bauer, elle est un nouvel acteur dans le paysage français. Ni syndicat, ni société de perception comme l’Adami, elle n’a pas de mandat qui lui donne automatiquement le droit de siéger dans les différentes instances de la musique en France, mais s’est fait une place lors des négociations du protocole Schwartz en 2015, où elle a fait valoir des positions pragmatiques qui ont permis au texte d’aboutir.",
+			"desc": "Créée en 2013 par des musiciens qui souhaitent se représenter eux-mêmes, la GAM est notamment portée par le chanteur Axel Bauer, elle est un nouvel acteur dans le paysage français. Ni syndicat, ni société de perception comme l’Adami, elle n’a pas de mandat qui lui donne automatiquement le droit de siéger dans les différentes instances de la musique en France, mais s’est fait une place lors des négociations du protocole Schwartz en 2015, où elle a fait valoir des positions pragmatiques qui ont permis au texte d’aboutir.",
 			"minor": true
 		},
 		{

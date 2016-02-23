@@ -18,7 +18,11 @@
 		"authors": [
 			{ "text":  "author:sophian-fanen" },
 			{ "photo": "author:karen-assayag" }
-		]
+		],
+
+		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"next":  "episode:lla-fete-du-stream/ep-2-artistes-stream",
+		"last":  "episode:la-fete-du-stream/ep-2-artistes-stream"
 
 			}
 }
