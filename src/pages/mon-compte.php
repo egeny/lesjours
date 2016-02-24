@@ -4,6 +4,7 @@
 {% block php -%}
 <?php
 	require('_bootstrap.php');
+	require(WP_PATH.'/wp-admin/includes/user.php'); // This file is required in order to delete an user
 
 	$inspecting = false;   // Are we inspecting (default to no, obviously)
 	$user = $current_user; // Get the current_user (might be overwritten just after)
@@ -31,6 +32,12 @@
 		'city'      => $meta['city'],
 		'country'   => !empty($meta['country']) ? $meta['country'] : 'fr'
 	);
+
+	if (isset($_GET['delete'])) {
+		// TODO: Should send an email
+		wp_delete_user($user->ID);
+		die(header('Location: /'));
+	}
 
 	if (isset($_GET['unsubscribe'])) {
 		delete_user_meta($user->ID, 'plan');
@@ -169,10 +176,12 @@
 						<p>Vous avez souscrit un abonnement le <?php $day = strftime('%e', $subscription); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $subscription) ?>. <a class="text-upper fw-bold color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a></p>
 						<h4 class="h5">Votre formule</h4>
 						<p><?php echo $plan['name'] ?> — <?php echo $plan['price'] ?> € par <?php echo $plan['duration'] == '1 year' ? 'an' : 'mois' ?> (<?php echo time() > $expire ? 'expiré' : 'expire' ?> le <?php $day = strftime('%e', $expire); echo ($day == '1' ? '1<sup>er</sup>' : $day).strftime(' %B %Y', $expire) ?>)</p>
+						<a href="#unsubscribe" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">Se désabonner</a>
 					<?php else : ?>
 						<p>Vous n’avez aucun abonnement en cours.</p>
 						<a href="/abonnement.html" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">S’abonner</a>
 					<?php endif ?>
+					<a href="#delete" class="btn-primary btn-brand mt-2g sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">Supprimer mon compte</a>
 					<?php if ($inspecting) : ?>
 						<form class="row mt-8g" method="post">
 							<div class="col field w-⅓">
@@ -228,6 +237,7 @@
 	</div><!-- end of .row -->
 </div><!-- end of .container -->
 
+{% include "partials/modals/delete.html"       %}
 {% include "partials/modals/unsubscribe.html"  %}
 {% include "partials/modals/unsubscribed.html" %}
 
