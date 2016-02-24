@@ -210,8 +210,48 @@
 
 				// Generate an hidden form containing the needed informations for the payment service
 				$state = 'redirect';
-			} else {
-				// TODO: bank
+			} else if ($data['payment'] == 'bank') {
+				$client = new SlimPayClient();
+				$payload = array(
+					'started'    => true,
+					'reference'  => date('Y-m-d').'-'.$user_id,
+					'creditor'   => array('reference' => 'lesjours'),
+					'subscriber' => array('reference' => $user_id),
+					'items' => array(
+						array(
+							'type'    => 'signMandate',
+							'mandate' => array(
+								'signatory' => array(
+									'familyName' => $data['name'],
+									'givenName'  => $data['firstname'],
+									'email'      => $data['mail'],
+									'billingAddress' => array(
+										'street1'    => $data['address'],
+										'postalCode' => $data['zip'],
+										'city'       => $data['city'],
+										'country'    => strtoupper($data['country'])
+									)
+								)
+							)
+						),
+						array(
+							'type' => 'directDebit',
+							'directDebit' => array(
+								'amount' => $PLANS[$data['plan']]['price']
+							)
+						),/*
+						array(
+							'type' => 'recurrentDirectDebit',
+							'recurrentDirectDebit' => array(
+								'amount' => $PLANS[$data['plan']]['price']
+							)
+						)*/
+					)
+				);
+				$response = $client->createOrders(array('post' => $payload));
+				print_r($response);
+				die();
+				die(header('Location: '.$response->userApproval));
 			}
 		}
 	} // end of if (!empty($_POST))
@@ -404,18 +444,18 @@
 					<?php endif ?>
 					<fieldset id="mode-de-paiement">
 						<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
-						<div class="gift style-meta lh-inherit color-dark">
+						<div class="gift style-meta lh-inherit">
 							<i class="pull-left">{{ icon("bag") }}</i>
 							<p><strong class="block text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
 						</div>
 						<div class="field row mb-1g">
-							<label class="col md-w-auto pr-2g pl-0 color-dark">
-								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required disabled />
+							<label class="col md-w-auto pr-2g pl-0">
+								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required />
 								<span class="radio"></span>
 								Prélèvement
 							</label>
 							<label class="col md-w-auto pr-2g pl-0">
-								<input class="radio" type="radio" name="payment" value="card" checked required />
+								<input class="radio" type="radio" name="payment" value="card" <?php if (isset($data['payment']) && $data['payment'] == 'card') : ?>checked <?php endif ?>required />
 								<span class="radio"></span>
 								Carte bancaire
 							</label>
