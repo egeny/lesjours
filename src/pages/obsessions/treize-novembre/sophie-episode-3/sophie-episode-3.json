@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "sophie-episode-3",
+
+	"number": 28,
+	"date": "2016-02-24T10:00+01:00",
+
+	"title": "Sophie et les survivants",
+	"intro": "<strong>Journal de bord du XIe.</strong> Sophie a rejoint le groupe Facebook des victimes et familles du 13&nbsp;novembre. Sans savoir si c’est sa place.",
+	"subtitle": "Sophie a rejoint le groupe Facebook des victimes et familles du 13&nbsp;novembre. Sans savoir si c’est sa place.",
+	"lead": "Sophie est rentrée en contact avec un groupe de survivants sur Facebook. Elle voulait retrouver d’autres personnes qui, comme elle, étaient en terrasse au café du Bataclan le soir des attentats.",
+
+	"tags": ["13 Novembre", "Bataclan", "terrorisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman" },
+			{ "photo": ["author:sebastien-calvet", "author:charlotte-rotman"] }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/laurence-blisson-juge",
+		"last":  "episode:treize-novembre/sophie-episode-3"
+	}
+}
