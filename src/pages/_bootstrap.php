@@ -88,7 +88,11 @@
 			);
 
 			if (isset($post)) {
-				$options[CURLOPT_POSTFIELDS] = http_build_query($post);
+				if (in_array('Content-Type: application/x-www-form-urlencoded', $headers)) {
+					$options[CURLOPT_POSTFIELDS] = http_build_query($post);
+				} else if (in_array('Content-Type: application/json', $headers)) {
+					$options[CURLOPT_POSTFIELDS] = json_encode($post, JSON_UNESCAPED_UNICODE);
+				}
 			}
 
 			// Prepare the cURL session
@@ -120,7 +124,9 @@
 		private   function __wakeup()    {}
 
 		public function getToken() {
-			if ($this->token && $this->expire > time()) { return $this->token; }
+			// Return the token, if any, and if it is not going to expire
+			// (keep a 15 seconds margin for safety)
+			if ($this->token && ($this->expire - 15) > time()) { return $this->token; }
 
 			// Prepare the headers to send
 			$headers = array(
@@ -134,7 +140,7 @@
 				'scope'      => 'api'
 			);
 
-			$response = SlimPayClient::curl(SLIMPAY_ENDPOINT.'/oauth/token', $headers, $post);
+			$response = SlimPayClient::cURL(SLIMPAY_ENDPOINT.'/oauth/token', $headers, $post);
 
 			// Store the token for further use (and its expiration timestamp)
 			$this->token  = $response->access_token;
@@ -148,9 +154,9 @@
 		private $methods = array(); // An array of method we can call on this response
 
 		public function __construct($data) {
-			// Copy the received data, except the reserved ones (starting with an underscore)
+			// Copy the received data, except the reserved ones
 			foreach ($data as $key => $value) {
-				if (preg_match('/^_/', $key)) { continue; }
+				if (in_array($key, array('_embedded', '_links'))) { continue; }
 				$this->{$key} = $value;
 			}
 
@@ -164,10 +170,20 @@
 						$name = str_replace('-', '', $name);
 						$name = lcfirst($name);
 
+						// The "userApproval" is a specific link
+						// It shouldn't be used with the API
+						// Instead, the end-user should be redirected to its URL
+						if ($name == 'userApproval') {
+							$this->{$name} = $relation->href;
+							continue;
+						}
+
 						$this->methods[$name] = $relation;
 					}
 				}
 			}
+
+			if (isset($data->_embedded)) {}
 		}
 
 		// Overload the method called to handle dynamic methods
@@ -183,13 +199,16 @@
 		}
 
 		// Request for another resource
-		private function request($relation, $parameters = array()) {
+		private function request($relation, $args) {
+			$get  = isset($args['get'])  ? $args['get']  : array();
+			$post = isset($args['post']) ? $args['post'] : null;
+
 			// A function to replace the URI template's tokens with received parameters
-			$replacer = function($matches) use ($parameters) {
+			$replacer = function($matches) use ($get) {
 				$replace = explode(',', $matches[1]);
 				$replace = array_flip($replace);
-				$replace = array_merge($replace, $parameters);
-				$replace = array_intersect($replace, $parameters); // Keep only received parameters (prevent sending bad values if not provided)
+				$replace = array_merge($replace, $get);
+				$replace = array_intersect($replace, $get); // Keep only received parameters (prevent sending bad values if not provided)
 				$replace = http_build_query($replace);
 				$replace = str_replace($matches[1], $replace, $matches[0]);
 				$replace = substr($replace, 1, strlen($replace) - 2);
@@ -198,7 +217,7 @@
 
 			$url = preg_replace_callback('/\{[?&]?([^\}]+)\}/', $replacer, $relation->href);
 
-			return new SlimPayResponse(SlimPayClient::cURL($url));
+			return new SlimPayResponse(SlimPayClient::cURL($url, null, $post));
 		}
 	}
 ?>
