@@ -5,6 +5,30 @@
 	// Locale to use (mainly for dates)
 	setlocale(LC_ALL, LOCALE);
 
+	global $PLANS;
+	$PLANS = array(
+		'jouriste' => array(
+			'name'     => 'Jouriste',
+			'price'    => 9,
+			'duration' => '1 month'
+		),
+
+		'jouriste-cash' => array(
+			'name'     => 'Jouriste cash',
+			'price'    => 90,
+			'duration' => '1 year'
+		),
+
+		'jouriste-desargente' => array(
+			'name'     => 'Jouriste désargenté',
+			'price'    => 5,
+			'duration' => '1 month'
+		)
+	);
+
+	// In "pilot" mode monthly subscription cost 1€
+	$PLANS['jouriste']['price'] = $PLANS['jouriste-desargente']['price'] = 1;
+
 	// Get the avatar's URL (check the URL first to provide an SVG fallback — not possible with gravatar)
 	function avatar_url($mail) {
 		// Simplified version of https://gist.github.com/justinph/5197810
@@ -31,28 +55,4 @@
 
 		return $meta;
 	}
-
-	global $PLANS;
-	$PLANS = array(
-		'jouriste' => array(
-			'name'     => 'Jouriste',
-			'price'    => 9,
-			'duration' => '1 month'
-		),
-
-		'jouriste-cash' => array(
-			'name'     => 'Jouriste cash',
-			'price'    => 90,
-			'duration' => '1 year'
-		),
-
-		'jouriste-desargente' => array(
-			'name'     => 'Jouriste désargenté',
-			'price'    => 5,
-			'duration' => '1 month'
-		)
-	);
-
-	// In "pilot" mode monthly subscription cost 1€
-	$PLANS['jouriste']['price'] = $PLANS['jouriste-desargente']['price'] = 1;
 ?>
