@@ -49,47 +49,48 @@
 	}
 
 	if (!empty($_POST)) {
-		if (isset($_POST['password'])) {
-			if (empty($_POST['password'])) {
-				$error['password'] = true;
-			} else {
-				wp_set_password($_POST['password'], $user->ID);
+		// Sanitize and check received data
+		foreach ($_POST as $field => $value) {
+			switch ($field) {
+				case 'password': $value = $_POST[$field];
+				break;
+
+				default: $data[$field] = $value = sanitize_text_field($_POST[$field]);
+			}
+
+			// Set an error flag if necessary
+			if (empty($value)) {
+				$error = is_array($error) ? $error : array();
+				$error[$field] = true;
+			}
+		}
+
+		if (!$error) {
+			if (isset($data['password'])) {
+				wp_set_password($data['password'], $user->ID);
 				!$inspecting && wp_set_auth_cookie($user->ID, true, false);
 			}
-		} else {
-			// Sanitize and check received data
-			foreach ($_POST as $field => $value) {
-				$data[$field] = $value = sanitize_text_field($value);
 
-				// Set an error flag if necessary
-				if (empty($value)) {
-					// Some fields might be empty
-					if (in_array($field, array('plan', 'subscription', 'expire'))) { continue; }
+			// Prefer wp_update_user for the name and firstname since it will generate the display name
+			wp_update_user(array(
+				'ID'         => $user->ID,
+				'first_name' => $data['firstname'],
+				'last_name'  => $data['name']
+			));
 
-					$error = is_array($error) ? $error : array();
-					$error[$field] = true;
-				}
+			foreach ($data as $field => $value) {
+				if (in_array($field, array('email', 'firstname', 'name'))) { continue; } // Ignore some fields
+				if (in_array($field, array('plan', 'subscription', 'expire')) && !$inspecting) { continue; } // Constraint subscription edition to inspection mode
+
+				update_user_meta($user->ID, $field, $value);
+				$meta[$field] = $value; // Makes sure the meta are up to date (check below)
 			}
-
-			if (!$error) {
-				// Prefer wp_update_user for the name and firstname since it will generate the display name
-				wp_update_user(array(
-					'ID'         => $user->ID,
-					'first_name' => $data['firstname'],
-					'last_name'  => $data['name']
-				));
-
-				foreach ($data as $field => $value) {
-					if (in_array($field, array('email', 'firstname', 'name'))) { continue; } // Ignore some fields
-					if (in_array($field, array('plan', 'subscription', 'expire')) && !$inspecting) { continue; } // Constraint subscription edition to inspection mode
-
-					update_user_meta($user->ID, $field, $value);
-					$meta[$field] = $value; // Makes sure the meta are up to date
-				}
-			}
+			// I don't redirect because I'm lazy
+			// Besides, we'll loose the active tab
 		}
 	}
 
+	$data         = array_map('stripslashes', $data); // Remove slashes added while sanitizing to display them correctly
 	$plan         = $PLANS[$meta['plan']];
 	$expire       = strtotime($meta['expire']);
 	$subscription = strtotime($meta['subscription']);
