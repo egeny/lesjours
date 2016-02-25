@@ -14,7 +14,9 @@
 
 	// Allow super admins to inspect accounts
 	if (isset($_GET['inspect']) && is_super_admin()) {
-		$user = get_user_by(intval($_GET['inspect']) ? 'id' : 'email', $_GET['inspect']);
+		if (!empty($_GET['inspect'])) {
+			$user = get_user_by(intval($_GET['inspect']) ? 'id' : 'email', $_GET['inspect']);
+		}
 
 		$inspecting = !!$user;
 		$user = $user ? $user : $current_user; // Fallback to the current_user if we couldn't found the requested user
