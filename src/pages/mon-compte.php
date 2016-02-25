@@ -52,7 +52,7 @@
 		// Sanitize and check received data
 		foreach ($_POST as $field => $value) {
 			switch ($field) {
-				case 'password': $value = $_POST[$field];
+				case 'password': $data[$field] = $value;
 				break;
 
 				default: $data[$field] = $value = sanitize_text_field($_POST[$field]);
@@ -79,7 +79,7 @@
 			));
 
 			foreach ($data as $field => $value) {
-				if (in_array($field, array('email', 'firstname', 'name'))) { continue; } // Ignore some fields
+				if (in_array($field, array('mail', 'password', 'firstname', 'name'))) { continue; } // Ignore some fields
 				if (in_array($field, array('plan', 'subscription', 'expire')) && !$inspecting) { continue; } // Constraint subscription edition to inspection mode
 
 				update_user_meta($user->ID, $field, $value);
