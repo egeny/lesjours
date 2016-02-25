@@ -60,6 +60,7 @@
 
 			// Set an error flag if necessary
 			if (empty($value)) {
+				if (in_array($field, array('plan', 'subscription', 'expire'))) { continue; } // Ignore some fields
 				$error = is_array($error) ? $error : array();
 				$error[$field] = true;
 			}
