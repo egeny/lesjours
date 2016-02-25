@@ -154,12 +154,6 @@
 		if (!$error) {
 			if ($current_user->ID) {
 				$user_id = $current_user->ID;
-				$meta = get_all_user_meta($user_id);
-
-				// Fill $data with some informations for the payment service
-				$data['name']      = $meta['last_name'];
-				$data['firstname'] = $meta['first_name'];
-				$data['mail']      = $current_user->user_email;
 			} else {
 				// Try to create a new user
 				$user_id = wp_insert_user(array(
@@ -170,17 +164,21 @@
 					'last_name'  => $data['name']
 				));
 
-				$error  = is_wp_error($user_id) ? array('account' => $user_id) : null;
-				$fields = array('address', 'zip', 'city', 'country');
+				$error = is_wp_error($user_id) ? array('account' => $user_id) : null;
 			}
 		}
 
 		// Check if an error occured while creating or finding the user
 		if (!$error) {
 			// Add additionnal metadata
-			foreach (array_merge(array('plan', 'payment'), $fields ? $fields : array()) as $field) {
-				update_user_meta($user_id, $field, $data[$field]);
+			foreach ($data as $field => $value) {
+				if (in_array($field, array('mail', 'password', 'firstname', 'name', 'accept'))) { continue; } // Ignore some fields
+				update_user_meta($user_id, $field, $value);
 			}
+
+			// Retrieve all user's data (the user might have created is account before)
+			$meta = get_all_user_meta($user_id); // From now, prefer to use user's $meta instead of $data (prevent issues with slashes added while sanitizing)
+			$user = get_userdata($user_id); // Get the user's object to retrieve its mail (nickname isn't correct)
 
 			// Login the user if not already logged-in
 			wp_set_auth_cookie($user_id, true, false);
@@ -253,8 +251,8 @@
 		}
 	} // end of if (!empty($_POST))
 
-	// Makes sure to have a default country, for the <select>
-	$data['country'] = !empty($data['country']) ? $data['country'] : 'fr';
+	$data            = array_map('stripslashes', $data); // Remove slashes added while sanitizing to display them correctly
+	$data['country'] = !empty($data['country']) ? $data['country'] : 'fr'; // Makes sure to have a default country, for the <select>
 ?>
 {% endblock %}
 
