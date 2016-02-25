@@ -11,7 +11,7 @@
 	define('BE2BILL_URL',        'https://secure-test.be2bill.com/front/form/process');
 
 	// SlimPay credentials (payment service)
-	define('SLIMPAY_APP_NAME',   'lesjours');
-	define('SLIMPAY_APP_SECRET', 'ZOsSnwusYmKU#BU5KaGp0O0XjBQDMX2');
+	define('SLIMPAY_APP_NAME',   'lesjoursdev');
+	define('SLIMPAY_APP_SECRET', 'acQdBtUYymviyPnIFhe5CqlgG#6vGGb');
 	define('SLIMPAY_ENDPOINT',   'https://api-sandbox.slimpay.net'); // Do not end with a slash
 ?>
