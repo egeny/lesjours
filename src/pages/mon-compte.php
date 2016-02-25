@@ -24,7 +24,7 @@
 
 	$error = null;
 	$data  = array(
-		'email'     => $user->user_email,
+		'mail'      => $user->user_email,
 		'name'      => $meta['last_name'],
 		'firstname' => $meta['first_name'],
 		'address'   => $meta['address'],
@@ -116,7 +116,7 @@
 					<form method="post">
 						<div class="field lg-w-½">
 							<label for="account-mail">Adresse e-mail</label>
-							<input id="account-mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email"  <?php if (isset($data['email'])) { echo 'value="'.$data['email'].'" '; } ?>disabled required />
+							<input id="account-mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email"  <?php if (isset($data['mail'])) { echo 'value="'.$data['mail'].'" '; } ?>disabled required />
 							<?php if (isset($error['mail'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field lg-w-½">
