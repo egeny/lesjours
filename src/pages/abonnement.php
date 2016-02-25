@@ -43,6 +43,9 @@
 
 	// Receiving a notification from the payment service
 	if (isset($_GET['notification'])) {
+		// XXX: logging for debug
+		file_put_contents('notification.log', print_r(data('Y-m-d H:i:s')."\n").print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n"), FILE_APPEND);
+
 		unset($_GET['notification']); // Exclude for the hash computation
 		$hash = signature($_GET);
 
@@ -100,6 +103,9 @@
 
 	// Receiving a result from the payment service
 	if (isset($_GET['result'])) {
+		// XXX: logging for debug
+		file_put_contents('result.log', print_r(data('Y-m-d H:i:s')."\n").print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n"), FILE_APPEND);
+
 		$state = 'result';
 
 		if (empty($_GET['result'])) {
@@ -205,26 +211,24 @@
 				// Set the state as "redirect", the payload needs to be delivered
 				// By POST to the payment form URL
 				$state = 'redirect';
-			} else if ($data['payment'] == 'bank') {
-				$client = new SlimPayClient();
+			} else if ($meta['payment'] == 'bank') {
 				$payload = array(
 					'started'    => true,
-					'reference'  => date('Y-m-d').'-'.$user_id,
 					'creditor'   => array('reference' => 'lesjours'),
 					'subscriber' => array('reference' => $user_id),
 					'items' => array(
 						array(
-							'type'    => 'signMandate',
+							'type' => 'signMandate',
 							'mandate' => array(
 								'signatory' => array(
-									'familyName' => $data['name'],
-									'givenName'  => $data['firstname'],
-									'email'      => $data['mail'],
+									'familyName' => $meta['last_name'],
+									'givenName'  => $meta['first_name'],
+									'email'      => $user->user_email,
 									'billingAddress' => array(
-										'street1'    => $data['address'],
-										'postalCode' => $data['zip'],
-										'city'       => $data['city'],
-										'country'    => strtoupper($data['country'])
+										'street1'    => $meta['address'],
+										'postalCode' => $meta['zip'],
+										'city'       => $meta['city'],
+										'country'    => strtoupper($meta['country'])
 									)
 								)
 							)
@@ -232,20 +236,28 @@
 						array(
 							'type' => 'directDebit',
 							'directDebit' => array(
-								'amount' => $PLANS[$data['plan']]['price']
+								'paymentReference'  => date('Y-m-d').'-'.$user_id,
+								'amount' => $PLANS[$meta['plan']]['price']
 							)
-						),/*
+						),
 						array(
 							'type' => 'recurrentDirectDebit',
 							'recurrentDirectDebit' => array(
-								'amount' => $PLANS[$data['plan']]['price']
+								'amount'    => $PLANS[$meta['plan']]['price'],
+								'frequency' => $PLANS[$meta['plan']]['duration'] == '1 month' ? 'monthly' : 'yearly'
 							)
-						)*/
+						)
 					)
 				);
+
+				$client   = new SlimPayClient();
 				$response = $client->createOrders(array('post' => $payload));
-				print_r($response);
-				die();
+
+				// XXX: logging for debug
+				file_put_contents('bank.log', print_r(data('Y-m-d H:i:s')."\n").print_r($response, true).print_r("\n"), FILE_APPEND);
+
+				// TODO: check errors
+
 				die(header('Location: '.$response->userApproval));
 			}
 		}
