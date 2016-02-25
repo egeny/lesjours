@@ -44,7 +44,7 @@
 	// Receiving a notification from the payment service
 	if (isset($_GET['notification'])) {
 		// XXX: logging for debug
-		file_put_contents('notification.log', print_r(data('Y-m-d H:i:s')."\n").print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n"), FILE_APPEND);
+		file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n").print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n"), FILE_APPEND);
 
 		unset($_GET['notification']); // Exclude for the hash computation
 		$hash = signature($_GET);
@@ -104,7 +104,7 @@
 	// Receiving a result from the payment service
 	if (isset($_GET['result'])) {
 		// XXX: logging for debug
-		file_put_contents('result.log', print_r(data('Y-m-d H:i:s')."\n").print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n"), FILE_APPEND);
+		file_put_contents('result.log', print_r(date('Y-m-d H:i:s')."\n").print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n"), FILE_APPEND);
 
 		$state = 'result';
 
@@ -254,7 +254,7 @@
 				$response = $client->createOrders(array('post' => $payload));
 
 				// XXX: logging for debug
-				file_put_contents('bank.log', print_r(data('Y-m-d H:i:s')."\n").print_r($response, true).print_r("\n"), FILE_APPEND);
+				file_put_contents('bank.log', print_r(date('Y-m-d H:i:s')."\n").print_r($response, true).print_r("\n"), FILE_APPEND);
 
 				// TODO: check errors
 
