@@ -200,15 +200,15 @@
 
 		// Request for another resource
 		private function request($relation, $args) {
-			$get  = isset($args['get'])  ? $args['get']  : array();
 			$post = isset($args['post']) ? $args['post'] : null;
+			unset($args['post']);
 
 			// A function to replace the URI template's tokens with received parameters
-			$replacer = function($matches) use ($get) {
+			$replacer = function($matches) use ($args) {
 				$replace = explode(',', $matches[1]);
 				$replace = array_flip($replace);
-				$replace = array_merge($replace, $get);
-				$replace = array_intersect($replace, $get); // Keep only received parameters (prevent sending bad values if not provided)
+				$replace = array_merge($replace, $args);
+				$replace = array_intersect($replace, $args); // Keep only received parameters (prevent sending bad values if not provided)
 				$replace = http_build_query($replace);
 				$replace = str_replace($matches[1], $replace, $matches[0]);
 				$replace = substr($replace, 1, strlen($replace) - 2);
