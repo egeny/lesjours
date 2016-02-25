@@ -2,17 +2,20 @@
 	"template": "home",
 
 	"une": [
-		"episode:treize-novembre/sophie-episode-3",
+		"episode:la-charniere/marmite-turque",
 		"episode:les-jours-c-quoi/les-jours-le-pilote",
-		"episode:la-fete-du-stream/ep-2-artistes-stream"
+		"episode:treize-novembre/sophie-episode-3"
 	],
 
 	"obsessions": [
+		"obsession:la-charniere",
 		"obsession:la-fete-du-stream",
 		"obsession:treize-novembre",
 		"obsession:les-annees-college",
 		"obsession:les-revenants",
 		"obsession:l-empire",
-		"obsession:politique-annee-zero"
+		"obsession:politique-annee-zero",		
+		"obsession:les-jours-a-l-oeil"
+
 	]
 }

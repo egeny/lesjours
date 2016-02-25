@@ -1,0 +1,25 @@
+{
+	"template": "episode",
+
+	"href": "marmite-turque",
+
+	"number": 1,
+	"date": "2016-02-25T10:00+01:00",
+
+	"title": "Dans la marmite turque",
+	"intro": "«&nbsp;Les Jours&nbsp;» entament une obsession à la frontière brûlante de l’Europe. Première rencontre avec Izzeddin, Buket et Taner.",
+	"subtitle": "«&nbsp;Les Jours&nbsp;» entament une obsession à la frontière brûlante de l’Europe. Première rencontre avec Izzeddin, Buket et Taner.",
+	"lead": "En terrasse d’un café du centre d’Istanbul, Izzeddin soupire souvent ce matin de novembre&nbsp;2015. <i>«&nbsp;Ce soir, je vois des amis</i>, dit-il. <i>J’ai besoin de m'asseoir avec eux pour parler. Je ne me suis jamais posé autant de questions sur mon pays.&nbsp;»</i>",
+
+	"tags": ["Turquie", "Erdogan"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:olivier-bertrand" },
+			{ "photo": "author:christophe-petit-tesson" }
+		],
+
+		"first": "episode:la-charniere/marmite-turque"
+
+			}
+}

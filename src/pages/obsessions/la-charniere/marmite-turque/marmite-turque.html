@@ -1,0 +1,178 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+
+<p><span class="lettrine">E</span>n terrasse d’un café du <a href="#" data-mini="1">centre d’Istanbul</a>, Izzeddin soupire souvent ce matin de novembre 2015. <i>«&nbsp;Ce soir, je vois des amis</i>, dit-il. <i>J’ai besoin de m’asseoir avec eux pour parler. Je ne me suis jamais posé autant de questions sur mon pays.&nbsp;»</i> Quelques jours plus tôt, le 24&nbsp;novembre, l’aviation turque a abattu un chasseur russe. Izzedin Çalislar se demande si c’est très malin&nbsp;: <q>La Russie est notre principal fournisseur de gaz naturel, je ne suis pas sûr que nous allons nous chauffer jusqu’au bout de l’hiver…</q> Les actualités les plus sombres se succèdent, pourtant Istanbul semble paisible. Plus habitués à la violence que les Français, les habitants accueillent les pires catastrophes avec fatalisme et une autodérision entretenue.</p>
+
+<figure id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<div class="player">
+<div class="container">
+<audio aria-hidden="true">
+<source type="audio/webm" src="audio/son-istanbul.webm" />
+<source type="audio/mp4"  src="audio/son-istanbul.m4a" />
+</audio>
+<button class="btn-blank" type="button">
+<div class="container">
+<img class="responsive" src="img/son-istanbul.jpg" alt="" />
+</div>
+</button>
+</div>
+</div>
+<a class="link-unstyled" href="#">
+<p class="title">Istanbul dans les oreilles</p>
+<p class="subtitle">Une journée dans la ville turque (janvier&nbsp;2016)</p>
+</a>
+<figcaption>Prise de son et montage&nbsp;: Olivier Bertrand</figcaption>
+</figure>
+
+<p><i>Les Jours</i> venaient de choisir la Turquie comme obsession, pour comprendre les enjeux qui traversent le pays et concernent souvent l’Europe. Les frontières moyen-orientales brûlantes. L’afflux de réfugiés. Les confrontations et aménagements entre islam et sécularisme dans un autre pays laïc et jacobin. La montée des conservatismes. Le régime autoritaire. L’impossible intégration européenne… Vu de loin, le pays semble parfois au bord de la guerre civile. Et de l’intérieur&nbsp;? Comment raconter sans caricatures la société turque au-delà de ses actualités&nbsp;? Comment sentir comment le pays vit cela&nbsp;? En Turquie, tout le monde parle tout le temps de politique, mais le pays reste le plus souvent étale, plus calme que les eaux du Bosphore par jour de faible vent.</p>
+
+
+<figure>
+<img src="img/turquie-ep-un-1.jpg" alt="" />
+<figcaption><span>Le parc Gezi et la place Taksim lors de l’occupation, en juin 2013 <span class="credits">Photo Christophe Petit-Tesson pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+
+{% set person = obsession.people[0] %}
+<p>Deux mois après notre première rencontre, <a href="#{{ person.href }}" data-mini="2">Izzedin Çalislar</a> restait serein, songeur. Auteur, scénariste, écrivain, il a la voix et le regard doux. Intellectuel laïc et tolérant, il contemple, souvent navré, moqueur, les dérives de son pays. S’inquiète des conservatismes qui progressent. Depuis une brasserie de la place Taksim, ce matin de janvier, il montrait l’esplanade, presque vide. <q>Je me souviens comme elle était noire de monde en juin 2013 et pourtant, des colonnes de manifestants continuaient d’arriver de partout.</q></p>
+
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+<p><span>Gezi,</span> la défense d’une façon d’exister</p>
+</aside>
+
+{% set person = obsession.people[1] %}
+<p>Au printemps 2013, la défense du <a href="#note-1">parc Gezi</a> avait mobilisé des urbanistes, puis soudé les habitants du quartier, avant qu’une partie de la jeunesse du pays se soulève. Ces quelques jours restent mythiques et structurants pour comprendre où en est la Turquie. Un mouvement qui a rassemblé des résistances éparses mais contribué à polariser complètement le pays autour de la personne de <a href="#{{ person.href }}" data-mini="3">Recep Tayyip Erdogan</a>. Le Président, persuadé qu’il s’agissait d’un coup d’État –&nbsp;une tradition turque bien ancrée&nbsp;–, avait choisi de répondre par la violence, avant de se replier sur ses bases électorales, musulmanes et populaires. Il les brandit en permanence, menace de mettre le peuple dans la rue à la moindre contestation. Cela lui réussit assez. L’ubuesque chef de l’État est raillé par la moitié de son pays, mais réélu par l’autre. Il joue de cette hyper-polarisation dangereuse qui tranche son pays en deux.</p>
+
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Le parc Gezi",
+caption: "La protection d’arbres menacés par la construction d’un building dans un parc du centre d’Istanbul en mai&nbsp;2013 avait provoqué un soulèvement massif, révélant une aspiration à plus de liberté."
+})
+}}
+
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[2] %}
+<p><q>Gezi était la défense d’une façon d’exister, pas seulement de quelques arbres</q>, résume la sociologue <a href="#{{ person.href }}" data-mini="4">Buket Türkmen</a>, qui travaille sur les jeunes islamistes, la transformation de l’espace public et la redéfinition de la laïcité. Elle prépare un livre sur les femmes dans le mouvement de Gezi, a commencé à militer dans ce parc, en se passionnant pour cette mobilisation&nbsp;: <q>La jeunesse que l’on disait individualiste était politique, loin des partis traditionnels. Elle s’est révoltée contre les violences policières, contre le fonctionnement patriarcal de la société. Derrière elle, la population a réalisé que la presse lui mentait quand ses enfants se sont retrouvés traités de terroristes dans les journaux, comme le sont les Kurdes. La perte de confiance est profonde.</q> Depuis, les résistances se sont fragmentées, mais Gezi reste une référence qui affleure et structure, revient en permanence pour expliquer la situation politique.</p>
+
+{{
+	mini({
+		number: 4,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<blockquote>
+<p>Monsieur Erdogan est très intelligent, il a montré qu’il maîtrisait parfaitement son calendrier.</p>
+<footer>Izzedin Çalislar, écrivain</footer>
+</blockquote>
+
+{% set person = obsession.people[5] %}
+<p>Après le printemps 2013, les opposants ont attendu une traduction politique. Les municipales de 2014 ont marqué une première ouverture, avec, par exemple, l’élection de conseillers municipaux issus des mouvements gays et lesbiens (on y reviendra dans un prochain épisode). Puis des législatives le 7&nbsp;juin dernier ont permis une forte progression du <a href="#{{ person.href }}" data-mini="5">HDP</a>, jeune parti pro-kurde qui soude de nombreuses minorités. Il a décroché 80&nbsp;députés, fait reculer de dix points le parti du Président (40,66&nbsp;%).</p>
+
+<p>Erdogan a alors misé sur une stratégie de violence. Le processus de paix en cours depuis trois ans dans les provinces kurdes a volé en éclats. La guerre a repris dès le lendemain des législatives, des <a href="#note-2">attentats</a> ont secoué le pays et le doute plane sur la responsabilité du gouvernement. Un été de cendres et de larmes, au cours duquel le Président a surfé sur les cordes nationalistes toujours prêtes à se tendre dans ce pays aux origines multiples, aux identités très complexes. Il a obtenu ce qu’il voulait, a dissous l’Assemblée, provoqué de nouvelles élections, et obtenu un vote réactionnaire, frôlé les 50&nbsp;%, le 1er novembre 2015. <i>«&nbsp;Monsieur Erdogan est très intelligent</i>, conclut Izzedin Çalislar. <i>Il a montré qu’il maîtrisait parfaitement son calendrier.&nbsp;»</i></p>
+
+{{
+	mini({
+		number: 5,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Attentats",
+caption: "Deux attentats ont contribué à l’escalade de violence avant les élections de novembre&nbsp;2015&nbsp;: le 20&nbsp;juillet, un attentat suicide tue 33 personnes à Suruç, essentiellement des soutiens aux combattants kurdes de Kobané&nbsp;; le 10&nbsp;octobre, deux explosions font 102 morts à Ankara lors d’un meeting du HDP."
+})
+}}
+
+<aside>
+<p><span>Les universitaires pétitionnaires</span> sont poursuivis, harcelés</p>
+</aside>
+
+<p>Depuis le scrutin, la Turquie paraît comme abattue. L’opposition déprime. Les mauvaises nouvelles pleuvent, mais les mouvements de protestation ne rassemblent généralement plus grand monde. Le régime <a href="#note-3">enferme des journalistes</a> et bâillonne les universitaires. Début janvier, 1&nbsp;128 enseignants de Turquie, rejoints par des confrères du monde entier, ont signé une <a href="http://www.kedistan.net/2016/01/05/baris-paix-peace-asiti-kurdistan/" target="_blank">pétition</a> (aujourd’hui soutenue par plus de 4&nbsp;000 personnes) appelant au retour du processus de paix entamé en 2012 avec les mouvements de résistance kurde. Rien de violent dans leur texte, hormis le fait qu’ils accusent le gouvernement de <q>massacres</q> et d’<q>exils forcés</q> au Kurdistan (de fait, au moins 300&nbsp;000 personnes ont déjà été déplacées, chassées par les couvre-feux, la destruction de maisons, l’absence d’eau et l’arrêt de l’école).</p>
+
+<p>Depuis, les universitaires sont poursuivis, harcelés. Des procureurs mènent des auditions, ordonnent des perquisitions dans leurs bureaux, saisissent leurs ordinateurs. Les facultés ouvrent des enquêtes sous la pression du YÖK, le Conseil des études supérieures turc, tenu par le gouvernement. Des médias locaux et nationaux –&nbsp;quasiment tous tenus ou détenus, désormais, par le pouvoir&nbsp;– publient les noms et photos des enseignants, les qualifiant de traîtres, de complices de la terreur (kurde), afin de dresser leurs étudiants et leurs collègues contre eux. Certains ont dû fuir les petites villes conservatrices où ils habitaient pour ne pas se faire agresser dans les rues, et un soutien du Président, sorte d’Escobar turc aux petits pieds qui avait des ennuis avec la justice avant de se refaire en politique, a menacé les signataires lors d’une réunion publique&nbsp;: <q>Quand le jour va arriver, nos patriotes vont prendre une douche avec votre sang.</q></p>
+
+<figure>
+<img src="img/turquie-ep-un-2.jpg" alt="" />
+<figcaption><span>Recep Tayyip Erdogan lors de l’ouverture de la COP21 en novembre 2015, au Bourget <span class="credits">Photo Pierre Morel pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Arrestations de journalistes",
+caption: "Des dizaines de journalistes sont emprisonnés début 2016 en Turquie, où la perpétuité a été requise contre Can Dündar et Erdem Gül, du quotidien «&nbsp;Cumhuriyet&nbsp;», pour une enquête attribuant aux services secrets turcs la livraison d’armes à des jihadistes en Syrie."
+})
+}}
+
+
+<p>Beaucoup hésitent désormais à s’exprimer en Turquie. On emprisonne des journalistes pour leurs papiers ou leurs tweets, on convoque des citoyens pour un post sur Facebook. Les réseaux sociaux sont coupés dès que l’actualité devient brûlante –&nbsp;c’est-à-dire toutes les semaines.</p>
+
+{% set person = obsession.people[3] %}
+<p><a href="#{{ person.href }}" data-mini="6">Taner Hürgün</a>, économiste de formation, enseignait à l’université avant de quitter la faculté pour gagner sa vie, nourrir un peu mieux sa famille. Et retrouver une complète liberté. Comme nombre d’enseignants, il raconte les réseaux de surveillance et de dénonciation qui maillent les universités. Aujourd’hui, il fait des affaires, vit très bien de l’immobilier qui flambe à Istanbul, mais continue de suivre de près les affaires politique du pays. {% set person = obsession.people[4] %}Il s’est choisi un nom d’emprunt pour <i>Les Jours</i>, afin de pouvoir <q>parler librement</q>, sans perdre ses marchés, d’Erdogan ou de l’<a href="#{{ person.href }}" data-mini="7">AKP</a>. <i>«&nbsp;Nous avons tous développé des stratégies pour continuer de travailler en évitant les ennuis</i>, dit-il. <i>J’adapte mon ton et mon propos à mes interlocuteurs. Je ne dis jamais ce que je pense dans mon travail. Si je vous parlais de la Turquie et de ce qui se passe sous mon propre nom, je n’aurais plus de marchés.&nbsp;»</i> Il restera donc anonyme jusqu’à ce qu’il juge possible de faire autrement. En attendant, il observe avec finesse les évolutions de la société, sait raconter précisément <q>l’ingénierie islamique</q> mise en place depuis quelques années pour transformer en profondeur le pays.</p>
+
+{% set person = obsession.people[3] %}
+{{
+	mini({
+		number: 6,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[4] %}
+{{
+	mini({
+		number: 7,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Ce sera l’objet de prochains épisodes, justement. Quasi-dictature laïque au XXe siècle, la Turquie avait semblé s’ouvrir dans les années&nbsp;2000, gagner en liberté, quand l’intégration européenne restait un horizon possible. Mais Angela Merkel et Nicolas Sarkozy ont claqué la porte au nez des Turcs, puis l’AKP a conforté son pouvoir, ce qui lui permet désormais d’imposer des changements profonds, un plus strict contrôle des mœurs. Le prochain épisode montrera comment cela touche tous les secteurs de la société, et quel rôle le religieux tient dans cela. Avant que les suivants détaillent le sort désormais réservé aux femmes et à l’éducation.</p>
+
