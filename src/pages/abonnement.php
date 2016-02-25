@@ -12,36 +12,10 @@
 
 	$data  = $_POST;
 	$error = null;
-
-	$hidden = array(
-		'amount'        => null,
-		'cardfullname'  => null,
-		'clientemail'   => null,
-		'clientident'   => null,
-		'createalias'   => 'yes',
-		'description'   => 'Abonnement',
-		'identifier'    => BE2BILL_IDENTIFIER,
-		'language'      => 'FR',
-		'operationtype' => 'payment',
-		'orderid'       => null,
-		'version'       => '2.0',
-	);
-
 	$state = null;
 	$title = 'Devenir jouriste';
 
-	// Check if we need to use another $title or $state
-	if (is_user_logged_in()) {
-		$expired = get_user_meta($current_user->ID, 'expire');
-
-		// Found an expiration (meaning the user has previously subscribed)
-		if (is_array($expired) && isset($expired[0])) {
-			$expired = time() > strtotime($expired[0]);
-			$state   = !$expired ? 'subscribed' : $state;
-			$title   = 'Renouveler mon abonnement';
-		}
-	}
-
+	// Utility function to generate a hash from and for be2bill
 	function signature($array) {
 		$hash = array();
 
@@ -55,10 +29,22 @@
 		return hash('sha256', BE2BILL_PASSWORD.implode(BE2BILL_PASSWORD, $hash).BE2BILL_PASSWORD);
 	}
 
+	// Check if we need to use another $state and $title
+	if (is_user_logged_in()) {
+		$expired = get_user_meta($current_user->ID, 'expire');
+
+		// Found an expiration (meaning the user has previously subscribed)
+		if (is_array($expired) && isset($expired[0])) {
+			$expired = time() > strtotime($expired[0]);
+			$state   = !$expired ? 'subscribed' : $state;
+			$title   = 'Renouveler mon abonnement';
+		}
+	}
+
 	// Receiving a notification from the payment service
 	if (isset($_GET['notification'])) {
 		unset($_GET['notification']); // Exclude for the hash computation
-		$hash  = signature($_GET);
+		$hash = signature($_GET);
 
 		if ($hash == $_GET['HASH']) {
 			$user_id = $_GET['CLIENTIDENT'];
@@ -73,7 +59,7 @@
 
 			if ($_GET['EXECCODE'] == '0000') {
 				// Retrieve the global invoice number and increment it
-				$number  = intval(get_option('invoice_number', 0)) + 1;
+				$number = intval(get_option('invoice_number', 0)) + 1;
 
 				// Add an invoice (warning: should NOT be unique, obviously)
 				add_user_meta($user_id, 'invoices', json_encode(array(
@@ -118,9 +104,9 @@
 
 		if (empty($_GET['result'])) {
 			unset($_GET['result']); // Exclude for the hash computation
-			$hash  = signature($_GET);
+			$hash = signature($_GET);
 
-			$error = !$error && $hash != $_GET['HASH']      ? '1003'            : $error;
+			$error = !$error && $_GET['HASH']     != $hash  ? '1003'            : $error;
 			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
 
 			// Prefer redirecting to remove informations in the URL
@@ -196,19 +182,30 @@
 				update_user_meta($user_id, $field, $data[$field]);
 			}
 
-			// Look the user if not already logged-in
+			// Login the user if not already logged-in
 			wp_set_auth_cookie($user_id, true, false);
 
-			if ($data['payment'] == 'card') {
-				// Complete the payload for the payment service
-				$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
-				$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
-				$hidden['clientemail']  = $data['mail'];
-				$hidden['clientident']  = $user_id;
-				$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
-				$hidden['hash']         = signature($hidden);
+			// Launch the payment
+			if ($meta['payment'] == 'card') {
+				$payload = array(
+					'amount'        => $PLANS[$meta['plan']]['price'] * 100,
+					'cardfullname'  => $meta['last_name'].' '.$meta['first_name'],
+					'clientemail'   => $user->user_email,
+					'clientident'   => $user_id,
+					'createalias'   => 'yes',
+					'description'   => 'Abonnement',
+					'identifier'    => BE2BILL_IDENTIFIER,
+					'language'      => 'FR',
+					'operationtype' => 'payment',
+					'orderid'       => date('Y-m-d').'-'.$user_id,
+					'version'       => '2.0'
+				);
 
-				// Generate an hidden form containing the needed informations for the payment service
+				// Generate the security hash
+				$payload['hash'] = signature($payload);
+
+				// Set the state as "redirect", the payload needs to be delivered
+				// By POST to the payment form URL
 				$state = 'redirect';
 			} else if ($data['payment'] == 'bank') {
 				$client = new SlimPayClient();
@@ -301,7 +298,7 @@
 			<?php if ($state == 'redirect') : ?>
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Redirection vers le paiement</h2>
 				<form id="redirect" class="md-ml-1c lg-ml-1c" action="<?php echo BE2BILL_URL; ?>" method="post">
-				<?php foreach ($hidden as $name => $value) : ?>
+				<?php foreach ($payload as $name => $value) : ?>
 					<input type="hidden" name="<?php echo strtoupper($name) ?>" value="<?php echo $value ?>" />
 				<?php endforeach ?>
 					<p>Si vous n'êtes pas redirigé automatiquement <button class="btn-blank" type="submit">cliquez-ici</button>.</p>
