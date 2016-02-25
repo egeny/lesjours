@@ -1,0 +1,72 @@
+{
+	"template": "obsession",
+
+	"href": "la-charniere",
+
+	"color": 11,
+	"name":  "La charnière",
+	"title": "La charnière",
+	"subtitle": "Nouvelles de Turquie, frontière brûlante de l’Europe.",
+	"desc": "<p>Origines multiples, identités complexes, islam et laïcité, frontières chaotiques, afflux de réfugiés, régime ubuesque et autoritaire… La Turquie est prise dans des enjeux qui la bouleversent, et dépassent ses frontières. <i>Les Jours</i> explorent cette si fragile agrafe entre Europe et Moyen-Orient.</p>",
+
+	"episodes": [
+		"episode:la-charniere/marmite-turque"
+	],
+
+	"people": [
+		{
+			"href":     "izzeddin-calislar",
+			"img":      "img/izzeddin-calislar.jpg",
+			"alt":      "",
+			"title":    "Izzedin Çalislar",
+			"subtitle": "Écrivain très observateur",
+			"desc": "Dans un cadre accroché au mur du salon d'Izzedin Çalislar, à Istanbul, un militaire coiffé d’une haute toque de laine fixe le visiteur. L'arrière grand-père d'Izzeddin, général des armées d’Atatürk, le fondateur de la République turque. La famille était originaire de Grèce, comme le père de la nation. Les deux familles étaient proches&nbsp;: l’ancêtre a fait partie des premiers fidèles et a dirigé les armées d’Atatürk pendant la première guerre. Le petit fils (51&nbsp;ans) porte le même prénom que lui, a fait des études de sciences politiques avant de travailler comme monteur, scénariste et metteur en scène, puis de se lancer dans la publicité, montant sa propre agence, pendant dix ans. Il l’a laissée tomber pour écrire des livres. Il multiplie les ouvrages sur des sujets très différents qui ne lui poseront pas de problèmes en Turquie. Le dernier, superbe, parle des oliviers millénaires. Quand il n'écrit pas depuis son bureau surplombant un jardin un peu sauvage, Izzeddin se consacre à ce qui constitue un sport national en Turquie&nbsp;: disserter de politique et de l'état inquiétant du pays.",
+			"minor": true
+		},
+		{
+			"href":     "recep-tayyip-erdogan",
+			"img":      "img/erdogan.jpg",
+			"alt":      "",
+			"title":    "Recep Tayyip Erdogan",
+			"subtitle": "Ubuesque Président",
+			"desc": "Erdogan est un peu le pendant musulman d’Atatürk le laïc. Le «&nbsp;père&nbsp;» de la République turque, sultan moderne, a transformé les restes d’un empire en nation avec des méthodes de dictateur. Le Président actuel, sultan conservateur, prend des poses patriarcales et plonge son pays dans un dangereux repli. Né d’une famille modeste et musulmane, dans un quartier très populaire d’Istanbul, il est devenu maire de la ville, l’a profondément transformée avant d’accéder au pouvoir en 2002, puis de devenir Président en 2014. Conforté par l’essor de son pays, la stabilité économique retrouvée, il a progressivement éliminé les rivaux de son parti, purgé les administrations de tous ses opposants, et règne désormais en dictateur en tournant le dos aux années d’ouverture qui avaient accompagné sa prise de pouvoir. Comme Ubu, il s’est fait construire un palais gigantesque et moqué à Ankara. Comme Ubu, il est paranoïaque, imagine des mouvements «&nbsp;parallèles&nbsp;» qui voudraient le déstabiliser. Comme Ubu, il sert surtout sa famille. Ses gendres, ses enfants et ses proches se partagent le pays, les entreprises, les médias, les marchés. Certains sont tachés depuis 2013 par des soupçons de corruption. Qu’Erdoğan interprète comme des tentatives de coup d’État.",
+			"minor": true
+		},
+		{
+			"href":     "buket-turkmen",
+			"img":      "img/buket-turkmen.jpg",
+			"alt":      "",
+			"title":    "Buket Türkmen",
+			"subtitle": "Sociologue militante",
+			"desc": "Buket Türkmen est sociologue, maître de conférence à l’université de Galatasaray. Après une thèse sur la reconstruction de l’espace public laïc par les étudiants membres des fondations islamiques et des associations kémalistes (laïques), elle a travaillé sur les jeunes islamistes, le flirte chez les jeunes musulmanes, la redéfinition de la laïcité. Elle a dirigé l'ouvrage collectif «&nbsp;Laïcités et religiosités&nbsp;: intégration ou exclusion&nbsp;» (L'Harmattan, 2010). Question centrale de son travail jusque-là&nbsp;: la laïcité est-elle capable d'assumer l'égalité et l'intégration de tous (musulmans compris) dans l'espace public&nbsp;? Les événements de Gezi ont été une révélation pour elle. Issue d'une famille originaire de Macédoine, peu politisée, elle a découvert l'ampleur des violences policières et du contrôle des médias. Elle se définit aujourd'hui comme sociologue et militante, a adhéré au HDP, le Parti démocratique des peuples, créé en 2013. Son travail s’intéresse désormais à l'histoire du féminisme. Elle prépare un ouvrage sur les femmes de Gezi.",
+			"minor": true
+		},
+		{
+			"href":     "taner-hurgun",
+			"img":      "img/taner-hurgun.jpg",
+			"alt":      "",
+			"title":    "Taner Hürgün",
+			"subtitle": "Homme d'affaires, ex-universitaire",
+			"desc":     "Taner a des faux airs de François Hollande, des petites lunettes rondes, un visage aussi rond, des yeux tour à tour naïfs et rieurs. Dans une première vie professionnelle, il était universitaire, économiste enseignant en sciences politiques. Puis il a abandonné la faculté pour mieux gagner sa vie. Peut-être aussi parce qu’il était fatigué de l'ambiance qui régnait à l’université, de la surveillance policière étroite dont se plaignent de nombreux enseignants. Pour des propos politiques jugés ambigus, il avait répondu un jour à l'invitation d'un étudiant qui voulait discuter et s'était retrouvé dans un café entouré de policiers des renseignements turcs. Aujourd'hui, il gagne très bien sa vie, fait des affaires dans l'immobilier. Où il évite soigneusement de parler de politique. Exprimer ses idées ou son avis sur le gouvernement le priverait, selon lui, de tous ses marchés. Pour cette raison, il a demandé à changer de nom dans «&nbsp;Les Jours&nbsp;», a choisi son pseudonyme. Protégé par l'anonymat, il porte un avis pertinent sur la politique de son pays et très renseigné sur les questions d'urbanisme et d'immobilier.",
+			"minor": true
+		},
+		{
+			"href":     "akp",
+			"img":      "img/akp.jpg",
+			"alt":      "",
+			"title":    "L’AKP",
+			"subtitle": "Le Parti de la justice et du développement",
+			"desc":     "Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays.",
+			"minor": true
+		},
+		{
+			"href":     "hdp",
+			"img":      "img/hdp.jpg",
+			"alt":      "",
+			"title":    "Le HDP",
+			"subtitle": "Le Parti démocratique des peuples",
+			"desc":     "Créé à l’automne&nbsp;2013, le Parti démocratique des peuples représente de nombreuses minorités, notamment kurdes, ainsi que des partis de gauche et les Verts turcs. En février&nbsp;2016, il compte 59 députés.",
+			"minor": true
+		}
+	]
+}
