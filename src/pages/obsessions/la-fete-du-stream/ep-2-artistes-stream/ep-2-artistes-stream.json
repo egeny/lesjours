@@ -20,8 +20,9 @@
 		],
 
 		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
-		"prev":  "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
-		"last":  "episode:la-fete-du-stream/ep-2-artistes-stream"
+		"prev":  "episode:la-fete-du-stream/ep-2-artistes-stream",
+		"last":  "episode:la-fete-du-stream/ep-3-stream-change-auditeurs",
+		"next": "episode:la-fete-du-stream/ep-3-stream-change-auditeurs"
 
 			}
 }
