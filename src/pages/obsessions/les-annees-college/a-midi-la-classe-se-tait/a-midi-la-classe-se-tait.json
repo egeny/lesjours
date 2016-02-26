@@ -1,5 +1,6 @@
 {
-	"template": "episode",
+	"template":   "episode",
+	"visibility": "protected",
 
 	"href": "a-midi-la-classe-se-tait",
 

@@ -1,5 +1,6 @@
 {
-	"template": "episode",
+	"template":   "episode",
+	"visibility": "protected",
 
 	"href": "zig-zags-dans-les-tetes-a-l-assemblee",
 

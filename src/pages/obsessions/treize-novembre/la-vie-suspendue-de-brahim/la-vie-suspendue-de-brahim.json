@@ -1,5 +1,6 @@
 {
-	"template": "episode",
+	"template":   "episode",
+	"visibility": "protected",
 
 	"href": "la-vie-suspendue-de-brahim",
 
