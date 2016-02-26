@@ -10,7 +10,8 @@
 	"desc": "<p>Origines multiples, identités complexes, islam et laïcité, frontières chaotiques, afflux de réfugiés, régime ubuesque et autoritaire… La Turquie est prise dans des enjeux qui la bouleversent, et dépassent ses frontières. <i>Les Jours</i> explorent cette si fragile agrafe entre Europe et Moyen-Orient.</p>",
 
 	"episodes": [
-		"episode:la-charniere/marmite-turque"
+		"episode:la-charniere/marmite-turque",
+		"episode:la-charniere/ep-2-turquie"
 	],
 
 	"people": [
@@ -67,6 +68,52 @@
 			"subtitle": "Le Parti démocratique des peuples",
 			"desc":     "Créé à l’automne&nbsp;2013, le Parti démocratique des peuples représente de nombreuses minorités, notamment kurdes, ainsi que des partis de gauche et les Verts turcs. En février&nbsp;2016, il compte 59 députés.",
 			"minor": true
+		},
+		{
+			"href":     "gulistan-zeren",
+			"img":      "img/gulistan-zeren.jpg",
+			"alt":      "",
+			"title":    "Gülistan Zeren",
+			"subtitle": "Étudiante en sociologie",
+			"desc":     "Gülistan vit à Istanbul, elle est kurde. Elle étudie la sociologie à l'université de Galatasaray où l'une de ses enseignants, Buket Türkmen, la décrit comme l'étudiante la plus brillante de sa promotion. La famille de Gülistan est restée à Cizre, l'une des villes particulièrement visées par l'armée turque. Des dizaines de milliers de personnes ont choisi l'exil pour échapper à la guerre, pour retrouver l'eau, le chauffage, pour que leurs enfants continuent d'apprendre (la plupart des enseignants de la région ont été rappelés par le gouvernement, les écoles sont fermées). Pour échapper aux tirs, à la destruction des maisons. Selon elle, la politique d'Erdogan n'est pas «&nbsp;une nouvelle politique&nbsp;», mais «&nbsp;le retour d'une politique qui est menée depuis un siècle contre les Kurdes, les Alévis, les Arméniens, etc.&nbsp;».",
+			"minor": true
+		},
+		{
+			"href":     "sedef-cakmak",
+			"img":      "img/sedef-cakmak-2.jpg",
+			"alt":      "",
+			"title":    "Sedef Cakmak",
+			"subtitle": "Élue municipale, militante LGBT",
+			"desc":     "La vie de Sedef a changé au printemps 2013, lorsque les évènements du parc Gezi ont «&nbsp;mis l'activisme au centre de [sa] vie&nbsp;». Depuis, elle enchaîne les boulot alimentaires dans la traduction pour gagner de quoi militer le reste du temps. Elle est lesbienne, activiste LGBT. Et depuis les municipales de 2014, conseillère municipale d'Istanbul. Être élue parce que lesbienne est un évènement en Turquie. «&nbsp;Cela vient de Gezi. De l'éveil démocratique qu'a constitué ce mouvement.&nbsp;» La décision d'entrer en politique a été prise collectivement. L'un de ses amis proches devait se présenter, il s'est tué dans un accident de la route, elle a décidé d'assumer la suite. Ils auraient pu adhérer au HDP, qui représente de nombreuses minorités. Mais ils voulaient obtenir des élus, se disaient que le CHP, vieux parti laïc un peu poussiéreux, pouvait se changer de l'intérieur. Elle vient de la classe moyenne, n'a jamais manqué de rien mais n'a jamais eu trop d'argent à dépenser. Les parents voulaient que leurs filles soient fortes, indépendantes, qu'elles ne dépendent jamais d'un mari. Pour Sedef, c'est doublement réussi.",
+			"minor": true
+		},
+		{
+			"href":     "melda-onur",
+			"img":      "img/melda-onur.jpg",
+			"alt":      "",
+			"title":    "Melda Onur",
+			"subtitle": "Ex-députée CHP, journaliste économique",
+			"desc":     "Les universitaires qui s'intéressent aux sciences politiques et suivent avec attention la vie parlementaire turque parlent d'elle avec beaucoup de respect. Melda Onur a la réputation d'être une femme courageuse, pas prête à n'importe quelle concession pour conserver son siège. C'est peut-être pour cela qu'elle n'a gardé qu'un mandat, de 2011 à 2015, son mandat de députée CHP. Elle n'était pas destinée au départ à la politique. Elle a longtemps été journaliste économique, bien placée pour savoir que son pays n'a pas attendu Erdogan pour avoir des soucis avec la démocratie. Son père était militaire, ce qui lui a vécu une enfance baladée au quatre coins de la Turquie. Sa mère élevait les enfants. La famille était proche du CHP, le parti laïc au pouvoir de 1923 à 2002. Elle, a fait des études de sciences politiques, s'est spécialisée dans les relations internationales, a décroché une bourse du gouvernement français pour venir s'initier aux administrations de droit public. Puis elle est devenue journaliste économique. Elle dit&nbsp;: «&nbsp;J'ai toujours connu la censure. J'étais reporter et j'ai failli être virée plusieurs fois pour des papiers qui déplaisaient. Aujourd'hui, c'est devenu strictement impossible d'écrire sur les compagnies ou les hommes d'affaire proches du pouvoir. Il n'y a plus de censure&nbsp;: les journalistes anticipent, ils n'écrivent plus. Erdogan contrôle de toute façon tous les patrons de presse.&nbsp;»",
+			"minor": true
+		},
+		{
+			"href":     "evren-erbatur",
+			"img":      "img/evren-erbatur.jpg",
+			"alt":      "",
+			"title":    "Evren Erbatur",
+			"subtitle": "Actrice, danseuse, metteure en scène, auteure",
+			"desc":     "L'une de ses amies avait prévenu&nbsp;: «&nbsp;À Istanbul, il faut aussi que vous rencontriez Evren, mais je ne peux pas vous expliquer précisément qui elle est, ni ce qu'elle fait, elle est trop indéfinissable.&nbsp;» Essayons tout de même. Très à l'aise, vive, le visage extrêmement expressif, elle veut d'abord comprendre ce qu'un journaliste français vient chercher en ce moment à Istanbul. La démarche des «&nbsp;Jours&nbsp;», des obsessions, lui a plu. Il lui a alors fallu une bonne heure pour détailler en anglais ses nombreuses activités. Actrice, danseuse, metteure en scène, parfois auteure, professeure de théâtre à l'université. Et quand il lui reste du temps, elle réfléchit et écrit sur le théâtre contemporain. Elle vivait avec quelqu'un, a dû revenir s'installer chez ses parents après la séparation, passage régressif désagréable même si ses parents sont modernes. Il est trop difficile aujourd'hui de vivre du théâtre en Turquie. La famille venait du centre du pays pour le père, d'origines plus lointaines pour la mère. Récemment, ils se sont découvert des racines juives, cela passionne Evren qui compte escalader l'arbre généalogique. Elle aime que cela renvoie à héritage ottoman. «&nbsp;C'est compliqué l'idée de nation quand on pense à toutes les origines qui vivent ici. C'est une dynamique complexe. C'est plus difficile de trouver de l'unité, cela suppose un projet commun fort. Cela pourrait être l'harmonie des cultures.&nbsp;» À la place, le gouvernement propose pour l'instant la guerre contre les Kurdes, pour souder les nationalismes. «&nbsp;La guerre est toujours un focus utile aux gouvernements qui veulent détourner les citoyens de leurs révoltes&nbsp;», soupire-t-elle.",
+			"minor": true
+		},
+		{
+			"href":     "sinan-logie",
+			"img":      "img/sinan-logie.jpg",
+			"alt":      "",
+			"title":    "Sinan Logie",
+			"subtitle": "Architecte",
+			"desc":     "Sinan Logie est belge par son père, turc par sa mère. Il a fait des études d'architecte à Bruxelles, a bossé un moment là-bas dans un cabinet en vue, avant de décider de rentrer au pays, où il avait grandi enfant. Pince-sans-rire, il propose une synthèse de l'autodérision belge sans façon, et du fatalisme plein d'humour des Stambouliotes. Il a d'abord bossé classiquement comme architecte à son retour à Istanbul, a participé à des projets importants avant de prendre ses distances. Sinan Logie enseigne désormais l'architecture à Bilgi University, organise avec ses étudiants des ballades urbaines au cours desquelles il révèle les mutations tentaculaires de la ville, le passé, les quartiers que le développement tentaculaire efface, les traces des minorités chassées. Engagé, malicieux, érudit, il a publié un livre passionnant avec l'anthropologue Yoann Morvan&nbsp;: «&nbsp;Istanbul 2023&nbsp;» (Editions B2, 2004).",
+			"minor": true
 		}
+	
 	]
 }

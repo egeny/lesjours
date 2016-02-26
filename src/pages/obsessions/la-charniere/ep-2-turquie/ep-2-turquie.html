@@ -1,0 +1,227 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+
+<p><span class="lettrine">E</span>n janvier, une anecdote circulait à Istanbul, déformée de récit en récit. Les Affaires religieuses (Diyanet), haute instance religieuse qui dépend de l’État, venaient de rendre, disait-on, un avis effarant justifiant le désir d’un père pour sa fille dès lors que celle-ci a plus de 9&nbsp;ans. Personne ne retrouvait la source exacte, certains doutaient que cela soit possible. Mais ça l’était.</p>
+
+<p>Sur <a href="#" data-mini="1">le site internet du Diyanet</a>, les citoyens peuvent poser des questions, par exemple pour savoir si telle ou telle pratique est autorisée par l’islam. C’est ainsi qu’en décembre, un père a demandé si <q>le fait d’éprouver du désir pour [sa] fille</q> risquait d’invalider son mariage avec sa femme –&nbsp;c’est une obsession turque, la peur de «&nbsp;faire tomber le mariage&nbsp;». Le site lui a répondu très sérieusement que <q>selon certaines obédiences de l’islam, le fait qu’un père embrasse ou enlace sa fille avec concupiscence n’a aucune incidence sur la validité du mariage</q>. Mais que selon d’autres, cela <q>rend la mère de la fille haram</q>. En clair, si le père désire sa fille, la mère devient impure.</p> 
+
+<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.diyanet.gov.tr/fr/Page%20d%E2%80%99accueil" />
+<span class="image"><img class="responsive" src="img/diyanet.jpg" alt="" /></span>
+<p class="title">Diyanet</p>
+<p class="subtitle">Le site des Affaires religieuses</p>
+</a>
+</aside>
+
+<p>Le site précisait par ailleurs&nbsp;: <q>Pour qu’un contact puisse impliquer cela, il faut qu’il ait lieu peau contre peau, ou à travers un tissu suffisamment fin pour transmettre la chaleur de la peau. Si on touche à travers un tissu épais, ou si on éprouve du désir seulement en regardant, en imaginant à partir du corps, cela ne constitue pas un cas de haram, un cas qui invaliderait le mariage.</q> Il faut de toute façon, précisait encore la <a href="#note-1">fatwa</a>, <q>que la fille ait plus de 9&nbsp;ans</q>. Sic.</p>
+
+<aside>
+<p><span>L’islam progresse,</span> les mœurs sont sous observation</p>
+</aside>
+
+<p>L’histoire commençant à faire scandale, à heurter de nombreux musulmans, les Affaires religieuses ont retiré question et réponse. Pas de chance, un site d’information vigilant avait fait <a href="http://www.birgun.net/haber-detay/diyanet-ten-fetva-babanin-oz-kizina-sehvet-duymasi-haram-degil-100117.html" target="_blank">une capture d’écran</a>. Le Diyanet a prétendu qu’il s’agissait d’un piratage.</p>
+
+<p>L’islam progresse, ces dernières années, dans l’espace public turc. Et cela effraie une partie de la population qui, tournée vers la rive européenne du pays, souhaite continuer de vivre à l’occidentale. On pointe les taxes sur l’alcool qui n’en finissent plus de grimper. Le vin désormais interdit sur les lignes intérieures de Turkish Airlines. Les terrasses fermées par certaines municipalités. Le recul de la mixité dans les piscines, où des villes imposent des horaires séparés pour les hommes et les femmes, comme sur quelques plages.</p>
+
+{% set person = obsession.people[4] %}
+<p>Un syndicat universitaire proche de <a href="#{{ person.href }}" data-mini="2">l’AKP</a> s’est déclaré contre la mixité à l’école. {% set person = obsession.people[6] %}<q>Il développe un discours proche de la charia</q>, s’inquiète <a href="#{{ person.href }}" data-mini="3">Gülistan Zeren</a>, étudiante à l’université de Galatasaray. Assise très droite dans un café de Besiktas, vieux quartier d’Istanbul, elle écoute attentivement les questions, répond dans un français soigné. {% set person = obsession.people[2] %}
+L’une de ses profs, <a href="#{{ person.href }}" data-mini="4">Buket Türkmen</a>, avait prévenu&nbsp;: Gülistan est l’une de ses élèves les plus brillantes. Elle s’intéresse à la sociologie de la santé, et suit, pas rassurée, les transformations de son pays.</p>
+
+{% set person = obsession.people[4] %}
+{{
+mini({
+number: 2,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{% set person = obsession.people[6] %}
+{{
+mini({
+number: 3,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{% set person = obsession.people[2] %}
+{{
+mini({
+number: 4,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<figure>
+<img src="img/turquie-ep-deux-1.jpg" alt="" />
+<figcaption><span>Des militants de l’AKP lors d’un meeting pendant la campagne pour les élections législatives à Istanbul, en 2015 <span class="credits">Photo Christophe Petit-Tesson pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+{% set person = obsession.people[7] %}
+<p>En Turquie, les mœurs sont sous observation. La justice s’est récemment essayée à qualifier les pratiques interdites dans les films pornographiques&nbsp;: zoophilie, sexualité de groupe, sodomie… Un ministre a qualifié l’homosexualité de <q>déviance</q> et l’année dernière, le gouverneur d’Istanbul (le préfet) a fait interdire la gay pride deux heures avant le défilé. La police a chargé les 80&nbsp;000 manifestants. <a href="#{{ person.href }}" data-mini="5">Sedef Cakmak</a>, élue municipale, lesbienne revendiquée, militante LGBT, a essayé de négocier. Elle raconte que le préfet prétendait <q>protéger les manifestants</q> contre les réactions de la population en plein mois de ramadan. <i>«&nbsp;En réalité, la gay pride s’était aussi déroulée pendant le ramadan l’année précédente</i>, dit Sedef, <i>sans provoquer la moindre réaction. Le pouvoir se sert juste du peuple conservateur pour faire peur et interdire.&nbsp;»</i></p>
+
+{% set person = obsession.people[7] %}
+{{
+mini({
+number: 5,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Jusqu’à ces dernières années, Sedef et les militants LGBT trouvaient des relais dans la presse pour leurs combats. Mais ces derniers temps, de nombreux journaux ont été saisis ou menacés. Les journalistes qu’elle connaissait ont tous été empêchés de travailler, et elle lit de plus en plus de propos homophobes dans les journaux. Les libertés reculent, les conservatismes progressent, comme autant de pavés dans la vitrine turque où cohabitaient islam et laïcité depuis une quinzaine d’années, se partageant plus harmonieusement l’espace public.</p>
+
+<blockquote>
+<p>C’est difficile, pour un citoyen conscient, de vivre dans ce pays.</p>
+<footer>Sedef Cakmak, élue municipale, militante LGBT</footer>
+</blockquote>
+
+
+{% set person = obsession.people[10] %}
+<p>Au-delà de la religion, le contrôle social se renforce. Une enseignante célibataire raconte comment la police a débarqué chez elle un soir, parce que quelqu’un avait prévenu qu’elle recevait un homme. Pour la même raison, une photographe a failli se faire virer par son propriétaire&nbsp;: une bignole de l’immeuble d’en face l’avait dénoncée. Le voisinage surveille. Et le <i>muhtar</i>, le «&nbsp;gardien du quartier&nbsp;», qui représente la municipalité, rend théoriquement service à la population mais fait aussi remonter tout ce qui se passe dans les parages. <q>Les muhtars jouent un rôle clé</q>, grince <a href="#{{ person.href }}" data-mini="6">Sinan Logie</a>, architecte qui connaît Istanbul comme sa poche, organise des ballades urbaines, a écrit <a href="#note-2">un petit livre</a> passionnant et impertinent pour comprendre les transformations politiques et urbanistiques de sa ville. <q>Les muhtars fonctionnent comme une petite Stasi, contrôlent la population, sont souvent invités pour des réceptions au palais d’Erdogan.</q></p>
+
+{% set person = obsession.people[10] %}
+{{
+mini({
+number: 6,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Une partie de la population se sent comme en sursis, isolée, sous pression, comme pouvaient l’être les Berlinois de l’Ouest jusqu’en 1989. Cela génère aussi de l’énergie. Les nuits stambouliotes sont bouillantes. <q>Ce sont les derniers jours de Pompéi</q>, rigole un directeur de festival. Mais les «&nbsp;Turcs blancs&nbsp;», comme on appelle en Turquie l’élite occidentalisée, originaire des Balkans, angoissent pour leur avenir. De nombreuses minorités, des militants, partagent cette inquiétude face à la montée de l’autorité et des conservatismes. <q>C’est très difficile de continuer à lutter dans ce climat</q>, soupire Sedef, l’élue municipale. Elle cherche ses mots en anglais, les yeux perdus par-delà la vitrine du café, comme si elle essayait de saisir les sentiments qui la traversent. <q>C’est difficile, pour un citoyen conscient, de vivre dans ce pays.</q></p>
+
+<aside>
+<p><span>Le repli du pouvoir turc</span> s’est fait en deux temps</p>
+</aside>
+
+{% set person = obsession.people[8] %}
+<p>Enfant, <a href="#{{ person.href }}" data-mini="7">Melda Onur</a> l’a sillonné d’est en ouest ce pays, de petites villes en villages, quand son père militaire changeait de garnison. Puis elle a fait des études de sciences politiques avant de devenir journaliste économique, puis députée <a href="#note-3">CHP</a> de 2011 à 2015. <i>«&nbsp;Le gouvernement actuel</i>, dit-elle, <i>a fait de l’islam sunnite la religion officielle. Or, un gouvernement qui n’est pas laïc, qu’il soit chrétien ou musulman, ne peut être démocratique.&nbsp;»</i> Elle soupçonne l’AKP d’avoir toujours eu <q>un agenda caché</q> depuis son accession au pouvoir en 2002. <i>«&nbsp;Dans un premier temps</i>, dit-elle, <i>il a cherché à rassurer, tout en libérant les musulmans qui étaient opprimés en Turquie. Mais après cette libération, il ne laisse plus les autres vivre comme ils le souhaitent. Une véritable ingénierie conservatrice se met en place. Je n’ai jamais cru à cette démocratisation dont tout le monde parlait.&nbsp;»</i></p>
+
+{% set person = obsession.people[8] %}
+{{
+mini({
+number: 7,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Le repli du pouvoir en place semble en fait s’être joué en deux temps. En 2011, l’AKP a d’abord frôlé les 50&nbsp;% aux législatives, laissant les coudées franches à Erdogan, ne l’obligeant plus à chercher des alliés, à composer. Puis les événements de Gezi en 2013, suivis quelques mois plus tard de révélations en cascade sur le niveau de corruption dans son entourage, l’ont poussé à s’abriter derrière sa base électorale, populaire et musulmane. Héros dans les villages reculés d’Anatolie, il ne cesse depuis de conforter les milieux les plus conservateurs de son pays.</p>
+
+<blockquote>
+<p>Presque partout au Moyen-Orient, l’islam est incroyablement puissant, souvent violent, dominateur. C’est un danger qui nous menace ici. Et ce danger n’est pas un chaos, c’est un projet.</p>
+<footer>Gülistan Zeren, étudiante en sociologie</footer>
+</blockquote>
+
+{% set person = obsession.people[0] %}
+<p>Pour <a href="#{{ person.href }}" data-mini="8">Izzeddin Çalislar</a>, le pouvoir actuel est, <q>en termes de sciences politiques, comme un miroir de celui d’Atatürk</q>. Le fondateur de la République turque avait créé une nation jacobine dans laquelle s’imposait une laïcité à la française, qui ne se discutait pas, excluait l’islam de l’espace public. Difficile de trouver du travail dans les grandes villes, de vouloir étudier à l’université en portant le foulard. Un fonctionnaire ou un militaire pouvait être écarté si son épouse le portait. <q>Les musulmans étaient une majorité invisible</q>, résume Izzeddin, dont l’arrière grand-père dirigeait les armées d’Atatürk.</p>
+
+{% set person = obsession.people[0] %}
+{{
+mini({
+number: 8,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>L’AKP d’Erdogan a accédé au pouvoir sur la promesse d’apporter plus de liberté à tous. Ses premières années ont été de fait une libération pour les musulmans, une ouverture pour l’ensemble du pays. Tant qu’elle restait un horizon possible, l’intégration européenne constituait un garde-fou. L’émancipation des musulmans était soutenue par de nombreux laïcs, favorables aux libertés, y compris religieuses. Le pays était alors une vitrine. Une expérimentation nationale de la capacité à faire cohabiter islam et laïcité.</p>
+
+{% set person = obsession.people[1] %}
+<p>Le Président <a href="#{{ person.href }}" data-mini="9">Erdogan</a> utilise de plus en plus souvent une expression fétiche. Il parle des valeurs <q>nationales</q> de son pays. Découvrant par exemple que certains foyers étudiants sont mixtes, il estimait récemment que la société turque ne pouvait accepter cela, que c’était <q>contraire aux valeurs nationales</q>. Ces mots concernent toujours des affaires de morale ou de religion. <q>Il parle en fait des valeurs de l’islam sunnite</q>, résume Gülistan Zeren, l’étudiante en sociologie. Cela ne la rassure pas. <q>Presque partout au Moyen-Orient, l’islam est incroyablement puissant, souvent violent, dominateur. C’est un danger qui nous menace ici. Et ce danger n’est pas un chaos, c’est un projet.</q> Selon elle, le gouvernement pousse la Turquie <q>vers l’arabisme, l’islamisme</q>.</p>
+
+{% set person = obsession.people[1] %}
+{{
+mini({
+number: 9,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<aside>
+<p><span>Dans la culture aussi,</span> le conservatisme prend le pouvoir</p>
+</aside>
+
+{% set person = obsession.people[9] %}
+<p>Dans le quartier de Kadiköy, sur la rive asiatique d’Istanbul, <a href="#{{ person.href }}" data-mini="10">Evren Erbatur</a> a ses habitudes dans un petit salon de thé charmant, aux pâtisseries délicieuses. Elle est actrice, metteure en scène, danseuse, professeure de théâtre. Écrit sur le théâtre alternatif, constate que dans la culture aussi, le conservatisme prend le pouvoir. Les ballets traditionnels et les théâtres nationaux sont très soutenus, le reste délaissé. Elle aussi s’inquiète des dérives de son pays. <i>«&nbsp;Nous avons besoin d’un regard extérieur</i>, dit-elle. <i>Nous ne savons plus où nous allons, notre société se transforme vite et de façon parfois assez contradictoire.&nbsp;»</i></p>
+
+{% set person = obsession.people[9] %}
+{{
+mini({
+number: 10,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Elle craint la montée de ce qu’elle appelle le pouvoir de la haine&nbsp;: <q>Il y a vingt ans, les gens qui étaient au pouvoir haïssaient les femmes voilées. Aujourd’hui, l’AKP est au pouvoir et ce sont elles qui nous détestent.</q> C’est la théorie de la vengeance, répandue chez les «&nbsp;Turcs blancs&nbsp;».</p>
+
+<p>Mais les musulmans eux-mêmes ne sont pas uniformes, ni statiques sociologiquement. Ils évoluent. Evren le reconnaît. <q>C’est une étrange situation car en même temps, le pays se développe. On voit de plus en plus de femmes voilées habillées très chic, au volant de 4x4.</q> Les publicités montrent aussi des femmes voilées souriantes, au décolleté parfois plongeant, adossées à des voitures luxueuses. La politique turque est ultra-libérale, la mondialisation a permis au pouvoir en place de développer le pays, de le stabiliser économiquement, et de faire émerger une bourgeoisie musulmane, qui a accès au crédit, s’endette, consomme. Les modes de vie changent pour elle aussi. Sinan Logie, l’architecte, parle de <q>la nouvelle femme musulmane</q> qui travaille, divorce parfois, aspire elle aussi à plus de liberté, ne se laissera pas forcément enfermer par l’islam.</p>
+
+<aside>
+<p><span>Comme Atatürk, </span> Erdogan prend des poses de patriarche</p>
+</aside> 
+
+<p>Mais la religion n’est pas le seul ressort des replis turcs. <q>Je pense qu’il y a une montée d’un conservatisme culturel plus que de l’islamisme</q>, avance Ekim Oztürk, qui a grandi en France, à La Courneuve, avant de s’installer à Istanbul où il travaille dans la culture. <q>C’est une société très verticale, avec des hiérarchies informelles qui codifient les rapports sociaux dans la famille, le travail, la rue. Quelque chose de très patriarcal que la religion peut alimenter, mais qui existe au-delà d’elle.</q></p>
+
+<p>Atatürk se faisait appeler «&nbsp;le père de la Nation&nbsp;». Erdogan, à son tour, prend des poses de patriarche. Commente la façon de vivre de ses citoyens, les sermonne, leur fait la morale. Recommande aux Turques de faire <q>au moins trois enfants</q>. Ce rôle du père convient parfaitement aux dictateurs dans un pays où l’autorité paternelle ne se discute pas… Contester la politique du Président, c’est comme contester l’autorité de son propre père. En Turquie, ça ne se fait pas.</p>
+
+<p><q>Moi, je n’ai qu’un seul père, je n’en veux pas en politique</q>, évacue Sedef, l’élue et militante LGBT. Elle constate que la plupart des élus sont <q>des vieux messieurs</q>, ce qui n’aide pas à renouveler, à faire reculer le patriarcat. Comme Evren, Melda et Buket ou Gülistan, Sedef voit aussi que la religion et le patriarcat pèsent surtout sur les femmes. Font reculer leurs droits, les menacent dans leur vie privée comme dans l’espace public. Avortement, pilule, césarienne, législation contre le viol, travail&nbsp;: tout semble remis en cause, lentement, insidieusement. C’est l’objet du prochain épisode.</p>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Fatwa",
+caption: "Avis rendu par un spécialiste de l’islam sur une question particulière, pour préciser une jurisprudence que le Coran n’éclaire pas."
+})
+}}
+
+{{
+note({
+number: 2,
+title: "Istanbul 2023",
+caption: "«&nbsp;Istanbul 2023&nbsp;», le livre de Sinan Logie et Yoann Morvan, est sorti en France aux éditions B2, collection Territoires, en octobre 2014."
+})
+}}
+
+{{
+note({
+number: 3,
+title: "Le CHP",
+caption: "Le Parti républicain du peuple est un parti laïc créé par Mustafa Kemal, dit Atatürk, fondateur de la République de Turquie. Parti unique de 1923 à 1946, puis accédant au pouvoir par alternance, le CHP est aujourd’hui la principale force d’opposition."
+})
+}}
