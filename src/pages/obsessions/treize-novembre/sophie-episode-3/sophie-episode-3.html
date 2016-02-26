@@ -1,0 +1,87 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[5] %}
+<p><a href="#{{ person.href }}" data-mini="1"><span class="lettrine">S</span>ophie</a> est rentrée en contact avec un groupe de survivants sur Facebook. Elle voulait retrouver d’autres personnes qui, comme elle, étaient en terrasse au café du Bataclan le soir des attentats. Elle cherchait surtout l’homme qui soutenait un blessé et dont elle a croisé le regard quand elle a pu s’enfuir. <q>C’était le moment de ma libération, mais aussi un moment de lâcheté</q>, m’explique-t-elle, sévère avec elle-même. Je ne dis rien. Elle ajoute&nbsp;: <q>J’ai aussi besoin de réparer ce moment-là.</q> Elle n’a pas trouvé trace de cet homme dans ce réseau.</p>
+
+{{
+mini({
+number: 1,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Pour pouvoir intégrer le <a href="#" data-mini="2">groupe</a> en décembre, il a fallu qu’elle prouve qu’elle était, elle aussi, une victime des terroristes. L’initiative lancée sur Facebook est alors confidentielle et préserve un entre-soi protecteur. Sophie a fait le récit de sa soirée du 13&nbsp;Novembre où elle était au café du Bataclan quand les jihadistes ont surgi avant de tuer 90&nbsp;personnes (<a href="/obsessions/treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille">lire l’épisode 8</a>). Elle a été acceptée dans le groupe.</p>
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.lifeforparis.org" />
+<span class="image"><img class="responsive" src="img/life-for-paris.jpg" alt="" /></span>
+<p class="title">Life for Paris</p>
+<p class="subtitle">Le site de Life for Paris, groupe Facebook devenu association d’entraide, de retrouvailles et de partage pour tous les concernés du 13&nbsp;novembre&nbsp;: victimes, familles de victimes et aidants. À consulter ici.</p>
+</a>
+</aside>
+
+<blockquote>
+<p>J’ai eu l’impression de rentrer dans une communauté, comme s’ils me disaient&nbsp;: <q>Tu es des nôtres.</q></p>
+<footer>Sophie</footer>
+</blockquote>
+
+<p>Elle en a rencontré quelques membres dans un café près d’Oberkampf. C’était le jour des commémorations des attentats de janvier&nbsp;2015. Johnny Hallyday avait chanté place de la République. Ils venaient d’assister à la cérémonie. Sophie, elle, n’avait eu aucune envie d’y aller. Elle a trouvé <q>des gens un peu vidés, pas lugubres, souriants</q>. <q>J’ai eu l’impression de rentrer dans une communauté, comme s’ils me disaient&nbsp;: <q>Tu es des nôtres.</q></q></p>
+
+<p>Cette fois-là, elle ne s’est pas attardée. Elle les a quittés pour aller au Palais de Tokyo avec ses enfants, comme elle l’avait prévu, heureuse d’avoir une activité anodine. Sauf que sa visite n’avait rien de normal&nbsp;: <q>En permanence, je me disais&nbsp;: <q>S’il y a une attaque, on peut se cacher là ou là.</q></q> Elle a cette élégance d’en rire pour mettre de la distance et rendre son récit plus léger –&nbsp;<q>Le nombre de planques qu’il y a là-bas&nbsp;!</q>&nbsp;– mais je sais que ces impulsions sont sérieuses et malheureusement irrépressibles. J’ai le même genre de réflexes. Je lui demande si elle pense aux dates. Cela pourrait être une question incongrue mais elle a immédiatement compris&nbsp;: oui, me dit-elle. Elle préfère les jours pairs. Les attentats parisiens se sont tous passés des jours impairs. Chacun, chacune, on se concocte des rituels intimes, inavouables, on s’invente de nouvelles superstitions.</p>
+
+<figure>
+<img src="img/sophie-et-les-survivants-1.jpg" alt="" />
+<figcaption><span>Sophie à quelques pas du Bataclan <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Au tout début, elle se sentait <q>impressionnée</q> et pas forcément <q>légitime</q> dans ce groupe. Aujourd’hui, elle apprécie son accueil <q>bienveillant</q> et <q>sans jugement</q>. C’est un endroit où elle sait qu’elle peut parler. Son compagnon pense que cela risque de la maintenir dans le souvenir, figée et prisonnière de cette soirée d’attentat. <i>«&nbsp;Dans le groupe Life for Paris, ils se considèrent comme une famille, ils se le disent d’ailleurs</i>, remarque-t-elle. <i>Moi, j’aimerais que cet événement prenne le moins de place possible dans ma vie.&nbsp;»</i></p>
+
+<p>La semaine dernière, des membres du groupe ont témoigné publiquement dans les médias et devant la <a href="#note-3">commission d’enquête de l’Assemblée nationale</a>. Une victime du Bataclan a expliqué devant les députés qu’elle voulait <q>aider les proches, les rescapés, les impliqués à avoir accès aux bonnes informations</q>. Certains ne se font pas encore aider car ils ont «&nbsp;le complexe du survivant&nbsp;», ils pensent que cela ira ou que ce n’est pas légitime de demander de l’aide, et puis <q>ils se réveillent</q> et ont des vraies difficultés au travail, dans leur vie. <q>Cela fait partie de notre reconstruction d’aider les autres, d’aider ceux qui sont blessés à vie</q>, ajoute-t-elle.</p>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Une commission sur le terrorisme",
+caption: "L’Assemblée nationale a ouvert une commission d’enquête relative aux «&nbsp;moyens mis en œuvre par l’État pour lutter contre le terrorisme depuis le 7&nbsp;janvier 2015&nbsp;». Elle est présidée par le député LR Georges Fenech, son rapporteur est le PS Sébastien Pietrasanta."
+})
+}}
+
+ <aside>
+<p><span>Ils ne deviendront pas amis</span> mais elle a besoin d’eux</p>
+</aside>
+
+<p>Sophie est en pleine réflexion&nbsp;: elle est une rescapée des attentats mais ne veut pas se définir uniquement comme une victime. Elle n’a d’ailleurs pas fait les démarches pour se faire indemniser.</p>
+
+<p>Un soir, elle est allée se présenter au barman d’un café du quartier où elle va souvent et qui a rejoint le groupe Life for Paris, comme un demi-millier de personnes&nbsp;: victimes, parents de disparus, riverains et «&nbsp;aidants&nbsp;» comme ils les appellent. <q>J’ai hésité. Est-ce que je me signale à lui&nbsp;? Est-ce que je continue à aller au café incognito&nbsp;?</q> Elle est allée le voir pour s’identifier. Mais du coup, remarque-t-elle, elle s’est présentée comme une victime. Est-ce une identité&nbsp;? <q>Finalement, je regrette de l’avoir fait, mais je l’ai fait quand même.</q></p>
+
+<p>Les membres de Life for Paris se retrouvent pour parler, pour entretenir le <q>mémorial</q> devant le Bataclan, pour se soutenir. Elle me montre leurs échanges sur Facebook. L’un d’eux dit qu’il ne se sent pas bien, qu’il sera près du Bataclan vers 13&nbsp;heures. En jetant cette bouteille à la mer 2.0, il espère qu’il aura de la compagnie&nbsp;; Sophie n’ira pas. Elle ne répond pas à toutes les sollicitations. Quand elle a revu des membres du groupe, elle a compris qu’ils n’allaient pas devenir amis, mais en même temps, elle sent qu’elle a besoin d’eux. Avec eux, toutes les émotions peuvent s’exprimer, son corps peut trembler. Elle n’entend pas des phrases comme <q>ça fait trois mois, tu en es encore là…</q>, ou celle d’un collègue&nbsp;: <q>Ça va, t’as pas été blessée&nbsp;!</q></p>
+
+<p>Pendant les vacances de Noël, elle a quitté Paris, le XIe, le Bataclan. Je lui avais confié que l’éloignement me soulageait. Elle me regarde et me dit&nbsp;: <q>Moi, ça a été tout le contraire. L’angoisse totale.</q> En dehors de la capitale, elle n’a pas supporté <q>l’absence de stigmates</q>. Elle a vu avec douleur <q>la vie normale</q> se dérouler sous ses yeux. Elle avait envie de porter un brassard noir. La nuit, les cauchemars sont venus&nbsp;: <q>Pendant tout le séjour hors de Paris, j’ai été traquée la nuit. Le terroriste avait survécu, me pourchassait en me disant&nbsp;: <q>On t’a oubliée.</q></q></p>
+
+ 
+<blockquote>
+<p>Je retrouve les gestes du quotidien, je n’ai presque plus peur quand les enfants partent à l’école.</q></p>
+<footer>Sophie</footer>
+</blockquote>
+
+<p>Elle a été rassurée de rentrer chez elle, de retrouver le décor familier de sa vie, ce quartier qui porte encore les traces de la violence de cette nuit-là&nbsp;: des impacts de balles, du sparadrap pour cacher les trous des tirs sur les vitres, la banderole couleur du deuil devant la salle de concert…</p>
+
+<p>En rentrant, elle s’est aussi rendu compte que <q>tout ça prenait trop de place</q>. <q>Je reprends ma vie, ma vie d’avant. Je retrouve les gestes du quotidien, je n’ai presque plus peur quand les enfants partent à l’école.</q> Sophie est également ressortie seule, le soir, laissant ses enfants, selon l’exact scénario du soir du 13&nbsp;Novembre&nbsp;: <q>C’était l’une des dernières étapes, c’était la semaine dernière. J’ai refait tout ce que j’avais déjà fait avant.</q></p>
+
+<p>Et le reste&nbsp;? Elle qui ne vote plus depuis des années, doit-elle retrouver ses habits de citoyenne&nbsp;? Elle a regardé de loin les débats politiques (<a href="/obsessions/treize-novembre/l-empreinte-de-la-peur">lire l’épisode 3</a>), assez convaincue que la déchéance de nationalité ne sert à rien. À l’Assemblée nationale, devant la commission, le patron de La Belle Équipe où les terroristes ont fait vingt morts, qui a perdu la mère de sa fille, des amis et employés, a évoqué la déchéance en soupirant&nbsp;: <q>C’est comme si on avait un problème de moteur et qu’on s’occupait de la couleur des banquettes.</q></p>
+
+<figure>
+<img src="img/sophie-et-les-survivants-2.jpg" alt="" />
+<figcaption><span>Une vitrine parisienne <span class="credits">Photo Charlotte Rotman/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Sophie a une question qui tourbillonne dans sa tête&nbsp;: <q>Comment en est-on arrivés là&nbsp;?</q> Elle n’est pas la seule. Devant les députés, Georges Salines, dont la fille Lola a été tuée au Bataclan, a eu la même interrogation&nbsp;: <q>Notre société est malade, il ne s’agit pas d’excuser ni de renverser la culpabilité, mais comment combler les fossés d’incompréhension&nbsp;?</q> Aurélia Gilbert, rescapée du Bataclan qui a dû, pour s’échapper, traverser <q>la fosse terrible</q>, l’a dit elle aussi&nbsp;: elle se demande souvent, à propos du terroriste, <q>comment, où, la France avait perdu ce garçon qu’[elle] avai[t] regardé dans les yeux&nbsp;?</q>.
+  
+<p>Ces dernières semaines, Sophie a pensé à se faire faire un tatouage. Une étoile, un papillon&nbsp;? En tout cas, un dessin en lien avec les attentats. Comme s’il fallait absolument marquer sa chair, porter des traces visibles. Puis elle s’est rendu compte que beaucoup de rescapés s’étaient fait tatouer après le 13&nbsp;Novembre. Cela l’a troublée. Elle ne s’est pas encore décidée.</p>

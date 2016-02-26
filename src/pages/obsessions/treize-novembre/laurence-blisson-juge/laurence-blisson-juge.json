@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "laurence-blisson-juge",
+
+	"number": 27,
+	"date": "2016-02-23T10:00+01:00",
+
+	"title": "La juge écarlate",
+	"intro": "Colère et tenace, Laurence Blisson, secrétaire générale du Syndicat de la magistrature, bataille contre les lois sécuritaires.",
+	"subtitle": "Colère et tenace, Laurence Blisson, du Syndicat de la magistrature, bataille contre les lois sécuritaires.",
+	"lead": "Laurence Blisson est une petite femme drôle. C’est frappant quand on la rencontre, dans les locaux bordéliques du Syndicat de la magistrature (SM), où une bande de jeunes (mais pas que) laissent vieillir des journaux, des projets de loi.",
+
+	"tags": ["13 Novembre", "justice", "terrorisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/vincent-tribunal-administratif",
+		"next":  "episode:treize-novembre/sophie-episode-3",
+		"last":  "episode:treize-novembre/sophie-episode-3"
+	}
+}

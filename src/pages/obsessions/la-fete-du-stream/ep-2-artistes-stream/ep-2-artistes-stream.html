@@ -1,0 +1,115 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+<p><span class="lettrine">E</span>n lisant des ouvrages sur l’économie de la musique au XXe siècle, on se rend vite compte qu’on n’y parlait que rarement de tensions entre les artistes et leurs maisons de disques. Il y avait bien sûr des batailles et des désaccords, des arnaqueurs et des arnaqués, mais les oppositions se réglaient en justice, pas dans les médias.</p>
+
+<p>L’ambiance a changé depuis que le <a href="#note-1">streaming</a> s’installe comme nouveau modèle de consommation de la musique. Une tension s’est installée, l’équilibre s’est rompu.</p>
+
+<p>Cet équilibre a longtemps été facilité par les revenus relativement importants que générait la vente de disques en format vinyle, cassette puis compact disc (<a href="/obsessions/la-fete-du-stream/ep-1-du-cd-au-streaming/">lire l’épisode 1</a>). La grande majorité des artistes n’ont jamais vécu de la musique, quelle que soit l’époque que l’on observe, mais ceux qui ont eu la chance d’en faire un métier ont longtemps –&nbsp;disons, à partir des années&nbsp;60&nbsp;– pu compter sur les ventes d’un album et les revenus d’une tournée tous les trois ans. Les maisons de disques en vivaient aussi, certaines à l’économie, d’autres très confortablement. Quelques-unes pouvaient même se permettre d’envoyer des journalistes à New York en Concorde sans se poser plus de questions.</p>
+
+<aside>
+<p><span>Le streaming,</span> des maths obscures</p>
+</aside>
+
+<p>C’était une autre époque, où l’on comptait moins chaque centime parce que la musique, lorsqu’elle générait un bénéfice, gagnait assez d’argent pour que tout un écosystème en profite sans se demander s’il pourrait en recevoir davantage.</p>
+
+<p>Ce moment privilégié, qui a atteint son apogée avec la bulle du CD dans les années&nbsp;90, s’est effondré dans la décennie suivante. Dans le grand chambardement des années&nbsp;2000, se sont mêlées libération des échanges en ligne, nouvelles habitudes de consommation puis naissance d’une nouvelle façon d’accéder à la musique à volonté –&nbsp;le streaming, donc. Tout la logique installée au XXe siècle a valdingué au passage.</p>
+
+<p>Avant internet, les artistes recevaient une part des ventes de leurs disques. Il y avait des subtilités dans le calcul de cette part (les <a href="#note-2">abattements</a> notamment, nous en reparlerons sur <i>Les Jours</i>), mais les mathématiques étaient compréhensibles. L’assiette qui servait de base aux calculs était connue et fiable. Dans le monde du streaming, elle est devenue très impalpable.</p>
+
+<p>Voici le chemin de l’argent, les subtilités mises de côté&nbsp;: une <a href="#note-3">plateforme</a> verse à chaque label une part de ses revenus (publicité et abonnements) au prorata des écoutes réalisées par les artistes du label pendant un mois. Puis le label reverse à chacun de ses interprètes une part de ces revenus selon le nombre d’écoutes et un taux négocié par contrat.</p>
+
+<blockquote>
+<p>La même chanson d’un même artiste, écoutée sur YouTube ou sur Spotify, génère un écart de revenus de un à huit, à l’extrême de un à vingt.</p>
+<footer>Stéphane Le Tavernier, PDG de Sony Music France</footer>
+</blockquote>
+
+{% set person = obsession.people[5] %}
+<p>Dans ce cheminement, les incertitudes sont trop nombreuses et c’est ce qui génère aujourd’hui de grands doutes chez les musiciens&nbsp;: les revenus de la plateforme fluctuent&nbsp;; puis la répartition des revenus des plateformes par label se fait selon une méthode qu’on peut questionner&nbsp;; comme on peut interroger la répartition aux artistes par le label, qui ne fournit pas toujours un décompte écoute par écoute. <i>«&nbsp;La même chanson d’un même artiste, écoutée sur YouTube ou sur Spotify, génère un écart de revenus de un à huit, à l’extrême de un à vingt</i>, nous a dit pendant notre enquête Stéphane Le Tavernier, le PDG de Sony Music France et président du <a href="#{{ person.href }}" data-mini="1">Snep</a>. <i>Les artistes nous demandent où ils dorment dans ce chantier.&nbsp;»</i></p>
+
+<figure>
+<img src="img/stream-change-artistes-1.jpg" alt="" />
+<figcaption><span>Les tournées sont devenues une source de revenus plus importante qu’à l’époque du CD <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Au bout des calculs, complexes, un artiste qui savait pourquoi il gagnait 100&nbsp;euros dans le monde du CD ou du téléchargement ne sait effectivement pas vraiment pourquoi ni comment il a gagné 100&nbsp;euros dans le monde du streaming. Pour le même prix, il a pu être écouté des milliers ou des dizaines de milliers de fois d’un mois sur l’autre. Et cette incompréhension est encore plus grande s’il calcule son revenu par écoute, car un clic n’a pas le même sens qu’un achat en magasin&nbsp;: il n’est qu’un clic, un «&nbsp;pour voir&nbsp;», un engagement faible envers la musique.</p>
+
+<p>L’artiste vit ainsi dans un monde dilué où le disque enregistré n’est plus qu’un point d’étape entre la découverte de son œuvre et de multiples rencontres avec le public, qu’il faut construire pour espérer en tirer un peu d’argent à chaque fois.</p>
+
+<aside>
+<p><span>À la recherche</span> de nouvelles sources de revenus</p>
+</aside>
+
+{% set person = obsession.people[6] %}
+<p>Pour un artiste, il ne s’agit donc plus seulement d’écrire des chansons, de les fixer sur un disque qui sera vendu et permettra –&nbsp;ou pas&nbsp;– de faire le suivant. Si cette œuvre doit exister sur <a href="#{{ person.href }}" data-mini="2">Spotify</a> ou {% set person = obsession.people[7] %} <a href="#{{ person.href }}" data-mini="3">YouTube</a>, ce n’est pas pour en attendre un revenu aujourd’hui&nbsp;; seuls les labels les plus internationaux gagnent de l’argent à ce jeu, en profitant de la rente de leurs vieux classiques amortis, en optimisant la diffusion des nouveautés et en négociant des avantages commerciaux avec les plateformes. De l’autre côté du spectre, pour la grande majorité des auteurs, compositeurs et interprètes, le streaming ne sert qu’à présenter sa musique à la foule.</p>
+
+<p>Leurs revenus, ils les chercheront plutôt dans les concerts où ils vendront aussi des T-shirts (et encore, si leur label ne capte pas une part de ces ventes…), puis dans le placement de leur musique dans un film, une série, une émission de télévision, un jeu vidéo… S’il est culturellement compatible, un artiste pourra aussi accepter les propositions de certaines marques et participer à des soirées privées, habiller une vidéo ou enregistrer une session pour une marque de boisson qui fait des trous dans le ventre, où le logo du produit sera plus ou moins présent. Il pourra aussi, plus classiquement, porter des habits de telle marque ou utiliser tel casque audio sans s’en cacher.</p>
+
+<aside>
+<p><span>Un monde musical</span> à rééquilibrer</p>
+</aside>
+
+<p>Ceux qui ne veulent pas se plier à ce petit cirque commercial ont aujourd’hui deux solutions&nbsp;: vivre uniquement de la musique enregistrée et donc s’appeler Adele (qui a vendu plus de 15&nbsp;millions d’exemplaires de son dernier album, <i>25</i>), ou exister dans une niche sonore qui permet de vendre encore des objets physiques –&nbsp;CD ou vinyles&nbsp;– en utilisant le streaming comme un simple outil de communication. Entre ces deux extrêmes, la zone grise des artistes qui vivaient tant bien que mal de leur musique est en train de disparaître.</p>
+
+<p>Si un rééquilibrage n’est pas mené en faveur des plus petits artistes et de la création musicale –&nbsp;qui est en très grande majorité l’affaire d’artistes qui resteront inconnus&nbsp;–, c’est ce monde musical qui se dessine à court terme, où le principal canal de distribution de la musique ne fera pas vivre la majeure partie des musiciens.</p>
+
+
+{{
+	note({
+		number:  1,
+		title:   "Streaming",
+		caption: "La diffusion de contenus en flux continu sur internet. Cette diffusion peut être vidéo ou sonore."
+	})
+}}
+
+{{
+	note({
+		number:  2,
+		title:   "Abattement",
+		caption: "Une clause du contrat qui lie un artiste à un producteur, qui prévoit que sa rémunération sera amputée si un risque est pris pour favoriser le succès d’un disque."
+	})
+}}
+
+{{
+	note({
+		number:  3,
+		title:   "Plateforme",
+		caption: "Un site qui assure la distribution de millions de titres musicaux et propose des outils d’éditorialisation et de recommandation."
+	})
+}}
+
+{% set person = obsession.people[5] %}
+{{
+	mini({
+		number:   1,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[6] %}
+{{
+	mini({
+		number:   2,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[7] %}
+{{
+	mini({
+		number:   3,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}

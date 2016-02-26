@@ -7,7 +7,7 @@
 	"name":  "Treize Novembre",
 	"title": "Treize Novembre",
 	"subtitle": "Récits de la France d’après.",
-	"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, « Les Jours » racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>",
+	"desc": "<p>Après les détonations et les morts, après les larmes et les drapeaux, «&nbsp;Les Jours&nbsp;» racontent les lendemains d’un pays désorienté, les effets intimes et politiques des attentats de novembre. Un récit choral où s’entrecroisent au quotidien riverains et témoins en reconstruction, musulmans inquiets, députés en état d’urgence, assignés à résidence.</p>",
 
 	"episodes": [
 		"episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
@@ -34,7 +34,10 @@
 		"episode:treize-novembre/urvoas-visite-la-justice-en-indigence",
 		"episode:treize-novembre/la-vie-suspendue-de-brahim",
 		"episode:treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois",
-		"episode:treize-novembre/sophie-episode-2"
+		"episode:treize-novembre/sophie-episode-2",
+		"episode:treize-novembre/vincent-tribunal-administratif",
+		"episode:treize-novembre/laurence-blisson-juge",
+		"episode:treize-novembre/sophie-episode-3"
 
 
 	],
@@ -110,6 +113,15 @@
 			"title":    "Brahim J.",
 			"subtitle": "37 ans, assigné à résidence à Échirolles (Isère)",
 			"desc": "Brahim vit depuis toujours à Échirolles, en banlieue de Grenoble. Dans sa jeunesse, ses «&nbsp;conneries&nbsp;» (du trafic de stupéfiants) l'ont conduit en prison, une dizaine d'années au total. Le ministère de l'Intérieur, qui le trouve «&nbsp;radicalisé&nbsp;», l'a perquisitionné puis assigné à résidence. Ce maçon intérimaire et père de deux petites filles se définit comme «&nbsp;musulman pratiquant&nbsp;», «&nbsp;de gauche&nbsp;». Brahim pointe trois fois par jour au commissariat de Grenoble. Il condamne sans ambiguïté les attentats de novembre et conteste le traitement qui lui est réservé.",
+			"minor": true
+		},
+		{
+			"href":     "laurence-blisson",
+			"img":      "img/laurence-blisson.jpg",
+			"alt":      "",
+			"title":    "Laurence Blisson",
+			"subtitle": "31&nbsp;ans, magistrate remontée",
+			"desc": "Juge d’application des peines à Meaux (Seine-et-Marne), Laurence Blisson est secrétaire générale du Syndicat de la magistrature (SM, classé à gauche). Depuis 2014, cette magistrate de 31&nbsp;ans fait partie des principaux opposants aux mesures sécuritaires adoptées par la majorité socialiste &nbsp;: la loi antiterroriste de Bernard Cazeneuve (novembre 2014), la loi renseignement concoctée par Jean-Jacques Urvoas (juillet 2015) et l’état d’urgence. Elle fait du nouveau projet de loi antiterroriste, discuté en mars 2016 au Parlement, sa prochaine bataille.",
 			"minor": true
 		}
 	]
