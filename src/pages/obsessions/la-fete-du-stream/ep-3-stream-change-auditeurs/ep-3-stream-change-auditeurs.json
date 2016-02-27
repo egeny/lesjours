@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "ep-3-stream-change-auditeurs",
+
+	"number": 3,
+	"date": "2016-02-26T10:00+01:00",
+
+	"title": "Le marché des oreilles qui traînent",
+	"intro": "L’enjeu des plateformes de streaming est de toucher la majorité des auditeurs, ceux qui consomment peu de musique.",
+	"subtitle": "L’enjeu des plateformes de streaming est de toucher la majorité des auditeurs, ceux qui consomment peu de musique.",
+	"lead": "Un partage des eaux organise le monde des auditeurs depuis à peu près toujours. D’un côté, une minorité –&nbsp;de 10 à 20&nbsp;%&nbsp;– qui dépense chaque année plusieurs centaines d’euros pour la musique (disques, abonnements, concerts…)",
+
+	"tags": ["Musique", "Streaming"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sophian-fanen" },
+			{ "Illustration et photo": ["author:karen-assayag", "author:sebastien-calvet"] }
+		],
+
+		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"prev":  "episode:la-fete-du-stream/ep-2-artistes-stream",
+		"last":  "episode:la-fete-du-stream/ep-3-stream-change-auditeurs"
+
+			}
+}

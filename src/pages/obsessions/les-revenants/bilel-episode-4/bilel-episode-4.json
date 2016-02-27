@@ -1,0 +1,28 @@
+{
+	"template": "episode",
+
+	"href": "bilel-episode-4",
+
+	"img": "img/header.gif",
+
+	"number": 4,
+	"date": "2016-02-28T10:00+01:00",
+
+	"title": "La vie dans l’État islamique",
+	"intro": "Bilel décrit le quotidien au sein de l’EI, entre têtes coupées, camps d’entraînement et minibus remplis de nouvelles recrues.",
+	"subtitle": "Bilel décrit le quotidien au sein de l’EI, entre têtes coupées, camps d’entraînement et minibus remplis de nouvelles recrues.",
+	"lead":  "Au sein de l’État islamique, Bilel habitait une maison dans un petit village près d’Al-Bab, la plus grande ville du gouvernorat d’Alep, sous contrôle de l’EI.",
+
+	"tags": ["Jihadisme", "13 novembre", "État islamique"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:david-thomson" },
+			{ "drawing": "author:matthieu-meron" }
+		],
+
+		"first": "episode:les-revenants/bilel-episode-1",
+		"prev": "episode:les-revenants/bilel-episode-3",
+		"last": "episode:les-revenants/bilel-episode-4"
+	}
+}

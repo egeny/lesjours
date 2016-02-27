@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "fusil-barbus",
+
+	"number": 29,
+	"date": "2016-02-26T10:00+01:00",
+
+	"title": "Des barbus et une mitraillette",
+	"intro": "Ils avaient repéré un fusil d’assaut et des hommes au comportement intrigant. Ils s’en sont inquiétés après les attentats.",
+	"subtitle": "Ils avaient repéré un fusil d’assaut et des hommes intrigants.  Ils s’en sont inquiétés après les attentats.",
+	"lead": "Au 36 quai des Orfèvres, d’habitude, la salle Bertillon sert aux réunions. Mais le 13&nbsp;novembre et les jours suivants, cette ancienne chapelle s’est transformée en salle de déposition taille XXL",
+
+	"tags": ["13 Novembre", "terrorisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": "author:julien-muguet" }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/sophie-episode-3",
+		"last":  "episode:treize-novembre/fusil-barbus"
+	}
+}
