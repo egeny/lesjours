@@ -8,9 +8,10 @@
 
 	"title": "Le meilleur pour éviter le pire",
 	"intro": "Dénigrée, désacralisée, la politique produit toujours autant de sidération et de passion. Alors autant s’en (ré)emparer.",
-	"lead":  "Voilà une colère rentrée et partagée en France par des millions de personnes. La politique ? Insupportable... Aucun résultat ! La politique ? Trahisons et mensonges perpétuels de personnages coincés par la rente des mandats et les logiques des partis. Du cynisme, des privilèges anachroniques. ",
+	"subtitle": "Dénigrée, désacralisée, la politique produit toujours autant de sidération et de passion. Alors autant s’en (ré)emparer.",
+	"lead":  "Voilà une colère rentrée et partagée en France par des millions de personnes. La politique&nbsp;? Insupportable… Aucun résultat&nbsp;! La politique&nbsp;? Trahisons et mensonges perpétuels de personnages coincés par la rente des mandats et les logiques des partis. Du cynisme, des privilèges anachroniques.",
 
-	"tags": ["Politique", "", "", ""],
+	"tags": ["Politique"],
 
 	"rel": {
 		"authors": [
