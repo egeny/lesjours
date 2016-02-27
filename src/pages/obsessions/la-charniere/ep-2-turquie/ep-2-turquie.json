@@ -19,7 +19,11 @@
 			{ "photo": "author:christophe-petit-tesson" }
 		],
 
-		"first": "episode:la-charniere/marmite-turque"
+		"first": "episode:la-charniere/marmite-turque",
+		"prev": "episode:la-charniere/marmite-turque",
+		"last": "episode:la-charniere/marmite-turque"
+
+
 
 			}
 }
