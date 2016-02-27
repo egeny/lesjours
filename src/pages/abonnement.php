@@ -214,7 +214,8 @@
 			} else if ($meta['payment'] == 'bank') {
 				$payload = array(
 					'started'    => true,
-					'creditor'   => array('reference' => 'lesjours'),
+					'reference'  => date('Y-m-d').'-'.$user_id, // Set a reference containing the user_id so we can retrieve it in the notification
+					'creditor'   => array('reference' => SLIMPAY_APP_NAME),
 					'subscriber' => array('reference' => $user_id),
 					'items' => array(
 						array(
@@ -244,7 +245,8 @@
 							'type' => 'recurrentDirectDebit',
 							'recurrentDirectDebit' => array(
 								'amount'    => $PLANS[$meta['plan']]['price'],
-								'frequency' => $PLANS[$meta['plan']]['duration'] == '1 month' ? 'monthly' : 'yearly'
+								'frequency' => $PLANS[$meta['plan']]['duration'] == '1 month' ? 'monthly' : 'yearly',
+								'dateFrom'  => date('Y-m-d')
 							)
 						)
 					)
