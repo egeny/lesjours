@@ -44,81 +44,104 @@
 	// Receiving a notification from the payment service
 	if (isset($_GET['notification'])) {
 		// XXX: logging for debug
-		file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n"), FILE_APPEND);
+		file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n").print_r(file_get_contents('php://input'), true).print_r("\n"), FILE_APPEND);
 
-		unset($_GET['notification']); // Exclude for the hash computation
-		$hash = signature($_GET);
+		if ($_GET['notification'] == 'bank') {
+			$payload = json_decode(file_get_contents('php://input'));
+			$user_id = preg_replace('/(?:\d+-){3}/', '', $payload->reference);
+			$error   = $payload->state != 'close.completed';
+		} // end of if ($_GET['notification'] == 'bank')
 
-		if ($hash == $_GET['HASH']) {
+		if ($_GET['notification'] == 'card') {
+			$payload = $_GET;
 			$user_id = $_GET['CLIENTIDENT'];
-			$date    = date('Y-m-d H:i:s');
-			$plan    = get_user_meta($user_id, 'plan')[0];
+			$error   = $_GET['EXECCODE'] != '0000';
 
-			// Add a transaction trace (debugging purpose, should NOT be unique)
-			$transaction = add_user_meta($user_id, 'transactions', json_encode(array(
-				'date' => $date,
-				'_get' => $_GET
-			)));
+			// Check if the hash is valid
+			unset($_GET['notification']); // Exclude for the hash computation
+			if ($_GET['HASH'] != signature($_GET)) { die(); } // Stop right now if the hash doesn't match
+		} // end of if ($_GET['notification'] == 'card')
 
-			if ($_GET['EXECCODE'] == '0000') {
-				// Retrieve the global invoice number and increment it
-				$number = intval(get_option('invoice_number', 0)) + 1;
+		// Add a transaction trace (debugging purpose, should NOT be unique)
+		$transaction = add_user_meta($user_id, 'transactions', json_encode(array(
+			'date'    => date('Y-m-d H:i:s'),
+			'payload' => $payload
+		)));
 
-				// Add an invoice (warning: should NOT be unique, obviously)
-				add_user_meta($user_id, 'invoices', json_encode(array(
-					'date'        => $date,
-					'number'      => $number,
-					'plan'        => $plan,
-					'price'       => $PLANS[$plan]['price'],
-					'transaction' => $transaction
-				)));
+		// Stop now if the payment service returned an error
+		if ($error) { die(); }
 
-				// Don't forget to update the invoice_number
-				update_option('invoice_number', $number);
+		// Retrieve additional data
+		$date   = date('Y-m-d H:i:s');
+		$data   = get_userdata($user_id);
+		$meta   = get_all_user_meta($user_id);
+		$plan   = $PLANS[$meta['plan']];
 
-				// Update the user's account
-				update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
-				update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$PLANS[$plan]['duration'])));
-				update_user_meta($user_id, 'subscription', $date);
+		// Retrieve the global invoice number and increment it
+		$number = intval(get_option('invoice_number', 0)) + 1;
 
-				// Prepare an email and send it
-				$subject = 'Confirmation de votre abonnement aux « Jours »';
-				$content = file_get_contents('emails/abonnement.html');
+		// Add an invoice (warning: should NOT be unique, obviously)
+		add_user_meta($user_id, 'invoices', json_encode(array(
+			'date'        => $date,
+			'number'      => $number,
+			'plan'        => $meta['plan'],
+			'payment'     => $meta['payment'],
+			'price'       => $plan['price'],
+			'transaction' => $transaction
+		)));
 
-				$headers   = array();
-				$headers[] = 'MIME-Version: 1.0';
-				$headers[] = 'Content-type: text/html; charset=UTF-8';
-				$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+		// Don't forget to update the invoice_number
+		update_option('invoice_number', $number);
 
-				// Prevent displaying an error message (see below)
-				@mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
-			}
+		// Update the user's account as "subscribed"
+		update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$plan['duration'])));
+		update_user_meta($user_id, 'subscription', $date);
+
+		// Finally, if received, save an alias for recurring payments
+		if (isset($payload['ALIAS'])) {
+			update_user_meta($user_id, 'alias', $payload['ALIAS']);
 		}
+
+		// Prepare an email and send it
+		$subject = 'Confirmation de votre abonnement aux « Jours »';
+		$content = file_get_contents('emails/abonnement.html');
+
+		$headers   = array();
+		$headers[] = 'MIME-Version: 1.0';
+		$headers[] = 'Content-type: text/html; charset=UTF-8';
+		$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+
+		// Prevent displaying an error message (see below)
+		@mail($data->user_email, $subject, $content, implode("\r\n", $headers));
 
 		// As stated in the documentation, the payment service waits for "OK"
 		// Otherwise, it will re-send a notification
 		// See https://developer.be2bill.com/callbacks#c3
 		die('OK');
-	}
+	} // end of if (isset($_GET['notification']))
 
 	// Receiving a result from the payment service
 	if (isset($_GET['result'])) {
 		// XXX: logging for debug
-		file_put_contents('result.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n"), FILE_APPEND);
+		file_put_contents('result.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n").print_r(file_get_contents('php://input'), true).print_r("\n"), FILE_APPEND);
 
 		$state = 'result';
 
-		if (empty($_GET['result'])) {
-			unset($_GET['result']); // Exclude for the hash computation
-			$hash = signature($_GET);
-
-			$error = !$error && $_GET['HASH']     != $hash  ? '1003'            : $error;
-			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
+		if ($_GET['result'] == 'bank') {
+			$payload = json_decode(file_get_contents('php://input'));
 
 			// Prefer redirecting to remove informations in the URL
-			die(header('Location: ?result='.($error ? $error : 'success')));
-		}
-	}
+			die(header('Location: ?result='.($payload->state == 'close.completed' ? 'success' : $payload->state)));
+		} // end of if ($_GET['result'] == 'bank')
+
+		if ($_GET['result'] == 'card') {
+			unset($_GET['result']); // Exclude for the hash computation
+			$error = $_GET['HASH'] == signature($_GET) ? $_GET['EXECCODE'] : 1003;
+
+			// Prefer redirecting to remove informations in the URL
+			die(header('Location: ?result='.($error == '0000' ? 'success' : $error)));
+		} // end of if ($_GET['result'] == 'card')
+	} // end of if (isset($_GET['result']))
 
 	// Receiving data from the form
 	if (!empty($_POST)) {
