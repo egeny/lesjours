@@ -269,7 +269,7 @@
 							'recurrentDirectDebit' => array(
 								'amount'    => $PLANS[$meta['plan']]['price'],
 								'frequency' => $PLANS[$meta['plan']]['duration'] == '1 month' ? 'monthly' : 'yearly',
-								'dateFrom'  => date('c')
+								'dateFrom'  => date('Y-m-d\TH:i:s.000O')
 							)
 						)
 					)
