@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "insurrection-riester",
+
+	"number": 8,
+	"date": "2016-02-27T14:00+01:00",
+
+	"title": "Franck Riester, l'insurrection qui vient",
+	"intro": "Le député Les Républicains s’engage en faveur de Bruno Le Maire pour la primaire parce que <q>la révolte gronde en France</q>.",
+	"subtitle": "Le député Les Républicains s’engage en faveur de Bruno Le Maire pour la primaire parce que <q>la révolte gronde en France</q>.",
+	"lead":  "Paris - Coulommiers&nbsp;: 1h01. Ligne P du Transilien tout neuf, coloré, qui file vers l’est, à travers des kilomètres de banlieue puis de champs rataplats de terre grasse. Terminus Coulommiers, en Seine-et-Marne soleil rasant d’hiver",
+
+	"tags": ["Politique", "Franck Riester", "Bruno Le Maire", "Nicolas Sarkozy", "Alain Juppé"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:antoine-guiral"},
+			{ "photo": "Benjamin Girette / IP3 pour <i>Les Jours</i>" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/romagnan-primaire-campagne-gauche",
+		"last":  "episode:politique-annee-zero/insurrection-riester"
+	}
+}
