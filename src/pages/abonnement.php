@@ -49,7 +49,7 @@
 		if ($_GET['notification'] == 'bank') {
 			$payload = json_decode(file_get_contents('php://input'));
 			$user_id = preg_replace('/(?:\d+-){3}/', '', $payload->reference);
-			$error   = $payload->state != 'close.completed';
+			$error   = $payload->state != 'closed.completed';
 		} // end of if ($_GET['notification'] == 'bank')
 
 		if ($_GET['notification'] == 'card') {
@@ -131,7 +131,7 @@
 			$payload = json_decode(file_get_contents('php://input'));
 
 			// Prefer redirecting to remove informations in the URL
-			die(header('Location: ?result='.($payload->state == 'close.completed' ? 'success' : $payload->state)));
+			die(header('Location: ?result='.($payload->state == 'closed.completed' ? 'success' : $payload->state)));
 		} // end of if ($_GET['result'] == 'bank')
 
 		if ($_GET['result'] == 'card') {
