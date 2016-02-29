@@ -129,10 +129,13 @@
 		$state = 'result';
 
 		if ($_GET['result'] == 'bank') {
-			$payload = json_decode(file_get_contents('php://input'));
+			// Retrieve the latest transaction
+			// Not sure if it is safe though…
+			$meta   = get_all_user_meta($current_user->ID);
+			$latest = end($meta['transactions']);
 
 			// Prefer redirecting to remove informations in the URL
-			die(header('Location: ?result='.($payload->state == 'closed.completed' ? 'success' : $payload->state)));
+			die(header('Location: ?result='.($latest->payload->state == 'closed.completed' ? 'success' : $latest->payload->state)));
 		} // end of if ($_GET['result'] == 'bank')
 
 		if ($_GET['result'] == 'card') {
