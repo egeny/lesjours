@@ -50,6 +50,7 @@
 			$payload = json_decode(file_get_contents('php://input'));
 			$user_id = preg_replace('/(?:\d+-){3}/', '', $payload->reference);
 			$error   = $payload->state != 'closed.completed';
+			unset($payload->_links);
 		} // end of if ($_GET['notification'] == 'bank')
 
 		if ($_GET['notification'] == 'card') {
