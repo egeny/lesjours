@@ -47,11 +47,17 @@
 
 	// Get all meta related to the given user
 	function get_all_user_meta($id) {
-		$meta     = get_user_meta($id);
-		$invoices = isset($meta['invoices']) ? $meta['invoices'] : array(); // Makes sure we have an invoices array
+		$meta = get_user_meta($id);
 
+		// Shorten array having one item
 		$meta = array_map(function($value) { return count($value) == 1 ? $value[0] : $value; }, $meta);
-		$meta['invoices'] = array_map(function($value) { return json_decode($value, true); }, $invoices);
+
+		// Decode JSON for specific keys (also, make an array by default)
+		foreach (array('transactions', 'invoices') as $key) {
+			$meta[$key] =  isset($meta[$key])     ? $meta[$key] : array(); // Default to array for undefined keys
+			$meta[$key] = !is_string($meta[$key]) ? $meta[$key] : array($meta[$key]); // Transform to array previously shortened values
+			$meta[$key] = array_map(function($value) { return json_decode($value); }, $meta[$key]);
+		}
 
 		return $meta;
 	}

@@ -223,14 +223,14 @@
 						<tbody>
 							<?php foreach ($meta['invoices'] as $invoice) : ?>
 								<?php
-									$plan  = $PLANS[$invoice['plan']];
-									$start = strtotime($invoice['date']);
+									$plan  = $PLANS[$invoice->plan];
+									$start = strtotime($invoice->date);
 									$end   = strtotime('+'.$plan['duration'], $start);
 								?>
 							<tr>
-								<td><?php echo $invoice['number'] ?></td>
+								<td><?php echo $invoice->number ?></td>
 								<td>Abonnement « <?php echo $plan['name'] ?> » (du <?php echo date('d-m-Y', $start); ?> au <?php echo date('d-m-Y', $end); ?>)</td>
-								<td><?php echo $invoice['price'] ?> €</td>
+								<td><?php echo $invoice->price ?> €</td>
 							</tr>
 							<?php endforeach ?>
 						</tbody>
