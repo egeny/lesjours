@@ -44,7 +44,7 @@
 	// Receiving a notification from the payment service
 	if (isset($_GET['notification'])) {
 		// XXX: logging for debug
-		file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n").print_r(file_get_contents('php://input'), true).print_r("\n"), FILE_APPEND);
+		file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
 
 		if ($_GET['notification'] == 'bank') {
 			$payload = json_decode(file_get_contents('php://input'));
@@ -124,7 +124,7 @@
 	// Receiving a result from the payment service
 	if (isset($_GET['result'])) {
 		// XXX: logging for debug
-		file_put_contents('result.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n").print_r($_GET, true).print_r("\n").print_r($_POST, true).print_r("\n").print_r(file_get_contents('php://input'), true).print_r("\n"), FILE_APPEND);
+		file_put_contents('result.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
 
 		$state = 'result';
 
@@ -261,7 +261,7 @@
 						array(
 							'type' => 'directDebit',
 							'directDebit' => array(
-								'paymentReference'  => date('Y-m-d').'-'.$user_id,
+								'paymentReference' => date('Y-m-d').'-'.$user_id,
 								'amount' => $PLANS[$meta['plan']]['price']
 							)
 						),
@@ -280,7 +280,7 @@
 				$response = $client->createOrders(array('post' => $payload));
 
 				// XXX: logging for debug
-				file_put_contents('bank.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($response, true).print_r("\n"), FILE_APPEND);
+				file_put_contents('bank.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($response, true).print_r("\n", true), FILE_APPEND);
 
 				// TODO: check errors
 
