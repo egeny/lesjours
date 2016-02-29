@@ -17,7 +17,8 @@
 		"episode:politique-annee-zero/symbole-contre-valeurs",
 		"episode:politique-annee-zero/la-decheance-a-devore",
 		"episode:politique-annee-zero/romagnan-primaire-campagne-gauche",
-		"episode:politique-annee-zero/insurrection-riester"
+		"episode:politique-annee-zero/insurrection-riester",
+		"episode:politique-annee-zero/faure-pavillons"
 	],
 
 	"people": [
@@ -46,6 +47,15 @@
 			"title":    "Franck Riester",
 			"desc":     "Franck Riester est député de la 5e circonscription de Seine-et-Marne et maire de Coulommiers. Elu à l’Assemblée nationale pour la première fois en 2007, il n’a jamais abdiqué sur ses convictions même quand elles étaient contraires à la ligne de sa formation politique. Ce fut le cas avec la loi sur le mariage pour tous, qu’il a votée. Sans jamais mettre en avant sa vie privée, il assume son homosexualité et a conservé une vie professionnelle en dehors de la politique, comme concessionnaire automobile. Porte-parole adjoint de la campagne présidentielle 2012 de Nicolas Sarkozy, il est aujourd’hui proche de Bruno Le Maire, dont il soutient la candidature à la primaire de la droite. Franck Riester est donc l’un des députés que Les Jours ont choisi de suivre dans l'obsession Politique année zéro.",
 			"subtitle": "42 ans, député Les Républicains",
+			"minor": true
+		},
+		{
+			"href":     "stephanie-le-meur",
+			"img":      "img/stephanie-le-meur.jpg",
+			"alt":      "",
+			"title":    "Stéphanie Le Meur",
+			"subtitle": "42 ans, collaboratrice d’Olivier Faure",
+			"desc":     "Stéphanie Le Meur, 42&nbsp;ans, est la collaboratrice en circonscription d’Olivier Faure. Elle explique qu’elle n’a fait «&nbsp;ni Sciences-Po, ni l’ENA&nbsp;». C’est une militante socialiste qui aime le terrain. Elle est née en Seine-et-Marne, à Dammarie-les-Lys, et connaît la circonscription de 105&nbsp;000 habitants comme sa poche. C’est elle qui a guidé Olivier Faure quand il y a fait ses premiers pas lors de la campagne électorale de 2011. Ancienne assistante de direction dans des grandes sociétés (McDonald’s, Toshiba), elle a aussi travaillé à Évry dans les nouvelles technologies et a dirigé un centre de fitness… En 2001, dans le sillage de la loi sur la parité, elle devient conseillère municipale à Lieusaint, puis elle rejoint le cabinet du groupe PS au conseil général. Elle fait toutes les campagnes électorales, sillonne les villages, s’attarde dans les marchés et brocantes. Au bout de plusieurs mois de travail côte à côte, Olivier Faure lui a proposé de devenir sa collaboratrice parlementaire s’il était élu. Elle qui voyait défiler les candidatures pour ce poste a répondu&nbsp;: «&nbsp;Je ne comprends pas, je t’envoie un CV&nbsp;? On fait comment&nbsp;? Olivier m’a répondu que ce n’était pas la peine, qu’il me voyait 15&nbsp;heures par jour sur le terrain et que ça lui suffisait.&nbsp;» Stéphanie Le Meur ne se voyait pas travailler au Palais-Bourbon. Olivier Faure l’a rassurée&nbsp;: «&nbsp;Je te veux sur la circonscription.&nbsp;» Depuis, elle y écoute les gens, reçoit les associations, organise des relais, fait remonter les problèmes de logement, d’emploi, de financement, relaie les coups de gueule.",
 			"minor": true
 		}
 	]
