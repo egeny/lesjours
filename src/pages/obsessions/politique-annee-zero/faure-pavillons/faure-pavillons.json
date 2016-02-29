@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "faure-pavillons",
+
+	"number": 9,
+	"date": "2016-02-29T10:00+01:00",
+
+	"title": "Le député et l’effet pavillons",
+	"intro": "Olivier Faure fait du porte-à-porte dans la France des lotissements, celle qui se lève à 4&nbsp;heures et s’est désintéressée de la politique.",
+	"subtitle": "Olivier Faure fait du porte-à-porte auprès de la France des lotissements, celle qui se lève à 4&nbsp;heures.",
+	"lead":  "Le terre-plein est battu par le vent. Quelques voitures sont garées sur le parking devant les pavillons. Tout est neuf et propre. Le lotissement est sorti de terre à l’été. Maisons individuelles et petits immeubles se font face",
+
+	"tags": ["politique", "Faure"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman"  },
+			{ "photo": "author:albert-facelly" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/romagnan-primaire-campagne-gauche",
+		"last":  "episode:politique-annee-zero/faure-pavillons"
+	}
+}
