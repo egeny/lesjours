@@ -99,7 +99,7 @@
 		update_user_meta($user_id, 'subscription', $date);
 
 		// Finally, if received, save an alias for recurring payments
-		if (isset($payload['ALIAS'])) {
+		if (is_array($payload) && isset($payload['ALIAS'])) {
 			update_user_meta($user_id, 'alias', $payload['ALIAS']);
 		}
 
