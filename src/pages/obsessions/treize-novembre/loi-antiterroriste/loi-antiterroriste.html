@@ -1,0 +1,106 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[3] %}
+<p><span class="lettrine">M</span>i-janvier, un certain <a href="#{{ person.href }}" data-mini="1">Jean-Jacques Urvoas</a> mettait en garde ses collègues députés &nbsp;: <q>Il faudra veiller à ce que les procédures gloutonnes existantes dans l’état d’urgence ne viennent pas dévorer le droit commun des libertés.</q> (<a href="/obsessions/treize-novembre/etat-urgence-mort-lente">lire l’épisode 19</a>, «&nbsp;L’état d’urgence ne sert plus à rien&nbsp;») C’est pourtant le même Urvoas qui bénit le festin cette semaine à l’Assemblée nationale. Aux côtés de Bernard Cazeneuve et Michel Sapin, ses collègues de l’Intérieur et des Finances, le désormais ministre de la Justice défend le <a href="#" data-mini="2">projet de loi</a> <q>renforçant la lutte contre le crime organisé, le terrorisme et leur financement, et améliorant l’efficacité et les garanties de la procédure pénale</q>. Le texte doit être adopté en procédure accélérée, alors que l’état d’urgence a été reconduit quinze jours plus tôt (<a href="/obsessions/treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois">lire l’épisode 24</a>, «&nbsp;État d’urgence&nbsp;: vous en reprendrez bien pour trois mois&nbsp;?&nbsp;»).</p> 
+
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.assemblee-nationale.fr/14/projets/pl3473.asp" />
+<span class="image"><img class="responsive" src="img/AN.jpg" alt="" /></span>
+<p class="title">Le texte intégral du projet de loi</p>
+<p class="subtitle">À consulter sur le site de l’Assemblée nationale</p>
+</a>
+</aside>
+
+<p>Vendredi 26 février, le Défenseur des droits Jacques Toubon dressait un <a href="#" data-mini="3">bilan très critique</a> des trois mois écoulés&nbsp;: perquisitions musclées devant les enfants, assignations à résidence <q>particulièrement pénalisantes</q> fondées sur des dénonciations calomnieuses, et autres <q>comportements irrationnels</q>, comme des licenciements de salariés trop barbus. Opposant déclaré à ce projet de loi antiterroriste, Jacques Toubon a pris un certain plaisir à ressortir la pas-si-vieille-phrase du garde des Sceaux sur les <q>procédures gloutonnes</q>, feignant la flagornerie&nbsp;: <q>Je ne saurais mieux dire et j’espère que c’est encore son sentiment.</q> Sur un ton égal, Jacques Toubon a appelé les parlementaires comme le gouvernement à <q>revenir à la raison</q>, <q>au-delà de la peur</q> suscitée par les attentats de novembre. Il a prévu d’écrire aux présidents de l’Assemblée nationale et du Sénat pour les enjoindre de rejeter un texte bourré <q>de dispositions qui restreignent nos libertés durablement</q> et <q>affaiblissent l’État de droit</q>.</p>
+
+
+<aside id="mini-3" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="doc/avis-defenseur-droits.pdf"/>
+<span class="image"><img class="responsive" src="img/defenseur-droits.jpg" alt="" /></span>
+<p class="title">L'avis du Défenseur des droits</p>
+<p class="subtitle">À télécharger en PDF</p>
+</a>
+</aside>
+
+<figure>
+<img src="img/antiterrorisme-1.jpg" alt="" />
+<figcaption><span>Jean-Jacques Urvoas lors du débat sur la révision constitutionnelle portant sur l'état d'urgence et sur la déchéance de nationalité, à l'Assemblée nationale, le 5 février 2016 <span class="credits">Photo Albert Facelly pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Pourquoi tant d’ardeur&nbsp;? Les partisans du projet de loi assurent qu’il va <q>simplifier</q> la procédure pénale et <q>rééquilibrer</q> les pouvoirs –&nbsp;entre le judiciaire et l’administratif d’un côté, le procureur et le juge d’instruction de l’autre. Confiant, le cabinet de Jean-Jacques Urvoas estime que <q>l’ensemble des dispositions ne font pas polémique</q>. Sous-entendu&nbsp;: les critiques portent surtout sur la partie qui revient au ministre de l’Intérieur Bernard Cazeneuve. Il est vrai que les détracteurs du projet insistent surtout sur l’inflation de la police administrative, au détriment d’un juge d’instruction placardisé. Mais ils soulignent aussi que le parquet prend beaucoup d’importance, alors que la réforme garantissant son indépendance n’est toujours pas acquise.</p>
+
+<aside>
+<p><span>Les procureurs et les préfets </span> sont les grands gagnants</p>
+</aside>
+
+<p>Surtout, une bonne partie du texte vise à pérenniser en temps «&nbsp;normal&nbsp;» certains outils de l’état d’urgence. Le Premier ministre Manuel Valls l’a d’ailleurs reconnu au moment du dernier remaniement&nbsp;: <q>Nous devrions pouvoir sortir de l'état d'urgence une fois cette loi votée.</q></p> 
+
+<p>Il s’agirait du dix-septième texte antiterroriste depuis 1986. Comme la récente loi sur les transports (<a href="/obsessions/treize-novembre/transport-terrorisme">lire l’épisode 17</a>, «&nbsp;Transport, fraude et… terrorisme&nbsp;»), celle-ci s’est construite par strates successives depuis un an, les attentats de novembre permettant d’en remettre une couche. Dans sa version présentée à l’Assemblée, la loi se découpe en quatre volets&nbsp;: protection des témoins, lutte contre le trafic d’armes et le financement du terrorisme, contrôle administratif des retours de Syrie et réforme de la procédure pénale. À cela s’ajoutent des considérations sur la transcription en droit français de directives européennes, l’usage des armes par les policiers et leur équipement en caméras lors des interventions.</p>
+
+<p>Parmi les mesures les plus critiquées&nbsp;: l’irruption de techniques intrusives –&nbsp;pose de micros et de caméras, recours aux <a href="#note-1">Imsi-catchers</a>&nbsp;– dans les enquêtes antiterroristes menées par le parquet. Elles figuraient déjà au répertoire des services de renseignement et des juges d’instruction. De fait, les procureurs, mais aussi les préfets, désormais rodés à la police administrative, sont les grands gagnants du texte. Une dose de contradictoire –&nbsp;accès au dossier (sous condition) pour les personnes mises en cause, présence accrue de l’avocat&nbsp;– est censée limiter le coup de balancier.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Les Imsi-catchers",
+caption: "Ces appareils de la taille d’une valise se font passer pour une antenne-relais de téléphonie. Ils permettent de récolter des informations sur les téléphones se trouvant à proximité. Certains modèles sont capables d’intercepter également le contenu des conversations."
+})
+}}
+
+{% set person = obsession.people[8] %}
+<p><a href="#{{ person.href }}" data-mini="4">Laurence Blisson</a>, du Syndicat de la magistrature, rappelle que cette <q>évolution générale de la législation</q> s’est amorcée dès les lois Perben des années 2000, et accélérée avec la <a href="#note-2">loi Cazeneuve</a> (novembre 2014) et la loi renseignement (juillet 2015). <q>La droite perçoit bien que les frontières politiques du gouvernement reculent sur ces questions</q>, poursuit la magistrate. La <a href="http://www.lcp.fr/afp/lutte-antiterroriste-le-senat-adopte-ses-propres-propositions" target="_blank">proposition de loi</a> de Philippe Bas (Les Républicains), adoptée au Sénat mais supplantée par le projet gouvernemental, pourrait servir de réservoir à amendements.</p>
+
+{{
+	mini({
+		number: 4,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{{
+note({
+number: 2,
+title: "Loi Cazeneuve",
+caption: "La loi Cazeneuve crée le délit d’entreprise individuelle terroriste, l’interdiction administrative de sortie du territoire et permet le blocage administratif de sites internet. La loi renseignement légalise un certain nombre de pratiques auparavant illégales et prévoit l’installation de «&nbsp;boîtes noires&nbsp;» chez les opérateurs."
+})
+}}
+
+<blockquote>
+<p>L’antiterrorisme fonctionne comme une sorte de ballon qui gonfle, de telle sorte qu’il n’y ait jamais de vide, parce que le vide serait en soi synonyme de danger.</p>
+<footer>Laurence Blisson, du Syndicat de la magistrature
+</footer>
+</blockquote>
+
+<p>En matière de terrorisme, les briques législatives s’ajoutent si vite que les opposants se retrouvent avec un mur dans la vue. Laurence Blisson le reconnaît, <q>le contexte rend absolument inaudible</q> l’une des idées-phares de son syndicat&nbsp;: remettre en cause le principe même de <a href="#note-3">l’association de malfaiteurs</a> en relation avec une entreprise terroriste, qui fête cette année ses 20 ans. <q>Il faut pourtant s’interroger</q>, maintient-elle, sur <q>le moment où l’on peut interpeller et juger une personne en lui imputant clairement des faits</q> et pas seulement des intentions. Si la logique préventive est <q>compréhensible</q>, il ne faut pas négliger <q>le risque d’accuser des innocents ou des gens encore susceptibles de se désister de l’idée qu’ils forment</q>.</p>
+
+{{
+note({
+number: 3,
+title: "Association de malfaiteurs",
+caption: "Le délit d'association de malfaiteurs en vue de préparer des actes de terrorisme est prévu par l'article 421-2-1 du code pénal."
+})
+}}
+
+<p>Cette ligne de crête passe au second plan dans le débat, centré sur le risque que représentent les «&nbsp;revenants&nbsp;» (lire notre obsession <a href="/obsessions/les-revenants"><i>Les revenants</i></a>) de Syrie et l’espoir d’éviter d’autres attentats. <i>«&nbsp;L’antiterrorisme fonctionne comme une sorte de ballon qui gonfle</i>, analyse Laurence Blisson, <i>de telle sorte qu’il n’y ait jamais de vide, parce que le vide serait en soi synonyme de danger&nbsp;»</i>.</p>
+
+<p>Le délit d’association de malfaiteurs, le plus souvent invoqué en France dans les affaires de terrorisme, ne semble plus suffire. Pour les suspects sans complices, la loi Cazeneuve avait déjà créé <q>l’entreprise individuelle terroriste</q>. Faute de preuves permettant d’ouvrir une enquête, le préfet pourrait désormais assigner à résidence une personne dont on suppose qu’elle revient de Syrie, ou lui interdire certaines fréquentations. Le projet de loi évoque une <q>période d’observation</q>. Jacques Toubon visait juste lorsque, début février <a href="http://www.lemonde.fr/attaques-a-paris/article/2016/02/04/jacques-toubon-denonce-l-entree-de-la-france-dans-l-ere-des-suspects_4858944_4809495.html" target="_blank">dans Le Monde</a>, il estimait que la France entrait dans <q>l’ère des suspects</q>.</p>
+
