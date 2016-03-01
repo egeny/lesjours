@@ -1,0 +1,109 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+<p><span class="lettrine">L</span>e terre-plein est battu par le vent. Quelques voitures sont garées sur le parking devant les pavillons. Tout est neuf et propre. Le lotissement est sorti de terre à l’été. Maisons individuelles et petits immeubles se font face, dans cette résidence construite sur la commune de Nandy, à proximité du village, en Seine-et-Marne. On est à 40&nbsp;kilomètres à l’est de la capitale. Une partie est encore en chantier. Sur l’un des bâtiments, les vitres ne sont pas encore posées. Les habitants ont acheté sur plan à environ 2&nbsp;500&nbsp;euros le mètre carré. Une majorité de jeunes couples, actifs, la plupart employés, techniciens et cadres moyens, travaillant souvent en horaires décalés. Le plus souvent, ils posent ici les premières pierres d’un rêve d’ascension sociale.</p>
+
+<blockquote>
+<p>Faure comme les machines à laver&nbsp;: F-A-U-R-E.</p>
+<footer>Olivier Faure, député</footer>
+</blockquote>
+
+{% set person = obsession.people[1] %}
+<p><a href="#{{ person.href }}" data-mini="1">Olivier Faure</a> est le député de cette <a href="#note-1">circonscription</a> à l’habitat horizontal qu’il présente sur son blog comme <q>un Far West où tout est encore possible</q>. Il sonne à l’interphone, piétine, patiente. L’élu vient à la rencontre de ces nouveaux habitants de la France des pavillons, une France silencieuse dont il aime à prendre le pouls. Ils ouvrent et, soudain, la politique est à leur porte. J’ai l’impression qu’elle ne fait pas souvent irruption dans leur vie. Là, elle est en chair et en os&nbsp;: une grande silhouette en parka portée par-dessus un costume sombre, un regard plongeant, des cheveux bruns qui commencent à devenir poivre et sel. <q>Bonjour, je suis votre député, je viens vous voir. Comme le quartier vient de se faire, je viens saluer tout le monde…</q> Parfois, les riverains laissent échapper leur surprise&nbsp;: <q>Ah&nbsp;! Je ne m’y attendais pas.</q> Pour qu’on se souvienne de son nom, Olivier Faure dit&nbsp;: <q>C’est facile, Faure comme les machines à laver&nbsp;: F-A-U-R-E.</q> Il épelle, il sourit. Je ne l’entends jamais dire qu’il est socialiste.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "La circonscription",
+caption: "La 11e circonscription de Seine-et-Marne comporte la ville nouvelle de Sénart et le canton du Mée-sur-Seine, et compte environ 120&nbsp;000 habitants. Dans l’ensemble du département, trois circonscriptions sur douze ont élu un député PS."
+})
+}}
+ 
+<aside>
+<p><span>Le nom du président de la République</span> n’est pas prononcé</p>
+</aside> 
+
+<p>La jeune femme est aide-soignante dans une clinique du département. Elle est en repos. Olivier Faure engage la conversation dans le couloir. Comment se passe l’installation&nbsp;? A-t-elle des problèmes à signaler&nbsp;? La jeune femme hésite et lui parle de l’isolation des parties communes du bâtiment. <q>Ah&nbsp;! Ça, ce n’est pas du ressort du député</q>, répond-il cordialement. Elle se ravise&nbsp;: <q>Sinon, ça va, tout le monde est gentil.</q></p>
+
+<p>Il la rassure&nbsp;: <q>Je ne suis pas là pour chercher les soucis, mais pour vous dire que vous avez des élus, qu’on est accessibles.</q> <q>Je n’ai rien de spécial à dire, et puis je ne suis pas à râler, je ne m’intéresse pas à tout ça…</q>, lui explique-t-elle, très honnêtement. Que désigne-t-elle exactement&nbsp;? Les affaires publiques&nbsp;? Les politiques&nbsp;? L’actualité&nbsp;? L’élu semble comprendre&nbsp;: <q>Vous savez, certains ne s’y intéressent pas non plus, mais ça ne les empêche pas de râler sans savoir.</q> Je vois qu’il essaie de tirer les fils qui pourraient la relier à la politique&nbsp;: <q>Vous êtes jeune, vous votez&nbsp;?</q> <i>«&nbsp;Ah oui</i>, répond-elle. <i>Tout à fait.&nbsp;»</i> Mais comme si elle se disqualifiait d’avance, elle ajoute&nbsp;: <q>Ce n’est pas trop mon domaine.</q> Olivier Faure bondit sur sa réponse&nbsp;: <q>Si, ça vous concerne aussi. L’éclairage, l’école, les services publics… On est tous confrontés à la puissance publique.</q></p>
+
+<figure>
+<img src="img/faure-pavillon-1.gif" alt="" />
+<figcaption><span>Porte-à-porte d’Olivier Faure à Nandy (Seine-et-Marne), le 22 février 2016 <span class="credits">Photo Albert Facelly pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Ici, personne ne parle au député de la politique nationale. Le nom du président de la République n’est pas prononcé, ni celui de son Premier ministre. Aucun des habitants ne cite le débat sur la déchéance de nationalité ou la réforme du code du travail envisagée par la ministre du Travail, derniers débats houleux qui ont traversé ou traversent les partis et les médias. <q>C’est tout le temps comme ça, quand on vient chez eux</q>, explique Olivier Faure, entre deux portes. L’accueil aujourd’hui est courtois. <q>Je pense qu’ils sont contents qu’on vienne les voir, surtout qu’on n’est pas en campagne électorale.</q>
+Olivier Faure essaie d’impliquer les habitants malgré leur éloignement de la politique.</p>
+
+<aside>
+<p><span>Olivier Faure cherche un remède</span> au désintérêt des électeurs</p>
+</aside> 
+
+{% set person = obsession.people[3] %}
+<p>À l’étage, une jeune pharmacienne mère d’un bébé de 10&nbsp;mois ouvre la porte. Elle a grandi dans le département, sa mère est assistante maternelle. <q>Vous savez qu’ils ont supprimé le <q>bébé bonus</q>&nbsp;?</q>, glisse <a href="#{{ person.href }}" data-mini="2">Stéphanie Le Meur</a>, la collaboratrice du parlementaire. C’était un petit supplément versé par le conseil général pour la garde d’enfants de moins de 3&nbsp;ans. La jeune femme n’est pas au courant&nbsp;: <q>De toute façon, je ne comptais pas sur les aides, on n’a jamais rien eu.</q> <q>Le département a changé aux dernières élections. Avant, c’était le PS</q>, complète Stéphanie Le Meur, qui ajoute que la nouvelle majorité a également décidé de supprimer les aides aux transports pour les étudiants, qui pouvaient bénéficier d’une bourse de 100 à 350&nbsp;euros par an. Là aussi, c’est une manière de montrer, sans faire la leçon, que tout le monde a intérêt à s’emparer d’un bulletin de vote et à se mêler des choses de la cité. <q>Tout ça dépend de vous&nbsp;: qu’est-ce que ça va donner&nbsp;? Quels seront vos élus&nbsp;?</q>, appuie Olivier Faure, cherchant un remède au désintérêt des électeurs.</p>
+
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<figure>
+<img src="img/faure-pavillon-2.gif" alt="" />
+<figcaption><span>Porte-à-porte d’Olivier Faure à Nandy (Seine-et-Marne), le 22 février 2016 <span class="credits">Photo Albert Facelly pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>En chaussons d’intérieur, une retraitée ouvre au député. Elle est l’une des rares qui lui propose de rentrer. L’appartement est lumineux et bien rangé. Olivier Faure (comme les machines à laver) lui glisse un compliment sur la vue. Il parle sans doute des arbres de la forêt proche car au premier plan, on voit surtout le parking et la route. La dame est ravie.</p>
+
+<p>Elle travaillait comme assistante d’un administrateur judiciaire, son <q>ami</q> est technicien contrôle qualité à la Snecma, industrie aéronautique qui, avec 4&nbsp;000 salariés, est l’un des premiers employeurs du département. C’est une nouvelle vie pour elle, et ça lui fait <q>tout bizarre</q>. Elle habitait Lille avant&nbsp;: <q>J’avais mes habitudes dans la ville, j’étais à proximité des magasins.</q> Ici, elle vit à l’écart, dans un îlot. A-t-elle une voiture&nbsp;? s’enquiert l’élu. <q>Heureusement</q>, répond-elle. Il enchaîne&nbsp;: <q>On cherche à densifier la ville nouvelle de <a href="#note-2">Sénart</a>. Il faut une masse critique pour obtenir des services&nbsp;: si la densité est faible, vous n’avez pas de boulangerie, pas d’épicerie, pas de pharmacie, de bar-tabac…</q> Ici, certaines communes se sont montrées hostiles à l’édification de nouveaux lotissements. À tort, plaide l’élu&nbsp;: <q>On perd de la population, on a besoin de construire. Le jour où ça se désertifie, c’est fini.</q> La dame acquiesce.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Sénart",
+caption: "La ville nouvelle de Melun-Sénart (aujourd’hui Sénart) a été créée en 1973 pour répondre à la croissance démographique et aux besoins de logements, comme Cergy-Pontoise, Evry, Marne-la-Vallée, Saint-Quentin-en-Yvelines. Elle comportait alors dix-huit communes dont Savigny-le-Temple, Nandy, Combs-la-Ville. Carré Sénart, le centre commercial, a ouvert en 2002."
+})
+}}
+
+<blockquote>
+<p>On parle des 35&nbsp;heures, mais on ne compte pas le temps de transport. […] Le travail, ça commence quand on met un pied dans l’ascenseur en sortant de chez soi.</p>
+<footer>Olivier Faure, député</footer>
+</blockquote>
+
+<p>Au deuxième étage, c’est une armoire à glace au visage jovial qui ouvre la porte. Il invite dans son salon. Il va bientôt se marier. Elle est orthophoniste, lui travaille six jours sur sept dans la logistique, à Rosny, à une heure de route de là. Quand il commence à 5h30, il doit se lever à 4&nbsp;heures. Olivier Faure lui pose des questions sur son organisation et sa mobilité. Comme député, il s’est emparé de la question des <a href="#note-3">transports</a>. Et s’explique&nbsp;: <q>les élus, ça sert aux grands projets</q> mais ça sert aussi à faire coïncider le mode de vie des gens et leurs aspirations. <q>On parle des 35&nbsp;heures, mais on ne compte pas le temps de transport. Dans ce cas, on ne comprend rien à la vie des gens d’aujourd’hui. Le travail, ça commence quand on met un pied dans l’ascenseur en sortant de chez soi.</q> En grande couronne de la région parisienne, c’est le quotidien de millions de travailleurs.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Spécialiste des transports",
+caption: "Olivier Faure a été le rapporteur spécial du budget relatif aux infrastructures de transports collectifs et ferroviaires."
+})
+}}
+
+<figure>
+<img src="img/faure-pavillon-3.gif" alt="" />
+<figcaption><span>Porte-à-porte d’Olivier Faure à Nandy (Seine-et-Marne), le 22 février 2016 <span class="credits">Photo Albert Facelly pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Le jeune homme de 27 ans pense à changer d’employeur pour se rapprocher de chez lui. Je lui demande s’il est confiant en cette période de chômage. Il l’est. Il trouvera facilement du boulot. Il a <q>la motivation</q>&nbsp;: <q>J’ai des amis au chômage mais je leur dis <q>Tu ne cherches pas assez</q>. Beaucoup de chômeurs ne font pas d’efforts</q>, affirme-t-il. Olivier Faure le contredit en douceur&nbsp;: <q>Ça dépend de votre âge aussi. On en voit beaucoup qui cherchent et ne trouvent pas. Et dans la logistique, un type taillé comme une allumette de 52 ans, c’est difficile. Vous, vous êtes jeune, vous ressemblez à un rugbyman, vous avez de l’expérience, ça les rassure.</q></p>
+
+<p>On sent que le couple a investi un petit cocon. Ils font d’ailleurs des envieux dans leur entourage. <q>J’ai un ami de Champigny-sur-Marne, qui habite en cité, qui va avoir un enfant, il m’a dit&nbsp;: <q>Si c’est un garçon, je ne veux pas qu’il finisse en trafiquant&nbsp;; si c’est une fille, je ne veux pas que ça se termine mal</q>…</q> L’ami a trouvé lui aussi un logement, dans le périurbain, loin de sa cité. Il va déménager à Combs-la-Ville, à 14&nbsp;kilomètres de Nandy.</p>
