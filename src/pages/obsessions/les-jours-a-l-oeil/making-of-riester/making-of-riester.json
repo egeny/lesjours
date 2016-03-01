@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "making-of-riester",
+
+	"number": 5,
+	"date": "2016-03-01T13:50+01:00",
+
+	"title": "«&nbsp;Ce sont les mains qui me plaisent&nbsp;»",
+	"intro": "Le photographe Benjamin Girette était à Coulommiers pour la visite de Bruno Le Maire chez le député Franck Riester que «&nbsp;Les Jours&nbsp;» suivent.",
+	"subtitle": "Le photographe Benjamin Girette était à Coulommiers pour la visite de Bruno Le Maire chez le député Franck Riester que «&nbsp;Les Jours&nbsp;» suivent.",
+	"lead":  "À une heure de Paris, je me doutais que j’allais certainement être le seul photographe à assister à la réunion de soutien à Coulommiers de Franck Riester à Bruno Le Maire, l’un des candidats des Républicains</q>",
+
+	"tags": ["Photographie", "Politique", "Franck Riester"],
+
+	"rel": {
+		"authors": [
+			{ "text": "author:benjamin-girette" },
+			{ "photo": "author:benjamin-girette" }
+		],
+
+		"first": "episode:les-jours-a-l-oeil/making-of-lesjoursaloeil",
+		"prev": "episode:les-jours-a-l-oeil/making-of-cop",
+		"last": "episode:les-jours-a-l-oeil/making-of-riester"
+	}
+}
