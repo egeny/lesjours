@@ -3,7 +3,7 @@
 
 {% block content %}
 {% set obsession = episode.obsession|expand %}
-<article class="obsession-{{ obsession.color }}" role="main">
+<article class="episode obsession-{{ obsession.color }}" role="main">
 	<header class="mb-6g">
 		<img src="{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" />
 		<div class="md-mt-1c md-ml-1c md-w-5c lg-mt-1c lg-ml-2c lg-w-6c snake"></div>
@@ -33,12 +33,12 @@
 	</header>
 	<div class="relative">
 		<div class="container no-overflow">
-			<div class="row article-container relative">
+			<div class="row episode-container relative">
 				{{ episode.content }}
 			</div>
 		</div>
-		{# This must be outside of the .article-container otherwise it won't be sticky due to the overflow: hidden #}
-		<div class="share hidden col md-w-1c lg-w-2c text-center show" data-fade="3000">
+		{# This must be outside of the .episode-container otherwise it won't be sticky due to the overflow: hidden #}
+		<div class="share hidden col mb-2g md-w-1c lg-w-2c text-center show" data-fade="3000">
 			<ul class="sticky">
 				<li class="sm-mb-0 mb-2g"><a class="btn-round btn-brand" href="#"><i>{{ icon("heart", "Mettre en favoris") }}</i></a></li>
 				<li class="sm-mb-0 mb-2g"><a class="btn-round btn-brand" href="#"><i>{{ icon("gift", "Offrir cet article") }}</i></a></li>
@@ -46,9 +46,9 @@
 			</ul>
 		</div>
 	</div>
-	<footer class="pattern-alpha">
-		<div class="meta container">
-			<div class="row style-meta">
+	<footer class="pattern-alpha pb-1m">
+		<div class="meta ph-1m mb-1m style-meta">
+			<div class="row">
 				<div class="col mb-1g sm-ph-2g md-ml-1c md-w-3c md-pl-0 lg-ml-2c lg-w-6c lg-pl-0">
 					<p class="sr">Crédits</p>
 					<ul>
@@ -80,14 +80,14 @@
 		{% set prev = episode.rel.prev|expand %}
 		{% set next = episode.rel.next|expand %}
 		{% if prev|published or next|published %}
-		<div class="rel container mt-2g">
+		<div class="rel container">
 			<p class="sr">D’autres épisodes</p>
 			<ul class="row">
 				{% if prev|published %}
-				<li class="col sm-w-4c md-w-4c lg-w-½">
-					<a rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}/">
-						<i>{{ icon("angle-left") }}</i>
-						<div>
+				<li class="sm-w-100 md-w-½">
+					<a class="row row-center w-100" rel="prev" href="/obsessions/{{ obsession.href }}/{{ prev.href }}/">
+						<i class="col w-auto"><span class="block relative">{{ icon("angle-left") }}</span></i>
+						<div class="col flex-1">
 							<span class="style-meta">Épisode n°{{ prev.number }}<span class="sr"> : </span></span>
 							<span class="h5">{{ prev.title }}</span>
 						</div>
@@ -95,13 +95,13 @@
 				</li>
 				{% endif %}
 				{% if next|published %}
-				<li class="col sm-w-4c md-w-4c lg-w-½{% if not prev %} md-ml-4c lg-ml-6c{% endif %}">
-					<a rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}/">
-						<i>{{ icon("angle-right") }}</i>
-						<div class="text-right">
+				<li class="sm-w-100 md-w-½{% if not prev %} md-ml-4c lg-ml-6c{% endif %}">
+					<a class="row row-center w-100" rel="next" href="/obsessions/{{ obsession.href }}/{{ next.href }}/">
+						<div class="col flex-1 text-right">
 							<span class="style-meta">Épisode n°{{ next.number }}<span class="sr"> : </span></span>
 							<span class="h5">{{ next.title }}</span>
 						</div>
+						<i class="col w-auto"><span class="block relative">{{ icon("angle-right") }}</span></i>
 					</a>
 				</li>
 				{% endif %}

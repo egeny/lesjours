@@ -21,9 +21,14 @@
 	&::selection { background: transparent; }
 
 	&.with-quote {
-		@extend %quote;
+		@extend %quote-fr;
 		background-position: .1875em 50%;
 		background-size: .25em .25em;
+
+		[lang="en"] > & {
+			@extend %quote-en;
+			background-position: .1875em 30%;
+		}
 	}
 }
 

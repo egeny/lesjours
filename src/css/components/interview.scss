@@ -1,11 +1,6 @@
 /* @group .interview */
 .interview {
-	margin-top:    .5em;
-	margin-bottom: .75em;
-
 	.question {
-		margin: 1.5em 0 .75em;
-
 		@extend %font-archer-smcp;
 		@include font-weight-bold("archer");
 
@@ -15,6 +10,7 @@
 		}
 	}
 
+	.question,
 	.answer { margin-bottom: .75em; }
 }
 

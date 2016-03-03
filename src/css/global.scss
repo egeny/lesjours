@@ -87,12 +87,23 @@ aside {
 // Archer's bold is actually bolder than the default "bold" (its font-weights seems wrong)
 b, strong { @include font-weight-bold("archer"); }
 
+%quote-fr {
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 51 56' xmlns='http://www.w3.org/2000/svg'><path fill='#{hex-to-rgb($color-white)}' d='M18.64 54.28c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L9.52 27.72 24.56 3.24c.96-1.6.48-2.88-.8-2.88H21.2c-.64 0-1.44-.16-2.56 1.44L1.36 26.44c-.48.8-.64 1.92 0 2.72l17.28 25.12zm8.32-25.12l17.28 25.12c1.12 1.6 1.92 1.44 2.56 1.44h2.56c1.28 0 1.76-1.28.8-2.88L35.12 27.72 50.16 3.24c.96-1.6.48-2.88-.8-2.88H46.8c-.64 0-1.44-.16-2.56 1.44L26.96 26.44c-.48.8-.64 1.92 0 2.72z' /></svg>");
+	background-repeat: no-repeat;
+}
+
+%quote-en {
+	background-image: url("data:image/svg+xml;charset=UTF-8,<svg viewBox='0 0 45 38' xmlns='http://www.w3.org/2000/svg'><path fill='#{hex-to-rgb($color-white)}' d='M37.6 37.822c4 0 6.72-2.4 6.72-6.24 0-3.36-2.24-6.4-6.4-6.4-.96 0-1.76.32-2.56.8-.64-1.6-.96-3.68-.8-6.08.96-9.76 8.16-14.56 8.96-15.2 1.12-.8 1.28-1.76.64-2.56l-1.28-1.6c-.64-.8-1.6-.64-2.72 0-3.04 1.76-11.52 9.44-11.52 22.24 0 10.56 4.32 15.04 8.96 15.04zm-28.64 0c4 0 6.72-2.4 6.72-6.24 0-3.36-2.24-6.4-6.4-6.4-.96 0-1.76.32-2.56.8-.64-1.6-.96-3.68-.8-6.08.96-9.76 8.16-14.56 8.96-15.2 1.12-.8 1.28-1.76.64-2.56l-1.28-1.6c-.64-.8-1.6-.64-2.72 0C8.48 2.302 0 9.982 0 22.782c0 10.56 4.32 15.04 8.96 15.04z'/></svg>");
+	background-repeat: no-repeat;
+}
+
 /* Default styles for <blockquote> */
 blockquote {
+	padding-top: $gutter;
 	position: relative;
 
 	&::before {
-		@extend %quote;
+		@extend %quote-fr;
 		background-position: 50% 50%;
 		background-size: .7em .7em;
 		background-color: $color-brand;
@@ -104,12 +115,14 @@ blockquote {
 		content: "";
 
 		position: absolute;
-		top:  -.75em;
+		top:  0;
 		left: 4px;
 		z-index: -1;
 
 		font-size: 1.85em;
 	}
+
+	&[lang="en"]::before { @extend %quote-en; }
 
 	p {
 		padding-left: 1.75em;
@@ -120,10 +133,10 @@ blockquote {
 		font-size: 1.85em;
 		line-height: 1.15;
 
-		&:last-of-type {
-			&::after { content: " »"; }
-		}
+		&:last-of-type::after { content: " »"; }
 	}
+
+	&[lang="en"] p:last-of-type::after { content: "”"; }
 
 	footer {
 		padding-left: 4em;
@@ -206,12 +219,11 @@ q {
 	quotes: "« " " »" "“" "”";
 	font-style: italic;
 
-	.lettrine { @extend .lettrine.with-quote; }
-
 	// Allow to hide a quote (if the lettrine already have one)
 	&.no-quote-before::before,
 	&.no-quote-after::after { @extend .sr; }
 
+	[lang="en"],
 	blockquote & { quotes: "“" "”"; }
 }
 
@@ -303,6 +315,8 @@ textarea { resize: vertical; }
 	}
 
 	@if $gutter != grid-gutter("sm") {
+		blockquote { padding-top: $gutter; }
+
 		hr {
 			height:        $gutter;
 			margin-top:    $gutter;
@@ -326,6 +340,8 @@ textarea { resize: vertical; }
 	}
 
 	@if $gutter != grid-gutter("md") {
+		blockquote { padding-top: $gutter; }
+
 		hr {
 			height:        $gutter;
 			margin-top:    $gutter;

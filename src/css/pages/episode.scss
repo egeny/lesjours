@@ -1,12 +1,12 @@
-/* @group Article */
-$margin: grid-margin("sm");
+/* @group Episode */
 $gutter: grid-gutter("sm");
+$margin: grid-margin("sm");
 
-article {
-	header {
+.episode {
+	> header {
 		position: relative; // Used to position the .snake
 
-		img  {
+		img {
 			@include responsive;
 			max-height: 615px;
 		}
@@ -23,304 +23,207 @@ article {
 		time { display: inline-block; }
 	}
 
-	h3 { @extend .h4; }
-	h4 { @extend .h5; }
-	h5 { @extend .h6; }
+	.share {
+		li {
+			margin-left:  1em;
+			margin-right: 1em;
+			display: inline-block;
+		}
 
-	h3,
-	h4,
-	h5 { margin-bottom: 0; }
+		svg {
+			width:  2em;
+			height: 2em;
+		}
+	}
 
+	> footer {
+		.meta {
+			.row { background: $color-white; }
+			p       { margin: 0 1em 1em 0; }
+			li      { margin-bottom: 1em; }
+			a       { margin-left: .25em; }
+			.tags a { margin-left: 0; }
+		}
+
+		.rel {
+			background: $color-white;
+
+			a { padding: 1em 0; }
+			i { color: $color-brand; }
+
+			svg {
+				width:  3em;
+				height: 3em;
+
+				display: block;
+				position: relative;
+				z-index: 1;
+			}
+
+			.style-meta {
+				display: block;
+				font-size: .9375em;
+				@include font-weight-semi-bold("proxima");
+				line-height: 1.666667;
+			}
+		}
+	}
 }
 
-.article-container {
+.episode-container {
+	// Consider every children as a column
+	> * {
+		@extend .col;
+		@extend .mt-1g;
+		@extend .mb-2g;
+	}
+
+	> :first-child { @extend .mt-2g; }
+
+	> p {
+		line-height: 1.75;
+
+		&:last-of-type::after {
+			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='#{hex-to-rgb($color-brand)}' d='M32 64c17.674 0 32-14.326 32-32S49.674 0 32 0 0 14.326 0 32s14.326 32 32 32zm.54-9c-2.814 0-6.126-1.886-6.126-7.052v-1.394c0-.574.497-1.066 1.076-1.066h.746c.58 0 1.076.492 1.076 1.066v1.558c0 .738.166 4.182 3.395 4.182 1.987 0 3.312-1.804 3.312-4.51V30.4c0-.327-.25-.655-.67-.655h-8.28c-.58 0-1.08-.492-1.08-1.066V10.06c0-.568.5-1.06 1.08-1.06h.74c.58 0 1.08.492 1.08 1.066v16.48c0 .33.24.657.66.657h8.36c.58 0 1.07.492 1.07 1.066v19.84C38.9 52.86 35.67 55 32.52 55z'/></svg>") no-repeat;
+
+			width:  1em;
+			height: 1em;
+			margin-left: .25em;
+
+			content: "";
+			display: inline-block;
+
+			vertical-align: middle;
+		}
+	}
+
 	a {
 		@extend .link;
 		background-position: 0 1.0625em;
 		text-transform: inherit;
 	}
 
+	h3 { @include font-weight-bold("archer"); }
+
 	ol, ul { @extend .list; }
 
-	// Overload some classes that might be useful
+	// We need to add some extra selectors since .episode-container > *
+	// have an higher score than most of the overriding classes
+
+	@for $i from 1 through 8 {
+		.mt-#{$i}g { @extend .mt-#{$i}g; }
+		.mb-#{$i}g { @extend .mb-#{$i}g; }
+	}
+
 	.link-unstyled { @extend .link-unstyled; }
 }
 
-
-article .share { margin-bottom: 1.5em; }
-
-	article .share li {
-		margin-left:  1em;
-		margin-right: 1em;
-		display: inline-block;
-	}
-
-		article .share svg {
-			width:  2em;
-			height: 2em;
-		}
-
-// Consider every child of .article-container as a column
-.article-container > * { @extend .col; }
-
-/*.article-container a {
-	background-position: 0 1.075em;
-	text-transform: inherit;
-}*/
-
-.article-container > p { line-height: 1.75; }
-
-.article-container > p:last-of-type::after {
-	background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='#{hex-to-rgb($color-brand)}' d='M32 64c17.674 0 32-14.326 32-32S49.674 0 32 0 0 14.326 0 32s14.326 32 32 32zm.54-9c-2.814 0-6.126-1.886-6.126-7.052v-1.394c0-.574.497-1.066 1.076-1.066h.746c.58 0 1.076.492 1.076 1.066v1.558c0 .738.166 4.182 3.395 4.182 1.987 0 3.312-1.804 3.312-4.51V30.4c0-.327-.25-.655-.67-.655h-8.28c-.58 0-1.08-.492-1.08-1.066V10.06c0-.568.5-1.06 1.08-1.06h.74c.58 0 1.08.492 1.08 1.066v16.48c0 .33.24.657.66.657h8.36c.58 0 1.07.492 1.07 1.066v19.84C38.9 52.86 35.67 55 32.52 55z'/></svg>") no-repeat;
-
-	width:  1em;
-	height: 1em;
-	margin-left: .25em;
-
-	content: "";
-	display: inline-block;
-
-	vertical-align: middle;
-}
-
-.article-container > aside,
-.article-container > blockquote,
-.article-container > figure,
-.article-container > table,
-.article-container > ol,
-.article-container > p,
-.article-container > ul { margin-bottom: $gutter; }
-
-.article-container > :first-child { margin-top: $gutter; }
-
-	.article-container .mini { margin: 0; }
-	.article-container .share li::before { content: none; }
-
-	article > footer { padding-bottom: $margin; }
-
-		article .meta {
-			padding-right: $margin;
-			padding-left:  $margin;
-		}
-
-			article .meta .row    { background: $color-white; }
-			article .meta p       { margin: 0 1em 1em 0; }
-			article .meta li      { margin-bottom: 1em; }
-			article .meta a       { margin-left: .25em; }
-			article .meta .tags a { margin-left: 0; }
-
-			// FIXME
-			//.meta .link { background-position: 0 1.0125em; } // Don't know why those links behave differently
-			//.meta .link:hover,
-			//.meta .link:focus { @extend %link-active; }
-
-		article .rel { background: $color-white; }
-			article .rel li { display: inline-flex; }
-
-				article .rel a {
-					padding: 1em 0;
-					flex: 1; // Grow so it will use 100% of the parent's height
-					position: relative;
-				}
-
-				article .rel a,
-				article .rel span { display: block; }
-
-				article .rel i {
-					margin-top:  -.5em;
-					position: absolute;
-					top: 50%;
-					left: -$margin;
-
-					font-size: 3em;
-					color: $color-brand;
-				}
-
-				article .rel a[rel="next"] i {
-					right: -$margin;
-					left: auto;
-				}
-
-					article .rel i svg {
-						width:  1em;
-						height: 1em;
-						display: block;
-						position: relative;
-					}
-
-				article .rel a[rel="prev"] div { margin-left:  $gutter * 2; }
-				article .rel a[rel="next"] div { margin-right: $gutter * 2; }
-
-					article .rel .style-meta {
-						font-size: .9375em;
-						@include font-weight-semi-bold("proxima");
-						line-height: 1.666667;
-					}
-
-					article .rel .h5 { margin: 0; }
-
 @include media("md") {
-	$margin: grid-margin("md");
-	$gutter: grid-gutter("md");
-
-	// On tablet and after, the snake is stuck to the column
-	article header .snake {
-		top:   0;
-		right: 0;
-		left:  -4px; // Offset the border
-	}
-
-	article .share {
-		@include fadable;
-		position: absolute;
-		top:    185px;
-		bottom: 0;
-		left:   0;
-	}
-
-	article .share.show { @include fadable-active; }
-
-		article .share ul {
-			margin: 1.5em 0;
-			position: sticky;
-			top: 1.5em;
+	.episode {
+		// On tablet and after, the snake is stuck to the column
+		> header .snake {
+			top:     0;
+			right:   0;
+			bottom: -4px; // Offset the border
+			left:   -4px; // Offset the border
 		}
 
-			article .share li {
-				margin-left:  0;
-				margin-right: 0;
-				display: block;
+		.share {
+			@include fadable;
+			position: absolute;
+			top:    185px;
+			bottom: 0;
+			left:   0;
+
+			&.show { @include fadable-active; }
+
+			ul {
+				margin: 1.5em 0;
+				position: sticky;
+				top: 1.5em;
+			}
+		}
+
+		> footer .rel {
+			i {
+				color: $color-white;
+
+				// Same as .btn-round::before (cannot extend since it is in a media query)
+				span::before {
+					background: $color-brand;
+
+					width:  100%;
+					height: 100%;
+					border-radius: 50%;
+
+					content: "";
+					display: block;
+					position: absolute;
+
+					transition: transform .3s;
+					backface-visibility: hidden;
+				}
 			}
 
-	.article-container > * { @extend .md-ml-1c; }
-	.article-container > * { @extend .md-w-5c; }
-
-	//.article-container a { background-position: 0 1.0625em; }
-
-	.article-container > p,
-	.article-container > ul,
-	.article-container > ol,
-	.article-container > .interview,
-	.article-container > .dialogue { font-size: 1.125em; }
-
-	.article-container .mini { margin-bottom: $gutter; }
-
-	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
-	.article-container .md-ml-0 { @extend .md-ml-0; }
-
-	// We don't need to go through all the columns, we can stop before the "default" size
-	@for $i from 1 through 4 {
-		.article-container .md-w-#{$i}c { @extend .md-w-#{$i}c; }
-	}
-
-	// For columns having the "full" class, remove the margin and expand
-	.article-container > .full { @extend .md-ml-0; }
-	.article-container > .full { @extend .md-w-8c; }
-	.article-container > .full figcaption { @extend .md-ml-1c; }
-
-	article .rel i {
-		margin-left: -.5em;
-		left: 12.5%; // Half the total size
-		color: $color-white;
-	}
-
-	article .rel a[rel="next"] i {
-		margin-left: 0;
-		margin-right: -.5em;
-		right: 12.5%;
-	}
-
-		// Same as .btn-round::before (cannot extend since it is in a media query)
-		article .rel i::before {
-			background: $color-brand;
-
-			width:  100%;
-			height: 100%;
-			border-radius: 50%;
-
-			display: block;
-			content: "";
-			position: absolute;
-
-			transition: transform .3s;
-			backface-visibility: hidden;
-		}
-
-		article .rel a:hover i::before,
-		article .rel a:focus i::before { transform: scale(0.9); }
-
-	article .rel a[rel="prev"] div { margin-left:  25%; }
-	article .rel a[rel="next"] div { margin-right: 25%; }
-
-	@if $margin != grid-margin("sm") {
-		article > footer { padding-bottom: $margin; }
-		article .meta {
-			padding-right: $margin;
-			padding-left:  $margin;
+			& a:hover i span::before,
+			& a:focus i span::before { transform: scale(0.9); }
 		}
 	}
 
-	@if $gutter != grid-gutter("sm") {
-		.article-container > aside,
-		.article-container > blockquote,
-		.article-container > figure,
-		.article-container > table,
-		.article-container > ol,
-		.article-container > p,
-		.article-container > ul { margin-bottom: $gutter; }
-		.article-container > :first-child { margin-top: $gutter; }
-		//article figure .snake { left: #{-$gutter}; }
+	.episode-container {
+		> * {
+			@extend .md-w-5c;
+			@extend .md-ml-1c;
+			font-size: 1.125em;
+		}
+
+		> .full {
+			@extend .md-w-100;
+			@extend .md-ml-0;
+			figcaption { @extend .md-ml-1c; }
+		}
+
+		// We need to add some extra selectors since .episode-container > *
+		// have an higher score than most of the overriding classes
+
+		// We don't need to go through all the columns, we can stop before the "default" size
+		@for $i from 1 through 4 {
+			.md-w-#{$i}c { @extend .md-w-#{$i}c; }
+		}
 	}
 }
 
 @include media("lg") {
-	$margin: grid-margin("lg");
-	$gutter: grid-gutter("lg");
+	.episode > footer .meta {
+		p,
+		ul,
+		li { display: inline-block; }
 
-	.article-container > * { @extend .lg-ml-2c; }
-	.article-container > * { @extend .lg-w-6c; }
-
-	// We need to add some extra selectors since .article-container > * have an higher score than most of the classes
-	.article-container .lg-ml-0  { @extend .lg-ml-0;  }
-	.article-container .lg-ml-1c { @extend .lg-ml-1c; }
-
-	// We don't need to go through all the columns, we can stop before the "default" size
-	@for $i from 1 through 5 {
-		.article-container .lg-w-#{$i}c { @extend .lg-w-#{$i}c; }
+		p,
+		li { margin-right: 1.5em; }
 	}
 
-	// For columns having the "full" class, remove the margin and expand
-	.article-container > .full { @extend .lg-ml-0; }
-	.article-container > .full { @extend .lg-w-12c; }
-	.article-container > .full figcaption { @extend .lg-ml-2c; }
-
-	article .meta p,
-	article .meta ul,
-	article .meta li { display: inline-block; }
-
-	article .meta p,
-	article .meta li { margin-right: 1.5em; }
-
-	@if $margin != grid-margin("md") {
-		article > footer { padding-bottom: $margin; }
-		article .meta {
-			padding-right: $margin;
-			padding-left:  $margin;
+	.episode-container {
+		> * {
+			@extend .lg-w-6c;
+			@extend .lg-ml-2c;
 		}
-	}
 
-	@if $gutter != grid-gutter("md") {
-		.article-container > aside,
-		.article-container > blockquote,
-		.article-container > figure,
-		.article-container > table,
-		.article-container > ol,
-		.article-container > p,
-		.article-container > ul { margin-bottom: $gutter; }
-		.article-container > :first-child { margin-top: $gutter; }
+		> .full {
+			@extend .lg-w-100;
+			@extend .lg-ml-0;
+			figcaption { @extend .lg-ml-2c; }
+		}
 
-		//article figure .snake { left: #{-$gutter}; }
-		.article-container .mini { margin-bottom: $gutter; }
+		// We need to add some extra selectors since .episode-container > *
+		// have an higher score than most of the overriding classes
+
+		// We don't need to go through all the columns, we can stop before the "default" size
+		@for $i from 1 through 5 {
+			.lg-w-#{$i}c { @extend .lg-w-#{$i}c; }
+		}
+
+		.lg-ml-1c { @extend .lg-ml-1c; }
 	}
 }
-/* @end Article */
+/* @end Episode */
