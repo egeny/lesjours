@@ -121,6 +121,53 @@
 		die('OK');
 	} // end of if (isset($_GET['notification']))
 
+	// Asked to renew automatically
+	if (isset($_GET['renew'])) {
+		$meta = get_all_user_meta($current_user->ID);
+
+		if ($meta['payment'] == 'card') {
+			$payload = array(
+				'alias'           => $meta['alias'],
+				'aliasmode'       => 'subscription',
+				'amount'          => $PLANS[$meta['plan']]['price'] * 100,
+				'clientemail'     => $current_user->user_email,
+				'clientident'     => $current_user->ID,
+				'clientip'        => $_SERVER['REMOTE_ADDR'],
+				'clientreferrer'  => $_SERVER['HTTP_REFERER'],
+				'clientuseragent' => $_SERVER['HTTP_USER_AGENT'],
+				'description'     => 'Abonnement',
+				'identifier'      => BE2BILL_IDENTIFIER,
+				'orderid'         => date('Y-m-d').'-'.$current_user->ID,
+				'version'         => '2.0'
+			);
+
+			// Prepare the payload
+			$payload['hash'] = signature($payload);
+			$payload = http_build_query(array(
+				'method' => 'payment',
+				'params' => $payload
+			));
+
+			// Prepare the cURL options
+			$options = array(
+				CURLOPT_URL            => BE2BILL_REST_URL,
+				CURLOPT_POST           => true,
+				CURLOPT_POSTFIELDS     => $payload,
+				CURLOPT_RETURNTRANSFER => true
+			);
+
+			$ch       = curl_init();
+			$success  = curl_setopt_array($ch, $options);
+			$result   = json_decore(curl_exec($ch), true);
+			curl_close($ch);
+
+			var_dump($result);
+		}
+
+		// Bank payment should be automatic
+		die();
+	}
+
 	// Receiving a result from the payment service
 	if (isset($_GET['result'])) {
 		// XXX: logging for debug

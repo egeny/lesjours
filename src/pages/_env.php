@@ -8,6 +8,7 @@
 	// be2bill credentials (payment service)
 	define('BE2BILL_IDENTIFIER', 'LES JOURS TEST');
 	define('BE2BILL_PASSWORD',   '<P?[E}D4pRBGl%qO');
+	define('BE2BILL_REST_URL',   'https://secure-test.be2bill.com/front/service/rest/process');
 	define('BE2BILL_URL',        'https://secure-test.be2bill.com/front/form/process');
 
 	// SlimPay credentials (payment service)
