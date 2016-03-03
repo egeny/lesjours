@@ -158,7 +158,7 @@
 
 			$ch       = curl_init();
 			$success  = curl_setopt_array($ch, $options);
-			$result   = json_decore(curl_exec($ch), true);
+			$result   = json_decode(curl_exec($ch), true);
 			curl_close($ch);
 
 			var_dump($result);
