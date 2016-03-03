@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "brahim-desassigne",
+
+	"number": 31,
+	"date": "2016-03-02T09:00+01:00",
+
+	"title": "Brahim à l’air libre",
+	"intro": "<strong>Assignés.</strong> L’état d’urgence se poursuit, mais pas pour le maçon grenoblois qui vient d’apprendre la levée de son assignation à résidence.",
+	"subtitle": "L’état d’urgence se poursuit mais pas pour le maçon grenoblois dont l’assignation à résidence vient d’être levée.",
+	"lead": "Au bout de trois mois, c’est la quille. Brahim, le maçon d’Echirolles (Isère) que <i>Les Jours</i> ont rencontré en février (lire l’épisode 23, «&nbsp;La vie suspendue de Brahim&nbsp») n’est plus assigné à résidence. Au téléphone, il exulte",
+
+	"tags": ["13 Novembre", "état d’urgence", "assigné", "justice", "terrorisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": "author:pablo-chignard" }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/loi-antiterroriste",
+		"last":  "episode:treize-novembre/brahim-desassigne"
+	}
+}

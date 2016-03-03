@@ -1,0 +1,38 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+{% set person = obsession.people[7] %}
+<p><span class="lettrine">A</span>u bout de trois mois, c’est la quille. <a href="#{{ person.href }}" data-mini="1">Brahim</a>, le maçon d’Echirolles (Isère) que <i>Les Jours</i> ont rencontré en février (lire <a href="http://www.lesjours.fr/obsessions/treize-novembre/la-vie-suspendue-de-brahim/">l’épisode 23</a>, «&nbsp;La vie suspendue de Brahim&nbsp;») n’est plus assigné à résidence. Au téléphone, il exulte&nbsp;: <q>Ils m’ont enlevé un stress de dingue&nbsp;!</q>
+
+{% set person = obsession.people[7] %}
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Brahim le savait, la reconduction de l’état d’urgence jusqu’au 26 mai pouvait signifier, pour lui, l’obligation de continuer à pointer trois fois par jour et de respecter le couvre-feu à 20 heures. Il se préparait à cette éventualité (lire <a href="http://www.lesjours.fr/obsessions/treize-novembre/etat-urgence-vous-en-reprendrez-bien-pour-trois-mois/">l’épisode 24</a>, «&nbsp;Vous en reprendrez bien pour trois mois&nbsp;?&nbsp;»).</p>
+
+<figure>
+<img src="img/brahim-libre-1.jpg" alt="" />
+<figcaption><span>Brahim était assigné à résidence depuis trois mois <span class="credits">Photo Pablo Chignard pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Pour chacune des assignations à résidence qu’il désirait prolonger, le ministère de l’Intérieur devait toutefois renouveler explicitement la mesure, après réexamen. Brahim n’a rien reçu. Samedi, en allant pointer au commissariat comme d’habitude, l’assigné signale donc aux policiers qu’en principe, il n’a plus à venir. Mais c’est le week-end, personne n’est vraiment au courant, et on lui conseille de continuer jusqu’à lundi. Il est alors reçu par <q>la commandante qui s’occupe de (s)on affaire</q>. Elle reconnaît que plus rien ne l’oblige à pointer mais tient à vérifier et lui confirme par téléphone, un peu plus tard dans la journée.</p>
+
+<p>Il en déduit qu’il ne fait pas partie du <q>haut du spectre</q>, pour reprendre les termes du ministère. En clair, les personnes considérées comme prioritaires car potentiellement dangereuses. La semaine dernière, Beauvau annonçait que <q>moins de cent</q> assignations à résidence seraient renouvelées le 25 février sur 294 encore en cours et 401 prononcées au total depuis le début de l’état d’urgence (dont une partie visait les militants écologistes anti-Cop 21)</p>
+
+<p>Même s’il est soulagé, Brahim aimerait recevoir un papier officiel. Il n’a obtenu aucune information sur les raisons du non-renouvellement, pas plus que sur les affirmations de l’arrêté initial -&nbsp;sa radicalisation supposée, les propos qu’il aurait tenus&nbsp;- et les erreurs qu’il contenait, comme l’affirmation -&nbsp;fausse&nbsp;- que <q>plusieurs armes de guerre</q> ont été retrouvées chez lui. L’examen de son recours au tribunal administratif devait avoir lieu <q>le 29 février ou le 1er mars</q>, il ne s’en souvient plus très bien, puisqu’il a appris la bonne nouvelle avant.</p>
+
+<aside>
+<p><span>Une plainte d’ex-assignés à résidence,</span> contre le ministère de l’Intérieur</p>
+</aside>
+
+<p>Brahim envisage désormais de se joindre à l’action en justice de cinq ex-assignés à résidence, défendus par l’avocat Arié Alimi. Ils ont porté plainte au pénal contre le ministre de l’Intérieur, Bernard Cazeneuve, et son ancien directeur des affaires juridiques et des libertés publiques, Thomas Andrieu, devenu directeur de cabinet de Jean-Jacques Urvoas à la Justice. Les plaignants les accusent d’<q>atteinte à la liberté individuelle</q>, <q>abstention volontaire de mettre fin à une privation illégale de liberté</q> et <q>discrimination</q>. La Ligue des droits de l’homme et la Fédération internationale des droits de l’homme se sont jointes à l’initiative.</p>
+
+<p>Pour Brahim et sa liberté de mouvement toute neuve, la priorité est cependant <q>d’aller manger quelque part et partir en week-end avec ma femme et mes enfants</q>. La semaine prochaine, il doit passer des examens à l’hôpital, pour des brûlures d’estomac persistantes. <q>Le médecin m’a dit&nbsp;: “vous êtes stressé.” Bien sûr que je suis stressé. Avec tout ça, je crois que j’ai chopé un ulcère.</q></p>

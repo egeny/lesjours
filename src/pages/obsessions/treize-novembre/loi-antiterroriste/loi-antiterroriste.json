@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "loi-antiterroriste",
+
+	"number": 30,
+	"date": "2016-03-01T10:00+01:00",
+
+	"title": "Antiterrorisme&nbsp;: l’urgence pour tous",
+	"intro": "<strong>Députés en état d’urgence.</strong> La loi discutée à partir de mardi accroît les pouvoirs du préfet et du procureur. Au nom de l’efficacité.",
+	"subtitle": "La loi discutée à partir d’aujourd’hui accroît les pouvoirs du préfet et du procureur. Au nom de l’efficacité.",
+	"lead": "Mi-janvier, un certain Jean-Jacques Urvoas mettait en garde ses collègues députés&nbsp;: «&nbsp;Il faudra veiller à ce que les procédures gloutonnes existantes dans l’état d’urgence ne viennent pas dévorer le droit commun des libertés.&nbsp;»",
+
+	"tags": ["13 Novembre", "terrorisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": ["author:sebastien-calvet", "author:albert-facelly"] }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/fusil-barbus",
+		"next": "episode:treize-novembre/brahim-desassigne",
+		"last":  "episode:treize-novembre/brahim-desassigne"
+	}
+}
