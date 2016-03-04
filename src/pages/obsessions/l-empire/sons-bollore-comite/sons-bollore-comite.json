@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "sons-bollore-comite",
+
+	"number": 7,
+	"date": "2016-03-05T10:00+01:00",
+
+	"title": "Canal+, la voix de son maître",
+	"intro": "En septembre, Bolloré vire une partie des cadres de Canal+. «&nbsp;Les Jours&nbsp;» publient un enregistrement qui illustre la violence du moment.",
+	"subtitle": "En septembre, Bolloré vire des cadres de Canal+. «&nbsp;Les Jours&nbsp;» publient un enregistrement qui illustre la violence du moment.",
+	"lead": "Sur l’enregistrement, on entend des soupirs, des toux nerveuses, incessantes, des <q>putain, putain, putain</q> paniqués et chuchotés, de rares rires tendus, comme des hoquets. Une seule voix sonne fort et clair.",
+
+	"tags": ["Vincent Bolloré", "Canal+", "Vivendi", "Universal"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:garriberts" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:l-empire/ep2-plug-canal",
+		"prev":  "episode:l-empire/trois-septembre-1",
+		"last":  "episode:l-empire/sons-bollore-comite"
+	}
+}
