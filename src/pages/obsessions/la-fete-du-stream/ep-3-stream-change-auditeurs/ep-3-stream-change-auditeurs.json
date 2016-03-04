@@ -21,7 +21,8 @@
 
 		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
 		"prev":  "episode:la-fete-du-stream/ep-2-artistes-stream",
-		"last":  "episode:la-fete-du-stream/ep-3-stream-change-auditeurs"
+		"last":  "episode:la-fete-du-stream/ep-4-mission-schwartz",
+		"next": "episode:la-fete-du-stream/ep-4-mission-schwartz"
 
 			}
 }

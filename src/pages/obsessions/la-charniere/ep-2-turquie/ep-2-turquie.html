@@ -25,8 +25,10 @@
 <p>L’islam progresse, ces dernières années, dans l’espace public turc. Et cela effraie une partie de la population qui, tournée vers la rive européenne du pays, souhaite continuer de vivre à l’occidentale. On pointe les taxes sur l’alcool qui n’en finissent plus de grimper. Le vin désormais interdit sur les lignes intérieures de Turkish Airlines. Les terrasses fermées par certaines municipalités. Le recul de la mixité dans les piscines, où des villes imposent des horaires séparés pour les hommes et les femmes, comme sur quelques plages.</p>
 
 {% set person = obsession.people[4] %}
-<p>Un syndicat universitaire proche de <a href="#{{ person.href }}" data-mini="2">l’AKP</a> s’est déclaré contre la mixité à l’école{% set person = obsession.people[6] %}, s’inquiète <a href="#{{ person.href }}" data-mini="3">Gülistan Zeren</a>, étudiante à l’université de Galatasaray. Assise très droite dans un café de Besiktas, vieux quartier d’Istanbul, elle écoute attentivement les questions, répond dans un français soigné. {% set person = obsession.people[2] %}
-L’une de ses profs, <a href="#{{ person.href }}" data-mini="4">Buket Türkmen</a>, avait prévenu&nbsp;: Gülistan est l’une de ses élèves les plus brillantes. Elle s’intéresse à la sociologie de la santé, et suit, pas rassurée, les transformations de son pays.</p>
+<p>Un syndicat universitaire proche de l’<a href="#note-2">AKP</a> s’est déclaré contre la mixité à l’école, s’inquiète <a href="#{{ person.href }}" data-mini="2">Gülistan Zeren</a>, étudiante à l’université de Galatasaray. Assise très droite dans un café de Besiktas, vieux quartier d’Istanbul, elle écoute attentivement les questions, répond dans un français soigné. {% set person = obsession.people[2] %}
+L’une de ses profs, <a href="#{{ person.href }}" data-mini="3">Buket Türkmen</a>, avait prévenu&nbsp;: Gülistan est l’une de ses élèves les plus brillantes. Elle s’intéresse à la sociologie de la santé, et suit, pas rassurée, les transformations de son pays.</p>
+
+
 
 {% set person = obsession.people[4] %}
 {{
@@ -40,22 +42,10 @@ subtitle: person.subtitle
 })
 }}
 
-{% set person = obsession.people[6] %}
-{{
-mini({
-number: 3,
-img: "/obsessions/" + obsession.href + "/" + person.img,
-alt: person.alt,
-href: "#" + person.href,
-title: person.title,
-subtitle: person.subtitle
-})
-}}
-
 {% set person = obsession.people[2] %}
 {{
 mini({
-number: 4,
+number: 3,
 img: "/obsessions/" + obsession.href + "/" + person.img,
 alt: person.alt,
 href: "#" + person.href,
@@ -69,10 +59,10 @@ subtitle: person.subtitle
 <figcaption><span>Des militants de l’AKP lors d’un meeting pendant la campagne pour les élections législatives à Istanbul, en 2015 <span class="credits">Photo Christophe Petit-Tesson pour <i>Les Jours</i>.</span></span></figcaption>
 </figure>
 
-{% set person = obsession.people[7] %}
+{% set person = obsession.people[5] %}
 <p>En Turquie, les mœurs sont sous observation. La justice s’est récemment essayée à qualifier les pratiques interdites dans les films pornographiques&nbsp;: zoophilie, sexualité de groupe, sodomie… Un ministre a qualifié l’homosexualité de <q>déviance</q> et l’année dernière, le gouverneur d’Istanbul (le préfet) a fait interdire la gay pride deux heures avant le défilé. La police a chargé les 80&nbsp;000 manifestants. <a href="#{{ person.href }}" data-mini="5">Sedef Cakmak</a>, élue municipale, lesbienne revendiquée, militante LGBT, a essayé de négocier. Elle raconte que le préfet prétendait <q>protéger les manifestants</q> contre les réactions de la population en plein mois de ramadan. <i>«&nbsp;En réalité, la gay pride s’était aussi déroulée pendant le ramadan l’année précédente</i>, dit Sedef, <i>sans provoquer la moindre réaction. Le pouvoir se sert juste du peuple conservateur pour faire peur et interdire.&nbsp;»</i></p>
 
-{% set person = obsession.people[7] %}
+{% set person = obsession.people[5] %}
 {{
 mini({
 number: 5,
@@ -92,10 +82,10 @@ subtitle: person.subtitle
 </blockquote>
 
 
-{% set person = obsession.people[10] %}
-<p>Au-delà de la religion, le contrôle social se renforce. Une enseignante célibataire raconte comment la police a débarqué chez elle un soir, parce que quelqu’un avait prévenu qu’elle recevait un homme. Pour la même raison, une photographe a failli se faire virer par son propriétaire&nbsp;: une bignole de l’immeuble d’en face l’avait dénoncée. Le voisinage surveille. Et le <i>muhtar</i>, le «&nbsp;gardien du quartier&nbsp;», qui représente la municipalité, rend théoriquement service à la population mais fait aussi remonter tout ce qui se passe dans les parages. <q>Les muhtars jouent un rôle clé</q>, grince <a href="#{{ person.href }}" data-mini="6">Sinan Logie</a>, architecte qui connaît Istanbul comme sa poche, organise des ballades urbaines, a écrit <a href="#note-2">un petit livre</a> passionnant et impertinent pour comprendre les transformations politiques et urbanistiques de sa ville. <q>Les muhtars fonctionnent comme une petite Stasi, contrôlent la population, sont souvent invités pour des réceptions au palais d’Erdogan.</q></p>
+{% set person = obsession.people[8] %}
+<p>Au-delà de la religion, le contrôle social se renforce. Une enseignante célibataire raconte comment la police a débarqué chez elle un soir, parce que quelqu’un avait prévenu qu’elle recevait un homme. Pour la même raison, une photographe a failli se faire virer par son propriétaire&nbsp;: une bignole de l’immeuble d’en face l’avait dénoncée. Le voisinage surveille. Et le <i>muhtar</i>, le «&nbsp;gardien du quartier&nbsp;», qui représente la municipalité, rend théoriquement service à la population mais fait aussi remonter tout ce qui se passe dans les parages. <q>Les muhtars jouent un rôle clé</q>, grince <a href="#{{ person.href }}" data-mini="6">Sinan Logie</a>, architecte qui connaît Istanbul comme sa poche, organise des ballades urbaines, a écrit <a href="#note-3">un petit livre</a> passionnant et impertinent pour comprendre les transformations politiques et urbanistiques de sa ville. <q>Les muhtars fonctionnent comme une petite Stasi, contrôlent la population, sont souvent invités pour des réceptions au palais d’Erdogan.</q></p>
 
-{% set person = obsession.people[10] %}
+{% set person = obsession.people[8] %}
 {{
 mini({
 number: 6,
@@ -113,10 +103,10 @@ subtitle: person.subtitle
 <p><span>Le repli du pouvoir turc</span> s’est fait en deux temps</p>
 </aside>
 
-{% set person = obsession.people[8] %}
-<p>Enfant, <a href="#{{ person.href }}" data-mini="7">Melda Onur</a> l’a sillonné d’est en ouest ce pays, de petites villes en villages, quand son père militaire changeait de garnison. Puis elle a fait des études de sciences politiques avant de devenir journaliste économique, puis députée <a href="#note-3">CHP</a> de 2011 à 2015. <i>«&nbsp;Le gouvernement actuel</i>, dit-elle, <i>a fait de l’islam sunnite la religion officielle. Or, un gouvernement qui n’est pas laïc, qu’il soit chrétien ou musulman, ne peut être démocratique.&nbsp;»</i> Elle soupçonne l’AKP d’avoir toujours eu <q>un agenda caché</q> depuis son accession au pouvoir en 2002. <i>«&nbsp;Dans un premier temps</i>, dit-elle, <i>il a cherché à rassurer, tout en libérant les musulmans qui étaient opprimés en Turquie. Mais après cette libération, il ne laisse plus les autres vivre comme ils le souhaitent. Une véritable ingénierie conservatrice se met en place. Je n’ai jamais cru à cette démocratisation dont tout le monde parlait.&nbsp;»</i></p>
+{% set person = obsession.people[6] %}
+<p>Enfant, <a href="#{{ person.href }}" data-mini="7">Melda Onur</a> l’a sillonné d’est en ouest ce pays, de petites villes en villages, quand son père militaire changeait de garnison. Puis elle a fait des études de sciences politiques avant de devenir journaliste économique, puis députée <a href="#note-4">CHP</a> de 2011 à 2015. <i>«&nbsp;Le gouvernement actuel</i>, dit-elle, <i>a fait de l’islam sunnite la religion officielle. Or, un gouvernement qui n’est pas laïc, qu’il soit chrétien ou musulman, ne peut être démocratique.&nbsp;»</i> Elle soupçonne l’AKP d’avoir toujours eu <q>un agenda caché</q> depuis son accession au pouvoir en 2002. <i>«&nbsp;Dans un premier temps</i>, dit-elle, <i>il a cherché à rassurer, tout en libérant les musulmans qui étaient opprimés en Turquie. Mais après cette libération, il ne laisse plus les autres vivre comme ils le souhaitent. Une véritable ingénierie conservatrice se met en place. Je n’ai jamais cru à cette démocratisation dont tout le monde parlait.&nbsp;»</i></p>
 
-{% set person = obsession.people[8] %}
+{% set person = obsession.people[6] %}
 {{
 mini({
 number: 7,
@@ -171,10 +161,10 @@ subtitle: person.subtitle
 <p><span>Dans la culture aussi,</span> le conservatisme prend le pouvoir</p>
 </aside>
 
-{% set person = obsession.people[9] %}
+{% set person = obsession.people[7] %}
 <p>Dans le quartier de Kadiköy, sur la rive asiatique d’Istanbul, <a href="#{{ person.href }}" data-mini="10">Evren Erbatur</a> a ses habitudes dans un petit salon de thé charmant, aux pâtisseries délicieuses. Elle est actrice, metteure en scène, danseuse, professeure de théâtre. Écrit sur le théâtre alternatif, constate que dans la culture aussi, le conservatisme prend le pouvoir. Les ballets traditionnels et les théâtres nationaux sont très soutenus, le reste délaissé. Elle aussi s’inquiète des dérives de son pays. <i>«&nbsp;Nous avons besoin d’un regard extérieur</i>, dit-elle. <i>Nous ne savons plus où nous allons, notre société se transforme vite et de façon parfois assez contradictoire.&nbsp;»</i></p>
 
-{% set person = obsession.people[9] %}
+{% set person = obsession.people[7] %}
 {{
 mini({
 number: 10,
@@ -213,6 +203,15 @@ caption: "Avis rendu par un spécialiste de l’islam sur une question particuli
 {{
 note({
 number: 2,
+title: "L’AKP",
+caption: "Le Parti de la justice et du développement. Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays."
+})
+}}
+
+
+{{
+note({
+number: 3,
 title: "Istanbul 2023",
 caption: "«&nbsp;Istanbul 2023&nbsp;», le livre de Sinan Logie et Yoann Morvan, est sorti en France aux éditions B2, collection Territoires, en octobre 2014."
 })
@@ -220,7 +219,7 @@ caption: "«&nbsp;Istanbul 2023&nbsp;», le livre de Sinan Logie et Yoann Morvan
 
 {{
 note({
-number: 3,
+number: 4,
 title: "Le CHP",
 caption: "Le Parti républicain du peuple est un parti laïc créé par Mustafa Kemal, dit Atatürk, fondateur de la République de Turquie. Parti unique de 1923 à 1946, puis accédant au pouvoir par alternance, le CHP est aujourd’hui la principale force d’opposition."
 })
