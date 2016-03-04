@@ -1,0 +1,387 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[8] %}
+<p><span class="lettrine">A</span>ttablé devant un poisson non loin de la place de la Madeleine, à Paris, <a href="#{{ person.href }}" data-mini="1">Marc Schwartz</a> s’arrête tout d’un coup pour peser ses mots. Puis il se lance avec la voix feutrée des hommes habitués à la diplomatie la plus sensible&nbsp;: <q>Mon premier constat a été que la filière musicale française est assez… divisée. Il lui manque un lieu apaisé pour débattre. Comme il n’existe pas, les oppositions sont exacerbées.</q> Quelques jours plus tard, un autre acteur de ce secteur où il faut parler <i>off</i> pour dire réellement quelque chose sera moins poli&nbsp;: <q>Schwartz nous a dit <q>Plus jamais ça</q>. Cette négo l’a choqué.</q></p>
+
+{{
+	mini({
+		number:   1,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Cette «&nbsp;négo&nbsp;», ce sont les deux mois et quelques que ce médiateur, qui en a pourtant vu d’autres, a menés au pas de charge pendant l’été 2015 pour faire aboutir son <a href="#" data-mini="2">«&nbsp;protocole Schwartz&nbsp;»</a> –&nbsp;sous-titré par le ministère de la Culture <q>Pour un développement équitable de la musique en ligne</q>. Il s’agissait d’éviter que les plus petits artistes et les plus petites maisons de disques ne décrochent dans une nouvelle économie de la musique dominée par le streaming (<a href="/obsessions/la-fete-du-stream/ep-1-du-cd-au-streaming">lire l’épisode 1</a>, «&nbsp;Du CD au streaming, courte histoire d’une révolution&nbsp;») et de moins en moins taillée pour eux. Il s’agissait aussi d’obliger les acteurs de la filière à se parler un peu gentiment pour une fois.</p>
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.culturecommunication.gouv.fr/Presse/Dossiers-de-presse/Presentation-du-protocole-d-accord-issu-de-la-mediation-Schwartz-Pour-un-developpement-equitable-de-la-musique-en-ligne" />
+<span class="image"><img class="responsive" src="img/protocole-schwartz.jpg" alt="" /></span>
+<p class="title">Le protocole Schwartz</p>
+<p class="subtitle">À consulter sur le site du ministère de la Culture.</p>
+</a>
+</aside>
+
+<p>Ces deux mois de tractations politico-économiques sont ainsi un parfait résumé de l’état du monde de la musique en France, un microcosme où se croisent les crispations actuelles autour des revenus du <a href="#note-1">streaming</a>, mais aussi des pratiques obsolètes venues de l’époque du compact disc.</p>
+
+
+<p>Marc Schwartz, qui a, par le passé, mené la décriée médiation entre <a href="#" data-mini="3">la presse et Google</a>, est arrivé vierge dans l’arène de la musique. Il ne connaissait rien de son économie et ne fait pas partie du sérail –&nbsp;contrairement à beaucoup d’autres rapporteurs avant lui. Sa mission était vaste&nbsp;: les artistes reprochent aux <a href="#note-2">producteurs</a> de disques de ne pas tout leur dire sur leurs revenus numériques&nbsp;; les producteurs reprochent aux plateformes de streaming de ne pas attirer assez de clients&nbsp;; les plateformes de streaming reprochent aux producteurs de les étrangler avec des droits d’accès à leur musique trop élevés. S’ajoutaient aussi, en filigrane, des clauses abusives qui apparaissent encore parfois dans les contrats qui lient les artistes et les producteurs et, enfin, la nécessité de réconcilier artistes et producteurs après le divorce des années <a href="#note-3">Hadopi</a>.</p>
+
+<aside id="mini-3" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.liberation.fr/ecrans/2013/02/02/google-et-la-presse-60-millions-d-accalmie_949756" />
+<span class="image"><img class="responsive" src="img/liberation.jpg" alt="" /></span>
+<p class="title">«&nbsp;Google et la presse, 60 millions d’accalmie&nbsp;»</p>
+<p class="subtitle">À lire sur Libération.</p>
+</a>
+</aside>
+
+
+<blockquote>
+<p>Pour les labels indépendants, la question du partage de la valeur dans le streaming, c’est&nbsp;: “Est-ce que je serai vivant dans cinq ans, le temps que le numérique soit devenu un marché à part entière&nbsp;?”</p>
+<footer>Philippe Couderc, patron d’un label indépendant</footer>
+</blockquote>
+ 
+
+<p><q>Tout le monde voulait passer à autre chose. C’est pénible de vivre dans ce climat de suspicion</q>, résume aujourd’hui Vincent Frèrebeau, le fondateur du label <a href="#note-4">Tôt ou Tard</a>, l’une des réussites indépendantes françaises de ces deux dernières décennies, qui est également président de l’Union des producteurs Indépendants (<a href="#note-5">UPFI</a>).</p>
+
+<p>Philippe Couderc, patron lui aussi indépendant du label bordelais Vicious Circle, veut pour sa part élargir le débat pour rappeler que ce sont surtout deux conceptions de la musique qui s’affrontent sur la question du streaming&nbsp;: les <a href="#note-6">majors</a> et les grands <a href="#note-7">indépendants</a> comme Because et Wagram d’un côté, les petits et très petits de l’autres. <q>Les grosses boîtes ont des comptes au trimestre et leurs PDG sont payés au résultat&nbsp;; donc ça fait des stratégies à court terme. On ne construit rien comme ça et pour nous, c’est une catastrophe. Pour les labels indépendants, la question du partage de la valeur dans le streaming, c’est&nbsp;: <q>Est-ce que je serai vivant dans cinq ans, le temps que le numérique soit devenu un marché à part entière&nbsp;?</q> Voilà une question centrale, sinon ça sera un avenir avec trois majors. Tout le monde n’a pas les mêmes intérêts et seul l’État pouvait faire en sorte de nous réunir sur ces sujets.</q></p>
+
+<p>Va donc pour l’État, qui a déjà échoué à faire bouger la filière musicale après les précédentes missions Zelnik, Hoog ou Lescure. Cette fois, la ministre d’alors, Fleur Pellerin, a attaqué le dossier à sa façon, plus technique que politique. Quand sa prédécesseure Aurélie Filippetti avait imposé une vision pro-artistes par la loi avant de proposer de l’assouplir lors d’une négociation, Pellerin a préféré ouvrir une discussion large tout en menaçant d’une loi en cas d’échec. Le milieu la dit proche des producteurs, notamment de Vincent Frèrebeau –&nbsp;elle était d’ailleurs présente lors d’une fête donnée il y a peu pour l’anniversaire de Tôt ou Tard. Mais il est difficile de dire que la médiation qu’elle a confiée à Marc Schwartz a servi la soupe à un camp plus qu’à un autre. Elle a surtout confronté des égoïsmes.</p>
+
+<aside>
+<p><span>Schwartz a vu tout le monde,</span> petits et grands</p>
+</aside>
+
+<p>C’est d’ailleurs pour cette raison précise que la <a href="#note-8">rue de Valois</a> avait opté pour une mission éclair pendant l’été avec, en date butoir, l’arrivée de la <a href="#" data-mini="4">«&nbsp;loi création&nbsp;»</a> à l’Assemblée nationale. Ce texte est un fourre-tout qui modernise des questions d’architecture aussi bien qu’il renforce la liberté de création et de programmation des spectacles dans une époque où certains élus veulent faire de la politique avec leurs théâtre locaux. Il embarque aussi plusieurs dispositions s’appliquant à la musique et débattues sous l’égide de Marc Schwartz, qu’il fallait donc solder avant que la loi ne soit soumise aux parlementaires. Cette stratégie a été choisie, selon mes informations, parce que le ministère est fatigué d’avoir <q>affaire à des gens qui veulent toujours jouer la montre</q>. On en est là, alors que la musique vit un nouveau chambardement majeur de son économie qui tend à profiter uniquement aux plus forts.</p>
+
+<aside id="mini-4" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="https://www.legifrance.gouv.fr/affichLoiPreparation.do?idDocument=JORFDOLE000030857456&type=general&typeLoi=proj&legislature=14" />
+<span class="image"><img class="responsive" src="img/loi-creation.jpg" alt="" /></span>
+<p class="title">Loi création</p>
+<p class="subtitle">La nouvelle loi sur «&nbsp;la liberté de la création, l’architecture et le patrimoine&nbsp;» doit revenir en deuxième lecture à l’Assemblée en mars. À consulter sur Legifrance.</p>
+</a>
+</aside>
+
+{% set person = obsession.people[1] %}
+<p>Marc Schwartz a vu tout le monde, petits et grands, en commençant stratégiquement par la <a href="#{{ person.href }}" data-mini="5">GAM</a>, la Guilde des artistes de la musique. Sans cette GAM, il n’y aurait pas eu d’accord, selon plusieurs de mes interlocuteurs. {% set person = obsession.people[3] %}Les représentants traditionnels des artistes dans ce genre de discussions sont la <a href="#{{ person.href }}" data-mini="6">Sacem</a> et {% set person = obsession.people[0] %}<a href="#{{ person.href }}" data-mini="7">l’Adami</a>, deux sociétés de perception et de répartition des droits (SPRD) qui <q>ne représentent pas leurs milliers de membres. [Elles] gèrent des revenus, point. Il y a une confusion malsaine dans le débat</q>, m’a expliqué une autre source, qui trouve que ces deux sociétés très influentes ont trop souvent prétendu défendre les artistes alors qu’elles s’intéressent surtout à leur rétribution.</p>
+
+{% set person = obsession.people[1] %}
+{{
+	mini({
+		number:   5,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[3] %}
+{{
+	mini({
+		number:   6,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[0] %}
+{{
+	mini({
+		number:   7,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[5] %}
+<p>La GAM n’a pas non plus de mandat pour parler au nom des artistes, mais ses membres ont pour eux leur légitimité de musiciens actifs et leur courage de discuter d’égal à égal avec leurs employeurs, les producteurs. Surtout, l’Adami s’est tellement écharpée par le passé avec les plus gros producteurs, et notamment leur syndicat le <a href="#{{ person.href }}" data-mini="8">Snep</a>, qu’elle est arrivée aux tables rondes menées par Marc Schwartz avec l’intention de ne pas signer l’accord. <i>«&nbsp;Politiquement, on a conscience qu’on était le personnage intéressant du rouage, la variable d’ajustement pour que ce protocole existe</i>, m’a dit Suzanne Combo, une chanteuse qui a découvert la violence des échanges dans le monde de la musique en tant que déléguée générale de la GAM. <i>Mais les seuls qui ne nous ont pas appelés, c’est l’Adami.&nbsp;»</i> Ambiance.</p>
+
+{{
+	mini({
+		number:   8,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+<p><span>L’Adami pensait voir</span> la mission Schwartz quitter la route</p>
+</aside> 
+
+<p>De fait, l’Adami n’a pas signé le protocole parce qu’elle n’a pas obtenu ce qu’elle demandait&nbsp;: la création d’un nouveau <q>droit à rémunération des artistes au titre de la mise à disposition de leurs enregistrements dans les services</q> de streaming. Une rémunération qui serait <q>gérée collectivement</q>… par l’Adami.</p>
+
+<p>Sans sa précieuse signature, l’Adami pensait jusqu’au dernier jour voir la mission Schwartz quitter la route. Elle a dans ce sens été à l’origine d’un <a href="http://www.assemblee-nationale.fr/14/amendements/3068/AN/318.asp" target="_blank">amendement</a> à la loi création déposé en dernière minute par Patrick Bloche, le très stratège président de la commission des Affaires culturelles de l’Assemblée nationale. Celui-ci proposait d’imposer la <a href="#note-9">gestion collective</a> au streaming par la loi si la médiation Schwartz n’aboutissait pas (Claude Raynal, socialiste de Haute-Garonne, a fait de même, sans succès, lors de la lecture au Sénat). Finalement, l’amendement Bloche est tombé au bon moment pour tout le monde&nbsp;: il soutenait une revendication de l’Adami tout en mettant la pression sur les autres acteurs de la filière, très fortement opposés à l’application de la gestion collective à la musique en ligne. <i>«&nbsp;Vincent Frèrebeau était très pâle le dernier jour des négociations, l’UPFI avait une peur bleue qu’on ne signe pas</i>, se rappelle Suzanne Combo. <i>Le Snep aussi a cru à cet amendement Bloche, sinon il n’aurait pas signé un accord qui engage les producteurs à ce point.&nbsp;»</i></p>
+
+<p>De fait, les producteurs ont accepté in extremis certains points de l’accord pour ne pas se voir imposer par la loi ce qu’ils rejettent le plus&nbsp;: la gestion collective, qui les priverait de leur pouvoir de négociation avec les plateformes de streaming. Pour présenter –&nbsp;avec hésitation&nbsp;– un texte signé à la ministre, le médiateur Marc Schwartz a quant à lui préféré jouer la carte qu’il savait depuis le début essentielle&nbsp;: la GAM plutôt que l’Adami, afin de mettre en avant un représentant des artistes parmi les signataires. S’y ajoutent plusieurs syndicats de musiciens, dont la centrale Snam-CGT, qui regroupe 35 d’entre eux.</p>
+
+<aside>
+<p><span>Le ministère n’a pas le courage</span> d’imposer une réforme mal-aimée</p>
+</aside>
+
+<p>Ces manœuvres de dernière minute sont un changement de stratégie qui aura peut-être des conséquences dans les années à venir&nbsp;: en renforçant la jeune GAM au sein de la filière, le ministère a brisé l’opposition frontale entre l’Adami et le Snep en y faisant entrer un troisième acteur. Les grandes réformes des années&nbsp;80 sont bien loin et la rue de Valois n’a plus ni le courage politique, ni la volonté d’imposer une réforme mal-aimée. Il prône à la place la <q>responsabilisation</q> d’une filière pourtant très peu solidaire, mais qui, pour une fois, parmi mes interlocuteurs, est quasi unanime pour rejeter l’idée de confier à l’Adami la distribution des revenus du streaming. Notamment en l’estimant trop fragile techniquement pour gérer la complexité des microrevenus du streaming.</p>
+
+{% set person = obsession.people[6] %}
+<p>Mais l’Adami reste influente et bien introduite dans les couloirs actuellement dirigés par le Parti socialiste. Dans les semaines qui ont suivi la signature du protocole le 2 octobre 2015, ses idées ont ainsi pu bénéficier indirectement, toujours selon mes informations, du lobbying de Manuel Valls –&nbsp;et surtout de sa femme Anne Gravoin, violoniste sensible aux revendications des sociétés d’artistes. {% set person = obsession.people[7] %}Dans un échange animé avec le Premier ministre, Fleur Pellerin a dû justifier sa décision de ne pas suivre la piste de la gestion collective et la faiblesse d’un accord signé non seulement sans l’une des principales sociétés de gestion des droits des musiciens, mais également sans <a href="#{{ person.href }}" data-mini="9">Spotify</a> et <a href="#{{ person.href }}" data-mini="10">YouTube</a>, deux acteurs majeurs de la nouvelle économie du streaming.</p>
+
+{% set person = obsession.people[6] %}
+{{
+	mini({
+		number:   9,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[7] %}
+{{
+	mini({
+		number:   10,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Tel qu’il a été paraphé, et avant qu’il ne soit appauvri par les coups bas qui pointent déjà, le protocole Schwartz contient malgré tout quelques réelles avancées qui ont replacé la France en pointe dans les discussions politiques sur l’encadrement de la musique en ligne.</p>
+
+<h3>Garantir un revenu minimal pour les artistes</h3>
+
+<br />
+
+<p>Il s’agit d’empêcher que les artistes, parce que leurs revenus du streaming déjà faibles sont amputés par des <a href="#note-10">abattements</a>, ne touchent presque rien de l’exploitation de leur musique en ligne. Ce point est le compromis le plus fragile de l’accord final et n’est que le début d’une négociation entre représentants des producteurs et des musiciens qui devrait s’ouvrir dans les prochaines semaines. Selon le texte signé, <q>les producteurs de phonogrammes s’engagent, dans les négociations individuelles et collectives portant sur la <a href="#note-11">rémunération</a> des artistes interprètes, à leur apporter une garantie de rémunération minimale en contrepartie de l’exploitation numérique de leurs enregistrements</q>. Si ces discussions n’aboutissent pas, un amendement du gouvernement inséré dans la loi création (l’article L. 212-13-1) prévoit qu’une commission mixte se chargera d’établir les bases de cette nouvelle rémunération plancher.</p>
+
+<p>Mais la suite du texte révèle d’office que ces discussions seront rugueuses. Car les producteurs ont commencé par hurler à l’idée même de discuter d’une rémunération minimale, et le sujet n’est revenu sur la table que pendant les derniers jours de la médiation Schwartz. Finalement, ce minima a bien été inscrit dans le texte parce que <q>cette garantie pourra prendre différentes formes, comme par exemple […] une avance minimale</q>.</p>
+
+
+<blockquote>
+<p>C’est indécent de proposer ça. Si les majors sont incapables de nous respecter davantage, ça va être compliqué.</p>
+<footer>Suzanne Combo, chanteuse et déléguée générale de la GAM</footer>
+</blockquote>
+
+
+<p>Pour Guillaume Leblanc, le directeur général du Snep, <q>notre réflexion, c’est qu’un taux de revenu minimum sur une chanson qui est très peu écoutée ne rapportera rien à l’artiste</q>. D’où l’idée d’une avance minimale. <i>«&nbsp;C’est indécent de proposer ça</i>, s’est emportée en retour Suzanne Combo lorsque j’ai évoqué ce sujet. <i>Si les majors sont incapables de nous respecter davantage, ça va être compliqué.&nbsp;»</i> Pour Marc Schwartz, il ne faut toutefois <q>pas écarter d’emblée l’idée de l’avance, car c’est parfois la seule rémunération que touche un artiste si sa musique ne se vend pas</q>.</p>
+
+{% set person = obsession.people[2] %}
+<p>Cette avance est en effet un prêt dont le remboursement n’est pas garanti. Elle est couramment pratiquée pour permettre à un artiste de travailler sur sa musique&nbsp;: le producteur lui avance une somme qu’il récupérera sur les premiers revenus générés par ses chansons, avant de partager par la suite les bénéfices éventuels selon le contrat qui les lie. Cette avance minimale (<a href="#{{ person.href }}" data-mini="11">Pascal Nègre</a>, le président d’Universal Music France d’alors, a évoqué 150&nbsp;euros par titre publié) pourrait toutefois niveler vers le bas le niveau général des avances pratiquées aujourd’hui par les labels. Elle pourrait surtout pénaliser les plus petites maisons de disques, qui n’ont pas toujours les moyens d’en verser.</p>
+
+{{
+	mini({
+		number:   11,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Les artistes –&nbsp;GAM et Adami notamment&nbsp;– avaient plutôt proposé un taux de rémunération contractuel minimum. Aujourd’hui, ce taux varie généralement de 8&nbsp;% à 12&nbsp;%, rarement moins (j’ai croisé un très chiche 7&nbsp;%…), encore plus rarement davantage. Lors de la négociation, ils ont proposé de le porter à 15&nbsp;% des revenus hors taxe du producteur. Mais ces derniers <q>n’ont rien voulu savoir, il était impossible de discuter sur ce point</q>, dit encore l’un des acteurs des négociations.</p>
+
+<blockquote>
+<p>Je mets au défi quiconque de prouver que j’ai favorisé les producteurs.</p>
+<footer>Marc Slyper, secrétaire général du Snam-CGT</footer>
+</blockquote>
+
+{% set person = obsession.people[4] %}
+<p>Cette question des minimas devra donc être le sujet d’une négociation qui doit s’ouvrir entre le vote de la loi création au Sénat (le 1er mars) et son retour à l’Assemblée dans les prochaines semaines. Mais les artistes iront-ils en rangs serrés&nbsp;? Depuis la signature du protocole, plusieurs de mes sources jouent à pointer l’attitude de  <a href="#{{ person.href }}" data-mini="12">Marc Slyper</a>, le secrétaire général du Snam-CGT, qui aurait été <q>passif</q> pendant la discussion, voire aurait <q>soufflé lui-même l’idée à Pascal Nègre</q>. C’est le dernier rebondissement d’un faux tabou dans la filière&nbsp;: les deux hommes se connaissent depuis longtemps, ils ont négocié beaucoup de textes ensemble, lâchant d’un côté pour obtenir quelque chose d’un autre. Ce n’est pas toujours joli, mais c’est du classique dans ces négociations à huit bandes, et personne parmi mes sources n’a pu étayer officiellement cette attaque contre la CGT. Cynique mais lucide, l’une d’elles y voit de la pure stratégie&nbsp;: <q>L’Adami est systématiquement incompatible avec ses positions, donc Nègre [avait] besoin d’un représentant des musiciens plus pragmatique pour faire aboutir des discussions qui servent ses besoins ou sa communication. De son côté, Slyper y gagne en influence et s’en sert pour faire évoluer la convention collective, son grand sujet, ou négocier le fonds d’aide à l’emploi.</q></p>
+
+{{
+	mini({
+		number:   12,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Interrogé sur ce moment des négociations, Marc Slyper se défend d’avoir joué un double jeu&nbsp;: <q>Je mets au défi quiconque de prouver que j’ai favorisé les producteurs. Il fallait trouver une solution pour signer, donc cette piste de l’avance a été inscrite dans le texte. Mais on a bien dit aux producteurs que c’est complètement pipé. Ce n’est pas le texte du protocole qui est important, c’est la négo qui suit.</q></p>
+
+<h3>Rassembler l’ensemble des sommes versées par les plateformes</h3>
+
+<br />
+
+<p>Là aussi, la crispation a été conséquente lors des séances plénières et des quelques réunions en plus petit comité. <i>«&nbsp;Les producteurs ne voulaient pas discuter</i>, regrette encore l’un de mes interlocuteurs. <i>Ils sortaient des chiffres qui ne voulaient rien dire pour détourner le débat. Mais on ne peut pas parler de la rémunération des artistes si on ne parle pas des relations entre producteurs et plateformes. Mieux redistribuer, ça suppose déjà que les plateformes donnent moins aux labels.&nbsp;»</i></p>
+
+<p>Cette pratique, c’est une garantie négociée au début de l’histoire du streaming, au milieu des années&nbsp;2000&nbsp;: les grandes maisons de disques, qui possèdent la quasi totalité des chansons qui ont fait l’histoire de la musique, ont imposé à Deezer ou Spotify un revenu minimum garanti contre l’accès à leur catalogue. Pour Universal par exemple, le principe était simple&nbsp;: <q>Je fais 40&nbsp;% de part de marché dans le monde, je veux 40&nbsp;% des revenus.</q> <i>«&nbsp;Dans les premières négociations menées par Deezer</i>, se souvient un avocat qui y a pris part, <i>le montant demandé empêchait la plateforme de se développer. Elle mobilisait 80&nbsp;% de ses fonds pour payer les labels.&nbsp;»</i> La charge s’est ajustée au profit des plateformes au fil des années, quand le streaming a fait ses preuves. Mais, au fil de ces mêmes années, la différence éventuelle entre le minimum garanti et les «&nbsp;ventes&nbsp;» effectivement réalisées par les labels –&nbsp;c’est le <i>breakage</i>&nbsp;–, qui leur a été dûment versée par les plateformes, n’a pas toujours été reversée aux artistes alors que c’est bien leur musique qui constitue la valeur d’un catalogue.</p>
+
+<p>Toutefois, ces <i>breakages</i> qui ont tant fait parler ces derniers temps ne sont plus vraiment un sujet pour certains. Bruno Boutleux, le directeur général de l’Adami, pense ainsi que <q>ça devient un sujet ancien. Apple ne paie pas d’avance, YouTube encore moins. Ça concerne Deezer et Spotify, mais les seuils sont largement atteints aujourd’hui</q>. De plus, Sony et Universal répartissent désormais l’éventuelle différence à leurs artistes. <q>Pour Warner, c’est moins évident</q>, tacle un autre interlocuteur. Cécile Rap-Veber, la directrice des licences à la Sacem, estime quant à elle que ces minimums garantis ont été salvateurs pendant les difficiles premières années du streaming, en permettant <q>à beaucoup de producteurs de ne pas rendre la moitié des contrats et licencier du personnel. Certains ont aussi réinvesti cet argent dans leur boîte et la production</q>.</p>
+
+<figure>
+<img src="img/protocole-schwartz-1.jpg" alt="" />
+<figcaption><span>Une partie des revenus du streaming se perd en frais de gestion <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Au final, les producteurs avaient déjà fait une bonne partie du travail sur ce point et ont magnanimement accepté, pendant la mission Schwartz, que l’assiette qui sert de base au calcul des reversements aux artistes intègre désormais <q>les avantages, monétaires ou non monétaires, qui sont directement liés à la monétisation des enregistrements</q>. Mais le contrôle de cette disposition semble très difficile, car cela recouvre aussi bien les <i>breakages</i> que la mise à disposition –&nbsp;contre une contrepartie qui relève d’un contrat non-public&nbsp;– du catalogue d’Universal pour <a href="https://particuliers.societegenerale.fr/jeunes/tous_les_produits/banque_au_quotidien/so_music.html" target="_blank">les clients de la Société générale</a> par exemple, ou les bénéfices indirects tirés de négociations commerciales qui permettent de placer des artistes d’un label plutôt qu’un autre dans les playlists les plus suivies sur les plateformes.</p>
+
+<p>Lors des discussions, la filière a aussi, sans avoir les moyens d’aller plus loin depuis la France, évoqué un autre point qui concerne les grands groupes internationaux&nbsp;: la circulation de l’argent qui part, par exemple, de Spotify au Luxembourg, arrive chez Universal en Californie puis revient chez Universal Europe aux Pays-Bas avant de terminer chez Universal France. À chaque fois, une partie des revenus du streaming se perdrait en «&nbsp;frais de gestion&nbsp;», et cette question relativise très largement les débats sur les micro-centimes menés sous l’égide de Marc Schwartz.</p>
+
+<p>La mission Schwartz est arrivée au bon moment sur un autre sujet cette fois bien mûr&nbsp;: la participation au capital des plateformes négociées par les trois majors et Merlin, l’un des principaux groupements d’indépendants créé par le groupe britannique Beggars. Les trois majors possèdent notamment plus de 15&nbsp;% du capital de Spotify. Si l’entreprise entre en Bourse ou est un jour revendue ne serait-ce qu’un milliard de dollars, elles se partageront 200&nbsp;millions (183&nbsp;millions d’euros) sans avoir, à ce jour, l’obligation écrite de partager cette somme avec les artistes qui font pourtant la valeur de leur entreprise. C’est ce qui s’est passé en 2014, lorsque <a href="#" data-mini="13">Universal a cédé à Apple</a> les 13&nbsp;% du capital que le groupe possédait dans les casques et la plateforme de streaming Beats.</p>
+
+<aside id="mini-13" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.bloomberg.com/news/articles/2014-08-01/vivendi-sells-its-13-beats-stake-to-apple-for-404-million" />
+<span class="image"><img class="responsive" src="img/bloomberg.jpg" alt="" /></span>
+<p class="title">Universal et Apple</p>
+<p class="subtitle">En 2014, Vivendi, maison mère d'Universal, a vendu ses parts dans Beats pour 362 millions d'euros. À lire sur Bloomberg (article en anglais).</p>
+</a>
+</aside>
+
+<p>Mais les majors ont compris qu’elles ne pouvaient plus se taire sur ce sujet. Elles ont donc commencé par accepter d’inscrire noir sur blanc dans le protocole Schwartz la nécessité d’en discuter au niveau international, puis tout s’est accéléré début février quand <a href="http://www.musicbusinessworldwide.com/warner-will-pay-artists-spotify-ipo-money-when-streaming-service-floats/" target="_blank">Warner</a>, puis <a href="http://www.musicbusinessworldwide.com/sony-we-will-also-pay-artists-profits-from-the-sale-of-our-spotify-stake/" target="_blank">Sony</a> ont affirmé à la presse qu’elles distribueront les éventuels dividendes tirés de leurs parts dans les plateformes de streaming. On attend toujours des nouvelles d’Universal.</p>
+
+<h3>Se pencher sur la transparence</h3>
+
+<br />
+
+<p>Voilà le principal nœud de la crispation actuelle dans le secteur de la musique. Non qu’il soit moins transparent qu’il ne l’a été dans les décennies précédentes, mais il ne l’est pas davantage et c’est une situation difficilement tenable dans un monde ultraconnecté.</p>
+
+<p>Comme nous l’expliquions ci-dessus, la nature des revenus pris en compte dans la rémunération des artistes est le premier point où la transparence fait défaut selon les représentants des artistes. Puis vient la clarté des données sur les écoutes fournies aux artistes, dont découle leur rémunération. Pascal Bittard, un ancien de Sony et d’EMI, a fondé Idol en partie en réaction à cette situation&nbsp;: son entreprise est un agrégateur, ou un <i>multi-channel network</i> (MCN), qui se charge de gérer la diffusion et la rémunération de la musique en ligne pour des labels. Lui parle d’un <q>climat de suspicion</q> dont <q>les majors sont en grande partie responsables par leur manque de transparence. Quand on envoie à nos labels des millions de lignes qui répertorient le moindre stream, la major reporte en une ligne sans précision. Je fournis plus de technologie qu’Universal à ses plus grandes stars</q>.</p>
+
+
+<blockquote>
+<p>On est à jour technologiquement, mais on n’est jamais assez à jour. En quelques années, le niveau de transformation a été considérable. Ça demande d’intense changements techniques.</p>
+<footer>Stéphane Le Tavernier, patron de Sony Music France et président du Snep</footer>
+</blockquote>
+
+
+<p>C’est de ce manque d’information que naissent les questions&nbsp;: combien rapporte une lecture sur YouTube ou Deezer&nbsp;? Combien par semaine&nbsp;? Combien par album&nbsp;? Information prise, il semble toutefois que les gros labels aient fait de réels progrès dans ce domaine, afin de combler un retard technique qui est devenu un manque de transparence au fil des années. Mais il n’a pas été facile de transformer des entreprises dont le métier était la production de produits physiques en structures tournées vers la technologie, capables d’avoir une vision en temps réel de leur existence en ligne. <i>«&nbsp;Le relevé trimestriel d’un artiste qui marche bien faisait une trentaine de pages il y a cinq ans. Aujourd’hui, c’est entre 800 et 1&nbsp;000 pages</i>, explique ainsi Stéphane Le Tavernier, le patron de Sony Music France et président du Snep. <i>On est à jour technologiquement, mais on n’est jamais assez à jour. En quelques années, le niveau de transformation a été considérable. Ça demande d’intense changements techniques. Il a fallu se connecter avec les plateformes… Mais aujourd’hui, on arrive à quelque chose qui est fluide.&nbsp;»</i> Le protocole vient donc là encore acter une mutation déjà en cours, en même temps qu’il tente d’imposer une norme de transparence minimum pour l’ensemble de la filière.</p>
+
+<p>Lors de la médiation Schwartz, les discussions n’ont pas été bloquées sur ce point, car les labels les plus puissants ont déjà travaillé pour répondre aux exigences de leurs artistes. Ils ont par contre été très nerveux sur un dernier domaine de la transparence&nbsp;: les contrats qui lient les musiciens aux maisons de disques. Là aussi, les bonnes et les mauvaises pratiques ont été conservées depuis l’époque lointaine où la musique ne s’écoutait qu’en format physique, sans que la révolution numérique n’entraîne de remise en cause majeure. Certains producteurs –&nbsp;notamment Pascal Nègre pour Universal et le Snep&nbsp;– ont refusé net de discuter de ces contrats, évoquant le secret des affaires. Marc Schwartz a donc botté en touche, se contentant de belles intentions et renvoyant le fond de la question aux mois à venir, après une énième étude <q>pour mesurer le partage de la valeur sur la base d’un échantillon de contrats et d’une méthodologie choisis d’un commun accord</q>. Depuis, ce chantier a été le théâtre d’une pièce de boulevard entre les producteurs, les artistes et le ministère. Nous en reparlerons très vite sur <i>Les Jours</i>.</p>
+
+<h3>Rassembler la filière</h3>
+
+<br />
+
+<p>Le but transversal de cette mission Schwartz n’a été qu’en partie mené à bien. La photo de famille a bien eu lieu, rassemblant les représentants des grands et petits producteurs, des artistes, des plateformes… Mais depuis, l’égoïsme et les petites stratégies ont repris comme si de rien n’était. Pourtant, toutes les personnes que j’ai interrogées pour retracer les tensions qui ont construit tant bien que mal ce texte sont d’accord&nbsp;: il faut que la filière apprenne à parler d’une voix pour se battre ensemble sur d’autres fronts. Principalement contre les Gafa –&nbsp;Google, Amazon, Facebook, Apple… Mais surtout Google, qui est déjà un géant de la musique avec YouTube. Parmi les combats à venir&nbsp;: obtenir la révision du statut de YouTube, d’hébergeur à éditeur, ce qui changerait les obligations de la plateforme vis-à-vis des œuvres diffusées.</p>
+
+<p>Pour Stéphane le Tavernier, <q>le problème n’est pas le partage de la valeur, mais la valeur. Pour l’instant, 60&nbsp;% du gâteau [de la musique enregistrée depuis le début des années&nbsp;2000, ndlr] a disparu dans la nature. Où est-il parti&nbsp;? Il n’a pas disparu, il est ailleurs</q>. Marc Slyper, du Snam-CGT, complète&nbsp;: <q>Il y a un vrai enjeu, et du coup l’ambiance a évolué. Avant, c’était le juge qui décidait s’il y avait un conflit dans la filière, puis on s’est rendu compte qu’il valait mieux discuter entre nous.</q></p>
+
+<aside>
+<p><span>La filière de la musique</span> n’a toujours pas de maison commune</p>
+</aside>
+
+<p>L’une de mes sources, qui observe de loin cette filière qu’elle connaît par cœur, résume le fond politique de la médiation menée par Marc Schwartz&nbsp;: <q>Si l’accord a existé, c’est parce que [les signataires] se sont rendu compte qu’ils sont perdants d’avance s’ils vont dispersés dans des batailles homériques contre Google. Le cinéma se fout sur la gueule tout le temps, mais quand il faut se battre contre quelque chose au niveau européen, il n’y a plus une tête qui dépasse.</q></p>
+
+<p>Sauf que la filière de la musique n’a toujours pas de <q>maison commune</q>, comme le dit Marc Schwartz. Alors elle s’engueule régulièrement en public. La création d’un Centre national de la musique, une sorte de <a href="#note-12">CNC</a> des musiciens, a échoué en 2012 et depuis, certains (les indépendants surtout) tentent de relancer l’idée pendant que d’autres (la Sacem et le Snep avant tout) savonnent la planche en coulisses. Le protocole Schwartz remet là aussi le dossier sur la table en deux propositions&nbsp;: rénover l’observatoire de l’économie de la musique, aujourd’hui moribond parce que le Snep ne lui livre plus de données (<q>une omerta économique</q>, critique l’une de mes sources)&nbsp;; et nommer un médiateur de la musique. Celui-ci doit être établi par la loi création et il a déjà été attaqué lors de la lecture du texte au Sénat par une série d’amendements écrits par l’Adami ou le Snep, pourtant signataires du protocole Schwartz. Comme si tout cela, les heures de négociation, les engagements écrits, la photo souriante au ministère, ne servait vraiment à rien.</p>
+
+<p>D’ailleurs, une question agite ce petit monde depuis le remplacement de Fleur Pellerin par Audrey Azoulay&nbsp;: la nouvelle ministre de la Culture sera-t-elle du côté des artistes ou des producteurs&nbsp;? Comme si être simplement du côté de la musique n’était pas envisageable.</p>
+
+
+{{
+note({
+number: 1,
+title: "Streaming",
+caption: "La diffusion de contenus en flux continu sur internet. Cette diffusion peut être vidéo ou sonore."
+})
+}}
+
+
+{{
+note({
+number: 2,
+title: "Producteur",
+caption: "Celui qui avance à l’artiste les moyens d’enregistrer sa musique, puis assure la fabrication, la distribution et la promotion des œuvres. Il dirige pour cela une maison de disques, autrement appelée un label."
+})
+}}
+
+
+{{
+note({
+number: 3,
+title: "L’Hadopi",
+caption: "La Haute autorité pour la diffusion des œuvres et la protection des droits sur internet. Créée en 2009 sous la pression des majors du disque, elle surveille et punit les échanges de certaines œuvres en peer-to-peer."
+})
+}}
+
+{{
+note({
+number: 4,
+title: "Tôt ou Tard",
+caption: "Ce label a été fondé par Vincent Frèrebeau, ancien manager de Thomas Fersen, au sein de la major Warner en 1996. Le label a ensuite pris son indépendance en 2002, avant d’être racheté à 49&nbsp;% par le géant indé Wagram en 2010. Il publie notamment les disques de Yael Naïm, Shaka Ponk ou Mathieu Boogaerts."
+})
+}}
+
+{{
+note({
+number: 5,
+title: "UPFI",
+caption: "L’Union des producteurs phonographiques français indépendants rassemble notamment les grands «&nbsp;petits&nbsp;» labels, comme Pias, Wagram ou Because Music."
+})
+}}
+
+{{
+note({
+number: 6,
+title: "Majors",
+caption: "Les entreprises internationales qui rassemblent plusieurs maisons de disques. Elles sont trois aujourd’hui –&nbsp;Universal, Sony et Warner&nbsp;– et réalisent environ 70&nbsp;% de parts de marché dans le monde."
+})
+}}
+
+{{
+note({
+number: 7,
+title: "Indépendants",
+caption: "Les maisons de disques autonomes. Certaines sont distribuées par une major. Elles publient la grande majorité des disques."
+})
+}}
+
+{{
+note({
+number: 8,
+title: "Rue de Valois",
+caption: "Le ministère de la Culture est installé dans cette rue qui longe le Palais-Royal, dans le centre de Paris."
+})
+}}
+
+{{
+note({
+number: 9,
+title: "Gestion collective",
+caption: "Dans la musique, certains revenus des auteurs, compositeurs et interprètes sont collectés et redistribués par des sociétés de perception (SPRD) comme la Sacem ou l’Adami. C’est notamment le cas des revenus des diffusions à la radio."
+})
+}}
+
+{{
+note({
+number: 10,
+title: "Abattement",
+caption: "Une clause du contrat qui lie un artiste à un producteur, qui prévoit que sa rémunération sera amputée si un risque est pris pour favoriser le succès d’un disque."
+})
+}}
+
+{{
+note({
+number: 11,
+title: "Rémunération mixte",
+caption: "Les artistes principaux sont rémunérés, par contrat, par une part des revenus de leur musique qui varie en moyenne de 8 à 12&nbsp;%. Faute de contrat, c’est la convention collective du disque qui s’applique."
+})
+}}
+
+
+{{
+note({
+number: 12,
+title: "CNC",
+caption: "Créé en 1946, le Centre national du cinéma assure la redistribution d’une part des revenus des films à succès pour financer des œuvres à petit budget."
+})
+}}
+

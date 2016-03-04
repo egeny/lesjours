@@ -53,24 +53,6 @@
 			"minor": true
 		},
 		{
-			"href":     "akp",
-			"img":      "img/akp.jpg",
-			"alt":      "",
-			"title":    "L’AKP",
-			"subtitle": "Le Parti de la justice et du développement",
-			"desc":     "Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays.",
-			"minor": true
-		},
-		{
-			"href":     "hdp",
-			"img":      "img/hdp.jpg",
-			"alt":      "",
-			"title":    "Le HDP",
-			"subtitle": "Le Parti démocratique des peuples",
-			"desc":     "Créé à l’automne&nbsp;2013, le Parti démocratique des peuples représente de nombreuses minorités, notamment kurdes, ainsi que des partis de gauche et les Verts turcs. En février&nbsp;2016, il compte 59 députés.",
-			"minor": true
-		},
-		{
 			"href":     "gulistan-zeren",
 			"img":      "img/gulistan-zeren.jpg",
 			"alt":      "",
