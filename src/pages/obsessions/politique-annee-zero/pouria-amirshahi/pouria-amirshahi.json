@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "pouria-amirshahi",
+
+	"number": 10,
+	"date": "2016-03-04T10:00+01:00",
+
+	"title": "Quitter la politique pour mieux en faire",
+	"intro": "Le député PS Pouria Amirshahi lâche son parti et ne se représentera pas. Question d’éthique.",
+	"subtitle": "Le député PS Pouria Amirshahi lâche son parti et ne se représentera pas. Question d’éthique.",
+	"lead":  "En politique, les signes de craquement doivent être vite classés sans suite. Leur accorder trop d’attention ou, pire, du sens, devient trop menaçant pour tous ceux qui sont installés dans la rente du mandat électoral",
+
+	"tags": ["politique", "Amirshahi", "PS"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:antoine-guiral"  },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/faure-pavillons",
+		"last":  "episode:politique-annee-zero/pouria-amirshahi"
+	}
+}
