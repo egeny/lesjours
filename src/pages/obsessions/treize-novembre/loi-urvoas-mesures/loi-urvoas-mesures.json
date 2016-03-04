@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "loi-urvoas-mesures",
+
+	"number": 32,
+	"date": "2016-03-05T09:00+01:00",
+
+	"title": "Les hystéros de l'antiterro",
+	"intro": "<strong>Députés en état d’urgence.</strong> Les Républicains ont rivalisé de propositions pour durcir le projet de loi antiterroriste Urvoas. Sans succès pour l’instant.",
+	"subtitle": "Les Républicains ont rivalisé de propositions pour durcir le projet de loi antiterroriste Urvoas.",
+	"lead": "Un fait divers, une loi&nbsp;; un attentat, une loi antiterroriste. Le projet de loi Urvoas, examiné cette semaine à l’Assemblée, ne pouvait pas manquer d’apporter une réponse politique au 13&nbsp;Novembre –&nbsp;quelle que soit sa qualité.",
+
+	"tags": ["13 Novembre", "état d’urgence", "justice", "terrorisme", "Urvoas", "Assemblée nationale"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": ["author:sebastien-calvet", "Marc Chaumeil/Divergence-images", "Christophe Morin/IP3"] }
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/brahim-desassigne",
+		"last":  "episode:treize-novembre/loi-urvoas-mesures"
+	}
+}
