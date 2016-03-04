@@ -132,7 +132,7 @@
 				'amount'          => $PLANS[$meta['plan']]['price'] * 100,
 				'clientemail'     => $current_user->user_email,
 				'clientident'     => $current_user->ID,
-				'clientip'        => $_SERVER['REMOTE_ADDR'],
+				'clientip'        => get_client_ip(),
 				'clientreferrer'  => $_SERVER['HTTP_REFERER'],
 				'clientuseragent' => $_SERVER['HTTP_USER_AGENT'],
 				'description'     => 'Abonnement',

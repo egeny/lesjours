@@ -43,7 +43,7 @@
 		}
 
 		return $code == '200' ? $url : '/img/profile.svg';
-	}
+	} // end of avatar_url()
 
 	// Get all meta related to the given user
 	function get_all_user_meta($id) {
@@ -60,7 +60,21 @@
 		}
 
 		return $meta;
-	}
+	} // end of get_all_user_meta()
+
+	// Get the client's IP address
+	function get_client_ip() {
+		if (isset($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+			$ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+		} elseif (isset($_SERVER['HTTP_CLIENT_IP'])) {
+			$ip = $_SERVER['HTTP_CLIENT_IP'];
+		} else {
+			$ip = $_SERVER['REMOTE_ADDR'];
+		}
+
+		// IPv6 might be a pain with the local server
+		return $ip !== '::1' ? $ip : '127.0.0.1';
+	} // end of get_client_ip()
 
 	final class SlimPayClient {
 		private $entry; // The main entry point (SlimPayResponse on which we can launch methods)
