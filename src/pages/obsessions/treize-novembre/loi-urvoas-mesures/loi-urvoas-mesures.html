@@ -1,0 +1,99 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[3] %}
+<p><span class="lettrine">U</span>n fait divers, une loi&nbsp;; un attentat, une loi antiterroriste. Le projet de loi <a href="#{{ person.href }}" data-mini="1">Urvoas</a>, examiné cette semaine à l’Assemblée nationale, ne pouvait pas manquer d’apporter une réponse politique au 13&nbsp;Novembre –&nbsp;quelle que soit sa qualité (<a href="/obsessions/treize-novembre/loi-antiterroriste">lire l'épisode 3</a>, «&nbsp;Antiterrorisme&nbsp;: l’urgence pour tous&nbsp;»). Pour cette discussion de trois jours, on n’a pas dépassé les quarante députés présents dans l’hémicycle, et plutôt une vingtaine.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Les débats ont permis à la droite de défendre une batterie de mesures. Un aperçu de ce qu’elle pourrait mettre en place, une fois redevenue majoritaire. La plupart de ses amendements ont été repoussés mais il aurait été dommage de ne pas les tenter tant le gouvernement a répété à l’opposition qu’il était d’accord avec elle, au fond, plus qu’avec les écologistes. Comme l’illustre cette phrase de Bernard Cazeneuve au virulent Éric Ciotti&nbsp;: <q>J'ai voulu vous être agréable. Je ne comprends pas pourquoi dans votre réponse, vous êtes désagréable.</q></p>
+
+<figure>
+<img src="img/les-mesures-1.jpg" alt="" />
+<figcaption><span>Pierre Lellouche à l’Assemblée nationale, le 1er mars 2016 <span class="credits">Photo Marc Chaumeil/Divergence-Images</i>.</span></span></figcaption>
+</figure>
+
+<p>En première ligne, Éric Ciotti donc, Pierre Lellouche, Thierry Mariani et Guillaume Larrivé n’ont pas résisté à la tentation du «&nbsp;détricotage&nbsp;». Obsédés par le fantôme de Christiane Taubira, symbole à leurs yeux d’une gauche permissive et délinquantophile, les députés LR ont proposé de supprimer la <a href="#note-1">contrainte pénale</a>, <q>inutile, inefficace et surtout dangereuse</q>. Le rapporteur du projet de loi, Pascal Popelin, a balayé leur tentative&nbsp;: <q>La majorité n'entend pas revenir sur des dispositions qu'elle a elle-même adoptées.</q></p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "La contrainte pénale",
+caption: "Cette nouvelle peine, effectuée en milieu ouvert, très proche du sursis mise à l’épreuve, est surtout peu appliquée. 950 contraintes pénales ont été prononcées en onze mois (chiffres d’octobre 2015), alors que le gouvernement vise les 8&nbsp;000 à 20&nbsp;000 par an."
+})
+}}
+
+
+<p>Dans le même mouvement de fidélité au quinquennat Sarkozy, et sans plus de succès, la droite a essayé de rétablir les <a href="#note-2">peines planchers</a> et d’étendre la <a href="#note-3">rétention de sûreté</a> aux actes terroristes, histoire de <q>poser des garde-fous pour la société</q>. <q>Ce débat sur la rétention de sûreté, nous l'avons depuis dix ans</q>, a soupiré Jean-Jacques Urvoas. Il peut bien durer dix ans de plus. Seule concession accordée à l’opposition insistante, l’autorisation de sortie du territoire pour les mineurs, supprimée par le gouvernement Ayrault, a été rétablie. Il y a deux ans, autant dire une éternité, Bernard Cazeneuve trouvait pourtant ce retour en arrière inutile et l’avait exclu de son «&nbsp;plan anti-jihad&nbsp;».</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Les peines planchers",
+caption: "C’est un dispositif mis en place en 2008, qui prévoyait une peine minimale pour les récidivistes. Les magistrats, pour beaucoup hostiles à l’automaticité des peines, avaient la possibilité de les éviter en motivant leur décision."
+})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "La rétention de sûreté",
+caption: "Aussi votée en 2008, elle permet de placer les criminels considérés comme les plus dangereux dans un centre fermé, après la fin de leur peine."
+})
+}}
+
+<blockquote>
+<p>Vous pensez vraiment que les terroristes de retour vont pointer à l'ANPE, vivre une vie de bons Français&nbsp;?</p>
+<footer>Pierre Lellouche, député Les Républicains</footer>
+</blockquote>
+
+<p>Idée fixe des Républicains depuis le lendemain des attentats, la création de «&nbsp;centres de rétention&nbsp;» pour les personnes de retour de Syrie a ressurgi. C’est un peu la faute du gouvernement, qui avait <a href="http://abonnes.lemonde.fr/societe/article/2015/12/09/le-gouvernement-envisage-des-centres-de-retention-pour-les-personnes-fichees-s_4827979_3224.html" target="_blank">accepté de sonder le Conseil d’État</a> sur la faisabilité de cette mesure en décembre. Pierre Lellouche a vanté les mérites de cet internement administratif (de trois à six mois), enthousiaste à l’idée de mettre en place une sorte de <q>quarantaine</q> ou de <q>gare de triage</q>, plus drastique qu’une assignation à résidence. <q>Vous pensez vraiment que les terroristes de retour vont pointer à l'ANPE, vivre une vie de bons Français&nbsp;?</q> Il ne serait pas très étonnant que sa proposition, enterrée pour l’instant, soit plus sérieusement étudiée dans les années à venir.</p>
+
+<p>Il en est de même pour le délit de consultation habituelle de sites internet terroristes, promis par Nicolas Sarkozy au lendemain de l’affaire Merah mais jamais présenté faute de deuxième mandat. Il consisterait à punir (jusqu’à cinq ans de prison) le fait de se rendre régulièrement sur des sites ou des réseaux sociaux faisant l’apologie du terrorisme, sauf quand il s’agit d’un usage professionnel (chercheurs, journalistes, professions judiciaires, etc.). Dans plusieurs propositions de loi déposées depuis, le député Guillaume Larrivé comme le sénateur Philippe Bas ont tenté de le réintroduire, en vain. La droite est revenue à la charge au moment de la loi Cazeneuve en novembre 2014. <q>Pourquoi ces réticences&nbsp;? Pourquoi cette pudeur&nbsp;?</q>, a lancé Thierry Mariani cette semaine. Le chevènementiste Jean-Luc Laurent (MRC) avait déposé le même amendement que lui.</p>
+
+<aside>
+<p><span>Les peines encourues par les constructeurs</span> de smartphones sont aggravées</p>
+</aside>
+
+<p>Comme aux États-Unis, où le bras de fer entre Apple et le FBI fait la une ces jours-ci, la grande bataille du chiffrement est faite pour durer. <q>Face à des entreprises qui considèrent que les États sont des nains, qui méprisent leurs lois et leurs règles…</q>, s’est envolé Éric Ciotti, il faut <q>une arme de dissuasion</q>. Si le député socialiste Yann Galut s’est «&nbsp;contenté&nbsp;» de proposer un million d’euros d’amende pour toute entreprise qui refuserait de collaborer avec la justice française, le député LR a trouvé mieux&nbsp;: deux millions et l’interdiction de commercialiser ses produits sur le territoire français. Tout ça pour… <q>huit smartphones qui ne peuvent être exploités dans des affaires de terrorisme</q>, reconnaît Galut en citant les chiffres de Cazeneuve.</p>
+
+<p>La généralisation du chiffrement, réaction au scandale de la NSA, empêche certains actes d’enquête, c’est vrai, même s’il n’interdit pas les écoutes. Les 23&nbsp;députés présents ont <a href="#note-4">repoussé de justesse</a> ces amendements légèrement hystériques mais ont quand même aggravé les peines encourues par les constructeurs, contre l’avis du gouvernement. Au passage, Pascal Popelin a fustigé <q>une pseudo-défense des libertés, qui nous est servie à toutes les sauces, pour justifier l'injustifiable</q>, tandis que le garde des Sceaux promettait une réponse européenne sur cette question.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 4,
+title: "Amendements retoqués",
+caption: "À une voix près&nbsp;: onze voix pour et douze voix contre, à la grande joie des Républicains qui semblaient eux-mêmes surpris."
+})
+}}
+
+<aside>
+<p><span>Concours de sévérité</span> entre députés</p>
+</aside>
+
+<p>D’autres amendements de la droite paraissent simplement destinés à surenchérir. La palme revient à Pierre Lellouche, partisan de la <a href="http://www.assemblee-nationale.fr/14/amendements/3515/AN/67.asp" target="_blank">fouille obligatoire</a> à l’entrée de tous les lieux publics supérieurs à 400&nbsp;m2. Pour démontrer l’intérêt d’une telle mesure, le député de «&nbsp;la gare Saint-Lazare et des Champs-Élysées&nbsp;» s’est prévalu de l’exemple israélien.</p>
+
+<p>L’opposition, trouvant l’assignation à résidence trop douce, a aussi essayé d’augmenter le temps passé à domicile et le nombre de pointages imposés (car <q>le jihad ne reconnaît ni les week-ends, ni les jours fériés</q>, précise un amendement). De même, elle voulait doubler la durée de la retenue administrative (huit heures au lieu de quatre) et porter celle de la garde à vue antiterroriste –&nbsp;six jours maximum aujourd’hui&nbsp;– à huit jours. Pour les détenus «&nbsp;radicalisés&nbsp;», la droite aurait aussi aimé supprimer les parloirs, les remises de peine et autres aménagements.</p>
+
+<figure>
+<img src="img/les-mesures-2.jpg" alt="" />
+<figcaption><span>Éric Ciotti à l’Assemblée nationale, le 1er mars 2016 <span class="credits">Photo Christophe Morin/IP3</i>.</span></span></figcaption>
+</figure>
+
+<p>En marge de ce concours de sévérité, deux députés ont eu l’audace décalée de faire des propositions progressistes. Le radical de gauche Alain Tourret a réclamé que les avocats aient accès au dossier de leur client dès le stade de la garde à vue. Bienveillante, la rapporteure Colette Capdevielle n’a pas voulu doucher ses efforts&nbsp;: <q>On y viendra, vous avez raison sur le fond, mais culturellement, on n'est pas encore tout à fait prêts. Il faut apprendre à mettre le pied doucement dans la porte.</q> Une porte brutalement refermée par Urvoas, pour qui l’accès au dossier n’est <q>pas compatible avec les contraintes opérationnelles des investigations</q>.</p>
+
+<p>Quant à l’écologiste Sergio Coronado, il a profité de ce projet de loi sur la justice pour rappeler au PS l’une des promesses de François Hollande&nbsp;: supprimer les tribunaux correctionnels pour mineurs, créés par la majorité précédente. Ce n’est pas le moment, lui répond le ministre de la Justice, en rappelant qu’il a <q>toujours été hostile</q> à ces tribunaux. Il s’engage solennellement à les faire disparaître au mois de mai, mais Coronado doute encore. Colette Capdevielle se fait fort de le rassurer&nbsp;: <q>Nous connaissons Jean-Jacques Urvoas depuis des années. Nous savons qu’il est un homme de parole.</q></p>
+

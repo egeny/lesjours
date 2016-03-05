@@ -96,11 +96,61 @@ caption: "La protection d’arbres menacés par la construction d’un building 
 <footer>Izzedin Çalislar, écrivain</footer>
 </blockquote>
 
-{% set person = obsession.people[5] %}
-<p>Après le printemps 2013, les opposants ont attendu une traduction politique. Les municipales de 2014 ont marqué une première ouverture, avec, par exemple, l’élection de conseillers municipaux issus des mouvements gays et lesbiens (on y reviendra dans un prochain épisode). Puis des législatives le 7&nbsp;juin dernier ont permis une forte progression du <a href="#{{ person.href }}" data-mini="5">HDP</a>, jeune parti pro-kurde qui soude de nombreuses minorités. Il a décroché 80&nbsp;députés, fait reculer de dix points le parti du Président (40,66&nbsp;%).</p>
 
-<p>Erdogan a alors misé sur une stratégie de violence. Le processus de paix en cours depuis trois ans dans les provinces kurdes a volé en éclats. La guerre a repris dès le lendemain des législatives, des <a href="#note-2">attentats</a> ont secoué le pays et le doute plane sur la responsabilité du gouvernement. Un été de cendres et de larmes, au cours duquel le Président a surfé sur les cordes nationalistes toujours prêtes à se tendre dans ce pays aux origines multiples, aux identités très complexes. Il a obtenu ce qu’il voulait, a dissous l’Assemblée, provoqué de nouvelles élections, et obtenu un vote réactionnaire, frôlé les 50&nbsp;%, le 1er novembre 2015. <i>«&nbsp;Monsieur Erdogan est très intelligent</i>, conclut Izzedin Çalislar. <i>Il a montré qu’il maîtrisait parfaitement son calendrier.&nbsp;»</i></p>
+<p>Après le printemps 2013, les opposants ont attendu une traduction politique. Les municipales de 2014 ont marqué une première ouverture, avec, par exemple, l’élection de conseillers municipaux issus des mouvements gays et lesbiens (on y reviendra dans un prochain épisode). Puis des législatives le 7&nbsp;juin dernier ont permis une forte progression du <a href="#note-2">HDP</a>, jeune parti pro-kurde qui soude de nombreuses minorités. Il a décroché 80&nbsp;députés, fait reculer de dix points le parti du Président (40,66&nbsp;%).</p>
 
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Le HDP",
+caption: "Créé à l’automne 2013, le Parti démocratique des peuples représente de nombreuses minorités, notamment kurdes, ainsi que des partis de gauche et les Verts turcs. En février 2016, il compte 59 députés."
+})
+}}
+
+<p>Erdogan a alors misé sur une stratégie de violence. Le processus de paix en cours depuis trois ans dans les provinces kurdes a volé en éclats. La guerre a repris dès le lendemain des législatives, des <a href="#note-3">attentats</a> ont secoué le pays et le doute plane sur la responsabilité du gouvernement. Un été de cendres et de larmes, au cours duquel le Président a surfé sur les cordes nationalistes toujours prêtes à se tendre dans ce pays aux origines multiples, aux identités très complexes. Il a obtenu ce qu’il voulait, a dissous l’Assemblée, provoqué de nouvelles élections, et obtenu un vote réactionnaire, frôlé les 50&nbsp;%, le 1er novembre 2015. <i>«&nbsp;Monsieur Erdogan est très intelligent</i>, conclut Izzedin Çalislar. <i>Il a montré qu’il maîtrisait parfaitement son calendrier.&nbsp;»</i></p>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Attentats",
+caption: "Deux attentats ont contribué à l’escalade de violence avant les élections de novembre&nbsp;2015&nbsp;: le 20&nbsp;juillet, un attentat suicide tue 33 personnes à Suruç, essentiellement des soutiens aux combattants kurdes de Kobané&nbsp;; le 10&nbsp;octobre, deux explosions font 102 morts à Ankara lors d’une manifestation pour la paix."
+})
+}}
+
+<aside>
+<p><span>Les universitaires pétitionnaires</span> sont poursuivis, harcelés</p>
+</aside>
+
+<p>Depuis le scrutin, la Turquie paraît comme abattue. L’opposition déprime. Les mauvaises nouvelles pleuvent, mais les mouvements de protestation ne rassemblent généralement plus grand monde. Le régime <a href="#note-4">enferme des journalistes</a> et bâillonne les universitaires. Début janvier, 1&nbsp;128 enseignants de Turquie, rejoints par des confrères du monde entier, ont signé une <a href="http://www.kedistan.net/2016/01/05/baris-paix-peace-asiti-kurdistan/" target="_blank">pétition</a> (aujourd’hui soutenue par plus de 4&nbsp;000 personnes) appelant au retour du processus de paix entamé en 2012 avec les mouvements de résistance kurde. Rien de violent dans leur texte, hormis le fait qu’ils accusent le gouvernement de <q>massacres</q> et d’<q>exils forcés</q> au Kurdistan (de fait, au moins 300&nbsp;000 personnes ont déjà été déplacées, chassées par les couvre-feux, la destruction de maisons, l’absence d’eau et l’arrêt de l’école).</p>
+
+<p>Depuis, les universitaires sont poursuivis, harcelés. Des procureurs mènent des auditions, ordonnent des perquisitions dans leurs bureaux, saisissent leurs ordinateurs. Les facultés ouvrent des enquêtes sous la pression du YÖK, le Conseil des études supérieures turc, tenu par le gouvernement. Des médias locaux et nationaux –&nbsp;quasiment tous tenus ou détenus, désormais, par le pouvoir&nbsp;– publient les noms et photos des enseignants, les qualifiant de traîtres, de complices de la terreur (kurde), afin de dresser leurs étudiants et leurs collègues contre eux. Certains ont dû fuir les petites villes conservatrices où ils habitaient pour ne pas se faire agresser dans les rues, et un soutien du Président, sorte d’Escobar turc aux petits pieds qui avait des ennuis avec la justice avant de se refaire en politique, a menacé les signataires lors d’une réunion publique&nbsp;: <q>Quand le jour va arriver, nos patriotes vont prendre une douche avec votre sang.</q></p>
+
+<figure>
+<img src="img/turquie-ep-un-2.jpg" alt="" />
+<figcaption><span>Recep Tayyip Erdogan lors de l’ouverture de la COP21 en novembre 2015, au Bourget <span class="credits">Photo Pierre Morel pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 4,
+title: "Arrestations de journalistes",
+caption: "Des dizaines de journalistes sont emprisonnés début 2016 en Turquie, où la perpétuité a été requise contre Can Dündar et Erdem Gül, du quotidien «&nbsp;Cumhuriyet&nbsp;», pour une enquête attribuant aux services secrets turcs la livraison d’armes à des jihadistes en Syrie."
+})
+}}
+
+
+<p>Beaucoup hésitent désormais à s’exprimer en Turquie. On emprisonne des journalistes pour leurs papiers ou leurs tweets, on convoque des citoyens pour un post sur Facebook. Les réseaux sociaux sont coupés dès que l’actualité devient brûlante –&nbsp;c’est-à-dire toutes les semaines.</p>
+
+{% set person = obsession.people[3] %}
+<p><a href="#{{ person.href }}" data-mini="5">Taner Hürgün</a>, économiste de formation, enseignait à l’université avant de quitter la faculté pour gagner sa vie, nourrir un peu mieux sa famille. Et retrouver une complète liberté. Comme nombre d’enseignants, il raconte les réseaux de surveillance et de dénonciation qui maillent les universités. Aujourd’hui, il fait des affaires, vit très bien de l’immobilier qui flambe à Istanbul, mais continue de suivre de près les affaires politique du pays. {% set person = obsession.people[4] %}Il s’est choisi un nom d’emprunt pour <i>Les Jours</i>, afin de pouvoir <q>parler librement</q>, sans perdre ses marchés, d’Erdogan ou de l’<a href="#note-5">AKP</a>. <i>«&nbsp;Nous avons tous développé des stratégies pour continuer de travailler en évitant les ennuis</i>, dit-il. <i>J’adapte mon ton et mon propos à mes interlocuteurs. Je ne dis jamais ce que je pense dans mon travail. Si je vous parlais de la Turquie et de ce qui se passe sous mon propre nom, je n’aurais plus de marchés.&nbsp;»</i> Il restera donc anonyme jusqu’à ce qu’il juge possible de faire autrement. En attendant, il observe avec finesse les évolutions de la société, sait raconter précisément <q>l’ingénierie islamique</q> mise en place depuis quelques années pour transformer en profondeur le pays.</p>
+
+{% set person = obsession.people[3] %}
 {{
 	mini({
 		number: 5,
@@ -115,63 +165,10 @@ caption: "La protection d’arbres menacés par la construction d’un building 
 {% from "partials/_macro.html" import note %}
 {{
 note({
-number: 2,
-title: "Attentats",
-caption: "Deux attentats ont contribué à l’escalade de violence avant les élections de novembre&nbsp;2015&nbsp;: le 20&nbsp;juillet, un attentat suicide tue 33 personnes à Suruç, essentiellement des soutiens aux combattants kurdes de Kobané&nbsp;; le 10&nbsp;octobre, deux explosions font 102 morts à Ankara lors d’une manifestation pour la paix."
+number: 5,
+title: "L’AKP",
+caption: "Le Parti de la justice et du développement. Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays."
 })
-}}
-
-<aside>
-<p><span>Les universitaires pétitionnaires</span> sont poursuivis, harcelés</p>
-</aside>
-
-<p>Depuis le scrutin, la Turquie paraît comme abattue. L’opposition déprime. Les mauvaises nouvelles pleuvent, mais les mouvements de protestation ne rassemblent généralement plus grand monde. Le régime <a href="#note-3">enferme des journalistes</a> et bâillonne les universitaires. Début janvier, 1&nbsp;128 enseignants de Turquie, rejoints par des confrères du monde entier, ont signé une <a href="http://www.kedistan.net/2016/01/05/baris-paix-peace-asiti-kurdistan/" target="_blank">pétition</a> (aujourd’hui soutenue par plus de 4&nbsp;000 personnes) appelant au retour du processus de paix entamé en 2012 avec les mouvements de résistance kurde. Rien de violent dans leur texte, hormis le fait qu’ils accusent le gouvernement de <q>massacres</q> et d’<q>exils forcés</q> au Kurdistan (de fait, au moins 300&nbsp;000 personnes ont déjà été déplacées, chassées par les couvre-feux, la destruction de maisons, l’absence d’eau et l’arrêt de l’école).</p>
-
-<p>Depuis, les universitaires sont poursuivis, harcelés. Des procureurs mènent des auditions, ordonnent des perquisitions dans leurs bureaux, saisissent leurs ordinateurs. Les facultés ouvrent des enquêtes sous la pression du YÖK, le Conseil des études supérieures turc, tenu par le gouvernement. Des médias locaux et nationaux –&nbsp;quasiment tous tenus ou détenus, désormais, par le pouvoir&nbsp;– publient les noms et photos des enseignants, les qualifiant de traîtres, de complices de la terreur (kurde), afin de dresser leurs étudiants et leurs collègues contre eux. Certains ont dû fuir les petites villes conservatrices où ils habitaient pour ne pas se faire agresser dans les rues, et un soutien du Président, sorte d’Escobar turc aux petits pieds qui avait des ennuis avec la justice avant de se refaire en politique, a menacé les signataires lors d’une réunion publique&nbsp;: <q>Quand le jour va arriver, nos patriotes vont prendre une douche avec votre sang.</q></p>
-
-<figure>
-<img src="img/turquie-ep-un-2.jpg" alt="" />
-<figcaption><span>Recep Tayyip Erdogan lors de l’ouverture de la COP21 en novembre 2015, au Bourget <span class="credits">Photo Pierre Morel pour <i>Les Jours</i>.</span></span></figcaption>
-</figure>
-
-
-{% from "partials/_macro.html" import note %}
-{{
-note({
-number: 3,
-title: "Arrestations de journalistes",
-caption: "Des dizaines de journalistes sont emprisonnés début 2016 en Turquie, où la perpétuité a été requise contre Can Dündar et Erdem Gül, du quotidien «&nbsp;Cumhuriyet&nbsp;», pour une enquête attribuant aux services secrets turcs la livraison d’armes à des jihadistes en Syrie."
-})
-}}
-
-
-<p>Beaucoup hésitent désormais à s’exprimer en Turquie. On emprisonne des journalistes pour leurs papiers ou leurs tweets, on convoque des citoyens pour un post sur Facebook. Les réseaux sociaux sont coupés dès que l’actualité devient brûlante –&nbsp;c’est-à-dire toutes les semaines.</p>
-
-{% set person = obsession.people[3] %}
-<p><a href="#{{ person.href }}" data-mini="6">Taner Hürgün</a>, économiste de formation, enseignait à l’université avant de quitter la faculté pour gagner sa vie, nourrir un peu mieux sa famille. Et retrouver une complète liberté. Comme nombre d’enseignants, il raconte les réseaux de surveillance et de dénonciation qui maillent les universités. Aujourd’hui, il fait des affaires, vit très bien de l’immobilier qui flambe à Istanbul, mais continue de suivre de près les affaires politique du pays. {% set person = obsession.people[4] %}Il s’est choisi un nom d’emprunt pour <i>Les Jours</i>, afin de pouvoir <q>parler librement</q>, sans perdre ses marchés, d’Erdogan ou de l’<a href="#{{ person.href }}" data-mini="7">AKP</a>. <i>«&nbsp;Nous avons tous développé des stratégies pour continuer de travailler en évitant les ennuis</i>, dit-il. <i>J’adapte mon ton et mon propos à mes interlocuteurs. Je ne dis jamais ce que je pense dans mon travail. Si je vous parlais de la Turquie et de ce qui se passe sous mon propre nom, je n’aurais plus de marchés.&nbsp;»</i> Il restera donc anonyme jusqu’à ce qu’il juge possible de faire autrement. En attendant, il observe avec finesse les évolutions de la société, sait raconter précisément <q>l’ingénierie islamique</q> mise en place depuis quelques années pour transformer en profondeur le pays.</p>
-
-{% set person = obsession.people[3] %}
-{{
-	mini({
-		number: 6,
-		img: "/obsessions/" + obsession.href + "/" + person.img,
-		alt:      person.alt,
-		href:     "#" + person.href,
-		title:    person.title,
-		subtitle: person.subtitle
-	})
-}}
-
-{% set person = obsession.people[4] %}
-{{
-	mini({
-		number: 7,
-		img: "/obsessions/" + obsession.href + "/" + person.img,
-		alt:      person.alt,
-		href:     "#" + person.href,
-		title:    person.title,
-		subtitle: person.subtitle
-	})
 }}
 
 <p>Ce sera l’objet de prochains épisodes, justement. Quasi-dictature laïque au XXe siècle, la Turquie avait semblé s’ouvrir dans les années&nbsp;2000, gagner en liberté, quand l’intégration européenne restait un horizon possible. Mais Angela Merkel et Nicolas Sarkozy ont claqué la porte au nez des Turcs, puis l’AKP a conforté son pouvoir, ce qui lui permet désormais d’imposer des changements profonds, un plus strict contrôle des mœurs. Le prochain épisode montrera comment cela touche tous les secteurs de la société, et quel rôle le religieux tient dans cela. Avant que les suivants détaillent le sort désormais réservé aux femmes et à l’éducation.</p>

@@ -11,7 +11,8 @@
 
 	"episodes": [
 		"episode:la-charniere/marmite-turque",
-		"episode:la-charniere/ep-2-turquie"
+		"episode:la-charniere/ep-2-turquie",
+		"episode:la-charniere/ep-3-turquie"
 	],
 
 	"people": [
@@ -49,24 +50,6 @@
 			"title":    "Taner Hürgün",
 			"subtitle": "Homme d'affaires, ex-universitaire",
 			"desc":     "Taner a des faux airs de François Hollande, des petites lunettes rondes, un visage aussi rond, des yeux tour à tour naïfs et rieurs. Dans une première vie professionnelle, il était universitaire, économiste enseignant en sciences politiques. Puis il a abandonné la faculté pour mieux gagner sa vie. Peut-être aussi parce qu’il était fatigué de l'ambiance qui régnait à l’université, de la surveillance policière étroite dont se plaignent de nombreux enseignants. Pour des propos politiques jugés ambigus, il avait répondu un jour à l'invitation d'un étudiant qui voulait discuter et s'était retrouvé dans un café entouré de policiers des renseignements turcs. Aujourd'hui, il gagne très bien sa vie, fait des affaires dans l'immobilier. Où il évite soigneusement de parler de politique. Exprimer ses idées ou son avis sur le gouvernement le priverait, selon lui, de tous ses marchés. Pour cette raison, il a demandé à changer de nom dans «&nbsp;Les Jours&nbsp;», a choisi son pseudonyme. Protégé par l'anonymat, il porte un avis pertinent sur la politique de son pays et très renseigné sur les questions d'urbanisme et d'immobilier.",
-			"minor": true
-		},
-		{
-			"href":     "akp",
-			"img":      "img/akp.jpg",
-			"alt":      "",
-			"title":    "L’AKP",
-			"subtitle": "Le Parti de la justice et du développement",
-			"desc":     "Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays.",
-			"minor": true
-		},
-		{
-			"href":     "hdp",
-			"img":      "img/hdp.jpg",
-			"alt":      "",
-			"title":    "Le HDP",
-			"subtitle": "Le Parti démocratique des peuples",
-			"desc":     "Créé à l’automne&nbsp;2013, le Parti démocratique des peuples représente de nombreuses minorités, notamment kurdes, ainsi que des partis de gauche et les Verts turcs. En février&nbsp;2016, il compte 59 députés.",
 			"minor": true
 		},
 		{
@@ -112,6 +95,33 @@
 			"title":    "Sinan Logie",
 			"subtitle": "Architecte",
 			"desc":     "Sinan Logie est belge par son père, turc par sa mère. Il a fait des études d'architecte à Bruxelles, a bossé un moment là-bas dans un cabinet en vue, avant de décider de rentrer au pays, où il avait grandi enfant. Pince-sans-rire, il propose une synthèse de l'autodérision belge sans façon, et du fatalisme plein d'humour des Stambouliotes. Il a d'abord bossé classiquement comme architecte à son retour à Istanbul, a participé à des projets importants avant de prendre ses distances. Sinan Logie enseigne désormais l'architecture à Bilgi University, organise avec ses étudiants des ballades urbaines au cours desquelles il révèle les mutations tentaculaires de la ville, le passé, les quartiers que le développement tentaculaire efface, les traces des minorités chassées. Engagé, malicieux, érudit, il a publié un livre passionnant avec l'anthropologue Yoann Morvan&nbsp;: «&nbsp;Istanbul 2023&nbsp;» (Editions B2, 2004).",
+			"minor": true
+		},
+		{
+			"href":     "begum-kayacan",
+			"img":      "img/begum-kayacan.jpg",
+			"alt":      "",
+			"title":    "Begum Kayacan",
+			"subtitle": "Jeune femme en colère",
+			"desc":     "C'est peut-être ce qui exaspère le plus Begum&nbsp;: <q>Dans ce pays, on a des fois l'impression que cela ne sert à rien d'avoir des compétences, d'être bon dans son travail. Vous avez plus de chances de trouver un travail, d'être promu ou de décrocher un marché sur vous êtes proche de l'AKP.</q> Dans ce pays parfois tétanisé par la montée de la dictature, où les citoyens surveillent ce qu'ils postent sur les réseaux sociaux, la jeune femme a la colère farouche. Elle a participé au mouvement de Gezi, ce qui inquiétait sa mère, et agaçait son père, nationaliste bien que non Turc d'origine –&nbsp;un grand classique en Turquie. <q>Quel que soit le sujet, avec ma sœur nous sommes quatre à la maison et quelque soit le sujet, il y a toujours quatre avis.</q> Ils s'engueulent des fois à table, arrivent toujours à parler cependant : <q>Cela peut paraître naïf mais si tout le monde arrivait à faire cela en Turquie, le pays ne serait pas coupé en deux.</q>",
+			"minor": true
+		},
+		{
+			"href":     "ataturk",
+			"img":      "img/ataturk.jpg",
+			"alt":      "",
+			"title":    "Atatürk",
+			"subtitle": "Dictateur éclairé",
+			"desc":     "Cela fera bientôt 80 ans que Muṣṭafâ Kemâl Paşa, dit Atatürk, est mort. Pourtant, son portrait trône toujours dans toutes les villes, sur les drapeaux nationalistes que l'on accroche aux fenêtres, dans les boutiques des commerçants, sur les buffets des salons… La famille était originaire de Salonique et ne pouvait se résoudre à la dislocation du territoire lorsque l'empire ottoman s'est écroulé, après des décennies de déclin. Français, Anglais, Italiens et Russes se préparaient à se partager sans façon les restes, mais Kemâl a levé le peuple, puis une armée, en partant de l'Anatolie profonde. EN 1923, il a créé la République de Turquie. Nation laïque, autoritaire, gérée jusqu'à la fin de la Seconde Guerre mondiale par un parti unique. Atatürk est mort en 1938. Mais en vrai il est immortel. Pendant le mouvement de Gezi, en 2013, la rumeur courait très sérieusement que des manifestants avaient croisé dans la foule sa réincarnation.",
+			"minor": true
+		},
+		{
+			"href":     "nazli-ilicak",
+			"img":      "img/nazli-ilicak.jpg",
+			"alt":      "",
+			"title":    "Nazli Ilicak",
+			"subtitle": "Éditorialiste bannie",
+			"desc":     "J’avais rendez-vous par une journée de faible neige chez Nazli, en janvier 2016. Un bateau pour la rive turque, puis un taxi qui a tourné, s’est perdu. Au bout d’un moment, comme il devenait fou, il a appelé Nazli, qui a envoyé un chauffeur distingué à notre rencontre. L’éditorialiste habite une grande villa cossue sur les hauteurs du Bosphore. Son mari Kemal possédait le journal <i>Tercuman</i>, dans lequel elle a écrit. Il est mort en 1993, elle a pris la relève, avant de se lancer, fille de ministre, en politique. Elue en 1999 à l’Assemblée, elle a rapidement été déchue, pour avoir soutenue une élue arrivée voilée. Mal vue dès lors par les élites stambouliottes, elle s’est ensuite fâchée avec le pouvoir, en demandant à des ministres corrompus de démissionner. Virée depuis de plusieurs journaux dans lesquels elle essayait de conserver une plume libre, elle guette les initiatives de presse indépendante turques. Elles sont rares.",
 			"minor": true
 		}
 	

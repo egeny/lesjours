@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "ep-4-mission-schwartz",
+
+	"number": 4,
+	"date": "2016-03-04T10:00+01:00",
+
+	"title": "Musique&nbsp;: l’école du microcosme d’argent",
+	"intro": "Les coulisses de la mission Schwartz reflètent l’état de la musique en France, entre pratiques obsolètes et crispations autour du streaming.",
+	"subtitle": "Les coulisses de la mission Schwartz reflètent l’état de la musique&nbsp;: pratiques obsolètes et crispations sur le streaming.",
+	"lead": "Attablé devant un poisson non loin de la place de la Madeleine, à Paris, Marc Schwartz s’arrête tout d’un coup pour peser ses mots. Puis il se lance avec la voix feutrée des hommes habitués à la diplomatie la plus sensible.",
+
+	"tags": ["Musique", "Streaming"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sophian-fanen" },
+			{ "Illustration et photo": ["author:karen-assayag", "author:sebastien-calvet"] }
+		],
+
+		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"prev":  "episode:la-fete-du-stream/ep-3-stream-change-auditeurs",
+		"last":  "episode:la-fete-du-stream/ep-4-mission-schwartz"
+
+			}
+}

@@ -1,0 +1,226 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[4] %}
+<p><span class="lettrine">A</span>u premier rendez-vous, Gülistan semblait d’abord réservée, timide. Puis à l’évocation du sort réservée aux femmes dans cette Turquie qui se replie sur ses conservatismes (lire <a href="/obsessions/la-charniere/ep-2-turquie">l’épisode 2</a>, «&nbsp;Une véritable ingénierie conservatrice se met en place&nbsp;»), elle a hoché la tête, s’est mise à parler de façon plus déliée. <a href="#{{ person.href }}" data-mini="1">Gülistan Zeren</a> étudie la sociologie à l’université francophone de Galatasaray, à Istanbul, en quatrième année. Elle y compare les systèmes de santé turc et français. Et depuis quelques années, observe le recul des droits des femmes, dans leur intimité comme dans l’espace public.</p>
+
+{{
+mini({
+number: 1,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{% set person = obsession.people[0] %}
+<p>En apparence, la Turquie reste cette vitrine où laïques et musulmanes cohabitent tranquillement. Dans les quartiers les moins conservateurs des grandes villes, voiles et cheveux libres se partagent la rue, se mêlent dans les groupes. L’accès au crédit, le redressement économique du pays et la multiplication des centres commerciaux, ont rendu visible l’émergence d’une bourgeoisie musulmane, qui achète, s’habille de façon moins traditionnelle. <q>La mondialisation a modernisé le conservatisme</q>, se moque <a href="#{{ person.href }}" data-mini="2">Izzeddin Çalislar</a>. Mais derrière l’apparence, les droits reculent.</p> 
+
+{{
+mini({
+number: 2,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<aside>
+<p><span>Les rumeurs font la loi</span> et compliquent les combats</p>
+</aside>
+
+{% set person = obsession.people[4] %}
+<p>Dans un pays où l’essentiel de la presse est tenue –&nbsp;et le reste des médias pas toujours très sérieux, à quelques journaux indépendants près&nbsp;–, les rumeurs font la loi, et compliquent les combats. Sur la question de l’avortement, même les militants ne semblent pas toujours au courant. Parmi ceux que j’ai rencontrés en commençant cette obsession en novembre dernier, beaucoup pensaient par exemple que les délais légaux avaient été réduits, et que la décision revenait désormais aux médecins, plus aux femmes. Cela n’est pas le cas. Les reculs sont nombreux, mais plus insidieux&nbsp;: <i>«&nbsp;L’avortement reste légal jusqu’à dix semaines,</i> dit Gülistan, <i>et il dépend de la volonté des femmes, pas des médecins. Mais en pratique, les hôpitaux n’appliquent pas la loi. Une association féministe l’a montré dans une étude publiée en février 2015.&nbsp;»</i> L’association avait demandé à 37 hôpitaux publics s’ils pratiquaient l’avortement. À Istanbul, seuls trois hôpitaux publics le faisaient si les femmes le demandaient, douze ne le faisaient en aucun cas. <i>«&nbsp;Il y a eu plusieurs discours négatifs sur ce sujet par le gouvernement et des élus <a href="#note-1">AKP</a>,</i> poursuit Gülistan. <i>Cela crée une pression à laquelle obéissent les hôpitaux.&nbsp;»</i></p>
+
+{{
+mini({
+number: 3,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{{
+note({
+number: 1,
+title: "L’AKP",
+caption: "Le Parti de la justice et du développement. Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays."
+})
+}}
+
+<blockquote>
+<p>Le gouvernement donne des orientations, ses proches mettent en œuvre et il y a toujours un mufti pour dénicher une jurisprudence religieuse légitimant les reculs.</p>
+<footer>Melda Onur, ex-députée du parti laïc CHP</footer>
+</blockquote>
+
+{% set person = obsession.people[6] %}
+<p>Le système de santé a totalement changé en Turquie depuis l’arrivée au pouvoir de l’AKP, en 2002. Un vrai progrès social au demeurant. Désormais, les plus pauvres bénéficient d’une couverture minimale, d’un accès aux soins facilité. On construit beaucoup d’hôpitaux. Mais la plupart sont aux mains de proches de l’AKP. <i>«&nbsp;C’est un travail d’équipe,</i> grince <a href="#{{ person.href }}" data-mini="4">Melda Onur</a>, l’ex-députée de l’historique parti laïc <a href="#note-2">CHP</a>. <i>Le gouvernement donne des orientations, ses proches mettent en œuvre dans la société civile, et il y a toujours un mufti pour dénicher une jurisprudence religieuse légitimant les reculs.&nbsp;»</i></p>
+
+{{
+mini({
+number: 4,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{{
+note({
+number: 2,
+title: "Le CHP",
+caption: "Le Parti républicain du peuple est un parti laïc créé par Mustafa Kemal, dit Atatürk, fondateur de la République de Turquie. Parti unique de 1923 à 1946, puis accédant au pouvoir par alternance, le CHP est aujourd’hui la principale force d’opposition."
+})
+}}
+
+<p>L’ex-députée raconte que les milieux conservateurs turcs, pour limiter les césariennes, laissent entendre aux femmes que <q>la liaison avec l’enfant est plus forte</q> lorsque ce dernier naît par les voies naturelles. <i>«&nbsp;Quand je fais les entretiens avec les gynécologues obstétriciens,</i> raconte Gülistan, <i>ils m’expliquent qu’il y a maintenant une grande pression. Le discours politique influence les patients, c’est pour cela que dans leurs relations, les médecins perdent du pouvoir, ils n’arrivent des fois plus à convaincre avec des critères scientifiques. Il existe une vraie tension politique.&nbsp;»</i> L’étudiante note encore que le <a href="#note-3">prix</a> de la pilule du lendemain a explosé en Turquie. <q>Ce que je comprends, c’est qu’on ne peut plus trouver qu’une seule marque actuellement. Les autres, qui étaient moins chères, ne sont plus vendues sur le marché.</q></p>
+
+<figure>
+<img src="img/turquie-ep-trois-1.jpg" alt="" />
+<figcaption><span>Devant le monument Atatürk de la place Taksim <span class="credits">Photo Christophe Petit-Tesson pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Près de 250% d’augmentation",
+caption: "La pilule du lendemain coûtait 14 livres turques en 2011 (4,30 euros), elle se vend aujourd’hui 49 livres (15 euros)"
+})
+}}
+
+{% set person = obsession.people[9] %}
+<p>Ce dimanche midi de décembre, <a href="#{{ person.href }}" data-mini="5">Begum Kayacan</a> arrive essoufflée au rendez-vous, dans un café moderne qu’elle a choisi, à Karaköy, sur la rive européenne du Bosphore. Elle avait très envie de parler de son pays à un journaliste français, et me prévient d’emblée, dans un anglais parfait&nbsp;: <q>Je ne suis pas la Turque moyenne, j’en ai conscience. Je lis beaucoup, j’ai étudié aux États-Unis, je m’informe via les médias étrangers.</q> Elle est vive, en révolte permanente contre la dictature qui monte, contre les conservatismes qui pèsent, contre <q>l’oppression des femmes dans la société turque, extrêmement visible à présent</q>. Elle évoque le quantum des peines en baisse dans les procès pour viol. Un phénomène que confirme Ayze Erdem, membre du bureau exécutif du <a href="#note-4">HDP</a>, qui avait participé à une étude sur le sujet en 2002/2003, et qui relève également que le nombre de meurtres, par des maris ou des frères, progresse depuis quelques années. <q>La pression est très forte sur les femmes, cela se sent d’ailleurs dans la rue.</q></p>
+
+{{
+mini({
+number: 5,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 4,
+title: "HDP",
+caption: "Créé à l’automne&nbsp;2013, le Parti démocratique des peuples représente de nombreuses minorités, notamment kurdes, ainsi que des partis de gauche et les Verts turcs. En février&nbsp;2016, il compte 59 députés."
+})
+}}
+
+<p>D’après Begum, <q>il y a de plus en plus de discours tendant à culpabiliser les victimes dans les tribunaux</q>, lors des procès pour viol. <q>Des juges vont vous dire que vous étiez provocante, qu’on devinait vos seins ou que vous aviez une épaule dénudée. Et alors&nbsp;? C’est une raison pour me violer&nbsp;?</q> L’ex-députée Melda Onur ajoute qu’un ministre, Recep Akdag, avait proposé en 2012 que l’Etat prenne en charge l’éducation des enfants nés des suites d’un viol.<q>C’est horrible de faire pression pour obliger une femme violée à accoucher.</q></p>
+
+<aside>
+<p><span>En 2007, une loi favorise le travail</span> à temps partiel à la maison pour les femmes</p>
+</aside>
+
+<p>Depuis novembre, la plupart des personnes que j’ai rencontrées font remonter le recul des droits des femmes à 2011, lorsque l’AKP est sorti des législatives avec près de 50&nbsp;% des suffrages, ou à 2013, après le mouvement de <a href="#note-5"> Gezi</a> (qui fera l’objet d’un prochain épisode). Une universitaire, qui préfère garder l’anonymat depuis qu’elle se retrouve menacée pour une pétition demandant le retour au processus de paix avec les Kurdes (lire <a href="/obsessions/la-charniere/marmite-turque">l’épisode 1</a>, «&nbsp;Dans la marmite turque&nbsp;»), estime quant à elle que <q>le premier signe remonte à 2007</q>. Cette année-là, le gouvernement avait fait voter une loi progressiste pour les droits sociaux. <i>«&nbsp;Mais dedans,</i> dit-elle, <i>il avait inclus des mesures favorisant le travail à temps partiel à la maison pour les femmes.&nbsp;»</i></p>
+
+{{
+note({
+number: 5,
+title: "Le parc Gezi",
+caption: "La protection d’arbres menacés par la construction d’un building dans un parc du centre d’Istanbul en mai&nbsp;2013 avait provoqué un soulèvement massif, révélant une aspiration à plus de liberté."
+})
+}}
+
+<p>En Turquie, le Président se considère comme le père du pays. Avec ce que cela suppose d’autorité. Les femmes, elles, sont souvent considérées comme les mères de la nation. Avec ce que l’on devine de nourricier… Gülistan, l’étudiante en sociologie, remarque à ce sujet que le gouvernement a changé l’intitulé du ministère qui leur est soi-disant dédié, pour le transformer en ministère de la Femme et de la Famille. <q>On ne considère plus la femme que dans un contexte familial</q>, conclut-elle, avant de sourire à la découverte de l’intitulé français du ministère de la Famille, de l’Enfance et des Droits de la femme…</p>
+
+<figure>
+<img src="img/turquie-ep-trois-2.jpg" alt="" />
+<figcaption><span>Une étudiante voilée devant l’université d’Istanbul <span class="credits">Photo Christophe Petit-Tesson pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+{% set person = obsession.people[2] %}
+<p><q>Il y a toujours eu un écart en Turquie entre la représentation de la femme et ses droits réels dans la société</q>, estime <a href="#{{ person.href }}" data-mini="6">Buket Türkmen</a>, la professeure de sociologie de Gülistan. Au XXe siècle, la Turque était <q>le drapeau de la République. La preuve de la modernité turque vis-à-vis de l’Occident</q>. Dans la réalité, elle était sommée de s’effacer de l’espace politique. Le premier mouvement féministe, l’Union des femmes, a été interdit parce qu’il critiquait le nazisme avant l’heure.</p>
+
+{{
+mini({
+number: 6,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{% set person = obsession.people[10] %}
+<p>Celui qui lui a succédé, le Parti des femmes de la Turquie, s’est battu pour décrocher le droit de vote en 1934, mais Mustafa Kemal, dit <a href="#{{ person.href }}" data-mini="7">Atatürk</a>, fondateur de la République, a demandé à ses dirigeantes, après avoir accordé ce droit, de se fondre dans le Parti républicain du peuple, parti unique de cette toute jeune Turquie qui se méfiait de l’individu. Dans l’histoire, Atatürk est apparu comme le moderne permettant aux femmes turques de voter avant certaines Européennes. Des militantes ont redressé l’histoire, à la fin des années&nbsp;80.</p>
+
+{{
+mini({
+number: 7,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<aside>
+<p><span>Turques et femmes kurdes</span> ont la résistance bilingue</p>
+</aside>
+
+<p>Le mouvement féministe reste vif en Turquie. Il joue un rôle important dans la structuration des résistances. Habituées depuis le début des années&nbsp;90 à militer ensemble, Turques et femmes kurdes ont la résistance bilingue. Elles ont servi de pont, pesé au début de cette parenthèse mythique qu’a été le mouvement de Gezi, pour rapprocher contre la politique et l’autorité du gouvernement les militants républicains, parfois nationalistes, et kurdes. Cet été, quand l’armée a commencé à s’en prendre aux provinces kurdes, sans grande réaction dans le pays, ce sont encore des femmes qui se sont mobilisées. Universitaires, militantes, artistes, elles sont allées dans les villes les plus menacées.</p>
+
+<p>Chez les Kurdes également, les femmes sont un drapeau, une vitrine pour vanter la modernité. Les unités combattantes turques sont ultra-médiatisées. Au début des années 90, elles ont commencé à jouer un rôle de plus en plus important dans la résistance. Aujourd’hui, le HDP, parti qui regroupe de nombreuse minorités, notamment kurdes, fonctionne en doublant chaque fonction, dans le parti comme dans les rares collectivités qu’il gère, dans une stricte parité. <q>Mais les Kurdes aussi deviennent de plus en plus conservateurs</q>, regrette Ayze Erdem, qui était jusqu’en janvier coprésidente du HDP à Istanbul. <q>Ils se replient sur eux-mêmes.</Q></p>
+
+{% set person = obsession.people[11] %}
+<p>Il y a quinze ans, nombre de ces femmes turques qui se battent pour leurs droits luttaient pour que des jeunes filles aient le droit d’entrer à l’université malgré leur voile, ou plutôt avec lui. Une nouvelle laïcité, moins intolérante que celle qui a longtemps structuré la Turquie, maintenant l’islam sous un joug séculaire, lui intimant de rester invisible, silencieux. <a href="#{{ person.href }}" data-mini="8">Nazli Ilicak</a> a fait partie de ces combats. Grande bourgeoise stanbouliote, elle habite sur les hauteurs de la rive asiatique de la ville, tient à bout de doigts son fume-cigarette en scrutant le journaliste français venu lui rendre visite dans cet après-midi neigeux de janvier. Par la grande baie du salon, des flocons tombent mollement sur le Bosphore. Un employé de maison vient lui poser délicatement un châle sur les épaules. Il y a partout des œuvres d’art, des antiquités.</p>
+
+{{
+mini({
+number: 8,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<blockquote>
+<p>Je considère qu’il vaut mieux qu’une femme soit voilée à l’Assemblée plutôt qu’exclue de la démocratie.</p>
+<footer>Nazli Ilicak, 72 ans, éditorialiste</footer>
+</blockquote>
+
+{% set person = obsession.people[1] %}
+<p>Nazli a 72 ans. Veuve d’un grand patron de presse, elle fait partie des éditorialistes les plus expérimentées du pays, mais s’est fait virer puis interdire pour avoir tenté d’écrire, fin 2013, sur la corruption qui gangrène le pouvoir. Avant cela, elle a été proche de <a href="#{{ person.href }}" data-mini="9">Recep Tayyip Erdogan</a>, a même été élue députée, se définit comme une <q>libérale de droite</q>. En 1999, à peine élue, elle est entrée dans l’Assemblée à côté de la première députée voilée, pour la soutenir. Une partie de l’enceinte, peuplée essentiellement d’hommes, criait <q>Dehors&nbsp;! Dehors&nbsp;!</q> Nazli Ilicak n’a pas cillé. Elle sera déchue pour cela par la Cour constitutionnelle. <q>J’ai été élevée à Notre-Dame-de-Sion puis j’ai étudié à l’université de Lausanne, je n’ai strictement rien à voir avec les islamistes. Mais je considère qu’il vaut mieux qu’une femme soit voilée à l’Assemblée plutôt qu’exclue de la démocratie. L’émancipation passe par là. Le régime précédent a opprimé les musulmans et cela a servi Erdogan, il ne serait pas aussi populaire sinon. Les restrictions génèrent toujours de la radicalisation.</q></p>
+
+{{
+mini({
+number: 9,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Son combat rappelait celui pour l’accès à l’université, partagé par beaucoup de féministes laïques. <i>«&nbsp;C’est toujours le corps de la femme que l’on interdit, en le cachant sous un tissu ou en lui interdisant pour des raisons laïques l’entrée de certains lieux,</i> remarque la sociologue Buket Türkmen. <i>Les hommes, eux, ne sont jamais interdits.&nbsp;»</i> Désormais, le voile est autorisé à l’université, le débat est derrière la Turquie. <q>Je pensais moi aussi que cela représentait une émancipation de pouvoir étudier, avec ou sans voile</q>, glisse Sedef Ecer, auteure et metteure en scène qui vit à Paris et travaille souvent en Turquie. Elle se souvient des débats avec sa mère, qui lui disait&nbsp;: <q>Tu es folle. Si tu les laisses entrer, ils te déborderont.</q></p>
+
+<aside>
+<p><span>Le foulard, plus visible</span> mais pas plus présent</p>
+</aside>
+
+<p>Begum, l’ex-étudiante qui travaille dans l’événementiel, raconte que chez elle, au contraire, sa mère était très favorable à la libéralisation, qui a permis à une amie institutrice voilée d’enseigner. Aujourd’hui, c’est la mère qui a dû trouver du travail plus loin. Elle enseignait la philosophie, dans un lycée devenu religieux, qui n’a plus besoin de professeur de philo. À présent, dit Begum, <q>on ne porte pas plus le foulard qu’avant en Turquie</q>. Simplement, il est plus visible, à l’université comme dans les transports en communs. <i>«&nbsp;Des fois, les trois-quarts des filles sont voilées quand je prends le bus,</i> dit la jeune femme. <i>Cela les rend seulement visibles, cela ne change rien.&nbsp;»</i> Elle déteste en revanche la pression ressentie dans certains quartiers. <q>Si je vais à Sultanbeyli, qui est très conservateur, ou même à Fathi, qui est plus riche, je ne met pas de rouge à lèvres et je prends plutôt un pantalon baggy. Je sais qu’il ne m’arrivera rien, mais je n’ai pas envie de me faire interpeller dans la rue.</q></p>
+
+<p>Il y a trois ans, Gezi a été un fol espoir pour les féministes. Pas de harcèlement masculin dans l’espace occupé pendant plusieurs jours. Des ateliers de jurons non sexistes. Une harmonie et une parité dans les responsabilités. Trois ans plus tard, le mouvement s’est dispersé comme il s’était formé. Les féministes maintiennent des forums réguliers à Istanbul, dont un non mixte. Et le mouvement s’interroge sur la suite, sur l’attitude à adopter face à la montée des conservatismes, de la dictature. Certaines militantes considèrent qu’il faut désormais <q>massifier</q>, ouvrir au-delà des femmes, pour renforcer les résistances.</p>
+
+

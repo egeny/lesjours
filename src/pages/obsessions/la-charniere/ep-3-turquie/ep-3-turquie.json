@@ -1,0 +1,29 @@
+{
+	"template": "episode",
+
+	"href": "ep-3-turquie",
+
+	"number": 3,
+	"date": "2016-03-03T10:00+01:00",
+
+	"title": "Femmes&nbsp;: les pressions insidieuses",
+	"intro": "Tiraillé entre libéralisme et laïcité, le féminisme turc est malmené par la poussée conservatrice.",
+	"subtitle": "Tiraillé entre libéralisme et laïcité, le féminisme turc est malmené par la poussée conservatrice.",
+	"lead": "Au premier rendez-vous, Gülistan semblait d’abord réservée, timide. Puis à l'évocation du sort réservée aux femmes dans cette Turquie qui se replie sur ses conservatismes, elle a hoché la tête, s’est mise à parler de façon plus déliée.",
+
+	"tags": ["Turquie", "Erdogan", "islam", "laïcité", "féminisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:olivier-bertrand" },
+			{ "photo": "author:christophe-petit-tesson" }
+		],
+
+		"first": "episode:la-charniere/marmite-turque",
+		"prev": "episode:la-charniere/ep-2-turquie",
+		"last": "episode:la-charniere/ep-3-turquie"
+
+
+
+			}
+}
