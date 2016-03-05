@@ -137,12 +137,14 @@
 				'clientuseragent' => $_SERVER['HTTP_USER_AGENT'],
 				'description'     => 'Abonnement',
 				'identifier'      => BE2BILL_IDENTIFIER,
+				'operationtype'   => 'payment',
 				'orderid'         => date('Y-m-d').'-'.$current_user->ID,
 				'version'         => '2.0'
 			);
 
 			// Prepare the payload
-			$payload['hash'] = signature($payload);
+			$payload = array_change_key_case($payload, CASE_UPPER);
+			$payload['HASH'] = signature($payload);
 			$payload = http_build_query(array(
 				'method' => 'payment',
 				'params' => $payload
@@ -162,6 +164,11 @@
 			curl_close($ch);
 
 			var_dump($result);
+
+			// Redirect to the subscription page if something went wrong
+			if (!$result || $result && $result['EXECCODE'] != '0000') {
+				die(header('Location: /abonnement.html'));
+			}
 		}
 
 		// Bank payment should be automatic
