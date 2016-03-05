@@ -96,7 +96,7 @@
 			// Redirect the user to the subscription page if its subscription expired
 			$meta = get_all_user_meta($current_user->ID);
 			if (strtotime($meta['expire']) < time()) {
-				die(header('Location: /abonnement.html'));
+				die(header('Location: /abonnement.html?renew'));
 			}
 		} else {
 			// Serve a specific page asking the user to subscribe
