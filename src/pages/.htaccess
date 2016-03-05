@@ -69,7 +69,7 @@ RewriteEngine On
 RewriteBase /
 
 # Force HTTPS and no-www
-RewriteCond %{HTTPS} !=on [OR]
+#RewriteCond %{HTTPS} !=on [OR]
 RewriteCond %{HTTP_HOST} ^www\.(.+)
 RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)
 #RewriteCond %{SERVER_ADDR} !=127.0.0.1
