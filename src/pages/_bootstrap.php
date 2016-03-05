@@ -33,7 +33,7 @@
 	function avatar_url($mail) {
 		// Simplified version of https://gist.github.com/justinph/5197810
 		$hash = md5(strtolower(trim($mail)));
-		$url  = 'http://www.gravatar.com/avatar/'.$hash.'?s=90';
+		$url  = 'https://www.gravatar.com/avatar/'.$hash.'?s=90';
 		$code = wp_cache_get($hash);
 
 		if (!$code) {
