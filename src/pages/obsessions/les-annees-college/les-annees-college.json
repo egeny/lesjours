@@ -104,8 +104,8 @@
 			"img":      "img/delphine.jpg",
 			"alt":      "",
 			"title":    "Delphine",
-			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "Son filet de voix presque chuchoté le raconte à sa place&nbsp;: Delphine est très timide. Elle est celle que l’on n’entend pas. L’an prochain, elle devrait aller en seconde générale et, plus tard, elle aimerait faire une école de photo ou de stylisme. Elle aime tout ce qui est manuel, «&nbsp;tout ce que l’on peut faire et refaire&nbsp;», résume-t-elle. Ensuite, elle prend en photo ses créations. Bien que née en France,de parents arrivés lorsqu’ils étaient enfants dans les années&nbsp;70, Delphine est de nationalité chinoise et parle couramment le mandarin. Elle devrait bientôt prendre la nationalité française, à ses 16 ans. Elle a fait son stage de troisième… aux <i>Jours</i>.",
+			"subtitle": "15 ans, élève en 3e&nbsp;B",
+			"desc": "Son filet de voix presque chuchoté le raconte à sa place&nbsp;: Delphine est très timide. Elle est celle que l’on n’entend pas. L’an prochain, elle devrait aller en seconde générale et, plus tard, elle aimerait faire une école de photo ou de stylisme. Elle aime tout ce qui est manuel, «&nbsp;tout ce que l’on peut faire et refaire&nbsp;», résume-t-elle. Ensuite, elle prend en photo ses créations. Bien que née en France de parents arrivés lorsqu’ils étaient enfants dans les années&nbsp;70, Delphine est de nationalité chinoise et parle couramment le mandarin. Elle devrait bientôt prendre la nationalité française, à ses 16 ans. Elle a fait son stage de troisième… aux <i>Jours</i>..",
 			"minor": true
 		},
 		{
@@ -222,7 +222,25 @@
 			"alt":      "",
 			"title":    "Suhimbou",
 			"subtitle": "14 ans, élève en 3e&nbsp;B",
-			"desc": "Au collège, il aime la «&nbsp;récré&nbsp;» et «&nbsp;les copains&nbsp;». Mais aussi le dessin et les maths, pour lesquelles il a une aptitude certaine. À la fin de son cours, le prof de maths pose toujours une énigme à trouver pour le prochain cours. Suhimbou a tendance à donner la réponse à peine la question posée. «&nbsp;Il est rapide&nbsp;», résume son prof, souvent contraint d’en trouver une autre au débotté. L’an prochain, il pourrait aller en seconde générale. Mais il faut qu’il travaille encore. Suhimbou ne sait pas exactement ce qu’il aimerait faire plus tard, «&nbsp;peut-être de la comptabilité&nbsp;», les maths encore. Il a un grand frère en terminale&nbsp;S. Un autre en troisième année de compta. Des modèles qui le motivent. En dehors du collège, il adore jouer au jeu <i>Minecraft</i>. Il cultive discrètement un petit côté vintage, adore <i>Le Petit Nicolas</i>, et écoute Michael Jackson et Eminem. Suhimbou est très copain avec Moussa.",
+			"desc": "Au collège, il aime la «&nbsp;récré&nbsp;» et «&nbsp;les copains&nbsp;». Mais aussi le dessin et les maths, pour lesquelles il a une aptitude certaine. À la fin de son cours, le prof de maths pose toujours une énigme à trouver pour le prochain cours. Suhimbou a tendance à donner la réponse à peine la question posée. «&nbsp;Il est rapide&nbsp;», résume son prof, souvent contraint d’en trouver une autre au débotté. L’an prochain, il pourrait aller en seconde générale. Mais il faut qu’il travaille encore. Suhimbou ne sait pas exactement ce qu’il aimerait faire plus tard, «&nbsp;peut-être de la comptabilité&nbsp;», les maths encore. Il a un grand frère en terminale&nbsp;S. Un autre en troisième année de compta. Des modèles qui le motivent. En dehors du collège, il adore jouer au jeu <i>Minecraft</i>. Il cultive discrètement un petit côté vintage, adore «&nbsp;Le Petit Nicolas&nbsp;», et écoute Michael Jackson et Eminem. Suhimbou est très copain avec Moussa.",
+			"minor": true
+		},
+		{
+			"href":     "lucie",
+			"img":      "img/lucie.jpg",
+			"alt":      "",
+			"title":    "Lucie",
+			"subtitle": "14 ans, élève en 3e&nbsp;B",
+			"desc": "Lucie habite le Xe arrondissement, de l’autre côté du métro aérien, dans cette encoche de la carte scolaire qui permet au collège Aimé-Césaire d’avoir des élèves issus de milieux plus favorisés. Beaucoup de ses camarades de l’école primaire du Xe arrondissement ont obtenu des dérogations pour ne pas aller à Aimé-Césaire. Lucie ne s’est pas posée la question et adore son collège. Sa mère dit que la mixité sociale, c’est important. L’an prochain, cette excellente élève va aller en seconde générale section sport. Elle pratique à haute dose l’athlétisme et la danse classique. Et voudrait être prof de sport. Ses parents, profs tous les deux, l’ont prévenue que c’était devenu un métier dur, elle hausse les épaules. Lucie aime lire du Rimbaud et des vieux romans d’action. Elle s’intéresse à la politique. Lit la presse. Chez elle, il y a «&nbsp;Le Monde&nbsp;», «&nbsp;Le Canard enchaîné&nbsp;», «&nbsp;Charlie&nbsp;». Elle est aussi abonnée à «&nbsp;Mon Quotidien&nbsp;». Quand il n’y a pas école, elle adore faire des virées dans les «&nbsp;beaux quartiers&nbsp;» avec ses copines. «&nbsp;On va dans le XVIe ou dans Le Marais, on regarde les boutiques.&nbsp;» Lucie n’aime pas le McDo et n’a jamais mangé un kebab de sa vie. Elle se décrit comme «&nbsp;susceptible&nbsp;» et «&nbsp;curieuse&nbsp;».",
+			"minor": true
+		},
+		{
+			"href":     "faema",
+			"img":      "img/faema.jpg",
+			"alt":      "",
+			"title":    "Faema",
+			"subtitle": "14 ans, élève en 3e&nbsp;B",
+			"desc": "Faema est copine avec Nina. Elles sont ensemble depuis le CP et quasiment toujours assises l’une à côté de l’autre. Comme Nina, Faema a souvent le doigt levé en classe et toujours quelque chose à dire. Elle se décrit comme «&nbsp;sociable&nbsp;», «&nbsp;adorant faire rire les gens&nbsp;» et «&nbsp;détestant l’injustice&nbsp;». Elle ajoute qu’elle est «&nbsp;un peu rebelle&nbsp;» et «&nbsp;bavarde&nbsp;». Ce qui est vrai, et ne l’empêche pas d’être bonne élève. Comme beaucoup, Faema a un peu peur de quitter le collège l’an prochain. De ne plus voir les copains tous les jours, de changer de quartier. Elle aimerait aller dans un lycée bilingue mais elle ne s’est pas encore renseignée. Plus tard, Faema aimerait être avocate. «&nbsp;À cause de l’injustice&nbsp;». Ou peut-être travailler dans la communication politique. «&nbsp;J’aime bien les débats politiques&nbsp;», dit-elle. Quand elle n’est pas au collège, elle adore «&nbsp;danser&nbsp;» dans sa chambre en écoutant toutes sortes de musique ou aller faire du shopping avec ses copines au Millénaire, le centre commercial de l’autre côté du périph’, à Aubervilliers.",
 			"minor": true
 		}
 	],
