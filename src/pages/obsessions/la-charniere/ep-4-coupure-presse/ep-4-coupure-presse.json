@@ -1,0 +1,28 @@
+{
+	"template": "episode",
+
+	"href": "ep-4-coupure-presse",
+
+	"number": 4,
+	"date": "2016-03-08T10:00+01:00",
+
+	"title": "Coupure de presse",
+	"intro": " Vendredi, le quotidien «&nbsp;Zaman&nbsp;» a été mis sous tutelle. Journalistes censurés, emprisonnés&nbsp;: en Turquie, Erdogan contrôle les médias.",
+	"subtitle": "Vendredi, le quotidien «&nbsp;Zaman&nbsp;» a été mis sous tutelle. Journalistes censurés, détenus&nbsp;: en Turquie, Erdogan contrôle les médias.",
+	"lead": "L’un de ses collègues avait donné les coordonnées d’Asiye en prévenant qu’elle risquait d’être prudente&nbsp;: journaliste en Turquie, menacée par le pouvoir, elle vit un peu sous tension. De fait, elle se méfie.",
+	"tags": ["Turquie", "Erdogan", "presse", "censure", "journalistes"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:olivier-bertrand" },
+			{ "photo": ["Mehmet Yaman", "Kursad Bayhan"]}
+		],
+
+		"first": "episode:la-charniere/marmite-turque",
+		"prev": "episode:la-charniere/ep-3-turquie",
+		"last": "episode:la-charniere/ep-4-coupure-presse"
+
+
+
+			}
+}
