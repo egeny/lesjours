@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "ep-5-chemin-argent",
+
+	"number": 5,
+	"date": "2016-03-08T10:00+01:00",
+
+	"title": "Streaming&nbsp;: le chemin de l’argent",
+	"intro": "Pour 1&nbsp;euro dépensé à l’écoute d’un artiste, qui récupère quoi&nbsp;? Une datavisualisation pour comprendre la nouvelle économie de la musique.",
+	"subtitle": "Pour 1&nbsp;euro dépensé, qui récupère quoi&nbsp;? Une datavisualisation pour comprendre.",
+	"lead": "Il est très difficile de retracer clairement et de façon synthétique le chemin de l’argent dans le streaming. Il dépend d’une cascade de métiers, de l’argent qui part d’un côté et revient de l’autre.",
+
+	"tags": ["Musique", "Streaming"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sophian-fanen" },
+			{ "Illustration et data": ["author:karen-assayag", "Brice Terdjman et François Prosper/WeDoData"] }
+		],
+
+		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"prev":  "episode:la-fete-du-stream/ep-4-mission-schwartz",
+		"last":  "episode:la-fete-du-stream/ep-5-chemin-argent"
+
+			}
+}
