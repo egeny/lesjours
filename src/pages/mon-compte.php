@@ -212,29 +212,31 @@
 
 				<section id="mes-factures" role="tabpanel" aria-labelledby="tab-mes-factures" aria-hidden="true">
 					<h3 class="mb-3g style-meta-large">Mes factures</h3>
-					<table>
-						<thead>
-							<tr>
-								<th>N°</th>
-								<th>Description</th>
-								<th>Prix</th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php foreach ($meta['invoices'] as $invoice) : ?>
-								<?php
-									$plan  = $PLANS[$invoice->plan];
-									$start = strtotime($invoice->date);
-									$end   = strtotime('+'.$plan['duration'], $start);
-								?>
-							<tr>
-								<td><?php echo $invoice->number ?></td>
-								<td>Abonnement « <?php echo $plan['name'] ?> » (du <?php echo date('d-m-Y', $start); ?> au <?php echo date('d-m-Y', $end); ?>)</td>
-								<td><?php echo $invoice->price ?> €</td>
-							</tr>
-							<?php endforeach ?>
-						</tbody>
-					</table>
+					<?php if (count($meta['invoices'])) : ?>
+						<table class="sm-w-100 lg-min-w-50 lg-max-w-75">
+							<thead class="sr">
+								<tr>
+									<th>Date</th>
+									<th>Description</th>
+									<th>Prix</th>
+									<th class="text-right">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach (array_reverse($meta['invoices']) as $invoice) : ?>
+									<?php $plan = $PLANS[$invoice->plan]; ?>
+									<tr>
+										<td><?php echo date('d.m.Y', strtotime($invoice->date)) ?></td>
+										<td>Abonnement <?php echo $plan['duration'] == '1 year' ? 'annuel' : 'mensuel' ?> au site <i>lesjours.fr</i><?php if ($invoice->price == 1) : ?> -<br/>tarif pilote<?php endif ?></td>
+										<td><?php echo price($invoice->price) ?> €</td>
+										<td class="text-right"><a class="text-upper fw-bold color-brand" href="/facture.html?n=<?php echo $invoice->number ?>" target="_blank">Voir la facture</a></td>
+									</tr>
+								<?php endforeach ?>
+							</tbody>
+						</table>
+					<?php else : ?>
+						<p>Vous n’avez aucune facture.</p>
+					<?php endif ?>
 				</section>
 			</div>
 		</div><!-- end of .col -->
