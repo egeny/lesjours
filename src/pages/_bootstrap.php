@@ -76,6 +76,12 @@
 		return $ip !== '::1' ? $ip : '127.0.0.1';
 	} // end of get_client_ip()
 
+	// Utility function to format a price depending on the locale
+	function price($number, $decimals = 2) {
+		$locale = localeconv();
+		return number_format($number, $decimals, $locale['decimal_point'], $locale['thousands_sep']);
+	}
+
 	// Utility function to generate a hash from and for be2bill
 	function signature($array) {
 		$hash = array();
