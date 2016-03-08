@@ -14,7 +14,7 @@ $conditions = array(
 	'meta_key = "plan"    AND meta_value != ""'
 );
 
-$conditions = array_map(function($value) { return 'user_id IN (SELECT user_id FROM '.$wpdb->usermeta.' WHERE '.$value.')'; }, $conditions);
+$conditions = array_map(function($value) use ($wpdb) { return 'user_id IN (SELECT user_id FROM '.$wpdb->usermeta.' WHERE '.$value.')'; }, $conditions);
 $results    = $wpdb->get_col('SELECT user_id FROM '.$wpdb->usermeta.' WHERE '.implode(' AND ', $conditions).' GROUP BY user_id');
 
 // Prepare some variable to use cURL asynchronously
@@ -23,7 +23,7 @@ $queue   = array();
 $running = null;
 
 foreach ($results as $id) {
-	$user = get_user_data($id); // Get the user's object to retrieve its mail
+	$user = get_userdata($id); // Get the user's object to retrieve its mail
 	$meta = get_all_user_meta($id);
 
 	// Prepare the payload

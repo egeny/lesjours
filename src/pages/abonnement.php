@@ -15,20 +15,6 @@
 	$state = null;
 	$title = 'Devenir jouriste';
 
-	// Utility function to generate a hash from and for be2bill
-	function signature($array) {
-		$hash = array();
-
-		foreach ($array as $name => $value) {
-			$name = strtoupper($name);
-			if ($name == 'HASH') { continue; }
-			$hash[] = $name.'='.$value;
-		}
-
-		sort($hash);
-		return hash('sha256', BE2BILL_PASSWORD.implode(BE2BILL_PASSWORD, $hash).BE2BILL_PASSWORD);
-	}
-
 	// Check if we need to use another $state and $title
 	if (is_user_logged_in()) {
 		$expired = get_user_meta($current_user->ID, 'expire');

@@ -76,6 +76,20 @@
 		return $ip !== '::1' ? $ip : '127.0.0.1';
 	} // end of get_client_ip()
 
+	// Utility function to generate a hash from and for be2bill
+	function signature($array) {
+		$hash = array();
+
+		foreach ($array as $name => $value) {
+			$name = strtoupper($name);
+			if ($name == 'HASH') { continue; }
+			$hash[] = $name.'='.$value;
+		}
+
+		sort($hash);
+		return hash('sha256', BE2BILL_PASSWORD.implode(BE2BILL_PASSWORD, $hash).BE2BILL_PASSWORD);
+	}
+
 	final class SlimPayClient {
 		private $entry; // The main entry point (SlimPayResponse on which we can launch methods)
 
