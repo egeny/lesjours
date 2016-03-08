@@ -1,0 +1,28 @@
+{
+	"template": "episode",
+
+	"href": "bilel-episode-5",
+
+	"img": "img/header.gif",
+
+	"number": 5,
+	"date": "2016-03-06T09:00+01:00",
+
+	"title": "Après les attentats de Paris, la rupture",
+	"intro": "Le 13 Novembre a été un «&nbsp;déclic&nbsp;» qui a poussé Bilel à quitter l’État islamique avec femme et enfants.",
+	"subtitle": "Le 13 Novembre a été un «&nbsp;déclic&nbsp;» qui a poussé Bilel à quitter l’État islamique avec femme et enfants.",
+	"lead":  "«&nbsp;Le déclic, c’était les attentats de Paris.&nbsp;» Après le 13 novembre, Bilel décide de quitter l’État islamique (EI) avec femme et enfants. Il aura passé plus d’un an au sein de l’EI où il était conducteur de minibus",
+
+	"tags": ["Jihadisme", "13 novembre", "État islamique"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:david-thomson" },
+			{ "drawing": "author:matthieu-meron" }
+		],
+
+		"first": "episode:les-revenants/bilel-episode-1",
+		"prev": "episode:les-revenants/bilel-episode-4",
+		"last": "episode:les-revenants/bilel-episode-5"
+	}
+}
