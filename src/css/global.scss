@@ -227,6 +227,29 @@ q {
 	blockquote & { quotes: "“" "”"; }
 }
 
+table {
+	@extend %font-proxima;
+	font-size: .8125rem; // Always 13px (1rem = 16px)
+	text-align: left;
+}
+
+tr {
+	border-top:    1px solid $color-dark;
+	border-bottom: 1px solid $color-dark;
+}
+
+th, td {
+	padding: 1em .5em;
+	vertical-align: initial;
+}
+
+thead {
+	text-transform: uppercase;
+	tr { border-top: 0; }
+}
+
+tfoot th { text-transform: uppercase; }
+
 /* Allow only vertical resizing of textareas */
 textarea { resize: vertical; }
 
