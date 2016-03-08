@@ -33,9 +33,8 @@ foreach ($results as $id) {
 		'amount'          => $PLANS[$meta['plan']]['price'] * 100,
 		'clientemail'     => $user->user_email,
 		'clientident'     => $id,
-		'clientip'        => '127.0.0.1',
-		//'clientreferrer'  => $_SERVER['HTTP_REFERER'],
-		'clientuseragent' => '',
+		'clientip'        => '127.0.0.1', // Deprecated but still mandatory
+		'clientuseragent' => 'Hello',     // Deprecated but still mandatory
 		'description'     => 'Abonnement',
 		'identifier'      => BE2BILL_IDENTIFIER,
 		'operationtype'   => 'payment',
