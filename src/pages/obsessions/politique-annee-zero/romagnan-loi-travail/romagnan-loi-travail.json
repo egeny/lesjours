@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "romagnan-loi-travail",
+
+	"number": 11,
+	"date": "2016-03-09T06:00+01:00",
+
+	"title": "«&nbsp;Le travail colonise nos cerveaux&nbsp;»",
+	"intro": "La députée PS Barbara Romagnan a fait de la réforme du code du travail, motif de la journée d’action de ce mercredi, son nouveau combat.",
+	"subtitle": "La députée PS Barbara Romagnan a fait de la réforme du travail, motif de la journée d’action de ce mercredi, son nouveau combat.",
+	"lead":  "Barbara Romagnan travaille sur le travail, et depuis longtemps. Est-ce parce que c’est l’un de ses tropismes&nbsp;? Quand je lui demande au téléphone comment se sont écoulés ces derniers jours, elle me raconte à quel point la réforme",
+
+	"tags": ["politique", "Romagnan", "travail", "El Khomri"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman" },
+			{ "photo": ["author:albert-facelly", "Bruno Lévy/Divergence-images"] }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev":  "episode:politique-annee-zero/pouria-amirshahi",
+		"last":  "episode:politique-annee-zero/romagnan-loi-travail"
+	}
+}
