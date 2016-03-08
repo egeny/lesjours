@@ -1,0 +1,23 @@
+/* @group Invoice */
+.page-invoice {
+	font-size: .8125rem; // Always 13px (1rem = 16px)
+
+	// Don't ask…
+	.smallest { font-size: .769230em;  } // 10px if parent is 13px
+	.smaller  { font-size: .846153em;  } // 11px if parent is 13px
+	.larger   { font-size: 1.384615em; } // 18px if parent is 13px
+
+	table {
+		thead th { padding: .5em; }
+		tfoot tr:last-child { border-bottom: 5px solid $color-brand; }
+		tbody td { padding: 1em .5em 1.5em; }
+	}
+}
+
+@include media("md") {
+	h1 img {
+		width:  80px;
+		height: auto;
+	}
+}
+/* @end Invoice */
