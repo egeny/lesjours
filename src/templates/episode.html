@@ -3,7 +3,7 @@
 
 {% block content %}
 {% set obsession = episode.obsession|expand %}
-<article class="episode obsession-{{ obsession.color }}" role="main">
+<article class="episode obsession-{{ obsession.color }} {{ "protected" if protected }}" role="main">
 	<header class="mb-6g">
 		<img src="{{ episode.img|default("img/header.jpg") }}" alt="{{ episode.alt }}" />
 		<div class="md-mt-1c md-ml-1c md-w-5c lg-mt-1c lg-ml-2c lg-w-6c snake"></div>
@@ -36,6 +36,20 @@
 			<div class="row episode-container relative">
 				{{ episode.content }}
 			</div>
+			{% if protected %}
+			<div class="col mt-1g md-w-5c md-ml-1c lg-w-6c lg-ml-2c">
+				<p class="style-meta-large lh-inherit color-brand">Pour continuer à découvrir le site pilote :</p>
+				<div id="cta-subscription" class="mb-2g">
+					<div class="pt-2g lg-pt-3g">
+						<h2 class="h4">Abonnez-vous aux Jours</h2>
+						<p class="mb-0 fw-bold-archer">Un journalisme singulier, curieux, obsessionnel.</p>
+						<p class="fw-bold-archer">Pour <del>9 €</del> <ins>1 €</ins>, explorez le site pilote.</p>
+						<a class="btn-primary btn-brand" href="/abonnement.html">S’abonner</a>
+					</div>
+				</div>
+				<p class="style-meta lh-inherit text-upper color-inherit">Et si vous avez simplement oublié de vous connecter, c’est ici que ça se passe : <a class="color-brand" href="#login">se connecter</a></p>
+			</div>
+			{% endif %}
 		</div>
 		{# This must be outside of the .episode-container otherwise it won't be sticky due to the overflow: hidden #}
 		<div class="share hidden col mb-2g md-w-1c lg-w-2c text-center show" data-fade="3000">
@@ -49,30 +63,32 @@
 	<footer class="pattern-alpha pb-1m">
 		<div class="meta ph-1m mb-1m style-meta">
 			<div class="row">
-				<div class="col mb-1g sm-ph-2g md-ml-1c md-w-3c md-pl-0 lg-ml-2c lg-w-6c lg-pl-0">
-					<p class="sr">Crédits</p>
-					<ul>
-					{% for group in episode.rel.authors|expand %}
-						{% for kind, authors in group %}
-							{% set kind = "Texte"  if kind == "text"  else kind %}
-							{% set kind = "Photos" if kind == "photo" else kind %}
-							{% set kind = "Illustrations" if kind == "drawing" else kind %}
-							{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
-							<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="#{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+				{% if not protected %}
+					<div class="col mb-1g sm-ph-2g md-ml-1c md-w-3c md-pl-0 lg-ml-2c lg-w-6c lg-pl-0">
+						<p class="sr">Crédits</p>
+						<ul>
+						{% for group in episode.rel.authors|expand %}
+							{% for kind, authors in group %}
+								{% set kind = "Texte"  if kind == "text"  else kind %}
+								{% set kind = "Photos" if kind == "photo" else kind %}
+								{% set kind = "Illustrations" if kind == "drawing" else kind %}
+								{# filter blocks doesn't works so bear with me on the following line (avoid unnecessary spaces) #}
+								<li>{{ kind }} {% for author in authors if authors.push else [authors] %}{% if author.href %}<a class="link" rel="author" href="#{{ author.href }}">{% endif %}{{ author.name if author.name else author }}{% if author.href %}</a>{% endif %}{% if loop.length > 1 and not loop.last %}{{ " et " if loop.revindex0 == 1 else ", " }}{% endif %}{% endfor %}</li>
+							{% endfor %}
 						{% endfor %}
-					{% endfor %}
-					</ul>
-				</div>
+						</ul>
+					</div>
 
-				{% if episode.tags %}
-				<div class="col mb-1g sm-ph-2g md-w-3c lg-ml-2c lg-w-8c lg-pl-0">
-					<p>Les mots-clés</p>
-					<ul class="tags">
-					{% for tag in episode.tags %}
-						<li><a class="link external" href="#">{{ tag }}</a></li>
-					{% endfor %}
-					</ul>
-				</div>
+					{% if episode.tags %}
+					<div class="col mb-1g sm-ph-2g md-w-3c lg-ml-2c lg-w-8c lg-pl-0">
+						<p>Les mots-clés</p>
+						<ul class="tags">
+						{% for tag in episode.tags %}
+							<li><a class="link external" href="#">{{ tag }}</a></li>
+						{% endfor %}
+						</ul>
+					</div>
+					{% endif %}
 				{% endif %}
 			</div>
 		</div>

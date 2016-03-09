@@ -118,6 +118,30 @@ $margin: grid-margin("sm");
 	.link-unstyled { @extend .link-unstyled; }
 }
 
+// Protected episodes have to be handled specially
+.episode.protected {
+	> footer .meta .row { height: $margin; }
+
+	.episode-container {
+		overflow: hidden; // Prevent #mini and #note to overflow
+
+		> p:last-of-type::after { content: none; }
+
+		&::after {
+			background: linear-gradient(to bottom, rgba($color-white, 0), $color-white);
+			height: 30%;
+
+			content: "";
+			position: absolute;
+			right:  0;
+			bottom: 0;
+			left:   0;
+
+			pointer-events: none;
+		}
+	}
+}
+
 @include media("md") {
 	.episode {
 		// On tablet and after, the snake is stuck to the column
@@ -190,6 +214,11 @@ $margin: grid-margin("sm");
 		@for $i from 1 through 4 {
 			.md-w-#{$i}c { @extend .md-w-#{$i}c; }
 		}
+	}
+
+	.episode.protected > footer .meta .row {
+		height:      100px;
+		margin-top: -100px;
 	}
 }
 
