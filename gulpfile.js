@@ -520,15 +520,19 @@ function html(e) {
 		var $ = cheerio.load('<div id="cheerio-wrapper">' + _data.episode.content + "</div>", { decodeEntities: false });
 		var stopped = false;
 
-		// Retrieve the children we want (first <p> and its direct siblings, stop we reaching to another <p>)
+		// Retrieve the children we want (first <p> and its <aside> and <figure> direct siblings (having an id of "mini" or "note"))
 		$ = $("#cheerio-wrapper").children().filter(function(index, element) {
 			if (stopped) { return false; }
+			if (!index)  { return true; } // Keep the first child
 
-			if (index && element.type === "tag" && element.name === "p") {
-				stopped = true;
-				return false;
+			if (element.type === "tag") {
+				if (!(["aside", "figure"].indexOf(element.name) > -1 && /^mini|note/.test($(element).attr("id")))) {
+					stopped = true;
+					return false;
+				}
 			}
 
+			// By default keep the child (might not be a tag)
 			return true;
 		});
 
