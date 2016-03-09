@@ -42,7 +42,7 @@
 		if ($_GET['notification'] == 'card') {
 			$payload = $_GET;
 			$user_id = $_GET['CLIENTIDENT'];
-			$error   = $_GET['EXECCODE'] != '0000';
+			$error   = $_GET['EXECCODE'] != '0000' && $_GET['OPERATIONTYPE'] != 'payment'; // Handle only "payment" transactions
 
 			// Check if the hash is valid
 			unset($_GET['notification']); // Exclude for the hash computation
