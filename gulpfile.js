@@ -510,11 +510,11 @@ function html(e) {
 			.pipe(livereload())
 	);
 
-	// Generate another index.unpaid.html file with its content sliced for protected episodes
+	// Generate another index.protected.html file with its content sliced for protected episodes
 	// Sorry, this part is a bit messy, I do not have time to clean it up
 	if (metadata.template === 'episode' && metadata.visibility === 'protected') {
 		var _data = dcopy(data); // Make a deep copy of the data and content (otherwise the modification below will be used by the ongoing streams)
-		_data.unpaid = true; // Add a variable in the data so we can identify in the template we are generating the additional page
+		_data.protected = true; // Add a variable in the data so we can identify in the template we are generating the additional page
 
 		// Parse the content (heavy)
 		var $ = cheerio.load('<div id="cheerio-wrapper">' + _data.episode.content + "</div>", { decodeEntities: false });
@@ -539,7 +539,7 @@ function html(e) {
 			gulp
 				.src(source, { base: paths.pages })
 				.pipe(nunjucks(_data))
-				.pipe(rename(path.join(parsed.dir, 'index.unpaid.html')))
+				.pipe(rename(path.join(parsed.dir, 'index.protected.html')))
 				.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
 				.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
 				.pipe(replace('href="/"',                 'href="' + root + '/"'))

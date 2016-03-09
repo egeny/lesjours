@@ -100,7 +100,7 @@
 			}
 		} else {
 			// Serve a specific page asking the user to subscribe
-			$requested .= 'index.unpaid.html';
+			$requested .= 'index.protected.html';
 		}
 	}
 
