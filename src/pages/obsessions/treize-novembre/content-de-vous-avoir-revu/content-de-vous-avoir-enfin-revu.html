@@ -17,7 +17,20 @@
 
 <p>Aux <i>Jours</i>, je suis amorphe. J’écoute l’équipe et je ne décroche pas un mot. Puis je me mets à leur raconter les scènes de mon quartier, presque vues de ma fenêtre. Ils ont plus de répondant que moi, et me proposent d’écrire, de tenir un journal de bord, un récit de l’intérieur de ce quartier. J’entrevois tout à coup la possibilité de ne plus être passive et écrasée par les évènements.</p>
 
-<p>Au déjeuner, je retrouve Nathalie, une amie, qui habite une rue derrière le Bataclan. C’est elle qui m’a laissé un message : <q>J’ai du mal à partir aujourd’hui, si tu es dans le quartier, je veux bien déjeuner avec toi…</q> On s’installe à la lisière de notre arrondissement, dans un petit café qu’on aime bien. Je fais face à la porte d’entrée et je visualise sans réfléchir un endroit où me cacher si besoin. Je n’ose pas le lui avouer. Elle est toute en retenue, délicate, les yeux cernés.</p>
+{% set person = obsession.people[9] %}
+<p>Au déjeuner, je retrouve <a href="#{{ person.href }}" data-mini="1">Nathalie</a>, une amie, qui habite une rue derrière le Bataclan. C’est elle qui m’a laissé un message : <q>J’ai du mal à partir aujourd’hui, si tu es dans le quartier, je veux bien déjeuner avec toi…</q> On s’installe à la lisière de notre arrondissement, dans un petit café qu’on aime bien. Je fais face à la porte d’entrée et je visualise sans réfléchir un endroit où me cacher si besoin. Je n’ose pas le lui avouer. Elle est toute en retenue, délicate, les yeux cernés.</p>
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
 
 <p>La fille de Nathalie est en sixième au collège du quartier. Le principal avait invité les parents à participer à la minute de silence à midi. Nathalie est sortie de chez elle, mais elle s’est retrouvée « dans le brouillard », en retard pour le collège, happée par la foule qui empruntait sa rue pour se rendre devant le Bataclan. Elle s’est sentie trimballée, hébétée, confuse.</p>
 
@@ -54,11 +67,11 @@
 
 <p>Dans le quartier, on se cogne sans arrêt aux attentats, même dans des décors ordinaires, dans des scènes de tous les jours. Quelques mètres plus loin, au Monoprix, je patiente quelques secondes à la caisse. Un homme est venu acheter du bouillon de volaille. Sûrement un voisin qui répare un oubli de courses. Le caissier lui rend sa monnaie et ose un sourire : <q>Content de vous avoir revu.</q></p>
 {% set person = obsession.people[5] %}
-<p>A quelques rues du boulevard Richard-Lenoir, devant une école, je tombe sur <a href="#{{ person.href }}" data-mini="1">Sophie</a>. Elle était venue donner des conseils aux <i>Jours</i> pour notre levée de fonds (c’est son métier), enthousiasmée par notre projet. Je sais que nous habitons le même quartier. Elle est pâle dans la pénombre, éclairée seulement par les néons du bâtiment scolaire. Nos regards s’accrochent. On se parle en murmurant. Vendredi soir quand les terroristes ont fait irruption, elle était à la terrasse du Bataclan.</p>
+<p>A quelques rues du boulevard Richard-Lenoir, devant une école, je tombe sur <a href="#{{ person.href }}" data-mini="2">Sophie</a>. Elle était venue donner des conseils aux <i>Jours</i> pour notre levée de fonds (c’est son métier), enthousiasmée par notre projet. Je sais que nous habitons le même quartier. Elle est pâle dans la pénombre, éclairée seulement par les néons du bâtiment scolaire. Nos regards s’accrochent. On se parle en murmurant. Vendredi soir quand les terroristes ont fait irruption, elle était à la terrasse du Bataclan.</p>
 
 {{
 	mini({
-		number: 1,
+		number: 2,
 		img: "/obsessions/" + obsession.href + "/" + person.img,
 		alt:      person.alt,
 		href:     "#" + person.href,
