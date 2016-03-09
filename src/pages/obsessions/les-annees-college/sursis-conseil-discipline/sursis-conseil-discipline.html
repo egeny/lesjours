@@ -1,0 +1,164 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+
+<p><span class="lettrine">C</span>ette semaine, il y a un élève en moins en 3e&nbsp;B. Lundi, K. est passé en conseil de discipline. Avant <a href="#note-1">les vacances de février</a>, K. a insulté et menacé une enseignante durant un cours. Le conseil de discipline a prononcé une exclusion définitive de l’établissement avec sursis. Si l’élève ne commet pas à nouveau des faits du même ordre, il restera scolarisé à Aimé-Césaire. S’il récidive, son exclusion sera effective et il sera aussitôt affecté par le rectorat dans un autre collège. Le lendemain du conseil de discipline, K. a cependant été changé de classe. Il est passé en 3e&nbsp;C. Pour ne plus être en cours avec l’enseignante qu’il avait menacée. Mardi après-midi, nous l’avons aperçu de loin avec sa nouvelle classe.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Rentrée",
+caption: "La rentrée pour la zone de Paris a eu lieu le lundi 7 mars."
+})
+}}
+
+<aside>
+<p><span>Il dit qu’il veut arrêter l’école</span> quand il aura 16 ans</p>
+</aside>
+
+<p>Contrairement aux autres élèves de 3e&nbsp;B, K. n’a pas eu son portrait avec photo (le petit rond qui apparaît dans la marge de droite) dans cette série des <i>Jours</i>. Il avait refusé d’être photographié. Et s’était prêté à reculons à l’exercice de l’interview qui me permet de mieux connaître chaque élève de la classe. C’est pourquoi j’ai choisi de ne pas donner non plus son prénom. Mais son histoire est intéressante, parce qu’elle dit beaucoup de ces élèves qui entretiennent des relations chaotiques avec l’école. Parce qu’elle raconte toute la complexité pour les profs et les équipes de direction de trouver des réponses adaptées aux comportements de rupture. Et témoigne de cet équilibre si fragile sur lequel repose une classe. Un équilibre qu’un incident, un nouvel élève, ou parfois juste un mauvais horaire de cours, est susceptible de faire basculer à tout instant. La bascule est parfois momentanée, rattrapée au vol par l’enseignant ou par la force du collectif qu’est la classe. En quelques minutes, ou au cours suivant, l’équilibre est retrouvé. Et puis parfois, non. Le bruit et le désordre général prennent le dessus. Ou quelque chose dérape, qu’on ne peut rattraper. Comme des insultes ou des menaces.</p>
+
+<figure>
+<video controls>
+<source src="video/en-sursis-1.webm" type="video/webm" />
+<source src="video/en-sursis-1.mp4" type="video/mp4" />
+</video>
+<figcaption><span>Ambiance dans le hall des casiers devant le réfectoire, le 8 mars 2016 <span class="credits">Vidéo Simon Lambert pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+
+<p>K. répète souvent qu’il veut <q>arrêter l’école</q> quand il aura 16&nbsp;ans, l’an prochain. Il dit aussi qu’il n’aime pas ce collège. <q>L’ambiance est trop calme. C’est rien ici.</q> K. est beaucoup dans la provocation. Il n’en est pas à son premier conseil de discipline. Cette année, il a déjà été exclu du collège Daniel-Mayer, un établissement proche, vers la porte de la Chapelle, toujours dans le nord de Paris. Avant d’arriver à Aimé-Césaire en janvier, il était déjà passé par une <a href="#note-2">«&nbsp;classe relais&nbsp;»</a>, destinée aux élèves au bord du décrochage.</p>
+
+<p>Les premières semaines à Aimé-Césaire s’étaient plutôt bien passées. K. était du genre taiseux. Grand et épais gaillard souvent replié sur sa table, il était présent sans l’être totalement. En cours mais pas dans le cours. Dans cet espace hors sol où l’ennui peut facilement devenir turbulence. De la place qui est la mienne lorsque je suis en cours avec les 3e&nbsp;B, généralement assise au fond de la classe, j’observe ce petit jeu qui ressemble presque à un rituel. L’élève qui s’ennuie, s’agite, cherche à attirer l’attention d’un deuxième, voire d’un troisième. On s’échange d’abord une blague ou une remarque à voix haute, puis un objet quelconque (stylo, gomme, ciseaux…), de préférence par voie aérienne.</p>
+
+
+{{
+note({
+number: 2,
+title: "Les classes relais",
+caption: "Ces dispositifs accueillent des collégiens dans le rejet de l’institution scolaire, rejet qui se manifeste soit par leur comportement, soit par leur absentéisme. L’objectif de ce dispositif est d’éviter leur déscolarisation."
+})
+}}
+
+<blockquote>
+<p>Qu’est-ce que ça changera à ma vie, tout ça&nbsp;?</p>
+<footer>K., quand la principale adjointe parle du brevet et du lycée</footer>
+</blockquote>
+
+{% set person = obsession.people[0] %}
+<p>K. n’est pas, loin de là, le seul à ce jeu. Pourtant, selon plusieurs enseignants, l’ambiance de la classe s’est vraiment dégradée depuis son arrivée en janvier. Plusieurs s’en sont plaints et inquiétés. <a href="#{{ person.href }}" data-mini="1">Antoine Labaere</a>, le prof principal, a consacré une heure de <a href="#note-3">«&nbsp;vie de classe&nbsp;»</a> pour discuter du problème. Les élèves n’avaient pas la même perception des choses. Lors de cette séance, eux se sont plaints… des profs. Les passant en revue un à un&nbsp;: <q>trop sévère</q>, <q>injuste</q>, <q>dit des gros mots</q>, <q>pas assez encourageant</q>. L’idée que le corps enseignant puisse critiquer leur classe déclenche un réflexe défensif collectif. Les élèves les plus aguerris à l’argumentation verbale, qui ne sont pas ceux qui se jettent des stylos, prennent en charge cette stratégie de défense. {% set person = obsession.people[5] %}<a href="#{{ person.href }}" data-mini="2">Nina</a>, la déléguée de classe, le dit assez clairement&nbsp;: <q>Je n’aime pas qu’on dise que la classe est désagréable.</q> Ce jour-là, la discussion, chacun dans son monde, n’a pas vraiment permis de faire avancer quoi que ce soit.</p>
+
+{% set person = obsession.people[0] %}
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{{
+note({
+number: 3,
+title: "«&nbsp;Vie de classe&nbsp;»",
+caption: "Une fois par semaine, le jeudi soir, le professeur principal anime une heure durant une séance où se règlent les problèmes de la classe. En troisième, cette heure est surtout consacrée à la recherche du stage de février et à la préparation de l’orientation."
+})
+}}
+
+{% set person = obsession.people[5] %}
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<figure>
+<img src="img/en-sursis-2.jpg" alt="" />
+<figcaption><span>Le professeur principal de la 3e&nbsp;B, Antoine Labaere <span class="credits">Photo Simon Lambert pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+{% set person = obsession.people[3] %}
+<p>Entre-temps, K. a eu une altercation dans un couloir avec une enseignante du collège. Il y a eu un <a href="#note-4">rapport</a> et il a été aussitôt convoqué pour un entretien avec sa mère dans le bureau de <a href="#{{ person.href }}" data-mini="3">Pascale Guillemin</a>, la principale adjointe. Le prof principal et la conseillère principale d’éducation étaient présents. Ce jour-là, K. est venu avec sa sourde colère. Le regard dans le vide, malgré les injonctions de Pascale Guillemin à la regarder durant leurs échanges, et la réponse souvent monosyllabique. La principale adjointe a dû le reprendre parce qu’il lui disait <q>zyva&nbsp;!</q>, sans même s’en apercevoir. La mère de K. n’a pas beaucoup parlé. Elle a juste expliqué que son fils était <q>souvent en colère</q>. Pascale Guillemin a tenté de lui faire comprendre les enjeux pour lui de cette cruciale année de troisième&nbsp;: le brevet, la nécessité de trouver un lycée pour l’an prochain. À chaque fois, l’élève a la même réponse, et c’est une question&nbsp;: <q>Qu’est-ce que ça changera à ma vie, tout ça&nbsp;?</q> K. répète encore qu’il arrêtera l’école à 16 ans.</p>
+
+{{
+note({
+number: 4,
+title: "Les rapports",
+caption: "Après chaque incident, les profs rédigent des rapports transmis à la direction de l’établissement. Une «&nbsp;commission sanctions&nbsp;» peut ensuite prendre des mesures en fonction de la gravité des faits&nbsp;: punitions, exclusions temporaires, travaux d’intérêts généraux, convocation des parents… La liste de ses décisions est affichée en salle des profs. Dans la colonne «&nbsp;motifs&nbsp;», on note beaucoup de <q>violences</q>, <q>agitation</q>, <q>manque de respect</q>, mais aussi <q>vol de nourriture à la cantine</q>, <q>triche avec son téléphone portable</q>, <q>jette des chaises et des tables</q>."
+})
+}}
+
+{% set person = obsession.people[3] %}
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+<p><span>À Aimé-Césaire,</span> une douzaine de conseils de discipline par an</p>
+</aside>
+
+<p>Après cet entretien, dans les semaines qui ont suivi, K. a pas mal séché les cours. Un autre élève de la classe lui a d’ailleurs emboîté le pas, calant ses heures buissonnières sur les siennes. Un jour où je lui demandais ce qu’il faisait quand il séchait, K. m’a répondu&nbsp;: <q>Rien, je me promène dans le XVIIIe.</q> Trois semaines après le rendez-vous dans le bureau de la principale adjointe, il y a eu les insultes et la saisine du conseil de discipline.</p>
+
+<p>À Aimé-Césaire, une douzaine de conseils de discipline ont lieu chaque année. La moitié donne lieu à des exclusions définitives de l’établissement. Cette année, il y a déjà eu neuf conseils de discipline et quatre exclusions définitives, dont celle de K. avec sursis. Parmi ces élèves, quelques très rares «&nbsp;poly-exclus&nbsp;», ceux qui vont de collège en collège et d’exclusion en exclusion, mais aussi des élèves au <q>dossier vierge</q>, qui commettent subitement un acte grave, se battent, apportent un couteau… Pour qu’il y ait saisine du conseil de discipline, il faut en effet que les faits soient d’une certaine gravité. La plupart ici concernent des actes de violence envers le personnel de l’établissement ou d’autres élèves. <i>«&nbsp;En réalité, tout cela s’apprécie de façon très relative</i>, nuance Pascale Guillemin. <i>Pour certains élèves, on arrive au conseil de discipline parce qu’on a épuisé toutes les autres formes d’avertissement ou de sanction. On tient compte aussi de la réaction de la victime.&nbsp;»</i></p>
+
+<blockquote>
+<p>L’idée, c’est toujours d’exclure le moins possible, de trouver une autre solution.</p>
+<footer>Pascale Guillemin, la principale adjointe</footer>
+</blockquote>
+
+<p>Le conseil de discipline est une procédure <a href="http://www.esen.education.fr/fr/ressources-par-type/outils-pour-agir/le-film-annuel-des-personnels-de-direction/detail-d-une-fiche/?a=32&cHash=c52d730bc8" target="_blank">très formelle</a> et très encadrée. Il se déroule à huis clos, le débat doit y être contradictoire et la décision actée sur procès verbal. En plus de l’élève et sa famille, sont présents la direction du collège, la conseillère principale d’éducation, des représentants des parents et des enseignants élus au conseil d’administration. Le professeur principal et les délégués peuvent être là en tant qu’invités mais ne participent pas aux délibérations. À la toute fin, comme dans une audience judiciaire, ce sont l’élève et sa famille qui ont la parole.</p>
+
+<p>L’échelle des peines va de l’exclusion de moins de huit jours à l’exclusion définitive. Entre les deux, il y a du «&nbsp;sursis&nbsp;» possible ou des peines dites de «&nbsp;responsabilisation&nbsp;». <q>L’idée, c’est toujours d’exclure le moins possible, de trouver une autre solution</q>, explique Pascale Guillemin. Parmi les alternatives, le collège travaille particulièrement sur ces mesures de responsabilisation, une forme de travaux d’intérêt général. Récemment, un élève d’Aimé-Césaire est ainsi allé effectuer sa «&nbsp;sanction&nbsp;» auprès de la Licra (Ligue internationale contre le racisme et l’antisémitisme).</p>
+
+
+<aside>
+<p><span>Le cercle vicieux</span> des exclusions et réaffectations</p>
+</aside>
+
+{% set person = obsession.people[2] %}
+<p>L’exclusion est un <q>bout du bout</q>, dit parfois <a href="#{{ person.href }}" data-mini="4">Jean-Louis Terrana</a>, le principal. Car si pour certains élèves, elle peut être rédemptrice, pour d’autres, elle est destructrice. Une marche accélérée vers la déscolarisation. Ces dernières années, l’Éducation nationale a <a href="#" data-mini="5">pas mal évolué</a> sur le sujet en limitant les exclusions temporaires, en misant sur la prévention et, globalement, en évitant que les élèves exclus ne soient simplement livrés à eux-mêmes. Les collèges recevant des élèves en situation sociale difficile, comme Aimé-Césaire, sont particulièrement concernés par le problème. Qui peut vite tourner au cercle vicieux&nbsp;: ne reçoivent des élèves exclus d’autres établissements que ceux qui perdent des élèves, donc qui en excluent eux-mêmes. Ou comment faire tourner les problèmes toujours dans les mêmes endroits.</p>
+
+{{
+	mini({
+		number: 4,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside id="mini-5" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.education.gouv.fr/pid285/bulletin_officiel.html?cid_bo=79279" />
+<span class="image"><img class="responsive" src="img/circulaire.jpg" alt="" /></span>
+<p class="title">La circulaire de 2014 sur les exclusions</p>
+<p class="subtitle">À consulter sur le site du ministère de l’Éducation nationale</p>
+</a>
+</aside>
+
+<figure>
+<img src="img/en-sursis-3.jpg" alt="" />
+<figcaption><span>La tableau des sanctions dans la salle des profs <span class="credits">Photo Simon Lambert pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Dans le XVIIIe&nbsp;arrondissement, la politique d’exclusion-réaffectation de certains établissements a d’ailleurs eu des conséquences bien au-delà de l’enceinte des collèges. Selon le maire de l’arrondissement, le socialiste Éric Lejoindre, <q>cela a joué un rôle non négligeable</q> dans les problèmes de bagarres de jeunes du XVIIIe contre ceux du XIXe (<a href="/obsessions/les-annees-college/un-pont-entre-deux-danses">lire l’épisode 3</a>, «&nbsp;Sortie accompagnée&nbsp;»), qui pourrissent pas mal la vie du quartier. Certains élèves, réaffectés dans l’arrondissement voisin, revenant pour des expéditions punitives. Aujourd’hui, les exclusions ont diminué et les collèges, à l’image d’Aimé-Césaire, sont extrêmement attentifs à ces questions.</p>
+
+<p>Après le conseil de discipline de K., Jean-Louis Terrana avait le sentiment d’être <q>arrivé à quelque chose</q>. Pas d’avoir fait peur à l’élève, ni même lui avoir fait prendre conscience de la gravité de son attitude. <q>Nous n’avons pas de prise sur cela, il ne l’entend pas.</q> Jean-Louis Terrana parlait en réalité d’une petite chose&nbsp;: <q>Avoir réussi à instaurer une discussion avec K., normalement, sans qu’il soit dans la provocation.</q> Le principal sourit. <q>Vous savez, ce n’est pas rien.</q></p>
+
