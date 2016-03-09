@@ -40,13 +40,13 @@
 		} // end of if ($_GET['notification'] == 'bank')
 
 		if ($_GET['notification'] == 'card') {
-			$payload = $_GET;
-			$user_id = $_GET['CLIENTIDENT'];
-			$error   = $_GET['EXECCODE'] != '0000' && $_GET['OPERATIONTYPE'] != 'payment'; // Handle only "payment" transactions
+			$payload = stripslashes_deep($_GET); // Use Wordpress' stripslashes_deep to revert the magic quotes added by Wordpress (!)
+			$user_id = $payload['CLIENTIDENT'];
+			$error   = $payload['EXECCODE'] != '0000' && $payload['OPERATIONTYPE'] != 'payment'; // Handle only "payment" transactions
 
 			// Check if the hash is valid
-			unset($_GET['notification']); // Exclude for the hash computation
-			if ($_GET['HASH'] != signature($_GET)) { die('Bad hash'); } // Stop right now if the hash doesn't match
+			unset($payload['notification']); // Exclude for the hash computation
+			if ($payload['HASH'] != signature($payload)) { die('Bad hash'); } // Stop right now if the hash doesn't match
 		} // end of if ($_GET['notification'] == 'card')
 
 		// Add a transaction trace (debugging purpose, should NOT be unique)
