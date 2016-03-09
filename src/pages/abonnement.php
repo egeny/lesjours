@@ -46,7 +46,7 @@
 
 			// Check if the hash is valid
 			unset($_GET['notification']); // Exclude for the hash computation
-			if ($_GET['HASH'] != signature($_GET)) { die(); } // Stop right now if the hash doesn't match
+			if ($_GET['HASH'] != signature($_GET)) { die('Bad hash'); } // Stop right now if the hash doesn't match
 		} // end of if ($_GET['notification'] == 'card')
 
 		// Add a transaction trace (debugging purpose, should NOT be unique)
@@ -56,7 +56,7 @@
 		)));
 
 		// Stop now if the payment service returned an error
-		if ($error) { die(); }
+		if ($error) { die('OK'); }
 
 		// Retrieve additional data
 		$date   = date('Y-m-d H:i:s');
