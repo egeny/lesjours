@@ -1,5 +1,6 @@
 {
-	"template": "episode",
+	"template":   "episode",
+	"visibility": "protected",
 
 	"href": "ep-4-mission-schwartz",
 
