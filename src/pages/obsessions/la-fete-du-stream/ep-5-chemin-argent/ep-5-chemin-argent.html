@@ -1,0 +1,81 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+<p><span class="lettrine">I</span>l est très difficile de retracer clairement et de façon synthétique le chemin de l’argent dans le streaming. Il dépend d’une cascade de métiers, de l’argent qui part d’un côté et revient de l’autre. Le monde de la musique a toujours aimé les routes tortueuses et le brouillard entretenu.</p>
+
+{% set person = obsession.people[5] %}
+<p>Puis on se rend vite compte qu’un chemin unique n’existe pas, qu’il y a trop de variables. La visualisation qui suit est donc une moyenne de moyennes constituée à partir de chiffres qui ne sont souvent pas publics. C’est un juste milieu aussi juste que possible en ce début d’année 2016, qui sera celle du basculement vers une économie de la musique dominée par le streaming. Le <a href="#{{ person.href }}" data-mini="1">Snep</a>, qui représente environ 80&nbsp;% du marché français, a d'ailleurs présenté ce mardi matin <a href="#" data-mini="2">ses meilleurs chiffres</a> depuis le début des années 2000.
+</p>
+
+<p>Le marché français de la musique enregistrée, c'est-à-dire les CD, vinyles, téléchargements et écoutes en streaming, est encore en recul de 7&nbsp;% sur l'année 2015, mais cette nouvelle perte cache bien la bascule tant attendue vers le tout-streaming (ou presque). Avec 18&nbsp;milliards de chansons écoutées sur les différentes plateformes accessibles en France –&nbsp;purement audio mais également vidéo comme YouTube&nbsp;–, ce mode d'écoute a représenté l'an dernier 25&nbsp;% du marché français. Surtout, l'écoute gratuite en échange de publicité a reculé de 8&nbsp;% alors que les abonnements progressaient de 71&nbsp;% en un an.</p>
+
+
+{{
+mini({
+number: 1,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="doc/snep-bilan-2015.pdf"/>
+<span class="image"><img class="responsive" src="img/snep.jpg" alt="" /></span>
+<p class="title">L’ensemble du bilan 2015 de la musique enregistrée</p>
+<p class="subtitle">À télécharger</p>
+</a>
+</aside>
+
+<figure>
+<img src="img/chemin-argent-data.png" alt="" />
+<figcaption><span>Qui récupère quoi&nbsp;? <span class="credits">Datavisualisation Brice Terdjman et François Prosper/WeDoData.</span></span></figcaption>
+</figure>
+
+<p>L’étage de <a href="#note-1">l’agrégateur</a> notamment, varie beaucoup. Les trois <a href="#note-2">majors</a> ont leurs propres tuyaux et réduisent donc beaucoup les frais de ce côté-là –&nbsp;même si elles font porter une partie de ces frais sur leurs artistes. Les grands <a href="#note-3">indépendants</a> (Wagram, Pias, Because Music…) utilisent quant à eux les services de Believe et Idol, les deux principaux agrégateurs français, mais seulement comme prestataire technique. Les autres labels indépendants se confient entièrement à ces deux entreprises et c’est le jeu de l’offre et de la demande qui règne&nbsp;: un label très demandé paiera bien moins cher qu’un autre plus discret.</p>
+
+<p>Il faut aussi nuancer la somme perçue par le producteur. S’il récupère le gros des revenus du streaming, comme c’était déjà le cas à l’époque du disque physique, il ne s’agit pas de bénéfices nets. Cet argent paie les sommes misées sur les disques qu’il défend et la plupart des maisons de disques ne gagnent presque pas d’argent une fois le calcul final effectué. Les majors ont industrialisé cette prise de risque pour la réduire et tirer des revenus du moindre recoin de leurs contrats, mais elles sont une exception dans un écosystème où les microlabels sont les plus nombreux.</p>
+
+<p>Enfin, l’interprète ne touche que rarement la totalité de la somme qui lui revient par contrat. Ce même contrat prévoit en effet une longue série d’<a href="#note-4">abattements</a> qui réduisent ses revenus&nbsp;: s’il bénéficie d’une campagne de publicité, si un travail particulier est fait pour l’export de sa musique, s’il enregistre un disque plus long que prévu…</p>
+
+<p><i>Mis à jour le 8 mars 2016 à 13&nbsp;heures.</i></p>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Agrégateur",
+caption: "C’est le grossiste de l’industrie musicale. On l’appelle aujourd’hui plutôt «&nbsp;multi-channel network&nbsp;» (MCN). Il assure non seulement la distribution des disques d’un label sur l’ensemble des plateformes, mais aussi leur promotion dans les recommandations et les playlists."
+})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Majors",
+caption: "Les entreprises internationales qui rassemblent plusieurs maisons de disques. Elles sont trois aujourd’hui –&nbsp;Universal, Sony et Warner&nbsp;– et réalisent environ 70&nbsp;% de parts de marché dans le monde."
+})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "Indépendants",
+caption: "Les maisons de disques autonomes. Certaines sont distribuées par une major. Elles publient la grande majorité des disques."
+})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 4,
+title: "Abattement",
+caption: "Une clause du contrat qui lie un artiste à un producteur, qui prévoit que sa rémunération sera amputée si un risque est pris pour favoriser le succès d’un disque."
+})
+}}

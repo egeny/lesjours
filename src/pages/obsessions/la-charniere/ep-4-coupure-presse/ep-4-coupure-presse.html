@@ -1,0 +1,187 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+
+<p><span class="lettrine">L’</span>un de ses collègues avait donné les coordonnées d’<a href="#note-1">Asiye</a> en prévenant qu’elle risquait d’être prudente&nbsp;: journaliste en Turquie, menacée par le pouvoir, elle vit un peu sous tension. De fait, elle se méfie. Au dernier moment, elle a changé le lieu du rendez-vous pour qu’on se retrouve dans un café anonyme du sous-sol d’une galerie commerciale, dans un quartier excentré d’Istanbul. <i>«&nbsp;C’est très compliqué de continuer à faire votre métier dans ces conditions</i>, explique-t-elle, une fois rassurée sur <i>Les Jours</i>. <i>Et c’est très troublant pour un journaliste de devenir en même temps sujet, cela nous perturbe beaucoup.&nbsp;»</i> Au moment de partir, deux heures plus tard, elle tend sa carte de visite en demandant&nbsp;: <q>Ça vous ennuie si je le laisse votre portable à un proche&nbsp;? Cela permettrait de vous prévenir si un jour, je suis arrêtée.</q></p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Asiye",
+caption: "Son prénom a été modifié."
+})
+}}
+
+<aside>
+<p><span>Samedi, la police a investi</span> la rédaction de «&nbsp;Zaman&nbsp;»</p>
+</aside>
+
+<p>En Turquie, les journalistes travaillent dans ce climat. Selon une plateforme de solidarité mise en place récemment, au 5 mars, 33 étaient détenus (dont bon nombre de journalistes kurdes). Asiye, elle, a «&nbsp;seulement&nbsp;» été rappelée à l’ordre par les services du Premier ministre, comme cela arrive à de nombreux journalistes, pour des réactions d’autres personnes à des tweets qu’elle avait écrits.</p>
+
+<p>Elle se montre très pessimiste sur la possibilité de continuer ce métier en Turquie, l’exerce en pesant chaque mot, en surveillant ce qu’elle poste sur les réseaux sociaux. Elle énumère les rares journaux restant vraiment indépendants. Parmi eux, il y a <i>Zaman</i>, quotidien conservateur de centre-droit et plus fort tirage du pays. Mais samedi dernier, la police a investi la rédaction et expulsé le dernier journaliste qui refusait de sortir après le placement sous tutelle de son journal la veille. Un <a href="#" data-mini="1">article de <i>Zaman France</i></a>, hebdomadaire et site de la même mouvance qui survit à Paris, privé de la publicité des industriels turcs sur lesquels le gouvernement fait pression, explique de façon très précise les enjeux de cette mise sous tutelle.</p>
+
+<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="https://www.zamanfrance.fr/article/pourquoi-journal-turc-zaman-a-t-il-ete-confisque-pouvoir-20320.html" />
+<span class="image"><img class="responsive" src="img/zaman.jpg" alt="" /></span>
+<p class="title">«&nbsp;Pourquoi le journal turc Zaman a-t-il été “confisqué” par le pouvoir&nbsp;?&nbsp;»
+</p>
+<p class="subtitle">À lire sur Zaman France</p>
+</a>
+</aside>
+
+<figure>
+<img src="img/coupure-de-presse-1.jpg" alt="" />
+<figcaption><span>Le rédacteur en chef, Abdülhamit Bilici, s’adresse à la foule venue manifester devant les locaux du journal «&nbsp;Zaman&nbsp;» suite à sa mise sous tutelle par la justice turque, le 4 mars 2016 <span class="credits">Photo Mehmet Yaman.</span></span></figcaption>
+</figure>
+
+{% set person = obsession.people[12] %}
+<p>D’ordinaire, la justice turque agit ainsi le temps d’une instruction lorsqu’un papier a déplu (en général, cela se termine par une saisie, une forte amende ou une taxe fiscale). Avec <i>Zaman</i>, l’enquête concerne le propriétaire supposé du groupe Feza Gazetecilik, auquel appartient le quotidien. Selon les magistrats, Feza est contrôlé par <a href="#{{ person.href }}" data-mini="2">Fethullah Gülen</a>, prédicateur exilé aux États-Unis et ancien allié du Président Erdogan. Musulman éclairé, défenseur de l’éducation des masses, Gülen est entouré d’hommes d’affaires membres de sa confrérie qui possédaient de nombreuses entreprises en Turquie&nbsp;; la plupart ont été nationalisées, confisquées par le pouvoir. Sa confrérie dirige encore de nombreuses écoles et des classes préparatoires, des universités, qui forment une élite musulmane pas seulement en Turquie. C’est ainsi que de nombreux cadres issus de ses formations ont intégré l’administration, la justice, la police et les médias turcs, dans les années&nbsp;90 puis au début des années&nbsp;2000.</p>
+
+{% set person = obsession.people[12] %}
+{{
+mini({
+number: 2,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+
+<p>{% set person = obsession.people[1] %}Gülen et <a href="#{{ person.href }}" data-mini="3">Erdogan</a> partageaient alors la même stratégie d’accès au pouvoir, qui a débouché sur la création de <a href="#note-2">l’AKP</a>, mouvement musulman mais démocratique, en rupture avec l’islam politique où militait jusque-là Erdogan. Ils sont ensuite restés un temps alliés. Le futur Président en avait besoin, il s’appuyait sur les cadres de Gülen. Les deux hommes ont pris leurs distances à partir de 2011, puis des magistrats proches du prédicateur ont enquêté sur la corruption qui gangrénait le pouvoir, et leurs investigations ont été révélées par la presse liée à Gülen. Justice, police et médias ont alors connu de sérieuses purges.</p>
+
+
+{% set person = obsession.people[1] %}
+{{
+mini({
+number: 3,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "L’AKP",
+caption: "Le Parti de la justice et du développement. Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays.
+"
+})
+}}
+
+<aside>
+<p><span>Des journalistes emprisonnés</span> ou chassés pour une enquête</p>
+</aside>
+
+<p>Pour justifier cette chasse aux sorcières, le pouvoir a fait déclarer «&nbsp;terroriste&nbsp;» le mouvement Gülen, qu’il accuse d’avoir construit un pouvoir <q>parallèle</q> préparant un coup d’État. Ce serait plus crédible si les juges ne s’en prenaient pas systématiquement à la presse d’opposition –&nbsp;et même à celle favorable à l’AKP, lorsqu’un papier y déplaît au Président ou à son entourage.</p>
+
+{% set person = obsession.people[11] %}
+<p><a href="#{{ person.href }}" data-mini="4">Nazli Ilicak </a> en a fait plusieurs fois l’expérience. Issue de la grande bourgeoisie stanbouliote (<a href="/obsessions/la-charniere/ep-3-turquie">lire épisode 3</a>, «&nbsp;Femmes&nbsp;: les pressions insidieuses&nbsp;»), éditorialiste réputée, veuve d’un grand patron de presse, elle a été chassée de son journal, <i>Sabah</i> (la libre pensée) après avoir demandé en 2013 que les ministres éclaboussés dans des scandales financiers (la justice turque les a depuis blanchis) quittent le gouvernement. <i>«&nbsp;Mon journal était dirigé par le gendre de Recep Erdogan</i>, raconte-t-elle. <i>Il était bien sûr favorable à l’AKP, comme je l’étais alors. Mais en décembre 2013, mon papier a été censuré, puis j’ai été virée le lendemain. J’ai continué dans un journal proche de Gülen et à la télé, puis j’ai de nouveau été interdite. Ce n’est pas difficile&nbsp;: ils ont formé des tribunaux dans lesquels un seul juge de paix, nommé par le pouvoir, peut ordonner à la police de perquisitionner chez vous, de vous arrêter, de confisquer tous vos biens.&nbsp;»</p></i>
+
+
+{{
+mini({
+number: 4,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+
+
+<p>Les journalistes peuvent être emprisonnés ou chassés pour une enquête, comme celle qui a révélé les accords secrets entre le gouvernement et le leader kurde Abdullah Öcalan. Ou celle de Can Dündar, rédacteur en chef de <i>Cumhuriyet</i>, qui a prouvé la livraison d’armes par les services secrets turcs à des jihadistes à la frontière syrienne. Can Dündar a passé trois mois en prison avec Erdem Gül, chef de bureau de <i>Cumhuriyet</i> à Ankara, et les deux hommes seront jugés le 25 mars. Un procureur a requis contre eux la perpétuité pour espionnage, terrorisme et… divulgation de secret d’État. Car le pouvoir turc ne prend même pas la peine de nier la fourniture d’armes.</p>
+
+ <blockquote>
+<p>Il y a toujours eu de la censure et des journalistes arrêtés en Turquie, mais c’est la première fois que le gouvernement s’en prend ainsi à des journalistes réputés, à des grands journaux. </p>
+<footer>Izzeddin Çalislar, écrivain</footer>
+</blockquote>
+
+<p><a href="http://abonnes.lemonde.fr/idees/article/2016/01/10/en-turquie-erdogan-muselle-la-presse_4844623_3232.html" target="_blank">Dans une tribune</a> publiée par <i>Le Monde</i> le 10 janvier, Can Dündar dénonçait la situation de la presse en Turquie et la <a href="#note-3">frilosité de l’Europe</a>&nbsp;: <q>L’Union européenne a choisi d’ignorer la politique d’oppression que mène Erdogan en échange de l’accueil et du maintien des réfugiés sur le sol turc. De là où je suis, en isolement presque total dans une prison stambouliote, risquant deux peines de prison à vie pour la publication de faits avérés, je peux, de ma fenêtre à barreaux, voir où s’arrête l’Europe. C’est un lieu assez sombre.</q></p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 3,
+title: "L’UE et la Turquie",
+caption: "Un accord en préparation entre l’Union européenne et la Turquie prévoit que cette dernière accepte le retour de tous les migrants (économiques et réfugiés) passés illégalement par la Grèce, tandis que l’Europe intègrerait le même nombre de migrants, mais seulement réfugiés et dûment enregistrés en Turquie. Cela tarirait l’économie des passeurs, plaide l’UE, qui verserait 6 milliards d’euros au lieu de 3 à Ankara pour gérer l’afflux, ne demanderait plus de visas aux Turcs à partir de juin, et accepterait de rouvrir des chapitres préparant l’adhésion de la Turquie dans l’UE."
+})
+}}
+
+
+{% set person = obsession.people[0] %}
+<p><a href="#{{ person.href }}" data-mini="5">Izzeddin Çalislar</a>, ancien publicitaire (<a href="/obsessions/la-charniere/marmite-turque">lire épisode 1</a>, «&nbsp;Dans la marmite turque&nbsp;»), a parfois écrit pour la presse. <i>«&nbsp;Il y a toujours eu de la censure et des journalistes arrêtés en Turquie</i>, dit-il, <i>mais c’est la première fois que le gouvernement s’en prend ainsi à des journalistes réputés, à des grands journaux. Avant, c’étaient surtout les journalistes kurdes ou gauchistes qui étaient visés. Je suis très inquiet car aujourd’hui, il est devenu très difficile de s’informer et la passation des savoirs d’une génération à l’autre ne va pas se faire. Ce sera très difficile de recréer une presse de qualité en Turquie.&nbsp;»</i>
+
+
+{{
+mini({
+number: 5,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<figure>
+<img src="img/coupure-de-presse-2.jpg" alt="" />
+<figcaption><span>La police entre de force dans le siège du journal «&nbsp;Zaman&nbsp;» dans la nuit du 4 au 5 mars 2016 <span class="credits">Photo Kursad Bayhan.</span></span></figcaption>
+</figure>
+
+<p>Quelques médias de qualité, très rares, résistent. <a href="http://www.cumhuriyet.com.tr/" target="_blank"><i>Cumhuriyet</i></a>,  <a href="http://www.taraf.com.tr/" target="_blank"><i>Taraf</i></a>, <a href="http://www.birgun.net/" target="_blank"><i>BirGün</i></a>, avec de faibles tirages.  <a href="http://www.sozcu.com.tr/" target="_blank"><i>Sözcü</i></a>, qui a réuni quelques éditorialistes célèbres chassés d’<i>Hürriyet</i>. Et le site <a href="http://t24.com.tr/" target="_blank"><i>T24.com</i></a>, qui est devenu un refuge réunissant des auteurs, des éditorialistes et des universitaires.</p>
+
+<p>Une partie des sites, chaînes et journaux indépendants ont été placés sous tutelle, ou rachetés par des proches du pouvoir ou des industriels qui tiennent des médias à la gloire du pouvoir, en échange de marchés publics. On appelle cela «&nbsp;la piscine&nbsp;», une image pour évoquer un bassin dans lequel le pouvoir jette de l’argent afin d’être exaucé, servi par une presse laudative. <i>«&nbsp;Cela fonctionne bien</i>, sourit Izzeddin. <i>Pour vous informer correctement ici, il est préférable de lire l’anglais et d’utiliser les réseaux sociaux.&nbsp;»</i></p>
+
+{% set person = obsession.people[9] %}
+<p><a href="#{{ person.href }}" data-mini="6">Begum Kayacan</a>, qui a étudié la civilisation américaine, raconte que désormais, elle ne s’informe que par les médias anglosaxons, comme la BBC, tandis que chez elle, son père regarde la télé et croit par exemple qu’à cause de Can Dündar, la Turquie ne peut plus acheminer d’aide médicale en Syrie. <i>«&nbsp;Je croyais beaucoup au peuple de ce pays</i>, soupire l’éditorialiste Nazli Ilikak. <i>Mais j’ai réalisé à quel point il est crédule, très facilement manipulable.&nbsp;»</i></p>
+
+{{
+mini({
+number: 6,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<aside>
+<p><span>Erdogan a toujours prêté</span> une grande attention aux médias</p>
+</aside>
+
+<p>Le <a href="#note-4">mouvement de Gezi</a>, en 2013, avait permis à beaucoup de réaliser à quel point la presse aux ordres mentait sur les bilans, sur les responsables des violences. Elle traitait les manifestants de «&nbsp;terroristes&nbsp;», comme elle le fait d’ordinaire pour les Kurdes. Les réseaux sociaux ont permis de mobiliser, d’informer sur ce qu’il s’y passait. Depuis, le pouvoir surveille soigneusement Facebook, Twitter, WhatsApp, ferme les accès à chaque actualité brûlante. Paie des trolls pour inonder les forums, harceler les opposants.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 4,
+title: "Gezi",
+caption: "La protection d’arbres menacés par la construction d’un building dans le parc Gezi, dans le centre d’Istanbul en mai 2013, avait provoqué un soulèvement massif, révélant une aspiration à plus de liberté."
+})
+}}
+
+<p>Erdogan a toujours prêté une grande attention aux médias. Dès son élection comme maire d’Istanbul, en 1994, racontent les auteurs de <a href="#note-5"><i>Erdogan&nbsp;: nouveau père de la Turquie&nbsp;?</i></a>, portrait passionnant paru voilà quelques jours, il avait fait lancer par des proches deux chaînes de télévision et un quotidien, <i>Yeni Safak</i>, pour vanter ses faits et gestes. Quelques années plus tard, l’élu a lui-même été victime de la censure, emprisonné quatre mois en 1999 pour un poème lu en public et dans lequel il disait notamment&nbsp;: <q>Les minarets seront nos baïonnettes, les coupoles nos casques, les mosquées seront nos casernes et les croyants nos soldats.</q> Incarcéré par le pouvoir laïc, il a passé quatre mois en prison, dans des conditions nettement plus favorables que celles imposées aux journalistes qu’il fait arrêter et qui restent à l’isolement. Lui recevait des visiteurs tous les jours, était en compagnie d’un garde du corps incarcéré pour s’occuper de lui et qui avait fait aménager avant son arrivée une cellule tout confort, avec tapis, papier peint, meubles et chauffe-eau.</p>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 5,
+title: "«&nbsp;Erdogan&nbsp;: nouveau père de la Turquie&nbsp;?&nbsp;»",
+caption: "De Nicolas Cheviron et Jean-François Pérouse, éditions François Bourin, mars 2016."
+})
+}}
+
+<p>Erdogan avait profité de son séjour à l’ombre pour expier son militantisme radical, faire sa mue. Renoncer à l’islam politique et endosser les habits respectables de «&nbsp;conservateur démocrate&nbsp;» épris de droits de l’homme, afin d’accéder au pouvoir. En fondant l’AKP, il déclarait ainsi, en juillet 2001&nbsp;: <q>L’ère de la soumission au hoca [le chef] est terminée. Nous allons mettre en œuvre avec vigueur une conception de la démocratie participative et plurielle. Les fondements en seront les sentiments de tolérance, paix, amour et fraternité.</q> Quinze ans plus tard, l’ère de la soumission au chef est revenue. Le Président Erdogan met en œuvre avec vigueur sa conception de la dictature.</p>

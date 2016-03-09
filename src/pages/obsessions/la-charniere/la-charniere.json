@@ -12,7 +12,8 @@
 	"episodes": [
 		"episode:la-charniere/marmite-turque",
 		"episode:la-charniere/ep-2-turquie",
-		"episode:la-charniere/ep-3-turquie"
+		"episode:la-charniere/ep-3-turquie",
+		"episode:la-charniere/ep-4-coupure-presse"
 	],
 
 	"people": [
@@ -20,9 +21,9 @@
 			"href":     "izzeddin-calislar",
 			"img":      "img/izzeddin-calislar.jpg",
 			"alt":      "",
-			"title":    "Izzedin Çalislar",
+			"title":    "Izzeddin Çalislar",
 			"subtitle": "Écrivain très observateur",
-			"desc": "Dans un cadre accroché au mur du salon d'Izzedin Çalislar, à Istanbul, un militaire coiffé d’une haute toque de laine fixe le visiteur. L'arrière grand-père d'Izzeddin, général des armées d’Atatürk, le fondateur de la République turque. La famille était originaire de Grèce, comme le père de la nation. Les deux familles étaient proches&nbsp;: l’ancêtre a fait partie des premiers fidèles et a dirigé les armées d’Atatürk pendant la première guerre. Le petit fils (51&nbsp;ans) porte le même prénom que lui, a fait des études de sciences politiques avant de travailler comme monteur, scénariste et metteur en scène, puis de se lancer dans la publicité, montant sa propre agence, pendant dix ans. Il l’a laissée tomber pour écrire des livres. Il multiplie les ouvrages sur des sujets très différents qui ne lui poseront pas de problèmes en Turquie. Le dernier, superbe, parle des oliviers millénaires. Quand il n'écrit pas depuis son bureau surplombant un jardin un peu sauvage, Izzeddin se consacre à ce qui constitue un sport national en Turquie&nbsp;: disserter de politique et de l'état inquiétant du pays.",
+			"desc": "Dans un cadre accroché au mur du salon d'Izzeddin Çalislar, à Istanbul, un militaire coiffé d’une haute toque de laine fixe le visiteur. L'arrière grand-père d'Izzeddin, général des armées d’Atatürk, le fondateur de la République turque. La famille était originaire de Grèce, comme le père de la nation. Les deux familles étaient proches&nbsp;: l’ancêtre a fait partie des premiers fidèles et a dirigé les armées d’Atatürk pendant la première guerre. Le petit fils (51&nbsp;ans) porte le même prénom que lui, a fait des études de sciences politiques avant de travailler comme monteur, scénariste et metteur en scène, puis de se lancer dans la publicité, montant sa propre agence, pendant dix ans. Il l’a laissée tomber pour écrire des livres. Il multiplie les ouvrages sur des sujets très différents qui ne lui poseront pas de problèmes en Turquie. Le dernier, superbe, parle des oliviers millénaires. Quand il n'écrit pas depuis son bureau surplombant un jardin un peu sauvage, Izzeddin se consacre à ce qui constitue un sport national en Turquie&nbsp;: disserter de politique et de l'état inquiétant du pays.",
 			"minor": true
 		},
 		{
@@ -122,6 +123,15 @@
 			"title":    "Nazli Ilicak",
 			"subtitle": "Éditorialiste bannie",
 			"desc":     "J’avais rendez-vous par une journée de faible neige chez Nazli, en janvier 2016. Un bateau pour la rive turque, puis un taxi qui a tourné, s’est perdu. Au bout d’un moment, comme il devenait fou, il a appelé Nazli, qui a envoyé un chauffeur distingué à notre rencontre. L’éditorialiste habite une grande villa cossue sur les hauteurs du Bosphore. Son mari Kemal possédait le journal <i>Tercuman</i>, dans lequel elle a écrit. Il est mort en 1993, elle a pris la relève, avant de se lancer, fille de ministre, en politique. Elue en 1999 à l’Assemblée, elle a rapidement été déchue, pour avoir soutenue une élue arrivée voilée. Mal vue dès lors par les élites stambouliottes, elle s’est ensuite fâchée avec le pouvoir, en demandant à des ministres corrompus de démissionner. Virée depuis de plusieurs journaux dans lesquels elle essayait de conserver une plume libre, elle guette les initiatives de presse indépendante turques. Elles sont rares.",
+			"minor": true
+		},
+		{
+			"href":     "fethullah-gulen",
+			"img":      "img/fethullah-gulen.jpg",
+			"alt":      "",
+			"title":    "Fethullah Gülen",
+			"subtitle": "Prédicateur musulman",
+			"desc":     "Fethullah Gülen (74 ans) est un prédicateur musulman, inspirateur de la communauté Gülen, et proche de la confrérie turque très ancienne des Iskenderpaşa. Son mouvement contrôlait de nombreuses entreprises qui ont été nationalisées par le pouvoir. Il dirige toujours des écoles, des universités, en Turquie mais aussi en Afrique, en Asie, etc. Gülem est un mouvement conservateur, mais qui défend un islam éclairé, cherchant à instruire les croyants, à former des élites, au lieu de surfer sur l'inculture pour imposer des dogmes archaïques. Fethullah Gülen vit depuis 1999 en Pennsylvanie (États-Unis). Ses fidèles restent très nombreux en Turquie, l'appellent généralement Fethullah, et font l'objet de chasses aux sorcières dans l'administration, l'armée et les médias.",
 			"minor": true
 		}
 	

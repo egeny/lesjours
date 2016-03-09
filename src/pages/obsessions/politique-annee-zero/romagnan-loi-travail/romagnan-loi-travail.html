@@ -1,0 +1,91 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[0] %}
+<p><a href="#{{ person.href }}" data-mini="1"><span class="lettrine">B</span>arbara Romagnan</a> travaille sur le travail, et depuis longtemps. Est-ce parce que c’est l’un de ses tropismes&nbsp;? Quand je lui demande au téléphone comment se sont écoulés ces derniers jours, elle me raconte à quel point la réforme annoncée du code du travail a occupé ses discussions. Quand elle a sillonné sa circonscription la semaine dernière, elle s’est présentée dans des communes rurales où elle avait été obligée d’annuler des réunions publiques après les attentats du 13&nbsp;Novembre pour être présente au Parlement. La députée déteste, dit-elle, ne pas honorer ces rendez-vous avec les citoyens qu’elle fixe régulièrement pour rendre compte de son mandat.</p> 
+
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Quand elle a pris la parole à Pointvillers (146 habitants) et Arc-et-Senans (1&nbsp;562 habitants), la députée PS de la première circonscription du Doubs a remonté le fil du temps et a expliqué pourquoi elle avait voté contre le maintien de l’état d’urgence et la déchéance de nationalité (<a href="/obsessions/politique-annee-zero/romagnan-doute">lire l’épisode 2</a>, «&nbsp;Barbara Romagnan&nbsp;: elle doute mais ne s’abstient pas&nbsp;»). Mais, rapporte-t-elle, dans ces bourgs de campagne, on ne lui a parlé que de la «&nbsp;réforme El Khomri&nbsp;», du nom de la ministre du Travail. C’était ça le sujet. <q>Les gens étaient vraiment scandalisés. Sur la question des indemnités en cas de licenciement abusif, sur la rémunération des heures supplémentaires… Il y avait des gens qui craignaient pour leur avenir, qui travaillent par exemple dans la sous-traitance automobile ou la fabrique de presses de machines, d’autres qui ont déjà perdu leur emploi et voient que leur probabilité de retrouver du boulot est de plus en plus faible, ou des gens simplement choqués…</q>, résume-t-elle.</p>
+
+<blockquote>
+<p>Il y a sûrement des choses pas claires et redondantes dans le code du travail, qui pourrait bénéficier d’un toilettage utile, mais la “complexité” ne vient pas avant tout de protections trop “rigides” des salariés.</p>
+<footer>Barbara Romagnan</footer>
+</blockquote>
+
+<p>Depuis <a href="#" data-mini="2">la tribune de Martine Aubry</a>, à une pétition contre le projet de loi qui vient de dépasser le million de signatures, jusqu’à la manifestation de ce mercredi 9 mars –&nbsp;où la députée a prévu de se rendre&nbsp;–, la réforme agite et inquiète. <a href="#note-1">Le gouvernement a décalé</a> de deux semaines la présentation du texte en Conseil des ministres. Un report, mais pas de répit. D’ici là, un groupe de députés PS dont Barbara Romagnan fait partie doit élaborer <q>en séminaire</q>, une <q>feuille de route</q> sur le projet. Pour elle, voilà un nouveau combat qui s’ouvre.</p>
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://abonnes.lemonde.fr/idees/article/2016/02/24/martine-aubry-c-est-un-affaiblissement-durable-de-la-france-qui-se-prepare_4870737_3232.html" />
+<span class="image"><img class="responsive" src="img/le-monde.jpg" alt="" /></span>
+<p class="title">La tribune de Martine Aubry</p>
+<p class="subtitle">«&nbsp;Ce n’est plus simplement l’échec du quinquennat qui se profile, mais un affaiblissement durable de la France qui se prépare, et bien évidemment de la gauche, s’il n’est pas mis un coup d’arrêt à la chute dans laquelle nous sommes entraînés.&nbsp;» Plusieurs personnes ont accolé leur nom à cet implacable réquisitoire dont certains sont également signataires, comme Barbara Romagnan, de l’appel à la primaire à gauche. À lire sur LeMonde.fr.</p>
+</a>
+</aside>
+
+{% from "partials/_macro.html" import note %}
+
+{{
+note({
+number: 1,
+title: "Le texte reporté",
+caption: "La réforme El Khomri devait initialement être présentée le 9 mars, mais Manuel Valls, le Premier ministre, a annoncé que le texte serait à l’ordre du jour du Conseil des ministres le 24 mars. Les débats parlementaires devraient avoir lieu vers le mois de mai."
+})
+}}
+
+<figure>
+<img src="img/romagnan-au-travail-1.jpg" alt="" />
+<figcaption><span>Robert Badinter remet son rapport sur le code du travail au Premier ministre, Manuel Valls, en présence de Myriam El Khomri, ministre du Travail, à Matignon le 25 janvier 2016 <span class="credits">Photo Bruno Lévy/Divergence-images.</span></span></figcaption>
+</figure>
+
+<p>Avant toute chose, la députée socialiste condamne les présupposés de la réforme. Pour elle, il est faux de penser que la complexité du code du travail est un frein à l’emploi. <q>Il y a sûrement des choses pas claires et redondantes dans le code du travail, qui pourrait bénéficier d’un toilettage utile, mais la “complexité” ne vient pas avant tout de protections trop “rigides” des salariés</q>, pose-t-elle. Surtout, <q>le code du travail n’a pas vocation à être adapté aux entreprises, mais à préserver les hommes et les femmes des exigences de l’entreprise, en protégeant leur santé et leur sécurité. Il a également pour vocation de rééquilibrer le rapport de subordination, constitutif du salariat, par nature déséquilibré entre ceux qui n’ont que leur force de travail à proposer et ceux qui les emploient.</q></p>
+
+<p>Pour travailler sur une réforme proposée par le gouvernement, les députés planchent sur un avant-projet qui leur permet de s’approprier les arguments techniques et politiques et de préparer des amendements. Même si l’ensemble risque d’être remanié dans les jours et semaines qui viennent, les points principaux du projet de loi El Khomri sont connus. Barbara Romagnan <a href="#note-2">les a listés</a>. Pour elle, ils crient tous «&nbsp;danger&nbsp;».</p>
+
+{{
+note({
+number: 2,
+title: "Dispositions alarmantes",
+caption: "Avec la loi, un accord d’entreprise pourra être dérogatoire à l’accord de branche, même s’il est défavorable aux salariés, en particulier sur la question du temps de travail. <q>On confie la négociation au niveau où les salariés sont moins bien, peu ou pas représentés</q>, regrette la députée. La rémunération des heures supplémentaires sera moindre&nbsp;: alors qu’elle est de 25&nbsp;% en moyenne, un accord d’entreprise pourra limiter leur majoration à 10&nbsp;%. Sur les licenciements, les difficultés de l’entreprise et, donc, la légitimité à licencier seront examinées au regard de la seule société en France et non du groupe auquel elle appartient, y compris si celui-ci est d’une insolente opulence. Et les indemnités pour licenciement abusif seront plafonnées."
+})
+}}
+
+<aside>
+<p><span>Pas le même modèle social</span> qu’en Allemagne et au Royaume-Uni</p>
+</aside>
+
+<p>Barbara Romagnan propose même de m’envoyer un argumentaire détaillé qu’elle s’est concocté. Par mail, un peu plus tard, je lui demande si cette réforme n’opère pas un basculement vers un autre modèle de société qu’ont adopté par exemple l’Allemagne ou le Royaume-Uni. Du type <q>moins de chômage et d’indemnisation, mais plus de jobs mal payés et précaires</q>. Elle me corrige aussitôt&nbsp;: c’est plutôt <q>au moins autant de chômage et de jobs précaires, et un travail moins bien payé pour ceux qui en ont</q>. Je lui réponds que l’Allemagne et le Royaume-Uni ont un taux de chômage plus faible que la France. <q>Parce que l’Allemagne et le Royaume-Uni développent des petits boulots précaires et mal payés. Ce n’est pas sur ça que porte la réforme du code en France. Par cette loi, en France, on encourage les patrons à faire travailler davantage ceux qui ont déjà un boulot en rendant les heures sup’ moins coûteuses et en augmentant les possibilités d’allonger le temps de travail</q>, rétorque-t-elle aussi sec. Quand nous en reparlons quelques jours plus tard, elle complète&nbsp;: pour elle, on ne passe pas à un autre modèle, puisque <q>ce texte ne comporte pas une flexibilité plus forte qui faciliterait les petits emplois</q>.</p>
+
+<p>Les parlementaires ne peuvent pas (hélas) se cultiver ardemment sur tous les sujets d’actualité, ni préparer à fond chaque texte de loi. Mais ce dossier fait partie de ses choix. Barbara Romagnan s’est donc tout de suite tenue informée, dès que le sujet a émergé à l’occasion du <a href="#" data-mini="3">rapport Combrexelle</a> dont s’est inspiré le gouvernement et qui, en septembre, préconisait de développer de <q>nouveaux champs</q> de la négociation collective et d’<q>adapter, en conséquence, les dispositions du code du travail</q>, y compris autour de ses <q>piliers</q>&nbsp;: le temps de travail, les salaires, l’emploi et les conditions de travail. Elle a également suivi de près les <a href="#" data-mini="4">propositions de Robert Badinter</a> pour réformer un code du travail devenu selon lui <q>obèse</q> et affirmer les principes <q>juridiques</q> les plus importants du droit du travail. Comme elle le fait souvent pour avoir des avis complémentaires sur des sujets de société, elle a aussi appelé des <q>copains</q> spécialistes. Cette fois, des inspecteurs du travail. Elle a aussi demandé à s’entretenir avec les organisations syndicales en circonscription. Elle s’est tenue prête, aguerrie.</p>
+
+<aside id="mini-3" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.gouvernement.fr/sites/default/files/contenu/piece-jointe/2015/09/synthese_combrexelle.pdf" />
+<span class="image"><img class="responsive" src="img/combrexelle.jpg" alt="" /></span>
+<p class="title">Le rapport Combrexelle</p>
+<p class="subtitle">À consulter sur le site du gouvernement.</p>
+</a>
+</aside>
+
+<aside id="mini-4" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.gouvernement.fr/sites/default/files/liseuse/6264/master/index.htm" />
+<span class="image"><img class="responsive" src="img/badinter.jpg" alt="" /></span>
+<p class="title">Les propositions de Badinter</p>
+<p class="subtitle">L’ancien garde des Sceaux Robert Badinter est l’auteur, avec le spécialiste du droit du travail Antoine Lyon-Caen, d’un ouvrage publié à l’été intitulé «&nbsp;Le Travail et la loi&nbsp;», chez Fayard. À la tête d’un comité de neuf membres, il a rendu fin janvier au Premier ministre ses conclusions sur les principes qui doivent charpenter le code du travail. À consulter sur le site du gouvernement.</p>
+</a>
+</aside>
+
+<blockquote>
+<p>Être de gauche, c’est aussi aider à l’épanouissement, y compris individuel. Nous ne sommes pas seulement des salariés.</p>
+<footer>Barbara Romagnan</footer>
+</blockquote>
+
+<p>Elle qui a quitté son emploi de prof de philo dans un lycée agricole quand elle est devenue députée, croit au partage et à la modulation du temps de travail, à une autre organisation des temps de vie. Le travail colonise nos cerveaux, constate-t-elle, qu’on ait un emploi ou non. <q>Beaucoup souffrent au travail et n’ont pas les moyens d’en vivre. Être de gauche, c’est aussi aider à l’épanouissement, y compris individuel. Nous ne sommes pas seulement des salariés.</q> La question du temps libre (libérateur&nbsp;?) peut contenir un projet de société. De gauche. <q>L’usage de ce temps permet de porter ce qui manque à gauche&nbsp;: quelque chose de positif, un projet qui transforme la société.</q> C’est aussi l’opportunité d’améliorer les inégalités entre femmes et hommes, d’accomplir son rôle de citoyen, de passer plus de temps en famille ou avec des amis, de discuter, de réfléchir, d’avoir du temps pour soi, de se promener, si c’est ce que l’on souhaite, plaide-t-elle. Bref, ce <q>temps non monétarisé</q> a une valeur. On est loin, très loin, de la réforme El Khomri.</p>
