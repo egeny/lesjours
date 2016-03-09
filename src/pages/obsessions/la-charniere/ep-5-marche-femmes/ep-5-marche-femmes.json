@@ -1,0 +1,28 @@
+{
+	"template": "episode",
+
+	"href": "ep-5-marche-femmes",
+
+	"number": 5,
+	"date": "2016-03-09T10:00+01:00",
+
+	"title": "Une marche turque",
+	"intro": "Le 8&nbsp;mars, les femmes turques ont pris les rues d'Istanbul. Un «&nbsp;souffle de liberté&nbsp;» et une folle nuit.",
+	"subtitle": "Le 8&nbsp;mars, les femmes turques ont pris les rues d'Istanbul. Un «&nbsp;souffle de liberté&nbsp;» et une folle nuit.",
+	"lead": "Elle dit que la marche a été une «&nbsp;parenthèse délicieuse&nbsp;» au milieu de toute cette souffrance qu'encaissent et lisent les Turques en ce moment. Des manifestations étaient organisées dans tout le pays mardi soir, le 8 mars",
+	"tags": ["Turquie", "Erdogan", "femmes", "féminisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:olivier-bertrand" },
+			{ "photo": ["Cigdem Ucuncu et Serra Akcan/NarPhotos"]}
+		],
+
+		"first": "episode:la-charniere/marmite-turque",
+		"prev": "episode:la-charniere/ep-4-coupure-presse",
+		"last": "episode:la-charniere/ep-5-marche-femmes"
+
+
+
+			}
+}

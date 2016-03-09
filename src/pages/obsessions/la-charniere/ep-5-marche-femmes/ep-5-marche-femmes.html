@@ -1,0 +1,98 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+
+<p><span class="lettrine">E</span>lle dit que la marche a été une <q>parenthèse délicieuse</q> au milieu de toute cette souffrance qu’encaissent et lisent les Turques en ce moment. Des manifestations étaient organisées dans tout le pays mardi soir, le 8&nbsp;mars, dans le cadre de la journée des femmes. Très peu de violences, sauf à Çorum (nord-est), où le cortège féminin qui reprenait des slogans appelant à la paix dans les provinces kurdes a été attaqué par des ultranationalistes –&nbsp;les liens entre féminisme et lutte kurde ne sont pas nouveaux, ils ont commencé à se tisser au début des années&nbsp;90, contre deux formes d’oppression ancrées dans cette Turquie nationaliste et très machiste (<a href="/obsessions/la-charniere/ep-3-turquie">lire l’épisode 3</a>, «&nbsp;Femmes&nbsp;: les pressions insidieuses&nbsp;»).</p>
+
+
+
+
+<p><a href="#" data-mini="1">Dans le centre d’Istanbul</a>, une longue marche ne réunissant que des femmes, des banderoles et drapeaux violets (la couleur des luttes LGBT), sur une avenue Istiklal –&nbsp;l’ancienne grande rue d’Istanbul, dédiée aux déambulations et aux manifestations qu’en général, la police réprime&nbsp;– noire de femmes.</p>
+
+<figure id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<div class="player">
+<div class="container">
+<audio aria-hidden="true">
+<source type="audio/webm" src="audio/bandsista.webm" />
+<source type="audio/mp4"  src="audio/bandsista.m4a" />
+</audio>
+<button class="btn-blank" type="button">
+<div class="container">
+<img class="responsive" src="img/son-marche.jpg" alt="" />
+</div>
+</button>
+</div>
+</div>
+<a class="link-unstyled" href="#">
+<p class="title">Chanson féministe de BandSista</p>
+<p class="subtitle">Écrite pour la marche du 8 mars à Istanbul.</p>
+</a>
+</figure>
+
+<blockquote>
+<p>Il y a aussi beaucoup de joie en Turquie, du fatalisme moqueur, des mobilisations, des militants qui se bagarrent, de l’espoir, des énergies.</p>
+<footer>Anna, militante</footer>
+</blockquote>
+
+<p><i>«&nbsp;C’était particulièrement fort</i>, raconte <a href="#note-1">Anna</a>, <i>après les semaines que nous venons de passer.&nbsp;»</i> Française exilée à Istanbul, lesbienne, féministe et militante, elle lit beaucoup la presse française et anglo-saxonne, déprime de l’image donnée de la Turquie. <i>«&nbsp;Le plus souvent, ce que je lis est exact</i>, dit-elle, <i>mais tout ce qui est sombre est concentré. Cela dresse des tableaux terriblement noirs qui ne ressemblent du coup pas à ce que nous vivons ici. Il y a aussi beaucoup de joie en Turquie, du fatalisme moqueur, des mobilisations, des militants qui se bagarrent, de l’espoir, des énergies que l’on ne sent jamais dans ces papiers. Ce que je lis me fait plus flipper que ce que je vis en réalité.&nbsp;»</i> Ce mercredi matin, elle a scruté les journaux français et anglais <a href="#" data-mini="2">sans rien lire</a> de la marche qui l’avait tellement impressionnée la veille. Elle avait envie de raconter, que l’on connaisse aussi ces moments-là.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Anna",
+caption: "Son prénom a été modifié."
+})
+}}
+
+
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://sendika9.org/2016/03/women-paint-the-town-purple-in-8-march-events-around-turkey/" />
+<span class="image"><img class="responsive" src="img/sendika.jpg" alt="" /></span>
+<p class="title">Les marches du 8 mars</p>
+<p class="subtitle">Un site, militant, rend compte des marches en Turquie (article en anglais).</p>
+</a>
+</aside>
+
+<figure>
+<img src="img/une-marche-turque-1.jpg" alt="" />
+<figcaption><span>Lors de la marche pour la journée internationale des femmes à Istanbul, le 8 mars 2016 <span class="credits">Photo Cigdem Ucuncu/NarPhotos.</span></span></figcaption>
+</figure>
+
+{% set person = obsession.people[1] %}
+<p><q>Je n’ai pas vu de chiffres, je ne sais pas combien on était, mais c’était vraiment impressionnant à voir. On avait rendez-vous devant le centre culturel français à 19&nbsp;heures&nbsp;; quand je suis arrivée, l’avenue était déjà noire de monde.</q> Le gouverneur (l’équivalent du préfet) avait interdit la manifestation, officiellement en raison du risque terroriste. Mais contrairement à ce qui s’était passé lors de la dernière gay pride, la police n’a, cette fois, jamais chargé. <i>«&nbsp;C’est devenu rare</i>, poursuit Anna. <i>Ni gaz, ni canons à eau, ni violence lors d’une manifestation dans Istanbul, malgré des slogans prokurdes et anti-<a href="#{{ person.href }}" data-mini="3">Erdogan</a> qui suffisent parfois à exciter les jeunes flics qui n’attendent que ça. Bref, c’était un vrai souffle de liberté, temporaire certes. Une solidarité qui faisait chaud au cœur. Beaucoup de drapeaux violets, de chants, de danses, de sifflets.&nbsp;»</i></p>
+
+{{
+mini({
+number: 3,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Parmi les slogans relevés par Anna et d’autres participantes mardi soir&nbsp;: <q>Protection de nos vies contre la violence masculine, contre la guerre et l’hostilité envers les femmes</q>, <q>Ras-le-bol d’Erdogan</q>, <q>Longue vie à nos luttes féministes</q>, <i>«&nbsp;Tayyip</i> [Erdogan]<i>, dégage, les femmes arrivent&nbsp;»</i>, <q>Contre la guerre aux Kurdes, les femmes sont là</q>, ou encore <q>Qui ne saute pas est Tayyip</q>.</p> 
+
+
+<blockquote>
+<p>Une dame-pipi voilée distribuait le papier toilette à des filles à moitié à poil et surexcitées.[…] Le contraste est assez hallucinant, mais c’est la Turquie dans toute sa splendeur.</p>
+<footer>Anna</footer>
+</blockquote>
+
+<p>Après deux bonnes heures de marche pour faire les deux kilomètres menant jusqu’au quartier Tünel, le cortège s’est dispersé dans le calme et une partie des militantes ont poursuivi la soirée dans un club. Le Mekkan, ouvert à tous d’ordinaire, était réservé aux femmes ce mardi soir. Concert d’abord, avec un groupe féminin jouant des percussions dans une ambiance surchauffée, puis danse jusqu’au matin, sur des musiques souvent turques.</p>
+
+<figure>
+<img src="img/une-marche-turque-2.jpg" alt="" />
+<figcaption><span>Lors de la marche pour la journée internationale des femmes à Istanbul, le 8 mars 2016 <span class="credits">Photo Serra Akcan/NarPhotos.</span></span></figcaption>
+</figure>
+
+<p><i>«&nbsp;C’était au troisième ou quatrième étage d’un immeuble, dans une salle bondée exclusivement de filles et de femmes, avec quelques trans, et seulement quelques serveurs. C’était, là aussi, très beau à voir</i>, raconte Anna. <i>Apparemment, les fêtes post-8 mars ici se passent toujours ainsi, un exutoire, avec quasiment la moitié des filles seins nus ou en soutif qui dansent, boivent, fument et s’emballent. J’ai gardé mon T-shirt parce que c’était mon baptême, mais l’année prochaine, c’est sûr que je le fais valser aussi.&nbsp;»</i></p>
+
+
+
+
+<p>Elle envoie des sons de la soirée, un peu saturés, et glisse une anecdote&nbsp;: <q>Dans les toilettes du club, une dame-pipi voilée distribuait le papier toilette à des filles à moitié à poil et surexcitées. Elle était adorable, très gentille, avait l’air plutôt habituée à ce public. Le contraste est assez hallucinant, mais c’est la Turquie dans toute sa splendeur.</q></p>
+
