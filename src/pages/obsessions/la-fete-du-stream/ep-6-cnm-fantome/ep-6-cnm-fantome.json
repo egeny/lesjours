@@ -1,0 +1,27 @@
+{
+	"template": "episode",
+
+	"href": "ep-6-cnm-fantome",
+
+	"number": 6,
+	"date": "2016-03-11T00:05+01:00",
+
+	"title": "La maison hantée de la musique",
+	"intro": "Rassembler le secteur, instaurer l’équité entre majors et petits labels… Le doux rêve d’un Centre national de la musique a été torpillé en 2012.",
+	"subtitle": "Rassembler le secteur, instaurer l’équité entre majors et petits labels… Le doux rêve d’un Centre national de la musique a été torpillé en 2012.",
+	"lead": "Un fantôme encombrant rôde entre les lignes du protocole Schwartz, l’accord péniblement signé par la filière musicale française afin de rééquilibrer un peu les revenus des artistes dans la nouvelle économie du streaming &nbsp;: celui du Centre national de la musique.",
+
+	"tags": ["Musique", "Streaming"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sophian-fanen" },
+			{ "Illustration et photo": ["author:sebastien-calvet"] }
+		],
+
+		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"prev":  "episode:la-fete-du-stream/ep-5-chemin-argent",
+		"last":  "episode:la-fete-du-stream/ep-6-cnm-fantome"
+
+			}
+}

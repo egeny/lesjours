@@ -1,0 +1,148 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+<p><span class="lettrine">U</span>n fantôme encombrant rôde entre les lignes du protocole Schwartz, l’accord péniblement signé par la filière musicale française afin de rééquilibrer un peu les revenus des artistes dans la nouvelle économie du <a href="#note-1">streaming</a> (lire <a href="/obsessions/la-fete-du-stream/ep-4-mission-schwartz">l’épisode 4</a>, «&nbsp;L’école du microcosme d’argent&nbsp;»)&nbsp;: celui du Centre national de la musique.</q></p>
+
+{{
+note({
+number: 1,
+title: "Streaming",
+caption: "La diffusion de contenus en flux continu sur internet. Cette diffusion peut être vidéo ou sonore."
+})
+}}
+
+<p>Qu’il était beau ce CNM… Rassembler une filière qui ressemble aux bastons du village d’Astérix –&nbsp;l’humour en moins&nbsp;? Ce devait être sa mission. Casser la domination des plus gros et réorienter vers les plus petits des aides qui sont devenues des guichets automatiques&nbsp;? Le CNM toujours. La transparence des contrats qui lient les artistes et leur maison de disques&nbsp;? Le CNM encore. Un observatoire indépendant de l’économie de la musique pour relativiser enfin les chiffres fournis par les seules <a href="#note-2">majors</a> &nbsp;? Le CNM enfin, qui devait centraliser les aides et les débats du secteur comme le <a href="#note-3">CNC</a> le fait pour le cinéma.</p>
+
+{{
+	note({
+		number:  2,
+		title:   "Majors",
+		caption: "Les entreprises internationales qui rassemblent plusieurs maisons de disques. Elles sont trois aujourd’hui –&nbsp;Universal, Sony et Warner&nbsp;– et réalisent environ 70&nbsp;% de parts de marché dans le monde."
+	})
+}}
+
+{{
+	note({
+		number:  3,
+		title:   "Le Centre national du cinéma",
+		caption: "Créé en 1946, le Centre national du cinéma et de l’image animée assure la redistribution d’une part des revenus des films à succès pour financer des œuvres à petit budget."
+	})
+}}
+
+<p>Mais fin 2011, le dossier est arrivé trop tard sur le bureau du ministre de l’époque, Frédéric Mitterrand, alors que la course vers la présidentielle s’amorçait déjà. Après la victoire de François Hollande en mai 2012, Aurélie Filippetti s’est installée dans le grand bureau patiné de la rue de Valois et le Centre national de la musique a été l’une des premières victimes de cette alternance. <i>«&nbsp;Quand Filippetti a pris ses fonctions, elle avait deux préoccupations,</i> se souvient un informateur qui ne peut parler qu’en off dans cette filière où tout est politique, <i>trouver des économies et politiser les choses. Ça passait par le rejet des projets Sarkozy comme la Maison de l’histoire de France. Le CNM en a fait les frais aussi, alors qu’il n’était pas un projet politique et qu’on pouvait en faire un truc de gauche au service des artistes et des indépendants.&nbsp;»</i></p>
+
+<aside>
+<p><span>Le Centre national de la musique</span> devait fabriquer de la transparence</p>
+</aside>
+
+{% set person = obsession.people[5] %}
+<p>Surtout, le Centre national de la musique devait fabriquer de la transparence en échange de 131&nbsp;millions d’euros d’aides annuelles pérennisées. <q>Ce n’était pas juste un organisme de soutien financier, mais aussi un organisme de régulation</q>, continue ma source. Guillaume Leblanc, le secrétaire général du <a href="#{{ person.href }}" data-mini="1">Snep</a>, le syndicat français des majors, le confirme indirectement&nbsp;: <q>Il y avait de l’argent en jeu, ça aide à bosser ensemble.</q></p>
+
+{{
+	mini({
+		number:   1,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Lorsque le <a href="#note-4">rapport</a> –&nbsp;resté inédit mais que <i>Les Jours</i> se sont procuré&nbsp;– a été remis fin 2011, les débats et les discussions étaient terminés. Toute la filière avait trouvé tant bien que mal sa place dans le projet et une astuce avait été trouvée pour financer les 91&nbsp;millions d’aides nouvelles prévues –&nbsp;qui s’ajoutaient aux 40&nbsp;millions existants, gérés par différentes structures (Centre national des variétés, Fonds pour la création musicale, Bureau export…).</p>
+
+{{
+	note({
+		number:  4,
+		title:   "Coup de bambou sur le rapport",
+		caption: "Le rapport a été signé par le député Frank Riester (LR), Didier Selles, en charge de la préfiguration du CNM, le chanteur Alain Chamfort, Daniel Colling, cofondateur du Printemps de Bourges, et Marc Thonon, alors patron du label indépendant Atmosphériques."
+	})
+}}
+
+<figure>
+<img src="img/le-fantome-du-centre-1.jpg" alt="" />
+<figcaption><span>Le Centre national de la musique a fait les frais de l’alternance de 2012 qui a vu également disparaître le projet de Nicolas Sarkozy d’une Maison de l’histoire de France <span class="credits">Photo Sébastien Calvet / <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+{% set person = obsession.people[3] %}
+<p>L’idée était de s’appuyer sur la TSTD, une taxe sur la circulation des contenus audiovisuels versée par les fournisseurs d’accès à internet et les bouquets satellite. Cette TSTD finance depuis 2008 près de 40&nbsp;% du budget du CNC, mais ses revenus se sont envolés bien plus haut que prévu avec la croissance exponentielle du trafic en ligne. Le but était donc d’orienter une partie du surplus vers la musique, en considérant qu’elle aussi génère de la richesse en ligne. C’était malin et justifié. <i>«&nbsp;C’était aussi un moment historique,</i> se souvient Eric Pettroto, musicien et président de la fédération de labels indépendants CD1D, qui a participé à la préfiguration du CNM. <i>Le patron de la <a href="#{{ person.href }}" data-mini="2">Sacem</a> partait à la retraite, {% set person = obsession.people[2] %}<a href="#{{ person.href }}" data-mini="3">Pascal Nègre</a> était dans ses petits souliers parce qu’en pleine négociation sur le rachat d’EMI, et Nicolas Sarkozy le voulait.&nbsp;»</i></p>
+
+{% set person = obsession.people[3] %}
+{{
+	mini({
+		number:   2,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+{% set person = obsession.people[2] %}
+{{
+	mini({
+		number:   3,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Cette petite machinerie a donc malgré tout déraillé, et pas seulement parce qu’Aurélie Filippetti a trappé ce projet parmi d’autres. Aujourd’hui encore, plusieurs personnes qui ont suivi le dossier au sein du ministère de la Culture restent effarées par la passivité de la filière après l’annonce de l’abandon du Centre national de la musique. Les plus petits labels et distributeurs, notamment les très petites entreprises (TPE) qui devaient bénéficier d’un système de redistribution en leur faveur, ont bien essayé de se faire entendre, mais leur voix ne porte pas assez. Quant aux plus gros acteurs, même s’ils ont regretté très officiellement l’abandon du CNM, ils n’ont pas bougé d’un centimètre pour défendre une idée qui les encombrait plus qu’autre chose. </p>
+
+<aside>
+<p><span>Le CNM aurait enlevé</span> de son pouvoir à la Sacem</p>
+</aside>
+
+<p>À commencer par la Sacem. Le 21 juin 2012, à l’occasion de la Fête de la musique, son nouveau directeur général <a href="#note-5">Jean-Noël Tronc</a> flinguait le projet en quelques mots dans une interview au <a href="http://abonnes.lemonde.fr/economie/article/2012/06/21/pour-jean-noel-tronc-la-hadopi-est-legitime_1722574_3234.html?xtmc=sacem_centre_national_de_la_musique&xtcr=11"><i>Monde</i></a>&nbsp;: <q>Avec le bon diagnostic, avons-nous imaginé le bon instrument&nbsp;? Je me le demande.</q> C’est que le patron de la puissante Sacem se voit, d’après de nombreuses personnes que j’ai consultées, comme «&nbsp;le parrain&nbsp;» de la filière musicale en France. En ce sens, il voyait d’un mauvais œil ce Centre national de la musique qui lui aurait enlevé du pouvoir. Depuis, il tente donc d’en faire renaître un jumeau menotté entre les murs de la Sacem, et il a profité des discussions autour du protocole Schwartz pour critiquer l’idée d’une refonte de l’Observatoire de la musique pour en faire un CNM qui ne dit pas son nom.</p>
+
+{{
+	note({
+		number:  5,
+		title:   "Jean-Noël Tronc",
+		caption: "Avant de prendre la direction de la Sacem, Jean-Noël Tronc a été conseiller pour les technologies et la société de l’information de Lionel Jospin à Matignon. Il a ensuite été notamment président d’Orange France et PDG de Canal+ Overseas, la filiale de la chaîne pour l’Outre-mer et l’étranger."
+	})
+}}
+
+<p>Le Snep non plus n’a pas râlé bien fort après l’abandon du projet du CNM en 2012. Pascal Nègre, alors patron d’Universal Music France et lobbyiste expérimenté pour le syndicat des majors, qui n’a pas souhaité me recevoir pour cette enquête, <q>savait qu’un CNM de gauche serait moins avantageux qu’un CNM de droite</q>, commente un acteur de ces discussions. De plus, le régime actuel des aides est largement verrouillé en faveur des plus grandes entreprises et cette situation convient très bien à <a href="/obsessions/l-empire/" data-mini="4">Universal Music</a> comme à d’autres. La convention collective de la musique enregistrée, signée en 2008, est en effet trop exigeante pour les petites structures, qui ne l’appliquent donc pas et se ferment au passage de nombreux guichets d’aides (FCM, SCPP…). Ces aides sont ainsi devenues de facto une manne automatique pour ceux qui y ont accès, c’est-à-dire les majors et les gros indépendants.</p>
+
+<aside id="mini-4" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="/obsessions/l-empire/" />
+<span class="image"><img class="responsive" src="img/pastille-empire.jpg" alt="" /></span>
+<p class="title">Universal, un royaume de «&nbsp;L’empire&nbsp;»</p>
+<p class="subtitle">Universal Music, la plus grosse des majors, est une filiale de Vivendi, le groupe dirigé par Vincent Bolloré auquel <i>Les Jours</i> consacrent une obsession, <i>L’empire</i>, à consulter ici.</p>
+</a>
+</aside>
+
+<p>Le CNM devait rompre avec cette situation et diriger des aides vers les petits labels hors convention collective. Mais <i>«&nbsp;Pascal Nègre, sa base de négo c’était&nbsp;: “Universal fait 40&nbsp;% de part de marché, donc je veux 40&nbsp;% des aides“,</i> continue mon interlocuteur. <i>Sa logique, c’est de se demander&nbsp;: “Ai-je intérêt à avoir de l’argent en plus qui va aller aux autres ou plutôt à laisser ce truc capoter&nbsp;?”&nbsp;»</i> On nuancera ces propos en disant que le président d’Universal Music France a souvent rappelé l’importance des labels indépendants, qui repèrent bien souvent des artistes qui sont ensuite signés par de plus grosses maisons de disques.</p>
+
+<figure>
+<img src="img/le-fantome-du-centre-2.jpg" alt="" />
+<figcaption><span>Selon une source, la logique de Pascal Nègre, alors patron d’Universal Music, était la suivante&nbsp;: «&nbsp;Universal fait 40&nbsp;% de part de marché, donc je veux 40&nbsp;% des aides&nbsp;» <span class="credits">Photo Sébastien Calvet / <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+{% set person = obsession.people[8] %}
+<p>Quoi qu’il en soit, les ego et les intérêts divergents n’ont pas poussé grand monde à partir à l’assaut de la rue de Valois afin que le CNM, projet vertueux et compréhensible pour les médias dans un monde post-Hadopi, soit remis à l’agenda. C’est le protocole Schwartz qui l’a finalement ramené dans l’actualité en intégrant plusieurs de ses dispositions. <i>«&nbsp;La filière considère qu’elle a été abandonnée après l’échec du CNM,</i> m’a dit le médiateur <a href="#{{ person.href }}" data-mini="5">Marc Schwartz</a>. <i>La blessure n’est pas refermée. C’est pour cela que j’ai recommandé la naissance d’un lieu, qui peut être l’observatoire de la musique au sein d’un <a href="#note-6">CNV</a> transformé. Ce n’était pas ma mission, mais ces éléments reviennent sans cesse et j’ai préconisé pour cela la mise en place d’une maison commune.&nbsp;»</i></p>
+
+{{
+	mini({
+		number:   5,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{{
+	note({
+		number:  6,
+		title:   "Centre national des variétés",
+		caption: "Le Centre national de la chanson, des variétés et du jazz assure la collecte de la taxe sur la billetterie des concerts, qu’il redistribue en aides à la tournée."
+	})
+}}
+
+<p>Mais les obstacles restent énormes. L’actuel Observatoire de la musique a été étranglé par le Snep, qui n’appréciait pas son indépendance et a exigé que l’institut GFK (qui assure le suivi des ventes pour établir leur classement hebdomadaire) arrête de lui fournir des données, et le CNV est une institution dédiée au spectacle vivant qui ne se laissera pas diluer par le monde du disque sans réagir. La petite fenêtre qui s’était ouverte pour le Centre national de la musique en 2011 n’est aujourd’hui qu’entrebâillée.</p>
