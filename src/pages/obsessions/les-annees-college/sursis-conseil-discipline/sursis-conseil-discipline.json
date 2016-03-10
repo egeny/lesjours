@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "sursis-conseil-discipline",
+
+	"number": 14,
+	"date": "2016-03-10T00:05+01:00",
+
+	"title": "Élève en sursis",
+	"intro": "Cette semaine a eu lieu le premier conseil de discipline pour un élève de la 3e&nbsp;B. Un moment difficile.",
+	"subtitle": "Cette semaine a eu lieu le premier conseil de discipline pour un élève de la 3e&nbsp;B. Un moment difficile.",
+	"lead":  "Cette semaine, il y a un élève en moins en 3e&nbsp;B. Lundi, K. est passé en conseil de discipline. Avant les vacances de février, K. a insulté et menacé une enseignante durant un cours. Le conseil de discipline a prononcé une exclusion définitive",
+
+	"tags": ["Education", "Collège", "Paris"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/le-stage-de-troisieme",
+		"last": "episode:les-annees-college/sursis-conseil-discipline"
+	}
+}

@@ -16,12 +16,13 @@
 	"rel": {
 		"authors": [
 			{ "text":  "author:olivier-bertrand" },
-			{ "photo": ["Mehmet Yaman", "Kursad Bayhan"]}
+			{ "photo": ["Mehmet Yaman", "Mehmet Yaman"]}
 		],
 
 		"first": "episode:la-charniere/marmite-turque",
 		"prev": "episode:la-charniere/ep-3-turquie",
-		"last": "episode:la-charniere/ep-4-coupure-presse"
+		"last": "episode:la-charniere/ep-5-marche-femmes",
+		"next": "episode:la-charniere/ep-5-marche-femmes"
 
 
 
