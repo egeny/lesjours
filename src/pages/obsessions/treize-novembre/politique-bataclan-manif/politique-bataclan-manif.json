@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "politique-bataclan-manif",
+
+	"number": 33,
+	"date": "2016-03-10T09:00+01:00",
+
+	"title": "Un autre cortège devant le Bataclan",
+	"intro": "<strong>Journal de bord du XIe.</strong> Mercredi, il y a eu de la vie dans le quartier. Une manif qui passe et casse le deuil.",
+	"subtitle": "<strong>Journal de bord du XIe.</strong> Mercredi, il y a eu de la vie dans le quartier. Une manif qui passe et casse le deuil.",
+	"lead": "Depuis le 13&nbsp;Novembre, ce boulevard sent la désolation. Ceux qui foulent le bitume du boulevard Voltaire me semblent renfermés, ils passent au plus vite devant une salle de spectacle devenue cimetière. Comme moi qui habite dans ce quartier.",
+
+	"tags": ["13 Novembre", "manifestation", "Bataclan"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman" },
+			{ "photo": "author:charlotte-rotman"}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/brahim-desassigne",
+		"last":  "episode:treize-novembre/loi-urvoas-mesures"
+	}
+}
