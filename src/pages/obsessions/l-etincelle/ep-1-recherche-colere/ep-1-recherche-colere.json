@@ -1,0 +1,26 @@
+{
+	"template": "episode",
+
+	"href": "ep-1-recherche-colere",
+
+	"number": 1,
+	"date": "2016-03-12T07:00+01:00",
+
+	"title": "À la recherche de la colère",
+	"intro": "Ballade dans Paris et juste à côté, au rythme des premières mobilisations «&nbsp;physiques&nbsp;» contre la loi El Khomri.",
+	"subtitle": "Ballade dans Paris et juste à côté, au rythme des premières mobilisations «&nbsp;physiques&nbsp;» contre la loi El Khomri.",
+	"lead": "Un frémissement, un signe, une étincelle. Ou carrément l’étincelle, celle d’un mouvement de grande ampleur. Quand la pétition contre la réforme du code du travail a commencé à engranger des signatures –&nbsp;plus d’1,2 million&nbsp;",
+
+	"tags": ["manifestation", "loi travail", "étudiants"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": "author:yann-levy" }
+		],
+
+		"first": "episode:l-etincelle/ep-1-recherche-colere",
+		"last":  "episode:l-etincelle/ep-1-recherche-colere"
+
+			}
+}
