@@ -42,7 +42,7 @@
 		if ($_GET['notification'] == 'card') {
 			$payload = stripslashes_deep($_GET); // Use Wordpress' stripslashes_deep to revert the magic quotes added by Wordpress (!)
 			$user_id = $payload['CLIENTIDENT'];
-			$error   = $payload['EXECCODE'] != '0000' && $payload['OPERATIONTYPE'] != 'payment'; // Handle only "payment" transactions
+			$error   = $payload['EXECCODE'] != '0000' || $payload['OPERATIONTYPE'] != 'payment'; // Handle only "payment" transactions
 
 			// Check if the hash is valid
 			unset($payload['notification']); // Exclude for the hash computation
