@@ -1,6 +1,10 @@
 <?php
 	require('_bootstrap.php');
-	$referer = $_SERVER['HTTP_REFERER'];
+
+	$referer    = $_SERVER['HTTP_REFERER'];
+	$requested  = preg_replace('/index\.html$/', '', $_SERVER['REQUEST_URI']); // Remove any trailing "index.html" (otherwise it will override the authorization check)
+	$parsed     = parse_url($referer); // Parse the referer, it might be useful
+	$visibility = json_decode(file_get_contents('visibility.json'), true); // Retrieve the list of articles with their visibility
 
 	// Well, when asked to close the session…
 	if (isset($_GET['close'])) {
@@ -41,7 +45,6 @@
 	// Asking to reset the password
 	if (isset($_GET['reset'])) {
 		// Retrieve the mail and key for the referer's query parameters
-		$parsed = parse_url($referer);
 		parse_str($parsed['query'], $_GET); // Overwrite the $_GET parameters, because why not?
 
 		// Check if the key is matching and still valid
@@ -56,8 +59,9 @@
 				'remember'      => true
 			), false);
 
-			// Finally, redirect to the previous page (build the URL using $parsed to discard query parameters)
-			die(header('Location: '.$parsed['scheme'].'://'.$parsed['host'].$parsed['path'].'#reset-done'));
+			// Finally, redirect to the previous page
+			// Use $parsed['path'] to discard query parameters
+			die(header('Location: '.$parsed['path'].'#reset-done'));
 		}
 
 		// If something went bad, redirect to the referer and display the appropriate modal (parameters should be included in the referer)
@@ -80,36 +84,39 @@
 		die(header('Location: '.$referer.'#login-error'));
 	}
 
-	// $current_user is always an object, check if it has an ID
-	if ($current_user->ID) {
-		$meta = get_all_user_meta($current_user->ID);
+	/**
+	 * Here starts the default behaviour for all pages
+	 */
 
-		// Allow the user if its subscription isn't expired
-		if (strtotime($meta['expire']) > time()) {
-			$uri  = $_SERVER['REQUEST_URI'];
-			$info = apache_lookup_uri($uri);
-
-			// We have to handle 404 "manually", virtual will fail otherwise
-			if (!$info->content_type) {
-				http_response_code(404);
-				$uri = '/404.html';
-			} else {
-				// Force the Content-Type otherwise virtual will serve text/html
-				header('Content-Type: '.$info->content_type);
+	// If the requested URI is protected…
+	if (isset($visibility['protected']) && in_array($requested, $visibility['protected'])) {
+		// Check if there is an user logged-in
+		// $current_user is always an object, check if it has an ID
+		if ($current_user->ID) {
+			// Redirect the user to the subscription page if its subscription expired
+			$meta = get_all_user_meta($current_user->ID);
+			if (strtotime($meta['expire']) < time()) {
+				die(header('Location: /abonnement.html'));
 			}
-
-			// Make a sub-request so Apache will handle the request (see .htaccess)
-			virtual($uri); // Will return a boolean so don't wrap in die()
-			die();
 		} else {
-			die(header('Location: /abonnement.html'));
+			// Serve a specific page asking the user to subscribe
+			$requested .= 'index.protected.html';
 		}
 	}
 
-	// Check if we can use the referer
-	if (preg_match('#^'.preg_quote('http://'.$_SERVER['HTTP_HOST']).'#', $referer)) {
-		header('Location: '.$referer.'#login');
+	// Before calling apache again, we have to check two things
+	$info = apache_lookup_uri($requested);
+
+	// We have to handle 404 "manually", virtual will fail otherwise
+	if (!$info->content_type) {
+		http_response_code(404);
+		$requested = '/404.html';
 	} else {
-		header('Location: /#login');
+		// Force the Content-Type otherwise virtual will serve text/html
+		header('Content-Type: '.$info->content_type);
 	}
+
+	// Make a sub-request so Apache will handle the request (see .htaccess)
+	virtual($requested);
+	die();
 ?>

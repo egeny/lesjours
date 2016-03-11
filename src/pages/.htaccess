@@ -68,6 +68,14 @@ Options -Indexes
 RewriteEngine On
 RewriteBase /
 
+# Force HTTPS and no-www
+#RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.+)
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)
+#RewriteCond %{SERVER_ADDR} !=127.0.0.1
+#RewriteCond %{SERVER_ADDR} !=::1
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
 # Cache busting: adding a "busted" in a CSS or JS URL will bust the cache
 # The same file (without "busted") will be resolved
 RewriteRule ^(.+)\.busted\.((?:min\.)?(?:css|js))$ $1.$2 [L]
@@ -77,20 +85,16 @@ RewriteRule ^(.+)\.busted\.((?:min\.)?(?:css|js))$ $1.$2 [L]
 RewriteRule ^favicon.ico /img/favicon/favicon.ico [L]
 
 # Fix some URLs to hide that they are handled by PHP
-RewriteRule ^(_account|abonnement|mon-compte).html$ $1.php [L]
+RewriteRule ^(_account|abonnement|facture|mon-compte).html$ $1.php [L]
 RewriteRule ^session$ session.php [L]
 
-# Protect the /obsession folder
-# Allows the obsession "les-jours-c-quoi"
-# Also, allows URL ending with jpg
-# Then, the tricky part starts:
+# Protect the episodes (/obsession/*/*/index.html)
+# Here is for the tricky part:
 #   Rewrite only if this is the main request (not a sub-request)
 #   The script will check if the user is authorized
 #   If so, it will make a sub-request to the request URI
 #   If not, it will redirect to something else
-RewriteCond %{REQUEST_URI}  ^/obsessions
-RewriteCond %{REQUEST_URI} !^/obsessions/les-jours-c-quoi
-RewriteCond %{REQUEST_URI} !jpg$
+RewriteCond %{REQUEST_URI} ^/obsessions/[^/]+/[^/]+/(?:index\.html)?$
 RewriteCond %{IS_SUBREQ}   false
 RewriteRule .* session [L]
 

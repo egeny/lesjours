@@ -10,10 +10,10 @@
 	<script src="https://use.typekit.net/cyq3qtt.js"></script>
 	<script>try { /* eslint no-empty:0 */ Typekit.load({ async: true }); } catch (e) {}</script>
 
-	<link rel="stylesheet" href="/css/global.min.css" />
+	<link rel="stylesheet" href="/css/global.busted.min.css" />
 	<base target="_parent" />
 </head>
-<body>
+<body{% if page.class %} class="{{ page.class }}"{% endif %}>
 	{%- from "partials/_macro.html" import icon -%}
 	{%- block content %}{% endblock -%}
 </body>

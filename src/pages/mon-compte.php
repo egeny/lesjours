@@ -4,15 +4,29 @@
 {% block php -%}
 <?php
 	require('_bootstrap.php');
+	require(WP_PATH.'/wp-admin/includes/user.php'); // This file is required in order to delete an user
+
+	$inspecting = false;   // Are we inspecting (default to no, obviously)
+	$user = $current_user; // Get the current_user (might be overwritten just after)
 
 	// Prevent accessing this URL if there is no logged-in user
-	if (!$current_user->ID) { die(header('Location: /')); }
+	if (!$user->ID) { die(header('Location: /')); }
 
-	$meta = get_all_user_meta($current_user->ID);
+	// Allow super admins to inspect accounts
+	if (isset($_GET['inspect']) && is_super_admin()) {
+		if (!empty($_GET['inspect'])) {
+			$user = get_user_by(intval($_GET['inspect']) ? 'id' : 'email', $_GET['inspect']);
+		}
+
+		$inspecting = !!$user;
+		$user = $user ? $user : $current_user; // Fallback to the current_user if we couldn't found the requested user
+	}
+
+	$meta = get_all_user_meta($user->ID);
 
 	$error = null;
 	$data  = array(
-		'email'     => $current_user->user_email,
+		'mail'      => $user->user_email,
 		'name'      => $meta['last_name'],
 		'firstname' => $meta['first_name'],
 		'address'   => $meta['address'],
@@ -21,50 +35,65 @@
 		'country'   => !empty($meta['country']) ? $meta['country'] : 'fr'
 	);
 
+	if (isset($_GET['delete'])) {
+		// TODO: Should send an email
+		wp_delete_user($user->ID);
+		die(header('Location: /'));
+	}
+
 	if (isset($_GET['unsubscribe'])) {
-		delete_user_meta($current_user->ID, 'plan');
-		delete_user_meta($current_user->ID, 'expire');
-		delete_user_meta($current_user->ID, 'subscription');
+		delete_user_meta($user->ID, 'plan');
+		delete_user_meta($user->ID, 'expire');
+		delete_user_meta($user->ID, 'subscription');
 		// TODO: Should send an email
 
 		die(header('Location: /mon-compte.html#unsubscribed'));
 	}
 
 	if (!empty($_POST)) {
-		if (isset($_POST['password'])) {
-			if (empty($_POST['password'])) {
-				$error['password'] = true;
-			} else {
-				wp_set_password($_POST['password'], $current_user->ID);
-				wp_set_auth_cookie($current_user->ID, true, false);
-			}
-		} else {
-			// Sanitize and check received data
-			foreach ($_POST as $field => $value) {
-				$data[$field] = $value = sanitize_text_field($value);
+		// Sanitize and check received data
+		foreach ($_POST as $field => $value) {
+			switch ($field) {
+				case 'password': $data[$field] = $value;
+				break;
 
-				// Set an error flag if necessary
-				if (empty($value)) {
-					$error = is_array($error) ? $error : array();
-					$error[$field] = true;
-				}
+				default: $data[$field] = $value = sanitize_text_field($_POST[$field]);
 			}
 
-			if (!$error) {
-				// Prefer wp_update_user for the name and firstname since it will generate the display name
-				wp_update_user(array(
-					'ID'         => $current_user->ID,
-					'first_name' => $data['firstname'],
-					'last_name'  => $data['name']
-				));
-
-				foreach (array('address', 'zip', 'city', 'country') as $field) {
-					update_user_meta($current_user->ID, $field, $data[$field]);
-				}
+			// Set an error flag if necessary
+			if (empty($value)) {
+				if (in_array($field, array('plan', 'subscription', 'expire'))) { continue; } // Ignore some fields
+				$error = is_array($error) ? $error : array();
+				$error[$field] = true;
 			}
+		}
+
+		if (!$error) {
+			if (isset($data['password'])) {
+				wp_set_password($data['password'], $user->ID);
+				!$inspecting && wp_set_auth_cookie($user->ID, true, false);
+			}
+
+			// Prefer wp_update_user for the name and firstname since it will generate the display name
+			wp_update_user(array(
+				'ID'         => $user->ID,
+				'first_name' => $data['firstname'],
+				'last_name'  => $data['name']
+			));
+
+			foreach ($data as $field => $value) {
+				if (in_array($field, array('mail', 'password', 'firstname', 'name'))) { continue; } // Ignore some fields
+				if (in_array($field, array('plan', 'subscription', 'expire')) && !$inspecting) { continue; } // Constraint subscription edition to inspection mode
+
+				update_user_meta($user->ID, $field, $value);
+				$meta[$field] = $value; // Makes sure the meta are up to date (check below)
+			}
+			// I don't redirect because I'm lazy
+			// Besides, we'll loose the active tab
 		}
 	}
 
+	$data         = array_map('stripslashes', $data); // Remove slashes added while sanitizing to display them correctly
 	$plan         = $PLANS[$meta['plan']];
 	$expire       = strtotime($meta['expire']);
 	$subscription = strtotime($meta['subscription']);
@@ -81,7 +110,7 @@
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-identifiants" class="link external" aria-controls="mes-identifiants" href="#mes-identifiants" aria-selected="true"  tabindex="0">Mes identifiants</a></li>
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-informations" class="link external" aria-controls="mes-informations" href="#mes-informations" aria-selected="false" tabindex="-1">Mes informations</a></li>
 				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mon-abonnement"   class="link external" aria-controls="mon-abonnement"   href="#mon-abonnement"   aria-selected="false" tabindex="-1">Mon abonnement</a></li>
-				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-factures"     class="link external disabled" aria-controls="mes-factures"     href="#mes-factures"     aria-selected="false" tabindex="-1">Mes factures</a></li>
+				<li class="mr-1g" role="presentation"><a role="tab" id="tab-mes-factures"     class="link external" aria-controls="mes-factures"     href="#mes-factures"     aria-selected="false" tabindex="-1">Mes factures</a></li>
 			</ul>
 
 			<div class="tab-container md-w-6c md-ml-1c lg-w-10c lg-ml-1c">
@@ -90,7 +119,7 @@
 					<form method="post">
 						<div class="field lg-w-½">
 							<label for="account-mail">Adresse e-mail</label>
-							<input id="account-mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email"  <?php if (isset($data['email'])) { echo 'value="'.$data['email'].'" '; } ?>disabled required />
+							<input id="account-mail" class="input check" name="mail" type="email" placeholder="mon-email@exemple.com" autocomplete="email"  <?php if (isset($data['mail'])) { echo 'value="'.$data['mail'].'" '; } ?>disabled required />
 							<?php if (isset($error['mail'])) : ?><span class="error">Vérifiez ce champ</span><?php endif ?>
 						</div>
 						<div class="field lg-w-½">
@@ -105,7 +134,7 @@
 				<section id="mes-informations" role="tabpanel" aria-labelledby="tab-mes-informations" aria-hidden="true">
 					<h3 class="mb-4g style-meta-large">Mes informations</h3>
 					<a class="mb-2g sm-w-1c md-w-1c lg-w-1c block" href="https://gravatar.com" target="_blank">
-						<img class="responsive h-100 radius" src="<?php echo avatar_url(); ?>" alt="Mon avatar" />
+						<img class="responsive h-100 radius" src="<?php echo avatar_url($user->user_email); ?>" alt="Mon avatar" />
 					</a>
 					<form method="post">
 						<div class="field lg-w-½">
@@ -155,12 +184,64 @@
 						<p>Vous n’avez aucun abonnement en cours.</p>
 						<a href="/abonnement.html" class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c">S’abonner</a>
 					<?php endif ?>
+					<?php if ($inspecting) : ?>
+						<form class="row mt-8g" method="post">
+							<div class="col field w-⅓">
+								<label for="plan">Plan</label>
+								<select id="plan" name="plan" class="select">
+								<option value=""<?php if ($meta['plan'] == $name) { echo ' selected'; } ?>>Aucun</option>
+								<?php foreach ($PLANS as $name => $plan) : ?>
+									<option value="<?php echo $name ?>"<?php if ($meta['plan'] == $name) { echo ' selected'; } ?>><?php echo $plan['name'] ?> (<?php echo $plan['duration'] ?>)</option>
+								<?php endforeach ?>
+								</select>
+							</div>
+							<div class="col field w-⅓">
+								<label for="subscription">Subscription</label>
+								<input id="subscription" class="input" name="subscription" type="text" placeholder="<?php echo date('Y-m-d H:i:s') ?>" <?php if ($subscription) { echo 'value="'.date('Y-m-d H:i:s', $subscription).'" '; } ?> />
+							</div>
+							<div class="col field w-⅓">
+								<label for="expire">Expire</label>
+								<input id="expire" class="input" name="expire" type="text" placeholder="<?php echo date('Y-m-d'); ?>" <?php if ($expire) { echo 'value="'.date('Y-m-d', $expire).'" '; } ?> />
+							</div>
+							<button class="btn-primary btn-brand sm-w-100 md-w-6c md-mh-1c lg-w-⅓ lg-mh-4c" type="submit">Valider</button>
+						</form>
+					<?php endif ?>
+				</section>
+
+				<section id="mes-factures" role="tabpanel" aria-labelledby="tab-mes-factures" aria-hidden="true">
+					<h3 class="mb-3g style-meta-large">Mes factures</h3>
+					<?php if (count($meta['invoices'])) : ?>
+						<table class="sm-w-100 lg-min-w-50 lg-max-w-75">
+							<thead class="sr">
+								<tr>
+									<th>Date</th>
+									<th>Description</th>
+									<th>Prix</th>
+									<th class="text-right">Actions</th>
+								</tr>
+							</thead>
+							<tbody>
+								<?php foreach (array_reverse($meta['invoices']) as $invoice) : ?>
+									<?php $plan = $PLANS[$invoice->plan]; ?>
+									<tr>
+										<td><?php echo date('d.m.Y', strtotime($invoice->date)) ?></td>
+										<td>Abonnement <?php echo $plan['duration'] == '1 year' ? 'annuel' : 'mensuel' ?> au site <i>lesjours.fr</i><?php if ($invoice->price == 1) : ?> -<br/>tarif pilote<?php endif ?></td>
+										<td><?php echo price($invoice->price) ?> €</td>
+										<td class="text-right"><a class="text-upper fw-bold color-brand" href="/facture.html?n=<?php echo $invoice->number ?>" target="_blank">Voir la facture</a></td>
+									</tr>
+								<?php endforeach ?>
+							</tbody>
+						</table>
+					<?php else : ?>
+						<p>Vous n’avez aucune facture.</p>
+					<?php endif ?>
 				</section>
 			</div>
 		</div><!-- end of .col -->
 	</div><!-- end of .row -->
 </div><!-- end of .container -->
 
+{% include "partials/modals/delete.html"       %}
 {% include "partials/modals/unsubscribe.html"  %}
 {% include "partials/modals/unsubscribed.html" %}
 

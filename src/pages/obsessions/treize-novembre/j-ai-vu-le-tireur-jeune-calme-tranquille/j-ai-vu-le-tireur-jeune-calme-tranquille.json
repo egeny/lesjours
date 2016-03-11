@@ -1,5 +1,6 @@
 {
-	"template": "episode",
+	"template":   "episode",
+	"visibility": "protected",
 
 	"href": "j-ai-vu-le-tireur-jeune-calme-tranquille",
 

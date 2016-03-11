@@ -1,0 +1,258 @@
+/* @group Episode */
+$gutter: grid-gutter("sm");
+$margin: grid-margin("sm");
+
+.episode {
+	> header {
+		position: relative; // Used to position the .snake
+
+		img {
+			@include responsive;
+			max-height: 615px;
+		}
+
+		// On mobile, the snake is stuck to the margins
+		.snake {
+			top:    $margin;
+			right:  $margin;
+			bottom: -4px; // Offset the border
+			left:   $margin;
+		}
+
+		.h2  { margin-bottom: .5em; }
+		time { display: inline-block; }
+	}
+
+	.share {
+		li {
+			margin-left:  1em;
+			margin-right: 1em;
+			display: inline-block;
+		}
+
+		svg {
+			width:  2em;
+			height: 2em;
+		}
+	}
+
+	> footer {
+		.meta {
+			.row { background: $color-white; }
+			p       { margin: 0 1em 1em 0; }
+			li      { margin-bottom: 1em; }
+			a       { margin-left: .25em; }
+			.tags a { margin-left: 0; }
+		}
+
+		.rel {
+			background: $color-white;
+
+			a { padding: 1em 0; }
+			i { color: $color-brand; }
+
+			svg {
+				width:  3em;
+				height: 3em;
+
+				display: block;
+				position: relative;
+				z-index: 1;
+			}
+
+			.style-meta {
+				display: block;
+				font-size: .9375em;
+				@include font-weight-semi-bold("proxima");
+				line-height: 1.666667;
+			}
+		}
+	}
+}
+
+.episode-container {
+	// Consider every children as a column
+	> * {
+		@extend .col;
+		@extend .mt-1g;
+		@extend .mb-2g;
+	}
+
+	> :first-child { @extend .mt-2g; }
+
+	> p {
+		line-height: 1.75;
+
+		&:last-of-type::after {
+			background: url("data:image/svg+xml;charset=UTF-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path fill='#{hex-to-rgb($color-brand)}' d='M32 64c17.674 0 32-14.326 32-32S49.674 0 32 0 0 14.326 0 32s14.326 32 32 32zm.54-9c-2.814 0-6.126-1.886-6.126-7.052v-1.394c0-.574.497-1.066 1.076-1.066h.746c.58 0 1.076.492 1.076 1.066v1.558c0 .738.166 4.182 3.395 4.182 1.987 0 3.312-1.804 3.312-4.51V30.4c0-.327-.25-.655-.67-.655h-8.28c-.58 0-1.08-.492-1.08-1.066V10.06c0-.568.5-1.06 1.08-1.06h.74c.58 0 1.08.492 1.08 1.066v16.48c0 .33.24.657.66.657h8.36c.58 0 1.07.492 1.07 1.066v19.84C38.9 52.86 35.67 55 32.52 55z'/></svg>") no-repeat;
+
+			width:  1em;
+			height: 1em;
+			margin-left: .25em;
+
+			content: "";
+			display: inline-block;
+
+			vertical-align: middle;
+		}
+	}
+
+	a {
+		@extend .link;
+		background-position: 0 1.0625em;
+		text-transform: inherit;
+	}
+
+	h3 { @include font-weight-bold("archer"); }
+
+	ol, ul { @extend .list; }
+
+	// We need to add some extra selectors since .episode-container > *
+	// have an higher score than most of the overriding classes
+
+	@for $i from 1 through 8 {
+		.mt-#{$i}g { @extend .mt-#{$i}g; }
+		.mb-#{$i}g { @extend .mb-#{$i}g; }
+	}
+
+	.link-unstyled { @extend .link-unstyled; }
+}
+
+// Protected episodes have to be handled specially
+.episode.protected {
+	> footer .meta .row { height: $margin; }
+
+	.episode-container {
+		overflow: hidden; // Prevent #mini and #note to overflow
+
+		> p:last-of-type::after { content: none; }
+
+		&::after {
+			background: linear-gradient(to bottom, rgba($color-white, 0), $color-white);
+			height: 30%;
+
+			content: "";
+			position: absolute;
+			right:  0;
+			bottom: 0;
+			left:   0;
+
+			pointer-events: none;
+		}
+	}
+}
+
+@include media("md") {
+	.episode {
+		// On tablet and after, the snake is stuck to the column
+		> header .snake {
+			top:     0;
+			right:   0;
+			bottom: -4px; // Offset the border
+			left:   -4px; // Offset the border
+		}
+
+		.share {
+			@include fadable;
+			position: absolute;
+			top:    185px;
+			bottom: 0;
+			left:   0;
+
+			&.show { @include fadable-active; }
+
+			ul {
+				margin: 1.5em 0;
+				position: sticky;
+				top: 1.5em;
+			}
+		}
+
+		> footer .rel {
+			i {
+				color: $color-white;
+
+				// Same as .btn-round::before (cannot extend since it is in a media query)
+				span::before {
+					background: $color-brand;
+
+					width:  100%;
+					height: 100%;
+					border-radius: 50%;
+
+					content: "";
+					display: block;
+					position: absolute;
+
+					transition: transform .3s;
+					backface-visibility: hidden;
+				}
+			}
+
+			& a:hover i span::before,
+			& a:focus i span::before { transform: scale(0.9); }
+		}
+	}
+
+	.episode-container {
+		> * {
+			@extend .md-w-5c;
+			@extend .md-ml-1c;
+			font-size: 1.125em;
+		}
+
+		> .full {
+			@extend .md-w-100;
+			@extend .md-ml-0;
+			figcaption { @extend .md-ml-1c; }
+		}
+
+		// We need to add some extra selectors since .episode-container > *
+		// have an higher score than most of the overriding classes
+
+		// We don't need to go through all the columns, we can stop before the "default" size
+		@for $i from 1 through 4 {
+			.md-w-#{$i}c { @extend .md-w-#{$i}c; }
+		}
+	}
+
+	.episode.protected > footer .meta .row {
+		height:      100px;
+		margin-top: -100px;
+	}
+}
+
+@include media("lg") {
+	.episode > footer .meta {
+		p,
+		ul,
+		li { display: inline-block; }
+
+		p,
+		li { margin-right: 1.5em; }
+	}
+
+	.episode-container {
+		> * {
+			@extend .lg-w-6c;
+			@extend .lg-ml-2c;
+		}
+
+		> .full {
+			@extend .lg-w-100;
+			@extend .lg-ml-0;
+			figcaption { @extend .lg-ml-2c; }
+		}
+
+		// We need to add some extra selectors since .episode-container > *
+		// have an higher score than most of the overriding classes
+
+		// We don't need to go through all the columns, we can stop before the "default" size
+		@for $i from 1 through 5 {
+			.lg-w-#{$i}c { @extend .lg-w-#{$i}c; }
+		}
+
+		.lg-ml-1c { @extend .lg-ml-1c; }
+	}
+}
+/* @end Episode */

@@ -3,7 +3,7 @@ $document.ready(function() {
 
 	var
 		$anchors   = $("[data-mini],[href^=#note]"),
-		$container = $(".article-container"),
+		$container = $(".episode-container"),
 		$minis     = [], // An array of the associated mini
 		offset     = (68 / 2) + 6 + 8, // The offset to the center of the image
 		shown      = 0;

@@ -42,6 +42,13 @@ $margin: grid-margin("sm");
 
 		color: $color-brand;
 
+		// Picky designer is picky
+		> span {
+			margin-right: .5em;
+			position: relative;
+			top: 1.5px;
+		}
+
 		svg {
 			width:  24px;
 			height: 24px;

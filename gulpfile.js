@@ -4,6 +4,7 @@
 
 var
 	argv       = require('yargs').argv,
+	dcopy      = require('deep-copy'),
 	del        = require('del'),
 	finder     = require('find-in-files'),
 	fs         = require('fs'),
@@ -20,6 +21,7 @@ var
 	replace    = require('gulp-replace'),
 
 	// HTML
+	cheerio  = require('cheerio'),
 	nunjucks = require('gulp-nunjucks-render'),
 
 	// CSS
@@ -256,6 +258,7 @@ gulp.task('build', function(cb) {
 		'build:css',
 		'build:js',
 		'build:html',
+		'build:visibility',
 		'build:assets',
 		cb);
 });
@@ -290,6 +293,23 @@ gulp.task('build:assets', function(cb) {
 	);
 
 	return streams.length ? merge(streams) : null;
+});
+
+// Build a visibility.json file containing the scope for each request URI
+gulp.task('build:visibility', function() {
+	var
+		slug, visibility,
+		result = {};
+
+	for (slug in cache.episode) {
+		visibility = cache.episode[slug].visibility;
+		if (!visibility) { continue; }
+
+		result[visibility] = result[visibility] || [];
+		result[visibility].push(cache.episode[slug].obsession.replace('obsession:', root + '/obsessions/') + '/' + slug + '/');
+	}
+
+	fs.writeFileSync(path.join(paths.dist, 'visibility.json'), JSON.stringify(result, null, "\t"));
 });
 
 gulp.task('build:html', function() {
@@ -474,17 +494,67 @@ function html(e) {
 		source = path.join(paths.pages, file);
 	}
 
-	return gulp
-		.src(source, { base: paths.pages })
-		.pipe(nunjucks(data))
-		.pipe(rename(path.join(parsed.dir, metadata.template ? 'index.html' : parsed.base)))
-		.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
-		.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
-		.pipe(replace('href="/"',                 'href="' + root + '/"'))
-		.pipe(replace('\'/img',                       '\'' + root + '/img'))
-		.pipe(replace('Location: /',          'Location: ' + root + '/'))
-		.pipe(gulp.dest(paths.dist))
-		.pipe(livereload());
+	var streams = merge();
+
+	streams.add(
+		gulp
+			.src(source, { base: paths.pages })
+			.pipe(nunjucks(data))
+			.pipe(rename(path.join(parsed.dir, metadata.template ? 'index.html' : parsed.base)))
+			.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
+			.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
+			.pipe(replace('href="/"',                 'href="' + root + '/"'))
+			.pipe(replace('\'/img',                       '\'' + root + '/img'))
+			.pipe(replace('Location: /',          'Location: ' + root + '/'))
+			.pipe(gulp.dest(paths.dist))
+			.pipe(livereload())
+	);
+
+	// Generate another index.protected.html file with its content sliced for protected episodes
+	// Sorry, this part is a bit messy, I do not have time to clean it up
+	if (metadata.template === 'episode' && metadata.visibility === 'protected') {
+		var _data = dcopy(data); // Make a deep copy of the data and content (otherwise the modification below will be used by the ongoing streams)
+		_data.protected = true; // Add a variable in the data so we can identify in the template we are generating the additional page
+
+		// Parse the content (heavy)
+		var $ = cheerio.load('<div id="cheerio-wrapper">' + _data.episode.content + "</div>", { decodeEntities: false });
+		var stopped = false;
+
+		// Retrieve the children we want (first <p> and its <aside> and <figure> direct siblings (having an id of "mini" or "note"))
+		$ = $("#cheerio-wrapper").children().filter(function(index, element) {
+			if (stopped) { return false; }
+			if (!index)  { return true; } // Keep the first child
+
+			if (element.type === "tag") {
+				if (!(["aside", "figure"].indexOf(element.name) > -1 && /^mini|note/.test($(element).attr("id")))) {
+					stopped = true;
+					return false;
+				}
+			}
+
+			// By default keep the child (might not be a tag)
+			return true;
+		});
+
+		_data.episode.content = $.toString();
+
+		// I know, this part should be done with a lazypipe…
+		streams.add(
+			gulp
+				.src(source, { base: paths.pages })
+				.pipe(nunjucks(_data))
+				.pipe(rename(path.join(parsed.dir, 'index.protected.html')))
+				.pipe(replace(/(src|href|action)="\/(\w)/g, '$1="' + root + '/$2'))
+				.pipe(replace(/url\(\/(\w)/g,               'url(' + root + '/$1'))
+				.pipe(replace('href="/"',                 'href="' + root + '/"'))
+				.pipe(replace('\'/img',                       '\'' + root + '/img'))
+				.pipe(replace('Location: /',          'Location: ' + root + '/'))
+				.pipe(gulp.dest(paths.dist))
+				.pipe(livereload())
+		);
+	}
+
+	return streams;
 }
 
 gulp.task('lint:sass', function() {

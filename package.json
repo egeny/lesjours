@@ -7,6 +7,8 @@
     "url": "https://github.com/neovov"
   },
   "devDependencies": {
+    "cheerio": "^0.20.0",
+    "deep-copy": "^1.1.0",
     "del": "latest",
     "find-in-files": "latest",
     "fs": "latest",
@@ -15,7 +17,7 @@
     "gulp-autoprefixer": "latest",
     "gulp-changed": "latest",
     "gulp-concat": "latest",
-    "gulp-csslint": "latest",
+    "gulp-csslint": "^0.2.2",
     "gulp-cssnano": "^2.1.1",
     "gulp-eslint": "^2.0.0",
     "gulp-header": "latest",
@@ -27,8 +29,8 @@
     "gulp-sass": "^2.2.0",
     "gulp-sass-lint": "^1.1.1",
     "gulp-svg-sprite": "^1.2.18",
-    "gulp-svgmin": "^1.2.1",
-    "gulp-uglify": "^1.5.2",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
     "merge-stream": "latest",
     "path": "latest",
     "run-sequence": "latest",

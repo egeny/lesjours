@@ -12,25 +12,10 @@
 
 	$data  = $_POST;
 	$error = null;
-
-	$hidden = array(
-		'amount'        => null,
-		'cardfullname'  => null,
-		'clientemail'   => null,
-		'clientident'   => null,
-		'createalias'   => 'yes',
-		'description'   => 'Abonnement',
-		'identifier'    => BE2BILL_IDENTIFIER,
-		'language'      => 'FR',
-		'operationtype' => 'payment',
-		'orderid'       => null,
-		'version'       => '2.0',
-	);
-
 	$state = null;
 	$title = 'Devenir jouriste';
 
-	// Check if we need to use another $title or $state
+	// Check if we need to use another $state and $title
 	if (is_user_logged_in()) {
 		$expired = get_user_meta($current_user->ID, 'expire');
 
@@ -42,91 +27,111 @@
 		}
 	}
 
-	function signature($array) {
-		$hash = array();
-
-		foreach ($array as $name => $value) {
-			$name = strtoupper($name);
-			if ($name == 'HASH') { continue; }
-			$hash[] = $name.'='.$value;
-		}
-
-		sort($hash);
-		return hash('sha256', BE2BILL_PASSWORD.implode(BE2BILL_PASSWORD, $hash).BE2BILL_PASSWORD);
-	}
-
 	// Receiving a notification from the payment service
 	if (isset($_GET['notification'])) {
-		unset($_GET['notification']); // Exclude for the hash computation
-		$hash  = signature($_GET);
+		// XXX: logging for debug
+		file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
 
-		if ($hash == $_GET['HASH']) {
-			$user_id = $_GET['CLIENTIDENT'];
-			$date    = date('Y-m-d H:i:s');
-			$plan    = get_user_meta($user_id, 'plan')[0];
+		if ($_GET['notification'] == 'bank') {
+			$payload = json_decode(file_get_contents('php://input'));
+			$user_id = preg_replace('/(?:\d+-){3}/', '', $payload->reference);
+			$error   = $payload->state != 'closed.completed';
+			unset($payload->_links);
+		} // end of if ($_GET['notification'] == 'bank')
 
-			// Add a transaction trace (debugging purpose, should NOT be unique)
-			$transaction = add_user_meta($user_id, 'transactions', json_encode(array(
-				'date' => $date,
-				'_get' => $_GET
-			)));
+		if ($_GET['notification'] == 'card') {
+			$payload = stripslashes_deep($_GET); // Use Wordpress' stripslashes_deep to revert the magic quotes added by Wordpress (!)
+			$user_id = $payload['CLIENTIDENT'];
+			$error   = $payload['EXECCODE'] != '0000' && $payload['OPERATIONTYPE'] != 'payment'; // Handle only "payment" transactions
 
-			if ($_GET['EXECCODE'] == '0000') {
-				// Retrieve the global invoice number and increment it
-				$number  = intval(get_option('invoice_number', 0)) + 1;
+			// Check if the hash is valid
+			unset($payload['notification']); // Exclude for the hash computation
+			if ($payload['HASH'] != signature($payload)) { die('Bad hash'); } // Stop right now if the hash doesn't match
+		} // end of if ($_GET['notification'] == 'card')
 
-				// Add an invoice (warning: should NOT be unique, obviously)
-				add_user_meta($user_id, 'invoices', json_encode(array(
-					'date'        => $date,
-					'number'      => $number,
-					'plan'        => $plan,
-					'price'       => $PLANS[$plan]['price'],
-					'transaction' => $transaction
-				)));
+		// Add a transaction trace (debugging purpose, should NOT be unique)
+		$transaction = add_user_meta($user_id, 'transactions', json_encode(array(
+			'date'    => date('Y-m-d H:i:s'),
+			'payload' => $payload
+		)));
 
-				// Don't forget to update the invoice_number
-				update_option('invoice_number', $number);
+		// Stop now if the payment service returned an error
+		if ($error) { die('OK'); }
 
-				// Update the user's account
-				update_user_meta($user_id, 'alias',        $_GET['ALIAS']);
-				update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$PLANS[$plan]['duration'])));
-				update_user_meta($user_id, 'subscription', $date);
+		// Retrieve additional data
+		$date   = date('Y-m-d H:i:s');
+		$data   = get_userdata($user_id);
+		$meta   = get_all_user_meta($user_id);
+		$plan   = $PLANS[$meta['plan']];
 
-				// Prepare an email and send it
-				$subject = 'Confirmation de votre abonnement aux « Jours »';
-				$content = file_get_contents('emails/abonnement.html');
+		// Retrieve the global invoice number and increment it
+		$number = intval(get_option('invoice_number', 0)) + 1;
 
-				$headers   = array();
-				$headers[] = 'MIME-Version: 1.0';
-				$headers[] = 'Content-type: text/html; charset=UTF-8';
-				$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+		// Add an invoice (warning: should NOT be unique, obviously)
+		add_user_meta($user_id, 'invoices', json_encode(array(
+			'date'        => $date,
+			'number'      => $number,
+			'plan'        => $meta['plan'],
+			'payment'     => $meta['payment'],
+			'price'       => $plan['price'],
+			'transaction' => $transaction
+		)));
 
-				// Prevent displaying an error message (see below)
-				@mail($_GET['CLIENTEMAIL'], $subject, $content, implode("\r\n", $headers));
-			}
+		// Don't forget to update the invoice_number
+		update_option('invoice_number', $number);
+
+		// Update the user's account as "subscribed"
+		update_user_meta($user_id, 'expire',       date('Y-m-d', strtotime('+'.$plan['duration'])));
+		update_user_meta($user_id, 'subscription', $date);
+
+		// Finally, if received, save an alias for recurring payments
+		if (is_array($payload) && isset($payload['ALIAS'])) {
+			update_user_meta($user_id, 'alias', $payload['ALIAS']);
 		}
+
+		// Prepare an email and send it
+		$subject = 'Confirmation de votre abonnement aux « Jours »';
+		$content = file_get_contents('emails/abonnement.html');
+
+		$headers   = array();
+		$headers[] = 'MIME-Version: 1.0';
+		$headers[] = 'Content-type: text/html; charset=UTF-8';
+		$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+
+		// Prevent displaying an error message (see below)
+		@mail($data->user_email, $subject, $content, implode("\r\n", $headers));
 
 		// As stated in the documentation, the payment service waits for "OK"
 		// Otherwise, it will re-send a notification
 		// See https://developer.be2bill.com/callbacks#c3
 		die('OK');
-	}
+	} // end of if (isset($_GET['notification']))
 
 	// Receiving a result from the payment service
 	if (isset($_GET['result'])) {
+		// XXX: logging for debug
+		file_put_contents('result.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
+
 		$state = 'result';
 
-		if (empty($_GET['result'])) {
-			unset($_GET['result']); // Exclude for the hash computation
-			$hash  = signature($_GET);
-
-			$error = !$error && $hash != $_GET['HASH']      ? '1003'            : $error;
-			$error = !$error && $_GET['EXECCODE'] != '0000' ? $_GET['EXECCODE'] : $error;
+		if ($_GET['result'] == 'bank') {
+			// Retrieve the latest transaction
+			// Not sure if it is safe though…
+			$meta   = get_all_user_meta($current_user->ID);
+			$latest = end($meta['transactions']);
 
 			// Prefer redirecting to remove informations in the URL
-			die(header('Location: ?result='.($error ? $error : 'success')));
-		}
-	}
+			die(header('Location: ?result='.($latest->payload->state == 'closed.completed' ? 'success' : $latest->payload->state)));
+		} // end of if ($_GET['result'] == 'bank')
+
+		if ($_GET['result'] == 'card') {
+			unset($_GET['result']); // Exclude for the hash computation
+			$error = $_GET['HASH'] == signature($_GET) ? $_GET['EXECCODE'] : 1003;
+
+			// Prefer redirecting to remove informations in the URL
+			die(header('Location: ?result='.($error == '0000' ? 'success' : $error)));
+		} // end of if ($_GET['result'] == 'card')
+	} // end of if (isset($_GET['result']))
 
 	// Receiving data from the form
 	if (!empty($_POST)) {
@@ -168,12 +173,6 @@
 		if (!$error) {
 			if ($current_user->ID) {
 				$user_id = $current_user->ID;
-				$meta = get_all_user_meta($user_id);
-
-				// Fill $data with some informations for the payment service
-				$data['name']      = $meta['last_name'];
-				$data['firstname'] = $meta['first_name'];
-				$data['mail']      = $current_user->user_email;
 			} else {
 				// Try to create a new user
 				$user_id = wp_insert_user(array(
@@ -184,40 +183,103 @@
 					'last_name'  => $data['name']
 				));
 
-				$error  = is_wp_error($user_id) ? array('account' => $user_id) : null;
-				$fields = array('address', 'zip', 'city', 'country');
+				$error = is_wp_error($user_id) ? array('account' => $user_id) : null;
 			}
 		}
 
 		// Check if an error occured while creating or finding the user
 		if (!$error) {
 			// Add additionnal metadata
-			foreach (array_merge(array('plan', 'payment'), $fields ? $fields : array()) as $field) {
-				update_user_meta($user_id, $field, $data[$field]);
+			foreach ($data as $field => $value) {
+				if (in_array($field, array('mail', 'password', 'firstname', 'name', 'accept'))) { continue; } // Ignore some fields
+				update_user_meta($user_id, $field, $value);
 			}
 
-			// Look the user if not already logged-in
+			// Retrieve all user's data (the user might have created is account before)
+			$meta = get_all_user_meta($user_id); // From now, prefer to use user's $meta instead of $data (prevent issues with slashes added while sanitizing)
+			$user = get_userdata($user_id); // Get the user's object to retrieve its mail (nickname isn't correct)
+
+			// Login the user if not already logged-in
 			wp_set_auth_cookie($user_id, true, false);
 
-			if ($data['payment'] == 'card') {
-				// Complete the payload for the payment service
-				$hidden['amount']       = $PLANS[$data['plan']]['price'] * 100;
-				$hidden['cardfullname'] = $data['name'].' '.$data['firstname'];
-				$hidden['clientemail']  = $data['mail'];
-				$hidden['clientident']  = $user_id;
-				$hidden['orderid']      = date('Y-m-d').'-'.$user_id;
-				$hidden['hash']         = signature($hidden);
+			// Launch the payment
+			if ($meta['payment'] == 'card') {
+				$payload = array(
+					'amount'        => $PLANS[$meta['plan']]['price'] * 100,
+					'cardfullname'  => $meta['last_name'].' '.$meta['first_name'],
+					'clientemail'   => $user->user_email,
+					'clientident'   => $user_id,
+					'createalias'   => 'yes',
+					'description'   => 'Abonnement',
+					'identifier'    => BE2BILL_IDENTIFIER,
+					'language'      => 'FR',
+					'operationtype' => 'payment',
+					'orderid'       => date('Y-m-d').'-'.$user_id,
+					'version'       => '2.0'
+				);
 
-				// Generate an hidden form containing the needed informations for the payment service
+				// Generate the security hash
+				$payload['hash'] = signature($payload);
+
+				// Set the state as "redirect", the payload needs to be delivered
+				// By POST to the payment form URL
 				$state = 'redirect';
-			} else {
-				// TODO: bank
+			} else if ($meta['payment'] == 'bank') {
+				$payload = array(
+					'started'    => true,
+					'reference'  => date('Y-m-d').'-'.$user_id, // Set a reference containing the user_id so we can retrieve it in the notification
+					'creditor'   => array('reference' => SLIMPAY_APP_NAME),
+					'subscriber' => array('reference' => $user_id),
+					'items' => array(
+						array(
+							'type' => 'signMandate',
+							'mandate' => array(
+								'signatory' => array(
+									'familyName' => $meta['last_name'],
+									'givenName'  => $meta['first_name'],
+									'email'      => $user->user_email,
+									'billingAddress' => array(
+										'street1'    => $meta['address'],
+										'postalCode' => $meta['zip'],
+										'city'       => $meta['city'],
+										'country'    => strtoupper($meta['country'])
+									)
+								)
+							)
+						),
+						array(
+							'type' => 'directDebit',
+							'directDebit' => array(
+								'paymentReference' => date('Y-m-d').'-'.$user_id,
+								'amount' => $PLANS[$meta['plan']]['price']
+							)
+						),
+						array(
+							'type' => 'recurrentDirectDebit',
+							'recurrentDirectDebit' => array(
+								'amount'    => $PLANS[$meta['plan']]['price'],
+								'frequency' => $PLANS[$meta['plan']]['duration'] == '1 month' ? 'monthly' : 'yearly',
+								'dateFrom'  => date('Y-m-d\TH:i:s.000O')
+							)
+						)
+					)
+				);
+
+				$client   = new SlimPayClient();
+				$response = $client->createOrders(array('post' => $payload));
+
+				// XXX: logging for debug
+				file_put_contents('bank.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($response, true).print_r("\n", true), FILE_APPEND);
+
+				// TODO: check errors
+
+				die(header('Location: '.$response->userApproval));
 			}
 		}
 	} // end of if (!empty($_POST))
 
-	// Makes sure to have a default country, for the <select>
-	$data['country'] = !empty($data['country']) ? $data['country'] : 'fr';
+	$data            = array_map('stripslashes', $data); // Remove slashes added while sanitizing to display them correctly
+	$data['country'] = !empty($data['country']) ? $data['country'] : 'fr'; // Makes sure to have a default country, for the <select>
 ?>
 {% endblock %}
 
@@ -261,7 +323,7 @@
 			<?php if ($state == 'redirect') : ?>
 				<h2 class="mt-8g mb-2g md-ml-1c lg-ml-1c style-meta-larger">Redirection vers le paiement</h2>
 				<form id="redirect" class="md-ml-1c lg-ml-1c" action="<?php echo BE2BILL_URL; ?>" method="post">
-				<?php foreach ($hidden as $name => $value) : ?>
+				<?php foreach ($payload as $name => $value) : ?>
 					<input type="hidden" name="<?php echo strtoupper($name) ?>" value="<?php echo $value ?>" />
 				<?php endforeach ?>
 					<p>Si vous n'êtes pas redirigé automatiquement <button class="btn-blank" type="submit">cliquez-ici</button>.</p>
@@ -404,18 +466,18 @@
 					<?php endif ?>
 					<fieldset id="mode-de-paiement">
 						<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
-						<div class="gift style-meta lh-inherit color-dark">
+						<div class="gift style-meta lh-inherit">
 							<i class="pull-left">{{ icon("bag") }}</i>
 							<p><strong class="block text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
 						</div>
 						<div class="field row mb-1g">
-							<label class="col md-w-auto pr-2g pl-0 color-dark">
-								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required disabled />
+							<label class="col md-w-auto pr-2g pl-0">
+								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required />
 								<span class="radio"></span>
 								Prélèvement
 							</label>
 							<label class="col md-w-auto pr-2g pl-0">
-								<input class="radio" type="radio" name="payment" value="card" checked required />
+								<input class="radio" type="radio" name="payment" value="card" <?php if (isset($data['payment']) && $data['payment'] == 'card') : ?>checked <?php endif ?>required />
 								<span class="radio"></span>
 								Carte bancaire
 							</label>
@@ -426,7 +488,7 @@
 						<label class="mb-2g relative style-meta text-upper">
 							<input class="checkbox" type="checkbox" name="accept" <?php if (isset($data['accept']) && $data['accept']) : ?>checked <?php endif ?>required>
 							<span class="checkbox"></span>
-							J’accepte les conditions générales de vente. <a class="color-brand" href="/abonnement-conditions-generales.html">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
+							J’accepte les conditions générales de vente. <a class="color-brand" href="/abonnement-conditions-generales.html" target="_blank">Lire les <abbr title="Conditions Générales de Vente">CGV</abbr></a>.
 							<!-- TODO: error message -->
 						</label>
 						<p class="summary hidden mv-4g pa-2g style-meta lh-inherit text-upper color-main">Vous avez choisi la formule « <span>Jouriste</span> » à <span>9</span> €/<span>mois<span>. <a class="color-brand" href="#formule">Modifier</a></p>

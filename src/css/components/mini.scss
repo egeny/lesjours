@@ -11,7 +11,7 @@
 	transform: translateX(100%);
 
 	@extend %font-proxima;
-	font-size: .875em;
+	font-size: .875em !important; // Bouh! Easiest way to overload .episode-container > *
 
 	color: $color-black;
 
