@@ -1,0 +1,16 @@
+{
+	"template": "obsession",
+
+	"href": "l-etincelle",
+
+	"color": 12,
+	"name":  "L’étincelle",
+	"title": "L’étincelle",
+	"subtitle": "Ce n’est qu’un début,</br>racontons le combat",
+	"desc": "Le mouvement contre la réforme du travail va-t-il prendre de l’ampleur, s’articuler avec d’autres revendications&nbsp;? Est-il le révélateur d’une révolte plus profonde&nbsp;? Au fil des AG, des mobilisations et des manifs, «&nbsp;Les Jours&nbsp;» sondent les foyers de colère.",
+
+	"episodes": [
+		"episode:l-etincelle/ep-1-recherche-colere"
+
+	]
+}

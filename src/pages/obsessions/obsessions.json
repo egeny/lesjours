@@ -2,6 +2,7 @@
 	"template": "obsessions",
 
 	"obsessions": [
+		"obsession:l-etincelle",
 		"obsession:la-charniere",
 		"obsession:la-fete-du-stream",
 		"obsession:treize-novembre",

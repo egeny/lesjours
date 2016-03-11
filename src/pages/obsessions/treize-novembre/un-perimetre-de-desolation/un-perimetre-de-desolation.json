@@ -1,6 +1,5 @@
 {
 	"template":   "episode",
-	"visibility": "protected",
 
 	"href": "un-perimetre-de-desolation",
 
@@ -8,8 +7,8 @@
 	"date": "2015-11-15T10:00+01:00",
 
 	"title": "Un périmètre de désolation",
-	"subtitle": "<strong>Journal de bord du XIe.</strong> Au lendemain des attentats, le quartier du Bataclan est bouclé.",
 	"intro": "<strong>Journal de bord du XIe.</strong> Au lendemain des attentats, le quartier du Bataclan est bouclé.",
+	"subtitle": "<strong>Journal de bord du XIe.</strong> Deuxième épisode (gratuit)&nbsp;: au lendemain des attentats, le quartier du Bataclan est bouclé.",
 	"lead":  "J’avais fermé les volets qui donnent sur le boulevard. D’ordinaire, je les laisse ouverts. Au petit matin, je n’entends plus un bruit. Le quartier est entièrement bouclé. Le carrefour, d’habitude si bruyant, est vide. Pas une seule voiture ne passe. Il n’y a plus de circulation. Tout est figé, calme. Seules les silhouettes sombres des policiers barrent l’horizon. Leurs uniformes sont les seules tâches verticales. Je les regarde stationner sur le bitume déserté. Autour du Bataclan, ils ont dressé des barrières, boulevard Voltaire et rue Oberkampf. Déjà, des gens se massent aux barricades des forces de l’ordre, à l’extérieur de ce no man’s land. Nous habitons au croisement de ces artères coupées du reste de la ville. C’est un périmètre de désolation.",
 
 	"tags": ["Attentats", "Bataclan", "13 Novembre"],

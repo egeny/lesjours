@@ -2,12 +2,13 @@
 	"template": "home",
 
 	"une": [
-		"episode:la-fete-du-stream/ep-6-cnm-fantome",
+		"episode:l-etincelle/ep-1-recherche-colere",
 		"episode:les-jours-c-quoi/les-jours-le-pilote",
-		"episode:les-annees-college/sursis-conseil-discipline"
+		"episode:la-fete-du-stream/ep-6-cnm-fantome"
 	],
 
 	"obsessions": [
+		"obsession:l-etincelle",
 		"obsession:la-charniere",
 		"obsession:la-fete-du-stream",
 		"obsession:treize-novembre",

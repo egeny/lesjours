@@ -3,7 +3,7 @@ require('_bootstrap.php');
 global $wpdb;
 
 // Set a time limit anyway
-set_time_limit(10 * 60); // 10 minutes
+set_time_limit(60 * 60); // 1 hour (~ 2000 accounts using synchronous cURL)
 
 $today = date('Y-m-d');
 file_put_contents('renew.log', print_r(date('d-m-Y @ H:i:s'), true)."\n");
@@ -17,11 +17,6 @@ $conditions = array(
 
 $conditions = array_map(function($value) use ($wpdb) { return 'user_id IN (SELECT user_id FROM '.$wpdb->usermeta.' WHERE '.$value.')'; }, $conditions);
 $results    = $wpdb->get_col('SELECT user_id FROM '.$wpdb->usermeta.' WHERE '.implode(' AND ', $conditions).' GROUP BY user_id');
-
-// Prepare some variable to use cURL asynchronously
-$mh      = curl_multi_init();
-$queue   = array();
-$running = null;
 
 file_put_contents('renew.log', 'Query: SELECT user_id FROM '.$wpdb->usermeta.' WHERE '.implode(' AND ', $conditions).' GROUP BY user_id'."\n", FILE_APPEND);
 
@@ -55,28 +50,17 @@ foreach ($results as $id) {
 		'params' => $payload
 	));
 
-	$queue[] = $ch = curl_init();
+	$ch = curl_init();
 	curl_setopt($ch, CURLOPT_URL,            BE2BILL_REST_URL);
 	curl_setopt($ch, CURLOPT_POST,           true);
 	curl_setopt($ch, CURLOPT_POSTFIELDS,     $payload);
 	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-	curl_multi_add_handle($mh, $ch);
-}
 
-// Launch the cURL requests
-do {
-	curl_multi_exec($mh, $running);
-	curl_multi_select($mh);
-} while ($running > 0);
+	$response = curl_exec($ch);
+	file_put_contents('renew.log', 'Response: '.$response."\n\n", FILE_APPEND);
 
-// We don't have to update the user's account based on the response
-// It will be handled by the notification URL (abonnement.html?notification=card)
-foreach ($queue as $ch) {
-	file_put_contents('renew.log', 'Response: '.curl_multi_getcontent($ch)."\n\n", FILE_APPEND);
 	curl_close($ch);
-	curl_multi_remove_handle($mh, $ch);
 }
 
-curl_multi_close($mh);
 file_put_contents('renew.log', 'Done — '.print_r(date('d-m-Y @ H:i:s'), true), FILE_APPEND);
 ?>
