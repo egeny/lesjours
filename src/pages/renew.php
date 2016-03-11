@@ -6,6 +6,7 @@ global $wpdb;
 set_time_limit(10 * 60); // 10 minutes
 
 $today = date('Y-m-d');
+file_put_contents('renew.log', print_r(date('d-m-Y @ H:i:s'), true)."\n");
 
 // Prepare and launch the query
 $conditions = array(
@@ -22,9 +23,13 @@ $mh      = curl_multi_init();
 $queue   = array();
 $running = null;
 
+file_put_contents('renew.log', 'Query: SELECT user_id FROM '.$wpdb->usermeta.' WHERE '.implode(' AND ', $conditions).' GROUP BY user_id'."\n");
+
 foreach ($results as $id) {
 	$user = get_userdata($id); // Get the user's object to retrieve its mail
 	$meta = get_all_user_meta($id);
+
+	file_put_contents('renew.log', 'User '.$user->user_email.'neovov@gmail.com ('.$id.') — '.$meta['plan']."\n");
 
 	// Prepare the payload
 	$payload = array(
@@ -67,9 +72,11 @@ do {
 // We don't have to update the user's account based on the response
 // It will be handled by the notification URL (abonnement.html?notification=card)
 foreach ($queue as $ch) {
+	file_put_contents('renew.log', 'Response: '.curl_multi_getcontent($ch)."\n\n");
 	curl_close($ch);
 	curl_multi_remove_handle($mh, $ch);
 }
 
 curl_multi_close($mh);
+file_put_contents('renew.log', 'Done — '.print_r(date('d-m-Y @ H:i:s'), true));
 ?>
