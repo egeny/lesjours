@@ -22,6 +22,7 @@
 
 		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
 		"prev":  "episode:politique-annee-zero/romagnan-primaire-campagne-gauche",
-		"last":  "episode:politique-annee-zero/insurrection-riester"
+		"next": "episode:politique-annee-zero/faure-pavillons",
+		"last":  "episode:politique-annee-zero/romagnan-loi-travail"
 	}
 }
