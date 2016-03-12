@@ -38,12 +38,11 @@
 			"minor": true
 		},
 		{
-			"href":     "jerome-bourreau-guggenheim",
-			"img":      "img/jbg.jpg",
+			"href":     "",
+			"img":      "",
 			"alt":      "",
-			"title":    "Jérôme Bourreau-Guggenheim",
-			"desc":     "J'ai l'obsession d'aller à l'essentiel et l'exigence de faire simple. Mon goût pour les nouveaux défis m'a naturellement amené à embarquer dans l'aventure des Jours, convaincu que la Liberté a un prix, celui de l'information.",
-			"subtitle": "Directeur technique",
+			"title":    "",
+			"desc":     "",
 			"minor": true
 		},
 		{
@@ -110,12 +109,12 @@
 			"minor": true
 		},
 		{
-			"href":     "nicolas-le-gall",
-			"img":      "img/neovov.jpg",
+			"href":     "",
+			"img":      "",
 			"alt":      "",
-			"title":    "Nicolas Le Gall",
-			"subtitle": "Obsession Japon",
-			"desc":     "Développeur",
+			"title":    "",
+			"subtitle": "",
+			"desc":     "",
 			"minor": true
 		},
 		{
