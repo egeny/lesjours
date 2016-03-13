@@ -1,7 +1,19 @@
 {% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
 
+{% set person = obsession.people[4] %}
+<p><span class="lettrine">E</span>n politique, les signes de craquement doivent être vite classés sans suite. Leur accorder trop d’attention ou, pire, du sens, devient trop menaçant pour tous ceux qui sont installés dans la rente du mandat électoral et de l’exercice du pouvoir (majorité, opposition) dans le temps. La démission de <a href="#{{ person.href }}" data-mini="1">Pouria Amirshahi</a> du Parti socialiste et son annonce, <a href="http://abonnes.lemonde.fr/politique/article/2016/03/04/pouria-amirshahi-notre-systeme-mene-a-l-abime-democratique_4876387_823448.html" target="_blank">dans <i>Le Monde</i></a> du 4 mars, de quitter la politique, n’ont rien d’anecdotiques. Certes, ses «&nbsp;chers camarades&nbsp;» vont traiter son cas durant quelques heures avec la mine et le propos graves devant les micros, mais ce sera en réalité pour mieux minimiser la portée de ce départ et le ramener au rang de petit accident politique. L’Assemblée nationale et les partis ont leurs spécialistes pour ce genre d’enterrement.</p>
 
-<p><span class="lettrine">E</span>n politique, les signes de craquement doivent être vite classés sans suite. Leur accorder trop d’attention ou, pire, du sens, devient trop menaçant pour tous ceux qui sont installés dans la rente du mandat électoral et de l’exercice du pouvoir (majorité, opposition) dans le temps. La démission de Pouria Amirshahi du Parti socialiste et son annonce, <a href="http://abonnes.lemonde.fr/politique/article/2016/03/04/pouria-amirshahi-notre-systeme-mene-a-l-abime-democratique_4876387_823448.html" target="_blank">dans <i>Le Monde</i></a> du 4 mars, de quitter la politique, n’ont rien d’anecdotiques. Certes, ses «&nbsp;chers camarades&nbsp;» vont traiter son cas durant quelques heures avec la mine et le propos graves devant les micros, mais ce sera en réalité pour mieux minimiser la portée de ce départ et le ramener au rang de petit accident politique. L’Assemblée nationale et les partis ont leurs spécialistes pour ce genre d’enterrement.</p>
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
 
 <blockquote>
 <p>Notre système, confiscatoire de pouvoirs et de richesses, mène à l’abîme démocratique, social ou écologique.</p>
@@ -27,9 +39,9 @@
 
 <p>Dans la politique telle qu’elle (dys)fonctionne aujourd’hui, poser ainsi «&nbsp;ses&nbsp;» vérités conduit inéluctablement à une forme de marginalité. Quand on n’a plus de mandat, on n’a plus voix au chapitre. Plus d’amis politiques. Comme si vouloir rester fidèle à des engagements pris était jugé si naïf par ses pairs que cela vaille condamnation. Répudiation donc ou auto-élimination, puisque finalement, la politique ne pourrait se pratiquer que de cette manière. Qu’en sera-t-il pour Pouria Amirshahi, député de la République, d’origine iranienne, naturalisé français en 1996 et venu à la politique par le militantisme étudiant&nbsp;? Finira-t-il comme d’autres avant lui par jeter l’éponge, se résigner ou se replier sur son cercle privé et professionnel&nbsp;? Ce n’est pas ce qu’il laisse entendre.</p>
 
-<p>Voilà quelques mois, il a fondé <a href="#" data-mini="1">Le Mouvement commun</a> qui ambitionne notamment <q>la mise en valeur de toutes ces femmes et de tous ces hommes qui luttent ou mènent des expériences qui fonctionnent</q>. Ambition modeste peut-être, moins clinquante assurément que les joutes souvent si vaines du Parlement… Mais vraie tentative d’être en prise avec le réel et de ne rien lâcher pour inciter tous ceux qui se sentent si désespérés par la politique à s’en emparer à nouveau. Le Mouvement commun a aussi cette particularité&nbsp;: <q>Il ne se présente pas aux élections. Il s’intéresse moins à l’avenir d’un camp qu’à celui de tous.</q></p>
+<p>Voilà quelques mois, il a fondé <a href="#" data-mini="2">Le Mouvement commun</a> qui ambitionne notamment <q>la mise en valeur de toutes ces femmes et de tous ces hommes qui luttent ou mènent des expériences qui fonctionnent</q>. Ambition modeste peut-être, moins clinquante assurément que les joutes souvent si vaines du Parlement… Mais vraie tentative d’être en prise avec le réel et de ne rien lâcher pour inciter tous ceux qui se sentent si désespérés par la politique à s’en emparer à nouveau. Le Mouvement commun a aussi cette particularité&nbsp;: <q>Il ne se présente pas aux élections. Il s’intéresse moins à l’avenir d’un camp qu’à celui de tous.</q></p>
 
-<aside id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
 <a class="link-unstyled" href="http://www.lemouvementcommun.fr" />
 <span class="image"><img class="responsive" src="img/mouvement-commun.jpg" alt="" /></span>
 <p class="title">Le Mouvement commun</p>
