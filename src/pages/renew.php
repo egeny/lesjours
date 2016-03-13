@@ -38,7 +38,7 @@ foreach ($results as $id) {
 		'description'     => 'Abonnement',
 		'identifier'      => BE2BILL_IDENTIFIER,
 		'operationtype'   => 'payment',
-		'orderid'         => $today.'-'.$id,
+        'orderid'         => 'R'.'-'.$today.'-'.$id, // Start renewal order ids with a 'R' to detect them
 		'version'         => '2.0'
 	);
 

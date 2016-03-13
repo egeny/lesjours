@@ -64,6 +64,9 @@
 		$meta   = get_all_user_meta($user_id);
 		$plan   = $PLANS[$meta['plan']];
 
+		// if orderid starts with an R, this is a renewal
+        $renewal = $payload['ORDERID'][0] == 'R' ? 1 : 0;       
+
 		// Retrieve the global invoice number and increment it
 		$number = intval(get_option('invoice_number', 0)) + 1;
 
@@ -90,17 +93,18 @@
 		}
 
 		// Prepare an email and send it
-		$subject = 'Confirmation de votre abonnement aux « Jours »';
-		$content = file_get_contents('emails/abonnement.html');
+		if(!$renewal) { //...but only if is not a renewal
+			$subject = 'Confirmation de votre abonnement aux « Jours »';
+			$content = file_get_contents('emails/abonnement.html');
 
-		$headers   = array();
-		$headers[] = 'MIME-Version: 1.0';
-		$headers[] = 'Content-type: text/html; charset=UTF-8';
-		$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
+			$headers   = array();
+			$headers[] = 'MIME-Version: 1.0';
+			$headers[] = 'Content-type: text/html; charset=UTF-8';
+			$headers[] = 'From: Les Jours <abonnement@lesjours.fr>';
 
-		// Prevent displaying an error message (see below)
-		@mail($data->user_email, $subject, $content, implode("\r\n", $headers));
-
+			// Prevent displaying an error message (see below)
+			@mail($data->user_email, $subject, $content, implode("\r\n", $headers));
+		}
 		// As stated in the documentation, the payment service waits for "OK"
 		// Otherwise, it will re-send a notification
 		// See https://developer.be2bill.com/callbacks#c3
