@@ -1,0 +1,194 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[4] %}
+<p><span class="lettrine">L</span>’un part, l’autre reste. Ils sont amis, ils se voient ou s’appellent tous les jours. Pouria Amirshahi et Barbara Romagnan ont été élus députés en 2012, avec l’étiquette socialiste. Il n’y a pas l’épaisseur d’une feuille de papier à cigarette entre eux. Ils ont la même conception de la politique. La semaine précédente, <a href="#{{ person.href }}" data-mini="1">Pouria Amirshahi</a>, 43 ans, a décidé de quitter le Parti Socialiste (lire <a href="/obsessions/politique-annee-zero/pouria-amirshahi">l’épisode 10</a>, «&nbsp;Quitter la politique pour mieux en faire&nbsp;») dont il était adhérent depuis 1987. Déçu par son propre parti, il fait, en partant, le constat d’un système politique <q>à bout de souffle</q>, usé, coupé <q>des sèves profondes du pays</q>. Aux militants PS qui lui disent <q>Je suis triste que tu partes</q>, il répond&nbsp;: <q>Je suis triste que tu restes.</Q> <i>«&nbsp;Après, je les laisse méditer cinq minutes,</i> poursuit-il,<i> car la réflexion est douloureuse.&nbsp;»</i> Adhérente depuis 1994 et engagée dans les mêmes combats que Pouria Amirshahi, {% set person = obsession.people[0] %}<a href="#{{ person.href }}" data-mini="2">Barbara Romagnan</a>, 41 ans, demeure, elle, au PS. Pourquoi&nbsp;? Je leur ai proposé d’en discuter ensemble. Nous sommes dans une buvette de l’Assemblée nationale. Ils s’écoutent. Elle note parfois quelques mots sur un calepin, comme un pense bête, pour éviter de l’interrompre. Ils se complètent, se relancent. Partir ou pas&nbsp;? Quelle peut être leur utilité en politique&nbsp;? C’est une longue discussion entre eux, qui ne date pas d’hier.</p>
+
+{% set person = obsession.people[4] %}
+{{
+	mini({
+		number: 1,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[0] %}
+{{
+	mini({
+		number: 2,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<aside>
+<p><span>Vers la rupture</span></p>
+</aside>
+
+<p><b>Barbara Romagnan&nbsp;:</b> Ce dont on parle depuis longtemps, c’est comment on peut être utile à transformer la société. Pendant des années, on a pensé qu’être au PS, c’était l’outil le plus adapté. On est deux députés plutôt jeunes, et pourtant cela fait plus de 20 ans qu’on est au Parti socialiste. On s’est souvent posé des questions ou sentis en décalage.</p>
+
+<p><b>Pouria Amirshahi&nbsp;:</b> Je me souviens, dès 2013, je me disais&nbsp;: <q>On n’a pas fait ça pour ça.</q> Le tournant, ce sont le CICE [Le Crédit d’impôt pour la compétitivité et l’emploi, mis en place par le gouvernement de Jean-Marc Ayrault, et dont l’absence de contrepartie a heurté une partie de la gauche, ndlr], et les <a href="#note-1">vœux</a> de Hollande.</p>
+
+{% from "partials/_macro.html" import note %}
+
+{{
+note({
+number: 1,
+title: "Le tournant des vœux de 2013",
+caption: "Depuis l’Elysée, pour ses vœux de 2013, François Hollande propose <q>un pacte de responsabilité</q>, avec <q>moins de contraintes</q> pour les entreprises, pour  <q>gagner</q> la <q>bataille</q> de l’emploi, assumant une politique décrite comme sociale-libérale."
+})
+}}
+
+<p><b>BR&nbsp;:</b> Oui, mais on n’en était pas à partir. Je me souviens de la réunion de groupe en janvier après les vœux de François Hollande, je suis intervenue pour dire&nbsp;: je ne comprends pas, je sais que ce ne sont pas les mêmes bonshommes, pas les mêmes politiques mais je pense que Nicolas Sarkozy aurait pu faire les mêmes vœux. Ça a choqué beaucoup de camarades. Mais à ce moment-là, je n’en étais pas du tout à quitter le parti.</p>
+
+<p><b>PA&nbsp;:</b> Cela s’est fait par capillarité. A l’époque, on ne parlait pas encore de la fronde. C’était le début de la rupture. Mais simplement on s’est dit&nbsp;: on ne va pas les laisser faire, on va se regrouper. Puis on a refusé de voter la <a href="#note-2">confiance</a> à Manuel Valls. (Enrichissement vote de confiance)</p>
+
+{% from "partials/_macro.html" import note %}
+
+{{
+note({
+number: 2,
+title: "Le vote de confiance du 8 avril 2014",
+caption: "Le 8 avril 2014, onze députés socialistes s’abstiennent de voter la confiance au Premier ministre Manuel Valls, tout juste nommé, après son discours de politique générale, lui reprochant trop d’économies dans les finances publiques et trop de cadeaux aux entreprises."
+})
+}}
+
+<p><b>BR&nbsp;:</b> Et là on était 11.</p>
+
+<p><b>PA&nbsp;:</b> On était 11, et pas forcément les plus visibles des animateurs de la «&nbsp;fronde&nbsp;»&nbsp;; il y avait encore le syndrome de la main qui tremble.</p>
+
+<blockquote>
+<p>Je suis désespérée, mais plus déprimée.</p>
+<footer>Barbara Romagnan</footer>
+</blockquote>
+
+<p><b>BR&nbsp;:</b> Mais on se disait, on arrête de se retenir. On arrête d’être déprimés. Depuis ce moment-là, depuis qu’on a commencé à dire ce qu’on pensait, je ne suis plus déprimée. Je suis désespérée, mais plus déprimée.</p>
+
+<figure>
+<img src="img/amirshahi-romagnan-1.gif" alt="" />
+<figcaption><span>Pouria Amirshahi et Barbara Romagnan ont été réunis par «&nbsp;Les Jours&nbsp;» à la buvette de l’Assemblée nationale <span class="credits">Photo Julien Muguet pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p><b>PA&nbsp;:</b> La désillusion, l’absence de confiance en ce qu’est aujourd’hui la direction de la sociale démocratie française vient de loin. Cette décrépitude m’a souvent laissé éloigné de mon propre parti. L’élection présidentielle est un moment d’élan collectif qui donne le sentiment que tout redevient possible, et pousse à croire à la sincérité du propos qui est tenu devant des millions de gens. Mais avec le renoncement à modifier le traité européen, puis le pacte de responsabilité, le CICE… Là, pour la première fois, je me suis retrouvé confronté comme député à la violence de la Vème république. Un homme seul décide sans aucun cadre, sans délibération. Et depuis, tout s’est aggravé.</p>
+
+<p><b>BR&nbsp;:</b> C’est vrai. François Hollande ne respecte pas ses engagements et s’en détourne sans s’expliquer. Mais c’est accepté par les ministres, et les parlementaires –&nbsp;qui pourtant n’ont pas de pistolet sur la tempe&nbsp;– l’ont validé.</p>
+
+<blockquote>
+<p>Ce phénomène de servitude volontaire renvoie les parlementaires à leurs responsabilités.</p>
+<footer>Pouria Amirshahi</footer>
+</blockquote>
+
+<p><b>PA&nbsp;:</b> Ce phénomène de servitude volontaire renvoie les parlementaires à leurs responsabilités. Quand on change à ce point les priorités, qu’on passe du souci de l’individu, de son épanouissement, de la collectivité, et son émancipation à la satisfaction d’une toute petite poignée de possédants, normalement ça doit susciter votre réaction&nbsp;: votre révolte,  votre colère, et y compris envers ceux qui vous gouvernent en votre nom, et là, de manière usurpatrice. On a d’abord tenté d’élargir le front de la contestation. C’était <a href="#note-3">l’appel des 100</a>. Ça n’a pas tenu longtemps. Très vite, le gouvernement a géré sa majorité par la brutalité et l’injonction à obéir. Et deux ans après, on retrouve cette brutalité avec l’état d’urgence&nbsp;: une injonction à figer la société et une façon de gouverner par la peur. Je crois que ça ne tiendra pas jusqu’en 2017. Les militants du PS qui s’en vont eux aussi me l’écrivent tous les jours&nbsp;: le problème ce n’est pas d’avoir le point d’atterrissage mais de chercher la porte de sortie, ils l’ont trouvée.</p>
+
+{% from "partials/_macro.html" import note %}
+
+{{
+note({
+number: 3,
+title: "L’appel des 100",
+caption: "Après les élections municipales, 100 parlementaires demandent à Manuel Valls un nouveau <q>contrat de majorité</q>&nbsp;: <q>Agir et ne pas subir. La défaite d’ampleur historique que nous venons d’encaisser nous donne une responsabilité sans précédent […] Depuis de longs mois, les élus locaux et les députés avaient alerté sur le fossé qui se creusait entre la gauche au pouvoir et son électorat. Cette défaite électorale ne doit pas se transformer en renoncement démocratique. Au contraire, le temps du Parlement est venu.</q>"
+})
+}}
+
+<figure>
+<img src="img/amirshahi-romagnan-2.gif" alt="" />
+<figcaption><span>Pouria Amirshahi quitte le PS&nbsp;; Barbara Romagnan s’interroge encore <span class="credits">Photo Julien Muguet pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<aside>
+<p><span>Partir&nbsp;?</span></p>
+</aside>
+
+<p><b>BR&nbsp;:</b> On n’a peut-être pas réussi ce qu’on voulait, sinon tu ne serais peut-être pas parti du PS.</p>
+
+<p><b>PA&nbsp;:</b> Est-ce qu’on peut transformer le PS de l’intérieur&nbsp;? La réponse est non. C’est fini. D’autres pensent que oui, sinon ils ne resteraient pas. Enfin j’imagine, sinon c’est de la schizophrénie. Moi, je pense qu’on ne peut pas réformer de l’intérieur, qu’il n’y aura pas de <a href="#note-4">Jeremy Corbyn</a> à la française. Ce parti est de toute façon allé trop loin dans la déchéance morale.</p>
+
+{% from "partials/_macro.html" import note %}
+
+{{
+note({
+number: 4,
+title: "Jeremy Corbyn",
+caption: "Jeremy Corbyn représente l’aile gauche des travaillistes britanniques. Opposé au New labour de Tony Blair, il a été désigné chef de l’opposition parlementaire en septembre 2015."
+})
+}}
+
+<p><b>BR&nbsp;:</b> Moi, je suis tout à fait d’accord sur le constat que le gouvernement tourne le dos aux engagements de la gauche&nbsp;; le PS, là, ne joue pas son rôle, et quand il intervient c’est à contre emploi, pour soutenir des choses qui ne sont pas de gauche. J’ai des moments où je trépigne, où j’ai un sentiment d’étouffement où je me dis comment je peux rester là, participer à ça. Ça m’est arrivé régulièrement. Je n’exclus pas de partir un jour.</p>
+
+<blockquote>
+<p>Si je n’étais pas au Parti socialiste aujourd’hui, jamais je n’y rentrerais, mais j’y suis.</p>
+<footer>Barbara Romagnan</footer>
+</blockquote>
+
+<p><b>PA&nbsp;:</b> La question, c’est pourquoi tu restes&nbsp;?</p>
+
+<p><b>BR&nbsp;:</b> Si je n’étais pas au Parti socialiste aujourd’hui, jamais je n’y rentrerais, mais j’y suis. Pour moi, cela ne va pas de soi de sortir, mais ce n’est pas une décision définitive. Qu’est ce qui fait que moi, je reste&nbsp;? Je n’ai pas de réponse catégorique. Depuis la déchéance de nationalité, le débat sur le code du travail, depuis que la déchéance morale au sein du PS s’amplifie, il y a aussi de plus en plus de militants qui ont contesté ces positions. Il y a des gens qui se sentent représentés par la parole que nous avons à l’intérieur. Il y a beaucoup de militants avec qui j’ai une histoire. Je n’ai pas renoncé ,pour les élections qui viennent, aux outils des partis, mais pas les partis tout seuls&nbsp;: c’est pour cela que je soutiens la primaire (lire <a href="/obsessions/politique-annee-zero/romagnan-primaire-campagne-gauche">l’épisode 7</a>, «&nbsp;Besoin primaire de politique&nbsp;»). Je suis d’accord avec <a href="#" data-mini="3">Le Mouvement commun</a>&nbsp;: on ne doit pas se caler sur la présidentielle, cela dénature ce qu’on veut faire. Mais cette élection va avoir lieu et il faut y participer.</p>
+
+<aside id="mini-3" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.lemouvementcommun.fr" />
+<span class="image"><img class="responsive" src="img/mouvement-commun.jpg" alt="" /></span>
+<p class="title">Le Mouvement commun</p>
+<p class="subtitle">Le site du Mouvement commun, fondé par Pouria Amirshahi, qui milite pour un <q>lobby citoyen</q>.</p>
+</a>
+</aside>
+
+<p><b>PA&nbsp;:</b> Moi je pense, Barbara, qu’il faut que tu partes. Et que tu y réfléchisses très tranquillement. Là, je vais être dans une controverse rare avec toi. Tu prônes les primaires, donc c’est qu’on peut participer à la présidentielle en dehors des partis. Il n’y a pas besoin de rester au PS.</p>
+
+<p><b>BR&nbsp;:</b> Je n’ai pas dit qu’il y  avait besoin, mais il n’y a pas obligation de partir.</p>
+
+<blockquote>
+<p>Le PS ne fera pas les primaires et tu le sais.</p>
+<footer>Pouria Amirshahi</footer>
+</blockquote>
+
+<p><b>PA&nbsp;:</b> Le PS ne fera pas les primaires et tu le sais.</p>
+
+<p><b>BR&nbsp;:</b> Je ne le sais pas et cela n’empêche pas. Ce n’est peut-être pas le plus probable. Mais ce n’est pas une raison pour ne pas essayer que cela advienne.</p>
+
+<p><b>PA&nbsp;:</b> Le PS est infâmant pour lui-même et pour son histoire. Je ne fais d’injonction à personne. Mais là, rester dans ce parti pour nous, vu ce dont nous sommes les héritiers, les porteurs, les dépositaires, c’est perdre son temps.</p>
+
+<p><b>BR&nbsp;:</b> Mais qu’est-ce qu’on fait de 2017&nbsp;? On dit qu’on s’en fiche, que ça ne donnera rien&nbsp;?</p>
+
+<p><b>PA&nbsp;:</b> On est plus légitimes en dehors ou éloignés des partis, y compris pour les élections qui arrivent et qui pourraient se préparer avec cet angle neuf.</p>
+
+<p><b>BR&nbsp;:</b> Si c’est Hollande ou Valls, je ne ferais pas cette campagne. C’est vrai que je suis dans cette contradiction-là. Il y  a aussi quelque chose d’affectif dont on ne se défait presque jamais&nbsp;: on se dit toujours qu’il vaut mieux rester ou partir à un autre moment. On se fait croire qu’on partira plus tard, quand on sera plus nombreux et qu’on emportera d’autres camarades. Et peut-être que ce moment n’arrive jamais. Peut-être que ce serait plus cohérent de dire à ceux qui sont heureux qu’on porte leur parole&nbsp;: venez, on se casse parce que ce n‘est plus possible au sein du PS, et voilà.</p>
+
+<p><b>PA&nbsp;:</b> Les gens sont pressés, mais l’alternative, elle est en germe, des milliers de gens vont s’unir, il y a un horizon. Les gens s’en foutent si je reste ou pas au PS&nbsp;; ce qui les intéresse, c’est la France d’après…</p>
+
+<p><b>BR&nbsp;:</b> On est d’accord à 99&nbsp;%. Ton départ intensifie ces questions, cela me met devant mes responsabilités. Mais je ne me sens pas contrainte par mon appartenance au PS, je ne suis pas dans la dévotion du parti, je soutiens la primaire, je vote contre quand je ne suis pas d’accord. Je vis ce moment -&nbsp;c’est peut-être frileux&nbsp;- comme un temps de transition. </p>
+
+<figure>
+<img src="img/amirshahi-romagnan-3.gif" alt="" />
+<figcaption><span>Pouria Amirshahi et Barbara Romagnan ont adhéré au PS en 1987 et 1994 <span class="credits">Photo Julien Muguet pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p><i>Cela fait plus d’une heure et demie que les deux députés discutent. Barbara Romagnan doit partir pour un rendez-vous, je poursuis avec Pouria Amirshahi.</i></p>
+
+<p><b>PA&nbsp;:</b> Je pense que c’est utile que Barbara fasse de même parce que c’est utile à la cause, pour réinventer la politique. On peut faire de la politique sans être bardé de son étiquette. Le système est à bout de souffle, les partis sont fatigués, sans idées neuves. La bureaucratie les a transformés en objet dont l’objectif est leur propre perpétuation…</p>
+
+<blockquote>
+<p>Toi du coup, tu fais quoi&nbsp;? Tu es candidat à la présidentielle&nbsp;? Ou on laisse passer le moment&nbsp;?</p>
+<footer>Barbara Romagnan</footer>
+</blockquote>
+
+<p><i>A ce moment-là, Barbara Romagnan revient sur ses pas, nous interrompt et interpelle Pouria Amirshahi.</i></p>
+
+<p><b>BR&nbsp;:</b> Mais qu’est-ce que tu fais alors&nbsp;? Toi, tu n’es pas candidat à la législative, tu l’as dit, moi j’aimerais bien l’être. Est-ce pour ça que je ne sors pas&nbsp;? Il n’est pas sûr que je sois reconduite en 2017, mais je pense qu’il y a une utilité collective à être présent. Toi du coup, tu fais quoi&nbsp;? Tu es candidat à la présidentielle&nbsp;? Ou on laisse passer le moment&nbsp;?</p>
+
+<p><i>Sur ce, elle s’en va. Je comprends que c’est une discussion entre eux qui n’est pas prête de se terminer. Du coup, c’est à moi que Pouria Amirshahi adresse sa réponse.</i></p>
+
+<blockquote>
+<p>On peut faire des propositions sans que cela passe par quinze zombies du PS encravatés qui ont fait la même école…</p>
+<footer>Pouria Amirshahi</footer>
+</blockquote>
+
+<p><b>PA&nbsp;:</b> Je ne fais pas l’impasse sur 2017, j’aimerais bien qu’il y ait un front indépendant qui propose un programme législatif avec des nouveautés, des nouvelles pratiques parlementaires, qui montre qu’il y a des formules inattendues. Pour la présidentielle, les candidats vont mentir, ils vont être dans la posture et dans l’imposture. Alors on fait sans eux&nbsp;! On peut faire des propositions sans que cela passe par quinze zombies du PS encravatés qui ont fait la même école… Le désarroi est tel qu’il faut montrer qu’il y a d’autres solutions. Il y en a plein&nbsp;: dans l’agroalimentaire, l’habitat coopératif, la monnaie, la proportionnelle qui oblige à la négociation, la numérisation, les nouvelles formes de propriété d’entreprises, la science… Faisons-le. Il faut montrer que ça marche avec de nouveaux visages&nbsp;: il faut ringardiser ceux qui sont au pouvoir. Ils sont là depuis vingt ans ou trente ans. En 1992, j’avais 20&nbsp;ans, Michel Sapin et Ségolène Royal étaient déjà au gouvernement… aux mêmes postes&nbsp;! A l’économie et à l’écologie. Franchement, partez&nbsp;! Je vous dis, partez&nbsp;! Vous êtes des gens très sympathiques,  mais ça fait longtemps que vous êtes là, faites autre chose. C’est la démonstration que nous sommes dans une logique confiscatoire. Nous sommes dans une grande mutation. Cela prendra 5, 10, 15 ans… Cet âge des désillusions, du désordre va se réorienter, grâce à de nouvelles pratiques, et à la fin, de la verticalité. On est à un carrefour. Deux chemins sont possibles&nbsp;: soit le fracas du monde mène à l’abîme, soit les savoirs accumulés sont mis au service des citoyens. Une course de vitesse s’est engagée.</p>
+
+<p><i>Pouria Amirshahi pourrait continuer encore longtemps. Mais il est temps, pour lui, en ce 9 mars, de rejoindre la manifestation contre la loi El Khomri. Il a prévu d’y aller avec Barbara Romagnan.</i></p>

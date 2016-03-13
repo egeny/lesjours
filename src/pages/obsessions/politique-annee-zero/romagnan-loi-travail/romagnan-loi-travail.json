@@ -22,6 +22,7 @@
 
 		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
 		"prev":  "episode:politique-annee-zero/pouria-amirshahi",
-		"last":  "episode:politique-annee-zero/romagnan-loi-travail"
+		"next": "episode:politique-annee-zero/ep12-romagnan-amirshahi",
+		"last":  "episode:politique-annee-zero/ep12-romagnan-amirshahi"
 	}
 }

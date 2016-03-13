@@ -1,0 +1,27 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep12-romagnan-amirshahi",
+
+	"number": 12,
+	"date": "2016-03-14T00:05+01:00",
+
+	"title": "«&nbsp;Moi je pense, Barbara, qu’il faut que tu partes&nbsp;»",
+	"intro": "Les députés Pouria Amirshahi et Barbara Romagnan sont amis. Lui vient de quitter le PS&nbsp;; elle a décidé de rester. Discussion.",
+	"subtitle": "Les députés Pouria Amirshahi et Barbara Romagnan sont amis. Lui vient de quitter le PS&nbsp;; elle a décidé de rester. Discussion.",
+	"lead":  "L’un part, l’autre reste. Ils sont amis, ils se voient ou s’appellent tous les jours. Pouria Amirshahi et Barbara Romagnan ont été élus députés en 2012, avec l’étiquette socialiste. Il n’y a pas l’épaisseur d’une feuille de papier",
+
+	"tags": ["politique", "Amirshahi", "Romagnan", "PS"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman"},
+			{ "photo": "author:julien-muguet" }
+		],
+
+		"first": "episode:politique-annee-zero/le-meilleur-pour-eviter-le-pire",
+		"prev": "episode:politique-annee-zero/romagnan-loi-travail",
+		"last":  "episode:politique-annee-zero/ep12-romagnan-amirshahi"
+	}
+}
