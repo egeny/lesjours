@@ -1,0 +1,28 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep-7-contrats-artistes",
+
+	"number": 7,
+	"date": "2016-03-15T00:05+01:00",
+
+	"title": "Des artistes contrats et&nbsp;forcés",
+	"intro": "<strong>Sous contrat (1/3).</strong> Le streaming a reconduit les clauses abusives qui surprotègent certaines maisons de disques aux dépens des artistes.",
+	"subtitle": "<strong>Sous contrat (1/3).</strong> Le streaming a reconduit les clauses qui surprotègent certains labels aux dépens des artistes.",
+	"lead": "Ça ne pouvait pas se passer facilement sur un sujet comme ça, et ça n’a pas manqué. Lors de la médiation menée par Marc Schwartz sur la musique en ligne, qui devait remettre à plat une cascade de distorsions",
+
+	"tags": ["Musique", "Streaming", "artistes", "contrats"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sophian-fanen" },
+			{ "Illustrations": ["author:sebastien-calvet"] }
+		],
+
+		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"prev":  "episode:la-fete-du-stream/ep-6-cnm-fantome",
+		"last":  "episode:la-fete-du-stream/ep-7-contrats-artistes"
+
+			}
+}

@@ -232,7 +232,7 @@
 				$payload = array(
 					'started'    => true,
 					'reference'  => date('Y-m-d').'-'.$user_id, // Set a reference containing the user_id so we can retrieve it in the notification
-					'creditor'   => array('reference' => SLIMPAY_APP_NAME),
+					'creditor'   => array('reference' => SLIMPAY_CREDITOR_REFERENCE), //was SLIMPAY_APP_NAME but these are not the same values (was causing error 500)
 					'subscriber' => array('reference' => $user_id),
 					'items' => array(
 						array(

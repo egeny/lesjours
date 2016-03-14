@@ -22,7 +22,8 @@
 
 		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
 		"prev":  "episode:la-fete-du-stream/ep-5-chemin-argent",
-		"last":  "episode:la-fete-du-stream/ep-6-cnm-fantome"
+		"last":  "episode:la-fete-du-stream/ep-7-contrats-artistes",
+		"next":  "episode:la-fete-du-stream/ep-7-contrats-artistes"
 
 			}
 }

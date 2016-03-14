@@ -1,0 +1,195 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[8] %}
+<p><span class="lettrine">Ç</span>a ne pouvait pas se passer facilement sur un sujet comme ça, et ça n’a pas manqué. Lors de la médiation menée par <a href="#{{ person.href }}" data-mini="1">Marc Schwartz</a> sur la musique en ligne (<a href="/obsessions/la-fete-du-stream/ep-4-mission-schwartz">lire l’épisode 4</a>, «&nbsp;Musique&nbsp;: l’école du microcosme d’argent&nbsp;»), qui devait remettre à plat une cascade de distorsions entre artistes, <a href="#note-1">producteurs</a> et plateformes de <a href="#note-2">streaming</a>, la question des contrats a été posée. {% set person = obsession.people[9] %}Pas ceux qui lient <a href="#{{ person.href }}" data-mini="2">Deezer</a> ou {% set person = obsession.people[6] %}<a href="#{{ person.href }}" data-mini="3">Spotify</a> et les labels, qui sont négociés au niveau international et sont intouchables depuis la France. Plutôt ceux qui sont signés entre les artistes et leur maison de disques. Ceux qui fâchent depuis qu’au milieu des années 2000, le numérique est venu rompre l’équilibre qui régulait tant bien que mal cette jungle (<a href="/obsessions/la-fete-du-stream/ep-1-du-cd-au-streaming">lire l’épisode 1</a>, «&nbsp;Du CD au streaming, courte histoire d’une révolution&nbsp;»).</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+	note({
+		number:  1,
+		title:   "Producteur",
+		caption: "Celui qui avance à l’artiste les moyens d’enregistrer sa musique, puis assure la fabrication, la distribution et la promotion des œuvres. Il dirige pour cela une maison de disques, autrement appelée un label."
+	})
+}}
+
+{{
+	note({
+		number:  2,
+		title:   "Streaming",
+		caption: "La diffusion de contenus en flux continu sur internet. Cette diffusion peut être vidéo ou sonore. Les principaux acteurs en France sont YouTube, Deezer et Spotify."
+	})
+}}
+
+{% set person = obsession.people[8] %}
+{{
+	mini({
+		number:   1,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[9] %}
+{{
+	mini({
+		number:   2,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[6] %}
+{{
+	mini({
+		number:   3,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Le principal reproche qui est fait à ces contrats, c’est de s’être adaptés à reculons à la nouvelle ère numérique. C’est ce que regrette notamment maître Michaël Majster, avocat spécialisé qui défend les intérêts de plusieurs grands noms de la musique française (Étienne Daho, Daft Punk…) et travaille aussi pour des maisons de disques et certains acteurs du streaming. <q>Pendant l’âge d’or du CD, disons les années&nbsp;80 à 95, les contrats étaient vraiment pourris. Les <a href="#note-3">taux de rémunération</a> étaient très faibles, de l’ordre de 6&nbsp;%, 7&nbsp;%, avec des abattements affreux. Mais les ventes de disques étaient énormes&nbsp;; les maisons de disques gagnaient beaucoup d’argent, l’argent coulait à flot… Jusqu’à la crise du disque dans les années&nbsp;2000. Jusque-là, beaucoup d’artistes se sont fait flouer et c’est resté dans les mentalités.</q></p>
+
+{{
+	note({
+		number:  3,
+		title:   "Taux de rémunération",
+		caption: "Ce taux est la part touchée par l'artiste sur les revenus de son producteur."
+	})
+}}
+
+
+
+<aside>
+<p><span>Des abattements qui s’empilent</span> dans un savant foutoir</p>
+</aside>
+
+<p>Pause explicative. Un artiste interprète peut financer et distribuer son disque lui-même, mais il fait très souvent appel pour cela à un producteur, c’est-à-dire une maison de disques, afin de se consacrer à l’artistique. Le producteur peut alors, selon ses moyens, financer la composition, l’enregistrement, la fabrication, la distribution et la promotion des chansons. Il prête aussi parfois à l’artiste de quoi vivre –&nbsp;voire très bien vivre&nbsp;– avant que le disque ne sorte. C’est l’avance. Le producteur se rembourse ensuite sur les premières ventes et, si le disque a du succès, les bénéfices suivants sont partagés selon les clauses du contrat qui lie les deux parties. Le producteur perçoit la majeure partie de ces revenus, qui compensent les frais dont nous venons de parler –&nbsp;en particulier la promotion dans le monde numérique. L’interprète reçoit pour sa part environ 10&nbsp;% des revenus, parfois moins, parfois un peu plus. Très rarement au-dessus de 12&nbsp;%.</p>
+
+<p>Oui, tout cela est déjà bien compliqué. Mais en plus, ce taux de rémunération est soumis à une série d’<a href="#note-4">abattements</a> qui le réduisent dès que des frais qui sortent de l’ordinaire sont engagés.</p>
+
+{{
+	note({
+		number:  4,
+		title:   "Abattement",
+		caption: "Une clause du contrat qui lie un artiste à un producteur, qui prévoit que sa rémunération sera amputée si un risque est pris pour favoriser le succès d'un disque."
+	})
+}}
+
+<figure>
+<img src="img/quand-les-artistes-1.jpg" alt="" />
+<figcaption><span>L’interprète reçoit environ 10&nbsp;% des bénéfices tirés des ventes de son disque, avant abattements <span class="credits">Illustration Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+
+<p>C’est principalement ces abattements qui posent problème, car ils s’empilent parfois –&nbsp;notamment chez les majors et les plus grands indépendants&nbsp;– dans un savant foutoir qui semble souvent protéger avant tout le producteur. <i>«&nbsp;Tous les abattements issus de l’ère physique demeurent</i>, continue maître Michael Majster. <i>Les contrats n’ont pas été nettoyés, donc on y croise des abattements très années 80 où l’on parle de “nouveaux” supports physiques, comme le format SACD, le MiniDisc, des trucs complètement absurdes comme des “abattements jukebox”. Les contrats sont une accumulation d’univers surannés.&nbsp;»</i> Par exemple, un abattement prévu pour compenser la casse des disques pendant le transport a longtemps été appliqué aux MP3 vendus sur l’iTunes Store d’Apple. Des fois qu’ils se brisent en 0 et 1 pendant leur transfert par internet.</p>
+
+<p>Une fois le calcul final effectué sur un disque, une fois les frais d’une belle pochette ou une campagne de publicité déduits, certains artistes se retrouvent avec des taux de 3&nbsp;%, voire doivent de l’argent à leur producteur. C’est notamment le cas des artistes sortis des émissions de télévision, qui se voient appliquer l’ensemble de la gamme des abattements et des taux de rémunération souvent très bas.</p>
+
+<blockquote>
+<p>Les producteurs nous disent&nbsp;: <q>Mais les artistes ont des managers pour cela.</q> Sauf que ce manager est souvent un pote qui passait par là et n’y connaît pas grand-chose.</p>
+<footer>Suzanne Combo, déléguée générale de la GAM</footer>
+</blockquote>
+
+{% set person = obsession.people[1] %}
+<p>Le numérique a aussi fait naître de nouveaux abattements problématiques, et c’est à ces contrats devenus très complexes que s’est attaquée la mission Schwartz. Mais la discussion a tourné court, car les producteurs y ont opposé le bon vieux secret des affaires. <i>«&nbsp;On est arrivés en proposant la suppression pure et simple des abattements, puis leur plafonnement à 30&nbsp;% des revenus du producteur</i>, explique ainsi la chanteuse Suzanne Combo, déléguée générale de la Guilde des artistes de la musique (<a href="#{{ person.href }}" data-mini="4">GAM</a>). <i>Nous sommes la seule profession à participer à l’effort d’investissement de son employeur.&nbsp;»</i></p>
+
+{{
+	mini({
+		number:  4,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+
+{% set person = obsession.people[5] %}
+<p>Les demandes de la GAM ont été rejetées, comme l’idée de rendre obligatoire la présence d’un avocat lors de la signature d’un contrat, qui n’a bizarrement pas été soutenue par le Snam-CGT, l’influente centrale des musiciens. Là encore, le sujet n’existe pas pour les producteurs. Selon Stéphane Le Tavernier, patron de Sony Music France et président du <a href="#{{ person.href }}" data-mini="5">Snep</a>, un peu énervé sur ce sujet, <q>les représentants des artistes affirment sans problème que les musiciens et leurs managers sont des cons et qu’on arrive à fourguer n’importe quoi à n’importe qui</q>. Vincent Frèrebeau, patron de <a href="#note-5">Tôt ou Tard</a> et du syndicat des labels indépendants UPFI, estime quant à lui que la course aux nouveaux artistes, qui est repartie de plus belle depuis deux ans, a nettoyé les contrats&nbsp;: <q>Quand on signe un artiste en concurrence avec quatre ou cinq labels, je vous assure que ça ne marche pas si les clauses sont pourries.</q></p>
+
+{{
+	mini({
+		number:  5,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{{
+	note({
+		number:  5,
+		title:   "Tôt ou Tard",
+		caption: "Ce label a été fondé par Vincent Frèrebeau, ancien manager de Thomas Fersen, au sein de la major Warner en 1996. Le label a ensuite pris son indépendance en 2002, avant d’être racheté à 49&nbsp;% par le géant indé Wagram en 2010. Il publie notamment les disques de Yael Naïm, Shaka Ponk ou Mathieu Boogaerts."
+	})
+}}
+
+<aside>
+<p><span>Championnat</span> de mauvaise foi</p>
+</aside>
+
+<p>La réalité est plus nuancée. <i>«&nbsp;Un jeune artiste est aussi bien défendu qu’un gros</i>, m’a expliqué maître Majster, <i>mais tout dépend en fait de sa puissance de négociation. Un nouvel artiste a une puissance limitée, sauf quand les maisons de disques lui courent après.&nbsp;»</i> Scoop&nbsp;: il vaut mieux être Stromae qu’un illustre inconnu lorsqu’il s’agit de négocier un contrat. La présence systématique d’un avocat pourrait toutefois permettre de se débarrasser, pour tout le monde, des clauses les plus abusives, et Suzanne Combo regrette que ce point ait été écarté des négociations&nbsp;: <q>Les producteurs nous disent&nbsp;: <q>Mais les artistes ont des managers pour cela.</q> Sauf que ce manager est souvent un pote qui passait par là et n’y connaît pas grand-chose.</q></p>
+
+<p>Dans cette ambiance amicale et ouverte à la discussion, la mission Schwartz a préféré la bonne vieille technique qui consiste à renvoyer le dossier à plus tard afin de ne pas compromettre l’ensemble de l’accord. Une étude a donc été confiée au cabinet BearingPoint, qui doit analyser une soixantaine de contrats et dresser un panorama des pratiques existantes. Sauf que depuis la signature du protocole par les représentants des producteurs, des interprètes et des musiciens, ce dossier s’est transformé en championnat de mauvaise foi.</p>
+
+<figure>
+<img src="img/quand-les-artistes-2.jpg" alt="" />
+<figcaption><span>L’idée de rendre obligatoire la présence d’un avocat lors de la signature d’un contrat a été rejetée lors de la mission Schwartz <span class="credits">Illustration Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Les producteurs, et en particulier le Snep, ont commencé par expliquer que leurs services juridiques avaient besoin de temps pour fournir les contrats, que c’est compliqué, tout ça. Puis ils ont fait la tête pour qu’on ne parle pas des artistes du <a href="#note-6"><i>back catalogue</i></a>, qui représentent pourtant la base de leurs revenus dans l’économie du streaming. À leur décharge, retrouver trace d’échanges financiers datant d’il y a 20&nbsp;ans est compliqué, et les rachats de labels en cascade n’arrangent rien.</p>
+
+{{
+	note({
+		number:  6,
+		title:   "Back catalogue",
+		caption: "Les disques sortis il y a plus de 18&nbsp;mois. Les plus gros labels ont des catalogues très vastes, qui leur assurent une rente importante sur les écoutes en streaming."
+	})
+}}
+
+{% set person = obsession.people[0] %}
+<p><a href="#{{ person.href }}" data-mini="6">L’Adami</a>, qui n’a pas été plus aimable lors des discussions selon nos informations, ne veut quant à elle pas entendre parler des contrats de licence, ces contrats qui lient des artistes qui possèdent leur propre label et font appel à une maison de disques plus grosse pour gagner côté marketing et distribution. Dans ce cas, l’artiste est souvent son propre producteur et signe à ce titre un partenariat avec un autre label, mais il paraît malgré tout impossible d’évacuer ce modèle désormais très répandu d’une étude du paysage actuel. Enfin, les plus petits labels, qui n’ont pas de service dédié pour garder une trace de toute leur activité depuis 20&nbsp;ans, se sont retrouvés débordés par les demandes du cabinet d’études.</p>
+
+{{
+	mini({
+		number:  6,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<blockquote>
+<p>À un moment donné, on a envie de les laisser se débrouiller tout seuls tant ils sont dans des postures égoïstes. Si tout ça échoue, ce sera de leur faute.</p>
+<footer>Un interlocuteur au ministère de la Culture</footer>
+</blockquote>
+
+<p>Aujourd’hui, l’échantillon qui doit être analysé par BearingPoint et qui est censé compter des contrats récents et plus anciens, des petits et des gros artistes, n’est toujours pas figé, et le remplacement de Fleur Pellerin à la tête du ministère de la Culture a achevé de tout stopper. C’est d’ailleurs ce qu’attendaient certains des producteurs…</p>
+
+<p>Un de mes interlocuteurs du ministère, qui doit rester anonyme, trouve toutes ces manœuvres <q>insupportables</q>. <i>«&nbsp;Ils sont très assistés</i>, euphémise-t-il. <i>OK, on peut dire que c’est l’<a href="#note-7">exception culturelle française</a>, mais là, c’est plus que de la régulation, c’est presque de la gestion des rapports humains et économiques. À un moment donné, on a envie de les laisser se débrouiller tout seuls tant ils sont dans des postures égoïstes. Si tout ça échoue, ce sera de leur faute.&nbsp;»</i></p>
+
+{{
+	note({
+		number:  7,
+		title:   "Exception culturelle française",
+		caption: "L’ensemble des lois et encadrements qui permettent la cohabitation vertueuse d’une économie du loisir de masse et de structures moins rentables."
+	})
+}}
+
+<p>Dans le prochain épisode, je m’intéresserai à ces fameux contrats dont personne ne veut parler. J’ai demandé à plusieurs producteurs de m’en montrer, ils ont refusé ou ont dit oui avant de faire les morts. Alors je m’en suis procuré, et c’est pas joli joli.</p>
+

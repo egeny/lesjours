@@ -15,7 +15,8 @@
 		"episode:la-fete-du-stream/ep-3-stream-change-auditeurs",
 		"episode:la-fete-du-stream/ep-4-mission-schwartz",
 		"episode:la-fete-du-stream/ep-5-chemin-argent",
-		"episode:la-fete-du-stream/ep-6-cnm-fantome"
+		"episode:la-fete-du-stream/ep-6-cnm-fantome",
+		"episode:la-fete-du-stream/ep-7-contrats-artistes"
 
 	],
 
@@ -99,6 +100,15 @@
 			"title":    "Marc Schwartz",
 			"subtitle": "52 ans, médiateur du protocole d’accord pour un développement équitable de la musique en ligne",
 			"desc":   "On connaît surtout Marc Schwartz pour la médiation délicate qu’il a menée en 2012 entre Google et la presse française. Les médias estimaient que Google, notamment via Google Actualités, profitait d’une façon déséquilibrée du trafic généré par les articles de presse. La médiation a débouché sur la création d’un fonds d’aide à la presse française, élargi depuis à l’ensemble des médias européens via la Digital News Initiative. Conseiller maître à la Cour des comptes, Marc Schwartz a aussi été un temps conseiller de Dominique Strauss-Kahn, alors ministre des Finances, puis directeur général adjoint de France Télévisions, en charge des finances.",
+			"minor": true
+		},
+			{
+			"href":     "deezer",
+			"img":      "img/deezer.jpg",
+			"alt":      "",
+			"title":    "Deezer",
+			"subtitle": "Plateforme de streaming française",
+			"desc":   "La première plateforme de streaming française a eu plusieurs vies. La première, c'était sous la forme de Blogmusik, un ancêtre du streaming lancé en 2006, dans une période qui n'en voulait pas. Enfin, où les représentants des différents métiers de la musique n'en voulaient pas. Les internautes, eux, s'étaient rapidement attachés à ce service basé sur un principe malin&nbsp;: scanner l'internet à la recherche de fichiers MP3, les indexer et permettre leur écoute via une interface très simple. Le streaming, déjà. Mais les ayants-droit, et la Sacem avant tout, n'y avaient pas leur mot à dire et ont rapidement mis en demeure le petit site, qui a fermé ses portes en 2007. Blogmusik était toutefois bien parrainé, entre autre par Xavier Niel, qui l'a poussé à renaître pour ne pas laisser le marché naissant de l'écoute de musique en flux à Universal, qui s'apprêtait à l'époque à lancer son site de streaming. Après un accord avec la Sacem, Blogmusik est donc revenu parmi les vivants sous le nom de Deezer. Depuis 2012, Deezer a comme principal actionnaire (30&nbsp;%) le milliardaire russe Len Blavatnik, qui est également propriétaire de la major du disque Warner. L'entreprise, qui reste basée à Paris, se développe principalement en passant des accords avec des opérateurs téléphoniques, notamment Orange en France. Sur ses 6,3&nbsp;millions d’abonnés payants, 4,8&nbsp;millions provenaient fin 2015 de ces accords. Deezer a lancé son entrée en Bourse en octobre 2015, avant de la reporter faute de trouver assez d'investisseurs potentiels.",
 			"minor": true
 		}
 	]
