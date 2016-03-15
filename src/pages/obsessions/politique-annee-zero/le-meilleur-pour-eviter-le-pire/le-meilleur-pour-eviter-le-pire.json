@@ -1,5 +1,6 @@
 {
 	"template": "episode",
+	"visibility": "protected",
 
 	"href": "le-meilleur-pour-eviter-le-pire",
 
@@ -8,7 +9,7 @@
 
 	"title": "Le meilleur pour éviter le pire",
 	"intro": "Dénigrée, désacralisée, la politique produit toujours autant de sidération et de passion. Alors autant s’en (ré)emparer.",
-	"subtitle": "Premier épisode (gratuit)&nbsp;: rencontre avec trois députés qui essaient de faire de la politique autrement.",
+	"subtitle": "Dénigrée, désacralisée, la politique produit toujours autant de sidération et de passion. Alors autant s’en (ré)emparer.",
 	"lead":  "Voilà une colère rentrée et partagée en France par des millions de personnes. La politique&nbsp;? Insupportable… Aucun résultat&nbsp;! La politique&nbsp;? Trahisons et mensonges perpétuels de personnages coincés par la rente des mandats et les logiques des partis. Du cynisme, des privilèges anachroniques.",
 
 	"tags": ["Politique"],

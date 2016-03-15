@@ -1,5 +1,6 @@
 {
 	"template": "episode",
+	"visibility": "protected",
 
 	"href": "ep-1-recherche-colere",
 
@@ -9,7 +10,7 @@
 	"title": "À la recherche de la colère",
 	"intro": "«&nbsp;Les Jours&nbsp;» arpentent les rues pour sonder les premières mobilisations contre la réforme du travail.",
 	"subtitle": "«&nbsp;Les Jours&nbsp;» arpentent les rues pour sonder les mobilisations contre la réforme du travail.",
-	"lead": "Un frémissement, un signe, une étincelle. Ou carrément l’étincelle, celle d’un mouvement de grande ampleur. Quand la pétition contre la réforme du code du travail a commencé à engranger des signatures –&nbsp;plus d’1,2 million&nbsp;",
+	"lead": "Un frémissement, un signe, une secousse. Ou carrément l’étincelle, celle d’un mouvement de grande ampleur. Quand la pétition contre la réforme du code du travail a commencé à engranger des signatures –&nbsp;plus d’1,2 million&nbsp;",
 
 	"tags": ["manifestation", "loi travail", "étudiants"],
 
