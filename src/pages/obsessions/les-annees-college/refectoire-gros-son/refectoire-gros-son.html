@@ -1,0 +1,158 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[25] %}
+<p><span class="lettrine">T</span>homas, le surveillant, a une technique toute particulière pour apaiser élèves qui restent à la cantine à midi&nbsp;: <q>envoyer du gros son</q>. Chaque jour, vers 12h30, peu de temps après que la <a href="#" data-mini="1">discrète sonnerie</a> a retenti, les haut-parleurs du niveau&nbsp;-1 du collège, ceux de la cour et de la cantine se mettent à <a href="#" data-mini="2">cracher ça</a>. Les morceaux diffusés sont choisis par les élèves. Dans le bureau de la vie scolaire, un cahier d’écolier bleu est à leur disposition pour qu’ils notent, le matin, les morceaux qu’ils ont envie d’écouter entre midi et deux. <a href="#{{ person.href }}" data-mini="3">Thomas</a> branche ensuite la playlist sur les haut-parleurs. L’instant cantine peut commencer. Une heure trente de récré. 240 ados et une poignée de surveillants pour les encadrer.</p>
+
+<figure id="mini-1" class="mini md-w-2c lg-w-3c lg-ph-0">
+<div class="player">
+<div class="container">
+<audio aria-hidden="true">
+<source type="audio/webm" src="audio/sonnerie-couloir.webm" />
+<source type="audio/mp4"  src="audio/sonnerie-couloir.m4a" />
+</audio>
+<button class="btn-blank" type="button">
+<div class="container">
+<img class="responsive" src="img/encore-un-matin-1.jpg" alt="" />
+</div>
+</button>
+</div>
+</div>
+<a class="link-unstyled" href="#">
+<p class="title">La sonnerie d'Aimé-Césaire</p>
+<p class="subtitle"></p>
+</a>
+<figcaption></figcaption>
+</figure>
+
+<figure id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<div class="player">
+<div class="container">
+<audio aria-hidden="true">
+<source type="audio/webm" src="audio/playlist.webm" />
+<source type="audio/mp4"  src="audio/playlist.m4a" />
+</audio>
+<button class="btn-blank" type="button">
+<div class="container">
+<img class="responsive" src="img/bieber.jpg" alt="" />
+</div>
+</button>
+</div>
+</div>
+<a class="link-unstyled" href="#">
+<p class="title">La playlist de la cantoche</p>
+<p class="subtitle">«&nbsp;Fais le mouv&nbsp;» de MHD, «&nbsp;What do you mean&nbsp;?&nbsp;» de Justin Bieber, et «&nbsp;Runnin'&nbsp;» de Naughty Boy (avec Beyoncé et Arrow Benjamin) </p>
+</a>
+<figcaption></figcaption>
+</figure>
+
+
+{% set person = obsession.people[25] %}
+{{
+	mini({
+		number: 3,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<figure>
+<img src="img/le-refectoire-1.jpg" alt="" />
+<figcaption><span>Isabelle, Lucie, Louanne, Delphine et Jessika au réfectoire, le 8&nbsp;mars 2016 <span class="credits">Photo Simon Lambert pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+ 
+<p>Dire que la musique empêche les bousculades de bandes d’ados affamés à l’entrée du réfectoire serait mensonger. Dire que la musique réussit à faire avaler sans douleur <a href="#note-1">les plats de la Sogeres</a> (la joliment nommée société qui fournit les repas pour les établissements scolaires du XVIIIe arrondissement) le serait tout autant. Mais pour le reste, la technique «&nbsp;gros son&nbsp;» fait son effet. Assez curieusement, alors qu’il faut crier pour demander le sel à son voisin, l’ambiance sonore de la cantine d’Aimé-Césaire est nettement plus supportable que celle d’un réfectoire classique, puisqu’on n’y entend ni cris, ni bruits de vaisselle.</p>
+ 
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "La cuisine",
+caption: "Lors de sa construction, le collège Aimé-Césaire, ouvert il y a cinq ans, avait été conçu avec une vraie cuisine. Mais pour des raisons budgétaires, il a été décidé de passer par une cuisine centrale qui distribue des plats à réchauffer aux établissements de l’arrondissement. Des parents (plutôt parmi la frange bobo) se battent en vain pour que les cuisines du collège soient utilisées et que les élèves mangent autre chose que des plats réchauffés. Certains caressant même le doux rêve d’une cuisine bio. Impossible&nbsp;: cinq ans après sa conception, la cuisine est considérée comme hors norme. Elle ne sert donc à rien."
+})
+}}
+
+<aside>
+<p><span>Des cantinières</span> prises d’un déhanchement «&nbsp;beyoncesque&nbsp;»</p>
+</aside>
+
+ <p>La musique ne résout pas tout. Il y a toujours, régulièrement, des groupes de «&nbsp;grands&nbsp;» qui font le tour des tables pour piquer des desserts aux «&nbsp;petits&nbsp;». Et l’on se met toujours des <a href="#note-2">chiquettes</a> dans la cour. Mais, ainsi résumé par Thomas, <q>c’est quand même plus groovy</q>.</p>
+
+ <p>Dans la cour, il y a parfois des filles qui dansent en groupe et des garçons qui font les <a href="#note-3">BG</a> en marchant chaloupé. Au réfectoire, on aperçoit régulièrement, debout derrière le comptoir du self, des cantinières prises d’un soudain déhanchement <i>beyoncesque</i>, une cuillère dans une main, une assiette dans l’autre.</p>
+
+{{
+note({
+number: 2,
+title: "La chiquette",
+caption: "C’est ainsi, que chez le jeune, on désigne une beigne, une claque, une gifle, une mornifle, une nasarde, un soufflet, une taloche, une torgnole. Sa particularité est d’être distribuée par surprise."
+})
+}}
+
+{{
+note({
+number: 3,
+title: "Le BG",
+caption: "Le BG est un beau gosse, un gosse beau, bref, un mec qui se la raconte un peu."
+})
+}}
+
+<figure>
+<img src="img/le-refectoire-2.jpg" alt="" />
+<figcaption><span>Dans le réfectoire, le 8&nbsp;mars 2016 <span class="credits">Photo Simon Lambert pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Mais surtout, autour des longues tables encombrées de plateaux, entre deux bouchées, les élèves chantent. Incroyables scènes que les diffusions des morceaux de <a href="https://www.youtube.com/watch?v=zi1D0MKWHU0" data-mini="4">MHD</a>, la star du moment et pas du tout, accessoirement, du quartier (il vient du XIXe), invariablement inscrit dans la playlist. Des petites filles sages de sixième aux grands steaks de troisième, toutes les lèvres bougent d’un même mouvement, et à toute berzingue, récitant les paroles à la mitraillette de l’afro trap parisien de MHD. Régulièrement, les élèves agrémentent la psalmodie d’une esquisse de mouvement, car à chaque tube de MHD est associée une sorte de petite chorégraphie.</p>
+
+
+<aside id="mini-4" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="https://www.youtube.com/watch?v=zi1D0MKWHU0" />
+<span class="image"><img class="responsive" src="img/mhd.jpg" alt="" /></span>
+<p class="title">MHD</p>
+<p class="subtitle"><q>Kanye West, rentre chez toi, MHD est dans la place.</q> MHD, comme MoHameD, s’est fait connaître par des clips tournés au téléphone portable avec ses potes de quartier. L’afro trap, mélange de musique africaine et de rap, les élèves d’Aimé-Césaire en sont raides dingues. Et ils ne sont pas seuls. Après à peine plus d’un an à tourner sur internet avec ses clips, MHD vient de faire une première partie de Booba et Universal louche sur lui. À regarder sur YouTube.</p>
+</a>
+</aside>
+
+
+<p>Dans les haut-parleurs du collège, on entend du Beyoncé (dite <q>Bioncé</q> dans le cahier bleu), du Mr Gims, du Black M, du Justin Bieber et pas mal de musique africaine. Parfois, il y a aussi du Nina Simone (inscrite, elle, sous l’étrange pseudonyme d’<q>Eva Simone</q> dans le cahier bleu). Le contenu de la playlist est surveillé d’une oreille par Cécile Morot, la conseillère principale d’éducation. La semaine dernière, elle est descendue au réfectoire signifier que le très poétique <a href="#" data-mini="5"><i>Coller la petite</i></a> de Franko n’était pas peut-être pas indispensable à l’heure du repas pour des enfants.</p>
+
+
+<figure id="mini-5" class="mini md-w-2c lg-w-3c lg-ph-0">
+<div class="player">
+<div class="container">
+<audio aria-hidden="true">
+<source type="audio/webm" src="audio/franko.webm" />
+<source type="audio/mp4"  src="audio/franko.m4a" />
+</audio>
+<button class="btn-blank" type="button">
+<div class="container">
+<img class="responsive" src="img/franko.jpg" alt="" />
+</div>
+</button>
+</div>
+</div>
+<a class="link-unstyled" href="#">
+<p class="title">Extrait de «&nbsp;Coller la petite&nbsp;» de Franko</p>
+<p class="subtitle"></p>
+</a>
+<figcaption></figcaption>
+</figure>
+
+<aside>
+<p><span>Dans la salle des profs,</span> on mange en faisant des rébus</p>
+</aside> 
+
+<p>À la cantine, il y a finalement très peu d’adultes. En dehors du personnel de la cantine, des surveillants et de la CPE, on croise régulièrement le principal, mais c’est à peu près tout. Les adultes du collège ne mangent pas à la cantine. À peu près tous pour les mêmes raisons&nbsp;: c’est trop cher, pas pratique et surtout pas bon. Les profs mangent donc loin du bruit, en salle des profs ou dehors. Et ne descendent que rarement à l’étage du réfectoire et de la cour entre midi et deux.</p>
+
+<figure>
+<img src="img/le-refectoire-3.jpg" alt="" />
+<figcaption><span>Mariama déjeune avec une amie, le 8&nbsp;mars 2016 <span class="credits">Photo Simon Lambert pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+ 
+<p>Pour accéder au réfectoire, il faut faire la queue et montrer sa carte de cantine. Ceux qui ont une activité à l’association sportive sont prioritaires. Ensuite, il y a un ordre par niveau de classe qui change chaque jour (tel jour ce sont les sixièmes en premier, tel autre les cinquièmes, etc.). Et, à la fin du service, les «&nbsp;sans-carte&nbsp;», ceux qui l’ont oubliée. La gestion de ces passages nécessite au bas mot deux surveillants et un certain sang-froid. Il faut maîtriser les tentatives de resquilles en tout genre&nbsp;: «&nbsp;emprunt&nbsp;» de carte d’un camarade (<q>Depuis quand tu t’appelles Jean-Baptiste, toi&nbsp;?</q>), double passage (<q>T’as déjà mangé tout à l’heure</q>), méthode bélier (l’élève qui fonce dans la mêlée pour passer avant) et palabres sans fin sur la légitimité de l’ordre de passage et l’injustice de ce monde.</p>
+
+<p>Pendant ce temps, à l’étage au-dessus, dans la salle des profs où l’on entend à peine l’écho des basses qui tabassent en bas, on mange paisiblement en faisant… des rébus au tableau. Deux salles, deux ambiances.</p>
+ 
+
