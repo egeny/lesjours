@@ -22,6 +22,7 @@
 
 		"first": "episode:les-annees-college/retour-au-college",
 		"prev":  "episode:les-annees-college/le-stage-de-troisieme",
-		"last": "episode:les-annees-college/sursis-conseil-discipline"
+		"last": "episode:les-annees-college/refectoire-gros-son",
+		"next": "episode:les-annees-college/refectoire-gros-son"
 	}
 }

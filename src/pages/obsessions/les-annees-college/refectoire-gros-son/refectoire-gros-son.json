@@ -1,0 +1,27 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "refectoire-gros-son",
+
+	"number": 15,
+	"date": "2016-03-16T00:05+01:00",
+
+	"title": "Du gros son à la cantine",
+	"intro": "Chaque midi, au réfectoire, le collège Aimé-Césaire envoie de la musique dans ses haut-parleurs pour adoucir les mœurs.",
+	"subtitle": "Chaque midi, au réfectoire, le collège Aimé-Césaire envoie de la musique dans ses haut-parleurs pour adoucir les mœurs.",
+	"lead":  "Thomas, le surveillant, a une technique toute particulière pour apaiser élèves qui restent à la cantine à midi&nbsp;: <q>envoyer du gros son</q>. Chaque jour, vers 12h30, peu de temps après que la discrète sonnerie a retenti",
+
+	"tags": ["Education", "Collège", "Paris"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:alice-geraud"  },
+			{ "photo": "author:simon-lambert" }
+		],
+
+		"first": "episode:les-annees-college/retour-au-college",
+		"prev":  "episode:les-annees-college/sursis-conseil-discipline",
+		"last": "episode:les-annees-college/refectoire-gros-son"
+	}
+}
