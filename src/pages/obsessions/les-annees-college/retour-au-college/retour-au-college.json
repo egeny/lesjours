@@ -1,5 +1,6 @@
 {
 	"template": "episode",
+	"visibility": "protected",
 
 	"href": "retour-au-college",
 
@@ -8,7 +9,7 @@
 
 	"title": "Retour au collège",
 	"intro": "«&nbsp;Les Jours&nbsp;» retournent en classe durant un an. Mais quelle idée&nbsp;?",
-	"subtitle": "Découvrez gratuitement le premier épisode des «&nbsp;Années collège&nbsp;»&nbsp;: «&nbsp;Les Jours&nbsp;» retournent en classe. Mais quelle idée&nbsp;?",
+	"subtitle": "«&nbsp;Les Jours&nbsp;» retournent en classe durant un an. Mais quelle idée&nbsp;?",
 	"lead":  "À l'origine de cette obsession des <i>Jours</i>, il y avait ces questions entêtantes sur la séparation des corps sociaux. Quelles mécaniques sont en œuvre pour séparer avec un tel systématisme les riches des pauvres, les noirs des blancs&nbsp;? Quelles sont celles qui, au contraire, rassemblent et corrigent inégalités et différences ?",
 
 	"tags": ["Education", "Collège", "Paris", "Mixité"],

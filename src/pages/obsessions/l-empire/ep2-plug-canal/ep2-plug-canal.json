@@ -1,5 +1,6 @@
 {
 	"template": "episode",
+	"visibility": "protected",
 
 	"href": "ep2-plug-canal",
 
@@ -8,7 +9,7 @@
 
 	"title": "Bolloré, le plug Canal",
 	"intro": "<strong>Flashback.</strong> L'homme d'affaires a patienté avant de s'attaquer à sa première cible à Canal+&nbsp;: Rodolphe Belmer, le numéro&nbsp;2.",
-	"subtitle": "Dans le premier épisode (gratuit&nbsp;!) de «&nbsp;L'empire&nbsp;», Bolloré s'attaque à sa première cible, le numéro 2 de Canal+.",
+	"subtitle": "<strong>Flashback.</strong> L'homme d'affaires a patienté avant de s'attaquer à sa première cible à Canal+&nbsp;: Rodolphe Belmer, le numéro&nbsp;2.",
 	"lead":  "Il aura mis le temps. Il aura attendu son heure, tapi dans l’ombre, guettant sa proie, patiemment. Quand, en juillet 2015, Vincent Bolloré se met à dégommer une à une toutes les têtes de Canal+, ça fait un an déjà qu’il a été nommé.",
 
 	"tags": ["Vincent Bolloré", "Canal+", "Rodolphe Belmer", "Guignols"],

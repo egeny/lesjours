@@ -1,5 +1,6 @@
 {
 	"template":   "episode",
+	"visibility": "protected",
 
 	"href": "ep-2-turquie",
 
@@ -8,7 +9,7 @@
 
 	"title": "«&nbsp;Une véritable ingénierie conservatrice se met en place&nbsp;»",
 	"intro": "En Turquie, l’islam progresse dans l'espace public, instrumentalisé par Erdogan, et les mœurs sont sous surveillance.",
-	"subtitle": "Ce deuxième épisode (gratuit&nbsp;!) raconte comment l'islam, instrumentalisé par Erdogan, progresse dans l'espace public.",
+	"subtitle": "En Turquie, l’islam progresse dans l'espace public, instrumentalisé par Erdogan, et les mœurs sont sous surveillance.",
 	"lead": "En janvier, une anecdote circulait à Istanbul, déformée de récit en récit. Les Affaires religieuses (Diyanet), haute instance religieuse qui dépend de l'État, venaient de rendre, disait-on, un avis effarant",
 
 	"tags": ["Turquie", "Erdogan", "islam"],

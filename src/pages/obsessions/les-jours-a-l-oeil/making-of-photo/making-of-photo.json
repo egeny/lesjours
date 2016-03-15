@@ -1,5 +1,6 @@
 {
 	"template": "episode",
+	"visibility": "protected",
 
 	"href": "making-of-photo",
 
@@ -7,8 +8,8 @@
 	"date": "2016-02-02T13:50+01:00",
 
 	"title": "Garder les yeux ouverts",
-	"intro": "« Les Jours » aiment les photographies et les photographes. Précis de notre politique de l’image.",
-	"subtitle": "Dans le premier épisode (gratuit) des «&nbsp;Jours à l'œil&nbsp;», «&nbsp;Les Jours&nbsp;» expliquent leur politique de l'image.",
+	"intro": "«&nbsp;Les Jours&nbsp;» aiment les photographies et les photographes. Précis de notre politique de l’image.",
+	"subtitle": "«&nbsp;Les Jours&nbsp;» aiment les photographies et les photographes. Précis de notre politique de l’image.",
 	"lead":  "Pour raconter des histoires, des lieux, des personnages, il faut des images. Des images qui puissent retenir et éclairer ces sujets trop souvent emportés dans le flot de l'actualité.",
 
 	"tags": ["Photographie", "Photojournalisme", "Médias", "Journalisme"],
