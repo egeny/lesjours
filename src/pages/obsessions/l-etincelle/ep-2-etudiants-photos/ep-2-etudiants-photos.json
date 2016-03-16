@@ -1,0 +1,28 @@
+{
+	"template": "episode",
+	"visibility": "protected",
+
+	"href": "ep-2-etudiants-photos",
+
+	"number": 2,
+	"date": "2016-03-16T11:00+01:00",
+
+	"title": "«&nbsp;Les journalistes veulent savoir s’ils peuvent assister à l’AG&nbsp;»",
+	"intro": "Le mouvement étudiant contre la loi travail s’interroge sur son rapport aux médias. Et photographier une AG est souvent compliqué.",
+	"subtitle": "Le mouvement étudiant contre la loi travail s’interroge sur son rapport aux médias. Et photographier une AG est compliqué.",
+	"lead": "Deux journalistes sont dans un amphi. L’un est muni d’un stylo, l’autre d’un appareil photo. Lequel essuie le plus de regards courroucés, de mains devant le visage, d’esquisses de fuite&nbsp;? Le photographe, évidemment.",
+
+	"tags": ["manifestation", "loi travail", "étudiants", "photographie"],
+
+	"rel": {
+		"authors": [
+			{ "text":  ["author:camille-polloni", "author:yann-levy" ]},
+			{ "photo": "author:yann-levy" }
+		],
+
+		"first": "episode:l-etincelle/ep-1-recherche-colere",
+		"prev": "episode:l-etincelle/ep-1-recherche-colere",
+		"last":  "episode:l-etincelle/ep-2-etudiants-photos"
+
+			}
+}
