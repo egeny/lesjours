@@ -21,7 +21,9 @@
 
 		"first": "episode:la-charniere/marmite-turque",
 		"prev": "episode:la-charniere/ep-4-coupure-presse",
-		"last": "episode:la-charniere/ep-5-marche-femmes"
+		"last": "episode:la-charniere/ep-6-croissance", 
+		"next": "episode:la-charniere/ep-6-croissance"
+
 
 
 

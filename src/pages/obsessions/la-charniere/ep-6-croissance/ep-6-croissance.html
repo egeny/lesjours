@@ -1,0 +1,207 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[13] %}
+<p><span class="lettrine">L</span>e professeur <a href="#{{ person.href }}" data-mini="1">Asaf Savaş Akat</a> porte des rouflaquettes, des bretelles et des chaussettes de couleurs vives, aime s’habiller de façon excentrique, mais il ne faut pas s’y tromper. C’est, en Turquie, un économiste réputé. Dans son bureau désuet du campus moderne de Bilgi University à Santralistanbul, il recule son fauteuil pour jauger le visiteur.</p>
+
+{% set person = obsession.people[13] %}
+{{
+mini({
+number: 1,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Il ne porte pas la politique actuelle de {% set person = obsession.people[1] %}<a href="#{{ person.href }}" data-mini="2">Recep Tayyip Erdogan</a> dans son cœur mais s’agace des critiques caricaturales, de l’opposition turque qui refuse de reconnaître ce qui a changé dans le pays depuis l’arrivée de l’actuel Président. <i>«&nbsp;Si vous êtes incapable de faire un diagnostic correct, vous ne pourrez jamais soigner correctement votre malade</i>, dit-il. <i>C’est pareil avec un pays. Si vous dites que tout dysfonctionne, même ce qui fonctionne bien, comment voulez-vous apporter des remèdes crédibles&nbsp;? Demandez-vous pourquoi Erdogan est si bien réélu.&nbsp;»</i></p>
+
+{% set person = obsession.people[1] %}
+{{
+mini({
+number: 2,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<figure>
+<img src="img/turquie-croissance-1.jpg" alt="" />
+<figcaption><span>Le quartier d’affaires de Levent, dans la banlieue d’Istanbul, en 2005 <span class="credits">Photo Christophe Petit-Tesson.</span></span></figcaption>
+</figure>
+
+<p>Le Président, désormais, joue de la terreur et des sentiments nationalistes, contrôle quasiment toute la presse, fait interdire les derniers journaux libres (<a href="/obsessions/la-charniere/ep-4-coupure-presse">lire l’épisode 4</a>, «&nbsp;Coupure de presse&nbsp;»), ce qui aide à façonner l’opinion publique d’un pays. Mais son parti a aussi radicalement transformé économiquement la Turquie. Depuis l’arrivée de <a href="#note-1">l’AKP</a> au pouvoir, en 2002, les classes moyennes turques ont émergé, découvert la consommation, le crédit. Et se sont endettées au point d’être désormais obsédées par la stabilité économique et politique.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "L’AKP",
+caption: "Le Parti de la justice et du développement. Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays."
+})
+}}
+
+
+<blockquote>
+<p>Le pouvoir de l’époque a commis une erreur terrible sans laquelle l’AKP ne serait peut-être pas au pouvoir aujourd’hui.</p>
+<footer>Asaf Savas Akat, économiste</footer>
+</blockquote>
+
+{% set person = obsession.people[0] %}
+<p>Pour l’écrivain <a href="#{{ person.href }}" data-mini="3">Izzeddin Çalislar</a>, c’est l’une des clés pour comprendre la réélection de l’AKP l’année dernière, malgré la montée de la dictature. <i>«&nbsp;Il faut saisir ce que représente la stabilité pour un Turc</i>, prévient-il. <i>Il faut savoir d’où partait le pays. Nous avons connu des années où de très fortes inflations succédaient à de brutales déflations. Cela a profondément traumatisé la population. Si vous entrepreniez, vous pouviez tout perdre en quelques heures.&nbsp;»</i></p>
+
+{% set person = obsession.people[0] %}
+{{
+mini({
+number: 3,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>En 2001, juste avant l’arrivée de l’AKP au pouvoir, l’inflation a atteint 68&nbsp;%, la monnaie a été dévaluée, le chômage a grimpé. La Turquie sortait d’une <a href="#note-2">crise terrible</a>, se soignait avec les remèdes de cheval classiques du Fonds monétaire international. <i>«&nbsp;Et c’est là que le pouvoir de l’époque a commis une erreur terrible sans laquelle l’AKP ne serait peut-être pas au pouvoir aujourd’hui</i>, relève le professeur Savaş Akat. <i>Il a dissous le Parlement et convoqué de nouvelles élections générales, alors que le pays ne connaissait que les effets douloureux de l’austérité commandée par les instances internationales, sans en avoir encore obtenu les bénéfices. Il lui restait dix-huit mois de mandature, il aurait dû attendre.&nbsp;»</i> Au lieu de cela, les Turcs ont voté au pire moment économique, tous les partis en place étaient discrédités, et l’AKP, créé quinze mois plus tôt, a <a href="#note-3">gagné les législatives</a>. Quelques mois plus tard, le parti a pu commencer à récolter les premiers gains des mesures spartiates imposées.</p>
+
+
+{{
+note({
+number: 2,
+title: "Crise",
+caption: "Près de 140&nbsp;% d'inflation pour la seule année 1999."
+})
+}}
+
+{{
+note({
+number: 3,
+title: "Élections",
+caption: "L’AKP a réunit 34,28&nbsp;% des suffrages en 2002, puis 46,66&nbsp;% en 2007, 49,83&nbsp;% en 2011, 40,66&nbsp;% le 7 juin 2015 et 49,5&nbsp;% le 1er novembre 2015, après une dissolution."
+})
+}}
+
+<figure>
+<img src="img/turquie-croissance-2.jpg" alt="" />
+<figcaption><span>Publicité dans les rues d’Istanbul, en 2010 <span class="credits">Photo Christophe Petit-Tesson.</span></span></figcaption>
+</figure>
+
+<p><a href="#note-4">Erdogan</a> a alors lancé les chantiers économiques, imposé de nombreuses privatisations. Il a prouvé qu’un parti musulman n’était pas forcément tiers-mondiste et fâché avec la mondialisation. Le capitalisme et l’usure ne lui faisaient pas peur. Bien avant de muer, d’abandonner ses discours enflammés sur l’islam politique pour enfiler le ramage plus fréquentable du conservateur démocrate (<a href="/obsessions/la-charniere/ep-2-turquie">lire l’épisode 2</a>, «&nbsp;Une véritable ingénierie conservatrice se met en place&nbsp;»), il était ouvert à l’économie de marché.</p>
+
+<blockquote>
+<p>Nous sommes un peu devenus l’arrière-cour du capitalisme européen.</p>
+<footer>Sinan Logie, architecte</footer>
+</blockquote>
+
+<p>L’idole de la famille Erdogan est le Premier ministre Adnan Menderes, qui s’est éloigné des logiques étatistes pour favoriser la libre entreprise dans les années&nbsp;50. Avant d’être pendu en 1961 par les militaires pour avoir violé la Constitution, Menderes avait fait de la Turquie un allié inconditionnel de Washington, ce qui a permis de profiter grassement du plan Marshall et de connaître quelques années de développement économique intense, comme l’AKP quarante ans plus tard. Erdogan a été très marqué par <a href="#note-5">les pleurs</a> de son père à la pendaison de Menderes et très influencé par l’ancien dirigeant, auquel il se compare souvent.</p>
+
+
+{{
+note({
+number: 4,
+title: "Erdogan",
+caption: "L'actuel Président se trouvait en 2002 sous le coup d'une inéligibilité (que ses députés ont opportunément fait tomber pour qu'il devienne Premier ministre en 2003), mais il gérait, de fait, dès 2002."
+})
+}}
+
+{{
+note({
+number: 5,
+title: "Pleurs",
+caption: "Anecdote rappelée par Nicolas Cheviron et Jean-François Pérouse dans «&nbsp;Erdogan&nbsp;: nouveau père de la Turquie&nbsp;?&nbsp;», éditions François Bourin, mars 2016."
+})
+}}
+
+{% set person = obsession.people[8] %}
+<p>Incorrigibles, les États-Unis ont appuyé discrètement l’islam politique turc pour essayer, à l’époque, d’en faire une barrière verte aux ambitions soviétiques dans la région. Une fois le mur de Berlin tombé, ils ont considéré Erdogan comme un futur dirigeant potentiel, à partir de son élection, en 1994, à la mairie d’Istanbul. Il a été invité plusieurs fois aux États-Unis, a bien travaillé ses leçons de conservatisme libéral. Et une fois au pouvoir, a imposé rigueur budgétaire et privatisations, avant de lancer de grands travaux, comme il l’avait fait <a href="#note-6">à Istanbul</a> de 1994 à 1998. Le pays a attiré de plus en plus de capitaux étrangers à mesure que la crise touchait les pays occidentaux. <q>Nous sommes un peu devenus l’arrière-cour du capitalisme européen, le dernier pays où ces États peuvent vraiment venir développer les activités les plus polluantes</q>, grince l’architecte <a href="#{{ person.href }}" data-mini="4">Sinan Logie</a>. Les taux de cancer sont alarmants dans certaines régions, les accidents du travail battent des records, les coûts de main-d’œuvre sont bas. C’est à ce prix, aussi, que la Turquie a émergé économiquement.</p>
+
+{{
+note({
+number: 6,
+title: "Grands travaux",
+caption: "Erdogan cumule au passage les soupçons de corruption et de délits sur les marchés publics, comme ce sera le cas au niveau national vingt ans plus tard, mais la justice l'a blanchi de tout cela après qu'il est devenu Premier ministre."
+})
+}}
+
+{{
+mini({
+number: 4,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<aside>
+<p><span>Accès soudain au confort</span> et à la consommation</p>
+</aside>
+
+<p>Une fois la dette un peu allégée par les efforts budgétaires, l’argent a pu être dépensé au lieu d’éponger les déficits. <i>«&nbsp;Les discours des banques ont alors changé</i>, raconte Asaf Savaş Akat. <i>Jusque-là, elles disaient aux Turcs&nbsp;: “Venez déposer votre argent chez nous.” À partir du milieu des années&nbsp;2000, elles ont commencé à faire de la pub pour les crédits.&nbsp;»</i> Les Turcs ont découvert les joies de la surconsommation. <q>À la place de l’épargne populaire, il y a désormais 90&nbsp;millions de cartes bleues en circulation. Les gens font de la cavalerie, passent d’un compte à l’autre. Vous pouvez sans souci vous acheter un sac Vuitton à crédit dans une boutique avec votre CB</q>, remarque Sinan Logie.</p>
+
+
+
+<p>Si le premier centre commercial d’Istanbul n’a été construit qu’en 1988, il en existe aujourd’hui une centaine dans la métropole. <q>Il y a toute une partie de la population, notamment les classes populaires musulmanes, qui a soudain eu accès à ce que consommaient jusque-là les élites</q>, note Izzeddin Çalislar. Le Président Erdogan a toujours soigné cet électorat qu’il connaît bien –&nbsp;lui-même est issu d’un quartier très populaire d’Istanbul, même si son père y était un notable pour la diaspora immigrée de la Mer noire.</p>
+
+<p>Moins de tracasseries administratives, beaucoup d’<a href="#note-7">aides sociales</a>, et un accès soudain au confort, à la consommation. Depuis l’arrivée de l’AKP au pouvoir, de très nombreux Turcs ont découvert le chauffage au gaz ou ont acheté pour la première fois une voiture. Beaucoup attribuent ce progrès au Président Erdogan.</p>
+
+{{
+note({
+number: 7,
+title: "Aides sociales",
+caption: "Des aides pas très coûteuses pour Erdogan et très rentables politiquement, puisque les entreprises qui décrochent des marchés à Istanbul ou avec l'État financent des fondations qui fournissent des aides directes à la population… et sont contrôlées par l'AKP."
+})
+}}
+
+<aside>
+<p><span>La continuité politique</span> est devenue la priorité</p>
+</aside>
+
+{% set person = obsession.people[2] %}
+<p>Revers de cette surconsommation, les Turcs se sont assez massivement endettés. À Istanbul, acheter des biens immobiliers pour les louer ou les revendre est devenu un sport populaire dans les classes moyennes aisées. <q>Le crédit immobilier explosant, il s’est acheté près de 400&nbsp;000 biens cette année</q>, précise Savaş Akat. Selon le Trésor turc, le taux d’endettement des particuliers est passé de 6&nbsp;% en 2006 à 23&nbsp;% en 2015. Des taux qui restent très largement inférieurs aux taux européens (68&nbsp;% d’endettement par ménage). La continuité politique, censée garantir la stabilité économique, est alors devenue la priorité de nombreux ménages. La sociologue <a href="#{{ person.href }}" data-mini="5">Buket Türkmen</a> raconte qu’un de ses cousins a voté pour la première fois AKP l’an passé, aux deux élections législatives. Parce qu’il avait fait des travaux importants, s’était endetté, et ne voulait pas prendre le risque d’une alternance qui aurait bousculé la Turquie, au risque de revenir aux années d’<a href="#note-8">inflation</a>.</p>
+
+{{
+mini({
+number: 5,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{{
+note({
+number: 8,
+title: "Inflation",
+caption: "Les prix ont cependant augmenté de près de 10&nbsp;% en Turquie en janvier 2016, par rapport à janvier 2015."
+})
+}}
+
+<p>Depuis quelques années, la crise s’invite aussi en Turquie, même si elle est moins vive qu’en Europe et surtout que chez les voisins grecs. Le chômage progresse, les salariés redécouvrent l’extrême précarité de leurs statuts. De nombreuses entreprises lancent des plans sociaux. La bulle immobilière reste fragile à Istanbul et beaucoup d’entreprises impliquées dans les grands travaux du pays ont contracté des dettes en monnaies étrangères alors qu’elles se font payer en livres turques, ce qui les rend très vulnérables aux variations du dollar et de l’euro.</p>
+
+<figure>
+<img src="img/turquie-croissance-3.jpg" alt="" />
+<figcaption><span>Le quartier d’affaires de Levent, dans la banlieue d’Istanbul, en 2005 <span class="credits">Photo Christophe Petit-Tesson.</span></span></figcaption>
+</figure>
+
+
+<p>Tout cela pourrait fragiliser le gouvernement. Rendre plus insupportable encore la montée de la dictature. Mais l’opposition, du moins les autres partis de gouvernement, sont largement dans le déni. Plutôt que d’expliquer par exemple que l’AKP a bénéficié des mesures imposées à ses prédécesseurs, que n’importe qui aurait transformé le pays, le <a href="#note-9">CHP</a> répète à l’envie que rien n’a bougé, que l’AKP n’a rien changé dans le pays. Les Turcs voient dans leur vie de tous les jours que ce n’est pas vrai, et l’opposition se discrédite.</p>
+
+<p>Erdogan n’a donc pas beaucoup de souci à se faire, pour l’instant, du côté des urnes. Il se contente de surveiller l’opinion et la rue. Cette dernière est d’ordinaire docile dans un pays très vertical, où les révoltes viennent plus souvent des coups d’État que de la colère populaire. Sauf en 2013, avec les évènements de Gezi, qui restent un vrai traumatisme pour l’indéboulonnable Président.</p>	
+
+{{
+note({
+number: 9,
+title: "Le CHP",
+caption: "Le Parti républicain du peuple est un parti laïc créé par Mustafa Kemal, dit Atatürk, fondateur de la République de Turquie. Parti unique de 1923 à 1946, puis accédant au pouvoir par alternance, le CHP est aujourd’hui la principale force d’opposition."
+})
+}}
+

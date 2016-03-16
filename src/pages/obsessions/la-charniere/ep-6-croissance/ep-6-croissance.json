@@ -1,0 +1,29 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep-6-croissance",
+
+	"number": 6,
+	"date": "2016-03-17T00:05+01:00",
+
+	"title": "Le prix de l’essor",
+	"intro": "En convertissant la Turquie au capitalisme, Erdogan s’est assuré le soutien d’une classe moyenne désormais muselée par l'endettement.",
+	"subtitle": "En convertissant la Turquie au capitalisme, Erdogan s’est assuré le soutien d’une classe moyenne muselée par l'endettement.",
+	"lead": "Le professeur Asaf Savaş Akat porte des rouflaquettes, des bretelles et des chaussettes de couleurs vives, aime s’habiller de façon excentrique, mais il ne faut pas s’y tromper. C’est, en Turquie, un économiste réputé.",
+	"tags": ["Turquie", "Erdogan", "économie", "endettement", "croissance"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:olivier-bertrand" },
+			{ "photo": "author:christophe-petit-tesson" }
+		],
+
+		"first": "episode:la-charniere/marmite-turque",
+		"prev": "episode:la-charniere/ep-5-marche-femmes",
+		"last": "episode:la-charniere/ep-6-croissance"
+
+
+
+			}
+}

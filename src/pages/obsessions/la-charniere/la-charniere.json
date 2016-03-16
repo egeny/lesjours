@@ -14,7 +14,8 @@
 		"episode:la-charniere/ep-2-turquie",
 		"episode:la-charniere/ep-3-turquie",
 		"episode:la-charniere/ep-4-coupure-presse",
-		"episode:la-charniere/ep-5-marche-femmes"
+		"episode:la-charniere/ep-5-marche-femmes",
+		"episode:la-charniere/ep-6-croissance"
 
 	],
 
@@ -134,6 +135,15 @@
 			"title":    "Fethullah Gülen",
 			"subtitle": "Prédicateur musulman",
 			"desc":     "Fethullah Gülen (74 ans) est un prédicateur musulman, inspirateur de la communauté Gülen, et proche de la confrérie turque très ancienne des Iskenderpaşa. Son mouvement contrôlait de nombreuses entreprises qui ont été nationalisées par le pouvoir. Il dirige toujours des écoles, des universités, en Turquie mais aussi en Afrique, en Asie, etc. Gülem est un mouvement conservateur, mais qui défend un islam éclairé, cherchant à instruire les croyants, à former des élites, au lieu de surfer sur l'inculture pour imposer des dogmes archaïques. Fethullah Gülen vit depuis 1999 en Pennsylvanie (États-Unis). Ses fidèles restent très nombreux en Turquie, l'appellent généralement Fethullah, et font l'objet de chasses aux sorcières dans l'administration, l'armée et les médias.",
+			"minor": true
+		},
+		{
+			"href":     "asaf-savas-akat",
+			"img":      "img/asaf-savas-akat.jpg",
+			"alt":      "",
+			"title":    "Asaf Savas Akat",
+			"subtitle": "Économiste",
+			"desc":     "Asaf Savas Akat, ancien recteur, est professeur d'économie à l'université Bilgi Santral à Istanbul. Originaire de la ville, il a fait ses études en Turquie puis en Grande-Bretagne et aux États-Unis, et donne souvent ses cours en anglais. Il a aussi tâté de la politique dans les années&nbsp;90, du côté de la social-démocratie turque. Aujourd'hui, il n'hésite pas à défendre le bilan économique de l'AKP, parti avec lequel il garde pourtant ses distances, comptant les reculs démocratiques autant que les progrès budgétaires. Il résume&nbsp;: <q>En Turquie, l'islam doit faire la preuve qu'il est compatible avec la démocratie. Ce serait une première, jusqu'à présent, l'Histoire ne nous a pas franchement appris cela.</q>",
 			"minor": true
 		}
 	
