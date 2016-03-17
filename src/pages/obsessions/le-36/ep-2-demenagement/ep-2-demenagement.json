@@ -21,6 +21,7 @@
 		],
 
 		"first": "episode:le-36/ep-1-marlet",
+		"prev": "episode:le-36/ep-1-marlet",
 		"last":  "episode:le-36/ep-2-demenagement"
 
 			}
