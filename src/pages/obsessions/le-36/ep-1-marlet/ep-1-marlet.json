@@ -1,15 +1,14 @@
 {
 	"template":   "episode",
-	"visibility": "protected",
 
 	"href": "ep-1-marlet",
 
 	"number": 1,
 	"date": "2016-03-18T00:05+01:00",
 
-	"title": "Le commissaire Marlet s'en va",
-	"intro": "Cette figure du 36 quai des Orfèvres part à la retraite alors que la PJ s'apprête à quitter son mythique siège parisien.",
-	"subtitle": "Cette figure du 36 quai des Orfèvres part à la retraite alors que la PJ s'apprête à quitter son mythique siège parisien.",
+	"title": "Le commissaire Marlet s’en va",
+	"intro": "Pot de départ du 36 pour cette figure de la PJ qui a fait basculer la police de Maigret dans le siècle des «&nbsp;Experts&nbsp;».",
+	"subtitle": "Pot de départ du 36 pour cette figure de la PJ qui a fait basculer la police de Maigret dans le siècle des «&nbsp;Experts&nbsp;».",
 	"lead": "Vendredi 11 mars à l’heure du déjeuner. Des costumes bleu ou noir, des imper mastic et des manteaux de tweed s’engouffrent sous le porche du 36 quai des Orfèvres. Des commissaires. D’autres dévalent les marches de l’escalier A",
 
 	"tags": ["36", "Police"],
@@ -21,7 +20,8 @@
 		],
 
 		"first": "episode:le-36/ep-1-marlet",
-		"last":  "episode:le-36/ep-1-marlet"
+		"next": "episode:le-36/ep-2-demenagement",
+		"last":  "episode:le-36/ep-2-demenagement"
 
 			}
 }

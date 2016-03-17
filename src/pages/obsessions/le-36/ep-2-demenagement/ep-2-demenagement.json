@@ -1,0 +1,28 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep-2-demenagement",
+
+	"number": 2,
+	"date": "2016-03-18T00:05+01:00",
+
+	"title": "L’adieu à la Seine",
+	"intro": "La police judiciaire de Paris va quitter le 36&nbsp;quai des Orfèvres. Un bâtiment historique où repose la mémoire du crime.",
+	"subtitle": "La police judiciaire de Paris va quitter le 36&nbsp;quai des Orfèvres. Un bâtiment historique où repose la mémoire du crime.",
+	"lead": "<i>«&nbsp;Il s’engagea sous la voûte de la PJ où régnait un courant d’air, fonça vers l’escalier et alors, tout de suite, en retrouvant l’odeur comme “sui generis” de la maison, la lumière glauque des lampes encore allumées</i>",
+
+	"tags": ["36", "Police"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:patricia-tourancheau" },
+			{ "Illustrations": ["author:sebastien-calvet", "author:patricia-tourancheau"] }
+		],
+
+		"first": "episode:le-36/ep-1-marlet",
+		"prev": "episode:le-36/ep-1-marlet",
+		"last":  "episode:le-36/ep-2-demenagement"
+
+			}
+}

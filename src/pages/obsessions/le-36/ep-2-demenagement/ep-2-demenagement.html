@@ -1,0 +1,168 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[2] %}
+<p><span class="lettrine">«I</span><i>l s’engagea sous la voûte de la PJ où régnait un courant d’air, fonça vers l’escalier et alors, tout de suite, en retrouvant l’odeur comme “sui generis” de la maison, la lumière glauque des lampes encore allumées, il fut triste à l’idée que, dans si peu de temps, il ne viendrait plus ici chaque matin.&nbsp;»</i> <a href="#note-1">À l’instar</a> du commissaire <a href="#{{ person.href }}" data-mini="1">Jules Maigret</a>, les enquêteurs attachés au 36&nbsp;quai des Orfèvres, à ses 148&nbsp;marches de lino sans âge, son éclairage au néon blafard, ses murs jaunis à la peinture écaillée, ses plafonds sillonnés de câbles électriques, ses bureaux mansardés minuscules, le quitteront la mort dans l’âme à l’automne 2017.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Extrait",
+caption: "«&nbsp;L’Amie de madame Maigret&nbsp;», 1950, Georges Simenon."
+})
+}}
+
+
+{{
+mini({
+number: 1,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+
+<p>Haut lieu du crime depuis le XVIIe&nbsp;siècle, ce bâtiment à la tour pointue qui s’étire le long de la Seine était prédestiné à accueillir les chasseurs de meurtriers et de bandits. Ne fut-il pas le théâtre du double assassinat des <a href="#note-2">époux Tardieu</a> en 1665&nbsp;? </p>
+
+{{
+note({
+number: 2,
+title: "Les époux Tardieu",
+caption: "C’est au cœur du Quai des Orfèvres, dans son logement de fonction, que l’un des plus haut magistrats de France, le lieutenant criminel de Paris, Jacques Tardieu, vicieux et radin au point d’inspirer <i>L’Avare</i> de Molière, fut trucidé avec sa femme par deux petits malfrats. Cette affaire a suscité une telle émotion que Louis&nbsp;XIV chargea Colbert de remettre de l’ordre dans la police parisienne. Deux siècles plus tard, la sûreté, l’ancêtre de la PJ, se réfugiera dans ces murs après l’incendie en 1871 par la Commune de Paris de ses locaux rue de Jérusalem et la destruction de ses archives."
+})
+}}
+
+<figure>
+<img src="img/du-quai-1.jpg" alt="" />
+<figcaption><span>Le porche d’entrée du 36 <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>À l’origine, un marché aux volailles occupait cet endroit au cœur de l’île de la Cité, d’où les sobriquets de «&nbsp;poulets&nbsp;», «&nbsp;poulards&nbsp;», «&nbsp;perdreaux&nbsp;» ou «&nbsp;maison poulaga&nbsp;» attribués à ses locataires. Mais l’antre de la PJ de Paris <a href="#note-3">depuis sa naissance</a> en 1913, à l’époque de la «&nbsp;brigade spéciale&nbsp;», de «&nbsp;la volante&nbsp;» ou du «&nbsp;service des garnis&nbsp;», sise 36&nbsp;quai des Orfèvres, a été décrété voilà quelques années chef-d’œuvre en péril, trop vétuste et insalubre, étouffant l’été, glacial l’hiver, sans ascenseur ni issue de secours, inadapté aux normes de sécurité incendie, inaccessible aux handicapés, impossible à rénover, bref, indigne d’une police du XXIe&nbsp;siècle.</p>
+
+{{
+note({
+number: 3,
+title: "La police judiciaire de Paris en 1916",
+caption: "La brigade spéciale, ancêtre de la crim’, s’occupe des assassinats, de la fausse monnaie, escroqueries d’importance et vols qualifiés, surveillance des maisons closes, trafic de stupéfiants. La brigade de voie publique, dite «&nbsp;la volante&nbsp;», se charge des flagrants délits mais aussi de la police des mœurs&nbsp;: souteneurs, racolage, prostituées, traite des blanches, commerce de photographies obscènes, etc. Le service des garnis contrôle la population «&nbsp;flottante&nbsp;» des 26&nbsp;000 meublés et garnis du département de la Seine. La brigade du centre exécute les pièces de justice&nbsp;: mandats, jugements par défaut, déserteurs insoumis, expulsés, interdits de séjour. La brigade des notes, sorte d’état major, traite les informations."
+})
+}}
+
+<blockquote>
+<p>36&nbsp;rue du Bastion, ça sonnait bien, ça aurait eu de la gueule.</p>
+<footer>Richard Marlet, commissaire</footer>
+</blockquote>
+
+
+
+{% set person = obsession.people[0] %}
+<p>C’est donc dans une construction ultra-moderne et bunkerisée de huit étages sur la <a href="#" data-mini="2">ZAC des Batignolles</a>, à une demi-heure –&nbsp;sans gyrophare&nbsp;– du quai que 1&nbsp;500 limiers de la PJ, aujourd’hui éparpillés sur <a href="#note-4">plusieurs sites</a>, emménageront à côté de la nouvelle cité judiciaire.</p>
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.clichy-batignolles.fr/" />
+<span class="image"><img class="responsive" src="img/batignolles.jpg" alt="" /></span>
+<p class="title">Le chantier</p>
+<p class="subtitle">À consulter sur le site du projet Clichy-Batignolles</p>
+</a>
+</aside>
+
+{{
+note({
+number: 4,
+title: "La PJ de Paris en 2016",
+caption: "Au 36&nbsp;quai des Orfèvres se trouvent la direction de la police judiciaire de Paris, la brigade criminelle, la brigade des stups et la brigade de recherches et d’intervention (BRI). Le 3&nbsp;rue de Lutèce, collé à la préfecture, abrite les deux brigades de répression du banditisme (BRB) et du proxénétisme (BRP). Au 7&nbsp;quai de l’Horloge officient les experts du service de l’identité judiciaire (IJ). Au 12&nbsp;quai de Gesvres travaille la brigade de protection des mineurs. Au 122-126&nbsp;rue du Château des Rentiers, un immeuble entier est occupé par les dix brigades dévolues aux affaires économiques et financières."
+})
+}}
+
+{% set person = obsession.people[0] %}
+<p>Derrière des façades lisses en verre sablé dont la couleur change au gré des saisons et de la luminosité, que l’on ne peut ni escalader ni briser, les policiers partageront un pôle de garde à vue pour soixante procédures simultanées, des salles de visio-conférences, quatre sous-sols de parking, stands de tir et équipements sportifs. Il s’agit d’un nouveau «&nbsp;36&nbsp;». Car les poulets ont réussi à sauver leur numéro mythique. Par contre, la «&nbsp;voie du bastion&nbsp;», comme s’appelait cette friche de la SNCF, a été débaptisée par la mairie de Paris pour lui donner l’identité du violoncelliste russe Mstislav Rostropovitch. Même le commissaire <a href="#{{ person.href }}" data-mini="3">Richard Marlet</a>, cultivé et mélomane, l’un des artisans du déménagement, trouve que <q>36&nbsp;rue du Bastion, ça sonnait bien, ça aurait eu de la gueule</q>.</p>
+
+
+{{
+mini({
+number: 3,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+
+
+<p>À l’entrée du vieux 36 désormais gardé, le vent qui s’engouffre sous le porche est toujours aussi glacial, les pavés de la cour un peu plus patinés, la porte à gauche surmontée de la même pancarte «&nbsp;Direction de la police judiciaire, escalier A&nbsp;» et, au bout d’une volée de marches, le placard où <a href="#note-5">Cécile est morte</a> se niche encore sous l’escalier du palier. Au milieu des seaux et des balais, le commissaire découvrit un jour, estomaqué, le cadavre de la bonniche&nbsp;: <q>Maigret qui avait chaud, soudain, passa son mouchoir sur son visage et enfouit sa pipe toute allumée dans sa poche.</q> Comment <q>avouer au public qu’un crime avait été commis dans les locaux de la police judiciaire, plus exactement dans cette sorte de boyau qui le reliait au palais de justice&nbsp;?</q>. Cette porte aux vitres dépolies communique toujours avec les couloirs du tribunal.</p>
+
+{{
+note({
+number: 5,
+title: "«&nbsp;Cécile est morte&nbsp;»",
+caption: "Roman de Georges Simenon, paru chez Gallimard en Gallimard en 1942, réédité chez Omnibus en 2003."
+})
+}}
+
+<figure>
+<img src="img/du-quai-2.jpg" alt="" />
+<figcaption><span>Le placard où Cécile est morte dans une aventure du commissaire Maigret. Celui-ci se trouve à la jonction entre le palais de justice et les locaux de la PJ <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+{% set person = obsession.people[1] %}
+<p>Un étage et demi plus haut, un sas de sécurité bloque l’accès aux visiteurs non accrédités ou non badgés. Une fois franchi ce point de contrôle, l’antichambre de la direction s’étale sur l’aile droite avec, tout au fond, le bureau d’angle du patron <a href="#{{ person.href }}" data-mini="4">Christian Sainte</a> qui donne sur le pont Neuf et la place Dauphine.</p>
+
+{{
+mini({
+number: 4,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+
+
+
+<p>Au troisième, au bout de 105 marches de cet escalier <q>raide comme la justice</q>, selon les mots de Maigret, un panneau lumineux et une médaille en bronze annoncent «&nbsp;Brigade criminelle&nbsp;» dont les membres s’entassent dans des bureaux riquiqui jusqu’au cinquième étage. Seuls les six policiers du groupe&nbsp;B ont la chance de loger dans l’ancien appartement des concierges du palais, avec cuisine et comptoir, parquet élimé et cheminées fêlées.</p>
+
+<p>Lorsqu’il était <a href="#note-6">procédurier</a> à la crim’, Pitt, aussi tenace qu’un pitbull, «&nbsp;habitait&nbsp;» dans un réduit sous les toits et servait à ses <q>clients</q> un <q>verre d’eau de source</q> tirée d’un robinet caché dans un placard, l’une <q>des trois fontaines de la crim’</q>. Selon la légende du service, cette eau intarissable et miraculeuse provient de la Bièvre. Or, cet affluent de la Seine, pollué par les tanneries, a été transformé en égout à Paris puis obstrué en 1912. Sosie du commissaire de légende avec son imper mastic, sa bouffarde culottée, ses affiches de Tardi et de <i>Maigret&nbsp;: traversées de Paris</i>, le commandant Pitt est descendu d’un étage lorsqu’il est monté en grade en 2011, devenu chef d’un groupe de droit commun.</p>
+
+
+{{
+note({
+number: 6,
+title: "Le procédurier",
+caption: "Il effectue les constatations sur les scènes de crime et met en forme les procès-verbaux du dossier pour les magistrats."
+})
+}}
+
+<figure>
+<img src="img/du-quai-3.jpg" alt="" />
+<figcaption><span>Un procédurier de la crim’ dans le «&nbsp;local de séchage&nbsp;» <span class="credits">Photo Patricia Tourancheau.</span></span></figcaption>
+</figure>
+
+
+<p>Au quatrième, un filet anti-suicide a été tendu au-dessus d’une mezzanine depuis que l’égérie d’Action Directe Nathalie Ménigon a essayé, en 1984, d’enjamber la rambarde pour se jeter dans le vide. Il fut un temps où, les soirs de pots, ce filet servait de trampoline. Autour, des collections de képis, casquettes, insignes et médailles sont exposées dans des vitrines. Au bout, un escalier dérobé et abrupt mène au «&nbsp;local de séchage&nbsp;» qui pue la mort. Au milieu de kits de prélèvements et gants de latex, des vêtements ensanglantés pendent à des patères, des bustes attendent de les enfiler pour vérifier les traces de perforation et des mannequins en bakélite gisent dans un recoin, entre deux reconstitutions de crime. Un petit escabeau permet de déboucher sur les toits pentus et vert de gris du 36 qui surplombent l’île de la Cité. C’est là que les poulets viennent s’en mettre plein la vue, les soirs de déprime, griller une cigarette ou boire un verre.</p>
+
+
+<p>Les armoires métalliques qui jalonnent les couloirs et bureaux de la brigade criminelle renferment des mètres cubes de dossiers. Ici, on trouve des cadavres plein les placards. Mais jamais on n’avait connu autant de victimes que lors des attentats jihadistes de l’année&nbsp;2015, de Charlie Hebdo au Bataclan, à la crim’ qui enquête <q>sans désemparer</q>.</p>
+
+<aside>
+<p><span>Dans les entrailles du 36</span> repose la mémoire du crime</p>
+</aside>
+
+
+<p>Les dossiers les plus froids sont partis aux archives officielles de la préfecture de police, comme Violette Nozière, la parricide empoisonneuse, ou le docteur Petiot qui a brûlé des dizaines de juifs dans son four pendant la guerre. Les anciens qui remontent aux années&nbsp;60 sont descendus à la cave du 36. Dans les souterrains ayant échappé aux crues de la Seine depuis 1910, les boîtes archives aux noms évocateurs de victimes ou d’auteurs écrits en majuscules sont alignés en rangs serrés sur les rayonnages métalliques&nbsp;: «&nbsp;EMPAIN&nbsp;», le baron kidnappé en 1979&nbsp;; «&nbsp;MESRINE&nbsp;», le bandit des années&nbsp;70&nbsp;; «&nbsp;PAULIN&nbsp;», meurtrier de vieilles dames&nbsp;; «&nbsp;CARLOS&nbsp;» et «&nbsp;ACTION DIRECTE&nbsp;», terroristes des années&nbsp;80&nbsp;; «&nbsp;GUY GEORGES&nbsp;», tueur en série des années&nbsp;90&nbsp;; «&nbsp;LADY DIANA&nbsp;», princesse morte en 1997 dans un accident sous le pont de l’Alma&nbsp;; «&nbsp;RICHARD DURN&nbsp;», le tueur du conseil municipal de Nanterre en 2002, ou encore «&nbsp;ILAN HALIMI&nbsp;», enlevé et torturé à mort par le «&nbsp;gang des barbares&nbsp;» en 2006. Dans les entrailles du 36 repose la mémoire du crime. Amenée à déménager elle aussi.</p>
+
+<figure>
+<img src="img/du-quai-4.jpg" alt="" />
+<figcaption><span>Les boîtes d’archives du dossier de l’attentat du RER Saint-Michel dans la cave du 36 <span class="credits">Photo Patricia Tourancheau.</span></span></figcaption>
+</figure>
+
+
+<p>Dans une aile du bâtiment qui donne sur la cour du dépôt où les gardés à vue attendent leur présentation à la justice, les policiers de l’antigang se tassent dans des bureaux biscornus entre le troisième et le quatrième étage. En cas d’alerte, ces flics dévolus aux interventions risquées dégringolent les marches d’un vieil escalier en colimaçon et descendent encore les armes, explosifs, munitions dans un «&nbsp;palan&nbsp;». Une curiosité du 36. C’est une vulgaire caisse en bois capable de supporter 250&nbsp;kilos, actionnée par une poulie électrique qui descend le matériel dans la cour du dépôt où stationne le camion d’assaut noir de la BRI, côté quai de l’Horloge.</p>
+
+<p>Maintenant que ces troupes d’intervention vont passer de 70 à 120 bonhommes, <q>là-bas</q> –&nbsp;entendez aux Batignolles&nbsp;–, <q>il n’y a pas assez de places prévues pour nous</q>. Et <q>puis ici, avec l’aide de la brigade fluviale, en cinq minutes, on est à la tour Eiffel</q>. Malgré le palan d’un autre temps, les hommes de la BRI font de la résistance et rêvent de <q>rester au 36</q>, mais en bas, dans la cour pavée.</p>

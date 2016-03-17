@@ -372,3 +372,25 @@ L’indépendance est une valeur forte à mes yeux et reste synonyme de diversit
 		subtitle: person.subtitle
 	})
 }}
+
+<hr>
+
+<h3>Patricia Tourancheau</h3>
+{% set person = obsession.people[15] %}
+
+<p><a href="#{{ person.href }}" data-mini="18">Journaliste indépendante</a><p>
+<p>Fait-diversière et rubricarde police à <i>Libération</i> pendant 29 ans, c’est tout naturellement que j’ai proposé à mes amis des <i>Jours</i> d’écrire une série sur le quai des Orfèvres avant son déménagement&nbsp;: c'est <a href="/obsessions/le-36"><i>Chroniques du 36</i></a>.</p>
+<p>Depuis 1990, j’arpente ce haut lieu de la PJ parisienne de la cave jusqu’aux combles, de l’escalier monumental aux recoins les plus sombres, des minuscules pièces d’officiers aux vastes bureaux des commissaires. Je fréquente des poulets de toutes les brigades, de la direction et des petits services. Je traite des enquêtes du 36 sur des faits divers ou de grandes affaires criminelles, de banditisme ou de terrorisme. En 1999, je fus la première journaliste autorisée à passer douze jours en immersion à la crim’. Pour les 100 ans de cette maison, j’ai co-signé un film avec Jean-Pierre Bozon pour France 3&nbsp;: <i>36, Quai du crime.</i> J’ai travaillé sur une série de documentaires produits par l’INA et réalisés par Jean-Pierre Vedel, <i>Les cinq sens de la police judiciaire</i> (2009), sur la police technique et scientifique (PTS). J’ai également écrit <i>Les Postiches, un gang des années 80</i> (Fayard, 2004). J’ai consacré un autre livre à La traque de Guy Georges (Fayard, 2010), adapté au cinéma par Frédéric Tellier (<i>L’Affaire SK1,</i> 2015). De temps en temps, je témoigne sur des faits divers que j’ai suivis dans des émissions télévisées comme <i>Faites entrer l’accusé</i> sur France 2. J’enseigne la police-justice et les faits divers dans deux écoles de journalisme, l’IPJ et le CFPJ. Je travaille aussi à l’écriture d’un scénario pour un film de cinéma et d’un livre sur mes habituelles histoires de braqueurs, de policiers et de criminels. Désormais freelance, je collabore à <i>l’Obs,</i> au mensuel <i>GQ</i> et surtout aux <i>Jours</i>, toujours sur mes obsessions.</p>
+
+<p>Retrouvez-moi sur <a href="https://twitter.com/Patourancheau">Twitter.</a></p>
+
+{{
+	mini({
+		number: 18,
+		img: "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
