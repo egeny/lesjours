@@ -1,0 +1,28 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep-8-contrats-artistes-suite",
+
+	"number": 8,
+	"date": "2016-03-15T00:05+01:00",
+
+	"title": "Concerts&nbsp;: les maisons de disques vampirisent les artistes",
+	"intro": "<strong>Sous contrat (2/3).</strong> Les labels vont jusqu’à taxer les tournées. Exemple avec le contrat d’un candidat de «&nbsp;The Voice&nbsp;».",
+	"subtitle": "<strong>Sous contrat (2/3).</strong> Les labels vont jusqu’à taxer les tournées. Exemple avec le contrat d’un candidat de «&nbsp;The Voice&nbsp;».",
+	"lead": "Dans l’épisode précédent, j’ai raconté que dans la foulée du protocole Schwartz sur la musique en ligne, une étude doit être menée par un cabinet indépendant pour analyser une soixantaine de contrats venus de grands et petits labels",
+
+	"tags": ["Musique", "Streaming", "artistes", "contrats", "maisons de disques"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sophian-fanen" },
+			{ "Illustrations": ["author:sebastien-calvet"] }
+		],
+
+		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"prev":  "episode:la-fete-du-stream/ep-7-contrats-artistes",
+		"last":  "episode:la-fete-du-stream/ep-8-contrats-artistes-suite"
+
+			}
+}
