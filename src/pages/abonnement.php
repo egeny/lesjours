@@ -252,13 +252,6 @@
 							)
 						),
 						array(
-							'type' => 'directDebit',
-							'directDebit' => array(
-								'paymentReference' => date('Y-m-d').'-'.$user_id,
-								'amount' => $PLANS[$meta['plan']]['price']
-							)
-						),
-						array(
 							'type' => 'recurrentDirectDebit',
 							'recurrentDirectDebit' => array(
 								'amount'    => $PLANS[$meta['plan']]['price'],
