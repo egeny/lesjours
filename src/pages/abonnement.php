@@ -468,13 +468,13 @@
 					<?php endif ?>
 					<fieldset id="mode-de-paiement">
 						<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
-						<div class="gift style-meta lh-inherit color-dark">
+						<div class="gift style-meta lh-inherit">
 							<i class="pull-left">{{ icon("bag") }}</i>
 							<p><strong class="block text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
 						</div>
 						<div class="field row mb-1g">
-							<label class="col md-w-auto pr-2g pl-0 color-dark">
-								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required disabled/>
+							<label class="col md-w-auto pr-2g pl-0">
+								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required/>
 								<span class="radio"></span>
 								Prélèvement
 							</label>

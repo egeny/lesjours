@@ -1,0 +1,47 @@
+{
+	"template": "obsession",
+
+	"href": "le-36",
+
+	"color": 13,
+	"name":  "Chroniques du 36",
+	"title": "Chroniques du 36",
+	"subtitle": "Feuilleton policier, enquêtes & filatures.",
+	"desc": "«&nbsp;Les Jours&nbsp;» suivent les dernières aventures du sanctuaire de la police judiciaire de Paris jusqu’à son déménagement du quai des Orfèvres. Histoires d'une vieille maison, de poulets et de faits divers.",
+
+	"episodes": [
+		"episode:la-fete-du-stream/ep-1-du-cd-au-streaming"
+
+	],
+
+	"people": [
+		{
+			"href":     "richard-marlet",
+			"img":      "img/richard-marlet.jpg",
+			"alt":      "",
+			"title":    "Richard Marlet",
+			"subtitle": "Commissaire, rénovateur de la police technique",
+			"desc": "Diplômé d’une licence de lettres classiques et d’une maîtrise d’archéologie étrusque, ce fils d’un gardien de la paix et frère de feu Gérard, un cador de l’antigang, a eu <q>du mal à se faire un prénom</q> dans la police. Devenu commissaire à la PJ de Paris, Richard Marlet a modernisé le service de l’identité judiciaire qu’il a tenu de 1995 à 2005, puis a œuvré à la documentation criminelle jusqu’à sa retraite récente. Il a écrit un livre sur «&nbsp;Les Experts, mode d’emploi&nbsp;» et un autre «&nbsp;Profession&nbsp;: chiens policiers&nbsp;». Adepte des sciences forensiques, rénovateur de la police technique, fan de Conan Doyle et de Georges Simenon, ce fumeur de pipe au chapeau noir collectionne les bouffardes et les objets de Sherlock Holmes.",
+			"minor": true
+		},
+		{
+			"href":     "christian-sainte",
+			"img":      "img/christian-sainte.jpg",
+			"alt":      "",
+			"title":    "Christian Sainte",
+			"subtitle": "Patron de la police judiciaire parisienne",
+			"desc": "Le grand patron de la PJ parisienne a été dépêché en urgence fin février 2015 pour remplacer son prédécesseur limogé. C’est à l’évêché de Marseille que le commissaire Sainte fit l’essentiel de sa carrière, chef de la brigade criminelle, puis numéro&nbsp;2 jusqu’au sommet. En Corse aussi, où il a dirigé la PJ d’Ajaccio. Le grand banditisme, le trafic de drogues, les crimes de sang ou de terrorisme n’ont pas de secret pour cet homme de 56 ans, carré de la tête aux épaules, qui supervise les enquêtes sur les attentats jihadistes et les affaires de droit commun, réalisées par ses 1&nbsp;700 poulets, sans compter le chantier du déménagement du quai des Orfèvres.",
+			"minor": true
+		},
+		{
+			"href":     "jules-maigret",
+			"img":      "img/jules-maigret.jpg",
+			"alt":      "",
+			"title":    "Jules Maigret",
+			"subtitle": "Patron de la police judiciaire parisienne",
+			"desc": "Le grand patron de la PJ parisienne a été dépêché en urgence fin février 2015 pour remplacer son prédécesseur limogé. C’est à l’évêché de Marseille que le commissaire Sainte fit l’essentiel de sa carrière, chef de la brigade criminelle, puis numéro&nbsp;2 jusqu’au sommet. En Corse aussi, où il a dirigé la PJ d’Ajaccio. Le grand banditisme, le trafic de drogues, les crimes de sang ou de terrorisme n’ont pas de secret pour cet homme de 56 ans, carré de la tête aux épaules, qui supervise les enquêtes sur les attentats jihadistes et les affaires de droit commun, réalisées par ses 1&nbsp;700 poulets, sans compter le chantier du déménagement du quai des Orfèvres.",
+			"minor": true
+		}
+		
+	]
+}
