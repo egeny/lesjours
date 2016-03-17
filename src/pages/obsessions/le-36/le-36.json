@@ -38,8 +38,17 @@
 			"img":      "img/jules-maigret.jpg",
 			"alt":      "",
 			"title":    "Jules Maigret",
-			"subtitle": "Patron de la police judiciaire parisienne",
-			"desc": "Le grand patron de la PJ parisienne a été dépêché en urgence fin février 2015 pour remplacer son prédécesseur limogé. C’est à l’évêché de Marseille que le commissaire Sainte fit l’essentiel de sa carrière, chef de la brigade criminelle, puis numéro&nbsp;2 jusqu’au sommet. En Corse aussi, où il a dirigé la PJ d’Ajaccio. Le grand banditisme, le trafic de drogues, les crimes de sang ou de terrorisme n’ont pas de secret pour cet homme de 56 ans, carré de la tête aux épaules, qui supervise les enquêtes sur les attentats jihadistes et les affaires de droit commun, réalisées par ses 1&nbsp;700 poulets, sans compter le chantier du déménagement du quai des Orfèvres.",
+			"subtitle": "Commissaire de roman",
+			"desc": "Fils unique et orphelin, ce garçon du terroir né dans l’Allier fit ses classes au quai des Orfèvres comme inspecteur de voie publique, puis au service des garnis, avant de devenir commissaire à la brigade spéciale qui deviendra la criminelle en 1944. Sous ses airs bourrus, Jules Maigret, qui trimballe sa grande carcasse et sa bouffarde sur toutes les scènes de crimes imaginables et tous les milieux sociaux, est un enquêteur profondément humain, <q>un raccommodeur de destins</q> selon «&nbsp;La fabuleuse histoire des grands flics de légende&nbsp;» de Charles Diaz. Submergé de boulot au 36, le commissaire se nourrit de <q>sandwiches jambon-beurre</q> arrosés de bière au café de la place Dauphine ou au zinc des bistrots. Son mentor, Georges Simenon, l’a mis en scène dans 75 romans.",
+			"minor": true
+		},
+		{
+			"href":     "alphonse-bertillon",
+			"img":      "img/alphonse-bertillon.jpg",
+			"alt":      "",
+			"title":    "Alphonse Bertillon",
+			"subtitle": "Père de la police technique française (1853-1914)",
+			"desc": "Rejeton du directeur de la Statistique de la Seine et cofondateur de l’École d’anthropologie, Alphonse Bertillon était le raté de cette famille de savants, peu doué pour les études de médecine, fâché avec l’orthographe, mais doté d’un sens aiguë de la classification. Grâce au piston paternel en 1879, le voilà commis auxiliaire aux écritures à la préfecture de police de Paris (PP) à recopier des fiches de signalement de malfrats. Pour confondre les récidivistes, Bertillon met au point un système de mensurations osseuses (la taille, l’envergure, le buste, le crâne, l’oreille, la coudée, le pied, le médius, l’auriculaire, le nez) qu’il note sur des fiches classées à sa façon. Il invente également la «&nbsp;photographie anthropométrique&nbsp;» de face et de profil des suspects assis sur une chaise pivotante de sa conception. Même les policiers intronisés à la PP étaient obligés d’y passer pour un portrait appelé «&nbsp;bertillonne&nbsp;». Ce père de la police technique française, réputé dans le monde entier, devint chef en 1893 du service de l’identité judiciaire qui existe toujours, puis ajouta sur ses fiches les empreintes digitales des détenus qui permettent d’identifier les criminels encore aujourd’hui.",
 			"minor": true
 		}
 		
