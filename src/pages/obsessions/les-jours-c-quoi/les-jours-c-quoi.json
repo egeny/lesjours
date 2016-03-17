@@ -6,7 +6,7 @@
 	"color": 0,
 	"name":  "« Les Jours », c’est quoi ?",
 	"title": "« Les Jours », c’est quoi ?",
-	"subtitle": "C’est qui ? Comment ça marche ? Combien ça coûte ?",
+	"subtitle": "C’est qui&nbsp;? Comment ça marche&nbsp;? Combien ça coûte&nbsp;?",
 	"desc": "<p>Face au torrent de l’info éphémère, <i>Les Jours</i>, c’est le nouveau média en ligne qui creuse ses obsessions au cœur de l’actualité et ne les lâche pas.<p><p><i>Les Jours</i> défendent un journalisme singulier, curieux, tenace, emmené par des têtes de pioche.</p>",
 
 	"episodes": [
@@ -142,7 +142,7 @@
 			"alt":      "",
 			"title":    "Michel Slomka",
 			"subtitle": "Photographe",
-			"desc":     "Né en 1986, Michel Slomka est photographe indépendant. Après une licence d'ethnologie et d'histoire, il entreprend des études de photographie avant d'intégrer la rédaction du magazine VSD pour deux ans. Indépendant depuis 2010, il travaille autour des notions d'exil, d'identité et de mémoire dans des contextes de crise, de fracture sociale et d'après-guerre. Il poursuit actuellement un travail au long terme, Srebrenica, le retour à la terre, où il s'intéresse aux mécanismes de résilience à l'œuvre chez les personnes revenues à Srebrenica (Bosnie-Herzégovine), près de vingt ans après le massacre. Michel Slomka est membre du studio Hans Lucas depuis 2014.",
+			"desc":     "Né en 1986, Michel Slomka est photographe indépendant. Après une licence d'ethnologie et d'histoire, il entreprend des études de photographie avant d'intégrer la rédaction du magazine <i>VSD</i> pour deux ans. Indépendant depuis 2010, il travaille autour des notions d'exil, d'identité et de mémoire dans des contextes de crise, de fracture sociale et d'après-guerre. Il poursuit actuellement un travail au long terme, Srebrenica, le retour à la terre, où il s'intéresse aux mécanismes de résilience à l'œuvre chez les personnes revenues à Srebrenica (Bosnie-Herzégovine), près de vingt ans après le massacre. Michel Slomka est membre du studio Hans Lucas depuis 2014.",
 			"minor": true
 		},
 		{
@@ -152,6 +152,15 @@
 			"title":    "David Thomson",
 			"subtitle": "Journaliste à RFI",
 			"desc":     "Je suis journaliste à Radio France Internationale (RFI). J’ai couvert « les révolutions arabes » et leurs transitions politiques en tant que correspondant régional en Tunisie et en Libye de 2011 à 2013. Depuis 2011, je me suis spécialisé sur les mouvements jihadistes en Tunisie et en France. Après plus d’un an d’enquête, j’ai publié le livre Les Français jihadistes aux éditions Les Arènes en mars 2014. C'est un ouvrage basé sur des entretiens directs avec les jihadistes eux-mêmes, qui retrace le parcours d’une vingtaine de jeunes français ayant décidé de partir combattre ou de s’installer en Syrie. Ma démarche journalistique est particulière, j’ai fait le choix depuis quatre ans de ne jamais consulter de sources policières ou judiciaires et de tirer mes informations exclusivement de sources jihadistes francophones (présentes en France, en Tunisie, en Syrie, en Irak et en Libye), avec lesquelles je conserve un lien permanent, sur la durée. Pour Les Jours, dans l'obsession Les revenants, je raconte le retour au pays de Français partis faire le jihad.",
+			"minor": true
+		},
+		{
+			"href":     "patricia-tourancheau",
+			"img":      "img/patricia-tourancheau.jpg",
+			"alt":      "",
+			"title":    "Patricia Tourancheau",
+			"subtitle": "Journaliste indépendante",
+			"desc":     "Fait-diversière et rubricarde police à <i>Libération</i> pendant 29 ans, c’est tout naturellement que j’ai proposé à mes amis des <i>Jours</i> d’écrire une série sur le quai des Orfèvres avant son déménagement&nbsp;: c'est <i>Chroniques du 36</i>. Depuis 1990, j’arpente ce haut lieu de la PJ parisienne de la cave jusqu’aux combles, de l’escalier monumental aux recoins les plus sombres, des minuscules pièces d’officiers aux vastes bureaux des commissaires. Je fréquente des poulets de toutes les brigades, de la direction et des petits services. Je traite des enquêtes du 36 sur des faits divers ou de grandes affaires criminelles, de banditisme ou de terrorisme. En 1999, je fus la première journaliste autorisée à passer douze jours en immersion à la Crim. Pour les 100 ans de cette maison, j’ai co-signé un film avec Jean-Pierre Bozon pour France 3&nbsp;: <i>36, Quai du crime.</i> J’ai travaillé sur une série de documentaires produits par l’INA et réalisés par Jean-Pierre Vedel, <i>Les cinq sens de la police judiciaire</i> (2009), sur la police technique et scientifique (PTS). J’ai également écrit <i>Les Postiches, un gang des années 80</i> (Fayard, 2004). J’ai consacré un autre livre à La traque de Guy Georges (Fayard, 2010), adapté au cinéma par Frédéric Tellier (<i>L’Affaire SK1,</i> 2015). De temps en temps, je témoigne sur des faits divers que j’ai suivis dans des émissions télévisées comme <i>Faites entrer l’accusé</i> sur France 2. J’enseigne la police-justice et les faits divers dans deux écoles de journalisme, l’IPJ et le CFPJ. Je travaille aussi à l’écriture d’un scénario pour un film de cinéma et d’un livre sur mes habituelles histoires de braqueurs, de policiers et de criminels. Désormais freelance, je collabore à <i>l’Obs,</i> au mensuel <i>GQ</i> et surtout aux <i>Jours</i>, toujours sur mes obsessions.",
 			"minor": true
 		}
 	],

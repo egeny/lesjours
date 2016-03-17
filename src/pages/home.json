@@ -2,12 +2,13 @@
 	"template": "home",
 
 	"une": [
-		"episode:la-fete-du-stream/ep-8-contrats-artistes-suite",
+		"episode:le-36/ep-1-marlet",
 		"episode:les-jours-c-quoi/les-jours-le-pilote",
-		"episode:la-charniere/ep-6-croissance"
+		"episode:la-fete-du-stream/ep-8-contrats-artistes-suite"
 	],
 
 	"obsessions": [
+		"obsession:le-36",
 		"obsession:l-etincelle",
 		"obsession:la-charniere",
 		"obsession:la-fete-du-stream",

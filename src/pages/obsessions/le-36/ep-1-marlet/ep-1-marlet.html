@@ -1,0 +1,173 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[0] %}
+<p><span class="lettrine">V</span>endredi 11 mars à l’heure du déjeuner. Des costumes bleu ou noir, des imper mastic et des manteaux de tweed s’engouffrent sous le porche du 36 quai des Orfèvres. Des commissaires. D’autres dévalent les marches de l’escalier A, traversent la cour pavée puis débouchent dans celle du dépôt vers le quai de l’Horloge. On fête le départ à la retraite d’un collègue&nbsp;: <a href="#{{ person.href }}" data-mini="1">Richard Marlet</a>, une figure de la PJ parisienne. <q>Personnalité pittoresque et humour décalé</q>, soulignera bientôt dans son discours le sous-directeur Denis Colas. Tous se pressent autour de cet ancien de l’identité judiciaire (IJ) qui fit passer la police technique et scientifique de l’ère de la loupe au temps du <a href="#note-1">Crimescope</a> et la documentation criminelle du microfilm au numérique.</p>
+
+{{
+	mini({
+		number:   1,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{{
+	note({
+		number:  1,
+		title:   "Crimescope",
+		caption: "C’est une espèce de projecteur surpuissant qui permet d’identifier des traces (de sang, de sperme, d’ADN), des fibres, des résidus."
+	})
+}}
+
+{% set person = obsession.people[3] %}
+<p>Dans le hall d’entrée de l’identité judiciaire où trône le buste de son illustre prédécesseur en 1913 <a href="#{{ person.href }}" data-mini="2">Alphonse Bertillon</a>, père de la police technique, à côté de ses appareils photo, ses outils et ses toises, Richard Marlet accueille un à un ses 250 invités, policiers ou experts, puis les guide vers l’ancienne chapelle attenante dédiée à son mentor, la salle Bertillon. Elle sert aux réceptions officielles mais aussi aux auditions multiples de témoins lorsque des évènements comme le 13 Novembre l’exigent.</p>
+
+{{
+	mini({
+		number:   2,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<p>Ils sont tous venus, même l’historien de la PJ parti à la police des polices Charles Diaz. L’ancien numéro 2 de la crim’ devenu chef de l’unité de coordination de la lutte anti-terroriste Loïc Garnier est là aussi, de même que les patrons de toutes les brigades du 36, ou encore Vianney Dyèvre, l’ex-adjoint de Richard Marlet, fils d’amiral passé à la protection des mineurs, ainsi que le sous-directeur des affaires financières Gilles Aubry qui préside l’Amicale du 36 mais n’a plus le cœur à organiser des festivités depuis les attentats. Il y a aussi une photographe de l’IJ habituée à <q>prendre des gens qui ne bougent pas</q> sur les scènes de crime, Noël, l’appariteur du 36 au look détonnant avec son catogan et le commissaire Guy Parent aux cheveux longs, cravate de cuir et santiags. Une foultitude de petites mains de l’IJ sont de la fête, qui appellent Marlet <q>patron</q> ainsi que des employées des archives qui saisissent les procédures, tristes du départ du chef, galant avec les dames, opérationnel au travail, et capable de blaguer en alexandrins. La fin d’une époque pour Richard Marlet, comme pour le 36 qui va quitter la Seine pour le XVIIe arrondissement de Paris (lire <a href="/obsessions/le-36/ep-2-demenagement">l’épisode 2</a>, «&nbsp;L'adieu à la Seine&nbsp;»).</p>
+
+<figure>
+<img src="img/marlet-1.jpg" alt="" />
+<figcaption><span>Photographies anthropométriques de Richard Marlet prises le 13 novembre 1980, le jour de son arrivée à la PJ de Paris comme inspecteur stagiaire <span class="credits">Photo DR.</span></span></figcaption>
+</figure>
+
+<p>Sur le carton d’invitation, Richard Marlet a apposé sa photographie anthropométrique de profil prise le 13 novembre 1980, le jour de son arrivée à la PJ de Paris, comme inspecteur stagiaire. Avec ses cheveux longs et ses rouflaquettes, ce jeune homme en veston, chemise blanche et cravate ressemble plus à un étudiant de la Sorbonne qu’à un poulet du 36. S’il est là, c’est parce que son frère aîné Gérard, cador de la brigade antigang, l’a poussé à entrer dans la police. Alors, Richard a mis de côté sa Stratocaster, sa licence de Lettres classiques et sa maîtrise d’archéologie étrusque pour apprendre le droit et passer le concours. Sans vocation, par atavisme familial.</p>
+
+<aside>
+	<p><span>Un père gardien de la paix</span> un frangin dans l'antigang</p>
+</aside>
+
+<p>Après son père, devenu gardien de la paix en 1937 et son frangin inspecteur en 1964, Richard se retrouve donc à son tour assis sur la chaise de Bertillon au dépôt de la <a href="#note-2">préfecture de police de Paris</a>. Dans une grande salle réservée à <q>la signalisation</q>, c’est un rituel désormais abandonné&nbsp;: le flic débutant pose de face et de profil devant <q>un ancien qui actionne la roue pour faire pivoter la chaise en bois et changer d’angle</q>. Puis, le nouveau appuie l’un après l’autre ses dix doigts sur un tampon encreur pour relever ses empreintes digitales. Comme les suspects et les détenus, les policiers admis à la PP donnaient leurs <q>paluches</q> et leur portrait pour la fiche anthropométrique.</p>
+ 
+{{
+	note({
+		number:  2,
+		title:   "La «&nbsp;PP&nbsp;»",
+		caption: "La PP, la préfecture de police de Paris, chapeaute la PJPP, le 36 et ses ramifications. Censée être placée sous l’autorité du ministre de l’Intérieur et du directeur général de la police nationale (DGPN), la PP actuellement tenue par le préfet Michel Cadot est un état dans l’état de la police française."
+	})
+}}
+
+<p>En vis-à-vis, sur l’invitation <i>vintage</i> de sa <q>Tournée d’Adieux au 36 quai des Orfèvres</q>, Richard Marlet a ajouté un cliché pris de face le dernier jour de sa vie de commissaire à la PP, le 29 février 2016, avec l’ardoise noire qui fixe depuis des lustres nom, prénom et date de naissance&nbsp;: <q>05/05/1955</q>. Sans poser dans le siège historique car <q>la chaise fonctionne encore mais on ne l’utilise plus, on demande aux suspects de se mettre debout, de se tourner, et cela donne des photos de médiocre qualité</q>, déplore ce savant à la professeur Tournesol. A son grand regret, la tradition de <q>signaliser</q> les fonctionnaires s’est perdue dans les années 90&nbsp;: <q>C’était pourtant bien pratique. Car si un policier laissait des traces papillaires sur une scène de crime, on le retrouvait.</q></p>
+
+{% set person = obsession.people[1] %}
+<p>Face à ce parterre de collègues, Richard Marlet oublie la timidité extrême qui l’a empêché durant toute sa scolarité de présenter des exposés. Après le discours à sa gloire, il embrasse le directeur de la PJ <a href="#{{ person.href }}" data-mini="3">Christian Sainte</a> qui lui remet la médaille du 36 gravée à son nom. Puis déroule les étapes de sa carrière avec des photos projetées sur écran géant qu’il commente&nbsp;: <q>Là, en 63, entre mon père gardien de la paix et mon parrain maître chien, le petit garçon avec un petit chapeau déjà, c’est moi.</q> Allusion à son éternel feutre noir. Avec son inséparable pipe et son imperméable foncé, la silhouette de Marlet sous les arcades du 36 se confond avec celle du commissaire {% set person = obsession.people[2] %}<a href="#{{ person.href }}" data-mini="4">Maigret</a>. </p>
+
+{% set person = obsession.people[1] %}
+{{
+	mini({
+		number:   3,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{% set person = obsession.people[2] %}
+{{
+	mini({
+		number:   4,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+<figure>
+<img src="img/marlet-2.gif" alt="" />
+<figcaption><span>Richard Marlet et ses invités, policiers ou experts, lors de son départ à la retraite dans la salle Bertillon, le 11 Mars 2016 <span class="credits">Photo Sébastien Calvet / <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Les images qui défilent de son frère avec ses potes de l’antigang dans les années 70 le rendent tout chose. Depuis le décès de leur père d’un cancer en 1972, le charismatique Gérard protégeait son petit frangin de douze ans de moins que lui&nbsp;: <q>Il va décider de mon destin à ma place</q>, racontait récemment Richard aux <i>Jours</i> dans son bureau du 36, encombré de reliques de Bertillon et de Doyle, qui donne sur la place Dauphine. Gérard l’envoie à l’école des inspecteurs puis le fait affecter à l’état-major de la PJ pour qu’il révise le concours de commissaire. Ce n’est pourtant pas grâce au droit mais aux lettres que Richard le décroche en 1982. Un sujet en or pour cet érudit&nbsp;: <q>On dit que Sophocle est une grande tragédie policière, racontez l’histoire.</q> Aussi bien inspiré à l’oral grâce à Miou-Miou qui incarne La femme flic d’Yves Boisset au cinéma, le candidat expose sa vision <q>de l’emploi des femmes dans la police</q>. Mais son problème, c’est qu’il reste le frère de. Pourtant, Richard et Gérard ne se ressemblent pas. C’est l’intello et le casse-cou, l’introverti et la grande gueule, le dépressif et l’optimiste, <q>le crépusculaire et le solaire</q> dit joliment le cadet qui s’escrime à sortir de l’ombre&nbsp;:<q> Il a fallu que je me fasse un prénom dans la police.</q></p>
+
+<p>Débarqué à la 2e brigade territoriale de PJ dans le XVIIIe arrondissement de Paris, commandée par un patron à l’ancienne, le jeune commissaire Marlet est <q>impressionné par l’extrême violence du Vieux</q> conforme au panneau sur la porte du «&nbsp;groupe de voie publique&nbsp;»&nbsp;: <q>Toi qui pénètre ici, abandonne tout espoir.</q> <i>L’Enfer,</i> de Dante. Chef-adjoint du commissariat de PJ de Clignancourt où -&nbsp;sur la photo montrée salle Bertillon&nbsp;- Marlet porte le nœud papillon, le voilà confronté à sa première scène de crime le 9 octobre 1984&nbsp;: une grand-mère de 89 ans, victime du tueur en série Thierry Paulin. <q>C’est ballot mais si on avait eu un fichier des empreintes digitales, on aurait pu sauver une quinzaine de vieilles dames</q>, explique-t-il 32 ans plus tard</p>
+
+<blockquote>
+<p>Un ramassis de biturins et de feignants qui ne savent même pas prélever des traces papillaires sur un adhésif.</p>
+<footer>Richard Marlet décrivant l’état de l’identité judiciaire à son arrivée en 1995</footer>
+</blockquote>
+
+<p>En 1986, son frère Gérard se tue dans un accident de la route. <q>Tout seul</q> désormais, Richard reste effacé, renfermé, en proie au <q>doute</q> sur ses capacités de policier. Au point de refuser des postes prestigieux au 36 –&nbsp;chef de section à la brigade criminelle ou commissaire aux stups&nbsp;– <q>tellement je n’avais pas confiance en moi</q>. <q>Or, les brigades du 36, c’est l’excellence.</q> Du coup, Richard Marlet se cantonne aux commissariats de PJ de quartier, du Palais Royal à la rue du Faubourg-Montmartre. Jusqu’au jour de l’été 1995 où ce passionné des <q>mystères de la civilisation étrusque</q> et des énigmes de Sherlock Holmes accepte de diriger l’identité Judiciaire. C’est alors un service archaïque et moribond peuplé <q>d’un ramassis de <a href="#note-3">biturins</a> et de feignants qui ne savent même pas prélever des traces papillaires sur un adhésif.</q></p>
+
+{% from "partials/_macro.html" import note %}
+{{
+	note({
+		number:  3,
+		title:   "Biturin",
+		caption: "Un poivrot, dans la langue des faubourgs de Richard Marlet."
+	})
+}}
+
+<p>Le jour même de son installation à l’IJ, une bonbonne de gaz piégée est découverte dans une sanisette du XVe arrondissement. Cet été-là, l’explosion dans le RER B à Saint-Michel le 25 juillet fait 8 morts et 117 blessés, et les attentats du Groupe islamiste armée (GIA) s’enchaînent. Les connaissances du commissaire Marlet en la matière se limitent aux romans policiers de Patricia Cornwell dont la légiste, Scarpetta, utilise avant les autopsies, un mystérieux <q>LumaLight</q> pour révéler les traces laissées sur les scènes de crime. Est-ce que ça existe&nbsp;?, se demande Richard Marlet qui vérifie&nbsp;: <q>Oui ça s’appelle un PolyLight. Le patron du 36 m’a donné des sous pour acheter cet illuminateur puis un Crimescope transportable.</q> Il se fait également payer le <i>Traité de criminalistique</i> d’<a href="#note-4">Edmond Locart</a> et joue les apprentis sorciers avec un aide technicien de laboratoire&nbsp;: <q>Il se piquait le doigt sur la paillasse pour tester avec son sang les recettes de Locart.</q> Marlet se procure du «&nbsp;Leucomalachite green&nbsp;», un produit chimique utilisé jadis pour faire apparaître en vert des traces du sang lessivées à grandes eaux. Avant de s’apercevoir que le fameux produit peut casser les molécules d’ADN et réagir aussi à des détergents pour nettoyer les baignoires. Exit le «&nbsp;Leucomalachite green&nbsp;». Il déniche le «&nbsp;Blue Star&nbsp;» dans la revue de criminalistique de l’école de Lausanne et en achète au Canada.</p> 
+
+{% from "partials/_macro.html" import note %}
+{{
+	note({
+		number:  4,
+		title:   "Edmond Locart",
+		caption: "En 1910, ce professeur de médecine légale a monté à Lyon le premier laboratoire de police scientifique. Son <i>Traité de criminalistique</i> en sept volumes, publié en 1931, développe son <q>principe de l’échange</q>&nbsp;: <q>Tout auteur d’un crime laisse sur les lieux de son forfait des traces de son passage et emporte avec lui des éléments de ce milieu.</q>. De là, découlent les analyses de cheveux, de poussières, de terre, de fibres, de projectiles et d’explosifs."
+	})
+}}
+
+<figure>
+<img src="img/marlet-3.jpg" alt="" />
+<figcaption><span> Gérard (au centre), le frère de Richard Marlet, avec son collègue de l’antigang Jean-Louis Fiamenghi <span class="credits">Photo Jean-Louis Fiamenghi <i>Dans le secret de l’action</i>.</span></span></figcaption>
+</figure>
+
+<p>Il part se former à Scotland Yard, envoie ses techniciens passer un brevet d’IJ, achète des tenues blanches de protection pour ces civils équipés d’une simple paire de gants latex, se documente sans cesse sur les sciences forensiques, monte une section «&nbsp;exploitation de vidéo&nbsp;» et professionnalise la dactylotechnie –&nbsp;les méthodes de relevés d’empreinte. Il modernise la <q>révélation des traces au <a href="#note-5">cyanoacrylate</a> sur des supports lisses</q> qui, à son arrivée, se pratiquait <q>dans un petit aquarium troué pour passer un fer à souder qui va chauffer la colle dans une coupelle&nbsp; du bricolage</q>. Il monte aussi la police technique de proximité sur 70 sites à Paris, acquiert un véhicule spécial d’intervention de la police technique et scientifique, une cabine à cyanoacrylate, et met sur pied l’unité d’identification des victimes de catastrophe qui se rendra en Thaïlande après le tsunami. En une décennie, de 1995 à 2005, Marlet a fait basculer la police de Maigret dans le siècle des <i>Experts</i>.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+	note({
+		number:  5,
+		title:   "Cyanoacrylate",
+		caption: "La fumigation, ou vapeur de colle cyanoacrylate, provoque une réaction chimique sur les corps gras contenus dans la sueur et révèle en blanc les traces papillaires laissées par des personnes."
+	})
+}}
+
+<blockquote>
+<p>Le Bertillon des temps modernes</p>
+<footer>Richard Marlet selon le préfet de police</footer>
+</blockquote>
+
+<p>Des meurtriers en série Guy Georges et Mamadou Traoré (<q>le tueur aux mains nues</q>], à l’accident mortel de Lady Di sous le pont de l’Alma en passant par la tuerie du conseil municipal de Nanterre commise par Richard Durn, le commissaire Marlet a su débrider les <q>traces pertinentes qui deviennent des indices</q>. Il a écrit <i>Les experts, mode d’emploi</i> puis <i>Profession, chiens policiers</i>. <q>Le Bertillon des temps modernes</q>, selon les mots du préfet de police qui l’a décoré de la légion d’honneur, a quitté l’IJ en 2005 pour s’occuper des archives et de la documentation criminelle. Mais enseigne toujours la criminalistique à la fac.</p>
+
+<p>Lors de son pot de départ, facétieux et décalé, le commissaire Marlet termine son diaporama projeté dans la salle Bertillon par un détonnant  <a href="#" data-mini="5"><i>Je ne regrette rien</i></a>, Piaf en version punk par les Garçons Bouchers qui laisse pantois quelques pontes de la PJ. <q>Je suis fier de connaître un véritable prototype de la PJ, pas une pièce de série</q>, lui glisse le chef d’état major du 36, Thierry Huguet. Trois techniciennes de l’IJ coiffées de chapeaux tirent sur des bouffardes pour imiter <q>le patron</q>. Sur le fraisier rouge, évidemment, une pipe en pâte d’amande pour évoquer celle que Richard Marlet fume sur le pas de la porte de l’IJ, pas peu fier des traces de son passage sur les lieux de son forfait.</p>
+
+<figure id="mini-5" class="mini md-w-2c lg-w-3c lg-ph-0">
+<div class="player">
+<div class="container">
+<audio aria-hidden="true">
+<source type="audio/webm" src="audio/garcons-bouchers.webm" />
+<source type="audio/mp4"  src="audio/garcons-bouchers.m4a" />
+</audio>
+<button class="btn-blank" type="button">
+<div class="container">
+<img class="responsive" src="img/garcons-bouchers.jpg" alt="" />
+</div>
+</button>
+</div>
+</div>
+<a class="link-unstyled" href="#">
+<p class="title">«&nbsp;Je ne regrette rien&nbsp;»…</p>
+<p class="subtitle">…au hachoir des Garçons Bouchers</p>
+</a>
+<figcaption></figcaption>
+</figure>
+
