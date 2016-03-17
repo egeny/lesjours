@@ -32,6 +32,8 @@
 		// XXX: logging for debug
 		file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
 
+		$renewal = 0; 
+
 		if ($_GET['notification'] == 'bank') {
 			$payload = json_decode(file_get_contents('php://input'));
 			$user_id = preg_replace('/(?:\d+-){3}/', '', $payload->reference);
@@ -43,6 +45,12 @@
 			$payload = stripslashes_deep($_GET); // Use Wordpress' stripslashes_deep to revert the magic quotes added by Wordpress (!)
 			$user_id = $payload['CLIENTIDENT'];
 			$error   = $payload['EXECCODE'] != '0000' || $payload['OPERATIONTYPE'] != 'payment'; // Handle only "payment" transactions
+
+			// if orderid starts with an R, this is a renewal
+			if ($payload['ORDERID'][0] == 'R') {
+				$renewal =  1;
+			}
+	        
 
 			// Check if the hash is valid
 			unset($payload['notification']); // Exclude for the hash computation
@@ -63,9 +71,6 @@
 		$data   = get_userdata($user_id);
 		$meta   = get_all_user_meta($user_id);
 		$plan   = $PLANS[$meta['plan']];
-
-		// if orderid starts with an R, this is a renewal
-        $renewal = $payload['ORDERID'][0] == 'R' ? 1 : 0;       
 
 		// Retrieve the global invoice number and increment it
 		$number = intval(get_option('invoice_number', 0)) + 1;
@@ -249,13 +254,6 @@
 										'country'    => strtoupper($meta['country'])
 									)
 								)
-							)
-						),
-						array(
-							'type' => 'directDebit',
-							'directDebit' => array(
-								'paymentReference' => date('Y-m-d').'-'.$user_id,
-								'amount' => $PLANS[$meta['plan']]['price']
 							)
 						),
 						array(
@@ -470,13 +468,13 @@
 					<?php endif ?>
 					<fieldset id="mode-de-paiement">
 						<legend class="mb-2g style-meta-large relative">Mon mode de paiement</legend>
-						<div class="gift style-meta lh-inherit color-dark">
+						<div class="gift style-meta lh-inherit">
 							<i class="pull-left">{{ icon("bag") }}</i>
 							<p><strong class="block text-upper">Un sac Les Jours offert</strong> si je choisis le prélèvement automatique.</p>
 						</div>
 						<div class="field row mb-1g">
-							<label class="col md-w-auto pr-2g pl-0 color-dark">
-								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required disabled/>
+							<label class="col md-w-auto pr-2g pl-0">
+								<input class="radio" type="radio" name="payment" value="bank" <?php if (isset($data['payment']) && $data['payment'] == 'bank') : ?>checked <?php endif ?>required/>
 								<span class="radio"></span>
 								Prélèvement
 							</label>
