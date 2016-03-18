@@ -22,7 +22,8 @@
 
 		"first": "episode:l-etincelle/ep-1-recherche-colere",
 		"prev": "episode:l-etincelle/ep-1-recherche-colere",
-		"last":  "episode:l-etincelle/ep-2-etudiants-photos"
+		"next": "episode:l-etincelle/ep-3-jeunes",
+		"last":  "episode:l-etincelle/ep-3-jeunes"
 
 			}
 }
