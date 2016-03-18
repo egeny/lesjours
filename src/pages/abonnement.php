@@ -30,7 +30,7 @@
 	// Receiving a notification from the payment service
 	if (isset($_GET['notification'])) {
 		// XXX: logging for debug
-		file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
+		// file_put_contents('notification.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
 
 		$renewal = 0; 
 
@@ -119,7 +119,7 @@
 	// Receiving a result from the payment service
 	if (isset($_GET['result'])) {
 		// XXX: logging for debug
-		file_put_contents('result.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
+		// file_put_contents('result.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($_SERVER, true).print_r("\n", true).print_r($_GET, true).print_r("\n", true).print_r($_POST, true).print_r("\n", true).print_r(file_get_contents('php://input'), true).print_r("\n", true), FILE_APPEND);
 
 		$state = 'result';
 
@@ -271,7 +271,7 @@
 				$response = $client->createOrders(array('post' => $payload));
 
 				// XXX: logging for debug
-				file_put_contents('bank.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($response, true).print_r("\n", true), FILE_APPEND);
+				// file_put_contents('bank.log', print_r(date('Y-m-d H:i:s')."\n", true).print_r($response, true).print_r("\n", true), FILE_APPEND);
 
 				// TODO: check errors
 

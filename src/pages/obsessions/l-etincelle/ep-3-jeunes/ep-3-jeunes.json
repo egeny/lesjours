@@ -1,0 +1,28 @@
+{
+	"template": "episode",
+	"visibility": "protected",
+
+	"href": "ep-3-jeunes",
+
+	"number": 3,
+	"date": "2016-03-18T15:00+01:00",
+
+	"title": "La rue se prend un coup de jeunes",
+	"intro": "Deuxième semaine du mouvement contre la loi El Khomri, au gré des AG et des manifs. L’air sent le printemps.",
+	"subtitle": "Deuxième semaine du mouvement contre la loi El Khomri, au gré des AG et des manifs. L’air sent le printemps.",
+	"lead": "Ils ne sont pas fatigués. Cette semaine, pendant que le gouvernement tentait de déminer le projet de loi El Khomri auprès des syndicats de salariés, les étudiants et lycéens ont continué à se mobiliser.",
+
+	"tags": ["manifestation", "loi travail", "étudiants"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:camille-polloni" },
+			{ "photo": "author:yann-levy" }
+		],
+
+		"first": "episode:l-etincelle/ep-1-recherche-colere",
+		"prev":  "episode:l-etincelle/ep-2-etudiants-photos",
+		"last":  "episode:l-etincelle/ep-3-jeunes"
+
+			}
+}
