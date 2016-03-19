@@ -1,15 +1,14 @@
 {
 	"template": "episode",
-	"visibility": "protected",
 
 	"href": "retour-au-college",
 
 	"number": 1,
 	"date": "2015-11-08T10:00+01:00",
 
-	"title": "Retour au collège",
+	"title": "Les années collège",
 	"intro": "«&nbsp;Les Jours&nbsp;» retournent en classe durant un an. Mais quelle idée&nbsp;?",
-	"subtitle": "«&nbsp;Les Jours&nbsp;» retournent en classe durant un an. Mais quelle idée&nbsp;?",
+	"subtitle": "«&nbsp;Les Jours&nbsp;» passent une année en 3e&nbsp;B, dans un collège classé REP du nord de Paris. Révision pour la Semaine de la presse.",
 	"lead":  "À l'origine de cette obsession des <i>Jours</i>, il y avait ces questions entêtantes sur la séparation des corps sociaux. Quelles mécaniques sont en œuvre pour séparer avec un tel systématisme les riches des pauvres, les noirs des blancs&nbsp;? Quelles sont celles qui, au contraire, rassemblent et corrigent inégalités et différences ?",
 
 	"tags": ["Education", "Collège", "Paris", "Mixité"],
