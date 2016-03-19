@@ -1,0 +1,29 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep-7-attentat",
+
+	"number": 7,
+	"date": "2016-03-19T16:00+01:00",
+
+	"title": "Istanbul, jour d’attentat",
+	"intro": "Ce samedi, une attaque suicide a causé la mort d’au moins quatre personnes dans le centre ville. En Turquie, le moral plonge.",
+	"subtitle": "Ce samedi, une attaque suicide a causé la mort d’au moins quatre personnes dans le centre ville. En Turquie, le moral plonge.",
+	"lead": "Depuis quelques jours, les rumeurs couraient dans Istanbul. Il va se passer quelque chose en fin de semaine, il va se passer quelque chose, il ne faut pas sortir. Certains précisaient même en milieu de semaine qu'il faudrait être",
+	"tags": ["Turquie", "Erdogan", "attentat", "Istanbul", "Kurdistan"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:olivier-bertrand" },
+			{ "photo": "Mehmet Yaman" }
+		],
+
+		"first": "episode:la-charniere/marmite-turque",
+		"prev": "episode:la-charniere/ep-6-croissance",
+		"last": "episode:la-charniere/ep-7-attentat"
+
+
+
+			}
+}
