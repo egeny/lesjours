@@ -1,0 +1,149 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[8] %}
+<p><span class="lettrine">D</span>ans l’épisode précédent de <i>La fête du stream</i> (<a href="/obsessions/la-fete-du-stream/ep-8-contrats-artistes-suite">lire l’épisode 8</a>, «&nbsp;Concerts&nbsp;: les maisons de disques vampirisent les artistes&nbsp;»), j’expliquais que certaines clauses encombrantes des contrats qui lient artistes et maisons de disques ont été écartées des récentes discussions qui devaient mettre un peu d’ordre dans les pratiques. L’une d’elles permet carrément aux labels de mettre la main sur le patrimoine de leurs artistes.</p>
+
+<figure>
+<img src="img/artistes-contrats-3.jpg" alt="" />
+<figcaption><span>La copie privée et la rémunération équitable sont des revenus centraux pour les artistes <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Depuis 2008, les branches françaises des trois <a href="#note-1">majors</a> (et auparavant quatre, puisqu’EMI faisait de même) françaises insèrent en effet en annexe de leurs contrats une «&nbsp;cession de créances&nbsp;». Les mots varient, mais le but est encore d’aller chercher l’argent là où il y en a puisque le disque ne paie plus. En l’occurrence, les ventes et les écoutes en <a href="#note-2">streaming</a> ne garantissent plus aux producteurs de récupérer l’avance sur revenus consentie aux artistes afin qu’ils travaillent sur leur musique. Mais les grosses multinationales de la musique n’aiment pas le risque, et elles demandent donc à leurs artistes de leur céder d’autres revenus jusqu’à être quittes.</p>
+
+
+{% from "partials/_macro.html" import note %}
+{{
+	note({
+		number:  1,
+		title:   "Major",
+		caption: "Les entreprises internationales qui rassemblent plusieurs maisons de disques. Elles sont trois aujourd’hui –&nbsp;Universal, Sony et Warner&nbsp;– et réalisent environ 70&nbsp;% de parts de marché dans le monde."
+	})
+}}
+
+{{
+	note({
+		number:  2,
+		title:   "Streaming",
+		caption: "La diffusion de contenus en flux continu sur internet. Cette diffusion peut être vidéo ou sonore. Les principaux acteurs en France sont YouTube, Deezer et Spotify."
+	})
+}}
+
+<p>Exemple dans un contrat Universal récemment signé par un jeune groupe.</p>
+
+<figure>
+<img src="img/creance-1.jpg" alt="" />
+<figcaption><span>Extrait d’un contrat d’Universal</span></figcaption>
+</figure>
+
+{% set person = obsession.people[0] %}
+<p>Ce groupe devra donc céder à Universal les <q>sommes susceptibles de [lui] revenir par l’intermédiaire de <a href="#{{ person.href }}" data-mini="1">l’Adami</a></q>, la société qui perçoit les droits des <a href="#note-3">artistes-interprètes</a>. Ces revenus sont principalement de deux natures&nbsp;: la copie privée et la rémunération équitable.</p>
+
+{{
+	mini({
+		number:   1,
+		img:      "/obsessions/" + obsession.href + "/" + person.img,
+		alt:      person.alt,
+		href:     "#" + person.href,
+		title:    person.title,
+		subtitle: person.subtitle
+	})
+}}
+
+{{
+	note({
+		number:  3,
+		title:   "Les artistes",
+		caption: "Les artistes sont divisés en catégories. Les auteurs et compositeurs signent les paroles et la musique. Les interprètes prêtent leur voix à ces compositions. Bien sûr, un artiste peut assurer tous ces rôles."
+	})
+}}
+
+<aside>
+<p><span>Des sources de revenus</span> devenues centrales</p>
+</aside>
+
+<p>La copie privée, c’est une petite part du prix de chaque appareil ou support permettant le stockage de données qui est vendu dans le commerce. <a href="http://www.copiefrance.fr/files/declaration_tarif/tarifs_FR_2015.pdf" data-mini="2">Vous la versez</a> quand vous achetez un CD vierge, un disque dur ou un smartphone. Vous la payiez déjà à l’époque de la cassette audio ou de la VHS, et si un amendement à la loi création voté par le Sénat survit à l’Assemblée, vous la paierez sur le stockage «&nbsp;dans le nuage&nbsp;». Cette copie privée, créée en 1985, est une exception au droit d’auteur qui a permis d’arrêter de courir après les pseudo-pirates qui s’échangeaient des chansons de Michael Jackson dans les années&nbsp;80. 75&nbsp;% de ses <a href="#note-4">importants revenus</a> vont aux artistes. Le reste finance des actions culturelles, notamment des festivals.</p>
+
+<aside id="mini-2" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.copiefrance.fr/files/declaration_tarif/tarifs_FR_2015.pdf" />
+<span class="image"><img class="responsive" src="img/copie.jpg" alt="" /></span>
+<p class="title">Les derniers barèmes de la copie privée</p>
+<p class="subtitle">À consulter sur le site de Copie France.</p>
+</a>
+</aside>
+
+{{
+	note({
+		number:  4,
+		title:   "Copie privée",
+		caption: "La copie privée a rapporté entre 150 et 200&nbsp;millions par an depuis le début des années 2000."
+	})
+}}
+
+<p>La <a href="https://www.adami.fr/defendre-les-droits-des-artistes/la-remuneration-equitable.html" data-mini="3">rémunération équitable</a>, quant à elle, est payée par les radios, les télévisions, les discothèques, les bars et restaurants sonorisés, en échange du droit de diffuser la musique qu’ils veulent. Elle est ensuite partagée à parts égales entre les producteurs et les artistes-interprètes. Cette rémunération équitable a généré près de <a href="http://www.spre.fr/index.php?page_id=43" data-mini="4">121&nbsp;millions d’euros</a> en 2014.</p>
+
+<aside id="mini-3" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="https://www.adami.fr/defendre-les-droits-des-artistes/la-remuneration-equitable.html" />
+<span class="image"><img class="responsive" src="img/adami.jpg" alt="" /></span>
+<p class="title">La rémunération équitable en un graphique</p>
+<p class="subtitle">À consulter sur le site de l’Adami.</p>
+</a>
+</aside>
+
+<aside id="mini-4" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.spre.fr/index.php?page_id=43" />
+<span class="image"><img class="responsive" src="img/remu.jpg" alt="" /></span>
+<p class="title">Les revenus de la rémunération équitable entre 2001 et 2014</p>
+<p class="subtitle">À consulter sur le site de la Spré.</p>
+</a>
+</aside>
+
+<blockquote>
+<p>Quel producteur peut accepter de priver un artiste de ses droits pendant cinq ans&nbsp;?</p>
+<footer>Bruno Boutleux, secrétaire général de l’Adami</footer>
+</blockquote>
+
+
+<p>Surtout, ces deux chemins de rémunération peu connus du public sont désormais des revenus centraux pour les artistes, dans un monde où la musique enregistrée ne permet que rarement de vivre. C’est justement pour cette raison que les majors du disque, tout comme elles lorgnent sur les revenus des concerts, tentent de capter cette manne pour s’assurer de ne pas perdre l’argent mal investi sur un artiste. Au passage, cette avance, qui n’était traditionnellement pas «&nbsp;récupérable&nbsp;» dans les contrats, l’est devenue. Pour les artistes, la vie est sans cesse plus compliquée.</p>
+
+
+
+<figure>
+<img src="img/artistes-contrats-4.jpg" alt="" />
+<figcaption><span>Un amendement sur ces cessions de créance a été retoqué au Sénat <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Sauf qu’en face, l’Adami fait la morte et refuse de verser aux producteurs les sommes dues à un artiste. <i>«&nbsp;Comme disait Pascal Nègre&nbsp;: même pas en rêve</i>, tranche ainsi Bruno Boutleux, le secrétaire général de l’Adami. <i>Tout d’abord par que nous n’en avons pas le droit. De plus, je n’ai pas honte de parler de morale sur ce sujet qui pourrait n’avoir qu’un caractère juridique&nbsp;: si Patrick Hernandez signe chez une major aujourd’hui, elle aurait le droit de percevoir les droits sur</i> <a href="https://www.youtube.com/watch?v=9UaJAnnipkY" data-mini="5">Born to be Alive</a><i>, un tube qui date d’il y a 30&nbsp;ans&nbsp;? C’est quand même hallucinant.&nbsp;»</i></p>
+
+<aside id="mini-5" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="https://www.youtube.com/watch?v=9UaJAnnipkY" />
+<span class="image"><img class="responsive" src="img/hernandez.jpg" alt="" /></span>
+<p class="title">«&nbsp;Born to be alive&nbsp;»</p>
+<p class="subtitle">À regarder sur YouTube.</p>
+</a>
+</aside>
+
+<p>L’Adami affirme avoir reçu 172&nbsp;notifications de cession de créances depuis 2008. <i>«&nbsp;Nous avons fait le calcul</i>, continue son directeur général, <i>si nous avions obtempéré et avions payé, nous aurions privé les artistes de leurs droits Adami pour au moins 5&nbsp;ans. Quel producteur peut accepter de priver un artiste de ses droits pendant cette durée&nbsp;?&nbsp;»</i></p>
+
+
+<aside>
+<p><span>Un amendement écarté</span> au Sénat</p>
+</aside> 
+
+<p>En pratique, les musiciens assez solides et armés pour négocier leur contrat avec leur maison de disques font sauter cette cession de créance. Mais les majors en font de plus en plus une clause non-négociable. Un <i>deal point</i>, dans le jargon du métier.</p>
+
+
+<p>Le dossier est donc arrivé au Parlement récemment, <a href="http://www.senat.fr/seances/s201602/s20160210/s20160210_mono.html#amd_2015_341_235" data-mini="6">via un amendement</a> à la loi création discuté –&nbsp;et finalement écarté&nbsp;– au Sénat. L’Adami était derrière ce texte proposé par le sénateur Patrick Abate (PC) et compte déposer un texte similaire lors de la seconde lecture du texte à l’Assemblée nationale… en espérant que la majorité de gauche sera plus sensible à la cause des artistes sur ce point. Au Sénat, Fleur Pellerin, alors ministre de la Culture, avait pour sa part botté en touche, déclarant que <q>les cessions gratuites sont d’ores et déjà sanctionnées par les tribunaux dès lors qu’elles sont jugées abusives</q>.</p>
+
+<aside id="mini-6" class="mini md-w-2c lg-w-3c lg-ph-0">
+<a class="link-unstyled" href="http://www.senat.fr/seances/s201602/s20160210/s20160210_mono.html#amd_2015_341_235" />
+<span class="image"><img class="responsive" src="img/senat.jpg" alt="" /></span>
+<p class="title">La discussion de cet amendement</p>
+<p class="subtitle">À consulter sur le site du Sénat.</p>
+</a>
+</aside>
+
+<p>Sauf qu’aucun artiste n’est allé en justice contre sa maison de disques sur ce point. Le faire, ce serait signer sa mort dans le petit milieu de la musique à la française.</p>
+
+
+

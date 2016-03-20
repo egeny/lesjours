@@ -1,0 +1,28 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep-9-contrats-cessions-creance",
+
+	"number": 9,
+	"date": "2016-03-21T00:05+01:00",
+
+	"title": "Maisons de disques&nbsp;: le&nbsp;désamour du risque",
+	"intro": "<strong>Sous contrat (3/3).</strong> Les majors se surprotègent en tentant de voler une partie des revenus des artistes, qui leur échappait jusque-là.",
+	"subtitle": "<strong>Sous contrat (3/3).</strong> Les majors tentent de voler une partie des revenus des artistes, qui leur échappait jusque-là.",
+	"lead": "Dans l’épisode précédent, j’expliquais que certaines clauses encombrantes des contrats qui lient artistes et maisons de disques ont été écartées des récentes discussions qui devaient mettre un peu d’ordre dans les pratiques.",
+
+	"tags": ["Musique", "Streaming", "artistes", "contrats", "maisons de disques"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:sophian-fanen" },
+			{ "Illustrations": ["author:sebastien-calvet"] }
+		],
+
+		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
+		"prev":  "episode:la-fete-du-stream/ep-8-contrats-artistes-suite",
+		"last":  "episode:la-fete-du-stream/ep-9-cessions-creance"
+
+			}
+}
