@@ -22,7 +22,8 @@
 
 		"first": "episode:la-fete-du-stream/ep-1-du-cd-au-streaming",
 		"prev":  "episode:la-fete-du-stream/ep-7-contrats-artistes",
-		"last":  "episode:la-fete-du-stream/ep-8-contrats-artistes-suite"
+		"next": "episode:la-fete-du-stream/ep-9-contrats-cessions-creance",
+		"last":  "episode:la-fete-du-stream/ep-9-contrats-cessions-creance"
 
 			}
 }
