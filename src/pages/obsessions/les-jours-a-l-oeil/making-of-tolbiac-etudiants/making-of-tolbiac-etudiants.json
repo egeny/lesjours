@@ -1,0 +1,27 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "making-of-tolbiac-etudiants",
+
+	"number": 6,
+	"date": "2016-03-21T10:00+01:00",
+
+	"title": "«&nbsp;Dégagez-moi tous ces photographes, là&nbsp;!&nbsp;»",
+	"intro": "Le photographe Yann Levy a couvert pour «&nbsp;Les Jours&nbsp;» la manif du 17&nbsp;mars à Paris. Il raconte l’évacuation musclée de la fac de Tolbiac.",
+	"subtitle": "Le photographe Yann Levy a couvert pour «&nbsp;Les Jours&nbsp;» la manif du 17&nbsp;mars. Il raconte l’évacuation musclée de la fac de Tolbiac.",
+	"lead":  "Comme la semaine dernière, des tracts appelaient à une réunion post-manif à Tolbiac, dans le sud de Paris, le 17&nbsp;mars. Mais cette fois, des centaines de CRS et de policiers en civil ont pris position autour de l’université",
+
+	"tags": ["photographie", "manifestation", "étudiants"],
+
+	"rel": {
+		"authors": [
+			{ "text": ["author:camille-polloni", "author:yann-levy"] },
+			{ "photo": "author:yann-levy" }
+		],
+
+		"first": "episode:les-jours-a-l-oeil/making-of-lesjoursaloeil",
+		"prev": "episode:les-jours-a-l-oeil/making-of-riester",
+		"last": "episode:les-jours-a-l-oeil/making-of-riester"
+	}
+}
