@@ -1,0 +1,27 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "sophie-abdeslam",
+
+	"number": 34,
+	"date": "2016-03-22T05:00+01:00",
+
+	"title": "L’arrestation d’Abdeslam ne libère pas Sophie",
+	"intro": "<strong>Journal de bord du XIe.</strong> Malgré le soulagement, Sophie, qui était en terrasse du café du Bataclan le 13&nbsp;Novembre, voit ses peurs ressurgir.",
+	"subtitle": "<strong>Journal de bord du XIe.</strong> Malgré le soulagement, Sophie, au café du Bataclan le 13&nbsp;Novembre, voit ses peurs ressurgir.",
+	"lead": "Sophie sortait d’une réunion quand elle a appris l’arrestation en Belgique de Salah Abdeslam, le terroriste recherché depuis les attentats du 13&nbsp;Novembre à Paris. C’est un flash du <i>Figaro</i> sur son mobile qui l’a alertée.",
+
+	"tags": ["13 Novembre", "Bataclan", "Abdeslam", "terrorisme"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:charlotte-rotman" },
+			{ "photo": ["author:charlotte-rotman", "author:sebastien-calvet"]}
+		],
+
+		"first": "episode:treize-novembre/vendredi-ou-la-nuit-sauvage",
+		"prev":  "episode:treize-novembre/loi-urvoas-mesures",
+		"last":  "episode:treize-novembre/sophie-abdeslam"
+	}
+}
