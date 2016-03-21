@@ -1,0 +1,61 @@
+{% from "partials/_macro.html" import mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[5] %}
+<p><a href="#{{ person.href }}" data-mini="1"><span class="lettrine">S</span>ophie</a> sortait d’une réunion quand elle a appris <a href="#note-1">l’arrestation</a> en Belgique de Salah Abdeslam, le terroriste recherché depuis les attentats du 13&nbsp;Novembre à Paris. C’est un flash du <i>Figaro</i> sur son mobile qui l’a alertée. Elle a crié à la cantonade&nbsp;: <q>Il est vivant&nbsp;!</q> <q>C’était presque une réaction enfantine, comme une petite fille qui sautille de joie</q>, me raconte-t-elle quand je la rencontre trois jours après, dans un café du quartier du Bataclan où nous avons à présent nos habitudes. Sophie était en terrasse du bar qui jouxte la salle de concert, le vendredi 13&nbsp;novembre, et a échappé aux tirs d’un des assaillants (<a href="/obsessions/treize-novembre/j-ai-vu-le-tireur-jeune-calme-tranquille">lire épisode 8</a>, «&nbsp;J’ai vu le tireur, jeune, calme, tranquille&nbsp;»). La fin de cavale d’Abdeslam la soulage. Mais elle fait également remonter <q>beaucoup d’angoisse</q>.</p>
+
+{{
+mini({
+number: 1,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Abdeslam arrêté",
+caption: "Inculpé de «&nbsp;participation à des assassinats terroristes&nbsp;» et de «&nbsp;participation aux activités d’un groupe terroriste&nbsp;» par la justice belge, Salah Abdeslam a été incarcéré dans la prison de haute sécurité de Bruges. Les autorités judiciaires françaises avaient émis un mandat d’arrêt européen qui devrait permettre qu’il soit transféré et jugé en France."
+})
+}}
+
+<blockquote>
+<p>Je l’avais un peu tué dans ma mémoire. Pour qu’il ne puisse pas revenir.</p>
+<footer>Sophie, à propos de Salah Abdeslam</footer>
+</blockquote>
+
+<p>Depuis le 13&nbsp;Novembre, Sophie essaie, pas à pas, de se reconstruire (<a href="/obsessions/treize-novembre/sophie-episode-2">lire l’épisode 25</a>, «&nbsp;La peur de Sophie “ne s’atténue pas”&nbsp;»). <q>J’ai essayé de tourner la page. Je me suis dit&nbsp;: <q>Ils sont morts.</q></q> Elle a en partie <q>occulté</q> la figure d’Abdeslam, en fuite jusqu’au vendredi 18&nbsp;mars et présenté comme un ennemi public&nbsp;: <q>Je l’avais un peu tué dans ma mémoire. Pour qu’il ne puisse pas revenir.</q></p>
+
+<p>On ne sait pas exactement quel est le rôle exact de ce Français de 26&nbsp;ans qui semble avoir été un logisticien des attentats parisiens, et  <a href="#note-2">aurait dit aux enquêteurs</a> qu’il devait se faire exploser au Stade de France. <q>Est-ce un pion&nbsp;? Un superviseur&nbsp;? Je me méfie toujours un peu de ce qu’on nous dit de l’enquête pour nous nourrir, nous satisfaire. Mais en tout cas, on n’a pas coupé le mal à la racine.</q></p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 2,
+title: "Les plans d’Abdeslam",
+caption: "C’est ce qu’a expliqué samedi le procureur de Paris François Molins, en se basant sur le procès verbal établi par les enquêteurs belges –&nbsp;ce qui lui vaut une plainte pour violation du secret de l’instruction de la part de l’avocat d’Abdeslam. D’autre part, le ministre des Affaires étrangères belge, Didier Reynders, a affirmé dimanche qu’Abdeslam était «&nbsp;prêt à refaire quelque chose à Bruxelles. […] Et c’est peut-être la réalité parce que nous avons trouvé beaucoup d’armes, des armes lourdes au cours des premières investigations, et nous avons trouvé un nouveau réseau autour de lui à Bruxelles&nbsp;»."
+})
+}}
+
+<figure>
+<img src="img/abdeslam-arrete-1.jpg" alt="" />
+<figcaption><span>Devant le Bataclan, le 21&nbsp;mars 2016 <span class="credits">Photo Charlotte Rotman/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Son arrestation ramène Sophie en arrière. <q>Je veux oublier, mais là, j’arrive dans une impasse.</q> Sophie est retournée à l’intérieur du café lorsqu’il a rouvert un matin pour accueillir des rescapés qui revenaient voir la salle de concert où 90&nbsp;personnes ont péri. <q>Cela ne correspondait pas forcément à mes souvenirs. J’ai revu le placard dans lequel je m’étais cachée, mais je n’ai pas réussi à refaire mon parcours&nbsp;; j’y allais, je cherchais quelque chose, je suis allée voir et je n’ai pas trouvé. Mais c’était une étape, comme un cérémonial de deuil.</q></p>
+
+
+<p>Comme beaucoup de victimes des attentats l’ont déclaré, Sophie attend une parole de la part de Salah Abdeslam. Mais la satisfaction de le voir arrêté vivant –&nbsp;ce qui, souligne-t-elle, était peu probable <q>vu la violence des assauts précédents</q>&nbsp;– tient aussi de <q>la vengeance</q>. <q>Il va pouvoir payer s’il a joué un rôle&nbsp;: sa vie sera finie sans l’être, il va croupir en prison.</q></p>
+
+<aside>
+<p><span>Sophie</span> a de nouveau peur</p>
+</aside>
+
+<p>La menace est encagée. Mais elle se revèle <q>de nouveau réelle, palpable et proche</q>. <q>Abdeslam avait des parents, une famille, un toit… Il ne ressemble pas aux frères Kouachi qui, eux, semblaient vraiment perdus. Là non, et c’est encore plus flippant.</q> Sophie, qui avait l’impression d’avoir surmonté ses angoisses (<a href="/obsessions/treize-novembre/sophie-episode-3">lire l’épisode 28</a>, «&nbsp;Sophie et les survivants&nbsp;» ), a de nouveau peur et a recours, de nouveau, à des anxiolytiques.</p>
+
+<p>En m’excusant un peu de poser cette question qui pourrait générer des angoisses supplémentaires, je lui demande si elle craint des représailles depuis l’arrestation du terroriste. Elle me souffle <q>oui, bien sûr</q>. Le jour de l’interpellation à Molenbeek, l’un de ses collègues devait se rendre à Bruxelles. <q>Tout le monde lui disait d’être prudent là-bas. Et moi, j’avais envie de leur dire&nbsp;: <q>Mais vous ne voyez pas qu’ici aussi, on est en plein dedans&nbsp;?</q></q></p>
