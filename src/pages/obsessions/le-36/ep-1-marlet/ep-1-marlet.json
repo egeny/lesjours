@@ -1,5 +1,6 @@
 {
 	"template":   "episode",
+	"visibility": "protected",
 
 	"href": "ep-1-marlet",
 
