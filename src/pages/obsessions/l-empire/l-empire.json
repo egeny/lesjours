@@ -16,7 +16,8 @@
 		"episode:l-empire/ep5-jour-de-deug",
 		"episode:l-empire/bollore-29-millions",
 		"episode:l-empire/trois-septembre-1",
-		"episode:l-empire/sons-bollore-comite"
+		"episode:l-empire/sons-bollore-comite",
+		"episode:l-empire/ep8-hanouna"
 	],
 
 	"people": [
@@ -70,8 +71,17 @@
 			"img":      "img/aprikian-portrait.jpg",
 			"alt":      "",
 			"title":    "Ara Aprikian",
-			"subtitle": "49 ans, ex-chef du pôle gratuit de Canal+",
-			"desc": "Voilà l’homme qui a orchestré la conversion de Canal+ au gratuit. Piqué à TF1 en 2005 (il était directeur des divertissements), Ara Aprikian commence mollo à Canal+ avant de se voir confier ce qui sera son grand-œuvre : la nouvelle grille de D8, fraîchement rachetée à Vincent Bolloré. Le retour de « Nouvelle Star »? C’est lui. Le réchauffage du « Maillon faible » ? C’est lui. Hanouna tous les jours ? C’est lui. Mais autant Cyril Hanouna est, disons, un chouille exubérant, autant son patron Ara Aprikian est discret. Très proche de Rodolphe Belmer, il quitte le groupe après son départ à l’été 2015. Fin septembre, le voilà de retour à TF1 pour un poste de « conseiller spécial ».",
+			"subtitle": "50 ans, ex-chef du pôle gratuit de Canal+",
+			"desc": "Voilà l’homme qui a orchestré la conversion de Canal+ au gratuit. Piqué à TF1 en 2005 (il était directeur des divertissements), Ara Aprikian commence mollo à Canal+ avant de se voir confier ce qui sera son grand-œuvre : la nouvelle grille de D8, fraîchement rachetée à Vincent Bolloré. Le retour de « Nouvelle Star »? C’est lui. Le réchauffage du « Maillon faible » ? C’est lui. Hanouna tous les jours ? C’est lui. Mais autant Cyril Hanouna est, disons, un chouille exubérant, autant son patron Ara Aprikian est discret. Très proche de Rodolphe Belmer, il quitte le groupe après son départ à l’été 2015. Fin septembre, le voilà de retour à TF1 pour un poste de «&nbsp;conseiller spécial&nbsp;».",
+			"minor": true
+		},
+		{
+			"href":     "cyril-hanouna",
+			"img":      "img/cyril-hanouna.jpg",
+			"alt":      "",
+			"title":    "Cyril Hanouna",
+			"subtitle": "41 ans, chante «&nbsp;Les Sardines&nbsp;»",
+			"desc": "Cyril HihiHIIIHAHAHAHAAnouna, c'est ainsi que, dans une autre vie, nous appelions Cyril Hanouna. Ça va, nous aussi on a le droit d'être contents de nous. Tout comme Hanouna dont la particularité est de s'esclaffer bruyamment de ses propres blagues, de ses propres sketchs, de sa propre émission. Mais qui se souvient qu'Hanouna alias «&nbsp;Baba&nbsp;» pour ses millions de «&nbsp;fanzouzes&nbsp;», ses fans et followers sur Twitter, a longtemps été un loser télévisuel&nbsp;? Ce type qu'on essayait dans des émissions d'été sur France 2 avant de le jeter, l'éternel remplaçant, le loupeur d'émissions approximatives. Et puis un jour, l'illumination&nbsp;: une table, des chroniqueurs, et on parle de télé. C'est <i>Touche pas à mon poste</i> qu'il vend à France 4 avant de la refourguer à D8 tout juste rachetée par Canal+ avec armes, bagages et chroniqueurs. Et ça marche. Peu à peu, Hanouna taille des croupières télévisuelles à tout le monde notamment –&nbsp;et là, il y a vraiment de quoi s'esclaffer&nbsp;–, à la chaîne-mère Canal+. De télé, il est de moins en moins question&nbsp;; d'affubler les chroniqueurs de perruques et de se jeter peinture, œufs et autres zakouskis à la face, en un bizutage géant à écran ouvert, beaucoup plus. Au son des «&nbsp;Sardines&nbsp;» de Patrick Sébastien. Et, en roue libre, Hanouna enfle, Hanouna gonfle, HanounaaahahHAHAHAHA.",
 			"minor": true
 		}
 	],

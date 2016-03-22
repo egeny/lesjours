@@ -22,6 +22,7 @@
 
 		"first": "episode:l-empire/ep2-plug-canal",
 		"prev":  "episode:l-empire/trois-septembre-1",
-		"last":  "episode:l-empire/sons-bollore-comite"
+		"next": "episode:l-empire/ep8-hanouna",
+		"last":  "episode:l-empire/ep8-hanouna"
 	}
 }
