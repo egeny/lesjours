@@ -1,0 +1,27 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep8-hanouna",
+
+	"number": 8,
+	"date": "2016-01-23T00:05+01:00",
+
+	"title": "Bolloré&nbsp;: touche pas à mon pote Hanouna",
+	"intro":  "L’animateur-producteur, qui a signé un contrat mirobolant avec le proprio de Vivendi, fait sa loi sur D8.",
+	"subtitle": "L’animateur-producteur, qui a signé un contrat mirobolant avec le patron de Vivendi, fait sa loi sur D8.",
+	"lead": "Bon, dites-le parce que nous, on n’y arrive pas. Mais si, voyons, vous savez, c’est ce que Cyril Hanouna a fait dans la chaussure d’un des chroniqueurs de <i>Touche pas à mon poste</i>, l’émission de D8 d’où il trône sur toute la chaîne.",
+
+	"tags": ["Vincent Bolloré", "Rodolphe Belmer", "Canal+", "Vivendi", "Cyril Hanouna", "D8"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:garriberts" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:l-empire/ep2-plug-canal",
+		"prev": "episode:l-empire/sons-bollore-comite",
+		"last":  "episode:l-empire/ep8-hanouna"
+	}
+}
