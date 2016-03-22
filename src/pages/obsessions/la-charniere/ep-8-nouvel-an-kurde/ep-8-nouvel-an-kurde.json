@@ -1,0 +1,29 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep-8-nouvel-an-kurde",
+
+	"number": 8,
+	"date": "2016-03-22T16:00+01:00",
+
+	"title": "La fête inquiète des Kurdes",
+	"intro": "Les Kurdes célèbrent leur nouvel an. Reportage au Kurdistan turc, sous pression policière et menace de nouveaux attentats islamistes.",
+	"subtitle": "Les Kurdes célèbrent «&nbsp;Newroz&nbsp;», leur nouvel an. Reportage au Kurdistan turc, sous pression policière et menace d’attentats.",
+	"lead": "Pour la troisième fois en une heure, un uniforme fait signe de loin de se ranger sur le côté. Nouveau barrage. Des militaires fouillent les passagers d’une voiture à côté, il faut ouvrir le coffre, la boîte à gants, sortir passeports",
+	"tags": ["Turquie", "Erdogan", "Kurdistan"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:olivier-bertrand" },
+			{ "photo": "Emin Ozmen/Le Journal" }
+		],
+
+		"first": "episode:la-charniere/marmite-turque",
+		"prev": "episode:la-charniere/ep-7-attentat",
+		"last": "episode:la-charniere/ep-8-nouvel-an-kurde"
+
+
+
+			}
+}

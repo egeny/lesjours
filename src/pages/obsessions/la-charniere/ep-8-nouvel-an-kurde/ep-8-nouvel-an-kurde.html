@@ -1,0 +1,117 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+<h3>Diyarbakir, envoyé spécial</h3>
+
+<p><span class="lettrine">P</span>our la troisième fois en une heure, un uniforme fait signe de loin de se ranger sur le côté. Nouveau barrage. Des militaires fouillent les passagers d’une voiture à côté, il faut ouvrir le coffre, la boîte à gants, sortir passeports et cartes de presse. Au loin, on devine une colonne de fumée. Dans le climat turc actuel, on craint un attentat ou de nouveaux affrontements à Diyarbakir, capitale du Kurdistan. C’est seulement un grand feu pour la fête de Newroz, le nouvel an kurde. Il y aura encore trois barrages et plusieurs fouilles pour rejoindre la fête, très politique avec la guerre qui a repris cet été.</p>
+
+<p>La veille, les autorités ont interdit le rassemblement d’Istanbul. <i>«&nbsp;Personne n’avait le cœur à la fête avec l’attentat</i> [<a href="/obsessions/la-charniere/ep-7-attentat">lire l’épisode 7</a>, «&nbsp;Istanbul, jour d’attentat&nbsp;»], disait la députée <a href="#note-1">HDP</a> d’Istanbul, Filiz Kerestecioglu. <i>Mais dans une ville aussi cosmopolite, Newroz aurait été un très beau message de paix.&nbsp;»</i> Des centaines de policiers avaient été déployés à Istanbul pour interdire la fête, quadriller les rues. Il ne se passait rien, alors des voltigeurs qui devaient s’ennuyer ont fondu sur un groupe de jeunes hommes qu’ils ont arrêtés. Comme s’il fallait se défouler ou impressionner la population. Même arbitraire à l’entrée de Diyarbakir, où des policiers embarquent de jeunes garçons. La foule regarde en silence. Les drapeaux, les foulards, les tresses, les robes, sont aux couleurs kurdes. Rouges, jaunes, verts.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "Le HDP",
+caption: "Créé à l’automne 2013, le Parti démocratique des peuples représente de nombreuses minorités, notamment kurdes, ainsi que des partis de gauche et les Verts turcs. En février 2016, il compte 59 députés."
+})
+}}
+
+<figure>
+<img src="img/diyarbakir-1.jpg" alt="" />
+<figcaption><span>Des milliers de Kurdes rejoignent Diyarbakir, dans le sud-est de la Turquie, pour célébrer le nouvel an <span class="credits">Photo Emin Ozmen/Le Journal pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+
+{% set person = obsession.people[4] %}
+<p>Newroz est une fête féodale, agraire, qui célèbre l’arrivée du printemps. Le regain qui approche, chez les Arabes, les Perses et les Kurdes, pour qui elle permet de mesurer les changements de climat politique. <i>«&nbsp;Celle de 2013 était magnifique</i>, se souvient <a href="#{{ person.href }}" data-mini="1">Gülistan</a>, étudiante en sociologie. <i>Il y avait beaucoup d‘espoir, une belle fraternité. Tout le monde se disait que la paix allait enfin venir.&nbsp;»</i> Gülistan est kurde, elle fait ses études à Istanbul où je l’ai rencontrée, mais sa famille vit à Cizre, à 150&nbsp;kilomètres de Diyarbakir. Elle raconte que le processus de paix, qui avait repris à la fin 2012, était pour la population comme une sortie de cauchemar. Et puis <a href="#note-2">l’AKP</a> a «&nbsp;cassé la table&nbsp;» comme on dit en Turquie&nbsp;: mis fin aux négociations. Le gouvernement a repris la guerre contre les Kurdes. En réponse, des policiers et militaires ont été tués, avant que des attentats ne touchent également des civils, sans choquer le <a href="#note-3">PKK</a>.</p>
+
+
+
+{{
+mini({
+number: 1,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{{
+note({
+number: 2,
+title: "L’AKP",
+caption: "Le Parti de la justice et du développement. Le parti du Président Erdogan, de centre-droit, populaire et conservateur, exerce un contrôle étroit sur le pays."
+})
+}}
+
+{{
+note({
+number: 3,
+title: "Le PKK",
+caption: "Parti des travailleurs du Kurdistan, mouvement d’inspiration marxiste créé à la fin des années&nbsp;70 pour viser l’indépendance du Kurdistan et mener la guérilla. Aujourd’hui, le PKK réclame l’autonomie, une plus grande décentralisation politique, la reconnaissance des spécificités culturelles, notamment l’enseignement en langue kurde."
+})
+}}
+
+
+<aside>
+<p><span>Les barrages se resserrent,</span> la fouille devient sévère</p>
+</aside>
+
+<p>La fête se tient à l’entrée de la ville, dans un très vaste enclos fermé par les hautes grilles de la police. Alentour, des étendues de champs d’un vert vif malgré l’hiver, et d’innombrables immeubles en construction. Les barrages se resserrent, la fouille devient sévère. Officiellement, les autorités craignent un attentat de l’État islamique et font courir des rumeurs dans ce sens. Cela a effrayé la population qui est moins nombreuse que l’année dernière. Il y a le souvenir des Newroz du début des années&nbsp;90. En 1991 et 1992 notamment, des dizaines de Kurdes avaient été tués pendant la fête lorsque l’armée avait chargé. Cette fois, les policiers restent tranquilles. Pour eux, la journée sera difficile, ils ne quittent pas leurs casques sous le soleil de plomb.</p>
+
+<figure>
+<img src="img/diyarbakir-2.jpg" alt="" />
+<figcaption><span>Les forces de sécurité turques lors des célébrations à Diyarbakir, le 21 mars 2016 <span class="credits">Photo Emin Ozmen/Le Journal pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Passés les barrages, les discours politiques sont assez dissuasifs. Interminables, tous semblables, souvent à la limite de la saturation. Les haut-parleurs, tout au fond de l’enclos à des centaines de mètres, retransmettent avec un léger retard, ajoutant un écho terrible. Au bout de quelques heures, les élus sont seuls à ne pas se rendre compte que pas plus d’une centaine de personnes les écoutent encore.</p>
+
+<p>Sur la pelouse, les gens dansent, rient, discutent, agitent leurs drapeaux. Abdullah Öcalan est partout. Personne n’a remplacé le leader du PKK, condamné à la prison à vie, emprisonné depuis 1999, et qui négociait avec l’État avant que l’AKP ne mette fin aux discussions cet été, pour rallier les nationalistes et gagner les dernières législatives.</p>
+
+<blockquote>
+<p>Öcalan est notre Nelson Mandela.</p>
+<footer>Erlan, traducteur</footer>
+</blockquote>
+
+<p>La fête est généreuse. Hommes, femmes, enfants, ados, adultes, vieillards, mêlés. En croisant un Occidental, beaucoup portent une main sur leur cœur. Au milieu des drapeaux à l’effigie d’Öcalan, que tout le monde appelle «&nbsp;Apo&nbsp;», les sigles des différents mouvements proches du PKK, notamment ceux qui animaient ces derniers mois la résistance dans les quartiers assiégés par l’armée. Très peu de drapeaux du HDP. Beaucoup de jeunes gens en treillis.</p>
+
+<p>Une fille, «&nbsp;PKK&nbsp;» tatoué sur la joue, mène le <i>halay</i>, la danse qui réunit un peu partout des petits groupes, sur une musique entêtante que jouent deux hommes, l’un portant le <i>davul</i>, gros tambour frappé avec une baguette recourbée, l’autre soufflant dans une courte flûte qui fait un bruit de cornemuse. Les danseurs se tiennent par les doigts, bras le long du corps pour être les plus serrés possible. La jeune femme au bout du rang imprime le rythme avec un foulard. Les corps montent, descendent, scandent le tempo, d’abord lentement, puis cela s’accélère sans fin, les visages sont en sueur, lancent des cris, répètent régulièrement en chœur&nbsp;: <q>Apo est le leader.</q></p>
+
+<figure>
+<img src="img/diyarbakir-3.jpg" alt="" />
+<figcaption><span>Un jeune homme avec un drapeau du PKK sur le site des célébrations de Newroz à Diyarbakir, le 21 mars 2016 <span class="credits">Photo Emin Ozmen/Le Journal pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Sur la scène là-bas, un homme politique harangue, rappelle que la guerre n’est pas nouvelle, qu’elle dure depuis de longue années. Que les Kurdes ne se laisseront pas faire. Mais dans la foule, les discours sont plus pacifistes. <q>Öcalan est notre Nelson Mandela, lui est vraiment pour la paix aujourd’hui</q>, dit Erlan, qui travaillait comme traducteur anglo-turc à Diyarbakir et qui doit à présent voyager pour trouver du travail. La ville remontait la pente, commençait à vivre du tourisme. La guerre a mis tout cela à terre. <i>«&nbsp;Vous pouvez parler avec tous ces gens</i>, poursuit Erlan. <i>Ils sont tous pour la paix.&nbsp;»</i></p>
+
+{% set person = obsession.people[1] %}
+<p>Aucun touriste n’est venu cette année pour Newroz. Peu de journalistes occidentaux, ils restent pour la plupart avec les officiels, près de la scène, protégée par des grilles. Une jeune fille, à peine 20&nbsp;ans, s’approche, essaie de lire mes notes. Avec ses copines, elles portent des robes longues, très belles, jaunes, rouges, vertes avec des fils dorés. Elle essaie se faire comprendre, puis demande le cahier, le stylo, et écrit en turc. <q>Tous les Kurdes veulent la liberté pour lui [Öcalan, ndlr] et pour tous les leaders politiques prisonniers. Nous voulons la liberté pour le Kurdistan. S’il vous plaît, soyez notre voix pour l’Europe et dites ce que le fasciste <a href="#{{ person.href }}" data-mini="2">Erdogan</a> est en train de faire ici. Longue vie aux Kurdes et merci beaucoup de me donner cette chance d’écrire ces mots, de dire nos opinions.</q> Elle rend le cahier, sourit, ajoute&nbsp;: <q>I love Apo, I love Kurdistan, I love PKK, I love peace.</q></p>
+
+
+{{
+mini({
+number: 2,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<aside>
+<p><span>Patrouilles de blindés</span>  et drapeaux trucs</p>
+</aside>
+
+<p>Le ciel s’est un peu couvert. Cela semble soulager les policiers, au bord de l’évanouissement tout autour de l’enceinte. La scène est à présent envahie par les gamins, doigts en «&nbsp;V&nbsp;», drapeaux au vent. La fin approche. Ce soir, un dîner de gala réunit des délégations d’élus étrangers&nbsp;; pour la France, Olivier Besancenot (NPA) est là, ainsi que quelques communistes et socialistes, invités par le HDP. La foule, de son côté, regagne la ville à pied, certains montent jusqu’à Sur, un quartier toujours quadrillé par les forces spéciales de la gendarmerie et de la police. Des blindés patrouillent, canons de mitrailleuses dépassant des portières. À chaque carrefour, des casemates faites de sacs de sable et de bâches en plastique, avec un tuyau de poêle s’échappant au-dessus. Des policiers en sortent parfois avec des machettes, pour fendre quelques bûches qu’ils attrapent sur des tas près de leurs abris. Cela sent le cèdre brûlé. Les policiers ont accroché tout autour des casemates des drapeaux turcs, un immense pend sur la façade d’un hôtel, donnant l’impression d’une armée d’occupation.</p>
+
+<figure>
+<img src="img/diyarbakir-4.jpg" alt="" />
+<figcaption><span>Des jeunes Kurdes avec des chevaux près du site des célébrations de Newroz à Diyarbakir, le 21 mars 2016 <span class="credits">Photo Emin Ozmen/Le Journal pour <i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Une partie du quartier est encore complètement bouclée, cachée par des bâches pour protéger les policiers d’éventuels snipers. Un homme explique qu’il n’a pas pu rentrer chez lui depuis des semaines. Officiellement, les autorités turques cherchent des explosifs. Cela conserve encore à l’abri des regards les dégâts que l’on dit considérables dans cette partie de la ville aux ruelles très étroites, que les militaires dégageaient à coup d’obus.</p>
+
+<p>Diyarbakir avait particulièrement souffert en 1990. Cette fois, la ville martyr est Cizre, qui a connu beaucoup plus de victimes. Exceptionnellement, Newroz ne se termine donc pas dans la capitale Diyarbakir mais à Cizre, ce mardi. Les autorités turques ont interdit le rassemblement. Beaucoup craignent des violences cet après-midi.</p>
