@@ -1,0 +1,173 @@
+{% from "partials/_macro.html" import note, mini %}
+{% set obsession = episode.obsession|expand %}
+
+{% set person = obsession.people[2] %}
+<p><span class="lettrine">D</span>ans les salons Ricard à côté de la place de l’Étoile à Paris, crâne rasé, costume noir, le préfet Jean-Louis Fiamenghi, personnage du 36 issu de l’antigang, arrose la sortie de ses mémoires, <a href="#note-1"><i>Dans le secret de l’action</i></a>. Ce soir du 17&nbsp;février, verre d’anisette à la main, une ribambelle de grands flics de droite –&nbsp;pour la plupart virés par la gauche à son retour au pouvoir en 2012&nbsp;– encerclent leur copain «&nbsp;Fiam&nbsp;», reconverti lui aussi dans le privé, à la tête de la sûreté de Veolia, l’ex-Générale des eaux.</p>
+
+{% from "partials/_macro.html" import note %}
+{{
+note({
+number: 1,
+title: "«&nbsp;Dans le secret de l’action&nbsp;»",
+caption: "Janvier 2016, éditions Mareuil, avec la collaboration de Franck Hériot."
+})
+}}
+
+<p>À commencer par ses potes des années&nbsp;70 au Quai des Orfèvres, tel Ange Mancini, parti de rien comme lui, devenu patron du Raid avant lui, qui a fini préfet coordonnateur du renseignement à l’Élysée, et passe aujourd’hui sa retraite chez Bolloré comme conseiller Afrique. Il y a aussi son coéquipier de la BRI, «&nbsp;Jo&nbsp;» Querry, avec sa gouaille et ses grosses lunettes, chef de la sécurité du groupe Casino. On le reconnaît sur les photos projetées sur le mur à côté de Fiamenghi en 1979. Il pose avec ses collègues de l’antigang dans les égouts de la Société générale de la rue des Saints-Pères à Paris, où ils ont coincé un gang de braqueurs en sous-sol. L’ex-commissaire Danielle Thiéry, l’une des premières femmes divisionnaires de la PJ, romancière de polars réalistes, vient embrasser Fiam avec <a href="#note-2">Christophe Baroche</a>, psychologue au Raid, qui soufflait les réponses aux négociateurs.</p>
+
+{{
+note({
+number: 2,
+title: "«&nbsp;Le Souffleur&nbsp;»",
+caption: "Danielle Thiéry et Christophe Baroche ont coécrit «&nbsp;Le Souffleur&nbsp;» (éd. Mareuil, mars 2016), sur le métier de psychologue au sein de la cellule négociation du Raid."
+})
+}}
+
+<figure>
+<img src="img/ep-3-fiamenghi-3.jpg" alt="" />
+<figcaption><span>Jean-Louis Fiamenghi (à droite au premier plan) dans les égouts de la rue des Saints-Pères sous la Société générale, en 1979, pour coincer un gang de braqueurs <span class="credits">Photo Jean-Louis Fiamenghi, <i>Dans le secret de l’action</i>.</span></span></figcaption>
+</figure>
+
+
+{% set person = obsession.people[1] %}
+<p>D’autres invités, de la génération suivante, rappliquent au pot, comme l’actuel directeur de la PJ de Paris, <a href="#{{ person.href }}" data-mini="1">Christian Sainte</a> ou Christian Flaesch, son prédécesseur évincé fin 2013 qui chapeaute aujourd’hui la sécurité d’Accor. {% set person = obsession.people[5] %}L’ancien patron de la BRB (brigade de répression du banditisme), de la crime, de la financière, du Quai des Orfèvres puis de toute la police, <a href="#{{ person.href }}" data-mini="2">Frédéric Péchenard</a>, trinque également avec son ami Fiamenghi qu’il a eu sous ses ordres. Hissé au poste suprême de directeur général de la police nationale en 2007 par son ex-copain de jeunesse Nicolas Sarkozy quand celui-ci est devenu président de la République, «&nbsp;la Pêche&nbsp;» s’est lancé à fond dans la politique. Il est désormais conseiller de Paris et directeur général des Républicains, mais jargonne encore comme les poulets, discute avec le sénateur Pierre Charon puis s’éclipse assez vite&nbsp;: <q>J’ai un parti à faire tourner moi, les gars.</q></p>
+
+{% set person = obsession.people[1] %}
+{{
+mini({
+number: 1,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{% set person = obsession.people[5] %}
+{{
+mini({
+number: 2,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<p>Il laisse à son hôte son poulain, Amaury de Hauteclocque. Haute stature et physique avantageux, ce descendant de la noblesse militaire (son grand oncle, le fameux maréchal Leclerc, a libéré Paris en 1944 avec la 2e DB) a choisi la police nationale, a grandi au sein des brigades du 36, a succédé à Fiam au Raid puis a été éjecté au bout de six ans à la police des polices, alias le «&nbsp;cimetière des éléphants&nbsp;».</p>
+
+<figure>
+<img src="img/ep-3-fiamenghi-2.gif" alt="" />
+<figcaption><span>La soirée de lancement du livre de Jean-Louis Fiamenghi, «&nbsp;Dans le secret de l’action&nbsp;», au salon Ricard le 17&nbsp;février 2016 <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Le bel Amaury, qui sirote un pastis bien jaune, lâche, fataliste&nbsp;: <q>Ils m’ont mis à la retraite à 46 ans, je travaille dans les assurances</q>, au groupe mutualiste Covéa. Il se souvient du temps où, à la 5e division de police judiciaire de Paris, <q>on se faisait livrer des caisses de Ricard</q>, une consommation <q>digne d’une bonne brasserie parisienne</q>. À son tour, Jean-Louis Fiamenghi <q>remercie la maison Ricard, des amis de toujours</q>. Elle accueille gracieusement en ses salons pots de flics et vœux de la BRI, mais pas seulement, nuance le tenancier&nbsp;: <q>C’est historique. On entretient le contact avec tous ceux qui véhiculent la marque.</q></p>
+
+<p>Fils de militaire corse, adjudant-chef au Maroc, le héros de la soirée a été élevé à la dure à l’école militaire de l’âge de 11 à 17&nbsp;ans, puis a tout plaqué au printemps&nbsp;68 pour devenir <q>reporter de guerre, cameraman</q>. Finalement, <q>ça ne s’est pas fait</q>, racontera un peu plus tard aux <i>Jours</i> Jean-Louis Fiamenghi chez Veolia. Derrière son bureau, une immense photo encadrée le montre à son apogée en 2005&nbsp;: patron du Raid, tenue commando, bras croisés, mine fière, avec ses hommes casqués et cagoulés en arrière-plan.</p>
+
+<aside>
+<p><span>Il débarque au 36</span> comme dans un moulin</p>
+</aside>
+
+<p>Mais c’est de ses douze années de jeunesse au 36 dont Fiam adore parler, sans cachotteries. Avec ses modestes études de droit et sa gueule de Belmondo dans <i>À bout de souffle</i>, le surnommé «&nbsp;Bébel&nbsp;» entre en 1972 <q>par hasard</q> à la préfecture de police de Paris qui, <q>confrontée à des départs massifs à la retraite, recrute à tour de bras des enquêteurs contractuels</q>, écrit-il.  Sans concours ni examen, le voilà <q>recruté sur titre</q> et <q>convoqué au Quai des Orfèvres</q>, <q>la légende, le must des flics, comme dans les films</q>.</p>
+
+
+{% set person = obsession.people[3] %}
+<p><q>Impressionné</q>, le provincial débarque au 36 comme dans un moulin, le 16&nbsp;juin 1972. Suivant le rituel (<a href="/obsessions/le-36/ep-1-marlet">lire l’épisode 1</a>, «&nbsp;Le commissaire Marlet s’en va&nbsp;»), Fiamenghi se fait tirer le portrait de face et de profil sur la chaise de <a href="#{{ person.href }}" data-mini="3">Bertillon</a>, donne ses empreintes digitales, et ressort avec une médaille «&nbsp;police&nbsp;», une paire de menottes, un plan de Paris appelé «&nbsp;bitumar&nbsp;», un calibre 7,65&nbsp;mm de marque Unic, un étui d’épaule et une «&nbsp;clé d’avertisseur&nbsp;» pour ouvrir les bornes installées aux carrefours qui commandent les feux de circulation et permettent de téléphoner à la PP. Une antiquité. Avec cet attirail de flic, <q>de quoi se prendre pour Eliot Ness</q>, et sans aucune formation, le «&nbsp;perdreau&nbsp;» rejoint la section «&nbsp;contraintes par corps&nbsp;» de la <a href="#note-3">brigade de voie publique</a>. Il doit récupérer les amendes auprès des mauvais payeurs, travestis, prostituées, gens du voyage et commerçants, qui ont été verbalisés par <q>les bourgeois</q>, les flics en civil des commissariats&nbsp;: <q>Ou tu paies, ou c’est la prison.</q></p>
+
+{{
+mini({
+number: 3,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+{{
+note({
+number: 3,
+title: "La brigade de voie publique",
+caption: "La brigade de voie publique, la VP, devient en 1973 la brigade de répression du banditisme, la BRB."
+})
+}}
+
+<figure>
+<img src="img/ep-3-fiamenghi-1.jpg" alt="" />
+<figcaption><span>Portrait anthropométrique de Jean-Louis Fiamenghi lors de son entrée dans la police <span class="credits">Photo Jean-Louis Fiamenghi, <i>Dans le secret de l’action</i>.</span></span></figcaption>
+</figure>
+
+
+<p>Ça n’a pas duré longtemps, même pas six mois. Car ses aptitudes à pister les voleurs apparaissent déjà. Afin de percevoir son premier salaire, Bébel ouvre un compte à la société générale des Buttes-Chaumont et se retrouve au beau milieu d’un hold-up, le canon d’un Colt&nbsp;45 sur la tempe. Le jeune poulet dévisage les trois braqueurs, les observe, les <q>détronche</q>, puis livre leur signalement détaillé à ses collègues de l’antigang qui l’adouberont plus tard.</p>
+
+<aside>
+<p><span>Son chef</span> était un souteneur</p>
+</aside>
+
+<p>En attendant, son taulier de la BRB cherche des <q>volontaires pour des surveillances nocturnes sur un fou qui met le feu à des Méhari dans Paris</q>, car pas mal de policiers ont refusé. <q>Au 36, les flics avaient du caractère et savaient dire non</q>, explique Fiam, naturellement partant pour planquer et essayer d’attraper l’incendiaire. Le novice est affecté dans le groupe «&nbsp;flag’ de nuit&nbsp;» de C., réputé <q>meilleur flic de la BRB en termes d’arrestations, de tuyaux et de manipulation d’indics, sans vie de famille, 22&nbsp;heures sur 24 sur le bitume avec ses petits jeunes</q>.</p>
+
+<p>Mais une nuit de garde, cet inspecteur C. qu’il admire, l’entraîne gare de l’Est pour régler un conflit entre deux proxénètes qui se disputent une fille et sauver celui qui le renseigne. Soi-disant… Car Fiam finit par comprendre que la prostituée tapine en réalité pour C. Scandalisé, Bébel préfère croire à une <q>histoire de cœur</q> entre le poulet et la <q>pute</q>. Las, sa petite enquête lui permet de découvrir que son chef <q>presque vénéré</q> est un vrai souteneur, un véritable <q>ripou</q>. Il ressent ce <q>mensonge comme une trahison</q> et veut lui mettre son <q>poing dans la gueule</q>. Mais des anciens l’en dissuadent et lui apprennent qu’ici, la plupart des flics honnêtes <q>marchent dans les clous</q> et se tiennent à distance des ripoux mais ne les dénoncent jamais.</p>
+
+<figure>
+<img src="img/ep-3-fiamenghi-4.jpg" alt="" />
+<figcaption><span>Frédéric Péchenard, Amaury de Hauteclocque et Ange Mancini à la soirée de lancement du livre de Jean-Louis Fiamenghi, le 17&nbsp;février 2016 <span class="credits">Photo Sébastien Calvet/<i>Les Jours</i>.</span></span></figcaption>
+</figure>
+
+<p>Alors Fiamenghi se tait et rejoint «&nbsp;le groupe tire&nbsp;» de François Abjean, <q>la terreur des pickpockets</q>, un inspecteur <q>de l’école du saute-dessus, sans arme</q>. Le jeunot apprend les lois de la rue collé aux basques des voleurs à la tire qu’il repère sur les marchés ou dans le métro. <q>Des anguilles, des véloces, c’est un travail dur, très physique, tu les arrêtes au corps.</q> On lui inculque aussi l’art de les retourner, en 24&nbsp;heures de garde à vue, pour s’en servir comme indics, parfois à coups de bottin ou de régime sec&nbsp;; <q>Si on voulait ne pas leur donner à boire ou à manger, personne ne nous le reprochait.</q></p>
+
+<blockquote>
+<p>Les perceurs de coffres yougoslaves, des durs qui nous insultaient, on les secouait car si on les dérouille pas, c’est eux qui te mettent des coups de boule.</p>
+<footer>Jean-Louis Fiamenghi</footer>
+</blockquote>
+
+<p>À l’époque, les policiers œuvrent <q>main dans la main avec les juges</q>. <q>On atténuait la responsabilité de petits voyous ou, s’ils allaient en prison, on les aidait à cantiner, on mettait un billet de notre poche</q>, en échange de tuyaux ultérieurs pour coincer des plus gros&nbsp;: <q>C’est donnant-donnant.</q> Quant aux braqueurs chevronnés comme <q>les perceurs de coffres yougoslaves, des durs qui nous insultaient, on les secouait car si on les dérouille pas, c’est eux qui te mettent des coups de boule</q>. Dans ces bagarres de cow-boys, Jean-Louis Fiamenghi a <q>la main plus que lourde</q>, selon ses aveux aux <i>Jours</i>.</p>
+
+<p><q>Aspiré</q> à la <a href="#note-4">BRI</a> comme inspecteur fin 1974 sous l’alias de «&nbsp;Boucle d’or&nbsp;», Fiam, qui a laissé poussé ses cheveux, porte un blouson de cuir et un jeans pattes d’eph’, travaille sous les ordres du numéro&nbsp;2, le célèbre commissaire Robert Broussard, surnommé «&nbsp;le Bubar&nbsp;», le barbu en verlan, qui doit rajeunir la brigade anticommando. Cette aventure-là, faite d’interminables planques, d’arrestations musclées et d’assauts sur les prises d’otages, reste la préférée de Boucle d’or. On voit sa tignasse rousse et son calibre au poing sur une photo floue prise le 26&nbsp;février 1975. Il est face à la Société centrale de banque, avenue de la République à Paris, où les futurs gangsters des Postiches se sont retranchés avec des otages après un braquage qui a mal tourné, une première en France.</p> 
+
+{{
+note({
+number: 4,
+title: "La brigade de recherches et d’intervention",
+caption: "La BRI, brigade de recherches et d’intervention, dite «&nbsp;antigang&nbsp;», a été créée en 1964 par François Le Mouël, ponte de la PJ de Paris, avec l’idée de faire les choses à l’envers. D’habitude, les policiers partent du crime pour remonter vers ceux qui l’ont commis. La BRI, elle, suit les bandits jusqu’au crime et essaye d’intervenir avant."
+})
+}}
+
+<figure>
+<img src="img/ep-3-fiamenghi-5.jpg" alt="" />
+<figcaption><span>En planque, le 26 février 1975, devant la Société centrale de banque, avenue de la République à Paris, où de futurs Postiches ont pris en otages employés et clients <span class="credits">Photo Jean-Louis Fiamenghi, <i>Dans le secret de l’action</i>.</span></span></figcaption>
+</figure>
+
+<p>Vient ensuite la mode des enlèvements contre rançons qui s’enchaînent, <q>un tous les deux mois de 1975 à 1984</q>, avec autant de fusillades, d’interpellations et parfois des morts, <q>la camarde</q> toujours menaçante. Ainsi, l’opération de la BRI à l’ambassade d’Irak pour déloger deux preneurs d’otages qui se revendiquent de l’Organisation de libération de la Palestine (OLP) paraît se dénouer tranquillement ce 31&nbsp;juillet 1978, avec la reddition du tandem de kidnappeurs. Les deux Palestiniens sortent, ceinturés et encadrés par les policiers, lorsque soudain, des membres du service de sécurité irakien ouvrent le feu sur le groupe et tirent dans le tas sans discernement&nbsp;: l’inspecteur divisionnaire Jacques Capela de la BRI <q>vient d’être tué lâchement, bêtement assassiné</q>, selon les mots de Fiamenghi, qui refusera comme ses collègues <q>d’escorter les trois gorilles irakiens</q> à l’aéroport d’Orly pour s’envoler impunément vers Bagdad. <q>Le GIGN s’en chargera.</q> Au 36, une salle de crise a été baptisée Jacques Capela et les photos de cet évènement, comme des autres interventions de l’antigang, sont encore accrochées dans le couloir de la BRI.</p>
+
+<aside>
+<p><span>Un banquier</span> séquestré dans la cave à charbon</p>
+</aside>
+
+{% set person = obsession.people[0] %}
+<p>Sur un tuyau du chef de groupe Gérard Marlet, frère aîné de <a href="#{{ person.href }}" data-mini="4">Richard</a>, Boucle d’or et ses coéquipiers se mettent à surveiller les frères Tortosa, qui mijotent un sale coup. Mais un commissaire concurrent de Broussard de la BRI balance à leurs complices&nbsp;: <q>Vous avez l’équipe du barbu sur les talons.</q> Éternelle guerre des polices… Les Tortosa se méfient mais continuent à préparer quelque chose dans un pavillon du Plessis-Robinson, à l’été 1977&nbsp;: <q>Ça dure des semaines, on connaît tous leurs points de chute, on les voit en bleus de travail avec des traces de plâtre</q>, dit Fiamenghi. <q>L’hypothèse de l’enlèvement se confirme.</q> Sans savoir qui sera kidnappé ni quand… Les inspecteurs retardent leurs vacances ou les annulent. Puis, le 9&nbsp;août, les bandits au grand complet se rejoignent dans le bois de Boulogne. Les hommes de Broussard sont disséminés en filature derrière la dizaine de voyous. Mais deux inspecteurs assistent, impuissants, au kidnapping par deux hommes en survêtement d’un passant qui promène son labrador, gazé à la lacrymo, et se retrouve enfourné dans une Estafette blanche. L’opération «&nbsp;Totor&nbsp;» est déclenchée. À bord d’une voiture suiveuse, Fiamenghi le boxeur atteint lui aussi la planque du Plessis-Robinson et colle <q>une droite bien appuyée</q> à François Tortosa qui veut s’éclipser, lui laissant <q>un cocard du plus bel indigo</q> sous l’œil droit&nbsp;: <q>Tant pis pour la photo de l’identité judiciaire&nbsp;!</q> Séquestré dans la cave à charbon, pieds et poings enchaînés, une cagoule sur la tête, l’otage en costume est détaché. C’est le banquier Bernard Mallet, qui restera lié à ses sauveurs de la brigade antigang et assistera même, quelques années plus tard, à l’enterrement de Gérard Marlet.</p>
+
+{{
+mini({
+number: 4,
+img: "/obsessions/" + obsession.href + "/" + person.img,
+alt: person.alt,
+href: "#" + person.href,
+title: person.title,
+subtitle: person.subtitle
+})
+}}
+
+<blockquote>
+<p>La nuit, personne ne nous résistait.</p>
+<footer>Jean-Louis Fiamenghi</footer>
+</blockquote>
+
+<p>À la «&nbsp;maison&nbsp;», ce soir du 9&nbsp;août 1977, on arrose la libération du banquier Mallet, alcool et nanas à tous les étages de la BRI, dans un de <q>ces pots d’enfer du 36</q>, pour <q>décompresser</q> après des heures et des semaines dehors. <q>Ces troisièmes mi-temps après les interventions nous servaient de cellules psychologiques, des exutoires nécessaires</q>, écrit le flic qui n’était pas le dernier à <q>défourailler</q> en fin de soirée et à cibler la Sainte-Chapelle ou la statue équestre d’Henri&nbsp;IV. Jean-Louis Fiamenghi révèle aux <i>Jours</i> qu’il a également tiré des coups de feu en l’air dans la rue, à l’angle du Pot-de-fer et de Mouffetard, pour fêter la naissance de son premier fils comme <q>Viva Zapata au Mexique</q>. À la patrouille qui a déboulé, le cador de la BRI a lancé <q>on est de l’antigang</q> et les bleus ont dégagé&nbsp;: <q>La nuit, personne ne nous résistait.</q></p>
+
+<p>Il se souvient, dans un autre registre, du pot de départ de l’illustre commissaire Roger Le Taillanter en 1979. Il reconnaît sans gêne qu’une baignoire remplie de champagne et de <q>filles</q> avait été montée dans un bureau de la BRI. C’était quelques semaines avant de tuer Jacques Mesrine d’une balle de 9&nbsp;mm de pistolet mitrailleur Uzi dans la tête.</p>
+
+<p><i>[Suite des aventures de Boucle d’or la semaine prochaine.]</i></p>

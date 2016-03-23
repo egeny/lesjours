@@ -1,0 +1,28 @@
+{
+	"template":   "episode",
+	"visibility": "protected",
+
+	"href": "ep-3-fiamenghi",
+
+	"number": 3,
+	"date": "2016-03-25T00:05+01:00",
+
+	"title": "Boucle d’or avait un gros pétard",
+	"intro": "Jean-Louis Fiamenghi était un flic d’action tendance cow-boy. Aujourd’hui, comme beaucoup, il s’est reconverti dans le privé.",
+	"subtitle": "Jean-Louis Fiamenghi était un flic d’action tendance cow-boy. Aujourd’hui, il s’est reconverti dans le privé.",
+	"lead": "Dans les salons Ricard à côté de la place de l’Étoile à Paris, crâne rasé, costume noir, le préfet Jean-Louis Fiamenghi, personnage du 36 issu de l’antigang, arrose la sortie de ses mémoires, <i>Dans le secret de l’action</i>.",
+
+	"tags": ["36", "Police"],
+
+	"rel": {
+		"authors": [
+			{ "text":  "author:patricia-tourancheau" },
+			{ "photo": "author:sebastien-calvet" }
+		],
+
+		"first": "episode:le-36/ep-1-marlet",
+		"prev": "episode:le-36/ep-2-demenagement",
+		"last":  "episode:le-36/ep-3-fiamenghi"
+
+			}
+}
